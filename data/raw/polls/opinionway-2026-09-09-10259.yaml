@@ -1,0 +1,60 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-09-09-10259
+firm: opinionway
+sponsor: "Les Echos / Radio Classique"
+field_start: 2026-09-08
+field_end: 2026-09-09
+published_at: 2026-09-10
+sample_size: 1001
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10259-pres-presitrack-v2-opinionway-les-echos-10-septembre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10259-pres-presitrack-v2-opinionway-les-echos-10-septembre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-09-10). The notice's hypothesis 1 table swaps the Le Pen and Zemmour labels; Le Pen 34, Zemmour 4 are used, as in both indexes."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Attal+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 15
+      roussel: 2
+      tondelier: 3
+      glucksmann: 9
+      attal: 8
+      philippe: 15
+      retailleau: 8
+      dupont_aignan: 2
+      le_pen: 34
+      zemmour: 4
+  - scenario_id: S2
+    round: 1
+    label: "Attal"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 2
+      tondelier: 4
+      glucksmann: 12
+      attal: 14
+      retailleau: 12
+      dupont_aignan: 2
+      le_pen: 34
+      zemmour: 4
+  - scenario_id: S3
+    round: 1
+    label: "Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 1
+      tondelier: 3
+      glucksmann: 10
+      philippe: 19
+      retailleau: 10
+      dupont_aignan: 3
+      le_pen: 34
+      zemmour: 4

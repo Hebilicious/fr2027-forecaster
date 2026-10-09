@@ -1,0 +1,63 @@
+schema_version: "1.0"
+poll_id: cluster17-2026-09-01-10251
+firm: cluster17
+sponsor: "Le Point"
+field_start: 2026-08-31
+field_end: 2026-09-01
+published_at: 2026-09-05
+sample_size: 1711
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10251-pres-iv-cluster-17-le-point-5-septembre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10251-pres-iv-cluster-17-le-point-5-septembre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-09-05)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Tondelier+Philippe"
+    shares:
+      arthaud: 0.9
+      melenchon: 17.9
+      roussel: 2.1
+      tondelier: 2.2
+      glucksmann: 11.6
+      philippe: 18.2
+      villepin: 3.2
+      retailleau: 7.5
+      dupont_aignan: 2.9
+      le_pen: 30
+      zemmour: 3.5
+  - scenario_id: S2
+    round: 1
+    label: "Tondelier+Attal"
+    shares:
+      arthaud: 0.9
+      melenchon: 18.2
+      roussel: 2.1
+      tondelier: 2.5
+      glucksmann: 11.5
+      attal: 13.5
+      villepin: 4
+      retailleau: 8.9
+      dupont_aignan: 2.8
+      le_pen: 31.6
+      zemmour: 4
+  - scenario_id: S3
+    round: 1
+    label: "Philippe+Ruffin+Lisnard"
+    shares:
+      arthaud: 0.8
+      melenchon: 16.9
+      roussel: 1.9
+      glucksmann: 10.8
+      philippe: 16.8
+      villepin: 3.5
+      retailleau: 6.5
+      dupont_aignan: 2.2
+      le_pen: 29.2
+      zemmour: 3.3
+      ruffin: 3.9
+      lisnard: 4.2

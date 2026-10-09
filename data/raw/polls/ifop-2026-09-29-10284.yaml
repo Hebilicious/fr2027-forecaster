@@ -1,0 +1,162 @@
+schema_version: "1.0"
+poll_id: ifop-2026-09-29-10284
+firm: ifop
+sponsor: "LCI / Le Figaro / Sud Radio"
+field_start: 2026-09-25
+field_end: 2026-09-29
+published_at: 2026-09-30
+sample_size: 1527
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10284-pres-barometre-election-presidentielle-v6-ifop-le-figaro-30-septembre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10284-pres-barometre-election-presidentielle-v6-ifop-le-figaro-30-septembre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-09-30)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Attal+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 15
+      roussel: 2.5
+      tondelier: 3
+      glucksmann: 11
+      attal: 8
+      philippe: 16
+      retailleau: 7
+      dupont_aignan: 1
+      le_pen: 32
+      zemmour: 4
+  - scenario_id: S2
+    round: 1
+    label: "Glucksmann+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 16
+      roussel: 2.5
+      tondelier: 3
+      glucksmann: 11
+      philippe: 21
+      retailleau: 8
+      dupont_aignan: 1.5
+      le_pen: 33
+      zemmour: 3.5
+  - scenario_id: S3
+    round: 1
+    label: "Glucksmann+Attal"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 2.5
+      tondelier: 4
+      glucksmann: 13
+      attal: 15
+      retailleau: 10
+      dupont_aignan: 2
+      le_pen: 34
+      zemmour: 3.5
+  - scenario_id: S4
+    round: 1
+    label: "Faure+Attal"
+    shares:
+      arthaud: 1
+      melenchon: 17
+      roussel: 3
+      tondelier: 5.5
+      faure: 4
+      attal: 17
+      retailleau: 11
+      dupont_aignan: 1
+      le_pen: 36
+      zemmour: 4.5
+  - scenario_id: S5
+    round: 1
+    label: "Faure+Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 16
+      roussel: 3.5
+      tondelier: 5
+      faure: 3
+      philippe: 23
+      retailleau: 8
+      dupont_aignan: 1.5
+      le_pen: 35
+      zemmour: 4
+  - scenario_id: S6
+    round: 1
+    label: "Royal+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 15
+      roussel: 3
+      tondelier: 6
+      royal: 3
+      philippe: 24
+      retailleau: 8
+      dupont_aignan: 1.5
+      le_pen: 35
+      zemmour: 4
+  - scenario_id: S7
+    round: 1
+    label: "Guedj+Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 17
+      roussel: 3.5
+      tondelier: 5.5
+      guedj: 3
+      philippe: 23
+      retailleau: 8
+      dupont_aignan: 1
+      le_pen: 35
+      zemmour: 3
+  - scenario_id: S8
+    round: 1
+    label: "Maurel+Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 17
+      roussel: 3.5
+      tondelier: 6
+      maurel: 1
+      philippe: 23
+      retailleau: 9
+      dupont_aignan: 1.5
+      le_pen: 35
+      zemmour: 3
+  - scenario_id: S9
+    round: 1
+    label: "Hollande+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 16
+      roussel: 2.5
+      tondelier: 5
+      hollande: 8
+      philippe: 22
+      retailleau: 7
+      dupont_aignan: 1
+      le_pen: 34
+      zemmour: 4
+  - scenario_id: S10
+    round: 1
+    label: "Glucksmann+Attal+Philippe+Villepin+Lisnard+Ruffin"
+    shares:
+      arthaud: 0.5
+      melenchon: 14
+      roussel: 2
+      tondelier: 3
+      glucksmann: 9
+      attal: 7
+      philippe: 15
+      villepin: 2
+      retailleau: 5
+      dupont_aignan: 1
+      le_pen: 31
+      zemmour: 4
+      lisnard: 3.5
+      ruffin: 3

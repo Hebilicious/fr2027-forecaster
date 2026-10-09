@@ -1,0 +1,28 @@
+schema_version: "1.0"
+poll_id: verian-2026-07-10-10225
+firm: verian
+sponsor: "L'Hemicycle"
+field_start: 2026-07-08
+field_end: 2026-07-10
+published_at: 2026-07-10
+sample_size: 1047
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/juillet/10225-pres-iv-1er-tour-verian-lhemicycle-10-juillet.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/juillet/10225-pres-iv-1er-tour-verian-lhemicycle-10-juillet.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "single scenario"
+    shares:
+      melenchon: 15
+      roussel: 2
+      glucksmann: 11
+      attal: 8
+      philippe: 17
+      retailleau: 7
+      le_pen: 37
+      zemmour: 3

@@ -1,0 +1,80 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-09-10-10260
+firm: opinionway
+sponsor: "CNews"
+field_start: 2026-09-09
+field_end: 2026-09-10
+published_at: 2026-09-11
+sample_size: 1001
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10260-pres-iv-opinionway-cnews-11-septembre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10260-pres-iv-opinionway-cnews-11-septembre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-09-11)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Hollande"
+    shares:
+      arthaud: 1
+      melenchon: 16
+      roussel: 3
+      tondelier: 3
+      hollande: 7
+      attal: 8
+      philippe: 16
+      retailleau: 7
+      dupont_aignan: 2
+      le_pen: 32
+      zemmour: 2
+      bouamrane: 1
+      lisnard: 2
+  - scenario_id: S2
+    round: 1
+    label: "Royal"
+    shares:
+      arthaud: 1
+      melenchon: 17
+      roussel: 4
+      tondelier: 3
+      royal: 3
+      attal: 8
+      philippe: 16
+      retailleau: 7
+      dupont_aignan: 3
+      le_pen: 33
+      zemmour: 2
+      bouamrane: 1
+      lisnard: 2
+  - scenario_id: S3
+    round: 1
+    label: "Glucksmann"
+    shares:
+      arthaud: 0.5
+      melenchon: 17
+      roussel: 2
+      tondelier: 3
+      glucksmann: 9
+      attal: 7
+      philippe: 15
+      retailleau: 7
+      dupont_aignan: 2
+      le_pen: 34
+      zemmour: 2
+      bouamrane: 0.5
+      lisnard: 2
+  - scenario_id: H1
+    round: 2
+    label: "Jean-Luc Mélenchon v Marine Le Pen"
+    shares:
+      melenchon: 33
+      le_pen: 67
+  - scenario_id: H2
+    round: 2
+    label: "Édouard Philippe v Marine Le Pen"
+    shares:
+      philippe: 45
+      le_pen: 55

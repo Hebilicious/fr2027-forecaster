@@ -1,0 +1,59 @@
+schema_version: "1.0"
+poll_id: cluster17-2026-09-16-10273
+firm: cluster17
+sponsor: "Politico"
+field_start: 2026-09-15
+field_end: 2026-09-16
+published_at: 2026-09-24
+sample_size: 2045
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10273-pres-iv-cluster17-politico-24-septembre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10273-pres-iv-cluster17-politico-24-septembre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-09-24)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Philippe+Zemmour"
+    shares:
+      arthaud: 0.4
+      melenchon: 19.1
+      roussel: 2.2
+      tondelier: 2.6
+      glucksmann: 11.8
+      philippe: 18.8
+      retailleau: 7.6
+      dupont_aignan: 3.2
+      le_pen: 30.8
+      zemmour: 3.5
+  - scenario_id: S2
+    round: 1
+    label: "Glucksmann+Attal+Zemmour"
+    shares:
+      arthaud: 0.4
+      melenchon: 19.8
+      roussel: 2.5
+      tondelier: 2.6
+      glucksmann: 14
+      attal: 13.4
+      retailleau: 9.5
+      dupont_aignan: 3.2
+      le_pen: 31
+      zemmour: 3.6
+  - scenario_id: S3
+    round: 1
+    label: "Hollande+Philippe+Lisnard"
+    shares:
+      arthaud: 0.7
+      melenchon: 19.6
+      roussel: 2.9
+      tondelier: 3
+      hollande: 7.4
+      philippe: 19.4
+      retailleau: 7.6
+      dupont_aignan: 4
+      le_pen: 30.2
+      lisnard: 5.2
