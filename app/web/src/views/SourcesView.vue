@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import type { Forecast, Health, PollRow } from "../api/schemas"
-import { dateTime, longDate, safeUrl, shortDate } from "../format"
-import { useI18n } from "../i18n"
+import { dateOrTime, dateTime, longDate, safeUrl, shortDate } from "../format"
+import { useI18n, type MessageKey } from "../i18n"
 
 const props = defineProps<{ forecast: Forecast; polls: readonly PollRow[]; health: Health | null }>()
 const { t, locale } = useI18n()
@@ -45,6 +45,26 @@ const summaries = computed<PollSummary[]>(() => {
     .toSorted((a, b) => b.published.localeCompare(a.published) || a.id.localeCompare(b.id))
 })
 const used = computed(() => new Set(props.forecast.aggregation.poll_ids))
+// Collector names and cadences come from `fr2027`; known ones are translated, others shown as sent.
+const collectorNames: Record<string, MessageKey> = {
+  polls: "collectorPolls",
+  markets: "collectorMarkets",
+  news: "collectorNews",
+  attention: "collectorAttention",
+  x: "collectorX",
+  events: "collectorEvents",
+}
+const cadences: Record<string, MessageKey> = {
+  "when a poll is published": "cadencePoll",
+  hourly: "cadenceHourly",
+  daily: "cadenceDaily",
+  "Grok Bot, every 6 hours": "cadenceGrok6h",
+  "Grok Bot, daily": "cadenceGrokDaily",
+}
+const translated = (keys: Record<string, MessageKey>, value: string) => {
+  const key = keys[value]
+  return key ? t(key) : value
+}
 const quarantined = computed(() =>
   Object.entries(props.health?.quarantine ?? {}).flatMap(([area, files]) => files.map((f) => `${area}/${f}`)),
 )
@@ -78,12 +98,27 @@ const quarantined = computed(() =>
       </div>
       <div class="card stack">
         <h3>{{ t("collectors") }}</h3>
-        <dl class="facts small">
-          <template v-for="c in health?.collectors ?? []" :key="c.file">
-            <dt>{{ c.name }}</dt>
-            <dd>{{ c.modified ? `${t("lastWritten")} ${dateTime(c.modified, locale)}` : "—" }}</dd>
-          </template>
-        </dl>
+        <div class="table-wrap">
+          <table class="collectors small">
+            <thead>
+              <tr>
+                <th scope="col">{{ t("source") }}</th>
+                <th scope="col">{{ t("cadence") }}</th>
+                <th scope="col">{{ t("lastUpdate") }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="c in health?.collectors ?? []" :key="c.name">
+                <th scope="row">{{ translated(collectorNames, c.name) }}</th>
+                <td class="secondary">{{ translated(cadences, c.cadence) }}</td>
+                <td>
+                  <span class="when" :class="{ muted: !c.updated }">{{ c.updated ? dateOrTime(c.updated, locale) : t("never") }}</span>
+                  <span v-if="c.stale" class="badge stale"><span aria-hidden="true" class="dot" />{{ t("staleBadge") }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <h3>{{ t("quarantine") }}</h3>
         <ul v-if="quarantined.length" class="small">
           <li v-for="q in quarantined" :key="q" class="num">data/quarantine/{{ q }}</li>
@@ -134,6 +169,7 @@ const quarantined = computed(() =>
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
 }
 
 .facts {
@@ -154,6 +190,33 @@ const quarantined = computed(() =>
 
 .hash {
   overflow-wrap: anywhere;
+}
+
+.collectors th[scope="row"] {
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.collectors th, .collectors td {
+  padding: 6px 8px 6px 0;
+}
+
+.when {
+  white-space: nowrap;
+}
+
+.stale {
+  margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stale .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--warning);
 }
 
 tr.unused td {

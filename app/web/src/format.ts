@@ -34,6 +34,19 @@ export function points(delta: number, locale: Locale): string {
   return `${sign}${value} pt`
 }
 
+/** A signed relative change as a whole percentage, e.g. "+12%" or "−8%". */
+export function relativeChange(ratio: number, locale: Locale): string {
+  const whole = Math.round(ratio * 100)
+  const sign = whole > 0 ? "+" : whole < 0 ? "−" : "±"
+  const value = Math.abs(whole).toLocaleString(locale === "fr" ? "fr-FR" : "en-GB")
+  return locale === "fr" ? `${sign}${value} %` : `${sign}${value}%`
+}
+
+/** A whole count with the locale's digit grouping. */
+export function count(n: number, locale: Locale): string {
+  return Math.round(n).toLocaleString(locale === "fr" ? "fr-FR" : "en-GB")
+}
+
 const DAY_MS = 86_400_000
 
 /** Whole days from `today` to an ISO calendar date, both read as UTC dates. */
@@ -67,6 +80,11 @@ export function dateTime(isoTimestamp: string, locale: Locale): string {
     hour: "2-digit",
     minute: "2-digit",
   })
+}
+
+/** A timestamp in local time, or a bare calendar date (YYYY-MM-DD) as that date. */
+export function dateOrTime(value: string, locale: Locale): string {
+  return /^\d{4}-\d{2}-\d{2}$/.test(value) ? shortDate(value, locale) : dateTime(value, locale)
 }
 
 /** `url` when it is an http(s) link, else `undefined`: data files are not trusted to carry safe links. */

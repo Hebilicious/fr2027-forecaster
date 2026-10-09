@@ -42,8 +42,7 @@ pub fn run(repo: Repo, args: Args) -> Result<()> {
 pub fn router(repo: Repo, web_dir: PathBuf) -> Router {
     let index = web_dir.join("index.html");
     Router::new()
-        .route("/api/{name}", get(document))
-        .route("/api/{*rest}", get(|| async { not_found("no such document") }))
+        .route("/api/{*path}", get(document))
         .with_state(Arc::new(repo))
         .fallback_service(ServeDir::new(&web_dir).fallback(ServeFile::new(index)))
 }
@@ -75,8 +74,8 @@ fn not_found(message: &str) -> Response {
     (StatusCode::NOT_FOUND, Json(json!({ "error": message }))).into_response()
 }
 
-async fn document(State(repo): State<Arc<Repo>>, Path(file): Path<String>) -> Response {
-    let Some(name) = file.strip_suffix(".json").filter(|n| api::NAMES.contains(n)) else {
+async fn document(State(repo): State<Arc<Repo>>, Path(path): Path<String>) -> Response {
+    let Some(name) = path.strip_suffix(".json").filter(|n| api::NAMES.contains(n)) else {
         return not_found("no such document");
     };
     let name = name.to_string();
@@ -98,5 +97,38 @@ async fn document(State(repo): State<Arc<Repo>>, Path(file): Path<String>) -> Re
             Json(json!({ "error": error.to_string() })),
         )
             .into_response(),
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use axum::body::Body;
+    use axum::http::Request;
+    use tower::ServiceExt;
+
+    use super::*;
+
+    async fn status(path: &str) -> StatusCode {
+        let dir = tempfile::tempdir().unwrap();
+        let web = dir.path().join("web");
+        std::fs::create_dir_all(&web).unwrap();
+        std::fs::write(web.join("index.html"), "<!doctype html>").unwrap();
+        let app = router(Repo::new(dir.path()), web);
+        let response = app
+            .oneshot(Request::builder().uri(path).body(Body::empty()).unwrap())
+            .await
+            .unwrap();
+        response.status()
+    }
+
+    #[tokio::test]
+    async fn routes_documents_and_the_ui() {
+        // Building the router used to panic on overlapping /api routes.
+        assert_eq!(status("/api/nothing.json").await, StatusCode::NOT_FOUND);
+        assert_eq!(status("/api/a/b/c").await, StatusCode::NOT_FOUND);
+        // An empty repository has no forecast yet.
+        assert_eq!(status("/api/forecast.json").await, StatusCode::NOT_FOUND);
+        assert_eq!(status("/").await, StatusCode::OK);
+        assert_eq!(status("/round1").await, StatusCode::OK);
     }
 }

@@ -1,6 +1,6 @@
 // What the API returns, decoded at the boundary: the UI never trusts a payload's shape.
-// These mirror schemas/forecast.schema.json, schemas/series.schema.json and the `fr2027 serve`
-// endpoints.
+// These mirror schemas/forecast.schema.json, schemas/series.schema.json and the documents
+// `fr2027 export` writes to api/<name>.json (and `fr2027 serve` answers at the same paths).
 import { Schema } from "effect"
 
 const Interval = Schema.Struct({
@@ -112,7 +112,16 @@ const PollRow = Schema.Struct({
 export const Polls = Schema.Struct({ rows: Schema.Array(PollRow) })
 export type PollRow = typeof PollRow.Type
 
+const Collector = Schema.Struct({
+  name: Schema.String,
+  /** A timestamp, or a calendar date for sources dated by publication (polls). */
+  updated: Schema.NullOr(Schema.String),
+  cadence: Schema.String,
+  stale: Schema.Boolean,
+})
+
 export const Health = Schema.Struct({
+  /** When the documents were built: the hourly rebuild changes it, so the UI polls it. */
   checked_at: Schema.String,
   latest_forecast: Schema.NullOr(
     Schema.Struct({
@@ -124,10 +133,134 @@ export const Health = Schema.Struct({
     }),
   ),
   forecast_count: Schema.Finite,
-  collectors: Schema.Array(
-    Schema.Struct({ name: Schema.String, file: Schema.String, modified: Schema.NullOr(Schema.String) }),
-  ),
+  collectors: Schema.Array(Collector),
   quarantine: Schema.Record(Schema.String, Schema.Array(Schema.String)),
   warnings: Schema.Array(Schema.String),
 })
 export type Health = typeof Health.Type
+export type Collector = typeof Collector.Type
+
+// Signals: what is recorded beside the polls but not read by the model.
+const Venue = Schema.Literals(["polymarket", "kalshi"])
+const Question = Schema.Literals(["win", "qualify", "on_ballot"])
+
+const MarketSource = Schema.Struct({
+  id: Schema.String,
+  venue: Venue,
+  question: Question,
+  url: Schema.String,
+  status: Schema.Literals(["ok", "error"]),
+  error: Schema.NullOr(Schema.String),
+})
+
+const MarketQuote = Schema.Struct({
+  candidate_id: Schema.String,
+  venue: Venue,
+  question: Question,
+  price: Schema.NullOr(Schema.Finite),
+  bid: Schema.NullOr(Schema.Finite),
+  ask: Schema.NullOr(Schema.Finite),
+  volume: Schema.NullOr(Schema.Finite),
+})
+
+const UnmatchedQuote = Schema.Struct({
+  label: Schema.String,
+  venue: Venue,
+  question: Question,
+  price: Schema.NullOr(Schema.Finite),
+})
+
+/** The day's last price for one venue, question and candidate. */
+const MarketClose = Schema.Struct({
+  date: Schema.String,
+  venue: Venue,
+  question: Question,
+  candidate_id: Schema.String,
+  price: Schema.NullOr(Schema.Finite),
+})
+
+const PageViews = Schema.Struct({ date: Schema.String, candidate_id: Schema.String, views: Schema.Finite })
+
+const Feed = Schema.Struct({
+  id: Schema.String,
+  outlet: Schema.NullOr(Schema.String),
+  status: Schema.String,
+  items: Schema.Finite,
+  error: Schema.NullOr(Schema.String),
+})
+
+const NewsDay = Schema.Struct({ date: Schema.String, candidate_id: Schema.String, items: Schema.Finite })
+
+const Headline = Schema.Struct({
+  published_at: Schema.String,
+  outlet: Schema.String,
+  title: Schema.String,
+  url: Schema.String,
+  candidate_ids: Schema.Array(Schema.String),
+})
+
+const XRow = Schema.Struct({
+  window_start: Schema.String,
+  window_end: Schema.String,
+  candidate_id: Schema.String,
+  mentions: Schema.NullOr(Schema.Finite),
+  mentions_method: Schema.NullOr(Schema.Literals(["x_counts_endpoint", "native_count", "sample_estimate"])),
+  sample_size: Schema.NullOr(Schema.Finite),
+  unique_authors: Schema.NullOr(Schema.Finite),
+  engagement: Schema.NullOr(Schema.Finite),
+  sentiment_pos: Schema.NullOr(Schema.Finite),
+  sentiment_neg: Schema.NullOr(Schema.Finite),
+  sentiment_neu: Schema.NullOr(Schema.Finite),
+  bot_share_estimate: Schema.NullOr(Schema.Finite),
+  top_topics: Schema.NullOr(Schema.Array(Schema.String)),
+})
+
+const CampaignEvent = Schema.Struct({
+  date: Schema.String,
+  event_id: Schema.String,
+  kind: Schema.String,
+  candidate_ids: Schema.Array(Schema.String),
+  summary: Schema.String,
+  source_url: Schema.String,
+  source_title: Schema.NullOr(Schema.String),
+  proposed_change: Schema.NullOr(Schema.String),
+  reported_by: Schema.String,
+})
+
+const Markets = Schema.Struct({
+  fetched_at: Schema.NullOr(Schema.String),
+  sources: Schema.Array(MarketSource),
+  latest: Schema.Array(MarketQuote),
+  unmatched: Schema.Array(UnmatchedQuote),
+  history: Schema.Array(MarketClose),
+})
+
+const Attention = Schema.Struct({ fetched_at: Schema.NullOr(Schema.String), rows: Schema.Array(PageViews) })
+
+const News = Schema.Struct({
+  fetched_at: Schema.NullOr(Schema.String),
+  feeds: Schema.Array(Feed),
+  daily: Schema.Array(NewsDay),
+  headlines: Schema.Array(Headline),
+})
+
+export const Signals = Schema.Struct({
+  generated_at: Schema.String,
+  markets: Markets,
+  attention: Attention,
+  news: News,
+  x: Schema.Struct({ rows: Schema.Array(XRow) }),
+  events: Schema.Array(CampaignEvent),
+})
+export type Signals = typeof Signals.Type
+export type Venue = typeof Venue.Type
+export type Question = typeof Question.Type
+export type Markets = typeof Markets.Type
+export type MarketClose = typeof MarketClose.Type
+export type Attention = typeof Attention.Type
+export type PageViews = typeof PageViews.Type
+export type News = typeof News.Type
+export type NewsDay = typeof NewsDay.Type
+export type Headline = typeof Headline.Type
+export type XRow = typeof XRow.Type
+export type CampaignEvent = typeof CampaignEvent.Type

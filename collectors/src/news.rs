@@ -111,7 +111,7 @@ pub fn ingest(
                 published_at: item
                     .published_at
                     .clone()
-                    .unwrap_or_else(|| a.document.fetched_at.clone()),
+                    .unwrap_or_else(|| undated_publication(&item.url, &a.document.fetched_at)),
                 fetched_at: a.document.fetched_at.clone(),
                 feed: item.feed.clone(),
                 outlet: sources.feed(&item.feed).map(|f| f.outlet.clone()).unwrap_or_default(),
@@ -132,6 +132,50 @@ pub fn ingest(
     Ok(ingest)
 }
 
+/// When a feed gives no date (Le Parisien's doesn't), the fetch time stands in, since an hourly
+/// collector sees an item within the hour. An item first seen later than that, such as on the
+/// first run, often carries its date in the link (`…-08-10-2026-….php`, `/2026/10/08/`); when
+/// that date is before the fetch, noon UTC on that date is used instead.
+pub fn undated_publication(url: &str, fetched_at: &str) -> String {
+    match date_in_url(url) {
+        Some(date) if date.as_str() < &fetched_at[..10.min(fetched_at.len())] => format!("{date}T12:00:00Z"),
+        _ => fetched_at.to_string(),
+    }
+}
+
+/// A `DD-MM-YYYY` between dashes or a `/YYYY/MM/DD/` path in a link, as `YYYY-MM-DD`.
+fn date_in_url(url: &str) -> Option<String> {
+    let valid = |y: &str, m: &str, d: &str| {
+        let (Ok(y), Ok(m), Ok(d)) = (y.parse::<u32>(), m.parse::<u32>(), d.parse::<u32>()) else {
+            return None;
+        };
+        ((2000..=2100).contains(&y) && (1..=12).contains(&m) && (1..=31).contains(&d))
+            .then(|| format!("{y:04}-{m:02}-{d:02}"))
+    };
+    let path = url.split(['?', '#']).next().unwrap_or(url);
+    let segments: Vec<&str> = path.split('/').collect();
+    for window in segments.windows(3) {
+        if window[0].len() == 4
+            && window[1].len() == 2
+            && window[2].len() == 2
+            && let Some(date) = valid(window[0], window[1], window[2])
+        {
+            return Some(date);
+        }
+    }
+    let parts: Vec<&str> = path.split(['-', '/', '.']).collect();
+    for window in parts.windows(3).rev() {
+        if window[0].len() == 2
+            && window[1].len() == 2
+            && window[2].len() == 4
+            && let Some(date) = valid(window[2], window[1], window[0])
+        {
+            return Some(date);
+        }
+    }
+    None
+}
+
 pub fn clean_bytes(ingest: &NewsIngest) -> Result<Vec<u8>> {
     csv_bytes(&ingest.rows, HEADER)
 }
@@ -143,4 +187,38 @@ pub fn write_clean(repo: &Repo, ingest: &NewsIngest) -> Result<()> {
 
 pub fn read_clean_rows(repo: &Repo) -> Result<Vec<NewsRow>> {
     read_csv(&repo.clean_dir().join(CLEAN_FILE))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn undated_items_take_the_date_in_their_link() {
+        let fetched = "2026-10-09T20:47:49Z";
+        assert_eq!(
+            undated_publication(
+                "https://www.leparisien.fr/politique/attal-08-10-2026-2MEYWLWQK5CK3FJFBV3IED2DAY.php",
+                fetched
+            ),
+            "2026-10-08T12:00:00Z"
+        );
+        assert_eq!(
+            undated_publication(
+                "https://www.lemonde.fr/politique/article/2026/10/07/x_123.html",
+                fetched
+            ),
+            "2026-10-07T12:00:00Z"
+        );
+        // Same day, or no date: the fetch time.
+        assert_eq!(
+            undated_publication("https://www.leparisien.fr/politique/x-09-10-2026-ABC.php", fetched),
+            fetched
+        );
+        assert_eq!(
+            undated_publication("https://example.org/a-12-34-5678.php", fetched),
+            fetched
+        );
+        assert_eq!(undated_publication("https://example.org/news/42", fetched), fetched);
+    }
 }

@@ -40,6 +40,8 @@ tasks:
     args: ["run"]
     inputs: ["src/**/*", "vite.config.ts", "package.json", "/pnpm-lock.yaml"]
 
+  # No shell for the two format tasks: bash would expand src/**/*.vue as src/*/*.vue (no globstar),
+  # skipping src/App.vue and nested folders. vize expands the glob itself.
   format:
     description: "Format Vue files with vize."
     command: "vize"
@@ -47,9 +49,12 @@ tasks:
     options:
       cache: false
       runInCI: false
+      shell: false
 
   format-check:
     description: "Fail when a Vue file is not formatted."
     command: "vize"
     args: ["fmt", "--check", "src/**/*.vue"]
     inputs: ["src/**/*.vue", "vize.config.json"]
+    options:
+      shell: false

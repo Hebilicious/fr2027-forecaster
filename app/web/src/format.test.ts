@@ -1,5 +1,15 @@
 import { describe, expect, it } from "vitest"
-import { daysUntil, percent, points, probability, safeUrl, shareWithInterval } from "./format"
+import {
+  count,
+  dateOrTime,
+  daysUntil,
+  percent,
+  points,
+  probability,
+  relativeChange,
+  safeUrl,
+  shareWithInterval,
+} from "./format"
 
 describe("probability", () => {
   it("never rounds to certainty", () => {
@@ -28,6 +38,25 @@ describe("shares", () => {
   it("signs point changes", () => {
     expect(points(0.034, "en")).toBe("+3.4 pt")
     expect(points(-0.01, "en")).toBe("−1.0 pt")
+  })
+})
+
+describe("counts and changes", () => {
+  it("signs a relative change as a whole percentage", () => {
+    expect(relativeChange(0.124, "en")).toBe("+12%")
+    expect(relativeChange(-0.08, "fr")).toBe("−8 %")
+    expect(relativeChange(0.001, "en")).toBe("±0%")
+  })
+
+  it("groups digits per locale", () => {
+    expect(count(12345, "en")).toBe("12,345")
+    expect(count(12345.4, "fr")).toBe("12 345")
+  })
+})
+
+describe("dateOrTime", () => {
+  it("shows a bare date as that date, whatever the time zone", () => {
+    expect(dateOrTime("2026-10-06", "en")).toBe("6 Oct")
   })
 })
 

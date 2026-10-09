@@ -6,18 +6,20 @@ import { useLiveData } from "./useLiveData"
 import OverviewView from "./views/OverviewView.vue"
 import Round1View from "./views/Round1View.vue"
 import Round2View from "./views/Round2View.vue"
+import SignalsView from "./views/SignalsView.vue"
 import SourcesView from "./views/SourcesView.vue"
 
-type View = "overview" | "round1" | "round2" | "sources"
+type View = "overview" | "round1" | "round2" | "signals" | "sources"
 const views: readonly { id: View; label: MessageKey }[] = [
   { id: "overview", label: "navOverview" },
   { id: "round1", label: "navRound1" },
   { id: "round2", label: "navRound2" },
+  { id: "signals", label: "navSignals" },
   { id: "sources", label: "navSources" },
 ]
 
 const { t, locale, toggle } = useI18n()
-const { forecast, series, polls, health, loading, error, missing } = useLiveData()
+const { forecast, series, polls, health, signals, loading, error, missing } = useLiveData()
 
 function viewFromHash(): View {
   const id = location.hash.replace(/^#\/?/, "")
@@ -78,6 +80,7 @@ const daysLeft = computed(() => (forecast.value ? daysUntil(forecast.value.elect
       <OverviewView v-if="view === 'overview'" :forecast="forecast" />
       <Round1View v-else-if="view === 'round1'" :forecast="forecast" :series="series" :polls="polls" />
       <Round2View v-else-if="view === 'round2'" :forecast="forecast" />
+      <SignalsView v-else-if="view === 'signals'" :forecast="forecast" :signals="signals" />
       <SourcesView v-else :forecast="forecast" :polls="polls" :health="health" />
     </template>
   </main>
