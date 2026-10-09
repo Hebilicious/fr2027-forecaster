@@ -1,0 +1,16 @@
+# Build output
+target/
+dist/
+node_modules/
+
+# Local-only tool and cache trees
+.moon/cache/
+.moon/docker/
+.pnpm-store/
+.proto/
+.artifacts/
+
+# Secrets
+.env
+.env.*
+!.env.example

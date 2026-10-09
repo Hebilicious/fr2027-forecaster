@@ -1,0 +1,91 @@
+language: "rust"
+layer: "application"
+
+project:
+  title: "fr2027 command"
+  description: "Validate, ingest, forecast and serve: the binary every schedule and the local app run."
+
+dependsOn: ["model", "collectors"]
+
+fileGroups:
+  rust:
+    - "/model/src/**/*"
+    - "/collectors/src/**/*"
+    - "src/**/*"
+    - "Cargo.toml"
+    - "/Cargo.lock"
+    - "/rust-toolchain.toml"
+
+tasks:
+  build:
+    description: "Build the fr2027 binary in release mode."
+    command: "cargo"
+    args: ["build", "--locked", "--release", "-p", "fr2027-cli"]
+    inputs: ["@group(rust)"]
+    outputs: ["/target/release/fr2027"]
+    toolchains: ["rust"]
+
+  test:
+    description: "Run the command's tests."
+    command: "cargo"
+    args: ["test", "--locked", "-p", "fr2027-cli"]
+    inputs: ["@group(rust)"]
+    toolchains: ["rust"]
+
+  clippy:
+    description: "Lint the command with clippy, warnings as errors."
+    command: "cargo"
+    args: ["clippy", "--locked", "-p", "fr2027-cli", "--all-targets", "--", "-D", "warnings"]
+    inputs: ["@group(rust)"]
+    toolchains: ["rust"]
+
+  format:
+    description: "Format the command's Rust sources."
+    command: "cargo"
+    args: ["fmt", "-p", "fr2027-cli"]
+    options:
+      cache: false
+      runInCI: false
+    toolchains: ["rust"]
+
+  format-check:
+    description: "Fail when the command's Rust sources are not formatted."
+    command: "cargo"
+    args: ["fmt", "-p", "fr2027-cli", "--check"]
+    inputs: ["src/**/*", "/rustfmt.toml"]
+    toolchains: ["rust"]
+
+  validate:
+    description: "Check config, every raw file and the clean files; fails on any rejection or stale clean data."
+    command: "/target/release/fr2027"
+    args: ["validate"]
+    deps: ["build"]
+    inputs: ["@group(rust)", "/config/**/*", "/schemas/**/*", "/data/raw/**/*", "/data/clean/**/*"]
+
+  ingest:
+    description: "Rebuild data/clean/ from data/raw/ and rewrite data/quarantine/."
+    command: "/target/release/fr2027"
+    args: ["ingest"]
+    deps: ["build"]
+    options:
+      cache: false
+      runInCI: false
+
+  forecast:
+    description: "Ingest, then fit the model and write data/forecasts/<YYYY-MM-DDTHH>.json and series.json."
+    command: "/target/release/fr2027"
+    args: ["forecast"]
+    deps: ["ingest"]
+    options:
+      cache: false
+      runInCI: false
+
+  serve:
+    description: "Serve the UI and API (default http://127.0.0.1:8027; pass -- --port <n> for another)."
+    command: "/target/release/fr2027"
+    args: ["serve"]
+    deps: ["forecast", "web:build"]
+    options:
+      cache: false
+      persistent: true
+      runInCI: false

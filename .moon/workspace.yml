@@ -1,0 +1,26 @@
+# Every repository operation is a Moon task: `moon run <project>:<task>`.
+projects:
+  repo: "."
+  model: "model"
+  collectors: "collectors"
+  cli: "cli"
+  web: "app/web"
+
+defaultProject: "repo"
+telemetry: false
+versionConstraint: ">=2.6.1 <2.7.0"
+
+vcs:
+  defaultBranch: "main"
+
+hasher:
+  walkStrategy: "glob"
+  ignorePatterns:
+    - "**/node_modules/**"
+    - "**/target/**"
+    - "**/dist/**"
+    - ".artifacts/**"
+
+pipeline:
+  installDependencies:
+    - "javascript"

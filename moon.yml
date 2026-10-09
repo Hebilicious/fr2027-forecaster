@@ -1,0 +1,37 @@
+language: "typescript"
+layer: "application"
+
+project:
+  title: "Repository"
+  description: "Aggregates and repository-wide checks: formatting, linting, and the one-command local app."
+
+tasks:
+  up:
+    description: "Ingest, forecast, build the UI and serve it at http://127.0.0.1:8027 (one command, end to end)."
+    command: "noop"
+    deps: ["cli:serve"]
+    options:
+      cache: false
+      persistent: true
+      runInCI: false
+
+  format:
+    description: "Format TypeScript, JSON and Markdown with oxfmt, Vue with vize, Rust with rustfmt."
+    command: "oxfmt"
+    args: ["."]
+    deps: ["web:format", "model:format", "collectors:format", "cli:format"]
+    options:
+      cache: false
+      runInCI: false
+
+  format-check:
+    description: "Fail when a TypeScript, JSON or Markdown file is not formatted."
+    command: "oxfmt"
+    args: ["--check", "."]
+    inputs: ["**/*.{ts,json,md,yml,yaml}", ".oxfmtrc.json"]
+
+  lint:
+    description: "Lint TypeScript with oxlint."
+    command: "oxlint"
+    args: ["--deny-warnings", "app"]
+    inputs: ["app/**/*.ts", ".oxlintrc.json"]

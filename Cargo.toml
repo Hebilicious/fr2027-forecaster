@@ -1,0 +1,13 @@
+[workspace]
+resolver = "3"
+members = ["model", "collectors", "cli"]
+
+[workspace.package]
+edition = "2024"
+license = "UNLICENSED"
+publish = false
+rust-version = "1.99"
+
+[workspace.dependencies]
+fr2027-model = { path = "model" }
+fr2027-collectors = { path = "collectors" }

@@ -1,0 +1,9 @@
+{
+  "name": "fr2027-forecaster",
+  "private": true,
+  "devDependencies": {
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:"
+  },
+  "packageManager": "pnpm@12.10.1"
+}

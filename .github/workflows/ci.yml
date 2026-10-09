@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: moon ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      # Installs proto, then every tool pinned in .prototools (moon, node, pnpm, rust).
+      - uses: moonrepo/setup-toolchain@v0
+        with:
+          auto-install: true
+      # Runs every task with runInCI enabled: tests, clippy, format checks, type checks, lint,
+      # and `cli:validate`, which fails on any quarantined raw file or out-of-date clean data.
+      - run: moon ci
