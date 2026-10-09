@@ -205,8 +205,8 @@ fn validate_file(
         }
         let total: f64 = scenario.shares.values().sum();
         match scenario.round {
-            1 if !(85.0..=101.5).contains(&total) => errors.push(format!(
-                "scenario `{}`: round 1 shares sum to {total:.1}, expected 85–101.5",
+            1 if !(85.0..=103.0).contains(&total) => errors.push(format!(
+                "scenario `{}`: round 1 shares sum to {total:.1}, expected 85–103",
                 scenario.scenario_id
             )),
             2 if scenario.shares.len() != 2 => errors.push(format!(

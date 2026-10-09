@@ -90,13 +90,15 @@ pub fn run_forecast(
     let simulated: Vec<bool> = round1.first_polled.iter().map(Option::is_some).collect();
     let p_run = field.p_run();
     let mut warnings = Vec::new();
-    for c in 0..n {
-        if !simulated[c] && p_run[c] > 0.0 {
-            warnings.push(format!(
-                "{} has p_run {:.2} but no round 1 poll has tested them; left out of the simulation",
-                field.candidates[c].id, p_run[c]
-            ));
-        }
+    let unpolled: Vec<String> = (0..n)
+        .filter(|c| !simulated[*c] && p_run[*c] > 0.0)
+        .map(|c| format!("{} (runs {:.0}%)", field.candidates[c].name, p_run[c] * 100.0))
+        .collect();
+    if !unpolled.is_empty() {
+        warnings.push(format!(
+            "Not yet tested by any round 1 poll, so left out of every simulated election: {}.",
+            unpolled.join(", ")
+        ));
     }
 
     let election = round1.vote_state_at(params.round1_date);
@@ -301,6 +303,7 @@ mod tests {
                 presence_sd: 0.3,
                 house_sd: 0.08,
                 share_floor: 0.5,
+                scenario_noise_share_grid: vec![0.2],
                 series_step_days: 14,
                 series_draws: 100,
             },

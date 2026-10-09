@@ -9,11 +9,13 @@ round1_date: 2027-04-18
 round2_date: 2027-05-02
 
 aggregation:
-  # Daily random-walk standard deviation of bloc strengths and within-bloc supports (log scale)
-  # and the design effect on multinomial sampling variance. Each run picks the pair with the
-  # highest marginal likelihood on the polls it sees.
-  random_walk_sd_grid: [0.002, 0.004, 0.007, 0.012, 0.02]
-  design_effect_grid: [1.0, 1.5, 2.0, 3.0, 4.0]
+  # Each run picks, by marginal likelihood on the polls it sees, the daily random-walk standard
+  # deviation of bloc strengths and within-bloc supports (log scale), the design effect on the
+  # multinomial sampling variance, and the share of a scenario's sampling variance that is its
+  # own: a poll's scenarios ask the same respondents, so the rest is common to all of them.
+  random_walk_sd_grid: [0.002, 0.004, 0.007, 0.012, 0.02, 0.03]
+  design_effect_grid: [1.0, 1.5, 2.0, 3.0, 4.0, 6.0]
+  scenario_noise_share_grid: [0.1, 0.2, 0.4, 0.6]
   prior_sd: 2.0
   presence_sd: 0.3
   house_sd: 0.08
@@ -38,8 +40,10 @@ round2:
   # Relative propensity of each round 1 bloc's voters to vote for a finalist of each bloc or
   # to abstain / vote blank. For a centre-versus-far-right runoff the rows reproduce the 2022
   # election-day surveys (Ipsos, Ifop, Elabe; see research/LOG.md, 2026-10-09): left voters
-  # 45% centre / 15% far right / 40% abstain, right 52/19/29, far right 10/77/13. Every
-  # other cell is a proximity assumption, outweighed wherever head-to-head polls exist.
+  # 45% centre / 15% far right / 40% abstain, right 52/19/29, far right 10/77/13; the `other`
+  # row follows Dupont-Aignan's 2022 voters in the pre-runoff polls (Ipsos 11/65/24, Harris
+  # 10/63/27). Every other cell is a proximity assumption, outweighed wherever head-to-head
+  # polls exist.
   transfers:
     far_left: { far_left: 0.90, left: 0.70, centre: 0.30, right: 0.08, far_right: 0.12, other: 0.20, abstain: 0.58 }
     left: { far_left: 0.60, left: 0.90, centre: 0.45, right: 0.15, far_right: 0.15, other: 0.20, abstain: 0.40 }

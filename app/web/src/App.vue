@@ -116,12 +116,12 @@ const daysLeft = computed(() => (forecast.value ? daysUntil(forecast.value.elect
   margin: 0 auto;
   padding: 0 16px;
   display: flex;
-  gap: 4px;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  gap: 0 4px;
 }
 
 .nav a {
-  padding: 8px 12px;
+  padding: 8px 10px;
   color: var(--ink-2);
   text-decoration: none;
   border-bottom: 2px solid transparent;

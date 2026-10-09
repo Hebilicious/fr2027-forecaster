@@ -88,6 +88,8 @@ struct PairOut {
 struct AggregationOut {
     random_walk_sd: f64,
     design_effect: f64,
+    scenario_noise_share: f64,
+    log_likelihood: f64,
     polls_used: usize,
     scenarios_used: usize,
     round2_pairs_polled: usize,
@@ -214,12 +216,13 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
     std::fs::write(out_dir.join(SERIES_FILE), pretty(&series_value)?)?;
 
     println!(
-        "wrote {} (as of {as_of}; {} polls, {} scenarios; random walk sd {}, design effect {})",
+        "wrote {} (as of {as_of}; {} polls, {} scenarios; random walk sd {}, design effect {}, scenario noise share {})",
         repo.relative(&path),
         forecast.round1.polls_used,
         forecast.round1.scenarios_used,
-        forecast.round1.random_walk_sd,
-        forecast.round1.design_effect
+        forecast.round1.noise.random_walk_sd,
+        forecast.round1.noise.design_effect,
+        forecast.round1.noise.scenario_noise_share,
     );
     for candidate in output.candidates.iter().take(8) {
         println!(
@@ -389,8 +392,10 @@ fn build(
         candidates,
         pairs,
         aggregation: AggregationOut {
-            random_walk_sd: forecast.round1.random_walk_sd,
-            design_effect: forecast.round1.design_effect,
+            random_walk_sd: forecast.round1.noise.random_walk_sd,
+            design_effect: forecast.round1.noise.design_effect,
+            scenario_noise_share: forecast.round1.noise.scenario_noise_share,
+            log_likelihood: (forecast.round1.log_likelihood * 100.0).round() / 100.0,
             polls_used: forecast.round1.polls_used,
             scenarios_used: forecast.round1.scenarios_used,
             round2_pairs_polled: forecast.round2.pairs.len(),

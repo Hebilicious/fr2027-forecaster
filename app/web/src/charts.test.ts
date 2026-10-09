@@ -33,6 +33,8 @@ const forecast: Forecast = {
   aggregation: {
     random_walk_sd: 0.01,
     design_effect: 1.5,
+    scenario_noise_share: 0.2,
+    log_likelihood: 0,
     polls_used: 1,
     scenarios_used: 1,
     round2_pairs_polled: 1,

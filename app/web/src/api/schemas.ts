@@ -51,6 +51,8 @@ export const Forecast = Schema.Struct({
   aggregation: Schema.Struct({
     random_walk_sd: Schema.Finite,
     design_effect: Schema.Finite,
+    scenario_noise_share: Schema.Finite,
+    log_likelihood: Schema.Finite,
     polls_used: Schema.Finite,
     scenarios_used: Schema.Finite,
     round2_pairs_polled: Schema.Finite,

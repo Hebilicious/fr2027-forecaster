@@ -16,9 +16,15 @@
 //! of a bloc's total that candidate brings. Every quantity a poll reports is linear in the
 //! state once written as a log-ratio (bloc totals against the largest bloc, candidates against
 //! the largest candidate of their bloc), so a Kalman filter fits it exactly. `beta` and
-//! `alpha` follow daily random walks; presence and house effects are static. A poll's sampling
-//! covariance is the multinomial one (delta method) times a design effect, and the scenarios
-//! of one poll share its sample, so each carries the poll's information divided by their count.
+//! `alpha` follow daily random walks; presence and house effects are static.
+//!
+//! A poll's sampling covariance is the multinomial one (delta method) times a design effect.
+//! The scenarios of one poll ask the same respondents, so their sampling errors are mostly
+//! shared: all of a poll's scenarios enter as one observation whose error is a common draw on
+//! the bloc and candidate levels (the multinomial variance, `1 / (n p)` per level) plus a small
+//! scenario-specific part (`scenario_noise_share` of the multinomial covariance). A poll then
+//! counts once for the levels, while the contrasts between its scenarios, which is where the
+//! presence effects come from, stay as precise as the respondents make them.
 
 use nalgebra::{DMatrix, DVector};
 
@@ -153,10 +159,17 @@ pub struct SeriesPoint {
     pub hi80: f64,
 }
 
-#[derive(Clone, Debug)]
-pub struct GridPoint {
+/// The noise hyperparameters, chosen together by marginal likelihood.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct Noise {
     pub random_walk_sd: f64,
     pub design_effect: f64,
+    pub scenario_noise_share: f64,
+}
+
+#[derive(Clone, Debug)]
+pub struct GridPoint {
+    pub noise: Noise,
     pub log_likelihood: f64,
 }
 
@@ -171,8 +184,8 @@ pub struct HouseEffect {
 #[derive(Clone, Debug)]
 pub struct Round1Fit {
     pub layout: Layout,
-    pub random_walk_sd: f64,
-    pub design_effect: f64,
+    pub noise: Noise,
+    pub log_likelihood: f64,
     pub grid: Vec<GridPoint>,
     pub as_of: jiff::civil::Date,
     /// Filtered state at `as_of`.
@@ -192,7 +205,7 @@ impl Round1Fit {
         let mut state = self.state.leading(self.layout.vote_dim());
         let days = f64::from(day_number(date) - day_number(self.as_of));
         state.predict_random_walk(
-            &daily_variance(&self.layout, self.random_walk_sd, self.layout.vote_dim()),
+            &daily_variance(&self.layout, self.noise.random_walk_sd, self.layout.vote_dim()),
             days,
         );
         state
@@ -211,16 +224,14 @@ fn daily_variance(layout: &Layout, random_walk_sd: f64, dim: usize) -> Vec<f64> 
     variance
 }
 
-/// One scenario of one poll, ready for the filter.
+/// The round 1 scenarios of one poll, ready for the filter.
 #[derive(Clone, Debug)]
 struct Observation {
     day: i32,
     firm: usize,
-    /// Candidate index and share (fraction), floored and renormalised.
-    shares: Vec<(usize, f64)>,
+    /// Per scenario: candidate index and share (fraction), floored and renormalised.
+    scenarios: Vec<Vec<(usize, f64)>>,
     sample_size: f64,
-    /// Number of round 1 scenarios in the same poll, which share its sample.
-    siblings: usize,
 }
 
 /// Fits the aggregation to every round 1 scenario published on or before `as_of`, choosing
@@ -232,7 +243,10 @@ pub fn fit_round1(
     as_of: jiff::civil::Date,
     seed: u64,
 ) -> Result<Round1Fit, ModelError> {
-    if params.random_walk_sd_grid.is_empty() || params.design_effect_grid.is_empty() {
+    if params.random_walk_sd_grid.is_empty()
+        || params.design_effect_grid.is_empty()
+        || params.scenario_noise_share_grid.is_empty()
+    {
         return Err(ModelError::InvalidParameters("empty hyperparameter grid".into()));
     }
     let (observations, firms, polls_used) = observations(field, polls, params, as_of)?;
@@ -252,20 +266,15 @@ pub fn fit_round1(
     let mut grid = Vec::new();
     for &random_walk_sd in &params.random_walk_sd_grid {
         for &design_effect in &params.design_effect_grid {
-            let (_, log_likelihood) = run_filter(
-                &layout,
-                &observations,
-                params,
-                random_walk_sd,
-                design_effect,
-                end_day,
-                None,
-            )?;
-            grid.push(GridPoint {
-                random_walk_sd,
-                design_effect,
-                log_likelihood,
-            });
+            for &scenario_noise_share in &params.scenario_noise_share_grid {
+                let noise = Noise {
+                    random_walk_sd,
+                    design_effect,
+                    scenario_noise_share,
+                };
+                let (_, log_likelihood) = run_filter(&layout, &observations, params, noise, end_day, None)?;
+                grid.push(GridPoint { noise, log_likelihood });
+            }
         }
     }
     let best = grid
@@ -275,15 +284,7 @@ pub fn fit_round1(
         .clone();
 
     let mut recorder = SeriesRecorder::new(field, &layout, &observations, params, end_day, seed);
-    let (state, _) = run_filter(
-        &layout,
-        &observations,
-        params,
-        best.random_walk_sd,
-        best.design_effect,
-        end_day,
-        Some(&mut recorder),
-    )?;
+    let (state, _) = run_filter(&layout, &observations, params, best.noise, end_day, Some(&mut recorder))?;
 
     let mut house_effects = Vec::new();
     for (f, firm) in layout.firms.iter().enumerate() {
@@ -303,15 +304,15 @@ pub fn fit_round1(
         .map(|d| d.map(date_from_day_number))
         .collect();
     Ok(Round1Fit {
-        random_walk_sd: best.random_walk_sd,
-        design_effect: best.design_effect,
+        noise: best.noise,
+        log_likelihood: best.log_likelihood,
         grid,
         as_of,
         state,
         first_polled,
         series: recorder.series,
         polls_used,
-        scenarios_used: observations.len(),
+        scenarios_used: observations.iter().map(|o| o.scenarios.len()).sum(),
         house_effects,
         layout,
     })
@@ -338,14 +339,7 @@ fn observations(
         if scenarios.is_empty() {
             continue;
         }
-        polls_used += 1;
-        let firm = match firms.iter().position(|f| *f == poll.firm) {
-            Some(f) => f,
-            None => {
-                firms.push(poll.firm.clone());
-                firms.len() - 1
-            }
-        };
+        let mut cells = Vec::with_capacity(scenarios.len());
         for scenario in &scenarios {
             let mut shares = Vec::with_capacity(scenario.shares.len());
             for share in &scenario.shares {
@@ -367,14 +361,25 @@ fn observations(
             for (_, s) in &mut shares {
                 *s /= total;
             }
-            result.push(Observation {
-                day: poll.midpoint(),
-                firm,
-                shares,
-                sample_size: f64::from(poll.sample_size),
-                siblings: scenarios.len(),
-            });
+            cells.push(shares);
         }
+        if cells.is_empty() {
+            continue;
+        }
+        polls_used += 1;
+        let firm = match firms.iter().position(|f| *f == poll.firm) {
+            Some(f) => f,
+            None => {
+                firms.push(poll.firm.clone());
+                firms.len() - 1
+            }
+        };
+        result.push(Observation {
+            day: poll.midpoint(),
+            firm,
+            scenarios: cells,
+            sample_size: f64::from(poll.sample_size),
+        });
     }
     result.sort_by_key(|o| o.day);
     Ok((result, firms, polls_used))
@@ -389,10 +394,9 @@ struct Linearised {
     r: DMatrix<f64>,
 }
 
-/// Writes one scenario as log-ratios: bloc totals against the largest bloc, then candidates
-/// against the largest candidate of their bloc.
-fn linearise(layout: &Layout, observation: &Observation, design_effect: f64) -> Linearised {
-    let cells = &observation.shares;
+/// Writes one scenario as log-ratios (bloc totals against the largest bloc, then candidates
+/// against the largest candidate of their bloc), with each row's Jacobian over the cells.
+fn scenario_rows(layout: &Layout, firm: usize, cells: &[(usize, f64)]) -> Vec<Row> {
     let k = cells.len();
     let mut blocs: Vec<usize> = cells.iter().map(|(c, _)| layout.bloc_of[*c]).collect();
     blocs.sort_unstable();
@@ -410,7 +414,6 @@ fn linearise(layout: &Layout, observation: &Observation, design_effect: f64) -> 
         .expect("at least one bloc");
 
     let mut rows: Vec<Row> = Vec::new();
-    let firm = observation.firm;
     for &b in blocs.iter().filter(|b| **b != reference_bloc) {
         let mut coefficients = vec![
             (layout.beta(b), 1.0),
@@ -455,24 +458,76 @@ fn linearise(layout: &Layout, observation: &Observation, design_effect: f64) -> 
             ));
         }
     }
+    rows
+}
 
-    let m = rows.len();
-    let mut h = DMatrix::zeros(m, layout.dim());
-    let mut y = DVector::zeros(m);
-    let mut jacobian = DMatrix::zeros(m, k);
-    for (row, (coefficients, value, jac)) in rows.into_iter().enumerate() {
-        for (index, coefficient) in coefficients {
-            h[(row, index)] += coefficient;
+/// All of a poll's scenarios as one observation. The sampling error is a draw shared by every
+/// scenario on the bloc and candidate levels (variance `1 / (n p)` for each, `p` the level's
+/// mean share across the scenarios), plus a scenario-specific multinomial part; the two are
+/// weighted so a lone scenario gets exactly the multinomial covariance.
+fn linearise(layout: &Layout, observation: &Observation, design_effect: f64, scenario_noise_share: f64) -> Linearised {
+    let mut level_share: Vec<(usize, f64, usize)> = Vec::new();
+    let mut add_level = |index: usize, share: f64| match level_share.iter_mut().find(|(i, _, _)| *i == index) {
+        Some(entry) => {
+            entry.1 += share;
+            entry.2 += 1;
         }
-        y[row] = value;
-        for (i, v) in jac.into_iter().enumerate() {
-            jacobian[(row, i)] = v;
+        None => level_share.push((index, share, 1)),
+    };
+    for cells in &observation.scenarios {
+        let mut totals = vec![0.0; layout.n_blocs];
+        for (c, share) in cells {
+            add_level(layout.alpha(*c), *share);
+            totals[layout.bloc_of[*c]] += share;
+        }
+        for (b, total) in totals.into_iter().enumerate() {
+            if total > 0.0 {
+                add_level(layout.beta(b), total);
+            }
         }
     }
-    let p = DVector::from_iterator(k, cells.iter().map(|(_, s)| *s));
-    let multinomial = DMatrix::from_diagonal(&p) - &p * p.transpose();
-    let scale = design_effect * observation.siblings as f64 / observation.sample_size;
-    let r = (&jacobian * multinomial * jacobian.transpose()) * scale;
+
+    let per_scenario: Vec<(Vec<Row>, usize)> = observation
+        .scenarios
+        .iter()
+        .map(|cells| (scenario_rows(layout, observation.firm, cells), cells.len()))
+        .collect();
+    let m: usize = per_scenario.iter().map(|(rows, _)| rows.len()).sum();
+    let mut h = DMatrix::zeros(m, layout.dim());
+    let mut y = DVector::zeros(m);
+    let mut r = DMatrix::zeros(m, m);
+    let mut offset = 0;
+    for ((rows, k), cells) in per_scenario.iter().zip(&observation.scenarios) {
+        let mut jacobian = DMatrix::zeros(rows.len(), *k);
+        for (row, (coefficients, value, jac)) in rows.iter().enumerate() {
+            for (index, coefficient) in coefficients {
+                h[(offset + row, *index)] += coefficient;
+            }
+            y[offset + row] = *value;
+            for (i, v) in jac.iter().enumerate() {
+                jacobian[(row, i)] = *v;
+            }
+        }
+        let p = DVector::from_iterator(*k, cells.iter().map(|(_, s)| *s));
+        let multinomial = DMatrix::from_diagonal(&p) - &p * p.transpose();
+        let own = &jacobian * multinomial * jacobian.transpose() * scenario_noise_share;
+        let mut block = r.view_mut((offset, offset), (rows.len(), rows.len()));
+        block += own;
+        offset += rows.len();
+    }
+    // The shared part: G diag(1 / p) G^T, with G the rows' coefficients on bloc and candidate levels.
+    let mut levels = DMatrix::zeros(m, level_share.len());
+    for (j, (index, _, _)) in level_share.iter().enumerate() {
+        for row in 0..m {
+            levels[(row, j)] = h[(row, *index)];
+        }
+    }
+    let inverse_share = DVector::from_iterator(
+        level_share.len(),
+        level_share.iter().map(|(_, total, count)| *count as f64 / total),
+    );
+    r += &levels * DMatrix::from_diagonal(&inverse_share) * levels.transpose() * (1.0 - scenario_noise_share);
+    r *= design_effect / observation.sample_size;
     Linearised { h, y, r }
 }
 
@@ -498,12 +553,11 @@ fn run_filter(
     layout: &Layout,
     observations: &[Observation],
     params: &AggregationParams,
-    random_walk_sd: f64,
-    design_effect: f64,
+    noise: Noise,
     end_day: i32,
     mut recorder: Option<&mut SeriesRecorder>,
 ) -> Result<(Gaussian, f64), ModelError> {
-    let variance = daily_variance(layout, random_walk_sd, layout.dim());
+    let variance = daily_variance(layout, noise.random_walk_sd, layout.dim());
     let mut state = prior(layout, params);
     let mut day = observations[0].day;
     let mut log_likelihood = 0.0;
@@ -518,7 +572,7 @@ fn run_filter(
         }
         state.predict_random_walk(&variance, f64::from(observation.day - day));
         day = observation.day;
-        let linearised = linearise(layout, observation, design_effect);
+        let linearised = linearise(layout, observation, noise.design_effect, noise.scenario_noise_share);
         log_likelihood += state.update(&linearised.h, &linearised.y, &linearised.r)?;
     }
     if let Some(recorder) = recorder {
@@ -574,7 +628,7 @@ impl SeriesRecorder {
     }
 
     fn saw(&mut self, observation: &Observation) {
-        for (c, _) in &observation.shares {
+        for (c, _) in observation.scenarios.iter().flatten() {
             self.first_polled[*c].get_or_insert(observation.day);
         }
     }
@@ -603,10 +657,17 @@ impl SeriesRecorder {
         let mut shares = vec![0.0; layout.n_candidates];
         let mut share_scratch = ShareScratch::new(layout);
         for c in candidates {
+            // A candidate no poll had tested by this date has only a prior; leave them out of the
+            // field rather than let that prior take a random slice of their bloc.
+            let field: Vec<bool> = self.fields[c]
+                .iter()
+                .enumerate()
+                .map(|(k, present)| *present && self.first_polled[k].is_some_and(|first| first <= day))
+                .collect();
             let mut values: Vec<f64> = draws
                 .iter()
                 .map(|x| {
-                    round1_shares(layout, x, &self.fields[c], None, &mut share_scratch, &mut shares);
+                    round1_shares(layout, x, &field, None, &mut share_scratch, &mut shares);
                     shares[c]
                 })
                 .collect();
@@ -640,6 +701,7 @@ mod tests {
             presence_sd: 0.3,
             house_sd: 0.08,
             share_floor: 0.5,
+            scenario_noise_share_grid: vec![0.2],
             series_step_days: 7,
             series_draws: 200,
         }
@@ -769,5 +831,64 @@ mod tests {
             fit_round1(&field(), &[bad], &params(), date(2026, 10, 1), 1),
             Err(ModelError::InvalidPoll { .. })
         ));
+    }
+
+    fn test_layout() -> Layout {
+        Layout {
+            n_blocs: 3,
+            n_candidates: 4,
+            firms: vec!["a".into()],
+            bloc_of: field().bloc_of.clone(),
+        }
+    }
+
+    #[test]
+    fn lone_scenario_gets_the_multinomial_covariance() {
+        let layout = test_layout();
+        let cells = vec![(0, 0.3), (1, 0.1), (2, 0.25), (3, 0.35)];
+        let observation = Observation {
+            day: 0,
+            firm: 0,
+            scenarios: vec![cells.clone()],
+            sample_size: 1000.0,
+        };
+        // Delta-method covariance of the rows, computed directly.
+        let rows = scenario_rows(&layout, 0, &cells);
+        let jacobian = DMatrix::from_fn(rows.len(), cells.len(), |r, c| rows[r].2[c]);
+        let p = DVector::from_iterator(cells.len(), cells.iter().map(|(_, s)| *s));
+        let expected =
+            &jacobian * (DMatrix::from_diagonal(&p) - &p * p.transpose()) * jacobian.transpose() * 2.0 / 1000.0;
+        for share in [0.1, 0.4, 0.9] {
+            let linearised = linearise(&layout, &observation, 2.0, share);
+            assert!(
+                (linearised.r - &expected).abs().max() < 1e-12,
+                "scenario noise share {share}"
+            );
+        }
+    }
+
+    #[test]
+    fn scenarios_of_one_poll_share_their_sampling_error() {
+        let layout = test_layout();
+        let observation = Observation {
+            day: 0,
+            firm: 0,
+            scenarios: vec![
+                vec![(0, 0.3), (1, 0.1), (2, 0.25), (3, 0.35)],
+                vec![(0, 0.37), (2, 0.26), (3, 0.37)],
+            ],
+            sample_size: 1000.0,
+        };
+        let linearised = linearise(&layout, &observation, 1.0, 0.2);
+        let (first, second) = (rows_of(&layout, &observation, 0), rows_of(&layout, &observation, 1));
+        assert_eq!(linearised.r.nrows(), first + second);
+        let cross = linearised.r.view((0, first), (first, second));
+        assert!(cross.abs().max() > 0.0, "scenarios of one poll must be correlated");
+        // The covariance stays a valid covariance.
+        assert!(linearised.r.clone().cholesky().is_some());
+    }
+
+    fn rows_of(layout: &Layout, observation: &Observation, scenario: usize) -> usize {
+        scenario_rows(layout, observation.firm, &observation.scenarios[scenario]).len()
     }
 }

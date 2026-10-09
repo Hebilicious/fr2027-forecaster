@@ -57,14 +57,14 @@ tasks:
 
   validate:
     description: "Check config, every raw file and the clean files; fails on any rejection or stale clean data."
-    command: "/target/release/fr2027"
+    command: "$workspaceRoot/target/release/fr2027"
     args: ["validate"]
     deps: ["build"]
     inputs: ["@group(rust)", "/config/**/*", "/schemas/**/*", "/data/raw/**/*", "/data/clean/**/*"]
 
   ingest:
     description: "Rebuild data/clean/ from data/raw/ and rewrite data/quarantine/."
-    command: "/target/release/fr2027"
+    command: "$workspaceRoot/target/release/fr2027"
     args: ["ingest"]
     deps: ["build"]
     options:
@@ -73,7 +73,7 @@ tasks:
 
   forecast:
     description: "Ingest, then fit the model and write data/forecasts/<YYYY-MM-DDTHH>.json and series.json."
-    command: "/target/release/fr2027"
+    command: "$workspaceRoot/target/release/fr2027"
     args: ["forecast"]
     deps: ["ingest"]
     options:
@@ -82,7 +82,7 @@ tasks:
 
   serve:
     description: "Serve the UI and API (default http://127.0.0.1:8027; pass -- --port <n> for another)."
-    command: "/target/release/fr2027"
+    command: "$workspaceRoot/target/release/fr2027"
     args: ["serve"]
     deps: ["forecast", "web:build"]
     options:

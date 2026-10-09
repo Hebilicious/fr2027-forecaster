@@ -191,10 +191,33 @@ th[scope="row"] {
   min-width: 7.5em;
 }
 
+@media (max-width: 720px) {
+  .bar-track,
+  .range {
+    display: none;
+  }
+
+  .bar-cell,
+  .range-cell {
+    min-width: 0;
+  }
+
+  .value,
+  .range-cell .value {
+    min-width: 0;
+  }
+
+  th,
+  td {
+    padding: 8px 6px;
+  }
+}
+
 .grid-2 {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
 }
 
 .movers {

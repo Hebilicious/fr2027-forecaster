@@ -105,6 +105,9 @@ pub struct AggregationParams {
     pub house_sd: f64,
     /// Shares below this percentage are raised to it before taking logs.
     pub share_floor: f64,
+    /// Fractions of a scenario's sampling variance that is its own rather than shared with the
+    /// poll's other scenarios (same respondents); chosen with the two grids above.
+    pub scenario_noise_share_grid: Vec<f64>,
     /// Spacing of the latent-share history, in days.
     pub series_step_days: u32,
     /// Draws per history point used for its interval.

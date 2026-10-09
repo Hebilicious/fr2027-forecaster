@@ -24,9 +24,10 @@ const height = 180
 const margin = { top: 10, right: 12, bottom: 22, left: 34 }
 const x = (date: string) =>
   scale(Date.parse(`${date}T00:00:00Z`), { domain: props.xDomain, range: [margin.left, width - margin.right] })
-const y = (share: number) => scale(share, { domain: [0, props.yMax], range: [height - margin.bottom, margin.top] })
-
 const ticks = computed(() => shareTicks(props.yMax))
+const yTop = computed(() => ticks.value.at(-1) ?? props.yMax)
+const y = (share: number) => scale(share, { domain: [0, yTop.value], range: [height - margin.bottom, margin.top] })
+
 const band = computed(() => {
   const pts = props.panel.points
   if (pts.length === 0) return ""

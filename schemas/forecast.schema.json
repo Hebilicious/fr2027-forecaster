@@ -99,6 +99,8 @@
       "required": [
         "random_walk_sd",
         "design_effect",
+        "scenario_noise_share",
+        "log_likelihood",
         "polls_used",
         "scenarios_used",
         "round2_pairs_polled",
@@ -109,6 +111,11 @@
       "properties": {
         "random_walk_sd": { "type": "number" },
         "design_effect": { "type": "number" },
+        "scenario_noise_share": { "type": "number" },
+        "log_likelihood": {
+          "type": "number",
+          "description": "Marginal log-likelihood of the round 1 polls at the chosen noise settings."
+        },
         "polls_used": { "type": "integer", "minimum": 0 },
         "scenarios_used": { "type": "integer", "minimum": 0 },
         "round2_pairs_polled": { "type": "integer", "minimum": 0 },
