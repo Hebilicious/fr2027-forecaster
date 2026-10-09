@@ -64,13 +64,21 @@ jobs:
       - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
         with:
           auto-install: true
-      # proto installs Rust through rustup, but on the hosted runner the toolchain came out without
-      # cargo (2026-10-09). This makes it match rust-toolchain.toml; it is a no-op when it already does.
-      - name: Complete the Rust toolchain
+      # On the hosted runner, proto's Rust install leaves rustup with a toolchain that holds clippy
+      # and rustfmt but no rustc or cargo (seen 2026-10-09). Reinstall it from rust-toolchain.toml
+      # whenever any of the four tools is missing; otherwise this only checks.
+      - name: Check the Rust toolchain
         run: |
           channel=$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)
-          rustup toolchain install "$channel" --profile minimal --component clippy,rustfmt --no-self-update
-          rustup component add --toolchain "$channel" cargo clippy rustfmt
+          complete() {
+            rustup run "$channel" rustc --version && rustup run "$channel" cargo --version &&
+              rustup run "$channel" cargo clippy --version && rustup run "$channel" rustfmt --version
+          }
+          if ! complete; then
+            rustup toolchain uninstall "$channel" || true
+            rustup toolchain install "$channel" --profile minimal --component clippy,rustfmt --no-self-update
+            complete
+          fi
       - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
         with:
           path: |
