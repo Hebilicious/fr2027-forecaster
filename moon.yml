@@ -19,7 +19,7 @@ tasks:
     description: "Format TypeScript, JSON and Markdown with oxfmt, Vue with vize, Rust with rustfmt."
     command: "oxfmt"
     args: ["."]
-    deps: ["web:format", "model:format", "collectors:format", "cli:format"]
+    deps: ["web:format", "model:format", "collectors:format", "fetch:format", "cli:format"]
     options:
       cache: false
       runInCI: false

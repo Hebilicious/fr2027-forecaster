@@ -5,21 +5,39 @@ on:
     branches: [main]
   pull_request:
 
+# Read-only: CI never writes to the repository. Fork pull requests get no secrets.
 permissions:
   contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
 
 jobs:
   ci:
     name: moon ci
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v5
+      # Actions are pinned to full commit SHAs; the tag is in the comment.
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           fetch-depth: 0
+          persist-credentials: false
       # Installs proto, then every tool pinned in .prototools (moon, node, pnpm, rust).
-      - uses: moonrepo/setup-toolchain@v0
+      - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
         with:
           auto-install: true
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            target
+          key: cargo-ci-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ hashFiles('**/*.rs') }}
+          restore-keys: |
+            cargo-ci-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
       # Runs every task with runInCI enabled: tests, clippy, format checks, type checks, lint,
       # and `cli:validate`, which fails on any quarantined raw file or out-of-date clean data.
       - run: moon ci

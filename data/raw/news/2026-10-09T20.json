@@ -1,0 +1,1592 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 18,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-09T20:47:49Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-09T15:46:28Z",
+      "title": "Présidentielle 2027 : François Baroin apporte son soutien à Bruno Retailleau contre un Edouard Philippe « premier de cordée » du macronisme",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/09/presidentielle-2027-francois-baroin-apporte-son-soutien-a-bruno-retailleau-contre-un-edouard-philippe-premier-de-cordee-du-macronisme_6790608_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-09T09:30:02Z",
+      "title": "Présidentielle 2027 : « Marine Le Pen révise son logiciel social-populiste et tente de lui adjoindre son pendant libéral »",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/09/presidentielle-2027-marine-le-pen-revise-son-logiciel-social-populiste-et-tente-de-lui-adjoindre-son-pendant-liberal_6790546_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-09T08:00:03Z",
+      "title": "Le sinueux parcours de Ségolène Royal et Raphaël Glucksmann, deux candidats de gauche qui s’accusent d’être de droite",
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/10/09/le-sinueux-parcours-de-segolene-royal-et-raphael-glucksmann-deux-candidats-de-gauche-qui-s-accusent-d-etre-de-droite_6790533_4355770.html"
+    },
+    {
+      "candidate_ids": [
+        "maurel"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-09T07:41:58Z",
+      "title": "Emmanuel Maurel, la surprise des débats de la primaire sociale-démocrate",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/09/emmanuel-maurel-la-surprise-des-debats-de-la-primaire-sociale-democrate_6790531_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "guedj"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-09T06:39:17Z",
+      "title": "Jérôme Guedj, la « mauvaise conscience » de la primaire de la gauche",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/09/jerome-guedj-la-mauvaise-conscience-de-la-primaire-de-la-gauche_6790524_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "guedj",
+        "royal"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-09T03:40:26Z",
+      "title": "Primaire de la gauche sociale-démocrate : « génocide » à Gaza, ce mot qui crée une fracture entre les candidats",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/09/primaire-de-la-gauche-sociale-democrate-genocide-a-gaza-ce-mot-qui-cree-une-fracture-entre-les-candidats_6790502_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "guedj",
+        "maurel",
+        "royal"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-09T03:30:35Z",
+      "title": "Primaire de la gauche sociale-démocrate : avec plus de 140 000 votants, une élection plus incertaine que prévu",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/09/primaire-a-gauche-avec-plus-de-140-000-votants-pour-designer-leur-candidat-a-la-presidentielle-une-election-plus-incertaine-que-prevu_6790500_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-08T20:10:51Z",
+      "title": "Edouard Philippe propose de réviser « totalement » le système des allocations familiales et de « diviser par deux » l’immigration légale",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/08/edouard-philippe-proprose-de-reviser-totalement-le-systeme-des-allocations-familiales_6790287_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-08T17:20:51Z",
+      "title": "Marine Le Pen espère financer sa campagne pour la présidentielle 2027 grâce aux prêts de particuliers",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/08/marine-le-pen-espere-financer-sa-campagne-pour-la-presidentielle-2027-grace-aux-prets-de-particuliers_6790273_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-08T08:13:23Z",
+      "title": "Présidentielle 2027 : les propositions radicales et les chiffres flous de Marine Le Pen sur le budget de l’UE",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/08/presidentielle-2027-les-propositions-radicales-et-les-chiffres-flous-de-marine-le-pen-sur-le-budget-de-l-union-europeenne_6790175_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-07T12:15:09Z",
+      "title": "Présidentielle 2027 : le RN veut supprimer les intercommunalités",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/07/presidentielle-2027-le-rassemblement-national-veut-supprimer-les-intercommunalites_6789595_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "maurel"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-06T15:58:32Z",
+      "title": "Crise de la dette : l’idée d’un grand emprunt populaire revient dans le débat",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/06/crise-de-la-dette-l-idee-d-un-grand-emprunt-populaire-revient-dans-le-debat_6789042_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "guedj",
+        "maurel",
+        "royal"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-06T00:01:47Z",
+      "title": "Primaire à gauche : plus de 140 000 personnes se sont inscrites pour désigner leur candidat à la présidentielle",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/06/primaire-a-gauche-plus-de-140-000-inscrits-appeles-a-designer-leur-candidat-a-la-presidentielle_6788654_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-05T15:30:03Z",
+      "title": "« Primaires, une machine à perdre ? », sur LCP : une mise en perspective qui tombe à pic",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/05/primaires-une-machine-a-perdre-sur-lcp-une-mise-en-perspective-qui-tombe-a-pic_6788548_3246.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-09T11:27:16Z",
+      "title": "Le député RN Franck Allisio licencie son collaborateur accusé d’écrits antisémites sur les réseaux sociaux",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/09/le-depute-rn-franck-allisio-licencie-son-collaborateur-accuse-d-ecrits-antisemites-sur-les-reseaux-sociaux_6790566_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-09T10:33:15Z",
+      "title": "Ecrits antisémites : « Mediapart » apporte de nouvelles preuves liant Jordan Bardella aux propos tenus sur Messenger",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/09/ecrits-antisemites-mediapart-apporte-de-nouvelles-preuves-liant-jordan-bardella-aux-propos-tenus-sur-messenger_6790555_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-09T09:44:20Z",
+      "title": "« Mediapart » publie de nouvelles preuves visant à confirmer des écrits antisémites de Jordan Bardella",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/09/mediapart-publie-de-nouvelles-preuves-visant-a-confirmer-des-ecrits-antisemites-de-jordan-bardella_6790549_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-09T16:24:56Z",
+      "title": "Michel Barnier au Figaro : «Je souhaite un seul candidat à la fin et que ce soit Bruno Retailleau»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/michel-barnier-au-figaro-je-souhaite-un-seul-candidat-a-la-fin-et-que-ce-soit-bruno-retailleau-20261009"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-07T12:28:30Z",
+      "title": "«Je viens à Jérusalem pour regarder le monde en face» : Bruno Retailleau défend les «liens du sang» entre Israël et la France",
+      "url": "https://www.lefigaro.fr/politique/je-viens-a-jerusalem-pour-regarder-le-monde-en-face-bruno-retailleau-defend-les-liens-du-sang-entre-israel-et-la-france-20261007"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-06T12:26:17Z",
+      "title": "Retraites, réforme de l’État, immigration… Ce que contient le plan économique de Marine Le Pen pour «la renaissance de la France»",
+      "url": "https://www.lefigaro.fr/conjoncture/retraites-reforme-de-l-etat-immigration-ce-que-contient-le-plan-economique-de-marine-le-pen-pour-la-renaissance-de-la-france-20261006"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "villepin"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-04T17:59:06Z",
+      "title": "Affaire Bardella : « Un problème de système, pas de personne », Dominique de Villepin charge le Rassemblement national",
+      "url": "https://www.lefigaro.fr/politique/affaire-bardella-un-probleme-de-systeme-pas-de-personne-dominique-de-villepin-charge-le-rn-20261004"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-02T18:30:00Z",
+      "title": "Philippe, Attal, Pécresse et la paix du Christ... Les indiscrets du Figaro",
+      "url": "https://www.lefigaro.fr/politique/philippe-attal-pecresse-et-la-paix-du-christ-les-indiscrets-du-figaro-20261002"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-05T07:53:48Z",
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon cherche à attiser la fureur lycéenne",
+      "url": "https://www.lefigaro.fr/politique/presidentielle-2027-jean-luc-melenchon-cherche-a-attiser-la-fureur-lyceenne-20261002"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-09T17:28:02Z",
+      "title": "Édouard Philippe, Gabriel Attal, Bruno Retailleau : quelles convergences et différences entre leurs projets ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/edouard-philippe-gabriel-attal-bruno-retailleau-quelles-convergences-et-quelles-differences-entre-leurs-projets-20261009"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-09T05:44:25Z",
+      "title": "« Peut-être êtes-vous de ceux que la droite a déçus » : la lettre de Bruno Retailleau à un électeur du RN",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/peut-etre-etes-vous-de-ceux-que-la-droite-a-decus-la-lettre-de-bruno-retailleau-a-un-electeur-du-rn-20261009"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-09T06:15:27Z",
+      "title": "« Vous et les vôtres avez sur la conscience la mort de Quentin Deranque » : la lettre de Bruno Retailleau à Jean-Luc Mélenchon",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/vous-et-les-votres-avez-sur-la-conscience-la-mort-de-quentin-deranque-la-lettre-de-bruno-retailleau-a-jean-luc-melenchon-20261009"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-09T05:00:00Z",
+      "title": "Bruno Retailleau : « L’idéologie gauchiste veut tout détruire »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/bruno-retailleau-l-ideologie-gauchiste-veut-tout-detruire-20261009"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "royal"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-09T04:15:00Z",
+      "title": "Depuis 1995, deux primaires « ouvertes » et trois « fermées » pour choisir le candidat PS",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/primaires-gauche/depuis-1995-deux-primaires-ouvertes-et-trois-fermees-pour-choisir-le-candidat-ps-20261009"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-08T22:40:37Z",
+      "title": "Présidentielle 2027 : dans «L’Heure de vérité», Édouard Philippe marque sa campagne à droite",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/dans-l-heure-de-verite-edouard-philippe-marque-sa-campagne-a-droite-20261008"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-08T18:05:00Z",
+      "title": "Primaire à gauche : loin des tensions socialistes, François Hollande mise sur le dépassement",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/primaires-gauche/primaire-a-gauche-loin-des-tensions-socialistes-francois-hollande-mise-sur-le-depassement-20261008"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-08T17:40:00Z",
+      "title": "Primaire à gauche : Raphaël Glucksmann espère plier le match face à Olivier Faure",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/primaires-gauche/primaire-a-gauche-raphael-glucksmann-espere-plier-le-match-face-a-olivier-faure-20261008"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-08T17:20:11Z",
+      "title": "«La partie d’échecs, c’est au dernier coup que l’on voit si elle est gagnée» : chez François Baroin, les sénateurs LR soudés derrière Bruno Retailleau",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/la-partie-d-echecs-c-est-au-dernier-coup-que-l-on-voit-si-elle-est-gagnee-chez-francois-baroin-les-senateurs-lr-soudes-derriere-bruno-retailleau-20261008"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-08T17:20:00Z",
+      "title": "Guillaume Tabard : « Édouard Philippe, de la longue marche au danger du surplace »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-edouard-philippe-de-la-longue-marche-au-danger-du-surplace-20261008"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T15:59:14Z",
+      "title": "Présidentielle 2027 : Bruno Retailleau reçoit le soutien de François Baroin (qui croit encore aux miracles)",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-bruno-retailleau-recoit-le-soutien-de-francois-baroin-qui-croit-encore-aux-miracles-20261009_GJRDICS3OZGYVGBYYRS2DPQQRI/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T14:51:20Z",
+      "title": "Présidentielle : le match Attal-Philippe s’étend au mouvement lycéen",
+      "url": "https://www.liberation.fr/politique/presidentielle-le-match-attal-philippe-setend-au-mouvement-lyceen-20261009_TTFXUMOOINCCZANITUQK7KSFK4/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T14:13:24Z",
+      "title": "Affaire Bardella : l’accumulation des preuves renforce la pression sur le RN",
+      "url": "https://www.liberation.fr/politique/affaire-bardella-laccumulation-des-preuves-renforce-la-pression-sur-le-rn-20261009_IWQX2AEWDJBEZII6VCM5J2OQLU/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T13:19:58Z",
+      "title": "Ecrits antisémites : contrairement à ce qu’affirme Jordan Bardella, un compte Facebook associé à un de ses mails personnels existe toujours",
+      "url": "https://www.liberation.fr/checknews/ecrits-antisemites-contrairement-a-ce-quaffirme-jordan-bardella-un-compte-facebook-associe-a-un-de-ses-mails-personnels-existe-toujours-20261009_VRU6HCTBXNDTBIYGFG2LNWFR2Y/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T10:14:50Z",
+      "title": "Jordan Bardella accusé d’antisémitisme : «Mediapart» prouve (encore) que le compte Facebook était bien celui du président du RN",
+      "url": "https://www.liberation.fr/politique/jordan-bardella-accuse-dantisemitisme-mediapart-prouve-encore-que-le-compte-facebook-etait-bien-celui-du-president-du-rn-20261009_SZY3OXT2LBFMJFG5H3XNGXBO4M/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T09:03:42Z",
+      "title": "Pour les meetings de Mélenchon, LFI veut coller aux basques de ses adversaires",
+      "url": "https://www.liberation.fr/politique/pour-les-meetings-de-melenchon-lfi-veut-coller-aux-basques-de-ses-adversaires-20261009_YDXFFQMF3VCYPAI64WBUPZK62A/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T07:37:14Z",
+      "title": "Dans le Puy-de-Dôme, des insoumis en campagne «bal trad»",
+      "url": "https://www.liberation.fr/politique/elections/dans-le-puy-de-dome-des-insoumis-en-campagne-bal-trad-20261009_WHXSW5PCSJDLDAZRKDK77W4VAI/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T05:45:30Z",
+      "title": "Accusé d’antisémitisme, Bardella balaie «une affaire dont tout le monde se moque»",
+      "url": "https://www.liberation.fr/politique/accuse-dantisemitisme-bardella-balaie-une-affaire-dont-tout-le-monde-se-moque-20261009_SQIUH2TX2BBHLEBRFA7WCXYCBE/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T04:00:00Z",
+      "title": "Primaire sociale-démocrate : Raphaël Glucksmann se sent favori de pied en cap clair",
+      "url": "https://www.liberation.fr/politique/elections/primaire-sociale-democrate-raphael-glucksmann-se-sent-favori-de-pied-en-cap-clair-20261009_DJUNKU53WJCU3NLYFGJJ4P2Z24/"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-09T03:57:00Z",
+      "title": "Primaire à gauche : Olivier Faure, stratège pris à son propre piège ?",
+      "url": "https://www.liberation.fr/politique/primaire-a-gauche-olivier-faure-stratege-pris-a-son-propre-piege-20261009_FTQBUN5FSRG57C65M3WIF5LGEU/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-08T20:17:53Z",
+      "title": "Défiscalisation des heures sup' et allocation familiale unique de 350 euros dès le premier enfant : Edouard Philippe ouvre (un peu) le carnet de chèque",
+      "url": "https://www.liberation.fr/politique/elections/defiscalisation-des-heures-sup-et-allocation-familiale-unique-de-350-euros-des-le-premier-enfant-edouard-philippe-ouvre-un-peu-le-carnet-de-cheque-20261008_BBNCC4756JFTPG7P3HBE7WIE5E/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-08T18:39:08Z",
+      "title": "Primaire à gauche : malgré un favori, un scrutin qui rend flou",
+      "url": "https://www.liberation.fr/politique/primaire-a-gauche-malgre-un-favori-un-scrutin-qui-rend-flou-20261008_H47UROEGIJF53POGYWXWA3ITMI/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-08T15:55:19Z",
+      "title": "Apologie de l’Allemagne hitlérienne, conseils de lecture collabos, blagues racistes : au RN, les références d’un collaborateur de Franck Allisio",
+      "url": "https://www.liberation.fr/politique/apologie-de-lallemagne-hitlerienne-conseils-de-lecture-collabos-blagues-racistes-au-rn-les-references-dun-collaborateur-de-franck-allisio-20261008_RQRD5P6DUBF7XKGFJU47RXCPMA/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-08T10:03:34Z",
+      "title": "Primaire socialiste et sociale-démocrate : les troublantes ressemblances entre Jadot 2021 et Glucksmann 2026",
+      "url": "https://www.liberation.fr/politique/primaire-socialiste-et-sociale-democrate-les-troublantes-ressemblances-entre-jadot-2021-et-glucksmann-2026-20261008_5YR2LYRPLNHSPOG7IUSNYCRFHU/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-08T09:48:45Z",
+      "title": "Comment le magazine d’extrême droite l’Infiltré s’invite dans la guerre larvée entre Attal et Macron",
+      "url": "https://www.liberation.fr/politique/comment-le-magazine-dextreme-droite-linfiltre-sinvite-dans-la-guerre-larvee-entre-attal-et-macron-20261008_SXL3KMPHQNGSNK7Z4BKHFXZAZQ/"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-08T09:45:45Z",
+      "title": "Allocution de Lecornu : Tondelier le remercie d’œuvrer à la convergence des luttes",
+      "url": "https://www.liberation.fr/politique/allocution-de-lecornu-tondelier-le-remercie-doeuvrer-a-la-convergence-des-luttes-20261008_W7YPF7XR45EGNEKHL7UGWKZVEI/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-08T08:32:12Z",
+      "title": "Jordan Bardella accusé d’antisémitisme : les preuves numériques en question",
+      "url": "https://www.liberation.fr/politique/jordan-bardella-accuse-dantisemitisme-les-preuves-numeriques-en-question-20261008_ONBROT7JMVDZJKBETJ5YJ2XVUE/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-08T06:11:59Z",
+      "title": "Edouard Philippe, un passage à «l’Heure de vérité» pour tenter de renouer avec les Français",
+      "url": "https://www.liberation.fr/politique/edouard-philippe-un-passage-a-lheure-de-verite-pour-tenter-de-renouer-avec-les-francais-20261008_MM7X7BQ5YRHMRLV4G5OB2MODH4/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-07T20:12:24Z",
+      "title": "En déplacement à Cournon, Marine Le Pen tente d’échapper à l’affaire Bardella",
+      "url": "https://www.liberation.fr/politique/accusations-dantisemitisme-marine-le-pen-maintient-a-1-000-sa-confiance-en-jordan-bardella-20261007_WTWZEN2HVNAULHAGRDYXLRT4IY/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-07T16:23:14Z",
+      "title": "Présidentielle 2027 : au RN, antisémitisme et sionisme font bon mirage",
+      "url": "https://www.liberation.fr/politique/presidentielle-2027-au-rn-antisemitisme-et-sionisme-font-bon-mirage-20261007_POOK4QB2OZCVVLFZP3UYZBKI7M/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-07T15:01:09Z",
+      "title": "«Il se passe quelque chose» : quand les partisans de David Lisnard veulent s’autopersuader de sa popularité",
+      "url": "https://www.liberation.fr/politique/elections/il-se-passe-quelque-chose-quand-les-partisans-de-david-lisnard-veulent-sautopersuader-de-sa-popularite-20261007_CNJQLD2B3RAP3O5ES4JX6SEBOE/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T15:42:18Z",
+      "title": "Edouard Philippe, Jordan Bardella, la colère lycéenne : le deuxième épisode du podcast \"On/Off\"",
+      "url": "https://www.franceinfo.fr/politique/edouard-philippe-jordan-bardella-la-colere-lyceenne-le-deuxieme-episode-du-podcast-on-off_8229676.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T15:38:59Z",
+      "title": "Jordan Bardella a effacé les données d'un compte Facebook après les révélations de Mediapart, affirme \"Le Canard enchaîné\"",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/jordan-bardella-a-efface-les-donnees-d-un-compte-facebook-apres-les-revelations-de-mediapart-selon-le-canard-enchaine_8230042.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T11:23:57Z",
+      "title": "La primaire socialiste, sursaut ou suicide collectif ?",
+      "url": "https://www.franceinfo.fr/politique/ps/primaire-a-gauche/la-primaire-socialiste-sursaut-ou-suicide-collectif_8230051.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T10:01:58Z",
+      "title": "Messages antisémites attribués à Jordan Bardella : Mediapart publie de nouveaux éléments mettant à mal la défense du président du RN",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/messages-antisemites-attribues-a-jordan-bardella-mediapart-publie-de-nouveaux-elements-mettant-a-mal-la-defense-du-president-du-rn_8229829.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T07:25:27Z",
+      "title": "Le député de la Somme François Ruffin a déposé une proposition de résolution appelant à un moratoire de cinq ans sur les data centers non européens",
+      "url": "https://www.franceinfo.fr/politique/le-depute-de-la-somme-francois-ruffin-a-depose-une-proposition-de-resolution-appelant-a-un-moratoire-de-cinq-ans-sur-les-data-centers-non-europeens_8229637.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T07:18:48Z",
+      "title": "EDITO. Entre haine et ressentiment, la primaire socialiste va-t-elle s'achever en suicide collectif ?",
+      "url": "https://www.franceinfo.fr/replay-radio/l-edito-politique/edito-entre-haine-et-ressentiment-la-primaire-socialiste-va-t-elle-s-achever-en-suicide-collectif_8208806.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T07:20:59Z",
+      "title": "\"Il y a deux manifestations\", estime la députée RN Laure Lavalette, qui accuse La France insoumise d'avoir \"instrumentalisé\" la mobilisation lycéenne",
+      "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/il-y-a-deux-manifestations-estime-la-deputee-rn-laure-lavalette-qui-accuse-la-france-insoumise-d-avoir-instrumentalise-la-mobilisation-lyceenne_8229577.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "guedj",
+        "maurel",
+        "royal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T05:46:35Z",
+      "title": "Qui sera le candidat de la gauche sociale-démocrate à la présidentielle 2027 ? Le vote pour la primaire de la gauche est ouvert",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/qui-sera-le-candidat-de-la-gauche-sociale-democrate-a-la-presidentielle-2027-le-vote-pour-la-primaire-socialiste-est-ouvert_8229478.html"
+    },
+    {
+      "candidate_ids": [
+        "guedj",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-09T04:40:47Z",
+      "title": "A suivre Loïc de la Mornais : Jérôme Guedj, l'invité de franceinfo",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/a-suivre-avec-loic-de-la-mornais/a-suivre-loic-de-la-mornais-jerome-guedj-l-invite-de-franceinfo_8229436.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-09T07:34:26Z",
+      "title": "Immigration, allocations familiales, Parcoursup… Ce qu'il faut retenir de l'interview d'Edouard Philippe dans l'émission \"L'Heure de vérité\" sur France 2",
+      "url": "https://www.franceinfo.fr/politique/edouard-philippe/immigration-retraites-allocations-familiales-parcoursup-ce-qu-il-faut-retenir-de-l-interview-d-edouard-philippe-dans-l-emission-l-heure-de-verite_8228416.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-08T20:08:52Z",
+      "title": "Edouard Philippe souhaite le versement d'une allocation familiale unique \"dès le premier enfant\"",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/edouard-philippe-veut-aider-les-familles-des-le-premier-enfant-et-via-une-reduction-d-impot_8229028.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-08T22:00:33Z",
+      "title": "Présidentielle 2027 : revivez le premier numéro de \"L'Heure de Vérité\" avec Edouard Philippe",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/l-heure-de-verite/direct-presidentielle-2027-retraites-pouvoir-d-achat-dette-guerre-en-ukraine-edouard-philippe-est-l-invite-de-l-heure-de-verite-a-partir-de-20h40-suivez-l-emission-avec-nous_8228425.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-07T07:15:01Z",
+      "title": "Commémorations du 7-Octobre, antisémitisme, propos attribués à Jordan Bardella... Le \"8h30 franceinfo\" de Yonathan Arfi",
+      "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/commemoration-du-7-octobre-antisemitisme-propos-attribues-a-jordan-bardella-le-8h30-franceinfo-de-yonathan-arfi_8205380.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-06T09:22:03Z",
+      "title": "Présidentielle 2027 : Marine Le Pen promet \"140 milliards d'euros net d'économies\" d'ici à 2032",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-marine-le-pen-promet-140-milliards-d-euros-nets-d-economies-d-ici-a-2032_8224807.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-06T05:00:01Z",
+      "title": "APPEL A TEMOIGNAGES. Posez vos questions à Edouard Philippe, invité de \"L'Heure de vérité\"",
+      "url": "https://www.franceinfo.fr/politique/edouard-philippe/appel-a-temoignages-posez-vos-questions-a-edouard-philippe-invite-de-l-heure-de-verite_8224003.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin",
+        "villepin"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-06T05:50:52Z",
+      "title": "Dominique de Villepin et François Ruffin critiquent la politique de maintien de l'ordre vis-à-vis des mobilisations lycéennes",
+      "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/dominique-de-villepin-et-francois-ruffin-critiquent-la-politique-de-maintien-de-l-ordre-vis-a-vis-des-mobilisations-lyceennes_8224030.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "guedj",
+        "maurel",
+        "royal"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-06T05:30:34Z",
+      "title": "Plus de 140 000 personnes inscrites pour voter à la primaire socialiste pour la présidentielle 2027",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/primaire-socialiste-pres-de-128-000-personnes-sont-inscrites-pour-voter-selon-un-chiffre-preliminaire_8223943.html"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-05T10:19:36Z",
+      "title": "VIDEO. Primaire socialiste : \"100 000 votants, ça serait un succès\", estime Olivier Faure, candidat et premier secrétaire du PS",
+      "url": "https://www.franceinfo.fr/politique/primaire-socialiste-100-000-votants-ca-serait-un-succes-estime-olivier-faure-candidat-et-premier-secretaire-du-ps_8222950.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-04T19:50:24Z",
+      "title": "Ségolène Royal dénonce \"une agression à connotation sexuelle\" après que Raphaël Glucksmann l'a accusée d'avoir fait \"la danse du ventre\" auprès d'Emmanuel Macron",
+      "url": "https://www.franceinfo.fr/politique/ps/primaire-a-gauche/segolene-royal-denonce-une-agression-a-connotation-sexuelle-apres-que-raphael-glucksmann-l-a-accuse-d-avoir-fait-la-danse-du-ventre-aupres-d-emmanuel-macron_8222578.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-04T19:05:59Z",
+      "title": "\"Même pas en rêve\" : le camp de Raphaël Glucksmann rejette la main tendue par Gabriel Attal",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/meme-pas-en-reve-le-camp-de-raphael-glucksmann-rejette-la-main-tendue-par-gabriel-attal_8222443.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "royal"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-03T17:11:34Z",
+      "title": "Jean-Luc Mélenchon et Ségolène Royal s'insurgent des propos de Raphaël Glucksmann tenus lors d'une conversation privée, diffusée par \"Le Media\"",
+      "url": "https://www.franceinfo.fr/politique/jean-luc-melenchon-et-segolene-royal-s-insurgent-des-propos-de-raphael-glucksmann-tenus-dans-une-conversation-diffusee-par-le-media_8221423.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T17:55:55Z",
+      "title": "Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/gabriel-attal_DN-202108310662.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T17:55:55Z",
+      "title": "Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/jean-luc-melenchon_DN-201701010040.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T17:55:54Z",
+      "title": "\"Personnellement responsable\": Jean-Luc Mélenchon juge Gabriel Attal fautif de la colère lycéenne à cause de Parcoursup",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/personnellement-responsable-jean-luc-melenchon-juge-gabriel-attal-fautif-de-la-colere-lyceenne-a-cause-de-parcoursup_AD-202610090802.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T14:49:54Z",
+      "title": "Propos antisémites attribués à Jordan Bardella: les nouvelles preuves apportées par Mediapart",
+      "url": "https://www.bfmtv.com/politique/video-propos-antisemites-attribues-a-jordan-bardella-les-nouvelles-preuves-apportees-par-mediapart_VN-202610090647.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T14:17:46Z",
+      "title": "Propos antisémites attribués à Jordan Bardella: les nouvelles preuves apportées par Mediapart",
+      "url": "https://www.bfmtv.com/politique/front-national/video-propos-antisemites-attribues-a-jordan-bardella-les-nouvelles-preuves-apportees-par-mediapart_VN-202610090617.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T13:44:22Z",
+      "title": "Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/marine-le-pen_DN-201201010011.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T13:44:22Z",
+      "title": "François Hollande",
+      "url": "https://www.bfmtv.com/politique/francois-hollande_DN-200804100007.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T13:44:22Z",
+      "title": "Edouard Philippe",
+      "url": "https://www.bfmtv.com/politique/edouard-philippe_DN-202108310657.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T13:44:22Z",
+      "title": "Ségolène Royal",
+      "url": "https://www.bfmtv.com/politique/segolene-royal_DN-201307180076.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T13:44:22Z",
+      "title": "Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/gouvernement/bruno-retailleau_DN-202410030418.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T13:44:22Z",
+      "title": "Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/raphael-glucksmann_DN-202405270322.html"
+    },
+    {
+      "candidate_ids": [
+        "bertrand",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T13:44:22Z",
+      "title": "Xavier Bertrand",
+      "url": "https://www.bfmtv.com/politique/xavier-bertrand_DN-202106280528.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-09T13:44:22Z",
+      "title": "Emmanuel Macron",
+      "url": "https://www.bfmtv.com/politique/emmanuel-macron_DN-201609010121.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-09T13:31:40Z",
+      "title": "En déplacement à Troyes, Bruno Retailleau reçoit l'appui de François Baroin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/en-deplacement-a-troyes-bruno-retailleau-recoit-l-appui-de-francois-baroin_AD-202610090583.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-09T08:39:54Z",
+      "title": "Présidentielle 2027: Édouard Philippe affirme qu'il ne \"compte pas vivre\" à l'Élysée s'il est élu",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-edouard-philippe-affirme-qu-il-ne-compte-pas-vivre-a-l-elysee-s-il-est-elu_AN-202610090351.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin",
+        "villepin"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-09T06:52:19Z",
+      "title": "\"Cela fait du bien à la démocratie\": François Ruffin justifie ses initiatives communes avec Dominique de Villepin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/cela-fait-du-bien-a-la-democratie-francois-ruffin-justifie-ses-initiatives-communes-avec-dominique-de-villepin_AN-202610090258.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T22:00:59Z",
+      "title": "\"On est dans un début de barbarie\": face à la réponse policière au mouvement lycéen, Ségolène Royal estime qu'\"on n'est plus en République\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/on-est-dans-un-debut-de-barbarie-face-a-la-repression-policiere-du-mouvement-lyceen-segolene-royal-estime-qu-on-n-est-plus-en-republique_AV-202610081029.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T21:07:11Z",
+      "title": "\"Il faudra aller vite\": Édouard Philippe présentera une vingtaine d'ordonnances dès juillet 2027 s'il remporte la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/il-faudra-aller-vite-edouard-philippe-presentera-une-vingtaine-d-ordonnances-des-juillet-2027-s-il-remporte-la-presidentielle_AD-202610081001.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T20:44:48Z",
+      "title": "Primaire sociale-démocrate: \"Chez nous, ce n'est pas la justice qui décide qui est candidat\", lance Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-sociale-democrate-chez-nous-ce-n-est-pas-la-justice-qui-decide-qui-est-candidat-lance-raphael-glucksmann_VN-202610080989.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T12:58:30Z",
+      "title": "Jeunesse, LFI, tifos… À quoi va ressembler le meeting de Gabriel Attal ce samedi à Lyon?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/jeunesse-lfi-tifos-a-quoi-va-ressembler-le-meeting-de-gabriel-attal-ce-samedi-a-lyon_AN-202610080568.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T11:52:38Z",
+      "title": "Fabien Roussel, candidat PCF à l'élection présidentielle, réclame \"un pacte pour notre jeunesse\" entre toutes les forces politiques",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-fabien-roussel-candidat-pcf-a-l-election-presidentielle-reclame-un-pacte-pour-notre-jeunesse-entre-toutes-les-forces-politiques_VN-202610080513.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T11:39:56Z",
+      "title": "Mobilisation lycéenne: \"Que l'on mette les moyens qu'ils réclament\", demande Fabien Roussel, candidat PCF à l'élection présidentielle, au gouvernement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-mobilisation-lyceenne-que-l-on-mette-les-moyens-qu-ils-reclament-demande-fabien-roussel-candidat-pcf-a-l-election-presidentielle-au-gouvernement_VN-202610080508.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T09:27:57Z",
+      "title": "Présidentielle 2027: \"Aucune des candidatures de Gabriel Attal et d'Édouard Philippe n'a réussi à s'imposer comme étant sérieuse et crédible\", déclare Manuel Bompard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-aucune-des-candidatures-de-gabriel-attal-et-d-edouard-philippe-n-a-reussi-a-s-imposer-comme-etant-serieuse-et-credible-declare-manuel-bompard_VN-202610080401.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T07:59:31Z",
+      "title": "\"Défier Édouard Philippe\": Jean-Luc Mélenchon en meeting au Havre le 5 décembre en vue de la présidentielle 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/defier-edouard-philippe-jean-luc-melenchon-en-meeting-au-havre-le-5-decembre-en-vue-de-la-presidentielle-2027_AD-202610080335.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-08T07:30:02Z",
+      "title": "Campagne présidentielle: les banques \"ont toutes refusé\" les demandes de financement du RN, déclare Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-campagne-presidentielle-les-banques-ont-toutes-refuse-les-demandes-de-financement-du-rn-declare-marine-le-pen_VN-202610080294.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-06T10:53:15Z",
+      "title": "Budget: le RN s'attribue une baisse de taux après le discours de Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-budget-le-taux-de-l-oat-a-10-ans-a-fortement-baisse-pendant-la-prise-de-parole-de-marine-le-pen-se-rejouit-jean-philippe-tanguy_VN-202610060496.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-06T10:02:58Z",
+      "title": "Colère lycéenne: Marine Le Pen souligne \"la violence\" qui est \"entrée\" dans les établissements scolaires",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-colere-lyceenne-marine-le-pen-souligne-la-violence-qui-est-entree-dans-les-etablissements-scolaires_VN-202610060453.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-06T09:59:15Z",
+      "title": "Mediapart: Jordan Bardella annonce examiner \"de nouvelles suites judiciaires à donner\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-mediapart-jordan-bardella-annonce-examiner-de-nouvelles-suites-judiciaires-a-donner_VN-202610060451.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-06T08:39:11Z",
+      "title": "Marine Le Pen: sans \"rupture politique, la France court vers le défaut\" de paiement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-le-pen-sans-rupture-politique-la-france-court-vers-le-defaut-de-paiement_VN-202610060373.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-06T06:57:18Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"S'ils ont été tenus, ils sont strictement inacceptables\", réagit Gérard Larcher, président LR du Sénat",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ecrits-antisemites-attribues-a-jordan-bardella-s-ils-ont-ete-tenus-ils-sont-strictement-inacceptables-reagit-gerard-larcher-president-lr-du-senat_VN-202610060264.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-06T06:48:41Z",
+      "title": "Présidentielle 2027: Gérard Larcher, président LR du Sénat, affiche son soutien \"sans réserve\" à Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-gerard-larcher-president-lr-du-senat-affiche-son-soutien-sans-reserve-a-bruno-retailleau_VN-202610060251.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Colère lycéenne : Jean-Luc Mélenchon juge Gabriel Attal « personnellement responsable » de la mobilisation à cause de Parcoursup",
+      "url": "https://www.leparisien.fr/politique/colere-lyceenne-jean-luc-melenchon-juge-gabriel-attal-personnellement-responsable-de-la-mobilisation-a-cause-de-parcoursup-09-10-2026-2MEYWLWQK5CK3FJFBV3IED2DAY.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Marine Le Pen veut autoriser les prêts de particuliers pour financer sa campagne",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-marine-le-pen-veut-autoriser-les-prets-de-particuliers-pour-financer-sa-campagne-09-10-2026-TMY4DZZNCZBA5MTUATV3KX5T6M.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Jordan Bardella accusé d’antisémitisme : 72 % des Français n’ont pas changé d’opinion sur le président du Rassemblement national",
+      "url": "https://www.leparisien.fr/elections/presidentielle/jordan-bardella-accuse-dantisemitisme-72-des-francais-nont-pas-change-dopinion-sur-le-president-du-rassemblement-national-09-10-2026-TNR4G6EJWZE6VERM7FUJUFZTUA.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Je vivrai chez moi », Édouard Philippe ne compte pas résider à l’Élysée en cas de victoire",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-je-vivrai-chez-moi-edouard-philippe-ne-compte-pas-resider-a-lelysee-en-cas-de-victoire-09-10-2026-M2OO4JZQIRERZK6SIW4Q5RYA4I.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Affaire Jordan Bardella : Mediapart publie de nouvelles preuves reliant le patron du RN aux messages antisémites",
+      "url": "https://www.leparisien.fr/politique/affaire-jordan-bardella-mediapart-publie-de-nouvelles-preuves-reliant-le-patron-du-rn-aux-messages-antisemites-09-10-2026-4W4P6WAB3BBTHHWLJURYKGRAU4.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il croit juste ce qu’il dit » : Édouard Philippe soigne sa droite",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-croit-juste-ce-quil-dit-edouard-philippe-soigne-sa-droite-09-10-2026-EIKXDNEYZ5C4XJQY6B7FWCB74I.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : Glucksmann largement en tête des intentions de vote à la primaire de la gauche, Royal devance Faure",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-glucksmann-largement-en-tete-des-intentions-de-vote-a-la-primaire-de-la-gauche-royal-devance-faure-09-10-2026-XA2STQBG6RCWNIKXDQ5U75M4TU.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Affaire Bardella : accusé d’antisémitisme, le président du RN balaie « une affaire dont tout le monde se moque »",
+      "url": "https://www.leparisien.fr/politique/affaire-bardella-accuse-dantisemitisme-le-president-du-rn-balaie-une-affaire-dont-tout-le-monde-se-moque-09-10-2026-AZKEZAO2J5AZJBVALEYXZTULBA.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Il faudra aller vite », Édouard Philippe projette de promulguer 20 ordonnances dès juillet s’il est élu",
+      "url": "https://www.leparisien.fr/politique/presidentielle-2027-il-faudra-aller-vite-edouard-philippe-projette-de-promulguer-20-ordonnances-des-juillet-sil-est-elu-09-10-2026-RHK3OZBG2BBZJB3TDFNFNIJLPU.php"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il y a un chemin » : à Troyes, François Baroin apporte son soutien à Retailleau pour 2027",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-y-a-un-chemin-a-troyes-francois-baroin-apporte-son-soutien-a-retailleau-pour-2027-08-10-2026-ECOLY5ZIXNGNZH35HUECVTADV4.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : la popularité d’Édouard Philippe, Marine Le Pen et Gabriel Attal en net recul, Jean-Luc Mélenchon sur le podium",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-la-popularite-dedouard-philippe-marine-le-pen-et-gabriel-attal-en-net-recul-jean-luc-melenchon-sur-le-podium-08-10-2026-FBFLHID6CNCEFKMKOQKPOELWGM.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : Marine Le Pen jugée la plus compétente pour diriger le pays, devant Édouard Philippe et Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-marine-le-pen-jugee-la-plus-competente-pour-diriger-le-pays-devant-edouard-philippe-et-jean-luc-melenchon-08-10-2026-BXXCZZ7EDJAB3F5PFL5M7SDZQE.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « C’est en progression par rapport à 2022 », Jean-Luc Mélenchon a obtenu plus de 400 000 « parrainages citoyens » selon LFI",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-cest-en-progression-par-rapport-a-2022-jean-luc-melenchon-a-obtenu-plus-de-400-000-parrainages-citoyens-selon-lfi-08-10-2026-XU7EECNRMVC6VPEG4ZE25GWLTQ.php"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Élections sénatoriales 2026 en Vendée : un opposant de Retailleau demande d’annuler le scrutin",
+      "url": "https://www.leparisien.fr/vendee-85/elections-senatoriales-2026-en-vendee-un-opposant-de-retailleau-demande-dannuler-le-scrutin-08-10-2026-ELWZNTMSO5DMNLZGQZJUGZ3PCU.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon va « défier » Édouard Philippe en organisant un meeting dans sa ville du Havre le 5 décembre",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-jean-luc-melenchon-va-defier-edouard-philippe-en-organisant-un-meeting-dans-sa-ville-du-havre-le-5-decembre-08-10-2026-7PNGF2XLGBD5ZP5OD52K6E3P7Q.php"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : à la veille de la primaire de la gauche, Olivier Faure accuse Raphaël Glucksmann de défendre une « option centriste »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-a-la-veille-de-la-primaire-de-la-gauche-olivier-faure-accuse-raphael-glucksmann-de-defendre-une-option-centriste-08-10-2026-VSETPIBGH5AEFOOFTOOT4G2O3Q.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : vraie « remontada » ou cote gonflée, pourquoi David Lisnard cartonne sur Polymarket",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-vraie-remontada-ou-cote-gonflee-pourquoi-david-lisnard-cartonne-sur-polymarket-08-10-2026-CX7XAPDAUVEFXHLJP6NLA2JZZU.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Affaire Bardella : « Il n'y a pas de plan B, un ticket Marine Le Pen-Marion Maréchal est exclu »",
+      "url": "https://www.leparisien.fr/politique/direct-affaire-bardella-quels-effets-sur-le-rn-sur-marine-le-penposez-nous-vos-questions-08-10-2026-7YUPQN3QKFFFFIRE2AYFBZYZDM.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Au Sommet de l’élevage, Marine Le Pen espère prendre du champ avec « l’affaire Bardella »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/au-sommet-de-lelevage-marine-le-pen-espere-prendre-du-champ-avec-laffaire-bardella-07-10-2026-AKB3SKHJNFFQXPLZEJQGXBRLFQ.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je maintiens à 1 000 % ma confiance » : Marine Le Pen réaffirme son soutien à Jordan Bardella après la divulgation de messages antisémites",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-maintiens-a-1-000-ma-confiance-marine-le-pen-reaffirme-son-soutien-a-jordan-bardella-apres-la-divulgation-de-messages-antisemites-07-10-2026-K5HWM6BROJBGNLRPYRRJNOOY4I.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Il se passe quelque chose » ou la percée supposée de David Lisnard",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-il-se-passe-quelque-chose-ou-la-percee-supposee-de-david-lisnard-07-10-2026-F6DGWZ7VYBDZHEI7IOTTKJSZS4.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Affaire Bardella : « On ne peut pas nommer un Premier ministre qui aurait eu de tels propos antisémites », estime le président du Crif",
+      "url": "https://www.leparisien.fr/politique/affaire-bardella-on-ne-peut-pas-nommer-un-premier-ministre-qui-aurait-eu-de-tels-propos-antisemites-estime-le-president-du-crif-07-10-2026-LVDZHIRJX5AVDHGI5A357NHKDE.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je ne me laisserai pas intimider » : le gouverneur de la Banque de France répond à Mélenchon, qui veut le poursuivre pour « trahison »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-ne-me-laisserai-pas-intimider-le-gouverneur-de-la-banque-de-france-repond-a-melenchon-qui-veut-le-poursuivre-pour-trahison-07-10-2026-T4E6C2KNEFCLXBB2FIX7EBBMFE.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je ne me laisserai pas intimider » : le gouverneur de la Banque de France répond à Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/politique/je-ne-me-laisserai-pas-intimider-le-gouverneur-de-la-banque-de-france-repond-a-jean-luc-melenchon-07-10-2026-ESNAHXW37RDNJHWSKDJMIIHCWA.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Allocation sociale unique, 140 milliards d’économies… Marine Le Pen livre un exercice de rigueur avec son contre-budget",
+      "url": "https://www.leparisien.fr/elections/presidentielle/allocation-sociale-unique-140-milliards-deconomies-marine-le-pen-livre-un-exercice-de-rigueur-avec-son-contre-budget-06-10-2026-C5U5QBCLNJCPPPQTMT23ST7WB4.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Affaire Bardella : le président du RN assure ne plus avoir Facebook et ne pas pouvoir « demander l’extraction de conversations » à Meta",
+      "url": "https://www.leparisien.fr/politique/affaire-bardella-le-president-du-rn-assure-ne-plus-avoir-facebook-et-ne-pas-pouvoir-demander-lextraction-de-conversations-a-meta-06-10-2026-DY7R4YIR4RELTAEJ73YSRQ7BM4.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Baisser le déficit laissé par Macron » : économies, impôts, retraite… Marine Le Pen dévoile son projet budgétaire pour 2027",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-marine-le-pen-promet-140-milliards-deuros-nets-deconomies-dici-2032-06-10-2026-WEEBR3S7GBAZZAISUMADMUI4P4.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Si je gagne, j’aurai besoin de vous » : à HEC, l’opération séduction de Jean-Luc Mélenchon face aux futurs patrons",
+      "url": "https://www.leparisien.fr/elections/presidentielle/si-je-gagne-jaurai-besoin-de-vous-a-hec-loperation-seduction-de-jean-luc-melenchon-face-aux-futurs-patrons-05-10-2026-C2ZXFGRDSFHQ5ELT5TUVSJQ6CM.php"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Sans elle, la campagne aurait été bien fade » : comment Ségolène Royal a chahuté la primaire de gauche",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sans-elle-la-campagne-aurait-ete-bien-fade-comment-segolene-royal-a-chahute-la-primaire-de-gauche-05-10-2026-LD2JBB3RTJH4LJNXDRQDZ5A2R4.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « le prochain président devra peut-être affronter une guerre sur le sol de l’UE », estime Raphaël Glucksmann",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-le-prochain-president-devra-peut-etre-affronter-une-guerre-sur-le-sol-de-lue-estime-raphael-glucksmann-05-10-2026-FXACKMMGGNAQLESHKHB5U76RAY.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-09T13:17:40Z",
+      "title": "Présidentielle 2027 : S’il est élu, Edouard Philippe n’habitera pas à l’Elysée avec sa famille",
+      "url": "https://www.20minutes.fr/politique/4252883-20261009-presidentielle-2027-elu-edouard-philippe-habitera-elysee-famille"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-09T12:48:03Z",
+      "title": "Municipales à Nice : Le tribunal administratif retoque l’élection d’un adjoint d’Éric Ciotti pour conflit d’intérêts",
+      "url": "https://www.20minutes.fr/politique/4252880-20261009-municipales-nice-tribunal-administratif-retoque-election-adjoint-eric-ciotti-conflit-interets"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-09T12:09:35Z",
+      "title": "Jordan Bardella accusé d’antisémitisme : Compte effacé, contenus relayés sur X… De nouvelles révélations",
+      "url": "https://www.20minutes.fr/politique/4252863-20261009-jordan-bardella-accuse-antisemitisme-compte-efface-contenus-relayes-x-nouvelles-revelations"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-09T09:22:04Z",
+      "title": "Présidentielle 2027 : Quelles seraient les premières décisions d’Édouard Philippe ?",
+      "url": "https://www.20minutes.fr/politique/4252755-20261009-presidentielle-2027-premieres-decisions-edouard-philippe"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-08T16:04:00Z",
+      "title": "« Il reçoit des antisèches sur son portable »… Ségolène Royal accuse Glucksmann de tricherie au débat de la primaire",
+      "url": "https://www.20minutes.fr/politique/4252637-20261008-recoit-antiseches-portable-segolene-royal-accuse-glucksmann-tricherie-debat-primaire"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-08T11:15:42Z",
+      "title": "Sénatoriales : Un opposant à Retailleau demande l’annulation du scrutin en Vendée",
+      "url": "https://www.20minutes.fr/politique/4252521-20261008-senatoriales-opposant-retailleau-demande-annulation-scrutin-vendee"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-08T09:36:46Z",
+      "title": "Budget 2027 : Retailleau, Bregeon… Le « contre-budget » du Rassemblement national se fait étriller",
+      "url": "https://www.20minutes.fr/politique/4252449-20261008-budget-2027-retailleau-bregeon-contre-budget-rassemblement-national-fait-etriller"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-08T08:42:16Z",
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon annonce un meeting au Havre, sur les terres d’Édouard Philippe",
+      "url": "https://www.20minutes.fr/politique/4252413-20261008-presidentielle-2027-jean-luc-melenchon-annonce-meeting-havre-terres-edouard-philippe"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "philippe",
+        "retailleau",
+        "tondelier"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-09T15:07:37Z",
+      "title": "Politique familiale, allocations, crèches : que proposent les candidats à la présidentielle ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/politique-familiale-allocations-creches-que-proposent-les-candidats-a-la-presidentielle"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-09T14:28:34Z",
+      "title": "Préférence nationale : la proposition du RN de taxer l’embauche de travailleurs étrangers inquiète les entrepreneurs",
+      "url": "https://www.publicsenat.fr/actualites/politique/preference-nationale-la-proposition-du-rn-de-taxer-lembauche-de-travailleurs-etrangers-inquiete-les-entrepreneurs"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-08T18:37:11Z",
+      "title": "« Nous avons envie de renverser la table » : à Troyes, les sénateurs LR font leur rentrée en promettant de s’engager sur des « mesures fortes »",
+      "url": "https://www.publicsenat.fr/actualites/politique/nous-avons-envie-de-renverser-la-table-a-troyes-les-senateurs-lr-font-leur-rentree-en-promettant-de-sengager-sur-des-mesures-fortes"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-08T17:17:22Z",
+      "title": "Présidentielle 2027 : François Baroin assure que Bruno Retailleau a « toutes les qualités pour créer les conditions de la surprise du premier tour »",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-francois-baroin-assure-que-bruno-retailleau-a-toutes-les-qualites-pour-creer-les-conditions-de-la-surprise-du-premier-tour"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-08T16:30:58Z",
+      "title": "Combien Horizons, le parti d’Edouard Philippe, compte-t-il de sénateurs après les sénatoriales ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/combien-horizons-le-parti-dedouard-philippe-compte-t-il-de-senateurs-apres-les-senatoriales"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-08T15:50:07Z",
+      "title": "Le retour de « L’Heure de Vérité » sur France 2, émission culte des années 1980 : « Elle a été le moment mitterrandien de notre télévision »",
+      "url": "https://www.publicsenat.fr/actualites/culture/le-retour-de-lheure-de-verite-sur-france-2-emission-culte-des-annees-1980-elle-a-ete-le-moment-mitterrandien-de-notre-television"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-07T11:16:12Z",
+      "title": "Bonjour chez vous ! — Ségolène Royal : « Si j’étais aux responsabilités, il n’y aurait pas de mouvement social »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/segolene-royal-si-jetais-aux-responsabilites-il-ny-aurait-pas-de-mouvement-social-e0"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-07T08:20:52Z",
+      "title": "Blocus des lycées : « La police est plus sévère avec les lycéens qu’avec les pédocriminels », fustige Ségolène Royal",
+      "url": "https://www.publicsenat.fr/actualites/politique/blocus-des-lycees-la-police-est-plus-severe-avec-les-lyceens-quavec-les-pedocriminels-fustige-segolene-royal"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-06T17:31:58Z",
+      "title": "140 milliards d’euros d’économies d’ici 2032 : « l’effort radical » proposé par Marine Le Pen pour « redresser » les finances publiques",
+      "url": "https://www.publicsenat.fr/actualites/politique/140-milliards-deuros-deconomies-dici-2032-leffort-radical-propose-par-marine-le-pen-pour-redresser-les-f"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "guedj",
+        "maurel",
+        "royal"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-05T09:19:15Z",
+      "title": "Sens Public — Primaire de la gauche : Glucksmann vainqueur dès le premier tour ?",
+      "url": "https://www.publicsenat.fr/emission/sens-public/primaire-de-la-gauche-glucksmann-vainqueur-des-le-premier-tour-e0"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-05T09:19:08Z",
+      "title": "Sens Public — Chômage des jeunes : une génération sacrifiée",
+      "url": "https://www.publicsenat.fr/emission/sens-public/chomage-des-jeunes-une-generation-sacrifiee-e0"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-05T08:11:33Z",
+      "title": "Bonjour chez vous ! — Edwige Diaz : « Il appartient au RN de présenter aux français un discours de vérité »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/edwige-diaz-il-appartient-au-rn-de-presenter-aux-francais-un-discours-de-verite-e0"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-09T12:55:34Z",
+      "title": "Jordan Bardella aurait effacé les données d'un compte Facebook après les révélations de Mediapart",
+      "url": "https://www.france24.com/fr/france/20261009-jordan-bardella-aurait-effac%C3%A9-les-donn%C3%A9es-d-un-compte-facebook-apr%C3%A8s-les-r%C3%A9v%C3%A9lations-de-mediapart"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-09T10:12:02Z",
+      "title": "Trancher le rapport à LFI : une primaire sociale-démocrate en forme de congrès du PS",
+      "url": "https://www.france24.com/fr/france/20261009-france-trancher-rapport-lfi-primaire-sociale-democrate-en-forme-de-congres-du-ps-raphael-glucksmann-olivier-faure"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-09T08:51:24Z",
+      "title": "Primaire des sociale-démocrates : un scrutin plus incertin que prévu",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261009-primaire-des-sociale-d%C3%A9mocrates-un-scrutin-plus-incertin-que-pr%C3%A9vu"
+    }
+  ],
+  "schema_version": "1.0"
+}

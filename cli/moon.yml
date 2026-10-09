@@ -5,12 +5,13 @@ project:
   title: "fr2027 command"
   description: "Validate, ingest, forecast and serve: the binary every schedule and the local app run."
 
-dependsOn: ["model", "collectors"]
+dependsOn: ["model", "collectors", "fetch"]
 
 fileGroups:
   rust:
     - "/model/src/**/*"
     - "/collectors/src/**/*"
+    - "/fetch/src/**/*"
     - "src/**/*"
     - "Cargo.toml"
     - "/Cargo.lock"
@@ -76,6 +77,42 @@ tasks:
     command: "$workspaceRoot/target/release/fr2027"
     args: ["forecast"]
     deps: ["ingest"]
+    options:
+      cache: false
+      runInCI: false
+
+  collect-markets:
+    description: "Snapshot the prediction markets in config/sources.yaml into data/raw/markets/<hour>.json."
+    command: "$workspaceRoot/target/release/fr2027"
+    args: ["collect", "markets"]
+    deps: ["build"]
+    options:
+      cache: false
+      runInCI: false
+
+  collect-news:
+    description: "Record new headlines naming a candidate into data/raw/news/<hour>.json."
+    command: "$workspaceRoot/target/release/fr2027"
+    args: ["collect", "news"]
+    deps: ["build"]
+    options:
+      cache: false
+      runInCI: false
+
+  collect-attention:
+    description: "Record the last week of Wikipedia page views into data/raw/attention/<date>.json (once a day)."
+    command: "$workspaceRoot/target/release/fr2027"
+    args: ["collect", "attention"]
+    deps: ["build"]
+    options:
+      cache: false
+      runInCI: false
+
+  export:
+    description: "Write the public site to .site/: the built UI plus api/*.json (refuses during a publication blackout)."
+    command: "$workspaceRoot/target/release/fr2027"
+    args: ["export"]
+    deps: ["build", "web:build"]
     options:
       cache: false
       runInCI: false

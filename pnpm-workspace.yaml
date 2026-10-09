@@ -13,3 +13,10 @@ catalog:
   vitest: "5.0.3"
   vue: "3.5.43"
   vize: "0.435.0"
+  wrangler: "4.137.0"
+
+# Dependency install scripts stay off. esbuild and workerd (wrangler's) only use theirs to swap
+# a JavaScript launcher for the native binary; the launcher works without it.
+allowBuilds:
+  esbuild: false
+  workerd: false

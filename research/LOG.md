@@ -4,6 +4,23 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-09
 
+### Live pipeline: GitHub Actions, a public page on Cloudflare, and Grok Bot through an inbox
+
+The owner made the repository public (so GitHub Actions runs free on standard runners) and asked for a public page.
+
+- **Schedule.** One hourly workflow (`.github/workflows/live.yml`, at :17 to stay off the top of the hour) runs every deterministic collector, pulls the Grok Bot inbox, refits with `fr2027 forecast --if-changed`, validates, commits to `main` as `github-actions[bot]`, and deploys. The forecast's inputs hash covers polls, config and the as-of date, so the model refits when polls or config change and once a day, not every hour. A merge that changes polls, config or code triggers the same workflow.
+- **Public page.** `fr2027 export` writes the built UI plus every document the UI reads as `api/<name>.json`; `fr2027 serve` computes the same documents per request, so the local app and the page can't drift. A Cloudflare Worker (`app/worker`) serves the files with Workers static assets.
+- **Prediction markets** (`config/sources.yaml`): Polymarket (Gamma API) and Kalshi (public market data) for three questions, matching the model's three numbers: wins (`p_win`), reaches round 2 (`p_qualify_r1`), is on the ballot (`p_run`). Implied price is the bid–ask midpoint when the spread is at most 0.10, else the last trade. Contracts are matched to candidates by exact name, ignoring case and accents; the rest are kept with their label (Lisnard, Darmanin, Lagarde…). The clean file keeps every hourly snapshot of the last seven days and the last snapshot of each earlier day. The model does not read markets: the spec's blend needs the backtests first.
+- **News.** 13 RSS feeds that answered on 2026-10-09: Le Monde (2), Le Figaro (2), Libération, franceinfo (2), BFMTV (2), Le Parisien, 20 Minutes, Public Sénat, France 24. Les Échos (403 to non-browsers) and Ouest-France (no political feed) are left out rather than worked around. Only the headline, link and time of items naming a candidate are kept, matched on title and summary with case-sensitive whole-word names, ignoring accents; surnames that are common words ("Le Maire", "Royal", "Philippe", "Faure", "Bertrand") need the full name. The first snapshot matched 159 items from 13 feeds; a read-through found no false positives.
+- **Attention.** Daily user page views of each candidate's French Wikipedia article (Wikimedia API, agent=user), fetched once a day for the last week; a later fetch of a day replaces an earlier one. Wikimedia rate-limits this environment's shared egress (HTTP 429), so the first fetch happens in GitHub Actions.
+- **Grok Bot.** Research on 2026-10-09 (docs.x.ai/grok-bot and Cursor's Grok Bot help pages):
+  - Grok Bot is xAI's hosted agent product, separate from the Grok chat app and the xAI API: named Bots on a persistent cloud computer, with routines that run on a schedule (at least five minutes apart) or on events and webhooks, write-only secrets, and native read-only X search, including "count recent posts on a topic".
+  - Its docs don't say whether those counts are complete or sampled. Each drop now records `mentions_method` and `sample_size` (new optional fields in the drop schema), and X numbers stay out of the model until checked against polls.
+  - GitHub cannot limit a token to one folder of a public repository (path rules exist only for private repositories), and all Bots on an account share one computer. So the Bot gets no GitHub credential: it posts to an inbox on the Worker (a Durable Object), and the hourly workflow validates each item with the ingest code. X drops and events are committed; polls go into a pull request for a person to check against the notice; rejections go back to the Bot with reasons. The routines are in `docs/grok-bot.md`.
+  - Post ids are dropped before commit, so a post deleted on X doesn't stay in a public repository.
+- **Publication blackout.** The page is public, so `fr2027 export` refuses to build during the eve and day of each round (loi n° 77-808, art. 11; windows in `config/sources.yaml`). Collection carries on.
+- **Wording.** The model was described as "polls only", but `p_run` in `config/candidates.yaml` partly follows Polymarket's ballot market. The UI now says that the model fits only polls, and that the chance each person runs is set by hand, partly from market prices.
+
 ### Implementation language: Rust for data and model, TypeScript for the UI
 
 The first scaffold used Python because the spec named PyMC or NumPyro for the poll aggregation. That was the only hard reason for Python, and the model the spec describes does not need it:

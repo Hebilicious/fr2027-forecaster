@@ -1,0 +1,45 @@
+{
+  "cursor": "",
+  "markets": [
+    {
+      "ticker": "KXFRENCHPRES-27-DVIL",
+      "event_ticker": "KXFRENCHPRES-27",
+      "yes_sub_title": "Dominique de Villepin",
+      "status": "active",
+      "yes_bid_dollars": "0.0070",
+      "yes_ask_dollars": "0.0080",
+      "last_price_dollars": "0.0070",
+      "volume_fp": "16182.58"
+    },
+    {
+      "ticker": "KXFRENCHPRES-27-CLAG",
+      "event_ticker": "KXFRENCHPRES-27",
+      "yes_sub_title": "Christine Lagarde",
+      "status": "active",
+      "yes_bid_dollars": "0.0100",
+      "yes_ask_dollars": "0.0200",
+      "last_price_dollars": "0.0100",
+      "volume_fp": "930.49"
+    },
+    {
+      "ticker": "KXFRENCHPRES-27-MLEP",
+      "event_ticker": "KXFRENCHPRES-27",
+      "yes_sub_title": "Marine Le Pen",
+      "status": "active",
+      "yes_bid_dollars": "0.4600",
+      "yes_ask_dollars": "0.4700",
+      "last_price_dollars": "0.4700",
+      "volume_fp": "134812.40"
+    },
+    {
+      "ticker": "KXFRENCHPRES-27-EPHI",
+      "event_ticker": "KXFRENCHPRES-27",
+      "yes_sub_title": "Édouard Philippe",
+      "status": "active",
+      "yes_bid_dollars": "0.1800",
+      "yes_ask_dollars": "0.1900",
+      "last_price_dollars": "0.1900",
+      "volume_fp": "37486.41"
+    }
+  ]
+}

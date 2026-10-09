@@ -44,6 +44,22 @@ impl Repo {
     pub fn raw_grok_dir(&self) -> PathBuf {
         self.root.join("data/raw/grok")
     }
+    pub fn raw_markets_dir(&self) -> PathBuf {
+        self.root.join("data/raw/markets")
+    }
+    pub fn raw_news_dir(&self) -> PathBuf {
+        self.root.join("data/raw/news")
+    }
+    pub fn raw_attention_dir(&self) -> PathBuf {
+        self.root.join("data/raw/attention")
+    }
+    pub fn raw_events_dir(&self) -> PathBuf {
+        self.root.join("data/raw/events")
+    }
+    /// Poll files an agent sent, validated, waiting for a pull request.
+    pub fn proposals_dir(&self) -> PathBuf {
+        self.root.join("data/proposals")
+    }
     pub fn clean_dir(&self) -> PathBuf {
         self.root.join("data/clean")
     }

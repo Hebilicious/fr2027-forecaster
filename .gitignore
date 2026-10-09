@@ -2,6 +2,12 @@
 target/
 dist/
 node_modules/
+app/worker/worker-configuration.d.ts
+
+# The exported public site, the inbox manifest, and polls waiting for a pull request
+.site/
+.inbox/
+data/proposals/
 
 # Local-only tool and cache trees
 .moon/cache/
@@ -9,8 +15,10 @@ node_modules/
 .pnpm-store/
 .proto/
 .artifacts/
+.wrangler/
 
 # Secrets
 .env
 .env.*
 !.env.example
+.dev.vars*

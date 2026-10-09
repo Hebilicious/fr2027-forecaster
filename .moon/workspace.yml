@@ -3,8 +3,10 @@ projects:
   repo: "."
   model: "model"
   collectors: "collectors"
+  fetch: "fetch"
   cli: "cli"
   web: "app/web"
+  worker: "app/worker"
 
 defaultProject: "repo"
 telemetry: false

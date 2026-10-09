@@ -160,7 +160,9 @@ pub fn ingest(repo: &Repo, schemas: &Schemas, config: &CandidatesConfig) -> Resu
     Ok(ingest)
 }
 
-fn validate_file(
+/// Checks a poll file's bytes: YAML, schema, candidate ids, dates, scenario sums, and that the
+/// file is named after its poll_id.
+pub fn validate_file(
     path: &Path,
     bytes: &[u8],
     schemas: &Schemas,

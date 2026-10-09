@@ -24,6 +24,23 @@ slots:
   - { id: far_right_nominee, options: [{ run: [emma], p: 0.7 }, { run: [felix], p: 0.3 }] }
 "#;
 
+const SOURCES: &str = r#"
+schema_version: "1.0"
+user_agent: "fr2027-forecaster tests (+https://example.org)"
+markets: []
+feeds: []
+wikipedia: { project: fr.wikipedia.org }
+candidates:
+  anna: { wikipedia: null, names: ["Anna"] }
+  bruno: { wikipedia: null, names: ["Bruno"] }
+  chloe: { wikipedia: null, names: ["Chloé"] }
+  david: { wikipedia: null, names: ["David"] }
+  emma: { wikipedia: null, names: ["Emma"] }
+  felix: { wikipedia: null, names: ["Félix"] }
+publication_blackouts:
+  - { from: "2027-04-17T00:00:00+02:00", until: "2027-04-18T20:00:00+02:00" }
+"#;
+
 fn poll(id: &str, firm: &str, day: u32, emma: f64) -> String {
     format!(
         r#"schema_version: "1.0"
@@ -69,6 +86,7 @@ fn scratch_repo() -> tempfile::TempDir {
     }
     fs::copy(source.join("config/model.yaml"), root.join("config/model.yaml")).unwrap();
     fs::write(root.join("config/candidates.yaml"), CANDIDATES).unwrap();
+    fs::write(root.join("config/sources.yaml"), SOURCES).unwrap();
     let polls = root.join("data/raw/polls");
     fs::create_dir_all(&polls).unwrap();
     for (i, firm) in ["ifop", "elabe", "odoxa", "ifop", "elabe", "odoxa"].iter().enumerate() {
@@ -187,4 +205,95 @@ fn leakage_guard_drops_later_polls() {
         let day: u32 = id[id.len() - 2..].parse().unwrap();
         assert!(day + 2 <= 12, "{id} was published after the as-of date");
     }
+}
+
+#[test]
+fn hourly_refit_only_when_inputs_change() {
+    let repo = scratch_repo();
+    let root = repo.path();
+    assert!(fr2027(root, &["ingest"]).status.success());
+    let run = |now: &str| {
+        fr2027(
+            root,
+            &["forecast", "--if-changed", "--now", now, "--simulations", "2000"],
+        )
+    };
+    assert!(run("2026-10-01T12:00:00Z").status.success());
+    let unchanged = run("2026-10-01T13:00:00Z");
+    assert!(String::from_utf8_lossy(&unchanged.stdout).contains("inputs unchanged"));
+    assert!(!root.join("data/forecasts/2026-10-01T13.json").exists());
+    // A new day is a new as-of date: the forecast is refitted.
+    assert!(run("2026-10-02T00:00:00Z").status.success());
+    assert!(root.join("data/forecasts/2026-10-02T00.json").exists());
+}
+
+#[test]
+fn export_writes_the_site_and_respects_the_blackout() {
+    let repo = scratch_repo();
+    let root = repo.path();
+    assert!(fr2027(root, &["ingest"]).status.success());
+    let forecast = fr2027(
+        root,
+        &[
+            "forecast",
+            "--as-of",
+            "2026-10-01",
+            "--now",
+            "2026-10-01T12:00:00Z",
+            "--simulations",
+            "2000",
+        ],
+    );
+    assert!(forecast.status.success());
+    let web = root.join("web");
+    fs::create_dir_all(web.join("assets")).unwrap();
+    fs::write(web.join("index.html"), "<!doctype html><title>t</title>").unwrap();
+    fs::write(web.join("assets/app.js"), "console.log(1)").unwrap();
+    let site = root.join("site");
+    let args = |now: &str| {
+        vec![
+            "export".to_string(),
+            "--out".into(),
+            site.display().to_string(),
+            "--web-dir".into(),
+            web.display().to_string(),
+            "--now".into(),
+            now.into(),
+        ]
+    };
+    let export = Command::new(env!("CARGO_BIN_EXE_fr2027"))
+        .arg("--repo")
+        .arg(root)
+        .args(args("2026-10-01T13:00:00Z"))
+        .output()
+        .unwrap();
+    assert!(export.status.success(), "{}", String::from_utf8_lossy(&export.stderr));
+    assert!(site.join("index.html").exists() && site.join("assets/app.js").exists());
+    for name in [
+        "forecast",
+        "series",
+        "polls",
+        "history",
+        "signals",
+        "health",
+        "candidates",
+    ] {
+        let value: serde_json::Value =
+            serde_json::from_slice(&fs::read(site.join(format!("api/{name}.json"))).unwrap()).unwrap();
+        assert!(value.is_object() || value.is_array(), "{name}");
+    }
+    let health: serde_json::Value = serde_json::from_slice(&fs::read(site.join("api/health.json")).unwrap()).unwrap();
+    assert_eq!(health["checked_at"], "2026-10-01T13:00:00Z");
+    assert_eq!(health["latest_forecast"]["file"], "2026-10-01T12.json");
+
+    // Inside a publication blackout nothing is built, and the exit code says so.
+    fs::remove_dir_all(&site).unwrap();
+    let blocked = Command::new(env!("CARGO_BIN_EXE_fr2027"))
+        .arg("--repo")
+        .arg(root)
+        .args(args("2027-04-17T10:00:00Z"))
+        .output()
+        .unwrap();
+    assert_eq!(blocked.status.code(), Some(3));
+    assert!(!site.exists());
 }

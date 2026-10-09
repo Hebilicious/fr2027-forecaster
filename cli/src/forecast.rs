@@ -27,6 +27,10 @@ pub struct Args {
     /// Write here instead of data/forecasts/.
     #[arg(long)]
     out_dir: Option<PathBuf>,
+    /// Do nothing when the newest forecast already used the same inputs (polls, config and
+    /// as-of date), so an hourly schedule refits once a day or when something changed.
+    #[arg(long)]
+    if_changed: bool,
 }
 
 pub const SERIES_FILE: &str = "series.json";
@@ -152,13 +156,20 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
     let all_polls = polls::to_polls(&rows);
     let now = args.now.unwrap_or_else(Timestamp::now);
     let as_of = args.as_of.unwrap_or_else(|| now.to_zoned(TimeZone::UTC).date());
+    let out_dir = args.out_dir.clone().unwrap_or_else(|| repo.forecasts_dir());
+    let inputs_hash = inputs_hash(repo, &params, as_of)?;
+    if args.if_changed
+        && let Some((name, latest)) = previous_forecast(&out_dir, "")?
+        && latest["inputs_hash"].as_str() == Some(inputs_hash.as_str())
+    {
+        println!("inputs unchanged since {name}; no new forecast");
+        return Ok(());
+    }
     let field = config.field()?;
     let forecast = run_forecast(&field, &all_polls, &params, as_of)?;
 
-    let out_dir = args.out_dir.clone().unwrap_or_else(|| repo.forecasts_dir());
     let file_name = format!("{}.json", now.strftime("%Y-%m-%dT%H"));
     let previous = previous_forecast(&out_dir, &file_name)?;
-    let inputs_hash = inputs_hash(repo, &params, as_of)?;
     let poll_ids: Vec<String> = {
         let mut ids: Vec<String> = all_polls
             .iter()

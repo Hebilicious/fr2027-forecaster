@@ -7,18 +7,29 @@
   "additionalProperties": false,
   "required": ["schema_version", "collected_at", "window", "query_method", "candidates"],
   "properties": {
-    "schema_version": { "const": "1.0" },
-    "collected_at": { "$ref": "#/$defs/timestamp" },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "collected_at": {
+      "$ref": "#/$defs/timestamp"
+    },
     "window": {
       "type": "object",
       "additionalProperties": false,
       "required": ["start", "end"],
       "properties": {
-        "start": { "$ref": "#/$defs/timestamp" },
-        "end": { "$ref": "#/$defs/timestamp" }
+        "start": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "end": {
+          "$ref": "#/$defs/timestamp"
+        }
       }
     },
-    "query_method": { "type": "string", "minLength": 1 },
+    "query_method": {
+      "type": "string",
+      "minLength": 1
+    },
     "candidates": {
       "type": "array",
       "items": {
@@ -26,30 +37,109 @@
         "additionalProperties": false,
         "required": ["candidate_id"],
         "properties": {
-          "candidate_id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
-          "mentions": { "type": ["integer", "null"], "minimum": 0 },
-          "unique_authors": { "type": ["integer", "null"], "minimum": 0 },
-          "engagement": { "type": ["integer", "null"], "minimum": 0 },
+          "candidate_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "mentions": {
+            "type": ["integer", "null"],
+            "minimum": 0
+          },
+          "unique_authors": {
+            "type": ["integer", "null"],
+            "minimum": 0
+          },
+          "engagement": {
+            "type": ["integer", "null"],
+            "minimum": 0
+          },
           "sentiment": {
             "type": ["object", "null"],
             "additionalProperties": false,
             "required": ["pos", "neg", "neu", "method"],
             "properties": {
-              "pos": { "$ref": "#/$defs/fraction" },
-              "neg": { "$ref": "#/$defs/fraction" },
-              "neu": { "$ref": "#/$defs/fraction" },
-              "method": { "type": "string" }
+              "pos": {
+                "$ref": "#/$defs/fraction"
+              },
+              "neg": {
+                "$ref": "#/$defs/fraction"
+              },
+              "neu": {
+                "$ref": "#/$defs/fraction"
+              },
+              "method": {
+                "type": "string"
+              }
             }
           },
-          "top_topics": { "type": ["array", "null"], "items": { "type": "string" } },
-          "bot_share_estimate": { "oneOf": [{ "$ref": "#/$defs/fraction" }, { "type": "null" }] },
-          "sample_post_ids": { "type": ["array", "null"], "items": { "type": "string" } }
+          "top_topics": {
+            "type": ["array", "null"],
+            "items": {
+              "type": "string"
+            }
+          },
+          "bot_share_estimate": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/fraction"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sample_post_ids": {
+            "type": ["array", "null"],
+            "items": {
+              "type": "string"
+            },
+            "description": "Not stored: the pipeline drops these before committing, so deleted posts never live in the public repository."
+          },
+          "query": {
+            "type": ["string", "null"],
+            "maxLength": 512,
+            "description": "The X search query used for this candidate."
+          },
+          "mentions_method": {
+            "enum": ["x_counts_endpoint", "native_count", "sample_estimate", null],
+            "description": "How mentions was obtained: X's counts endpoint (complete), the agent's native X count, or an estimate from a sample."
+          },
+          "sample_size": {
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "description": "Posts read to compute sentiment, topics and the bot share."
+          }
+        }
+      }
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "skill_version"],
+      "description": "Optional: which agent and which version of its instructions produced the drop.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "skill_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
         }
       }
     }
   },
   "$defs": {
-    "timestamp": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$" },
-    "fraction": { "type": "number", "minimum": 0, "maximum": 1 }
+    "timestamp": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+    },
+    "fraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
   }
 }

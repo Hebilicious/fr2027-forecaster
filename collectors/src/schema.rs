@@ -11,15 +11,25 @@ pub enum SchemaKind {
     GrokDrop,
     Forecast,
     Series,
+    Sources,
+    Markets,
+    News,
+    Attention,
+    Event,
 }
 
 impl SchemaKind {
-    pub const ALL: [SchemaKind; 5] = [
+    pub const ALL: [SchemaKind; 10] = [
         SchemaKind::Candidates,
         SchemaKind::Poll,
         SchemaKind::GrokDrop,
         SchemaKind::Forecast,
         SchemaKind::Series,
+        SchemaKind::Sources,
+        SchemaKind::Markets,
+        SchemaKind::News,
+        SchemaKind::Attention,
+        SchemaKind::Event,
     ];
 
     pub fn file_name(self) -> &'static str {
@@ -29,6 +39,11 @@ impl SchemaKind {
             SchemaKind::GrokDrop => "grok_drop.schema.json",
             SchemaKind::Forecast => "forecast.schema.json",
             SchemaKind::Series => "series.schema.json",
+            SchemaKind::Sources => "sources.schema.json",
+            SchemaKind::Markets => "markets.schema.json",
+            SchemaKind::News => "news.schema.json",
+            SchemaKind::Attention => "attention.schema.json",
+            SchemaKind::Event => "event.schema.json",
         }
     }
 }

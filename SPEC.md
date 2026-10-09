@@ -57,9 +57,11 @@ Polls carry the forecast; every other source is a challenger that must prove its
 | Source | What to collect | Access | Refresh | Role in model |
 | --- | --- | --- | --- | --- |
 | Voting-intention polls | Every published R1 and R2 poll: firm, fieldwork dates, sample, method, scenario (which candidates were tested), toplines | Pollster sites (Ifop, Elabe, Odoxa, OpinionWay, Ipsos, Harris/Toluna, Cluster17, BVA/Verian), Commission des sondages notices, Wikipedia poll tables as an index only | Daily | Primary signal |
-| Polymarket | Price and volume per candidate in the "Next French Presidential Election" event, full price history | Public Gamma API (event/market metadata) and CLOB price-history endpoint; verify current endpoints | Hourly | Benchmark and optional blend input |
-| X trends (Grok bot) | Mention volume, sentiment, engagement, top topics per candidate | Grok bot writes JSON files into `data/raw/grok/` (contract below) | Whenever the bot pushes | Low-weight momentum signal |
-| News | Article counts and headlines per candidate from French national outlets | RSS feeds (Le Monde, Le Figaro, Libération, France Info, BFMTV, Les Échos, Ouest-France) plus GDELT | Hourly | Event detection, uncertainty widening |
+| Prediction markets | Price, bid, ask and volume per candidate for three questions: wins, reaches round 2, is on the ballot | Polymarket Gamma API and Kalshi's public market-data API (`config/sources.yaml`) | Hourly | Benchmark and optional blend input |
+| X trends (Grok Bot) | Mention volume, sentiment, top topics, bot share per candidate | Grok Bot routines send JSON to the inbox Worker; the Live workflow validates and commits it to `data/raw/grok/` (contract below; see `docs/grok-bot.md`) | Every 6 hours | Low-weight momentum signal |
+| News | Headlines naming a candidate, per outlet | RSS feeds of 13 national outlets (`config/sources.yaml`); Les Échos and Ouest-France have no open feed | Hourly | Event detection, uncertainty widening |
+| Attention | Daily page views of each candidate's French Wikipedia article (Wikimedia API, bots excluded) | `config/sources.yaml` | Daily | Low-weight momentum signal |
+| Campaign events | Declarations, withdrawals, endorsements, primary results, sponsorships, rulings | Grok Bot routine, through the inbox, to `data/raw/events/` | Daily | Field model (by hand, through pull requests) |
 | Search interest | Google Trends per candidate, France | The official Google Trends API if access is available (pytrends is an unofficial Python scraper) | Daily | Low-weight momentum signal |
 | Candidate programs | Declared program, or the previous program and recent statements | Official campaign sites, party platforms, 2022 programs | On release | Transfer modeling (see Programs) |
 | Fundamentals | Approval ratings, unemployment, inflation, consumer confidence | INSEE, Banque de France, approval barometers (Ifop-JDD, Elabe, Odoxa) | Monthly | Priors far from election day |
@@ -157,7 +159,7 @@ Two past elections are a thin sample, so treat backtest weights as rough and pre
 
 ## Local UI
 
-A single local web app, started with `moon run repo:up`, reading only from `data/forecasts/` and `data/clean/`. Stack: the `fr2027 serve` JSON API (Rust, axum) and a Vue + TypeScript frontend built with Vite. Auto-refreshes when a new forecast file lands.
+A public web page on Cloudflare (static files rebuilt hourly by `fr2027 export`), and the same app locally with `moon run repo:up`, both reading only `api/*.json` documents built from `data/forecasts/` and `data/clean/`. Stack: Rust (`fr2027 export` / `fr2027 serve`), a Vue + TypeScript frontend built with Vite, and a Cloudflare Worker serving the files. Auto-refreshes when a new build lands.
 
 | View | Shows |
 | --- | --- |
@@ -178,12 +180,16 @@ Collectors and the model run on a schedule inside the repo, so the forecast stay
 
 | Job | Frequency | Runs where |
 | --- | --- | --- |
-| Polymarket, news RSS | Hourly | Local scheduler (cron running a moon task) and/or a GitHub Actions workflow |
-| Polls, Google Trends | Daily | Same |
-| Ingest Grok drops | On each push to `data/raw/grok/` | GitHub Actions on push, plus local poll of the folder |
-| Model refit | Nightly | Local or Actions (budget ~10 min) |
-| Simulation + forecast file | Hourly, and after any refit | Local or Actions |
+| Markets, news RSS, Grok Bot inbox | Hourly | GitHub Actions (`live.yml`) |
+| Wikipedia page views | Daily | GitHub Actions (`live.yml`) |
+| X activity | Every 6 hours | Grok Bot routine → inbox |
+| New polls | Twice a day | Grok Bot routine → inbox → pull request reviewed by a person |
+| Campaign events | Daily | Grok Bot routine → inbox |
+| Model refit, simulation and forecast file | Hourly check; refits when polls or config change, and once a day | GitHub Actions (`live.yml`, `fr2027 forecast --if-changed`) |
+| Public site | Hourly | GitHub Actions → Cloudflare Worker |
 | Research review by a Claude session | Weekly | Scheduled task: check new declarations, programs, alliances; update `config/candidates.yaml` and the research log via pull request |
+
+How to set it up and run it: `docs/operations.md`.
 
 **Research log (`research/LOG.md`):** dated entries for every assumption, parameter change, source added or dropped, and reason. Model changes go through pull requests with a backtest diff in the description.
 
@@ -196,11 +202,11 @@ Collectors and the model run on a schedule inside the repo, so the forecast stay
 The tool forecasts; it never advocates. These rules are requirements, not suggestions.
 
 - **Neutrality:** no persuasive text, no ranking of programs as better or worse, identical treatment and color logic for every candidate.
-- **French publication law:** the law on election polls (loi du 19 juillet 1977, as amended) bans publishing polls on the eve and day of the vote, and regulates how polls are presented. The app is for private use; if any output is ever shared publicly, freeze public outputs during the blackout and have the rules checked by someone qualified. Verify current rules before launch.
-- **Polymarket in France:** French regulators restricted Polymarket access for French users in late 2024. Reading public price data is a separate question from trading; check the platform's terms and current status before relying on it. No trading code in this repo.
+- **French publication law:** the law on election polls (loi du 19 juillet 1977, as amended) bans publishing polls on the eve and day of the vote. The page is public, so `fr2027 export` refuses to build it during the windows in `config/sources.yaml` and the last version stays online.
+- **Markets:** market data is read from public APIs only. No trading code in this repo.
 - **Privacy:** aggregate counts and public post IDs only; no profiles of private individuals, no storing personal data beyond what's needed for de-duplication.
 - **Honest uncertainty:** the UI always shows intervals and a short note that a 70% favorite loses about 3 times in 10.
-- **Secrets:** API keys in `.env`, never committed; the Grok bot gets a scoped token that can only write to `data/raw/grok/`.
+- **Secrets:** API keys in `.env` locally and in GitHub Actions secrets, never committed. Grok Bot gets no GitHub credential (GitHub can't limit a token to one folder of a public repository): it gets a token that can only add items to the inbox Worker, and the pipeline validates every item before anything is committed.
 
 ## Milestones and acceptance criteria
 
@@ -217,6 +223,6 @@ Build in this order; each milestone ends with a working, tested state committed 
 **Open questions for the owner:**
 
 - [ ] Which Grok bot fields are realistic to collect (sentiment, bot share)? Adjust the contract before milestone 5.
-- [x] Should the GitHub repo be private? Yes — the repo is private.
-- [ ] Run schedules locally, on GitHub Actions, or both?
-- [ ] Is the output ever going to be shared publicly? This changes the legal checks.
+- [x] Should the GitHub repo be private? No: it is public (2026-10-09), so GitHub Actions runs free.
+- [x] Run schedules locally, on GitHub Actions, or both? GitHub Actions, plus Grok Bot routines for X, polls and events.
+- [x] Is the output ever going to be shared publicly? Yes: a public page on Cloudflare, with the publication blackout enforced.

@@ -6,14 +6,21 @@
 //! why. Clean files are rebuilt from raw on every ingest, sorted, so their history in Git is
 //! the history of the data.
 
+pub mod attention;
 pub mod config;
+pub mod events;
 pub mod grok;
+pub mod markets;
+pub mod names;
+pub mod news;
 pub mod polls;
 pub mod repo;
 pub mod schema;
+pub mod sources;
 
 use std::path::{Path, PathBuf};
 
+use serde::{Serialize, de::DeserializeOwned};
 use sha2::{Digest, Sha256};
 
 pub use repo::Repo;
@@ -129,4 +136,99 @@ pub fn write_quarantine(repo: &Repo, area: &str, rejections: &[Rejection]) -> Re
         write(&dir.join(format!("{name}.error.txt")), note.as_bytes())?;
     }
     Ok(())
+}
+
+/// A JSON raw file that passed its schema and its own checks.
+pub struct Accepted<T> {
+    pub path: PathBuf,
+    pub document: T,
+    pub hash: String,
+}
+
+/// Reads every `*.json` file in `dir`, in name order, validating each against `kind` and then
+/// `check` (which sees the file stem and the parsed document and returns any further errors).
+pub fn read_json_documents<T: DeserializeOwned>(
+    dir: &Path,
+    schemas: &Schemas,
+    kind: SchemaKind,
+    check: impl Fn(&str, &T) -> Vec<String>,
+) -> Result<(Vec<Accepted<T>>, Vec<Rejection>)> {
+    let mut accepted = Vec::new();
+    let mut rejections = Vec::new();
+    for path in list_files(dir, "json")? {
+        let bytes = read(&path)?;
+        let stem = path
+            .file_stem()
+            .map(|s| s.to_string_lossy().into_owned())
+            .unwrap_or_default();
+        match validate_json(&bytes, schemas, kind).and_then(|document| {
+            let errors = check(&stem, &document);
+            if errors.is_empty() { Ok(document) } else { Err(errors) }
+        }) {
+            Ok(document) => accepted.push(Accepted {
+                hash: content_hash(&bytes),
+                path,
+                document,
+            }),
+            Err(errors) => rejections.push(Rejection { path, errors }),
+        }
+    }
+    Ok((accepted, rejections))
+}
+
+/// Parses `bytes` as JSON and checks it against `kind`.
+pub fn validate_json<T: DeserializeOwned>(bytes: &[u8], schemas: &Schemas, kind: SchemaKind) -> Result<T, Vec<String>> {
+    let value: serde_json::Value = serde_json::from_slice(bytes).map_err(|e| vec![format!("not JSON: {e}")])?;
+    validate_value(value, schemas, kind)
+}
+
+/// Checks a JSON value against `kind` and deserialises it.
+pub fn validate_value<T: DeserializeOwned>(
+    value: serde_json::Value,
+    schemas: &Schemas,
+    kind: SchemaKind,
+) -> Result<T, Vec<String>> {
+    let violations = schemas.violations(kind, &value);
+    if !violations.is_empty() {
+        return Err(violations);
+    }
+    serde_json::from_value(value).map_err(|e| vec![e.to_string()])
+}
+
+/// CSV bytes for `rows`, with `header` alone when there are none.
+pub fn csv_bytes<T: Serialize>(rows: &[T], header: &str) -> Result<Vec<u8>> {
+    if rows.is_empty() {
+        return Ok(format!("{header}\n").into_bytes());
+    }
+    let mut writer = csv::Writer::from_writer(Vec::new());
+    for row in rows {
+        writer.serialize(row)?;
+    }
+    writer.into_inner().map_err(|e| Error::Csv(e.into_error().into()))
+}
+
+/// Reads a CSV file written by [`csv_bytes`].
+pub fn read_csv<T: DeserializeOwned>(path: &Path) -> Result<Vec<T>> {
+    let bytes = read(path)?;
+    let mut reader = csv::Reader::from_reader(bytes.as_slice());
+    reader
+        .deserialize()
+        .collect::<Result<Vec<T>, _>>()
+        .map_err(|e| Error::invalid(path, e.to_string()))
+}
+
+/// Pretty JSON with a trailing newline, as every JSON file in the repository is written.
+pub fn pretty_json<T: Serialize>(value: &T) -> Result<Vec<u8>, serde_json::Error> {
+    let mut bytes = serde_json::to_vec_pretty(value)?;
+    bytes.push(b'\n');
+    Ok(bytes)
+}
+
+/// Writes a new raw file, refusing to replace an existing one: raw files are never edited.
+pub fn write_new(path: &Path, contents: &[u8]) -> Result<bool> {
+    if path.exists() {
+        return Ok(false);
+    }
+    write(path, contents)?;
+    Ok(true)
 }

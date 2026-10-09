@@ -1,0 +1,79 @@
+[
+  {
+    "id": "79987",
+    "slug": "next-french-presidential-election",
+    "title": "Next French Presidential Election",
+    "markets": [
+      {
+        "groupItemTitle": "Marine Le Pen",
+        "question": "Will Marine Le Pen win the 2027 French presidential election?",
+        "active": true,
+        "closed": false,
+        "bestBid": 0.41,
+        "bestAsk": 0.411,
+        "lastTradePrice": 0.411,
+        "volumeNum": 3463762.883678,
+        "outcomePrices": "[\"0.4105\", \"0.5895\"]",
+        "slug": "will-marine-le-pen-win-the-2027-french-presidential-election"
+      },
+      {
+        "groupItemTitle": "Édouard Philippe",
+        "question": "Will Édouard Philippe win the 2027 French presidential election?",
+        "active": true,
+        "closed": false,
+        "bestBid": 0.23,
+        "bestAsk": 0.24,
+        "lastTradePrice": 0.23,
+        "volumeNum": 2091971.6519339993,
+        "outcomePrices": "[\"0.235\", \"0.765\"]",
+        "slug": "will-douard-philippe-win-the-2027-french-presidential-election"
+      },
+      {
+        "groupItemTitle": "David Lisnard",
+        "question": "Will David Lisnard win the 2027 French presidential election?",
+        "active": true,
+        "closed": false,
+        "bestBid": 0.127,
+        "bestAsk": 0.13,
+        "lastTradePrice": 0.127,
+        "volumeNum": 4378948.721320999,
+        "outcomePrices": "[\"0.1285\", \"0.8715\"]",
+        "slug": "will-david-lisnard-win-the-2027-french-presidential-election"
+      },
+      {
+        "groupItemTitle": "Xavier Bertrand",
+        "question": "Will Xavier Bertrand win the 2027 French presidential election?",
+        "active": true,
+        "closed": false,
+        "bestAsk": 0.001,
+        "lastTradePrice": 0.001,
+        "volumeNum": 6154762.069839001,
+        "outcomePrices": "[\"0.0005\", \"0.9995\"]",
+        "slug": "will-xavier-bertrand-win-the-2027-french-presidential-election"
+      },
+      {
+        "groupItemTitle": "Christine Lagarde",
+        "question": "Will Christine Lagarde win the 2027 French presidential election?",
+        "active": true,
+        "closed": false,
+        "bestBid": 0.006,
+        "bestAsk": 0.007,
+        "lastTradePrice": 0.005,
+        "volumeNum": 851318.78357,
+        "outcomePrices": "[\"0.0065\", \"0.9935\"]",
+        "slug": "will-christine-lagarde-win-the-2027-french-presidential-election"
+      },
+      {
+        "groupItemTitle": "Person AA",
+        "question": "Will Person AA win the 2027 French presidential election?",
+        "active": false,
+        "closed": false,
+        "bestBid": 0,
+        "bestAsk": 1,
+        "lastTradePrice": 0,
+        "volumeNum": 0,
+        "slug": "will-person-aa-win-the-2027-french-presidential-election"
+      }
+    ]
+  }
+]

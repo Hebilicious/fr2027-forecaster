@@ -1,0 +1,58 @@
+language: "rust"
+layer: "library"
+
+project:
+  title: "Fetchers"
+  description: "Network readers for markets, news feeds, Wikipedia page views and the agent inbox. Parsing is tested offline on saved responses."
+
+dependsOn: ["collectors"]
+
+tasks:
+  test:
+    description: "Run the fetchers' tests on saved responses (no network)."
+    command: "cargo"
+    args: ["test", "--locked", "-p", "fr2027-fetch"]
+    inputs:
+      [
+        "Cargo.toml",
+        "src/**/*",
+        "tests/**/*",
+        "/collectors/src/**/*",
+        "/model/src/**/*",
+        "/schemas/**/*",
+        "/Cargo.lock",
+        "/rust-toolchain.toml",
+      ]
+    toolchains: ["rust"]
+
+  clippy:
+    description: "Lint the fetchers with clippy, warnings as errors."
+    command: "cargo"
+    args: ["clippy", "--locked", "-p", "fr2027-fetch", "--all-targets", "--", "-D", "warnings"]
+    inputs:
+      [
+        "Cargo.toml",
+        "src/**/*",
+        "tests/**/*",
+        "/collectors/src/**/*",
+        "/model/src/**/*",
+        "/Cargo.lock",
+        "/rust-toolchain.toml",
+      ]
+    toolchains: ["rust"]
+
+  format:
+    description: "Format the fetchers' Rust sources."
+    command: "cargo"
+    args: ["fmt", "-p", "fr2027-fetch"]
+    options:
+      cache: false
+      runInCI: false
+    toolchains: ["rust"]
+
+  format-check:
+    description: "Fail when the fetchers' Rust sources are not formatted."
+    command: "cargo"
+    args: ["fmt", "-p", "fr2027-fetch", "--check"]
+    inputs: ["src/**/*", "tests/**/*", "/rustfmt.toml"]
+    toolchains: ["rust"]

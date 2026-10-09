@@ -2,7 +2,12 @@
 //! local UI. Every subcommand works on the repository found above the current directory, or on
 //! `--repo`.
 
+mod api;
+mod collect;
+mod data;
+mod export;
 mod forecast;
+mod inbox;
 mod serve;
 
 use std::path::PathBuf;
@@ -10,7 +15,9 @@ use std::process::ExitCode;
 
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-use fr2027_collectors::{Repo, Schemas, config::CandidatesConfig, config::load_model_params, grok, polls};
+use fr2027_collectors::{Repo, config::load_model_params};
+
+use crate::data::{Ingested, Inputs};
 
 #[derive(Parser)]
 #[command(name = "fr2027", about = "Forecaster for the 2027 French presidential election")]
@@ -31,7 +38,15 @@ enum Command {
     Ingest,
     /// Fit the model to data/clean/ and write data/forecasts/<YYYY-MM-DDTHH>.json.
     Forecast(forecast::Args),
-    /// Serve the UI and its JSON API.
+    /// Read one live source and write a new file under data/raw/.
+    #[command(subcommand)]
+    Collect(collect::Source),
+    /// Bring in what Grok Bot posted to the inbox Worker.
+    #[command(subcommand)]
+    Inbox(inbox::Command),
+    /// Write the public site: the built UI plus api/*.json.
+    Export(export::Args),
+    /// Serve the UI and its JSON documents locally.
     Serve(serve::Args),
 }
 
@@ -55,46 +70,38 @@ fn run(cli: Cli) -> Result<ExitCode> {
         Command::Validate => validate(&repo),
         Command::Ingest => ingest(&repo).map(|()| ExitCode::SUCCESS),
         Command::Forecast(args) => forecast::run(&repo, &args).map(|()| ExitCode::SUCCESS),
+        Command::Collect(source) => collect::run(&repo, &source).map(|()| ExitCode::SUCCESS),
+        Command::Inbox(command) => inbox::run(&repo, &command).map(|()| ExitCode::SUCCESS),
+        Command::Export(args) => export::run(&repo, &args),
         Command::Serve(args) => serve::run(repo, args).map(|()| ExitCode::SUCCESS),
     }
 }
 
 fn validate(repo: &Repo) -> Result<ExitCode> {
-    let schemas = Schemas::load(repo)?;
-    let config = CandidatesConfig::load(repo, &schemas)?;
+    let inputs = Inputs::load(repo)?;
     let params = load_model_params(repo)?;
-    let polls = polls::ingest(repo, &schemas, &config)?;
-    let grok = grok::ingest(repo, &schemas, &config)?;
+    let ingested = Ingested::read(repo, &inputs)?;
     println!(
-        "config: {} candidates in {} slots; model {} ({} simulations)",
-        config.candidates.len(),
-        config.slots.len(),
+        "config: {} candidates in {} slots; {} markets, {} feeds; model {} ({} simulations)",
+        inputs.config.candidates.len(),
+        inputs.config.slots.len(),
+        inputs.sources.markets.len(),
+        inputs.sources.feeds.len(),
         params.model_version,
         params.simulations
     );
-    println!(
-        "polls: {} accepted, {} rejected",
-        polls.accepted.len(),
-        polls.rejections.len()
-    );
-    println!(
-        "grok drops: {} accepted, {} rejected",
-        grok.accepted,
-        grok.rejections.len()
-    );
+    for line in ingested.summary() {
+        println!("{line}");
+    }
     let mut failed = false;
-    for rejection in polls.rejections.iter().chain(&grok.rejections) {
+    for rejection in ingested.rejections() {
         failed = true;
         eprintln!("rejected {}:", repo.relative(&rejection.path));
         for error in &rejection.errors {
             eprintln!("  - {error}");
         }
     }
-    let expected = [
-        (polls::CLEAN_FILE, polls::clean_bytes(&polls)?),
-        (grok::CLEAN_FILE, grok::clean_bytes(&grok)?),
-    ];
-    for (file, bytes) in expected {
+    for (file, bytes) in ingested.clean_files()? {
         if std::fs::read(repo.clean_dir().join(file)).ok().as_deref() != Some(bytes.as_slice()) {
             failed = true;
             eprintln!("data/clean/{file} is out of date with data/raw/: run `moon run cli:ingest`");
@@ -104,26 +111,13 @@ fn validate(repo: &Repo) -> Result<ExitCode> {
 }
 
 fn ingest(repo: &Repo) -> Result<()> {
-    let schemas = Schemas::load(repo)?;
-    let config = CandidatesConfig::load(repo, &schemas)?;
-    let polls = polls::ingest(repo, &schemas, &config)?;
-    polls::write_clean(repo, &polls)?;
-    let grok = grok::ingest(repo, &schemas, &config)?;
-    grok::write_clean(repo, &grok)?;
-    println!(
-        "polls: {} accepted ({} rows), {} superseded, {} quarantined",
-        polls.accepted.len(),
-        polls.rows.len(),
-        polls.superseded.len(),
-        polls.rejections.len()
-    );
-    println!(
-        "grok drops: {} accepted ({} rows), {} quarantined",
-        grok.accepted,
-        grok.rows.len(),
-        grok.rejections.len()
-    );
-    for rejection in polls.rejections.iter().chain(&grok.rejections) {
+    let inputs = Inputs::load(repo)?;
+    let ingested = Ingested::read(repo, &inputs)?;
+    ingested.write(repo)?;
+    for line in ingested.summary() {
+        println!("{line}");
+    }
+    for rejection in ingested.rejections() {
         eprintln!(
             "quarantined {}: {}",
             repo.relative(&rejection.path),
