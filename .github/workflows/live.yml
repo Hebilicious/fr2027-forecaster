@@ -1,0 +1,235 @@
+name: Live
+
+# Every hour: snapshot the prediction markets, record new headlines, record Wikipedia page views
+# (once a day), bring in what Grok Bot posted to the inbox, refit the forecast when its inputs
+# changed, commit the new data to main, and publish the public site to Cloudflare.
+# It also runs when a merge to main changes polls, config or code, so the page follows main.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - "config/**"
+      - "data/raw/polls/**"
+      - "schemas/**"
+      - "model/**"
+      - "collectors/**"
+      - "fetch/**"
+      - "cli/**"
+      - "app/**"
+      - "Cargo.lock"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/live.yml"
+  workflow_dispatch:
+    inputs:
+      attention_start:
+        description: "Backfill Wikipedia page views from this date (YYYY-MM-DD). Empty: the usual last week."
+        required: false
+        default: ""
+      sync_worker_secrets:
+        description: "Copy INBOX_BOT_TOKEN and INBOX_PIPELINE_TOKEN from the repository secrets to the Worker."
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+# One run at a time, never cancelled half-way: each run commits to main.
+concurrency:
+  group: live
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Collect, refit, publish
+    if: github.repository == 'Hebilicious/fr2027-forecaster' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    permissions:
+      contents: write # commit data to main; push poll-proposal branches
+      pull-requests: write # open the poll-proposal pull request
+    env:
+      FR2027: ./target/release/fr2027
+      GIT_AUTHOR_NAME: github-actions[bot]
+      GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+      GIT_COMMITTER_NAME: github-actions[bot]
+      GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    steps:
+      # Actions are pinned to full commit SHAs; the tag is in the comment.
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          ref: main
+          fetch-depth: 20
+      - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
+        with:
+          auto-install: true
+      # On the hosted runner, proto's Rust install leaves rustup with a toolchain that holds clippy
+      # and rustfmt but no rustc or cargo (seen 2026-10-09). Reinstall it from rust-toolchain.toml
+      # whenever any of the four tools is missing; otherwise this only checks.
+      - name: Check the Rust toolchain
+        run: |
+          channel=$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)
+          complete() {
+            rustup run "$channel" rustc --version && rustup run "$channel" cargo --version &&
+              rustup run "$channel" cargo clippy --version && rustup run "$channel" rustfmt --version
+          }
+          if ! complete; then
+            rustup toolchain uninstall "$channel" || true
+            rustup toolchain install "$channel" --profile minimal --component clippy,rustfmt --no-self-update
+            complete
+          fi
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            target
+          key: cargo-live-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ hashFiles('**/*.rs') }}
+          restore-keys: |
+            cargo-live-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
+
+      - name: Build
+        run: moon run cli:build web:build
+
+      # A failing source is recorded in its file and warned about; it never stops the others.
+      - name: Collect market prices
+        run: $FR2027 collect markets || echo "::warning title=markets::collector failed, see the log"
+
+      - name: Collect headlines
+        run: $FR2027 collect news || echo "::warning title=news::collector failed, see the log"
+
+      - name: Collect Wikipedia page views
+        env:
+          START: ${{ inputs.attention_start }}
+        run: |
+          if [ -n "$START" ]; then
+            [[ "$START" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "::error::attention_start must be YYYY-MM-DD"; exit 1; }
+            $FR2027 collect attention --start "$START" || echo "::warning title=attention::collector failed, see the log"
+          elif [ "$(date -u +%H)" -ge 6 ]; then
+            # Wikimedia publishes a day's views a few hours after midnight UTC.
+            $FR2027 collect attention || echo "::warning title=attention::collector failed, see the log"
+          fi
+
+      - name: Pull the Grok Bot inbox
+        env:
+          FR2027_INBOX_URL: ${{ vars.FR2027_INBOX_URL }}
+          INBOX_PIPELINE_TOKEN: ${{ secrets.INBOX_PIPELINE_TOKEN }}
+        run: |
+          if [ -z "$FR2027_INBOX_URL" ] || [ -z "$INBOX_PIPELINE_TOKEN" ]; then
+            echo "Inbox not configured (variable FR2027_INBOX_URL, secret INBOX_PIPELINE_TOKEN); skipping."
+            exit 0
+          fi
+          $FR2027 inbox pull || echo "::warning title=inbox::pull failed; the items stay pending"
+
+      - name: Ingest, refit, validate
+        run: |
+          $FR2027 ingest
+          $FR2027 forecast --if-changed
+          $FR2027 validate
+
+      - name: Commit data to main
+        id: commit
+        run: |
+          stray=$(git status --porcelain --untracked-files=all -- . ':(exclude)data')
+          if [ -n "$stray" ]; then
+            echo "::error::files outside data/ changed:"; echo "$stray"; exit 1
+          fi
+          git add -A -- data
+          if git diff --cached --quiet; then echo "No new data."; exit 0; fi
+          areas=$(git diff --cached --name-only | awk -F/ '$2 == "raw" { print $3 } $2 == "forecasts" { print "forecast" }' | sort -u | paste -sd, -)
+          git commit -q -m "data: ${areas:-clean files} $(date -u +%Y-%m-%dT%H)Z"
+          for attempt in 1 2 3; do
+            if git push -q origin HEAD:main; then exit 0; fi
+            git fetch -q origin main
+            if ! git rebase -q origin/main; then
+              # Raw files are new and never conflict; only derived files can. Take main's, rebuild
+              # them from raw, and carry on.
+              git checkout -q origin/main -- data/clean data/forecasts
+              $FR2027 ingest
+              git add -A -- data
+              GIT_EDITOR=true git rebase --continue
+            fi
+            $FR2027 validate
+          done
+          exit 1
+
+      - name: Propose polls from the inbox
+        id: proposals
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          shopt -s nullglob
+          files=(data/proposals/polls/*.yaml)
+          if [ ${#files[@]} -eq 0 ]; then exit 0; fi
+          branch="inbox/polls-${GITHUB_RUN_ID}"
+          git switch -q -c "$branch"
+          ids=""
+          for f in "${files[@]}"; do
+            ids="$ids $(basename "$f" .yaml)"
+            mv "$f" data/raw/polls/
+          done
+          ids="${ids# }"
+          $FR2027 ingest
+          $FR2027 validate
+          git add -A -- data/raw/polls data/clean
+          git commit -q -m "polls: ${ids} (from Grok Bot, for review)"
+          git push -q origin "$branch"
+          body=$(printf '%s\n\n%s\n\n%s\n' \
+            "Grok Bot sent these polls to the inbox: ${ids}. Each file passed the schema, candidate and sum checks in the Live run ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}." \
+            "Before merging, check each number against the notice or publication in source_url / notice_url. Merging refits and republishes the forecast." \
+            "Pull requests opened by GitHub Actions do not start CI; the checks above ran in the Live workflow.")
+          if url=$(gh pr create --base main --head "$branch" --title "Polls from Grok Bot: ${ids}" --body "$body"); then
+            echo "ref=$url" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning title=proposals::could not open a pull request (allow it in Settings → Actions → General → Workflow permissions); branch $branch is pushed"
+            echo "ref=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/main...${branch}" >> "$GITHUB_OUTPUT"
+          fi
+          git switch -q main
+
+      - name: Resolve inbox items
+        env:
+          FR2027_INBOX_URL: ${{ vars.FR2027_INBOX_URL }}
+          INBOX_PIPELINE_TOKEN: ${{ secrets.INBOX_PIPELINE_TOKEN }}
+          PROPOSAL_REF: ${{ steps.proposals.outputs.ref }}
+        run: |
+          if [ ! -f .inbox/resolutions.json ]; then exit 0; fi
+          if [ -n "$PROPOSAL_REF" ]; then
+            $FR2027 inbox resolve --proposal-ref "$PROPOSAL_REF"
+          else
+            $FR2027 inbox resolve
+          fi
+
+      # Publishes whatever was committed, even when proposing polls or resolving the inbox failed.
+      - name: Publish the site to Cloudflare
+        if: ${{ !cancelled() && steps.commit.outcome == 'success' }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID is not set; not deploying."
+            exit 0
+          fi
+          git checkout -q -f main
+          set +e; $FR2027 export; code=$?; set -e
+          if [ "$code" -eq 3 ]; then echo "::notice::Publication blackout: the site keeps its last version."; exit 0; fi
+          if [ "$code" -ne 0 ]; then exit "$code"; fi
+          cd app/worker && pnpm exec wrangler deploy
+
+      - name: Copy the inbox tokens to the Worker
+        if: ${{ !cancelled() && inputs.sync_worker_secrets }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          INBOX_BOT_TOKEN: ${{ secrets.INBOX_BOT_TOKEN }}
+          INBOX_PIPELINE_TOKEN: ${{ secrets.INBOX_PIPELINE_TOKEN }}
+        run: |
+          if [ -z "$INBOX_BOT_TOKEN" ] || [ -z "$INBOX_PIPELINE_TOKEN" ]; then
+            echo "::error::set the INBOX_BOT_TOKEN and INBOX_PIPELINE_TOKEN repository secrets first"; exit 1
+          fi
+          file="$RUNNER_TEMP/worker-secrets.json"
+          jq -n '{INBOX_BOT_TOKEN: env.INBOX_BOT_TOKEN, INBOX_PIPELINE_TOKEN: env.INBOX_PIPELINE_TOKEN}' > "$file"
+          (cd app/worker && pnpm exec wrangler secret bulk "$file")
+          rm -f "$file"

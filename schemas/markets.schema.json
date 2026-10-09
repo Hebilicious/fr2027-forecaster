@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "markets.schema.json",
+  "title": "Market snapshot",
+  "description": "data/raw/markets/YYYY-MM-DDTHH.json (UTC hour of the fetch): one snapshot of every market in config/sources.yaml. Prices are the probability a contract implies, between 0 and 1.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "fetched_at", "markets"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "fetched_at": { "$ref": "#/$defs/timestamp" },
+    "markets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "venue", "question", "event", "url", "status", "error", "contracts"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "venue": { "enum": ["polymarket", "kalshi"] },
+          "question": { "enum": ["win", "qualify", "on_ballot"] },
+          "event": { "type": "string" },
+          "url": { "type": "string", "pattern": "^https://" },
+          "status": { "enum": ["ok", "error"] },
+          "error": { "type": ["string", "null"] },
+          "contracts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["label", "candidate_id", "price", "bid", "ask", "last", "volume"],
+              "properties": {
+                "label": { "type": "string", "minLength": 1 },
+                "candidate_id": { "type": ["string", "null"], "pattern": "^[a-z][a-z0-9_]*$" },
+                "price": {
+                  "description": "Midpoint of bid and ask when both exist and are at most 0.10 apart, else the last trade.",
+                  "oneOf": [{ "$ref": "#/$defs/probability" }, { "type": "null" }]
+                },
+                "bid": { "oneOf": [{ "$ref": "#/$defs/probability" }, { "type": "null" }] },
+                "ask": { "oneOf": [{ "$ref": "#/$defs/probability" }, { "type": "null" }] },
+                "last": { "oneOf": [{ "$ref": "#/$defs/probability" }, { "type": "null" }] },
+                "volume": {
+                  "type": ["number", "null"],
+                  "minimum": 0,
+                  "description": "Lifetime volume, in the venue's unit (USD or contracts)."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "timestamp": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$" },
+    "probability": { "type": "number", "minimum": 0, "maximum": 1 }
+  }
+}

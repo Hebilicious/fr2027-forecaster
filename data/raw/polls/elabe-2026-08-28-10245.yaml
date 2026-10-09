@@ -1,0 +1,129 @@
+schema_version: "1.0"
+poll_id: elabe-2026-08-28-10245
+firm: elabe
+sponsor: "BFMTV / La Tribune Dimanche"
+field_start: 2026-08-26
+field_end: 2026-08-28
+published_at: 2026-08-29
+sample_size: 1501
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/aout/10245-pres-iv-elabe-29-aout.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/aout/10245-pres-iv-elabe-29-aout.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Tondelier+Glucksmann+Philippe+Villepin"
+    shares:
+      arthaud: 1.5
+      melenchon: 14
+      roussel: 3
+      tondelier: 3.5
+      glucksmann: 11.5
+      philippe: 17
+      villepin: 2
+      retailleau: 6.5
+      dupont_aignan: 3
+      le_pen: 34
+      zemmour: 4
+  - scenario_id: S2
+    round: 1
+    label: "Tondelier+Glucksmann+Attal+Villepin"
+    shares:
+      arthaud: 1.5
+      melenchon: 14
+      roussel: 3
+      tondelier: 3
+      glucksmann: 14
+      attal: 12
+      villepin: 2.5
+      retailleau: 9.5
+      dupont_aignan: 2
+      le_pen: 34.5
+      zemmour: 4
+  - scenario_id: S3
+    round: 1
+    label: "Tondelier+Hollande+Philippe+Lisnard"
+    shares:
+      arthaud: 2
+      melenchon: 14
+      roussel: 3.5
+      tondelier: 4
+      hollande: 7.5
+      philippe: 19.5
+      retailleau: 6
+      dupont_aignan: 2.5
+      le_pen: 34
+      zemmour: 4
+      lisnard: 3
+  - scenario_id: S4
+    round: 1
+    label: "Hollande+Attal+Ruffin+Lisnard"
+    shares:
+      arthaud: 1.5
+      melenchon: 14
+      roussel: 4
+      hollande: 8
+      attal: 12.5
+      retailleau: 9
+      dupont_aignan: 2.5
+      le_pen: 34.5
+      zemmour: 4.5
+      ruffin: 6
+      lisnard: 3.5
+  - scenario_id: S5
+    round: 1
+    label: "Tondelier+Faure+Philippe+Villepin"
+    shares:
+      arthaud: 1.5
+      melenchon: 14.5
+      roussel: 4.5
+      tondelier: 4
+      faure: 3.5
+      philippe: 20.5
+      villepin: 2.5
+      retailleau: 7
+      dupont_aignan: 2.5
+      le_pen: 35.5
+      zemmour: 4
+  - scenario_id: S6
+    round: 1
+    label: "Glucksmann+Attal+Philippe"
+    shares:
+      arthaud: 1.5
+      melenchon: 14.5
+      roussel: 3
+      glucksmann: 12.5
+      attal: 6.5
+      philippe: 14.5
+      retailleau: 7
+      dupont_aignan: 2.5
+      le_pen: 34
+      zemmour: 4
+  - scenario_id: H1
+    round: 2
+    label: "Gabriel Attal v Marine Le Pen"
+    shares:
+      attal: 43
+      le_pen: 57
+  - scenario_id: H2
+    round: 2
+    label: "Raphaël Glucksmann v Marine Le Pen"
+    shares:
+      glucksmann: 43
+      le_pen: 57
+  - scenario_id: H3
+    round: 2
+    label: "Jean-Luc Mélenchon v Marine Le Pen"
+    shares:
+      melenchon: 30.5
+      le_pen: 69.5
+  - scenario_id: H4
+    round: 2
+    label: "Édouard Philippe v Marine Le Pen"
+    shares:
+      philippe: 47.5
+      le_pen: 52.5

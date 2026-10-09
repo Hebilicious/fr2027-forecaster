@@ -1,0 +1,102 @@
+schema_version: "1.0"
+poll_id: ipsos-bva-2026-09-09-10262
+firm: ipsos-bva
+sponsor: "Le Monde / CEVIPOF / Fondation Jean-Jaures / Institut Montaigne"
+field_start: 2026-09-03
+field_end: 2026-09-09
+published_at: 2026-09-13
+sample_size: 13060
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10262-pres-enquete-electorale-ipsos-bva-le-monde-13-septembre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10262-pres-enquete-electorale-ipsos-bva-le-monde-13-septembre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Attal+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 15.5
+      roussel: 2.5
+      tondelier: 4
+      glucksmann: 11.5
+      attal: 6
+      philippe: 14
+      retailleau: 7
+      dupont_aignan: 2
+      le_pen: 33
+      zemmour: 4
+  - scenario_id: S2
+    round: 1
+    label: "Glucksmann+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 15.5
+      roussel: 2.5
+      tondelier: 4
+      glucksmann: 12.5
+      philippe: 17.5
+      retailleau: 8
+      dupont_aignan: 2
+      le_pen: 33.5
+      zemmour: 4
+  - scenario_id: S3
+    round: 1
+    label: "Glucksmann+Attal"
+    shares:
+      arthaud: 0.5
+      melenchon: 15.5
+      roussel: 2.5
+      tondelier: 4.5
+      glucksmann: 13.5
+      attal: 13
+      retailleau: 10
+      dupont_aignan: 2
+      le_pen: 34
+      zemmour: 4.5
+  - scenario_id: S4
+    round: 1
+    label: "Faure+Attal+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 16.5
+      roussel: 3
+      tondelier: 5
+      faure: 4.5
+      attal: 7.5
+      philippe: 16
+      retailleau: 7
+      dupont_aignan: 2
+      le_pen: 34
+      zemmour: 4
+  - scenario_id: S5
+    round: 1
+    label: "Faure+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 16.5
+      roussel: 3.5
+      tondelier: 5.5
+      faure: 5
+      philippe: 21
+      retailleau: 7.5
+      dupont_aignan: 2
+      le_pen: 34.5
+      zemmour: 4
+  - scenario_id: S6
+    round: 1
+    label: "Faure+Attal"
+    shares:
+      arthaud: 0.5
+      melenchon: 17
+      roussel: 3.5
+      tondelier: 5.5
+      faure: 5.5
+      attal: 15.5
+      retailleau: 10.5
+      dupont_aignan: 2.5
+      le_pen: 35
+      zemmour: 4.5

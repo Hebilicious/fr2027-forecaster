@@ -1,0 +1,48 @@
+language: "rust"
+layer: "library"
+
+project:
+  title: "Collectors"
+  description: "Validation and cleaning of everything sources write into data/raw/, against schemas/."
+
+dependsOn: ["model"]
+
+tasks:
+  test:
+    description: "Run the collectors' tests against the real schemas."
+    command: "cargo"
+    args: ["test", "--locked", "-p", "fr2027-collectors"]
+    inputs:
+      [
+        "Cargo.toml",
+        "src/**/*",
+        "tests/**/*",
+        "/schemas/**/*",
+        "/model/src/**/*",
+        "/Cargo.lock",
+        "/rust-toolchain.toml",
+      ]
+    toolchains: ["rust"]
+
+  clippy:
+    description: "Lint the collectors with clippy, warnings as errors."
+    command: "cargo"
+    args: ["clippy", "--locked", "-p", "fr2027-collectors", "--all-targets", "--", "-D", "warnings"]
+    inputs: ["Cargo.toml", "src/**/*", "tests/**/*", "/model/src/**/*", "/Cargo.lock", "/rust-toolchain.toml"]
+    toolchains: ["rust"]
+
+  format:
+    description: "Format the collectors' Rust sources."
+    command: "cargo"
+    args: ["fmt", "-p", "fr2027-collectors"]
+    options:
+      cache: false
+      runInCI: false
+    toolchains: ["rust"]
+
+  format-check:
+    description: "Fail when the collectors' Rust sources are not formatted."
+    command: "cargo"
+    args: ["fmt", "-p", "fr2027-collectors", "--check"]
+    inputs: ["src/**/*", "tests/**/*", "/rustfmt.toml"]
+    toolchains: ["rust"]

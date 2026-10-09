@@ -1,0 +1,57 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-07-09-10224
+firm: opinionway
+sponsor: "Les Echos / Radio Classique"
+field_start: 2026-07-08
+field_end: 2026-07-09
+published_at: 2026-07-10
+sample_size: 1042
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/juillet/10224-pres-presitrack-opinionway-les-echos-9-juillet.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/juillet/10224-pres-presitrack-opinionway-les-echos-9-juillet.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-07-09)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Attal+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 13
+      roussel: 2
+      tondelier: 5
+      glucksmann: 9
+      attal: 7
+      philippe: 18
+      retailleau: 8
+      le_pen: 35
+      zemmour: 3
+  - scenario_id: S2
+    round: 1
+    label: "Attal"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 2
+      tondelier: 5
+      glucksmann: 10
+      attal: 16
+      retailleau: 12
+      le_pen: 36
+      zemmour: 3
+  - scenario_id: S3
+    round: 1
+    label: "Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 2
+      tondelier: 4
+      glucksmann: 9
+      philippe: 22
+      retailleau: 9
+      le_pen: 34
+      zemmour: 4

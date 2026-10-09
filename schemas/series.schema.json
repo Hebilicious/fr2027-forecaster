@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "series.schema.json",
+  "title": "Latent round 1 share history",
+  "description": "data/forecasts/series.json: each candidate's polling-average share in the most likely field (with them in it), filtered on the polls known at each date, with an 80% interval. Rewritten by every run.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "forecast", "points"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "forecast": { "type": "string", "description": "File name of the forecast this history belongs to." },
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "candidate_id", "mean", "lo80", "hi80"],
+        "properties": {
+          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "candidate_id": { "type": "string" },
+          "mean": { "type": "number", "minimum": 0, "maximum": 1 },
+          "lo80": { "type": "number", "minimum": 0, "maximum": 1 },
+          "hi80": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    }
+  }
+}

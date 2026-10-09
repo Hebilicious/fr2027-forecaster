@@ -1,0 +1,53 @@
+# Model parameters. Every change here goes through a pull request with the reason in
+# research/LOG.md; values marked "provisional" are placeholders until the backtests in
+# milestone 3 fit them.
+
+model_version: "0.1.0"
+seed: 20270418
+simulations: 50000
+round1_date: 2027-04-18
+round2_date: 2027-05-02
+
+aggregation:
+  # Each run picks, by marginal likelihood on the polls it sees, the daily random-walk standard
+  # deviation of bloc strengths and within-bloc supports (log scale), the design effect on the
+  # multinomial sampling variance, and the share of a scenario's sampling variance that is its
+  # own: a poll's scenarios ask the same respondents, so the rest is common to all of them.
+  random_walk_sd_grid: [0.002, 0.004, 0.007, 0.012, 0.02, 0.03]
+  design_effect_grid: [1.0, 1.5, 2.0, 3.0, 4.0, 6.0]
+  scenario_noise_share_grid: [0.1, 0.2, 0.4, 0.6]
+  prior_sd: 2.0
+  presence_sd: 0.3
+  house_sd: 0.08
+  share_floor: 0.5
+  series_step_days: 3
+  series_draws: 300
+
+round1_error:
+  # Provisional: fat-tailed election-day polling error, to be fit on 2002–2022 final-poll
+  # misses in milestone 3. 0.12 on a bloc's log strength is about ±3 points at 25%.
+  student_t_df: 5
+  bloc_sd: 0.12
+  candidate_sd: 0.10
+
+round2:
+  random_walk_sd: 0.01
+  design_effect: 1.5
+  prior_sd: 1.5
+  error_sd: 0.08
+  transfer_sd: 0.35
+  loyalty: 0.95
+  # Relative propensity of each round 1 bloc's voters to vote for a finalist of each bloc or
+  # to abstain / vote blank. For a centre-versus-far-right runoff the rows reproduce the 2022
+  # election-day surveys (Ipsos, Ifop, Elabe; see research/LOG.md, 2026-10-09): left voters
+  # 45% centre / 15% far right / 40% abstain, right 52/19/29, far right 10/77/13; the `other`
+  # row follows Dupont-Aignan's 2022 voters in the pre-runoff polls (Ipsos 11/65/24, Harris
+  # 10/63/27). Every other cell is a proximity assumption, outweighed wherever head-to-head
+  # polls exist.
+  transfers:
+    far_left: { far_left: 0.90, left: 0.70, centre: 0.30, right: 0.08, far_right: 0.12, other: 0.20, abstain: 0.58 }
+    left: { far_left: 0.60, left: 0.90, centre: 0.45, right: 0.15, far_right: 0.15, other: 0.20, abstain: 0.40 }
+    centre: { far_left: 0.15, left: 0.45, centre: 0.97, right: 0.70, far_right: 0.10, other: 0.20, abstain: 0.35 }
+    right: { far_left: 0.05, left: 0.20, centre: 0.52, right: 0.95, far_right: 0.19, other: 0.20, abstain: 0.29 }
+    far_right: { far_left: 0.08, left: 0.05, centre: 0.10, right: 0.35, far_right: 0.77, other: 0.40, abstain: 0.13 }
+    other: { far_left: 0.20, left: 0.20, centre: 0.25, right: 0.35, far_right: 0.40, other: 0.90, abstain: 0.35 }

@@ -1,0 +1,52 @@
+language: "typescript"
+layer: "application"
+stack: "backend"
+
+project:
+  title: "Worker"
+  description: "The Cloudflare Worker fr2027: serves the exported site (.site/) and the Grok bot's inbox."
+
+tasks:
+  types:
+    description: "Generate worker-configuration.d.ts (the Env bindings and the Workers runtime types) from wrangler.jsonc."
+    command: "wrangler"
+    args: ["types"]
+    inputs: ["wrangler.jsonc", "package.json", "/pnpm-lock.yaml"]
+    outputs: ["worker-configuration.d.ts"]
+
+  typecheck:
+    description: "Type-check the Worker and its tests with tsc."
+    command: "tsc"
+    args: ["--noEmit"]
+    deps: ["types"]
+    inputs:
+      - "src/**/*"
+      - "vitest.config.ts"
+      - "tsconfig.json"
+      - "worker-configuration.d.ts"
+      - "package.json"
+      - "/pnpm-lock.yaml"
+
+  test:
+    description: "Run the inbox tests in plain Node with vitest (the SQL store runs on node:sqlite)."
+    command: "vitest"
+    args: ["run"]
+    inputs: ["src/**/*", "vitest.config.ts", "package.json", "/pnpm-lock.yaml"]
+
+  deploy:
+    description: "Export the site, then deploy the Worker and .site/ to Cloudflare (needs CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID)."
+    command: "wrangler"
+    args: ["deploy"]
+    deps: ["cli:export"]
+    options:
+      cache: false
+      runInCI: false
+
+  dev:
+    description: "Run the Worker locally with wrangler dev: serves .site/ and the inbox, reading the tokens from .dev.vars."
+    command: "wrangler"
+    args: ["dev"]
+    options:
+      cache: false
+      persistent: true
+      runInCI: false

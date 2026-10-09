@@ -1,0 +1,132 @@
+schema_version: "1.0"
+poll_id: ipsos-bva-2026-05-28-10195
+firm: ipsos-bva
+sponsor: "Le Parisien"
+field_start: 2026-05-27
+field_end: 2026-05-28
+published_at: 2026-06-01
+sample_size: 1500
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/juin/10195-pres-ipsos-bva-le-parisien-1er-juin.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/juin/10195-pres-ipsos-bva-le-parisien-1er-juin.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Attal+Philippe+Bardella"
+    shares:
+      arthaud: 1
+      melenchon: 13
+      roussel: 3
+      tondelier: 4
+      glucksmann: 11
+      attal: 8.5
+      philippe: 13
+      retailleau: 7.5
+      dupont_aignan: 1.5
+      bardella: 33.5
+      zemmour: 4
+  - scenario_id: S2
+    round: 1
+    label: "Glucksmann+Attal+Philippe+Le Pen"
+    shares:
+      arthaud: 1
+      melenchon: 13
+      roussel: 3
+      tondelier: 4
+      glucksmann: 11
+      attal: 8.5
+      philippe: 14
+      retailleau: 8.5
+      dupont_aignan: 1.5
+      le_pen: 31
+      zemmour: 4.5
+  - scenario_id: S3
+    round: 1
+    label: "Hollande+Attal+Philippe+Bardella"
+    shares:
+      arthaud: 1
+      melenchon: 13.5
+      roussel: 4
+      tondelier: 4
+      hollande: 7
+      attal: 9.5
+      philippe: 13.5
+      retailleau: 8
+      dupont_aignan: 1.5
+      bardella: 34
+      zemmour: 4
+  - scenario_id: S4
+    round: 1
+    label: "Hollande+Attal+Philippe+Le Pen"
+    shares:
+      arthaud: 1
+      melenchon: 13.5
+      roussel: 4
+      tondelier: 4
+      hollande: 7
+      attal: 9.5
+      philippe: 14.5
+      retailleau: 8.5
+      dupont_aignan: 1.5
+      le_pen: 32
+      zemmour: 4.5
+  - scenario_id: S5
+    round: 1
+    label: "Glucksmann+Attal+Bardella"
+    shares:
+      arthaud: 1
+      melenchon: 13
+      roussel: 3
+      tondelier: 4
+      glucksmann: 14
+      attal: 14.5
+      retailleau: 10
+      dupont_aignan: 1.5
+      bardella: 35
+      zemmour: 4
+  - scenario_id: S6
+    round: 1
+    label: "Glucksmann+Philippe+Bardella"
+    shares:
+      arthaud: 1
+      melenchon: 13
+      roussel: 3
+      tondelier: 4
+      glucksmann: 13
+      philippe: 17.5
+      retailleau: 9
+      dupont_aignan: 1.5
+      bardella: 34
+      zemmour: 4
+  - scenario_id: S7
+    round: 1
+    label: "Hollande+Attal+Bardella"
+    shares:
+      arthaud: 1
+      melenchon: 13.5
+      roussel: 3.5
+      tondelier: 5
+      hollande: 8
+      attal: 17.5
+      retailleau: 10
+      dupont_aignan: 1.5
+      bardella: 36
+      zemmour: 4
+  - scenario_id: S8
+    round: 1
+    label: "Hollande+Philippe+Bardella"
+    shares:
+      arthaud: 1
+      melenchon: 13.5
+      roussel: 4
+      tondelier: 5
+      hollande: 7.5
+      philippe: 19
+      retailleau: 9
+      dupont_aignan: 1.5
+      bardella: 35.5
+      zemmour: 4

@@ -1,0 +1,17 @@
+{
+  "name": "@fr2027/web",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "effect": "catalog:",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:",
+    "vize": "catalog:"
+  }
+}

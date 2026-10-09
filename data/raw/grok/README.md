@@ -1,8 +1,10 @@
 # Grok drop folder
 
-The Grok bot writes one JSON file per collection window here, named `YYYY-MM-DDTHH-MM.json` (window end, UTC).
+One JSON file per collection window of X activity, named `YYYY-MM-DDTHH-MM.json` (window end, UTC).
 
-- Format: see "Data contracts → Grok drop" in `/SPEC.md` (schema will live in `/schemas/grok_drop.schema.json`).
-- Never edit a file once pushed; send a new window instead.
-- Commit message: `grok: <window end>`.
-- Use candidate IDs from `/config/candidates.yaml`; send `null` for anything you can't measure.
+- Grok Bot doesn't write here directly. It sends each drop to the inbox Worker; the hourly Live
+  workflow checks it and commits it here (see `/docs/grok-bot.md`).
+- Format: `/schemas/grok_drop.schema.json`. `moon run cli:validate` checks every file against it.
+- Post ids (`sample_post_ids`) are dropped before a file is committed, so a post deleted on X
+  never lives on in this public repository.
+- A file is never edited once committed; a later window is a new file.

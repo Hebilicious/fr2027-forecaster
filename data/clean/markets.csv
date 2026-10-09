@@ -1,0 +1,112 @@
+fetched_at,market_id,venue,question,candidate_id,label,price,bid,ask,last,volume,source_file
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,arthaud,Nathalie Arthaud,0.895,0.86,0.93,0.77,8.76,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,asselineau,François Asselineau,0.115,0.09,0.14,0.13,31.0,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,attal,Gabriel Attal,0.2,0.17,0.23,0.25,5136.87,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,bardella,Jordan Bardella,0.06,0.03,0.09,0.03,382.01,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,bouamrane,Karim Bouamrane,0.07,0.03,0.11,0.03,365.01,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,cazeneuve,Bernard Cazeneuve,0.13,0.1,0.16,0.1,624.06,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,dupont_aignan,Nicolas Dupont-Aignan,0.64,0.61,0.67,0.67,157.6,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,faure,Olivier Faure,0.09,0.05,0.13,0.05,469.56,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,glucksmann,Raphaël Glucksmann,0.555,0.52,0.59,0.41,1920.09,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,guedj,Jérôme Guedj,0.085,0.05,0.12,0.04,226.01,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,hollande,François Hollande,0.43,0.41,0.45,0.36,2356.75,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,le_pen,Marine Le Pen,0.945,0.92,0.97,0.92,60.0,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,melenchon,Jean-Luc Mélenchon,0.97,0.95,0.99,0.87,6.01,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,philippe,Édouard Philippe,0.895,0.87,0.92,0.9,614.01,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,retailleau,Bruno Retailleau,0.51,0.49,0.66,0.51,2596.84,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,roussel,Fabien Roussel,0.785,0.75,0.82,0.79,382.0,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,ruffin,François Ruffin,0.31,0.3,0.32,0.29,114.74,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,tondelier,Marine Tondelier,0.245,0.21,0.28,0.27,102.74,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,villepin,Dominique de Villepin,0.3,0.27,0.33,0.37,1735.25,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-on-ballot,kalshi,on_ballot,zemmour,Éric Zemmour,0.87,0.85,0.89,0.88,4471.44,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,attal,Gabriel Attal,0.15,0.11,0.19,0.16,0.02,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,bardella,Jordan Bardella,0.035,0.01,0.06,0.07,127.19,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,cazeneuve,Bernard Cazeneuve,0.04,0.01,0.07,0.08,80.19,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,faure,Olivier Faure,0.03,0.01,0.05,0.05,4.18,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,glucksmann,Raphaël Glucksmann,0.125,0.09,0.16,0.09,10.59,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,hollande,François Hollande,0.09,0.07,0.11,0.07,299.13,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,le_pen,Marine Le Pen,0.9,0.85,0.95,0.82,111.99,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,melenchon,Jean-Luc Mélenchon,0.3,0.27,0.33,0.33,1411.11,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,philippe,Édouard Philippe,0.405,0.38,0.43,0.42,271.4,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,retailleau,Bruno Retailleau,0.095,0.06,0.13,0.06,10.19,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-qualify,kalshi,qualify,villepin,Dominique de Villepin,0.08,0.05,0.11,0.1,0.18,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,attal,Gabriel Attal,0.0235,0.023,0.024,0.023,21840.96,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,bardella,Jordan Bardella,0.0145,0.014,0.015,0.014,89389.36,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,bertrand,Xavier Bertrand,0.0015,0.001,0.002,0.001,1555.46,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,cazeneuve,Bernard Cazeneuve,0.0015,0.001,0.002,0.001,958.47,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,faure,Olivier Faure,0.0015,0.001,0.002,0.001,1004.47,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,hollande,François Hollande,0.065,0.06,0.07,0.06,42265.8,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,le_maire,Bruno Le Maire,0.0015,0.001,0.002,0.001,905.47,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,le_pen,Marine Le Pen,0.465,0.46,0.47,0.47,134832.91,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,lisnard,David Lisnard,0.12,0.11,0.13,0.13,45625.71,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,melenchon,Jean-Luc Mélenchon,0.115,0.11,0.12,0.12,32800.42,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,philippe,Édouard Philippe,0.185,0.18,0.19,0.19,37486.41,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,retailleau,Bruno Retailleau,0.0135,0.013,0.014,0.013,6953.8,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,ruffin,François Ruffin,0.0025,0.002,0.003,0.002,3443.45,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,villepin,Dominique de Villepin,0.0075,0.007,0.008,0.007,16182.58,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,kalshi-win,kalshi,win,zemmour,Éric Zemmour,0.0075,0.007,0.008,0.007,8939.92,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,arthaud,Nathalie Arthaud,0.88,0.87,0.89,0.85,8197.386672999999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,asselineau,François Asselineau,0.16,0.15,0.17,0.19,14303.865396,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,attal,Gabriel Attal,0.19,0.18,0.2,0.19,17241.820993,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,bardella,Jordan Bardella,0.07,0.064,0.076,0.057,32323.814460999998,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,batho,Delphine Batho,0.0915,0.087,0.096,0.088,2676.4402570000007,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,bertrand,Xavier Bertrand,0.115,0.11,0.12,0.14,7842.386876000001,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,bouamrane,Karim Bouamrane,0.0485,0.047,0.05,0.048,11252.923028,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,cazeneuve,Bernard Cazeneuve,0.103,0.1,0.106,0.106,11990.989996999999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,dupont_aignan,Nicolas Dupont-Aignan,0.61,0.54,0.76,0.61,2970.690211,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,faure,Olivier Faure,0.11,0.103,0.117,0.106,4737.799690000001,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,glucksmann,Raphaël Glucksmann,0.59,0.56,0.62,0.61,15592.009696,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,guedj,Jérôme Guedj,0.056,0.052,0.06,0.047,7153.678548,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,hollande,François Hollande,0.39,0.36,0.42,0.37,36155.026313,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,le_pen,Marine Le Pen,0.91,0.9,0.92,0.9,34571.166108,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,lisnard,David Lisnard,0.735,0.73,0.74,0.73,22484.356173999997,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,melenchon,Jean-Luc Mélenchon,0.944,0.942,0.946,0.946,22257.485713000005,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,philippe,Édouard Philippe,0.905,0.89,0.92,0.89,20335.618912,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,retailleau,Bruno Retailleau,0.575,0.55,0.6,0.55,14017.781895000002,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,roussel,Fabien Roussel,0.81,0.8,0.82,0.81,4718.030812000001,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,royal,Ségolène Royal,0.0345,0.032,0.037,0.022,3938.102181,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,ruffin,François Ruffin,0.245,0.23,0.26,0.26,2554.8967930000003,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,tondelier,Marine Tondelier,0.265,0.26,0.27,0.27,12409.931281,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,villepin,Dominique de Villepin,0.305,0.3,0.31,0.31,21452.710946000007,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-on-ballot,polymarket,on_ballot,zemmour,Éric Zemmour,0.845,0.84,0.85,0.87,18664.607764000004,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,asselineau,François Asselineau,0.034,0.033,0.035,0.032,1866.0666059999999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,attal,Gabriel Attal,0.057,0.052,0.062,0.052,6674.726089999999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,bardella,Jordan Bardella,0.05,0.04,0.06,0.05,23539.365098000002,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,bertrand,Xavier Bertrand,0.0115,0.003,0.02,0.016,1561.161564,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,cazeneuve,Bernard Cazeneuve,0.0365,0.031,0.042,0.031,5742.751704999998,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,dupont_aignan,Nicolas Dupont-Aignan,0.0395,0.037,0.042,0.028,1938.3036640000003,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,faure,Olivier Faure,0.052,0.048,0.056,0.05,2407.5296190000004,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,glucksmann,Raphaël Glucksmann,0.0645,0.058,0.071,0.06,6478.173923,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,hollande,François Hollande,0.059,0.057,0.061,0.063,12677.393326,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,le_pen,Marine Le Pen,0.91,0.9,0.92,0.92,15594.663402999999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,lisnard,David Lisnard,0.1405,0.136,0.145,0.145,142086.28814300004,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,melenchon,Jean-Luc Mélenchon,0.385,0.38,0.39,0.43,17263.45324,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,philippe,Édouard Philippe,0.45,0.44,0.46,0.44,5214.809637,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,retailleau,Bruno Retailleau,0.065,0.06,0.07,0.074,3637.5230879999995,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,roussel,Fabien Roussel,0.049,0.047,0.051,0.035,6717.601263999999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,royal,Ségolène Royal,0.049,0.038,0.06,0.038,4618.1438610000005,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,ruffin,François Ruffin,0.0675,0.064,0.071,0.066,6378.234278999999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,tondelier,Marine Tondelier,0.05,0.046,0.054,0.014,3204.4252899999997,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,villepin,Dominique de Villepin,0.055,0.05,0.06,0.03,2090.71,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-qualify,polymarket,qualify,zemmour,Éric Zemmour,0.0445,0.042,0.047,0.047,731.309061,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,asselineau,François Asselineau,0.001,,0.001,0.001,6249822.935116998,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,attal,Gabriel Attal,0.0185,0.018,0.019,0.018,2774283.8247550004,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,bardella,Jordan Bardella,0.0055,0.005,0.006,0.005,2630550.3525010003,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,bertrand,Xavier Bertrand,0.001,,0.001,0.001,6154762.069839001,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,bouamrane,Karim Bouamrane,0.0015,0.001,0.002,0.001,1192155.3382829998,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,cazeneuve,Bernard Cazeneuve,0.001,,0.001,0.001,2408923.8319419986,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,dupont_aignan,Nicolas Dupont-Aignan,0.001,,0.001,0.001,4943098.545843,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,faure,Olivier Faure,0.0015,0.001,0.002,0.001,6394066.018354999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,glucksmann,Raphaël Glucksmann,0.0105,0.01,0.011,0.011,2153433.1873790002,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,hollande,François Hollande,0.0245,0.024,0.025,0.025,2338483.892093,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,le_pen,Marine Le Pen,0.4105,0.41,0.411,0.411,3463762.883678001,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,lisnard,David Lisnard,0.128,0.127,0.129,0.127,4378948.721321,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,melenchon,Jean-Luc Mélenchon,0.125,0.12,0.13,0.12,2027235.8096670003,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,philippe,Édouard Philippe,0.225,0.22,0.23,0.24,2093013.318600999,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,retailleau,Bruno Retailleau,0.0105,0.01,0.011,0.01,2697901.9017199995,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,roussel,Fabien Roussel,0.001,,0.001,0.001,4248945.4010080015,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,royal,Ségolène Royal,0.0015,0.001,0.002,0.001,6920681.917703998,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,ruffin,François Ruffin,0.0015,0.001,0.002,0.001,4653043.834627,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,tondelier,Marine Tondelier,0.0015,0.001,0.002,0.001,4470070.923947,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,villepin,Dominique de Villepin,0.0065,0.006,0.007,0.006,2435126.0255280007,data/raw/markets/2026-10-09T20.json
+2026-10-09T20:47:48Z,polymarket-win,polymarket,win,zemmour,Éric Zemmour,0.0045,0.004,0.005,0.005,2814253.6412109993,data/raw/markets/2026-10-09T20.json

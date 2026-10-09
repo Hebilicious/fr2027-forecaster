@@ -1,0 +1,22 @@
+packages:
+  - "app/*"
+
+# Every package names its versions with `catalog:`; versions live only here.
+catalog:
+  "@types/node": "24.19.1"
+  "@vitejs/plugin-vue": "6.0.9"
+  effect: "4.0.2"
+  oxfmt: "0.72.0"
+  oxlint: "1.87.0"
+  typescript: "7.0.2"
+  vite: "8.3.4"
+  vitest: "5.0.3"
+  vue: "3.5.43"
+  vize: "0.435.0"
+  wrangler: "4.137.0"
+
+# Dependency install scripts stay off. esbuild and workerd (wrangler's) only use theirs to swap
+# a JavaScript launcher for the native binary; the launcher works without it.
+allowBuilds:
+  esbuild: false
+  workerd: false
