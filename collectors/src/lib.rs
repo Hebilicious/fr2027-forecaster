@@ -10,6 +10,7 @@ pub mod attention;
 pub mod config;
 pub mod events;
 pub mod field_change;
+pub mod gdelt;
 pub mod grok;
 pub mod markets;
 pub mod names;

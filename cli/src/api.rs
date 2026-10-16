@@ -292,15 +292,22 @@ fn health(repo: &Repo, now: Timestamp) -> Result<Value> {
     let markets = newest_raw(&repo.raw_markets_dir())?;
     let news = newest_raw(&repo.raw_news_dir())?;
     let attention = newest_raw(&repo.raw_attention_dir())?;
+    let news_volume = newest_raw(&repo.raw_gdelt_dir())?;
     let grok_drop = newest_raw(&repo.raw_grok_dir())?;
     let event = events::read_clean_rows(repo).ok().and_then(|rows| rows.last().cloned());
     let field = |doc: &Option<Value>, key: &str| doc.as_ref().and_then(|d| d[key].as_str().map(String::from));
     // name, last update, warn after this many hours (None: never), expected cadence
-    let sources: [(&str, Option<String>, Option<i64>, Cadence); 6] = [
+    let sources: [(&str, Option<String>, Option<i64>, Cadence); 7] = [
         ("polls", last_poll, None, Cadence::OnPublication),
         ("markets", field(&markets, "fetched_at"), Some(3), Cadence::Hourly),
         ("news", field(&news, "fetched_at"), Some(3), Cadence::Hourly),
         ("attention", field(&attention, "fetched_at"), Some(50), Cadence::Daily),
+        (
+            "news_volume",
+            field(&news_volume, "fetched_at"),
+            Some(50),
+            Cadence::Daily,
+        ),
         ("x", field(&grok_drop, "collected_at"), Some(48), Cadence::Every12Hours),
         ("events", event.map(|e| e.reported_at), None, Cadence::Every12Hours),
     ];
@@ -315,7 +322,7 @@ fn health(repo: &Repo, now: Timestamp) -> Result<Value> {
     }
 
     let mut quarantine = serde_json::Map::new();
-    for area in ["polls", "grok", "markets", "news", "attention", "events"] {
+    for area in ["polls", "grok", "markets", "news", "attention", "gdelt", "events"] {
         let files: Vec<String> = std::fs::read_dir(repo.quarantine_dir().join(area))
             .map(|entries| {
                 let mut files: Vec<String> = entries

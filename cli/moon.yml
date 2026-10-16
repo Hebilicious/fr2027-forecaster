@@ -118,6 +118,15 @@ tasks:
       cache: false
       runInCI: false
 
+  collect-gdelt:
+    description: "Record the last two weeks of GDELT article counts per candidate into data/raw/gdelt/<date>.json (once a day)."
+    command: "$workspaceRoot/target/release/fr2027"
+    args: ["collect", "gdelt"]
+    deps: ["build"]
+    options:
+      cache: false
+      runInCI: false
+
   export:
     description: "Write the public site to .site/: the built UI plus api/*.json (refuses during a publication blackout)."
     command: "$workspaceRoot/target/release/fr2027"

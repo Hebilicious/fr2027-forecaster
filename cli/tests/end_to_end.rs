@@ -295,7 +295,7 @@ fn export_writes_the_site_and_respects_the_blackout() {
         .iter()
         .map(|c| c["cadence"].as_str().unwrap())
         .collect();
-    assert_eq!(cadences, ["on_publication", "hourly", "hourly", "daily", "12h", "12h"]);
+    assert_eq!(cadences, ["on_publication", "hourly", "hourly", "daily", "daily", "12h", "12h"]);
 
     // Inside a publication blackout nothing is built, and the exit code says so.
     fs::remove_dir_all(&site).unwrap();

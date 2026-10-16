@@ -15,13 +15,14 @@ pub enum SchemaKind {
     Markets,
     News,
     Attention,
+    Gdelt,
     Event,
     PollCheck,
     FieldChange,
 }
 
 impl SchemaKind {
-    pub const ALL: [SchemaKind; 12] = [
+    pub const ALL: [SchemaKind; 13] = [
         SchemaKind::Candidates,
         SchemaKind::Poll,
         SchemaKind::GrokDrop,
@@ -31,6 +32,7 @@ impl SchemaKind {
         SchemaKind::Markets,
         SchemaKind::News,
         SchemaKind::Attention,
+        SchemaKind::Gdelt,
         SchemaKind::Event,
         SchemaKind::PollCheck,
         SchemaKind::FieldChange,
@@ -47,6 +49,7 @@ impl SchemaKind {
             SchemaKind::Markets => "markets.schema.json",
             SchemaKind::News => "news.schema.json",
             SchemaKind::Attention => "attention.schema.json",
+            SchemaKind::Gdelt => "gdelt.schema.json",
             SchemaKind::Event => "event.schema.json",
             SchemaKind::PollCheck => "poll_check.schema.json",
             SchemaKind::FieldChange => "field_change.schema.json",

@@ -10,6 +10,7 @@
 //! - [`score`]: Brier score, log-loss, log scores of realised shares, reliability.
 //! - [`baseline`]: the latest-poll average.
 //! - [`final_polls`]: final-week poll errors of earlier elections, as extra evidence.
+//! - [`signals`]: page views and news volume of each past election.
 //! - [`report`]: the whole run: scores before and after the fit, its stages, the cross-checks.
 
 pub mod baseline;
@@ -19,6 +20,7 @@ pub mod final_polls;
 pub mod replay;
 pub mod report;
 pub mod score;
+pub mod signals;
 
 use std::path::PathBuf;
 

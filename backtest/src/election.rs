@@ -1,5 +1,6 @@
 //! One past election: the field (`<dir>/candidates.yaml`), the polls (`<dir>/polls.csv`, in the
-//! clean poll file's columns) and the official result.
+//! clean poll file's columns), the page views and news volume ([`crate::signals`]) and the
+//! official result.
 
 use std::collections::BTreeSet;
 use std::path::Path;
@@ -9,7 +10,7 @@ use fr2027_model::{Field, Poll};
 use jiff::civil::Date;
 use serde::Deserialize;
 
-use crate::{Error, Result, config::ElectionEntry};
+use crate::{Error, Result, config::ElectionEntry, signals::ElectionSignals};
 
 #[derive(Clone, Debug)]
 pub struct Election {
@@ -19,6 +20,7 @@ pub struct Election {
     pub config: CandidatesConfig,
     pub field: Field,
     pub polls: Vec<Poll>,
+    pub signals: ElectionSignals,
     /// Who was on the round 1 ballot, by candidate index.
     pub ran: Vec<bool>,
     /// Round 1 result as fractions of expressed votes, by candidate index (0 for non-runners).
@@ -76,6 +78,8 @@ pub fn load(repo: &Repo, schemas: &Schemas, entry: &ElectionEntry, results_file:
             }
         }
     }
+
+    let signals = crate::signals::load(&dir, &|id| known.contains(id))?;
 
     let results_path = repo.root().join(results_file);
     let bytes = std::fs::read(&results_path).map_err(|e| Error::invalid(&results_path, e.to_string()))?;
@@ -146,6 +150,7 @@ pub fn load(repo: &Repo, schemas: &Schemas, entry: &ElectionEntry, results_file:
         config,
         field,
         polls,
+        signals,
         ran,
         round1_result,
         finalists: (i.min(j), i.max(j)),
