@@ -207,6 +207,8 @@ mod tests {
             student_t_df: 5.0,
             bloc_sd: sd,
             candidate_sd: sd,
+            horizon_bloc_sd: 0.0,
+            horizon_candidate_sd: 0.0,
         };
         let exact = election();
         let small = round1_log_score(&exact, 3, &error(0.03), 5000, 1, 0.05);

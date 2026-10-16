@@ -31,12 +31,11 @@ pub struct Report {
     pub baseline: SettingScores,
     pub current_scores: SettingScores,
     pub fitted_scores: SettingScores,
-    /// The current setting's evidence, which a grid point must match on every source.
-    pub round1_reference: Evidence,
-    pub round1_grid: Vec<Round1GridPoint>,
-    /// The current round 2 error, with round 1 at its fitted values.
-    pub round2_reference: Evidence,
-    pub round2_grid: Vec<Round2GridPoint>,
+    /// The steps of the fit, in order, over every pass; each starts from the setting the
+    /// previous one chose.
+    pub stages: Vec<Stage>,
+    /// Passes of the three stages run until one changed nothing (or `max_passes`).
+    pub passes: usize,
     pub leave_one_out: Vec<LeaveOneOut>,
     pub final_polls_round2: Vec<Round2Election>,
 }
@@ -69,11 +68,79 @@ pub struct ReplayInfo {
     pub not_yet_polled: Vec<String>,
 }
 
+/// The error settings the backtest fits: `round1_error` and the round 2 errors of
+/// config/model.yaml.
 #[derive(Clone, Copy, Debug, Serialize, PartialEq)]
 pub struct Setting {
     pub bloc_sd: f64,
     pub candidate_sd: f64,
+    pub horizon_bloc_sd: f64,
+    pub horizon_candidate_sd: f64,
+    pub student_t_df: f64,
     pub round2_error_sd: f64,
+    pub round2_horizon_error_sd: f64,
+}
+
+/// A parameter of [`Setting`] that a stage of the fit varies.
+#[derive(Clone, Copy, Debug, Serialize, PartialEq)]
+pub enum Param {
+    BlocSd,
+    CandidateSd,
+    HorizonBlocSd,
+    HorizonCandidateSd,
+    StudentTDf,
+    Round2ErrorSd,
+    Round2HorizonErrorSd,
+}
+
+impl Param {
+    /// The parameter's name in config/model.yaml.
+    pub fn name(self) -> &'static str {
+        match self {
+            Param::BlocSd => "round1_error.bloc_sd",
+            Param::CandidateSd => "round1_error.candidate_sd",
+            Param::HorizonBlocSd => "round1_error.horizon_bloc_sd",
+            Param::HorizonCandidateSd => "round1_error.horizon_candidate_sd",
+            Param::StudentTDf => "round1_error.student_t_df",
+            Param::Round2ErrorSd => "round2.error_sd",
+            Param::Round2HorizonErrorSd => "round2.horizon_error_sd",
+        }
+    }
+
+    pub fn get(self, s: &Setting) -> f64 {
+        match self {
+            Param::BlocSd => s.bloc_sd,
+            Param::CandidateSd => s.candidate_sd,
+            Param::HorizonBlocSd => s.horizon_bloc_sd,
+            Param::HorizonCandidateSd => s.horizon_candidate_sd,
+            Param::StudentTDf => s.student_t_df,
+            Param::Round2ErrorSd => s.round2_error_sd,
+            Param::Round2HorizonErrorSd => s.round2_horizon_error_sd,
+        }
+    }
+
+    fn set(self, s: &mut Setting, value: f64) {
+        let field = match self {
+            Param::BlocSd => &mut s.bloc_sd,
+            Param::CandidateSd => &mut s.candidate_sd,
+            Param::HorizonBlocSd => &mut s.horizon_bloc_sd,
+            Param::HorizonCandidateSd => &mut s.horizon_candidate_sd,
+            Param::StudentTDf => &mut s.student_t_df,
+            Param::Round2ErrorSd => &mut s.round2_error_sd,
+            Param::Round2HorizonErrorSd => &mut s.round2_horizon_error_sd,
+        };
+        *field = value;
+    }
+
+    pub const ALL: [Param; 7] = [
+        Param::BlocSd,
+        Param::CandidateSd,
+        Param::HorizonBlocSd,
+        Param::HorizonCandidateSd,
+        Param::StudentTDf,
+        Param::Round2ErrorSd,
+        Param::Round2HorizonErrorSd,
+    ];
 }
 
 #[derive(Clone, Debug, Serialize)]
@@ -121,70 +188,77 @@ impl Evidence {
     }
 }
 
-/// The fit's rule: among the grid points that score at least as well as the current setting on
-/// every source of evidence, the one with the highest total. None when no point does, which
-/// keeps the current setting. A value that one election favours and another disfavours is not
-/// adopted.
-fn choose<'a, T>(
-    grid: &'a [T],
-    evidence: impl Fn(&T) -> &Evidence,
-    reference: &Evidence,
-    without: Option<i16>,
-) -> Option<&'a T> {
+/// The fit's rule: among the grid points that score at least as well as the stage's starting
+/// setting on every source of evidence, the one with the highest total. None when no point
+/// does, which keeps the starting setting. A value that one election favours and another
+/// disfavours is not adopted.
+fn choose<'a>(grid: &'a [GridPoint], reference: &Evidence, without: Option<i16>) -> Option<&'a GridPoint> {
     grid.iter()
-        .filter(|p| evidence(p).at_least(reference, without))
-        .max_by(|a, b| evidence(a).total(without).total_cmp(&evidence(b).total(without)))
+        .filter(|p| p.evidence.at_least(reference, without))
+        .max_by(|a, b| a.evidence.total(without).total_cmp(&b.evidence.total(without)))
+}
+
+/// One step of the fit: every combination of a few parameters' grids, the others held at the
+/// step's starting setting, scored on one round's evidence.
+#[derive(Clone, Debug, Serialize)]
+pub struct Stage {
+    pub title: &'static str,
+    pub pass: usize,
+    /// 1 for round 1 shares, 2 for the realised runoff share.
+    pub round: u8,
+    pub params: Vec<Param>,
+    /// The setting the step starts from, and its evidence: a point must match it on every source.
+    pub start: Setting,
+    pub reference: Evidence,
+    pub grid: Vec<GridPoint>,
+    /// The chosen point's setting, or the start if no point qualifies.
+    pub chosen: Setting,
 }
 
 #[derive(Clone, Debug, Serialize)]
-pub struct Round1GridPoint {
-    pub bloc_sd: f64,
-    pub candidate_sd: f64,
-    /// Contenders' share log scores.
+pub struct GridPoint {
+    pub setting: Setting,
     pub evidence: Evidence,
     pub total: f64,
-    /// Scores at least as well as the current setting on every source.
-    pub beats_current: bool,
+    /// Scores at least as well as the stage's start on every source.
+    pub beats_start: bool,
     pub chosen: bool,
     pub qualify_log_loss: f64,
-}
-
-#[derive(Clone, Debug, Serialize)]
-pub struct Round2GridPoint {
-    pub error_sd: f64,
-    /// Log scores of the realised runoff share.
-    pub evidence: Evidence,
-    pub total: f64,
-    pub beats_current: bool,
-    pub chosen: bool,
     pub p_winner_given_matchup: f64,
 }
 
-/// The fit's rule applied without one election's replays, then that election's replays scored.
+/// The whole fit rerun without one election's replays, then that election's replays scored at
+/// the setting it gives and at the current one.
 #[derive(Clone, Debug, Serialize)]
 pub struct LeaveOneOut {
     pub held_out: i16,
-    pub bloc_sd: f64,
-    pub candidate_sd: f64,
-    pub round2_error_sd: f64,
+    pub chosen: Setting,
+    pub passes: usize,
     /// The held-out election's share log score at the setting chosen without it, and at the
     /// current setting.
     pub round1_held_out: f64,
     pub round1_held_out_current: f64,
-    /// The same for the round 2 log score (round 1 at its fitted values in both).
+    /// The same for its round 2 log score.
     pub round2_held_out: f64,
     pub round2_held_out_current: f64,
 }
 
 fn with_errors(params: &ModelParams, setting: Setting) -> ModelParams {
     let mut params = params.clone();
-    params.round1_error = ErrorParams {
+    params.round1_error = error_params(setting);
+    params.round2.error_sd = setting.round2_error_sd;
+    params.round2.horizon_error_sd = setting.round2_horizon_error_sd;
+    params
+}
+
+fn error_params(setting: Setting) -> ErrorParams {
+    ErrorParams {
+        student_t_df: setting.student_t_df,
         bloc_sd: setting.bloc_sd,
         candidate_sd: setting.candidate_sd,
-        ..params.round1_error
-    };
-    params.round2.error_sd = setting.round2_error_sd;
-    params
+        horizon_bloc_sd: setting.horizon_bloc_sd,
+        horizon_candidate_sd: setting.horizon_candidate_sd,
+    }
 }
 
 /// Scores every replay under each setting, one thread per replay.
@@ -246,45 +320,207 @@ fn setting_scores(
     }
 }
 
-fn round1_final_polls(
-    elections: &[Round1Election],
-    blocs: usize,
-    params: &ModelParams,
-    setting: Setting,
-    config: &BacktestConfig,
-) -> f64 {
-    let error = ErrorParams {
-        bloc_sd: setting.bloc_sd,
-        candidate_sd: setting.candidate_sd,
-        ..params.round1_error
-    };
-    elections
-        .iter()
-        .map(|e| {
-            final_polls::round1_log_score(
-                e,
-                blocs,
-                &error,
-                config.simulations,
-                config.seed,
-                config.contender_share,
-            )
-        })
-        .sum()
-}
-
-fn round2_final_polls(elections: &[Round2Election], error_sd: f64, df: f64) -> f64 {
-    elections
-        .iter()
-        .map(|e| final_polls::round2_log_score(e, error_sd, df))
-        .sum()
-}
-
 fn argmax<T>(items: &[T], key: impl Fn(&T) -> f64) -> &T {
     items
         .iter()
         .max_by(|a, b| key(a).total_cmp(&key(b)))
         .expect("non-empty grid")
+}
+
+/// The three stages of a pass: round 1's horizon error and tails, then its election-day error,
+/// then round 2's two errors.
+const STAGES: [(&str, u8, [Option<Param>; 3]); 3] = [
+    (
+        "Round 1 horizon error and tails",
+        1,
+        [
+            Some(Param::HorizonBlocSd),
+            Some(Param::HorizonCandidateSd),
+            Some(Param::StudentTDf),
+        ],
+    ),
+    (
+        "Round 1 election-day error",
+        1,
+        [Some(Param::BlocSd), Some(Param::CandidateSd), None],
+    ),
+    (
+        "Round 2 errors",
+        2,
+        [Some(Param::Round2ErrorSd), Some(Param::Round2HorizonErrorSd), None],
+    ),
+];
+
+/// Scores settings against every source of evidence, remembering each setting's replay scores
+/// so that later passes and the leave-one-out fits reuse them.
+struct Fitter<'a> {
+    elections: &'a [Election],
+    replays: &'a [Replay],
+    years: Vec<i16>,
+    final_round1: Vec<Round1Election>,
+    final_round2: Vec<Round2Election>,
+    blocs: usize,
+    /// Round 2's Student-t degrees of freedom, which the fit does not vary.
+    round2_df: f64,
+    config: &'a BacktestConfig,
+    scored: BTreeMap<[u64; 7], Vec<ReplayScore>>,
+}
+
+fn key(setting: &Setting) -> [u64; 7] {
+    Param::ALL.map(|p| p.get(setting).to_bits())
+}
+
+impl Fitter<'_> {
+    /// The final-week polls are taken as election-eve polls: they carry no horizon error.
+    fn final_polls(&self, round: u8, setting: Setting) -> f64 {
+        let c = self.config;
+        if round == 1 {
+            let error = error_params(setting);
+            self.final_round1
+                .iter()
+                .map(|e| final_polls::round1_log_score(e, self.blocs, &error, c.simulations, c.seed, c.contender_share))
+                .sum()
+        } else {
+            self.final_round2
+                .iter()
+                .map(|e| final_polls::round2_log_score(e, setting.round2_error_sd, self.round2_df))
+                .sum()
+        }
+    }
+
+    /// Scores the settings not scored yet, in parallel.
+    fn score(&mut self, settings: &[Setting]) -> Result<()> {
+        let mut missing: Vec<Setting> = Vec::new();
+        for setting in settings {
+            if !self.scored.contains_key(&key(setting)) && !missing.iter().any(|m| key(m) == key(setting)) {
+                missing.push(*setting);
+            }
+        }
+        if !missing.is_empty() {
+            let scores = evaluate_all(self.elections, self.replays, &missing)?;
+            for (setting, scores) in missing.iter().zip(scores) {
+                self.scored.insert(key(setting), scores);
+            }
+        }
+        Ok(())
+    }
+
+    fn replay_scores(&self, setting: &Setting) -> &[ReplayScore] {
+        &self.scored[&key(setting)]
+    }
+
+    fn evidence(&self, round: u8, setting: Setting) -> Evidence {
+        let mut by_year: BTreeMap<i16, f64> = self.years.iter().map(|y| (*y, 0.0)).collect();
+        let mut by_horizon = BTreeMap::new();
+        for s in self.replay_scores(&setting) {
+            let value = if round == 1 {
+                s.share_log_score()
+            } else {
+                s.round2.log_score.unwrap_or(0.0)
+            };
+            *by_year.entry(s.year).or_insert(0.0) += value;
+            *by_horizon.entry(s.horizon_days).or_insert(0.0) += value;
+        }
+        Evidence {
+            by_year,
+            by_horizon,
+            final_polls: self.final_polls(round, setting),
+        }
+    }
+
+    /// Every combination of the stage's parameter grids around `start`, scored, and the rule
+    /// applied without the replays of `without`.
+    fn stage(
+        &mut self,
+        (title, round, params): (&'static str, u8, [Option<Param>; 3]),
+        pass: usize,
+        start: Setting,
+        without: Option<i16>,
+    ) -> Result<Stage> {
+        let params: Vec<Param> = params.into_iter().flatten().collect();
+        let mut settings = vec![start];
+        for param in &params {
+            let values = self.config.grid.values(*param);
+            settings = settings
+                .iter()
+                .flat_map(|s| {
+                    values.iter().map(move |v| {
+                        let mut s = *s;
+                        param.set(&mut s, *v);
+                        s
+                    })
+                })
+                .collect();
+        }
+        let mut all = settings.clone();
+        all.push(start);
+        self.score(&all)?;
+        let reference = self.evidence(round, start);
+        let floor = self.config.probability_floor;
+        let mut grid: Vec<GridPoint> = settings
+            .iter()
+            .map(|setting| {
+                let evidence = self.evidence(round, *setting);
+                let summary = score::summarise(self.replay_scores(setting), floor);
+                GridPoint {
+                    setting: *setting,
+                    total: evidence.total(without),
+                    beats_start: evidence.at_least(&reference, without),
+                    chosen: false,
+                    qualify_log_loss: summary.qualify_log_loss,
+                    p_winner_given_matchup: summary.p_winner_given_matchup,
+                    evidence,
+                }
+            })
+            .collect();
+        let chosen = match choose(&grid, &reference, without).map(|p| p.setting) {
+            Some(setting) => {
+                for point in &mut grid {
+                    point.chosen = point.setting == setting;
+                }
+                setting
+            }
+            None => start,
+        };
+        Ok(Stage {
+            title,
+            pass,
+            round,
+            params,
+            start,
+            reference,
+            grid,
+            chosen,
+        })
+    }
+
+    /// Passes of the three stages from `start` until a pass changes nothing, or `max_passes`.
+    fn fit(
+        &mut self,
+        start: Setting,
+        without: Option<i16>,
+        progress: &mut dyn FnMut(&str),
+    ) -> Result<(Vec<Stage>, usize)> {
+        let mut stages = Vec::new();
+        let mut setting = start;
+        for pass in 1..=self.config.max_passes {
+            let before = setting;
+            for definition in STAGES {
+                let stage = self.stage(definition, pass, setting, without)?;
+                setting = stage.chosen;
+                stages.push(stage);
+            }
+            progress(&format!(
+                "fit{}: pass {pass} done, {} settings scored so far",
+                without.map_or(String::new(), |y| format!(" without {y}")),
+                self.scored.len()
+            ));
+            if setting == before {
+                return Ok((stages, pass));
+            }
+        }
+        Ok((stages, self.config.max_passes))
+    }
 }
 
 /// Runs the backtest on the repository's data and settings; `simulations` overrides the number
@@ -297,15 +533,12 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
     let model = load_model_params(repo)?;
     let schemas = Schemas::load(repo)?;
     let floor = config.probability_floor;
-    let df = model.round1_error.student_t_df;
 
     let mut elections = Vec::new();
     for entry in &config.elections {
         elections.push(election::load(repo, &schemas, entry, &config.results_file)?);
     }
     let blocs = elections[0].field.blocs.clone();
-    let final_round1 = final_polls::load_round1(repo, &config, &blocs)?;
-    let final_round2 = final_polls::load_round2(repo, &config)?;
 
     let mut replays = Vec::new();
     for election in &elections {
@@ -322,144 +555,41 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
     let current = Setting {
         bloc_sd: model.round1_error.bloc_sd,
         candidate_sd: model.round1_error.candidate_sd,
+        horizon_bloc_sd: model.round1_error.horizon_bloc_sd,
+        horizon_candidate_sd: model.round1_error.horizon_candidate_sd,
+        student_t_df: model.round1_error.student_t_df,
         round2_error_sd: model.round2.error_sd,
+        round2_horizon_error_sd: model.round2.horizon_error_sd,
     };
-    let years: Vec<i16> = elections.iter().map(|e| e.year).collect();
-
-    // Round 1: every (bloc_sd, candidate_sd) on the grid with round 2 at its current error, and
-    // the current setting itself as the reference.
-    let mut round1_settings: Vec<Setting> = config
-        .grid
-        .bloc_sd
-        .iter()
-        .flat_map(|b| {
-            config.grid.candidate_sd.iter().map(move |c| Setting {
-                bloc_sd: *b,
-                candidate_sd: *c,
-                round2_error_sd: current.round2_error_sd,
-            })
-        })
-        .collect();
-    round1_settings.push(current);
-    progress(&format!("round 1 grid: {} settings", round1_settings.len() - 1));
-    let mut round1_scores = evaluate_all(&elections, &replays, &round1_settings)?;
-    let current_replays = round1_scores.pop().expect("the reference setting");
-    round1_settings.pop();
-    let round1_evidence = |setting: Setting, scores: &[ReplayScore]| -> Evidence {
-        let mut by_year: BTreeMap<i16, f64> = years.iter().map(|y| (*y, 0.0)).collect();
-        let mut by_horizon = BTreeMap::new();
-        for s in scores {
-            *by_year.entry(s.year).or_insert(0.0) += s.share_log_score();
-            *by_horizon.entry(s.horizon_days).or_insert(0.0) += s.share_log_score();
-        }
-        Evidence {
-            by_year,
-            by_horizon,
-            final_polls: round1_final_polls(&final_round1, blocs.len(), &model, setting, &config),
-        }
-    };
-    let round1_reference = round1_evidence(current, &current_replays);
-    let mut round1_grid: Vec<Round1GridPoint> = round1_settings
-        .iter()
-        .zip(&round1_scores)
-        .map(|(setting, scores)| {
-            let evidence = round1_evidence(*setting, scores);
-            Round1GridPoint {
-                bloc_sd: setting.bloc_sd,
-                candidate_sd: setting.candidate_sd,
-                total: evidence.total(None),
-                beats_current: evidence.at_least(&round1_reference, None),
-                chosen: false,
-                qualify_log_loss: score::summarise(scores, floor).qualify_log_loss,
-                evidence,
-            }
-        })
-        .collect();
-    let chosen1 = choose(&round1_grid, |p| &p.evidence, &round1_reference, None);
-    let (bloc_sd, candidate_sd) =
-        chosen1.map_or((current.bloc_sd, current.candidate_sd), |p| (p.bloc_sd, p.candidate_sd));
-    for point in &mut round1_grid {
-        point.chosen = point.bloc_sd == bloc_sd && point.candidate_sd == candidate_sd;
-    }
-
-    // Round 2: the error_sd grid with round 1 at its chosen values, and the current round 2 error
-    // (with the same round 1) as the reference.
-    let mut round2_settings: Vec<Setting> = config
-        .grid
-        .round2_error_sd
-        .iter()
-        .map(|sd| Setting {
-            bloc_sd,
-            candidate_sd,
-            round2_error_sd: *sd,
-        })
-        .collect();
-    round2_settings.push(Setting {
-        bloc_sd,
-        candidate_sd,
-        round2_error_sd: current.round2_error_sd,
-    });
-    progress(&format!("round 2 grid: {} settings", round2_settings.len() - 1));
-    let mut round2_scores = evaluate_all(&elections, &replays, &round2_settings)?;
-    let round2_reference_replays = round2_scores.pop().expect("the reference setting");
-    round2_settings.pop();
-    let round2_evidence = |error_sd: f64, scores: &[ReplayScore]| -> Evidence {
-        let mut by_year: BTreeMap<i16, f64> = years.iter().map(|y| (*y, 0.0)).collect();
-        let mut by_horizon = BTreeMap::new();
-        for s in scores {
-            let value = s.round2.log_score.unwrap_or(0.0);
-            *by_year.entry(s.year).or_insert(0.0) += value;
-            *by_horizon.entry(s.horizon_days).or_insert(0.0) += value;
-        }
-        Evidence {
-            by_year,
-            by_horizon,
-            final_polls: round2_final_polls(&final_round2, error_sd, df),
-        }
-    };
-    let round2_reference = round2_evidence(current.round2_error_sd, &round2_reference_replays);
-    let mut round2_grid: Vec<Round2GridPoint> = round2_settings
-        .iter()
-        .zip(&round2_scores)
-        .map(|(setting, scores)| {
-            let evidence = round2_evidence(setting.round2_error_sd, scores);
-            Round2GridPoint {
-                error_sd: setting.round2_error_sd,
-                total: evidence.total(None),
-                beats_current: evidence.at_least(&round2_reference, None),
-                p_winner_given_matchup: score::summarise(scores, floor).p_winner_given_matchup,
-                evidence,
-                chosen: false,
-            }
-        })
-        .collect();
-    let chosen2 = choose(&round2_grid, |p| &p.evidence, &round2_reference, None);
-    let round2_error_sd = chosen2.map_or(current.round2_error_sd, |p| p.error_sd);
-    for point in &mut round2_grid {
-        point.chosen = point.error_sd == round2_error_sd;
-    }
-    let fitted = Setting {
-        bloc_sd,
-        candidate_sd,
-        round2_error_sd,
+    let mut fitter = Fitter {
+        elections: &elections,
+        replays: &replays,
+        years: elections.iter().map(|e| e.year).collect(),
+        final_round1: final_polls::load_round1(repo, &config, &blocs)?,
+        final_round2: final_polls::load_round2(repo, &config)?,
+        blocs: blocs.len(),
+        round2_df: model.round2.student_t_df,
+        config: &config,
+        scored: BTreeMap::new(),
     };
 
-    // The fitted setting was scored in the round 2 grid unless nothing beat the current one.
-    let fitted_replays = match round2_settings.iter().position(|s| *s == fitted) {
-        Some(i) => round2_scores.swap_remove(i),
-        None => round2_reference_replays,
-    };
+    // Coordinate ascent: each stage varies a few parameters with the others held where the
+    // previous stage left them, and every stage keeps or improves every source of evidence, so
+    // the fitted setting scores at least as well as the current one on all of them.
+    let (stages, passes) = fitter.fit(current, None, progress)?;
+    let fitted = stages.last().map_or(current, |s| s.chosen);
+
     let current_scores = setting_scores(
-        current_replays,
+        fitter.replay_scores(&current).to_vec(),
         floor,
-        Some(round1_reference.final_polls),
-        Some(round2_final_polls(&final_round2, current.round2_error_sd, df)),
+        Some(fitter.final_polls(1, current)),
+        Some(fitter.final_polls(2, current)),
     );
     let fitted_scores = setting_scores(
-        fitted_replays,
+        fitter.replay_scores(&fitted).to_vec(),
         floor,
-        Some(round1_final_polls(&final_round1, blocs.len(), &model, fitted, &config)),
-        Some(round2_final_polls(&final_round2, fitted.round2_error_sd, df)),
+        Some(fitter.final_polls(1, fitted)),
+        Some(fitter.final_polls(2, fitted)),
     );
     let baseline_scores = setting_scores(
         replays
@@ -475,25 +605,23 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
         None,
     );
 
-    // Leave one election out: the same rule without that election's replays, then that
+    // Leave one election out: the whole fit again without that election's replays, then that
     // election's replays scored at the setting it gives.
-    let leave_one_out = years
-        .iter()
-        .map(|&year| {
-            let r1 = choose(&round1_grid, |p| &p.evidence, &round1_reference, Some(year));
-            let r2 = choose(&round2_grid, |p| &p.evidence, &round2_reference, Some(year));
-            LeaveOneOut {
-                held_out: year,
-                bloc_sd: r1.map_or(current.bloc_sd, |p| p.bloc_sd),
-                candidate_sd: r1.map_or(current.candidate_sd, |p| p.candidate_sd),
-                round2_error_sd: r2.map_or(current.round2_error_sd, |p| p.error_sd),
-                round1_held_out: r1.map_or(round1_reference.by_year[&year], |p| p.evidence.by_year[&year]),
-                round1_held_out_current: round1_reference.by_year[&year],
-                round2_held_out: r2.map_or(round2_reference.by_year[&year], |p| p.evidence.by_year[&year]),
-                round2_held_out_current: round2_reference.by_year[&year],
-            }
-        })
-        .collect();
+    let mut leave_one_out = Vec::new();
+    for year in fitter.years.clone() {
+        let (held_stages, held_passes) = fitter.fit(current, Some(year), progress)?;
+        let chosen = held_stages.last().map_or(current, |s| s.chosen);
+        let score = |round: u8, setting: Setting| fitter.evidence(round, setting).by_year[&year];
+        leave_one_out.push(LeaveOneOut {
+            held_out: year,
+            chosen,
+            passes: held_passes,
+            round1_held_out: score(1, chosen),
+            round1_held_out_current: score(1, current),
+            round2_held_out: score(2, chosen),
+            round2_held_out_current: score(2, current),
+        });
+    }
 
     let election_info = elections
         .iter()
@@ -535,9 +663,10 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
             }
         })
         .collect();
+    let final_polls_round2 = fitter.final_round2.clone();
 
     Ok(Report {
-        schema_version: "1.0",
+        schema_version: "2.0",
         model_version: model.model_version.clone(),
         config,
         elections: election_info,
@@ -547,12 +676,10 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
         baseline: baseline_scores,
         current_scores,
         fitted_scores,
-        round1_reference,
-        round1_grid,
-        round2_reference,
-        round2_grid,
+        stages,
+        passes,
         leave_one_out,
-        final_polls_round2: final_round2,
+        final_polls_round2,
     })
 }
 
@@ -572,16 +699,6 @@ fn num(x: f64, digits: usize) -> String {
         "–".into()
     } else {
         format!("{x:.digits$}")
-    }
-}
-
-/// "2002, 2007 and 2012".
-fn year_list(years: &[i16]) -> String {
-    let names: Vec<String> = years.iter().map(i16::to_string).collect();
-    match names.split_last() {
-        None => "none".into(),
-        Some((last, [])) => last.clone(),
-        Some((last, rest)) => format!("{} and {last}", rest.join(", ")),
     }
 }
 
@@ -627,17 +744,20 @@ impl Report {
         let _ = writeln!(out, "## Settings\n");
         let _ = writeln!(
             out,
-            "| | round1_error.bloc_sd | round1_error.candidate_sd | round2.error_sd |\n|---|---|---|---|"
+            "Horizon errors are per square root of 30 days before the round; they add in variance to the election-day error.\n"
         );
-        for (label, s) in [("Current (config/model.yaml)", self.current), ("Fitted", self.fitted)] {
+        let _ = writeln!(out, "| | Current (config/model.yaml) | Fitted |\n|---|---|---|");
+        for param in Param::ALL {
             let _ = writeln!(
                 out,
-                "| {label} | {} | {} | {} |",
-                s.bloc_sd, s.candidate_sd, s.round2_error_sd
+                "| {} | {} | {} |",
+                param.name(),
+                param.get(&self.current),
+                param.get(&self.fitted)
             );
         }
 
-        let _ = writeln!(out, "\n## Scores\n\nAll replays (every election, every horizon):\n");
+        let _ = writeln!(out, "## Scores\n\nAll replays (every election, every horizon):\n");
         let _ = writeln!(out, "{SUMMARY_HEADER}");
         let _ = writeln!(out, "{}", summary_row("Latest-poll average", &self.baseline.overall));
         let _ = writeln!(out, "{}", summary_row("Model, current", &self.current_scores.overall));
@@ -708,104 +828,11 @@ impl Report {
 
         let _ = writeln!(
             out,
-            "\n## Fit\n\nThe rule: among the grid points that score at least as well as the current setting on every source of evidence (each election's replays, and the final-week polls of other elections: {final_years}), take the one with the highest total log score; if none does, keep the current value. Round 1 first, with round 2 at its current error; then round 2, with round 1 at its fitted values.\n"
+            "\n## Fit\n\nThe rule, in each stage: among the grid points that score at least as well as the stage's starting setting on every source of evidence (each election's replays, and the final-week polls of other elections: {final_years}), take the one with the highest total log score; if none does, keep the starting setting. The first stage starts from config/model.yaml and each later one from the setting the previous one chose; the three stages repeat until a pass changes nothing ({} passes here, at most {}). Every stage keeps or improves every source, so the fitted setting scores at least as well as the current one on all of them. Round 1 stages score contenders' shares; the round 2 stage scores the realised runoff share given the actual matchup. Final-week polls are taken as election-eve polls, with no horizon error.\n",
+            self.passes, c.max_passes
         );
-        let _ = writeln!(
-            out,
-            "| Round 1 evidence (share log score) | Current | Fitted | Best on this source alone |\n|---|---|---|---|"
-        );
-        let fitted_point = self.round1_grid.iter().find(|p| p.chosen);
-        let mut sources: Vec<EvidenceSource> = Vec::new();
-        for e in &self.elections {
-            let year = e.year;
-            sources.push((
-                format!("{year} replays"),
-                Box::new(move |v: &Evidence| v.by_year[&year]),
-            ));
-        }
-        for h in &c.horizons_days {
-            let h = *h;
-            sources.push((
-                format!("{h}-day replays, every election (not used)"),
-                Box::new(move |v: &Evidence| v.by_horizon[&h]),
-            ));
-        }
-        sources.push((
-            format!("Final-week polls ({final_years})"),
-            Box::new(|v: &Evidence| v.final_polls),
-        ));
-        sources.push(("Total".into(), Box::new(|v: &Evidence| v.total(None))));
-        for (label, key) in &sources {
-            let best = argmax(&self.round1_grid, |p| key(&p.evidence));
-            let _ = writeln!(
-                out,
-                "| {label} | {} | {} | {} (bloc_sd {}, candidate_sd {}) |",
-                num(key(&self.round1_reference), 1),
-                fitted_point.map_or("–".into(), |p| num(key(&p.evidence), 1)),
-                num(key(&best.evidence), 1),
-                best.bloc_sd,
-                best.candidate_sd
-            );
-        }
-
-        let _ = writeln!(
-            out,
-            "\nRound 1 grid: total log score by `bloc_sd` (rows) and `candidate_sd` (columns). `*` marks the points that score at least as well as the current setting on every source; bold is the fitted one.\n"
-        );
-        let _ = write!(out, "| bloc_sd \\ candidate_sd |");
-        for sd in &c.grid.candidate_sd {
-            let _ = write!(out, " {sd} |");
-        }
-        let _ = writeln!(out, "\n|---|{}", "---|".repeat(c.grid.candidate_sd.len()));
-        for bloc in &c.grid.bloc_sd {
-            let _ = write!(out, "| {bloc} |");
-            for point in self.round1_grid.iter().filter(|p| p.bloc_sd == *bloc) {
-                let value = format!("{}{}", num(point.total, 1), if point.beats_current { "*" } else { "" });
-                let _ = write!(out, " {} |", if point.chosen { format!("**{value}**") } else { value });
-            }
-            let _ = writeln!(out);
-        }
-
-        let _ = writeln!(
-            out,
-            "\nRound 2 grid, with round 1 at its fitted values: log score of the realised runoff share (the logit of the first finalist's share), given the actual matchup. Current error_sd {}: replays {}, final-week polls {}.\n",
-            self.current.round2_error_sd,
-            self.round2_reference
-                .by_year
-                .iter()
-                .map(|(year, score)| format!("{year} {}", num(*score, 2)))
-                .collect::<Vec<_>>()
-                .join(", "),
-            num(self.round2_reference.final_polls, 2)
-        );
-        let _ = write!(out, "| error_sd |");
-        for e in &self.elections {
-            let _ = write!(out, " {} replays |", e.year);
-        }
-        let _ = writeln!(
-            out,
-            " Final-week polls ({final_years}) | Total | P(winner \\| matchup) |"
-        );
-        let _ = writeln!(out, "|---|{}---|---|---|", "---|".repeat(self.elections.len()));
-        for point in &self.round2_grid {
-            let mark = if point.chosen {
-                " (fitted)"
-            } else if point.beats_current {
-                " *"
-            } else {
-                ""
-            };
-            let _ = write!(out, "| {}{mark} |", point.error_sd);
-            for score in point.evidence.by_year.values() {
-                let _ = write!(out, " {} |", num(*score, 2));
-            }
-            let _ = writeln!(
-                out,
-                " {} | {} | {} |",
-                num(point.evidence.final_polls, 2),
-                num(point.total, 2),
-                pct(point.p_winner_given_matchup)
-            );
+        for stage in &self.stages {
+            self.stage_markdown(&mut out, stage, &final_years);
         }
         if !self.final_polls_round2.is_empty() {
             let _ = writeln!(
@@ -826,18 +853,19 @@ impl Report {
 
         let _ = writeln!(
             out,
-            "\n## Leave one election out\n\nThe same rule without one election's replays, then that election's replays scored at the setting it gives, and at the current one.\n\n| Held out | bloc_sd | candidate_sd | round2 error_sd | Round 1 log score (chosen without / current) | Round 2 log score (chosen without / current) |\n|---|---|---|---|---|---|"
+            "\n## Leave one election out\n\nThe whole fit rerun without one election's replays, then that election's replays scored at the setting it gives, and at the current one.\n\n| Held out | Passes | {} | Round 1 log score (chosen without / current) | Round 2 log score (chosen without / current) |\n|---|---|{}---|---|",
+            Param::ALL.map(short_name).join(" | "),
+            "---|".repeat(Param::ALL.len())
         );
         for l in &self.leave_one_out {
             let _ = writeln!(
                 out,
-                "| {} | {} | {} | {} | {} / {} | {} / {} |",
+                "| {} | {} | {} | {} / {} | {} / {} |",
                 l.held_out,
-                l.bloc_sd,
-                l.candidate_sd,
-                l.round2_error_sd,
-                num(l.round1_held_out, 1),
-                num(l.round1_held_out_current, 1),
+                l.passes,
+                Param::ALL.map(|p| p.get(&l.chosen).to_string()).join(" | "),
+                num(l.round1_held_out, 2),
+                num(l.round1_held_out_current, 2),
                 num(l.round2_held_out, 2),
                 num(l.round2_held_out_current, 2)
             );
@@ -909,5 +937,130 @@ impl Report {
             }
         }
         out
+    }
+}
+
+impl Report {
+    fn stage_markdown(&self, out: &mut String, stage: &Stage, final_years: &str) {
+        let c = &self.config;
+        let what = if stage.round == 1 {
+            "share log score of the contenders"
+        } else {
+            "log score of the realised runoff share"
+        };
+        let start = stage
+            .params
+            .iter()
+            .map(|p| format!("{} {}", short_name(*p), p.get(&stage.start)))
+            .collect::<Vec<_>>()
+            .join(", ");
+        let _ = writeln!(
+            out,
+            "\n### Pass {}: {}\n\nEvidence: {what}. Starts from {start}.\n",
+            stage.pass, stage.title
+        );
+        let _ = writeln!(
+            out,
+            "| Evidence | Start | Chosen | Best on this source alone |\n|---|---|---|---|"
+        );
+        let chosen = stage.grid.iter().find(|p| p.chosen);
+        let mut sources: Vec<EvidenceSource> = Vec::new();
+        for e in &self.elections {
+            let year = e.year;
+            sources.push((
+                format!("{year} replays"),
+                Box::new(move |v: &Evidence| v.by_year[&year]),
+            ));
+        }
+        for h in &c.horizons_days {
+            let h = *h;
+            sources.push((
+                format!("{h}-day replays, every election (not used)"),
+                Box::new(move |v: &Evidence| v.by_horizon[&h]),
+            ));
+        }
+        if !c.final_polls.years.is_empty() {
+            sources.push((
+                format!("Final-week polls ({final_years})"),
+                Box::new(|v: &Evidence| v.final_polls),
+            ));
+        }
+        sources.push(("Total".into(), Box::new(|v: &Evidence| v.total(None))));
+        for (label, key) in &sources {
+            let best = argmax(&stage.grid, |p| key(&p.evidence));
+            let best_at = stage
+                .params
+                .iter()
+                .map(|p| format!("{} {}", short_name(*p), p.get(&best.setting)))
+                .collect::<Vec<_>>()
+                .join(", ");
+            let _ = writeln!(
+                out,
+                "| {label} | {} | {} | {} ({best_at}) |",
+                num(key(&stage.reference), 2),
+                chosen.map_or("–".into(), |p| num(key(&p.evidence), 2)),
+                num(key(&best.evidence), 2),
+            );
+        }
+
+        // The grid as tables of total log score: the first parameter in rows, the second in
+        // columns, one table per value of the third.
+        let (rows, cols) = (stage.params[0], stage.params[1]);
+        let values = |param: Param| -> Vec<f64> {
+            let mut values: Vec<f64> = Vec::new();
+            for point in &stage.grid {
+                let v = param.get(&point.setting);
+                if !values.contains(&v) {
+                    values.push(v);
+                }
+            }
+            values
+        };
+        let tables: Vec<Option<f64>> = match stage.params.get(2) {
+            Some(third) => values(*third).into_iter().map(Some).collect(),
+            None => vec![None],
+        };
+        let _ = writeln!(
+            out,
+            "\nTotal log score by `{}` (rows) and `{}` (columns). `*` marks the points that score at least as well as the start on every source; bold is the chosen one.",
+            short_name(rows),
+            short_name(cols)
+        );
+        for table in tables {
+            if let (Some(value), Some(third)) = (table, stage.params.get(2)) {
+                let _ = writeln!(out, "\n{} = {value}:", short_name(*third));
+            }
+            let _ = write!(out, "\n| {} \\ {} |", short_name(rows), short_name(cols));
+            let col_values = values(cols);
+            for v in &col_values {
+                let _ = write!(out, " {v} |");
+            }
+            let _ = writeln!(out, "\n|---|{}", "---|".repeat(col_values.len()));
+            for row in values(rows) {
+                let _ = write!(out, "| {row} |");
+                for point in stage.grid.iter().filter(|p| {
+                    rows.get(&p.setting) == row && table.is_none_or(|t| stage.params[2].get(&p.setting) == t)
+                }) {
+                    let value = format!("{}{}", num(point.total, 1), if point.beats_start { "*" } else { "" });
+                    let _ = write!(out, " {} |", if point.chosen { format!("**{value}**") } else { value });
+                }
+                let _ = writeln!(out);
+            }
+        }
+    }
+}
+
+/// A parameter's name without its section, for tables.
+fn short_name(param: Param) -> &'static str {
+    param.name().rsplit('.').next().expect("a name")
+}
+
+/// "2002, 2007 and 2012".
+fn year_list(years: &[i16]) -> String {
+    let names: Vec<String> = years.iter().map(i16::to_string).collect();
+    match names.split_last() {
+        None => "none".into(),
+        Some((last, [])) => last.clone(),
+        Some((last, rest)) => format!("{} and {last}", rest.join(", ")),
     }
 }

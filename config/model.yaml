@@ -31,6 +31,10 @@ round1_error:
   student_t_df: 5
   bloc_sd: 0.18
   candidate_sd: 0.20
+  # Further error per square root of 30 days before round 1, added in variance to the two above:
+  # what the campaign still to come can change beyond the polls' own drift. Zero until fitted.
+  horizon_bloc_sd: 0.0
+  horizon_candidate_sd: 0.0
 
 round2:
   random_walk_sd: 0.01
@@ -38,6 +42,11 @@ round2:
   prior_sd: 1.5
   # Election-day error on the logit of a finalist's share, fitted by the backtest (was 0.08).
   error_sd: 0.12
+  # Further error on that logit per square root of 30 days before round 2. Zero until fitted.
+  horizon_error_sd: 0.0
+  # Tails of the round 2 error, apart from round 1's so that fitting one leaves the other alone.
+  # Not fitted: 5 is round 1's value before 0.3.0.
+  student_t_df: 5
   transfer_sd: 0.35
   loyalty: 0.95
   # Relative propensity of each round 1 bloc's voters to vote for a finalist of each bloc or

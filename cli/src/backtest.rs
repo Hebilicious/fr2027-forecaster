@@ -1,5 +1,5 @@
-//! `fr2027 backtest`: replay the model on 2002–2022, score it, fit the election-day error
-//! settings, and write `research/backtest/results.json` and `report.md`.
+//! `fr2027 backtest`: replay the model on past elections, score it, fit the error settings, and
+//! write `research/backtest/results.json` and `report.md`.
 
 use std::path::PathBuf;
 
@@ -37,15 +37,13 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
     line("latest-poll average", &report.baseline.overall);
     line("model, current", &report.current_scores.overall);
     line("model, fitted", &report.fitted_scores.overall);
-    let (current, fitted) = (report.current, report.fitted);
-    println!(
-        "  current: bloc_sd {} candidate_sd {} round2 error_sd {}; fitted: bloc_sd {} candidate_sd {} round2 error_sd {}",
-        current.bloc_sd,
-        current.candidate_sd,
-        current.round2_error_sd,
-        fitted.bloc_sd,
-        fitted.candidate_sd,
-        fitted.round2_error_sd
-    );
+    for param in fr2027_backtest::report::Param::ALL {
+        println!(
+            "  {:<34} current {:<6} fitted {}",
+            param.name(),
+            param.get(&report.current),
+            param.get(&report.fitted)
+        );
+    }
     Ok(())
 }

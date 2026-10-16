@@ -1,6 +1,7 @@
 //! The two-round Monte Carlo. Each simulated election draws who runs, the true round 1 vote
 //! (the aggregation's state projected to election day, plus a fat-tailed national polling
-//! error correlated within blocs), the two qualifiers, and the round 2 result.
+//! error correlated within blocs, wider the further away the election is), the two qualifiers,
+//! and the round 2 result.
 
 use crate::{
     ModelError, ModelParams, Poll, day_number,
@@ -85,7 +86,7 @@ pub struct Draw<'a> {
     pub finalists: (usize, usize),
     /// Location of the logit of the first finalist's round 2 share, before the election-day draw.
     pub round2_mean: f64,
-    /// Standard deviation of that logit, including the election-day error.
+    /// Standard deviation of that logit, including the election-day and horizon errors.
     pub round2_sd: f64,
     /// Whether the first finalist won.
     pub first_wins: bool,
@@ -130,8 +131,8 @@ pub fn fit(field: &Field, polls: &[Poll], params: &ModelParams, as_of: jiff::civ
 }
 
 /// Simulates the election from a fit. Besides the dates, only the simulation settings of
-/// `params` are read (seed, simulations, `round1_error`, and the `round2` error, transfer and
-/// loyalty settings), so one fit can be simulated under several error settings; with the same
+/// `params` are read (seed, simulations, `round1_error`, and the `round2` error, horizon error,
+/// transfer and loyalty settings), so one fit can be simulated under several error settings; with the same
 /// seed those simulations share their random numbers. `observe` sees every simulated election.
 pub fn simulate(
     field: &Field,
@@ -142,9 +143,9 @@ pub fn simulate(
     if params.simulations == 0 {
         return Err(ModelError::InvalidParameters("simulations must be positive".into()));
     }
-    if params.round1_error.student_t_df <= 2.0 {
+    if params.round1_error.student_t_df <= 2.0 || params.round2.student_t_df <= 2.0 {
         return Err(ModelError::InvalidParameters(
-            "round1_error.student_t_df must exceed 2".into(),
+            "round1_error.student_t_df and round2.student_t_df must exceed 2".into(),
         ));
     }
     let (round1, round2) = (&fit.round1, &fit.round2);
@@ -188,6 +189,10 @@ pub fn simulate(
     let mut matchups = vec![0u32; n * n];
     let mut matchup_wins = vec![0u32; n * n];
     let error = &params.round1_error;
+    let (bloc_sd, candidate_sd) = error.at_horizon(days_before(fit.as_of, params.round1_date));
+    let round2_error_sd = params
+        .round2
+        .error_at_horizon(days_before(fit.as_of, params.round2_date));
 
     for _ in 0..params.simulations {
         let mut attempts = 0;
@@ -208,10 +213,10 @@ pub fn simulate(
         }
         sampler.draw(&mut rng_state, &mut normals, &mut x);
         for e in bloc_error.iter_mut() {
-            *e = error.bloc_sd * rng_error.student_t_unit(error.student_t_df);
+            *e = bloc_sd * rng_error.student_t_unit(error.student_t_df);
         }
         for e in candidate_error.iter_mut() {
-            *e = error.candidate_sd * rng_error.student_t_unit(error.student_t_df);
+            *e = candidate_sd * rng_error.student_t_unit(error.student_t_df);
         }
         let errors = Errors {
             bloc: &bloc_error,
@@ -242,8 +247,8 @@ pub fn simulate(
             }
             None => (transfer_logit, transfer_var),
         };
-        let sd = (var + params.round2.error_sd.powi(2)).sqrt();
-        let a_wins = mean + sd * rng_round2.student_t_unit(error.student_t_df) > 0.0;
+        let sd = (var + round2_error_sd.powi(2)).sqrt();
+        let a_wins = mean + sd * rng_round2.student_t_unit(params.round2.student_t_df) > 0.0;
         observe(&Draw {
             present: &present,
             shares: &shares,
@@ -300,6 +305,10 @@ pub fn simulate(
         pairs,
         warnings,
     })
+}
+
+fn days_before(as_of: jiff::civil::Date, election: jiff::civil::Date) -> f64 {
+    f64::from(day_number(election) - day_number(as_of))
 }
 
 fn top_two(shares: &[f64], present: &[bool]) -> (usize, usize) {
@@ -381,12 +390,16 @@ mod tests {
                 student_t_df: 5.0,
                 bloc_sd: 0.1,
                 candidate_sd: 0.08,
+                horizon_bloc_sd: 0.0,
+                horizon_candidate_sd: 0.0,
             },
             round2: Round2Params {
                 random_walk_sd: 0.01,
                 design_effect: 1.5,
                 prior_sd: 1.5,
                 error_sd: 0.08,
+                horizon_error_sd: 0.0,
+                student_t_df: 5.0,
                 transfer_sd: 0.35,
                 loyalty: 0.97,
                 transfers: BTreeMap::from([
@@ -450,6 +463,31 @@ mod tests {
         // The polled matchup is marked as polled.
         let c1_r1 = forecast.pairs.iter().find(|p| p.a == 2 && p.b == 3).unwrap();
         assert!(c1_r1.polled);
+    }
+
+    #[test]
+    fn horizon_error_widens_intervals_further_out() {
+        let fit = fit(&field(), &polls(), &params(4000, 3), date(2026, 7, 1)).unwrap();
+        let width = |horizon_sd: f64| {
+            let mut params = params(4000, 3);
+            params.round1_error.horizon_bloc_sd = horizon_sd;
+            params.round1_error.horizon_candidate_sd = horizon_sd;
+            let simulation = simulate(&field(), &fit, &params, &mut |_| {}).unwrap();
+            let share = simulation.candidates[2].r1_share.clone().unwrap();
+            share.hi80 - share.lo80
+        };
+        assert!(width(0.05) > width(0.0) * 1.2);
+        // Election day itself carries no horizon error.
+        let errors = ErrorParams {
+            student_t_df: 5.0,
+            bloc_sd: 0.1,
+            candidate_sd: 0.2,
+            horizon_bloc_sd: 0.05,
+            horizon_candidate_sd: 0.05,
+        };
+        assert_eq!(errors.at_horizon(0.0), (0.1, 0.2));
+        let (bloc, _) = errors.at_horizon(120.0);
+        assert!((bloc - (0.01f64 + 0.0025 * 4.0).sqrt()).abs() < 1e-12);
     }
 
     #[test]

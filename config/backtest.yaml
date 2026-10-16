@@ -16,6 +16,8 @@ poll_window_days: 365
 contender_share: 0.10
 # Probabilities are clipped to [floor, 1 - floor] before taking logs.
 probability_floor: 0.001
+# The fit's three stages repeat until a pass changes nothing, at most this many times.
+max_passes: 4
 
 elections:
   - { year: 2002, dir: data/backtest/2002, round1: 2002-04-21, round2: 2002-05-05 }
@@ -54,8 +56,15 @@ final_polls:
     "Marine Le Pen": far_right
     "Jean-Luc Mélenchon": left
 
-# Error settings tried by the fit (grid search on the log score of the realised result).
+# Error settings tried by the fit (grid search on the log score of the realised result), in three
+# stages: round 1's horizon error and tails, then its election-day error, then round 2's errors.
+# Horizon errors are per square root of 30 days before the round: 0.10 adds 0.24 in quadrature
+# six months out.
 grid:
+  horizon_bloc_sd: [0.0, 0.02, 0.04, 0.07, 0.10, 0.14, 0.20, 0.27]
+  horizon_candidate_sd: [0.0, 0.02, 0.04, 0.07, 0.10, 0.14, 0.20, 0.27, 0.33, 0.40]
+  student_t_df: [2.5, 3, 4, 5, 10]
   bloc_sd: [0.04, 0.06, 0.08, 0.10, 0.12, 0.15, 0.18, 0.22, 0.27, 0.33, 0.40]
   candidate_sd: [0.03, 0.05, 0.07, 0.10, 0.13, 0.16, 0.20, 0.25, 0.30, 0.40]
   round2_error_sd: [0.02, 0.03, 0.05, 0.08, 0.10, 0.12, 0.15, 0.18, 0.22, 0.27, 0.33, 0.40]
+  round2_horizon_error_sd: [0.0, 0.02, 0.04, 0.07, 0.10, 0.14, 0.20]
