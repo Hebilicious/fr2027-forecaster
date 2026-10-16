@@ -1,5 +1,7 @@
 // The Candidates view's grouping, kept out of the component so it can be tested headlessly.
 import type { CandidateForecast } from "./api/schemas"
+import { ARTICLES } from "./articles"
+import type { Locale } from "./locales"
 
 /** Political families, left to right, then the rest. */
 export const FAMILIES = ["far_left", "left", "centre", "right", "far_right", "other"]
@@ -41,4 +43,15 @@ export function byFamily(candidates: readonly CandidateForecast[]): FamilyGroup[
       family,
       candidates: list.toSorted((a, b) => b.p_run - a.p_run || a.name.localeCompare(b.name, "fr")),
     }))
+}
+
+/**
+ * The candidate's Wikipedia article in the reader's language, else the French one, with the language it is in;
+ * `null` when French Wikipedia has no article about them.
+ */
+export function articleFor(candidateId: string, locale: Locale): { url: string; lang: Locale } | null {
+  const articles = ARTICLES[candidateId]
+  if (!articles) return null
+  const local = articles[locale]
+  return local ? { url: local, lang: locale } : { url: articles.fr, lang: "fr" }
 }

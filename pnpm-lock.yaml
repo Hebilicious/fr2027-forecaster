@@ -221,6 +221,9 @@ catalogs:
     wrangler:
       specifier: 4.137.0
       version: 4.137.0
+    yaml:
+      specifier: 2.9.1
+      version: 2.9.1
 
 importers:
 
@@ -284,6 +287,9 @@ importers:
       vize:
         specifier: 'catalog:'
         version: 0.435.0(vue@3.5.43(typescript@7.0.2))
+      yaml:
+        specifier: 'catalog:'
+        version: 2.9.1
 
   app/worker:
     devDependencies:

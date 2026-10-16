@@ -31,6 +31,14 @@ tasks:
     inputs: ["src/**/*.content.ts", "intlayer.config.ts", "package.json", "/pnpm-lock.yaml"]
     outputs: [".intlayer"]
 
+  articles:
+    description: "Refresh src/articles.ts, each candidate's Wikipedia article in every site language, from config/sources.yaml."
+    command: "node"
+    args: ["scripts/wikipedia-articles.ts"]
+    options:
+      cache: false
+      runInCI: false
+
   i18n-check:
     description: "Fail when a dictionary lacks a locale listed in intlayer.config.ts."
     command: "intlayer"

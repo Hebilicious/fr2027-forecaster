@@ -2,12 +2,12 @@
 import { computed } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
-import { byFamily } from "../candidates"
+import { articleFor, byFamily } from "../candidates"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import { list, probability, safeUrl, shareWithInterval } from "../format"
 import { labelOf } from "../labels"
 import { PARTY_SITES, PROGRAMMES } from "../links"
-import { ARTICLES, CREDITS } from "../portraits"
+import { CREDITS } from "../portraits"
 
 const props = defineProps<{ forecast: Forecast }>()
 const content = useIntlayer("candidates-view")
@@ -15,6 +15,10 @@ const common = useIntlayer("common")
 const { locale } = useLocale()
 
 const groups = computed(() => byFamily(props.forecast.candidates))
+// The reader's own Wikipedia when it has the article, else the French one, labelled as such.
+const articles = computed(
+  () => new Map(props.forecast.candidates.map((c) => [c.candidate_id, articleFor(c.candidate_id, locale.value)])),
+)
 const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, "fr")
 const credited = computed(() =>
   props.forecast.candidates
@@ -76,16 +80,34 @@ const uncredited = computed(() =>
               }}</span>
             <span v-else class="muted">{{ c.simulated ? "—" : common.notPolled }}</span>
           </p>
+          <!-- Party sites and programmes are in French; the Wikipedia article is in the reader's language when it can be. -->
           <p class="links">
-            <a v-if="PARTY_SITES[c.candidate_id]" :href="safeUrl(PARTY_SITES[c.candidate_id])" rel="noopener noreferrer">
+            <a
+              v-if="PARTY_SITES[c.candidate_id]"
+              :href="safeUrl(PARTY_SITES[c.candidate_id])"
+              hreflang="fr"
+              rel="noopener noreferrer"
+            >
               {{ content.partySite }}<span aria-hidden="true"> ↗</span>
             </a>
-            <a v-if="PROGRAMMES[c.candidate_id]" :href="safeUrl(PROGRAMMES[c.candidate_id])" rel="noopener noreferrer">
+            <a
+              v-if="PROGRAMMES[c.candidate_id]"
+              :href="safeUrl(PROGRAMMES[c.candidate_id])"
+              hreflang="fr"
+              rel="noopener noreferrer"
+            >
               {{ content.programme }}<span aria-hidden="true"> ↗</span>
             </a>
             <span v-else class="muted">{{ content.programmeNone }}</span>
-            <a v-if="ARTICLES[c.candidate_id]" :href="safeUrl(ARTICLES[c.candidate_id])" rel="noopener noreferrer">
-              {{ content.wikipedia }}<span aria-hidden="true"> ↗</span>
+            <a
+              v-if="articles.get(c.candidate_id)"
+              :href="safeUrl(articles.get(c.candidate_id)?.url)"
+              :hreflang="articles.get(c.candidate_id)?.lang"
+              rel="noopener noreferrer"
+            >
+              {{
+                articles.get(c.candidate_id)?.lang === locale ? content.wikipedia : content.wikipediaInFrench
+              }}<span aria-hidden="true"> ↗</span>
             </a>
           </p>
         </li>

@@ -81,7 +81,7 @@ export default {
       declared: t({
         fr: "Candidature déclarée",
         "en-GB": "Declared",
-        de: "Kandidatur erklärt",
+        de: "Kandidatur angekündigt",
         it: "Candidatura annunciata",
         "es-ES": "Candidatura anunciada",
         "pt-PT": "Candidatura anunciada",
@@ -117,7 +117,7 @@ export default {
     },
     round2: t({
       fr: "Second tour",
-      "en-GB": "Round 2",
+      "en-GB": "Second round",
       de: "Stichwahl",
       it: "Ballottaggio",
       "es-ES": "Segunda vuelta",
@@ -138,6 +138,18 @@ export default {
       ko: "위키백과",
       "zh-Hans": "维基百科",
       th: "วิกิพีเดีย",
+    }),
+    wikipediaInFrench: t({
+      fr: "Wikipédia (en français)",
+      "en-GB": "Wikipedia (in French)",
+      de: "Wikipedia (auf Französisch)",
+      it: "Wikipedia (in francese)",
+      "es-ES": "Wikipedia (en francés)",
+      "pt-PT": "Wikipédia (em francês)",
+      ja: "ウィキペディア（フランス語）",
+      ko: "위키백과(프랑스어)",
+      "zh-Hans": "维基百科（法语）",
+      th: "วิกิพีเดีย (ภาษาฝรั่งเศส)",
     }),
     partySite: t({
       fr: "Site du parti",
