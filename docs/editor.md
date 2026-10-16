@@ -18,18 +18,18 @@ on `main` only if:
 - every check passes (`moon ci`, after rebuilding the clean files).
 
 A branch that fails stays on GitHub for the owner, with the reason in the Land run. When it lands,
-the push to `main` starts Live, which refits and republishes, and Live closes each Grok Bot poll
+Land starts Live (its push uses `GITHUB_TOKEN`, which starts no workflow by itself), which refits and republishes, and Live closes each Grok Bot poll
 pull request whose files are now on `main`.
 
 ## How the parts fit
 
-| Who                    | When                      | What                                                                                                  |
-| ---------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Cloudflare Worker cron | every hour at :17         | Starts Live (`repository_dispatch`), with a token of the `heb-release` App                            |
-| Live workflow          | hourly, and on each push  | Collects, pulls the inbox, refits, commits data, publishes; opens Grok Bot poll pull requests         |
-| Grok Bot routines      | 6-hourly, 2× and 1× a day | X activity, new polls, campaign events, sent to the inbox                                             |
-| Claude editor routine  | 07:00 and 19:00 UTC       | Checks Grok Bot's polls, finds missed ones, applies confirmed field changes; pushes `claude/editor-*` |
-| Land workflow          | on each editor branch     | Path check, clean files, `moon ci`, fast-forward `main`                                               |
+| Who                         | When                      | What                                                                                                  |
+| --------------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Clock workflow, Worker cron | about every hour          | Start Live; [`clock.yml`](../.github/workflows/clock.yml) skips when Live ran in the last 50 minutes  |
+| Live workflow               | hourly, and on each push  | Collects, pulls the inbox, refits, commits data, publishes; opens Grok Bot poll pull requests         |
+| Grok Bot routines           | 6-hourly, 2× and 1× a day | X activity, new polls, campaign events, sent to the inbox                                             |
+| Claude editor routine       | 07:00 and 19:00 UTC       | Checks Grok Bot's polls, finds missed ones, applies confirmed field changes; pushes `claude/editor-*` |
+| Land workflow               | on each editor branch     | Path check, clean files, `moon ci`, fast-forward `main`, start Live                                   |
 
 The editor runs after Grok Bot's poll routine (09:30 and 19:30 Paris time, 07:30 and 17:30 UTC
 in winter) has had a day to send, and after the events routine (21:00 Paris time) for the morning
@@ -37,11 +37,9 @@ run. Times are UTC, as routine schedules are.
 
 ## Setup
 
-1. The `heb-release` App's key must be in the repository secret `RELEASE_APP_PRIVATE_KEY` and the
-   variable `RELEASE_APP_CLIENT_ID` (see [operations.md](operations.md)); Land uses it to push.
-2. Create the routine at https://claude.ai/code/routines: repository
+1. Create the routine at https://claude.ai/code/routines: repository
    `Hebilicious/fr2027-forecaster`, schedule `0 7,19 * * *`, and the prompt below.
-3. Press **Run now** once and check that a `claude/editor-*` branch appears (or that the session
+2. Press **Run now** once and check that a `claude/editor-*` branch appears (or that the session
    says there was nothing to do) and that the Land run passes.
 
 ## The routine's prompt

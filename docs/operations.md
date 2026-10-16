@@ -12,7 +12,7 @@ needs a server or a computer left on.
 | On every pull request and push to `main`                | GitHub Actions, [`ci.yml`](../.github/workflows/ci.yml)     | `moon ci`: tests, lint, format and type checks, and `fr2027 validate`                                                                                                                                                                                            |
 | Every 6 hours, twice a day, every evening               | Grok Bot routines ([grok-bot.md](grok-bot.md))              | X activity, new polls, campaign events, sent to the inbox                                                                                                                                                                                                        |
 | 07:00 and 19:00 UTC                                     | Claude editor routine ([editor.md](editor.md))              | Checks Grok Bot's polls against their notices, finds missed polls, applies confirmed field changes; pushes a `claude/editor-*` branch                                                                                                                            |
-| On each editor branch                                   | GitHub Actions, [`land.yml`](../.github/workflows/land.yml) | Path check, clean files, `moon ci`, then fast-forwards `main` with the `heb-release` App, which starts Live                                                                                                                                                      |
+| On each editor branch                                   | GitHub Actions, [`land.yml`](../.github/workflows/land.yml) | Path check, clean files, `moon ci`, then fast-forwards `main` and starts Live                                                                                                                                                                                    |
 | Always                                                  | Cloudflare Worker `fr2027` ([`app/worker`](../app/worker))  | The public page (static files, rebuilt hourly) and the Grok Bot inbox                                                                                                                                                                                            |
 
 The model refits once a day (the forecast date changes) and whenever polls or config change; an
@@ -61,13 +61,17 @@ In **Settings → Secrets and variables → Actions**:
 | `RELEASE_APP_CLIENT_ID`   | variable | The client ID of the `heb-release` GitHub App, `Iv23lierXRciGQXCgOuJ`                             |
 | `RELEASE_APP_PRIVATE_KEY` | secret   | A private key of that App ("Generate a private key" at github.com/settings/apps/heb-release)      |
 
-The `heb-release` App (contents and pull requests: write) does three things here:
+GitHub never fired Live's own hourly schedule (16 October 2026). Live is started by:
 
-- The Worker's hourly cron mints a token with it and sends the `repository_dispatch` that starts
-  Live. GitHub never fired Live's own hourly schedule (16 October 2026), so that schedule is now a
-  6-hourly backup.
-- Live opens Grok Bot's poll pull requests with it, so CI runs on them.
-- Land pushes the editor's work to `main` with it, so the push starts Live and CI.
+- [`clock.yml`](../.github/workflows/clock.yml), every 20 minutes, which sends a
+  `workflow_dispatch` with `GITHUB_TOKEN` unless Live began in the last 50 minutes;
+- the Worker's cron (`17 * * * *`), once the `heb-release` App key is set, through a
+  `repository_dispatch`;
+- Live's own schedule, every 6 hours, as a last backup.
+
+The two App rows above are optional. With them, the Worker's cron runs, and Live opens Grok Bot's
+poll pull requests with the App so CI runs on them; without them, those pull requests are opened
+with `GITHUB_TOKEN` (Land runs `moon ci` before anything reaches `main` anyway).
 
 ### 4. First run
 
