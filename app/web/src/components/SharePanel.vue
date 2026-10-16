@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue"
+import { computed, ref, shallowRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Panel, PollDot } from "../charts"
 import { nearest, scale, shareTicks } from "../charts"
@@ -64,7 +64,7 @@ const monthTicks = computed(() => {
 // circles, keeps dots a few pixels apart separately reachable.
 const DOT_RADIUS = 14
 const hover = ref<{ index: number } | null>(null)
-const pointedDot = ref<PollDot | null>(null)
+const pointedDot = shallowRef<PollDot | null>(null)
 function onMove(event: PointerEvent) {
   const svg = event.currentTarget as SVGSVGElement
   const box = svg.getBoundingClientRect()
@@ -89,7 +89,7 @@ function onLeave() {
 }
 const hovered = computed(() => (hover.value ? props.panel.points[hover.value.index] : undefined))
 
-const focusedDot = ref<PollDot | null>(null)
+const focusedDot = shallowRef<PollDot | null>(null)
 const activeDot = computed(() => pointedDot.value ?? focusedDot.value)
 const dotLabel = (dot: PollDot) =>
   content.poll({
@@ -151,16 +151,14 @@ const sortedDots = computed(() =>
               :cx="x(dot.date)"
               :cy="y(dot.share)"
               :r="dot.firm === highlightFirm ? 4.5 : 3.5"
-              :class="[
-                'dot',
-                {
-                  active: dot === activeDot,
-                  highlighted: dot.firm === highlightFirm,
-                  faded: highlightFirm && dot.firm !== highlightFirm,
-                },
-              ]"
+              :class="['dot', { highlighted: dot.firm === highlightFirm, faded: highlightFirm && dot.firm !== highlightFirm }]"
             />
           </a>
+        </g>
+        <!-- The pointed or focused dot, drawn again on top of its neighbours. -->
+        <g v-if="activeDot" class="active" pointer-events="none">
+          <circle :cx="x(activeDot.date)" :cy="y(activeDot.share)" class="ring" r="9" />
+          <circle :cx="x(activeDot.date)" :cy="y(activeDot.share)" class="dot" r="5" />
         </g>
         <!-- While the pointer is near a dot, a click anywhere on the plot opens that dot's poll. -->
         <a
@@ -280,6 +278,7 @@ svg {
 
 .pointed rect {
   fill: transparent;
+  cursor: pointer;
 }
 
 .dot {
@@ -298,9 +297,17 @@ svg {
   stroke-width: 2;
 }
 
-.dot.active {
+.active .dot {
+  fill: var(--ink);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+.active .ring {
+  fill: none;
   stroke: var(--ink);
-  opacity: 1;
+  stroke-width: 1.5;
+  opacity: 0.6;
 }
 
 /* Keyboard focus rings the dot itself, and the tooltip names the poll. */
