@@ -5,6 +5,8 @@ name: Live
 # changed, commit the new data to main, and publish the public site to Cloudflare.
 # It also runs when a merge to main changes polls, config or code, so the page follows main.
 on:
+  # If scheduled runs stop appearing while the workflow is active, a push to main that edits this
+  # file makes GitHub register the schedule again (needed on 2026-10-16, after the first merge).
   schedule:
     - cron: "17 * * * *"
   push:
