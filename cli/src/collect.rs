@@ -53,7 +53,10 @@ pub fn run(repo: &Repo, source: &Source) -> Result<()> {
         Source::Markets => collect_markets(repo, &inputs, &client, now),
         Source::News => collect_news(repo, &inputs, &client, now),
         Source::Attention(args) => collect_attention(repo, &inputs, &client, now, args),
-        Source::Gdelt(args) => collect_gdelt(repo, &inputs, &client, now, args),
+        Source::Gdelt(args) => {
+            let client = Client::with_timeout(&inputs.sources.user_agent, gdelt_api::TIMEOUT)?;
+            collect_gdelt(repo, &inputs, &client, now, args)
+        }
     }
 }
 

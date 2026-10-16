@@ -17,6 +17,10 @@ use crate::{Client, Error, Result};
 const API: &str = "https://api.gdeltproject.org/api/v2/doc/doc";
 /// GDELT's limit is one request every 5 seconds; keep a margin.
 const SPACING: Duration = Duration::from_secs(6);
+/// Days per request: about 15 seconds of GDELT's time for 90 days.
+const WINDOW_DAYS: i64 = 92;
+/// How long one request may take.
+pub const TIMEOUT: Duration = Duration::from_secs(120);
 const RATE_LIMIT_WAITS: [Duration; 3] = [
     Duration::from_secs(20),
     Duration::from_secs(60),
@@ -88,9 +92,23 @@ impl<'a> Reader<'a> {
         }
     }
 
-    /// Daily counts of articles matching `query` from `start` to `end`, both included. Days with
-    /// no matching article are left out by GDELT; callers treat a missing day as zero.
+    /// Daily counts of articles matching `query` from `start` to `end`, both included, read in
+    /// windows of at most [`WINDOW_DAYS`] days (a longer timeline takes GDELT over a minute).
     pub fn fetch(&mut self, query: &str, start: Date, end: Date) -> Result<Vec<DayCount>> {
+        let mut days = Vec::new();
+        let mut from = start;
+        while from <= end {
+            let to = from
+                .checked_add(jiff::Span::new().days(WINDOW_DAYS - 1))
+                .map_err(|e| Error::parse("gdelt", e))?
+                .min(end);
+            days.extend(self.fetch_window(query, from, to)?);
+            from = to.tomorrow().map_err(|e| Error::parse("gdelt", e))?;
+        }
+        Ok(days)
+    }
+
+    fn fetch_window(&mut self, query: &str, start: Date, end: Date) -> Result<Vec<DayCount>> {
         let url = format!(
             "{API}?query={}&mode=timelinevolraw&format=json&startdatetime={}000000&enddatetime={}235959",
             encode_query(query),

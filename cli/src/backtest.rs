@@ -94,6 +94,7 @@ pub fn fetch_signals(repo: &Repo, args: &SignalsArgs) -> Result<()> {
         println!("wrote {} ({} rows)", repo.relative(&path), rows.len());
     }
     if wanted(SignalSource::News) {
+        let client = Client::with_timeout(&inputs.sources.user_agent, gdelt_api::TIMEOUT)?;
         let rows = fetch_news(&client, &sources)?;
         let path = dir.join(signals::NEWS_FILE);
         write(&path, &csv_bytes(&rows, signals::NEWS_HEADER)?)?;
