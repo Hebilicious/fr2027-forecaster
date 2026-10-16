@@ -32,6 +32,9 @@ const en = {
   statusPossible: "May run",
   statRound2: "Round 2",
   wikipedia: "Wikipedia",
+  partySite: "Party website",
+  programme: "Programme",
+  programmeNone: "Programme not published yet",
   photoCredits: "Photo credits",
   photoCreditsNote:
     "Each portrait is the lead image of the candidate's French Wikipedia article, taken only under a free licence, cropped around the face by the same rule for everyone and shown in black and white.",
@@ -222,6 +225,9 @@ const fr: Messages = {
   statusPossible: "Candidature possible",
   statRound2: "Second tour",
   wikipedia: "Wikipédia",
+  partySite: "Site du parti",
+  programme: "Programme",
+  programmeNone: "Programme pas encore publié",
   photoCredits: "Crédits photographiques",
   photoCreditsNote:
     "Chaque portrait est l'image principale de l'article Wikipédia en français du candidat, retenue seulement sous licence libre, recadrée sur le visage selon la même règle pour tous et montrée en noir et blanc.",

@@ -5,6 +5,7 @@ import { byFamily } from "../candidates"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import { probability, safeUrl, shareWithInterval } from "../format"
 import { useI18n, type MessageKey } from "../i18n"
+import { PARTY_SITES, PROGRAMMES } from "../links"
 import { ARTICLES, CREDITS } from "../portraits"
 
 const props = defineProps<{ forecast: Forecast }>()
@@ -91,14 +92,18 @@ const uncredited = computed(() =>
               }}</span>
             <span v-else class="muted">{{ c.simulated ? "—" : t("notPolled") }}</span>
           </p>
-          <a
-            v-if="ARTICLES[c.candidate_id]"
-            class="wiki"
-            :href="safeUrl(ARTICLES[c.candidate_id])"
-            rel="noopener noreferrer"
-          >
-            {{ t("wikipedia") }}<span aria-hidden="true"> ↗</span>
-          </a>
+          <p class="links">
+            <a v-if="PARTY_SITES[c.candidate_id]" :href="safeUrl(PARTY_SITES[c.candidate_id])" rel="noopener noreferrer">
+              {{ t("partySite") }}<span aria-hidden="true"> ↗</span>
+            </a>
+            <a v-if="PROGRAMMES[c.candidate_id]" :href="safeUrl(PROGRAMMES[c.candidate_id])" rel="noopener noreferrer">
+              {{ t("programme") }}<span aria-hidden="true"> ↗</span>
+            </a>
+            <span v-else class="muted">{{ t("programmeNone") }}</span>
+            <a v-if="ARTICLES[c.candidate_id]" :href="safeUrl(ARTICLES[c.candidate_id])" rel="noopener noreferrer">
+              {{ t("wikipedia") }}<span aria-hidden="true"> ↗</span>
+            </a>
+          </p>
         </li>
       </ul>
     </section>
@@ -247,8 +252,10 @@ h3 {
   font-size: 0.84rem;
 }
 
-.wiki {
-  justify-self: start;
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
   font-size: 0.8rem;
 }
 
