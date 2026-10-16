@@ -2,6 +2,8 @@
 // Everything here is pure: the handler takes a Store, the tokens and a clock, so the Durable
 // Object (src/index.ts) and the tests run the same code. The HTTP contract is in README.md.
 
+import { JSON_HEADERS } from "./headers"
+
 export const KINDS = ["x_drop", "poll", "event", "poll_check", "field_change"] as const
 export type Kind = (typeof KINDS)[number]
 
@@ -14,6 +16,8 @@ export const MAX_PENDING = 200
 export const PENDING_PAGE = 100
 export const MAX_NOTE_CHARS = 2000
 export const RETENTION_DAYS = 30
+/** How far below the payload object a value may sit; the deepest real payload (a poll) uses five. */
+export const MAX_PAYLOAD_DEPTH = 32
 
 /** An item as stored. `payload` is JSON text; accepted and proposed items drop it (null). */
 export interface StoredItem {
@@ -96,6 +100,7 @@ export async function handleInbox(request: Request, context: InboxContext): Prom
     // Trimmed: a secret piped into `wrangler secret put` can keep its trailing newline.
     const secret = context.tokens[endpoint.role]?.trim()
     if (secret === undefined || secret === "") return failure(503, "inbox not configured")
+    warnOnSharedTokens(context.tokens)
     if (!(await hasToken(request, secret))) {
       return failure(401, "missing or wrong bearer token", { "www-authenticate": 'Bearer realm="inbox"' })
     }
@@ -228,7 +233,47 @@ function parseSubmission(body: unknown): { kind: Kind; payload: string } {
   const { kind, payload } = object
   if (!isOneOf(KINDS, kind)) throw new HttpError(400, `"kind" must be one of ${quoteAll(KINDS)}`)
   if (!isObject(payload)) throw new HttpError(400, `"payload" must be a JSON object`)
+  checkPayload(payload)
   return { kind, payload: JSON.stringify(payload) }
+}
+
+/**
+ * The pipeline reads the pending items with serde_json, which refuses a document nested deeper
+ * than 128 levels and refuses an unpaired surrogate. One stored payload like that makes every
+ * later `fr2027 inbox pull` fail before it processes anything, so the inbox refuses it here.
+ */
+function checkPayload(payload: Record<string, unknown>): void {
+  const stack: { value: unknown; depth: number }[] = [{ value: payload, depth: 0 }]
+  while (stack.length > 0) {
+    const { value, depth } = stack.pop() as { value: unknown; depth: number }
+    if (depth > MAX_PAYLOAD_DEPTH) {
+      throw new HttpError(400, `"payload" is nested more than ${MAX_PAYLOAD_DEPTH} levels deep`)
+    }
+    if (typeof value === "string") {
+      if (hasLoneSurrogate(value)) {
+        throw new HttpError(400, '"payload" has a string with an unpaired surrogate')
+      }
+      continue
+    }
+    // Keys as well as values: serde_json refuses an unpaired surrogate in a property name too.
+    const children: unknown[] = Array.isArray(value) ? value : isObject(value) ? Object.entries(value).flat() : []
+    for (const child of children) stack.push({ value: child, depth: depth + 1 })
+  }
+}
+
+/** Whether a UTF-16 string holds a high surrogate without its low one, or the reverse. */
+function hasLoneSurrogate(text: string): boolean {
+  for (let index = 0; index < text.length; index++) {
+    const code = text.charCodeAt(index)
+    if (code >= 0xd800 && code <= 0xdbff) {
+      const next = text.charCodeAt(index + 1)
+      if (!(next >= 0xdc00 && next <= 0xdfff)) return true
+      index++
+    } else if (code >= 0xdc00 && code <= 0xdfff) {
+      return true
+    }
+  }
+  return false
 }
 
 function parseResolution(body: unknown): { status: Resolution; note: string; ref: string | null } {
@@ -316,7 +361,7 @@ function withoutPayload(item: StoredItem): ItemView {
 function respond(status: number, body: unknown, headers: Record<string, string> = {}): Response {
   return new Response(JSON.stringify(body), {
     status,
-    headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...headers },
+    headers: { ...JSON_HEADERS, ...headers },
   })
 }
 
@@ -327,6 +372,25 @@ function failure(status: number, message: string, headers: Record<string, string
 async function hasToken(request: Request, secret: string): Promise<boolean> {
   const match = /^Bearer\s+(\S+)\s*$/i.exec(request.headers.get("authorization") ?? "")
   return match?.[1] !== undefined && (await constantTimeEqual(match[1], secret))
+}
+
+/** The shared value already warned about, so a misconfigured deployment says so once per isolate. */
+let warnedFor: string | null = null
+
+/**
+ * The bot token may only submit and list its own items; the pipeline token may read payloads and
+ * resolve items. Setting both secrets to the same value silently gives the bot the pipeline's
+ * powers, which is worth a log line: the split is what keeps a poll proposal reviewable.
+ */
+function warnOnSharedTokens(tokens: InboxContext["tokens"]): void {
+  const bot = tokens.bot?.trim()
+  const pipeline = tokens.pipeline?.trim()
+  if (bot === undefined || pipeline === undefined || bot === "" || pipeline === "") return
+  if (bot !== pipeline || warnedFor === bot) return
+  warnedFor = bot
+  console.warn(
+    "inbox: INBOX_BOT_TOKEN and INBOX_PIPELINE_TOKEN are the same value; the bot can then resolve items it proposed",
+  )
 }
 
 /**

@@ -5,6 +5,7 @@ import {
   handleInbox,
   itemKey,
   MAX_BODY_BYTES,
+  MAX_PAYLOAD_DEPTH,
   type InboxContext,
   type ItemView,
   type Store,
@@ -17,6 +18,13 @@ const PIPELINE = "pipeline-token-9876543210"
 const START = new Date("2026-10-09T12:00:00Z")
 const SECOND = 1000
 const DAY = 24 * 60 * 60 * SECOND
+
+/** A value nested `levels` objects deep, as the payload of a `poll` item. */
+function deep(levels: number): unknown {
+  let value: unknown = "x"
+  for (let n = 0; n < levels; n++) value = { n: value }
+  return value
+}
 
 /** Keeps items in insertion order, which breaks ties the way the SQL store's `seq` does. */
 class MemoryStore implements Store {
@@ -207,6 +215,9 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
       for (const reply of replies) {
         expect(reply.headers.get("content-type")).toBe("application/json; charset=utf-8")
         expect(reply.headers.get("cache-control")).toBe("no-store")
+        // _headers does not reach a response the Worker builds (src/headers.ts).
+        expect(reply.headers.get("x-content-type-options")).toBe("nosniff")
+        expect(reply.headers.get("referrer-policy")).toBe("no-referrer")
       }
     })
   })
@@ -280,6 +291,24 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
       const reply = await call("GET", "/inbox/items", { headers: { authorization: `bearer ${BOT}` } })
       expect(reply.status).toBe(200)
     })
+
+    it("warns once when both secrets are the same value, and not when they differ", async () => {
+      const warn = vi.spyOn(console, "warn").mockImplementation(() => {})
+      try {
+        // A value of its own: the warning is deduplicated per value, per isolate.
+        const sharedToken = `shared-token-${crypto.randomUUID()}`
+        const shared = inbox(makeStore, { bot: sharedToken, pipeline: sharedToken })
+        expect((await shared.call("GET", "/inbox/items", { token: sharedToken })).status).toBe(200)
+        expect((await shared.call("GET", "/inbox/items", { token: sharedToken })).status).toBe(200)
+        expect(warn.mock.calls.filter(([message]) => String(message).includes("same value"))).toHaveLength(1)
+        warn.mockClear()
+        const separate = inbox(makeStore)
+        expect((await separate.call("GET", "/inbox/items", { token: BOT })).status).toBe(200)
+        expect(warn.mock.calls.filter(([message]) => String(message).includes("same value"))).toHaveLength(0)
+      } finally {
+        warn.mockRestore()
+      }
+    })
   })
 
   describe("POST /inbox/items", () => {
@@ -344,6 +373,32 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
       const reply = await inbox(makeStore).bot.submit(undefined, { raw: new Uint8Array([0x7b, 0xff, 0x7d]) })
       expect(reply.status).toBe(400)
       expect(reply.body).toEqual({ error: "the body is not valid UTF-8" })
+    })
+
+    it("answers 400 to a payload the pipeline could not read, and stores nothing", async () => {
+      // serde_json refuses a document nested deeper than 128 levels, and a lone surrogate. One such
+      // item would make every later `fr2027 inbox pull` fail before it processed anything.
+      const { bot, store } = inbox(makeStore)
+      const tooDeep = await bot.submit({ kind: "poll", payload: { poll_id: "a", nest: deep(MAX_PAYLOAD_DEPTH) } })
+      expect(tooDeep.status).toBe(400)
+      expect(tooDeep.body["error"]).toContain(`nested more than ${MAX_PAYLOAD_DEPTH} levels`)
+      const lone = await bot.submit({ kind: "poll", payload: { poll_id: "b", note: "\ud800" } })
+      expect(lone.status).toBe(400)
+      expect(lone.body["error"]).toContain("unpaired surrogate")
+      // A property name too: serde_json refuses it there as well, and the key is not a value.
+      const loneKey = await bot.submit(undefined, { raw: '{"kind":"poll","payload":{"poll_id":"c","\\ud800":0}}' })
+      expect(loneKey.status).toBe(400)
+      expect(loneKey.body["error"]).toContain("unpaired surrogate")
+      const nestedKey = await bot.submit({ kind: "poll", payload: { poll_id: "d", nest: { "\udfff": 1 } } })
+      expect(nestedKey.status).toBe(400)
+      expect(store.countPending()).toBe(0)
+    })
+
+    it("accepts a payload one level below the limit, and a well-formed surrogate pair", async () => {
+      const { bot } = inbox(makeStore)
+      const atLimit = await bot.submit({ kind: "poll", payload: { poll_id: "c", nest: deep(MAX_PAYLOAD_DEPTH - 1) } })
+      expect(atLimit.status).toBe(201)
+      expect((await bot.submit({ kind: "poll", payload: { poll_id: "d", note: "🗳️" } })).status).toBe(201)
     })
 
     it("accepts a body of exactly 256 KiB", async () => {
