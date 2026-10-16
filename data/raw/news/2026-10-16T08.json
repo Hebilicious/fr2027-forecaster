@@ -1,0 +1,164 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-16T08:29:00Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-16T08:00:02Z",
+      "title": "Les groupes de niveaux au collège auraient-ils pu fonctionner, comme le pense Gabriel Attal ?",
+      "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/les-groupes-de-niveaux-au-college-auraient-ils-pu-fonctionner-comme-le-pense-gabriel-attal_8218996.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-16T07:11:33Z",
+      "title": "Mobilisation des lycéens : \"Sébastien Lecornu sème lui-même le chaos\", estime Nicolas Dupont-Aignan",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/l-invite-politique/l-invite-politique-du-vendredi-16-octobre-2026_8210528.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T07:28:41Z",
+      "title": "Eric Zemmour",
+      "url": "https://www.bfmtv.com/politique/eric-zemmour_DN-202110270595.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T07:28:40Z",
+      "title": "Présidentielle 2027: un sondage donne Raphaël Glucksmann au coude-à-coude avec Jean-Luc Mélenchon et Édouard Philippe après sa victoire à la primaire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-un-sondage-donne-raphael-glucksmann-au-coude-a-coude-avec-jean-luc-melenchon-et-edouard-philippe-apres-sa-victoire-a-la-primaire_AD-202610160270.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Limiter les vacances de Toussaint ou de Pâques » : Édouard Philippe veut faire évoluer les rythmes scolaires",
+      "url": "https://www.leparisien.fr/elections/limiter-les-vacances-de-toussaint-ou-de-paques-edouard-philippe-veut-faire-evoluer-les-rythmes-scolaires-16-10-2026-6FNMI35DNNBWHDEVYJQ6ZWE54Y.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Parcoursup : Marine Le Pen veut la « transparence totale » dans les critères de sélection à l’issue du lycée",
+      "url": "https://www.leparisien.fr/elections/presidentielle/parcoursup-marine-le-pen-veut-la-transparence-totale-dans-les-criteres-de-selection-a-lissue-du-lycee-16-10-2026-KNWG4E2DSBDIHK5MFIVL3HWCDQ.php"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il contrôle tout » : Franck Robine, le préfet qui doit faire décoller la campagne Retailleau",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-controle-tout-franck-robine-le-prefet-qui-doit-faire-decoller-la-campagne-retailleau-16-10-2026-CPK4MC7XWZDIZHSTVMK5ISR3UI.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-16T08:14:18Z",
+      "title": "Présidentielle 2027 : « Personne ne gagnera seul »… Marine Tondelier, une candidature entourée de flou",
+      "url": "https://www.20minutes.fr/politique/4254638-20261016-presidentielle-2027-personne-gagnera-seul-marine-tondelier-candidature-entouree-flou"
+    }
+  ],
+  "schema_version": "1.0"
+}
