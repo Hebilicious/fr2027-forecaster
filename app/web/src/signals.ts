@@ -9,6 +9,7 @@ import type {
   NewsDay,
   PageViews,
   Question,
+  Signals,
   Venue,
   XRow,
 } from "./api/schemas"
@@ -35,6 +36,31 @@ export function candidateNames(forecast: Forecast): ReadonlyMap<string, string> 
 }
 
 export const nameOf = (names: ReadonlyMap<string, string>, id: string): string => names.get(id) ?? id
+
+/**
+ * The signals without the candidates in `hidden`. A headline or event naming several people stays while one of
+ * them is shown, and one naming nobody always stays.
+ */
+export function filterSignals(signals: Signals, hidden: ReadonlySet<string>): Signals {
+  const shown = (row: { candidate_id: string }) => !hidden.has(row.candidate_id)
+  const anyShown = (ids: readonly string[]) => ids.length === 0 || ids.some((id) => !hidden.has(id))
+  return {
+    ...signals,
+    markets: {
+      ...signals.markets,
+      latest: signals.markets.latest.filter(shown),
+      history: signals.markets.history.filter(shown),
+    },
+    attention: { ...signals.attention, rows: signals.attention.rows.filter(shown) },
+    x: { rows: signals.x.rows.filter(shown) },
+    news: {
+      ...signals.news,
+      daily: signals.news.daily.filter(shown),
+      headlines: signals.news.headlines.filter((h) => anyShown(h.candidate_ids)),
+    },
+    events: signals.events.filter((e) => anyShown(e.candidate_ids)),
+  }
+}
 
 export interface Point {
   readonly date: string

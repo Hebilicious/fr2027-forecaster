@@ -310,34 +310,6 @@ export default {
       "zh-Hans": "天后举行第一轮投票",
       th: "วันก่อนการเลือกตั้งรอบแรก",
     }),
-    roundDates: insert(
-      t({
-        fr: "Premier tour le {{r1}}, second tour le {{r2}}",
-        "en-GB": "First round on {{r1}}, second round on {{r2}}",
-        de: "Erster Wahlgang am {{r1}}, Stichwahl am {{r2}}",
-        it: "Primo turno il {{r1}}, ballottaggio il {{r2}}",
-        "es-ES": "Primera vuelta el {{r1}}, segunda vuelta el {{r2}}",
-        "pt-PT": "Primeira volta a {{r1}}, segunda volta a {{r2}}",
-        ja: "第1回投票は{{r1}}、決選投票は{{r2}}",
-        ko: "1차 투표 {{r1}}, 결선 투표 {{r2}}",
-        "zh-Hans": "第一轮投票于{{r1}}举行，第二轮投票于{{r2}}举行",
-        th: "รอบแรกวันที่ {{r1}} รอบสองวันที่ {{r2}}",
-      }),
-    ),
-    daysToRound1: insert(
-      t({
-        fr: "J-{{n}} avant le premier tour",
-        "en-GB": "{{n}} days to the first round",
-        de: "Noch {{n}} Tage bis zum ersten Wahlgang",
-        it: "{{n}} giorni al primo turno",
-        "es-ES": "Faltan {{n}} días para la primera vuelta",
-        "pt-PT": "Faltam {{n}} dias para a primeira volta",
-        ja: "第1回投票まであと{{n}}日",
-        ko: "1차 투표까지 {{n}}일",
-        "zh-Hans": "距第一轮投票还有 {{n}} 天",
-        th: "อีก {{n}} วันถึงการเลือกตั้งรอบแรก",
-      }),
-    ),
     updated: insert(
       t({
         fr: "Mise à jour {{when}}",

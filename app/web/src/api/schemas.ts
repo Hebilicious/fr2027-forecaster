@@ -15,6 +15,8 @@ const CandidateForecast = Schema.Struct({
   party: Schema.String,
   bloc: Schema.String,
   status: Schema.String,
+  /** The config slot the candidate runs from; forecasts written before it was added lack it. */
+  slot: Schema.optional(Schema.String),
   p_run: Schema.Finite,
   simulated: Schema.Boolean,
   p_qualify_r1: Schema.Finite,

@@ -111,7 +111,7 @@ Since routine 1's `x-activity-3`, a drop sends stance counts instead of `sentime
 
 **News row (`data/clean/news.csv`):** `ts, outlet, url, title, candidate_ids[], event_tags[]`. Store titles and links only, not article bodies.
 
-**Forecast output (`data/forecasts/YYYY-MM-DDTHH.json`):** per candidate: `p_run`, `p_qualify_r1`, `p_win`, R1 vote share mean and 80% interval; per pair: `p_matchup`, `p_win_given_matchup`; plus `model_version`, `inputs_hash`, and the top drivers of change since the previous run.
+**Forecast output (`data/forecasts/YYYY-MM-DDTHH.json`):** per candidate: the field slot they run from, `p_run`, `p_qualify_r1`, `p_win`, R1 vote share mean and 80% interval; per pair: `p_matchup`, `p_win_given_matchup`; plus `model_version`, `inputs_hash`, and the top drivers of change since the previous run.
 
 ## Modeling
 

@@ -1,18 +1,24 @@
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, toRef } from "vue"
 import { useIntlayer } from "vue-intlayer"
 import type { Forecast, Signals } from "../api/schemas"
+import FieldFilter from "../components/FieldFilter.vue"
 import AttentionSection from "../components/signals/AttentionSection.vue"
 import EventsSection from "../components/signals/EventsSection.vue"
 import MarketsSection from "../components/signals/MarketsSection.vue"
 import NewsSection from "../components/signals/NewsSection.vue"
 import XSection from "../components/signals/XSection.vue"
-import { candidateNames } from "../signals"
+import { candidateNames, filterSignals } from "../signals"
+import { useFieldFilter } from "../useFieldFilter"
 
 const props = defineProps<{ forecast: Forecast; signals: Signals | null }>()
 const content = useIntlayer("signals-view")
 
 const names = computed(() => candidateNames(props.forecast))
+const { query, showAll, field } = useFieldFilter(toRef(() => props.forecast.candidates))
+// Every section reads the same filtered data; the markets table lists the model's side from the visible field.
+const shown = computed(() => (props.signals ? filterSignals(props.signals, field.value.hidden) : null))
+const visibleForecast = computed(() => ({ ...props.forecast, candidates: field.value.visible }))
 </script>
 
 <template>
@@ -21,14 +27,21 @@ const names = computed(() => candidateNames(props.forecast))
       <span aria-hidden="true" class="icon">!</span>
       <span>{{ content.missing }}</span>
     </p>
-    <template v-else>
-      <MarketsSection class="rise" :forecast="forecast" :markets="signals.markets" />
+    <template v-else-if="shown">
+      <FieldFilter
+        v-model:query="query"
+        v-model:show-all="showAll"
+        class="card filter rise"
+        :field="field"
+        :total="forecast.candidates.length"
+      />
+      <MarketsSection class="rise" :forecast="visibleForecast" :markets="shown.markets" />
       <div class="pair">
-        <AttentionSection class="rise" :style="{ '--i': 1 }" :attention="signals.attention" :names="names" />
-        <XSection class="rise" :style="{ '--i': 2 }" :rows="signals.x.rows" :names="names" />
+        <AttentionSection class="rise" :style="{ '--i': 1 }" :attention="shown.attention" :names="names" />
+        <XSection class="rise" :style="{ '--i': 2 }" :rows="shown.x.rows" :names="names" />
       </div>
-      <NewsSection class="rise" :style="{ '--i': 3 }" :news="signals.news" :names="names" />
-      <EventsSection class="rise" :style="{ '--i': 4 }" :events="signals.events" :names="names" />
+      <NewsSection class="rise" :style="{ '--i': 3 }" :news="shown.news" :names="names" />
+      <EventsSection class="rise" :style="{ '--i': 4 }" :events="shown.events" :names="names" />
     </template>
   </div>
 </template>
@@ -37,6 +50,10 @@ const names = computed(() => candidateNames(props.forecast))
 .signals {
   display: grid;
   gap: clamp(20px, 2.4vw, 28px);
+}
+
+.filter {
+  padding: 18px 22px;
 }
 
 .pair {

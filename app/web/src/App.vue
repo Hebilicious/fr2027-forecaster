@@ -147,17 +147,9 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
           </p>
           <h1>{{ plate.title }}</h1>
           <p class="lede">{{ plate.lede }}</p>
-          <p v-if="forecast" class="updated">
-            {{
-              content.roundDates({
-                r1: longDate(forecast.election.round1, locale),
-                r2: longDate(forecast.election.round2, locale),
-              })
-            }}
-            <template v-if="daysLeft !== null && daysLeft >= 0"> · {{ content.daysToRound1({ n: daysLeft }) }}</template>
-          </p>
         </template>
-        <p v-if="forecast" class="updated">
+        <!-- Only the overview says how fresh the forecast is; Sources and health has the details. -->
+        <p v-if="forecast && !plate" class="updated">
           {{ content.updated({ when: dateTime(forecast.generated_at, locale) }) }} ·
           {{ content.asOf({ date: longDate(forecast.as_of, locale) }) }}
         </p>

@@ -1,17 +1,21 @@
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
 import { round2Matrix, type MatrixCell } from "../charts"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
+import FieldFilter from "../components/FieldFilter.vue"
 import { probability } from "../format"
+import { useFieldFilter } from "../useFieldFilter"
 
 const props = defineProps<{ forecast: Forecast }>()
 const content = useIntlayer("round2-view")
 const common = useIntlayer("common")
 const { locale } = useLocale()
 
-const matrix = computed(() => round2Matrix(props.forecast, 8))
+const { query, showAll, field } = useFieldFilter(toRef(() => props.forecast.candidates))
+// The matrix drops whoever the toggle sets aside; the search narrows the list of pairings to those it names.
+const matrix = computed(() => round2Matrix(props.forecast, 8, field.value.setAside))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
 const rows = computed(() =>
   matrix.value.candidates.map((row) => ({
@@ -30,12 +34,24 @@ function stepFor(p: number): number {
   if (p <= 0) return 0
   return Math.min(steps.length - 1, 1 + Math.floor((p / maxMatchup.value) * (steps.length - 1.0001)))
 }
-const topPairs = computed(() => props.forecast.pairs.slice(0, 10))
+const topPairs = computed(() =>
+  props.forecast.pairs
+    .filter((p) => !field.value.setAside.has(p.a) && !field.value.setAside.has(p.b))
+    .filter((p) => !field.value.hidden.has(p.a) || !field.value.hidden.has(p.b))
+    .slice(0, 10),
+)
 const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_matchup[id] ?? 0
 </script>
 
 <template>
   <div class="round2">
+    <FieldFilter
+      v-model:query="query"
+      v-model:show-all="showAll"
+      class="card filter rise"
+      :field="field"
+      :total="forecast.candidates.length"
+    />
     <section aria-labelledby="matrix-title" class="card rise">
       <header class="card-head">
         <h2 id="matrix-title">{{ content.matrixTitle }}</h2>
@@ -154,6 +170,10 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
 .round2 {
   display: grid;
   gap: clamp(20px, 2.4vw, 28px);
+}
+
+.filter {
+  padding: 18px 22px;
 }
 
 .matrix {

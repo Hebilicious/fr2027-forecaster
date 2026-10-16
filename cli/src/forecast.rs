@@ -65,6 +65,8 @@ struct CandidateOut {
     party: String,
     bloc: String,
     status: String,
+    /// The config slot the candidate runs from, shared with the others who can only run instead of them.
+    slot: String,
     p_run: f64,
     simulated: bool,
     p_qualify_r1: f64,
@@ -288,6 +290,16 @@ fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date) -> Result<String>
     Ok(content_hash(&bytes))
 }
 
+/// The id of the slot whose options name the candidate; the field model rejects a config where none does.
+fn slot_of(config: &CandidatesConfig, candidate: &str) -> String {
+    config
+        .slots
+        .iter()
+        .find(|s| s.options.iter().any(|o| o.run.iter().any(|id| id == candidate)))
+        .map(|s| s.id.clone())
+        .unwrap_or_default()
+}
+
 #[allow(clippy::too_many_arguments)]
 fn build(
     config: &CandidatesConfig,
@@ -311,6 +323,7 @@ fn build(
                 party: entry.party.clone(),
                 bloc: entry.bloc.clone(),
                 status: entry.status.clone(),
+                slot: slot_of(config, &entry.id),
                 p_run: round4(c.p_run),
                 simulated: c.simulated,
                 p_qualify_r1: round4(c.p_qualify_r1),

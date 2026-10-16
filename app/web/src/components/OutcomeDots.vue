@@ -6,12 +6,13 @@ import { outcomeGroups, type OutcomeGroup } from "../charts"
 import CandidateAvatar from "./CandidateAvatar.vue"
 import { probability } from "../format"
 
-const props = defineProps<{ forecast: Forecast }>()
+const props = defineProps<{ forecast: Forecast; pool?: ReadonlySet<string> }>()
 const content = useIntlayer("outcome-dots")
 const { locale } = useLocale()
 
-// One dot per percentage point. Every candidate's dots are the same bleu; the pooled tail is grey.
-const groups = computed(() => outcomeGroups(props.forecast.candidates))
+// One dot per percentage point. Every candidate's dots are the same bleu; the pooled tail, with anyone the
+// filter sets aside, is grey.
+const groups = computed(() => outcomeGroups(props.forecast.candidates, props.pool))
 const label = (g: OutcomeGroup) =>
   g.name === null
     ? content.othersGroup({ m: g.members, p: probability(g.probability, locale.value) })

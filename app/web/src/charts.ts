@@ -87,13 +87,14 @@ export interface MatrixCell {
   readonly polled: boolean
 }
 
-/** The round 2 matrix over the `size` candidates most likely to qualify. */
+/** The round 2 matrix over the `size` candidates most likely to qualify, leaving out those in `exclude`. */
 export function round2Matrix(
   forecast: Forecast,
   size: number,
+  exclude: ReadonlySet<string> = new Set(),
 ): { candidates: CandidateForecast[]; cells: MatrixCell[] } {
   const candidates = forecast.candidates
-    .filter((c) => c.p_qualify_r1 > 0)
+    .filter((c) => c.p_qualify_r1 > 0 && !exclude.has(c.candidate_id))
     .toSorted((a, b) => b.p_qualify_r1 - a.p_qualify_r1)
     .slice(0, size)
   const cells: MatrixCell[] = []
@@ -134,17 +135,22 @@ export interface OutcomeGroup {
 
 /**
  * Each candidate's chance of winning as dots, one per percentage point, largest first. Everyone a
- * table would show as "<1%" (below half a point) is pooled into one group, last; a group that
- * rounds to no dot is left out, and only a certainty fills all 100. Rounding can make the dots add
- * up to 99 or 101.
+ * table would show as "<1%" (below half a point), and everyone in `pool`, is pooled into one group,
+ * last; a group that rounds to no dot is left out, and only a certainty fills all 100. Rounding can
+ * make the dots add up to 99 or 101.
  */
-export function outcomeGroups(candidates: readonly CandidateForecast[], min = 0.005): OutcomeGroup[] {
+export function outcomeGroups(
+  candidates: readonly CandidateForecast[],
+  pool: ReadonlySet<string> = new Set(),
+  min = 0.005,
+): OutcomeGroup[] {
   const ranked = candidates.filter((c) => c.p_win > 0).toSorted((a, b) => b.p_win - a.p_win)
-  const pooled = ranked.filter((c) => c.p_win < min)
+  const pooledHere = (c: CandidateForecast) => c.p_win < min || pool.has(c.candidate_id)
+  const pooled = ranked.filter(pooledHere)
   const pooledProbability = pooled.reduce((sum, c) => sum + c.p_win, 0)
   const groups = [
     ...ranked
-      .filter((c) => c.p_win >= min)
+      .filter((c) => !pooledHere(c))
       .map((c) => ({ candidateId: c.candidate_id, name: c.name, probability: c.p_win, members: 1 })),
     ...(pooled.length > 0
       ? [{ candidateId: null, name: null, probability: pooledProbability, members: pooled.length }]
