@@ -1,0 +1,48 @@
+schema_version: "1.0"
+poll_id: odoxa-2026-05-21-10189
+supersedes: odoxa-2026-05-21
+firm: odoxa
+sponsor: Mascaret / Public Sénat / regional press
+field_start: "2026-05-20"
+field_end: "2026-05-21"
+published_at: "2026-05-26"
+sample_size: 1005
+method: online
+population: likely
+source_url: >-
+  https://www.odoxa.fr/wp-content/uploads/2026/05/Barometre-Politique-Odoxa-_-Mai-2026.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/mai/10189-pres-barometre-odoxa-26-mai.pdf
+index_url: null
+retrieved_at: "2026-10-16T16:39:58Z"
+entry: primary
+notes: >-
+  928 registered drawn from 1,005; shares are of registered voters intending to
+  vote who expressed a choice (681 in round 1, 630 in round 2). The notice gives
+  method, base and dates but no results; the numbers are from Odoxa's report
+  (source_url). Arthaud '0,5%' entered as 0.5.
+agent:
+  name: Grok Bot fr2027
+  run_id: checks-2026-10-16T16:39Z
+  skill_version: checks-1
+scenarios:
+- label: single scenario
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    bardella: 32
+    dupont_aignan: 2
+    glucksmann: 11
+    melenchon: 16
+    philippe: 17
+    retailleau: 9
+    roussel: 2.5
+    tondelier: 4
+    zemmour: 6
+- label: Philippe v Bardella
+  round: 2
+  scenario_id: H1
+  shares:
+    bardella: 52
+    philippe: 48
