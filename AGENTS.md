@@ -35,6 +35,32 @@ and when.
 
 Install the git hooks once per clone with `moon run repo:hooks-install`.
 
+## UI languages
+
+The web UI (`app/web`) is written in ten languages with [Intlayer](https://intlayer.org): French, the reference, then
+English (UK), German, Italian, Spanish (Spain), Portuguese (Portugal), Japanese, Korean, Chinese (simplified) and Thai.
+`app/web/intlayer.config.ts` lists them. Every screen exists in all ten; a change that adds or rewords UI text is not done
+until it does.
+
+- Every word a visitor reads or hears comes from a dictionary: text, `aria-label`, `title`, `alt` and the page title.
+  `Foo.vue` keeps its words in `Foo.content.ts` beside it and reads them with `useIntlayer("<key>")`; words several
+  components share live in `src/common.content.ts`.
+- Write the French first, then every other locale in the same `t({ ... })`, translated with the same care: the meaning
+  of the French, the terms that language's press uses for French elections, and its own typography. Never ship a locale
+  as a copy of the French or English, never make a locale optional, and never weaken the checks below to get a change
+  through.
+- Put values into a message with `insert(t({ ... }))` and `{{name}}` placeholders, never by joining strings in code, since
+  word order differs between languages. Every locale keeps the French message's placeholders.
+- Format numbers, percentages, dates and lists with `src/format.ts`, which uses `Intl` for the current locale. Never
+  write a locale's separators or a `locale === "fr"` branch by hand.
+- Text that reads the same in every language (a file path, a field name, notation) goes in an element marked
+  `translate="no"`. Names and data (candidates, pollsters, headlines) are shown as the data gives them.
+- Three checks enforce this, and `moon ci` runs them all: `strictMode: "strict"` makes a missing locale a type error
+  (`moon run web:typecheck`), `moon run web:i18n-check` runs `intlayer test`, and `src/catalog.test.ts`
+  (`moon run web:test`) fails on literal text in a template and on a dictionary entry that is empty or loses a
+  placeholder in some locale.
+- To add or drop a language, change `intlayer.config.ts`, its name and flag in `src/locales.ts`, and every dictionary.
+
 ## Automation
 
 Automation, such as the Live workflow's hourly data commits, lands on `main` by itself. It needs no review or
