@@ -1,0 +1,196 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-16T14:13:43Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-16T13:38:31Z",
+      "title": "Marine Le Pen veut «arrêter» l’aide financière à l’Ukraine si elle est élue : comment se positionnent les autres candidats à la présidentielle ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/marine-le-pen-veut-arreter-l-aide-financiere-a-l-ukraine-si-elle-est-elue-comment-se-positionnent-les-autres-candidats-a-la-presidentielle-20261016"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-16T11:36:42Z",
+      "title": "«Vive le 17 octobre» : le site des Républicains brièvement transformé en appel à la mobilisation",
+      "url": "https://www.liberation.fr/politique/vive-le-17-octobre-le-site-des-republicains-brievement-transforme-en-appel-a-la-mobilisation-20261016_YVYRHCJ4RBHQLKUBIVRJSADODY/"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-16T10:56:30Z",
+      "title": "Rémi Boussemart, président des Jeunes Socialistes : «Dans dix ans, j’espère que la gauche aura gagné»",
+      "url": "https://www.liberation.fr/politique/remi-boussemart-president-des-jeunes-socialistes-dans-dix-ans-jespere-que-la-gauche-aura-gagne-20261016_36ZKUSFXPJA3VJCBMNRT7MK2YU/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-16T10:35:54Z",
+      "title": "Finalement, Marine Le Pen est prête à faire campagne sous bracelet électronique",
+      "url": "https://www.liberation.fr/politique/finalement-marine-le-pen-est-prete-a-faire-campagne-sous-bracelet-electronique-20261016_D23TOVPE3FDGDMLORNLP675JVM/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-16T12:02:57Z",
+      "title": "Les parlementaires RN et UDR saisissent le Conseil constitutionnel pour réclamer \"la démission d'office\" de son président Richard Ferrand",
+      "url": "https://www.franceinfo.fr/politique/les-parlementaires-rn-et-udr-saisissent-le-conseil-constitutionnel-pour-reclamer-la-demission-d-office-de-son-president-richard-ferrand_8240230.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-16T12:34:37Z",
+      "title": "Le site du parti Les Républicains a été piraté pour afficher un appel à manifester le 17 octobre, l'entourage de Bruno Retailleau annonce porter plainte",
+      "url": "https://www.franceinfo.fr/politique/les-republicains/le-site-des-republicains-a-ete-pirate-le-parti-politique-annonce-porter-plainte_8240143.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T13:39:31Z",
+      "title": "Conseil constitutionnel: Richard Ferrand a \"piétiné l'État de droit\", estime Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/video-conseil-constitutionnel-richard-ferrand-a-pietine-l-etat-de-droit-estime-jordan-bardella_VN-202610160542.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T13:16:13Z",
+      "title": "17 octobre: \"Une journée pour la France du chaos\", assure Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-17-octobre-une-journee-pour-la-france-du-chaos-assure-jordan-bardella_VN-202610160527.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T11:53:56Z",
+      "title": "Le site des Républicains victime d'un piratage, un appel à rejoindre les manifestations du 17 octobre affiché",
+      "url": "https://www.bfmtv.com/politique/les-republicains/le-site-des-republicains-victime-d-un-piratage-un-appel-a-rejoindre-les-manifestations-du-17-octobre-lance_AN-202610160477.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Marine Le Pen à l’Élysée, ça l’angoisse » : entre Richard Ferrand et la candidate RN, récit d’un bras de fer",
+      "url": "https://www.leparisien.fr/elections/presidentielle/marine-le-pen-a-lelysee-ca-langoisse-entre-richard-ferrand-et-la-candidate-rn-recit-dun-bras-de-fer-16-10-2026-JMIHZL7HPRBQZBJDXLI6PTDHQA.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Zemmour devant Le Pen, bataille entre Mélenchon et Jadot… que disaient les sondages six mois avant le premier tour en 2022 ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-zemmour-devant-le-pen-bataille-entre-melenchon-et-jadot-que-disaient-les-sondages-six-mois-avant-le-premier-tour-en-2022-16-10-2026-ABKC2VKOIJB3ZNDEVYOZEUVMP4.php"
+    },
+    {
+      "candidate_ids": [
+        "bertrand"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-16T13:15:31Z",
+      "title": "Xavier Bertrand estime que le gouvernement est « un pickpocket qui fait les poches des élus locaux tous les ans »",
+      "url": "https://www.publicsenat.fr/actualites/territoires/xavier-bertrand-estime-que-le-gouvernement-est-un-pickpocket-qui-fait-les-poches-des-elus-locaux-tous-les-ans"
+    }
+  ],
+  "schema_version": "1.0"
+}
