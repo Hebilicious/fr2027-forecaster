@@ -8,7 +8,7 @@ use fr2027_collectors::Repo;
 use jiff::civil::Date;
 use serde::{Deserialize, Serialize};
 
-use crate::{Error, Result, report::Param};
+use crate::{Error, Result, ablation::AblationConfig, report::Param};
 
 pub const CONFIG_FILE: &str = "backtest.yaml";
 
@@ -33,6 +33,9 @@ pub struct BacktestConfig {
     pub results_file: PathBuf,
     pub final_polls: FinalPollsConfig,
     pub grid: Grid,
+    /// The signal layers to score against the polls-only model; none skips the ablation.
+    #[serde(default)]
+    pub signals_ablation: Option<AblationConfig>,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
@@ -122,6 +125,12 @@ impl BacktestConfig {
         }
         if grid.student_t_df.is_empty() || grid.student_t_df.iter().any(|v| !(v.is_finite() && *v > 2.0)) {
             return Err("grid.student_t_df must be a non-empty list of numbers above 2".into());
+        }
+        if let Some(ablation) = &self.signals_ablation
+            && (ablation.shock_sd_grid.is_empty()
+                || ablation.shock_sd_grid.iter().any(|v| !(v.is_finite() && *v >= 0.0)))
+        {
+            return Err("signals_ablation.shock_sd_grid must be a non-empty list of non-negative numbers".into());
         }
         Ok(())
     }

@@ -25,6 +25,9 @@
 //! scenario-specific part (`scenario_noise_share` of the multinomial covariance). A poll then
 //! counts once for the levels, while the contrasts between its scenarios, which is where the
 //! presence effects come from, stay as precise as the respondents make them.
+//!
+//! News and attention spikes ([`crate::signals`]) add variance to a candidate's `alpha` and their
+//! bloc's `beta` for some days after each spike, on top of the random walk.
 
 use nalgebra::{DMatrix, DVector};
 
@@ -34,6 +37,7 @@ use crate::{
     kalman::{Gaussian, Sampler},
     quantile,
     rng::Rng,
+    signals::{ShockVariance, SignalParams, Spike},
 };
 
 /// Where each quantity sits in the state vector. The vote-relevant quantities (`beta`,
@@ -165,6 +169,8 @@ pub struct Noise {
     pub random_walk_sd: f64,
     pub design_effect: f64,
     pub scenario_noise_share: f64,
+    /// Total extra standard deviation a news or attention spike adds (0: none).
+    pub shock_sd: f64,
 }
 
 #[derive(Clone, Debug)]
@@ -197,19 +203,55 @@ pub struct Round1Fit {
     pub polls_used: usize,
     pub scenarios_used: usize,
     pub house_effects: Vec<HouseEffect>,
+    /// The spikes detected by `as_of`, and the variance they add at the chosen `shock_sd`.
+    pub spikes: Vec<Spike>,
+    pub shocks: ShockVariance,
 }
 
 impl Round1Fit {
-    /// The vote state projected to `date` by the random walk.
+    /// The vote state projected to `date` by the random walk, plus the variance recent spikes
+    /// have not accrued yet by `as_of`.
     pub fn vote_state_at(&self, date: jiff::civil::Date) -> Gaussian {
         let mut state = self.state.leading(self.layout.vote_dim());
-        let days = f64::from(day_number(date) - day_number(self.as_of));
-        state.predict_random_walk(
-            &daily_variance(&self.layout, self.noise.random_walk_sd, self.layout.vote_dim()),
-            days,
+        let variance = daily_variance(&self.layout, self.noise.random_walk_sd, self.layout.vote_dim());
+        advance(
+            &mut state,
+            &variance,
+            &self.shocks,
+            day_number(self.as_of),
+            day_number(date),
         );
         state
     }
+}
+
+/// Moves the state from day `from` to day `to`: the random walk, plus what the spikes accrue.
+fn advance(state: &mut Gaussian, variance: &[f64], shocks: &ShockVariance, from: i32, to: i32) {
+    state.predict_random_walk(variance, f64::from(to - from));
+    let dim = state.dim();
+    shocks.accrue(
+        &mut |i, v| {
+            if i < dim {
+                state.cov[(i, i)] += v;
+            }
+        },
+        from,
+        to,
+    );
+}
+
+/// The spikes' variance at a given `shock_sd`, on each spiking candidate's support and bloc.
+fn shock_variance(layout: &Layout, spikes: &[Spike], shock_sd: f64, half_life_days: f64) -> ShockVariance {
+    let shocks = spikes
+        .iter()
+        .map(|s| {
+            (
+                [layout.alpha(s.candidate), layout.beta(layout.bloc_of[s.candidate])],
+                day_number(s.date),
+            )
+        })
+        .collect();
+    ShockVariance::new(shocks, shock_sd, half_life_days)
 }
 
 fn daily_variance(layout: &Layout, random_walk_sd: f64, dim: usize) -> Vec<f64> {
@@ -235,11 +277,14 @@ struct Observation {
 }
 
 /// Fits the aggregation to every round 1 scenario published on or before `as_of`, choosing
-/// the random-walk scale and design effect by marginal likelihood.
+/// the random-walk scale, design effect, scenario noise share and spike variance by marginal
+/// likelihood. `spikes` are the events detected by `as_of` ([`crate::signals::detect`]).
 pub fn fit_round1(
     field: &Field,
     polls: &[Poll],
     params: &AggregationParams,
+    signals: &SignalParams,
+    spikes: &[Spike],
     as_of: jiff::civil::Date,
     seed: u64,
 ) -> Result<Round1Fit, ModelError> {
@@ -263,17 +308,28 @@ pub fn fit_round1(
     };
     let end_day = day_number(as_of);
 
+    // Without spikes, every shock_sd fits the same; try only the first.
+    let shock_sd_grid = if spikes.is_empty() {
+        &signals.shock_sd_grid[..1]
+    } else {
+        &signals.shock_sd_grid[..]
+    };
     let mut grid = Vec::new();
-    for &random_walk_sd in &params.random_walk_sd_grid {
-        for &design_effect in &params.design_effect_grid {
-            for &scenario_noise_share in &params.scenario_noise_share_grid {
-                let noise = Noise {
-                    random_walk_sd,
-                    design_effect,
-                    scenario_noise_share,
-                };
-                let (_, log_likelihood) = run_filter(&layout, &observations, params, noise, end_day, None)?;
-                grid.push(GridPoint { noise, log_likelihood });
+    for &shock_sd in shock_sd_grid {
+        let shocks = shock_variance(&layout, spikes, shock_sd, signals.half_life_days);
+        for &random_walk_sd in &params.random_walk_sd_grid {
+            for &design_effect in &params.design_effect_grid {
+                for &scenario_noise_share in &params.scenario_noise_share_grid {
+                    let noise = Noise {
+                        random_walk_sd,
+                        design_effect,
+                        scenario_noise_share,
+                        shock_sd,
+                    };
+                    let (_, log_likelihood) =
+                        run_filter(&layout, &observations, params, noise, &shocks, end_day, None)?;
+                    grid.push(GridPoint { noise, log_likelihood });
+                }
             }
         }
     }
@@ -283,8 +339,17 @@ pub fn fit_round1(
         .expect("non-empty grid")
         .clone();
 
+    let shocks = shock_variance(&layout, spikes, best.noise.shock_sd, signals.half_life_days);
     let mut recorder = SeriesRecorder::new(field, &layout, &observations, params, end_day, seed);
-    let (state, _) = run_filter(&layout, &observations, params, best.noise, end_day, Some(&mut recorder))?;
+    let (state, _) = run_filter(
+        &layout,
+        &observations,
+        params,
+        best.noise,
+        &shocks,
+        end_day,
+        Some(&mut recorder),
+    )?;
 
     let mut house_effects = Vec::new();
     for (f, firm) in layout.firms.iter().enumerate() {
@@ -315,6 +380,8 @@ pub fn fit_round1(
         scenarios_used: observations.iter().map(|o| o.scenarios.len()).sum(),
         house_effects,
         layout,
+        spikes: spikes.to_vec(),
+        shocks,
     })
 }
 
@@ -554,6 +621,7 @@ fn run_filter(
     observations: &[Observation],
     params: &AggregationParams,
     noise: Noise,
+    shocks: &ShockVariance,
     end_day: i32,
     mut recorder: Option<&mut SeriesRecorder>,
 ) -> Result<(Gaussian, f64), ModelError> {
@@ -564,25 +632,25 @@ fn run_filter(
     for observation in observations {
         if let Some(recorder) = recorder.as_deref_mut() {
             while let Some(grid_day) = recorder.next_day().filter(|d| *d < observation.day) {
-                state.predict_random_walk(&variance, f64::from(grid_day - day));
+                advance(&mut state, &variance, shocks, day, grid_day);
                 day = grid_day;
                 recorder.record(layout, &state)?;
             }
             recorder.saw(observation);
         }
-        state.predict_random_walk(&variance, f64::from(observation.day - day));
+        advance(&mut state, &variance, shocks, day, observation.day);
         day = observation.day;
         let linearised = linearise(layout, observation, noise.design_effect, noise.scenario_noise_share);
         log_likelihood += state.update(&linearised.h, &linearised.y, &linearised.r)?;
     }
     if let Some(recorder) = recorder {
         while let Some(grid_day) = recorder.next_day() {
-            state.predict_random_walk(&variance, f64::from(grid_day - day));
+            advance(&mut state, &variance, shocks, day, grid_day);
             day = grid_day;
             recorder.record(layout, &state)?;
         }
     }
-    state.predict_random_walk(&variance, f64::from(end_day - day));
+    advance(&mut state, &variance, shocks, day, end_day);
     Ok((state, log_likelihood))
 }
 
@@ -791,7 +859,16 @@ mod tests {
                 )
             })
             .collect();
-        let fit = fit_round1(&field(), &polls, &params(), date(2026, 10, 1), 1).unwrap();
+        let fit = fit_round1(
+            &field(),
+            &polls,
+            &params(),
+            &SignalParams::off(),
+            &[],
+            date(2026, 10, 1),
+            1,
+        )
+        .unwrap();
         let x: Vec<f64> = fit.state.mean.iter().copied().take(fit.layout.vote_dim()).collect();
         let mut out = vec![0.0; 4];
         let mut scratch = ShareScratch::new(&fit.layout);
@@ -818,8 +895,26 @@ mod tests {
         let early = poll("early", "a", 1, vec![vec![("l1", 30.0), ("c1", 30.0), ("r1", 40.0)]]);
         let mut late = poll("late", "a", 20, vec![vec![("l1", 60.0), ("c1", 20.0), ("r1", 20.0)]]);
         late.published_at = date(2026, 9, 25);
-        let fit = fit_round1(&field(), &[early.clone(), late], &params(), date(2026, 9, 24), 1).unwrap();
-        let only_early = fit_round1(&field(), &[early], &params(), date(2026, 9, 24), 1).unwrap();
+        let fit = fit_round1(
+            &field(),
+            &[early.clone(), late],
+            &params(),
+            &SignalParams::off(),
+            &[],
+            date(2026, 9, 24),
+            1,
+        )
+        .unwrap();
+        let only_early = fit_round1(
+            &field(),
+            &[early],
+            &params(),
+            &SignalParams::off(),
+            &[],
+            date(2026, 9, 24),
+            1,
+        )
+        .unwrap();
         assert_eq!(fit.polls_used, 1);
         assert_eq!(fit.state.mean, only_early.state.mean);
     }
@@ -828,7 +923,15 @@ mod tests {
     fn rejects_unknown_candidates() {
         let bad = poll("bad", "a", 1, vec![vec![("zz", 30.0), ("c1", 70.0)]]);
         assert!(matches!(
-            fit_round1(&field(), &[bad], &params(), date(2026, 10, 1), 1),
+            fit_round1(
+                &field(),
+                &[bad],
+                &params(),
+                &SignalParams::off(),
+                &[],
+                date(2026, 10, 1),
+                1
+            ),
             Err(ModelError::InvalidPoll { .. })
         ));
     }
