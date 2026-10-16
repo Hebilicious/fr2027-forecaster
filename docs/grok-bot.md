@@ -130,7 +130,8 @@ polls-, events- or checks-, e.g. polls-2026-10-16T07:30Z. Every "agent" in this 
    Never print the token.
 
 RULES. Report only what you read or measured; use null for anything you cannot measure, and
-never present an estimate as measured. Find official documents (Commission des sondages
+never present an estimate as measured. A regional outlet carrying an AFP or Reuters wire
+counts as a national source. Find official documents (Commission des sondages
 notices, Conseil constitutionnel decisions, court rulings) through a search or the Wayback
 Machine, never by trying URLs one after another on a government site. Never include X post
 ids, user names or any secret. Times are UTC like 2026-10-09T18:00:00Z; dates YYYY-MM-DD.
@@ -149,13 +150,16 @@ Neutral, factual English.
    query = (<each name from sources.yaml, in quotes, joined with OR>) lang:fr
    French-language posts only; every query ends with lang:fr. Record:
    - query: the exact search you ran, lang:fr included.
-   - mentions: posts matching the query in the window. From your native X count:
-     mentions_method "native_count". Only estimated from what you read: "sample_estimate".
-     Neither: mentions null.
-   - sample_size: posts you actually read (aim for 50, mixing most recent and most engaged).
+   - mentions: posts matching the query in the window, for every candidate, from X's counts
+     endpoint: mentions_method "x_counts_endpoint". If the counts endpoint fails, your native X
+     count ("native_count"), else an estimate from what you read ("sample_estimate"), else
+     mentions null.
+   - sample_size: read 25 posts (mixing most recent and most engaged) only for the 10
+     candidates with the most mentions in the window. Every other candidate gets sample_size 0,
+     sentiment null and top_topics [].
    - sentiment: among the posts read, fractions positive, negative and neutral toward the
      candidate (pos + neg + neu = 1), method "grok-bot reading <N> posts, routine v2"; null if
-     you read fewer than 20.
+     you read fewer than 20 or none were sampled.
    - top_topics: up to 5 short topics, in English.
    - bot_share_estimate: fraction of posts read from accounts that look automated or
      coordinated (0 to 1), or null.
@@ -178,8 +182,8 @@ Neutral, factual English.
 The contract is [`schemas/grok_drop.schema.json`](../schemas/grok_drop.schema.json). The pipeline
 drops any `sample_post_ids`, so that a post deleted on X never lives on in the public repository.
 
-**Cost:** two runs a day, each reading about 50 posts for each of about 25 candidates: about 2,500
-posts a day, half of what four 6-hour runs read. Grok Bot's docs warn that frequent routines can
+**Cost:** two runs a day, each about 40 X calls: one count per candidate, plus 25 posts read for
+each of the 10 most-mentioned candidates (about 500 posts a day). Grok Bot's docs warn that frequent routines can
 use a week's allowance in a day; if it still runs low, run once a day at 00:20 UTC with a 24-hour
 window. The pipeline accepts any window length.
 
@@ -203,7 +207,9 @@ window. The pipeline accepts any window length.
      "other", format in routine 3) saying who was tested in which poll; routine 4 adds them, and
      you send the poll once they are in the list.
 3. ENTER each remaining poll from the Commission's notice or the pollster's publication (the
-   PDF), never from an article or Wikipedia. Payload fields, exactly (open a file in
+   PDF), never from an article or Wikipedia. Commission PDFs often time out: if one won't load,
+   use its Wayback Machine copy (https://web.archive.org/web/<notice PDF URL>), then the
+   pollster's own PDF; entry stays "primary". Payload fields, exactly (open a file in
    data/raw/polls for the format):
    - schema_version "1.0"
    - poll_id "<firm>-<field_end>-<notice number>", e.g. "ifop-2026-09-29-10284"; without a
@@ -250,7 +256,11 @@ Routine 4 enters each one again from the PDF; Live commits it when both agree.
    (kind "poll_published").
 2. KEEP only events confirmed in at least one primary source or national outlet, whose
    event_id is not in https://github.com/Hebilicious/fr2027-forecaster/tree/main/data/raw/events
-   and not an accepted, proposed or pending key in the inbox. Nothing left: send nothing.
+   and not an accepted, proposed or pending key in the inbox. A regional outlet carrying an AFP
+   or Reuters wire counts as a national outlet. Nothing left: send nothing.
+   DECLARATIONS BY SOMEONE NOT IN candidates.yaml: send a kind "other" event proposing they be
+   added (proposed_change "add_candidate <name>: <party>, <slot>"), even if the declaration is
+   up to 7 days old, unless the inbox or data/raw/events already has it.
 3. POST each as {"kind": "event", "payload": {
      "schema_version": "1.0",
      "event_id": "<date>-<short-slug>", e.g. "2026-10-17-faure-withdraws",
@@ -375,8 +385,8 @@ These open points come from Grok Bot's documentation as read on 2026-10-09:
 - Grok Bot's docs say a Bot can "count recent posts on a topic". They don't say whether the count
   is complete or sampled, or how far back it reaches. That is why each drop records
   `mentions_method`, and why X numbers carry no weight until they are checked. If complete counts
-  matter, X's own counts endpoint (`/2/tweets/counts/recent`, about $0.15 a day for 30 queries)
-  can be added as a GitHub Actions collector.
+  matter, X's own counts endpoint (`/2/tweets/counts/recent`) gives them; routine 1 now uses it
+  (`x_counts_endpoint`) and falls back to the native count.
 - The docs imply but don't state that a Bot secret is available as an environment variable in
   the shell. The Test run in step 5 settles it. If it isn't, the token can sit in a file under
   /workspace instead. Every Bot on the account can read that file, which is one more reason to
