@@ -1,0 +1,67 @@
+name: Commits
+
+# Pull request titles and commit titles are Conventional Commits (scripts/check-semantic.sh), and
+# neither the commits nor the pull request carry AI attribution (.gommage.yml). The pull request
+# title becomes the commit on main, because pull requests merge with a squash merge.
+#
+# The automation's pull requests are left alone: Grok Bot's inbox/polls-* proposals (opened by
+# Live) and the editor's claude/editor-* branches (landed by Land). See AGENTS.md, "Automation".
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: commits-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  semantic:
+    name: semantic
+    if: ${{ !startsWith(github.head_ref, 'inbox/polls-') && !startsWith(github.head_ref, 'claude/editor-') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      # Actions are pinned to full commit SHAs; the tag is in the comment.
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check the pull request title
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: printf '%s\n' "$TITLE" | scripts/check-semantic.sh
+      - name: Check the commit titles
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: git log --no-merges --format=%s "$BASE..$HEAD" | scripts/check-semantic.sh
+
+  authorship:
+    name: authorship
+    if: ${{ !startsWith(github.head_ref, 'inbox/polls-') && !startsWith(github.head_ref, 'claude/editor-') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      # Installs proto only; this job needs node and pnpm, not the Rust toolchain.
+      - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
+        with:
+          auto-install: false
+      - run: proto install node && proto install pnpm && pnpm install --frozen-lockfile
+      - name: Check the commits
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: pnpm exec gommage check "$BASE..$HEAD"
+      - name: Check the pull request title and body
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.pull_request.number }}
+        run: pnpm exec gommage pr check --pr "$NUMBER" --repo "$GITHUB_REPOSITORY"

@@ -146,7 +146,7 @@ jobs:
           git add -A -- data
           if git diff --cached --quiet; then echo "No new data."; exit 0; fi
           areas=$(git diff --cached --name-only | awk -F/ '$2 == "raw" { print $3 } $2 == "forecasts" { print "forecast" }' | sort -u | paste -sd, -)
-          git commit -q -m "data: ${areas:-clean files} $(date -u +%Y-%m-%dT%H)Z"
+          git commit -q -m "chore(data): ${areas:-clean files} $(date -u +%Y-%m-%dT%H)Z"
           for attempt in 1 2 3; do
             if git push -q origin HEAD:main; then exit 0; fi
             git fetch -q origin main
@@ -192,7 +192,7 @@ jobs:
           $FR2027 ingest
           $FR2027 validate
           git add -A -- data/raw/polls data/clean
-          git commit -q -m "polls: ${ids} (from Grok Bot, for review)"
+          git commit -q -m "chore(polls): ${ids} (from Grok Bot, for review)"
           git push -q origin "$branch"
           body=$(printf '%s\n\n%s\n\n%s\n' \
             "Grok Bot sent these polls to the inbox: ${ids}. Each file passed the schema, candidate and sum checks in the Live run ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}." \
