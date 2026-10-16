@@ -920,6 +920,70 @@ mod tests {
     }
 
     #[test]
+    fn a_spike_before_a_jump_is_chosen_by_the_likelihood() {
+        // The right bloc jumps from 35% to 45% between two weekly polls; a spike for r1 sits
+        // just before the jump.
+        let before = vec![("l1", 30.0), ("l2", 10.0), ("c1", 25.0), ("r1", 35.0)];
+        let after = vec![("l1", 25.0), ("l2", 8.0), ("c1", 22.0), ("r1", 45.0)];
+        let polls: Vec<Poll> = (0..10)
+            .map(|i| {
+                let shares = if i < 5 { before.clone() } else { after.clone() };
+                poll(&format!("p{i}"), "a", 1 + i as i8 * 2, vec![shares])
+            })
+            .collect();
+        let signals = SignalParams {
+            shock_sd_grid: vec![0.0, 0.3],
+            ..SignalParams::off()
+        };
+        let spike = Spike {
+            candidate: 3,
+            date: date(2026, 9, 9),
+            score: 2.0,
+            ratios: Vec::new(),
+        };
+        let mut params = params();
+        params.random_walk_sd_grid = vec![0.002];
+        let as_of = date(2026, 9, 25);
+        let with = fit_round1(&field(), &polls, &params, &signals, &[spike], as_of, 1).unwrap();
+        assert_eq!(with.noise.shock_sd, 0.3);
+        let without = fit_round1(&field(), &polls, &params, &signals, &[], as_of, 1).unwrap();
+        assert_eq!(without.noise.shock_sd, 0.0);
+        assert!(with.log_likelihood > without.log_likelihood);
+    }
+
+    #[test]
+    fn a_recent_spike_widens_the_projection() {
+        let polls: Vec<Poll> = (0..6)
+            .map(|i| {
+                poll(
+                    &format!("p{i}"),
+                    "a",
+                    1 + i as i8 * 3,
+                    vec![vec![("l1", 30.0), ("c1", 30.0), ("r1", 40.0)]],
+                )
+            })
+            .collect();
+        let signals = SignalParams {
+            shock_sd_grid: vec![0.3],
+            ..SignalParams::off()
+        };
+        let spike = Spike {
+            candidate: 3,
+            date: date(2026, 9, 28),
+            score: 2.0,
+            ratios: Vec::new(),
+        };
+        let as_of = date(2026, 9, 30);
+        let with = fit_round1(&field(), &polls, &params(), &signals, &[spike], as_of, 1).unwrap();
+        let without = fit_round1(&field(), &polls, &params(), &SignalParams::off(), &[], as_of, 1).unwrap();
+        let beta = with.layout.beta(2);
+        let at = date(2026, 12, 1);
+        let (wide, narrow) = (with.vote_state_at(at), without.vote_state_at(at));
+        // Most of the spike's 0.09 is still to accrue after as_of.
+        assert!(wide.cov[(beta, beta)] - narrow.cov[(beta, beta)] > 0.07);
+    }
+
+    #[test]
     fn rejects_unknown_candidates() {
         let bad = poll("bad", "a", 1, vec![vec![("zz", 30.0), ("c1", 70.0)]]);
         assert!(matches!(

@@ -4,8 +4,9 @@
 //!
 //! A variant may be adopted only if it scores at least as well as the polls-only model on every
 //! election, on each of: the contenders' round 1 share log score, the runoff log score, and the
-//! log-loss of who qualifies and who wins. That is the backtest's rule for the error settings
-//! (each body of evidence must agree), with the spec's log-loss added.
+//! log-loss of who qualifies and who wins; and if it changes something (the polls chose a
+//! `shock_sd` above zero in at least one replay). That is the backtest's rule for the error
+//! settings (each body of evidence must agree), with the spec's log-loss added.
 
 use std::collections::BTreeMap;
 
@@ -37,6 +38,8 @@ pub struct Variant {
     pub sources: Vec<SignalSource>,
     pub spike_ratio: Option<f64>,
     pub half_life_days: Option<f64>,
+    pub attention_floor: Option<f64>,
+    pub news_floor: Option<f64>,
 }
 
 impl Variant {
@@ -45,6 +48,8 @@ impl Variant {
             sources: self.sources.clone(),
             spike_ratio: self.spike_ratio.unwrap_or(base.spike_ratio),
             half_life_days: self.half_life_days.unwrap_or(base.half_life_days),
+            attention_floor: self.attention_floor.unwrap_or(base.attention_floor),
+            news_floor: self.news_floor.unwrap_or(base.news_floor),
             shock_sd_grid: shock_sd_grid.to_vec(),
             ..base.clone()
         }
@@ -72,7 +77,10 @@ pub struct VariantResult {
     pub scores: Scores,
     /// Per replay: spikes detected by its date, and the `shock_sd` its polls chose.
     pub replays: Vec<VariantReplay>,
-    /// At least as good as the polls-only model on every election and every score.
+    /// The polls chose a `shock_sd` above zero in at least one replay.
+    pub has_effect: bool,
+    /// Has an effect, and is at least as good as the polls-only model on every election and
+    /// every score.
     pub adoptable: bool,
 }
 
@@ -188,13 +196,20 @@ pub fn run(
         params.signals = variant.params(&model.signals, &ablation.shock_sd_grid);
         let mut replays = prepare_all(elections, &params, config)?;
         let replay_scores = scores(&evaluate(elections, &mut replays, &contenders)?, floor);
-        let adoptable = at_least(&replay_scores, &reference_scores);
+        let has_effect = replays.iter().any(|r| r.fit.round1.noise.shock_sd > 0.0);
+        let adoptable = has_effect && at_least(&replay_scores, &reference_scores);
         progress(&format!(
             "signals ablation, {}: share log score {:.1} (polls only {:.1}){}",
             variant.name,
             replay_scores.overall.share_log_score,
             reference_scores.overall.share_log_score,
-            if adoptable { ", adoptable" } else { "" }
+            if adoptable {
+                ", adoptable"
+            } else if has_effect {
+                ""
+            } else {
+                ", no effect"
+            }
         ));
         variants.push(VariantResult {
             variant: variant.clone(),
@@ -209,6 +224,7 @@ pub fn run(
                     shock_sd: r.fit.round1.noise.shock_sd,
                 })
                 .collect(),
+            has_effect,
             adoptable,
         });
     }

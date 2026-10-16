@@ -6,8 +6,9 @@ seed: 20170423
 # Simulations per replay and per error setting. The error settings share their random numbers, so
 # differences between them are not Monte Carlo noise.
 simulations: 20000
-# Replay dates, in days before round 1: about 6 months, 3 months, 1 month and 1 week.
-horizons_days: [182, 91, 30, 7]
+# Replay dates, in days before round 1, as the spec asks: monthly from 11 months out (the first
+# month of the poll window has too few polls to fit), then weekly over the last 13 weeks.
+horizons_days: [334, 304, 273, 243, 212, 182, 152, 122, 91, 84, 77, 70, 63, 56, 49, 42, 35, 28, 21, 14, 7]
 # A replay sees the polls published by its date whose fieldwork started at most this many days
 # before round 1. One year matches the live forecast, whose first 2027 polls are from April 2026.
 poll_window_days: 365
@@ -82,3 +83,4 @@ signals_ablation:
     - { name: "both, spike at 5×", sources: [attention, news], spike_ratio: 5 }
     - { name: "both, half-life 5 days", sources: [attention, news], half_life_days: 5 }
     - { name: "both, half-life 20 days", sources: [attention, news], half_life_days: 20 }
+    - { name: "both, higher floors", sources: [attention, news], attention_floor: 1000, news_floor: 20 }
