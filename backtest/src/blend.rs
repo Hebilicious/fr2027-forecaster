@@ -129,7 +129,11 @@ fn market_on(rows: &[MarketRow], election: &Election, as_of: Date) -> Option<(Wi
     Some((
         // Conditioned on the runners, nobody outside them can win.
         WinPrices {
-            prices: if win_venues > 0 { average(&win_sum) } else { vec![None; n] },
+            prices: if win_venues > 0 {
+                average(&win_sum)
+            } else {
+                vec![None; n]
+            },
             others: 0.0,
         },
         average(&qualify_sum),

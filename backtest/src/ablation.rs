@@ -220,7 +220,9 @@ pub fn run(
             momentum_weight: None,
             widening: None,
         },
-        signals: published.first().map_or_else(|| model.signals.clone(), |r| r.params.signals.clone()),
+        signals: published
+            .first()
+            .map_or_else(|| model.signals.clone(), |r| r.params.signals.clone()),
         replays: published_replays
             .iter()
             .map(|r| VariantReplay {

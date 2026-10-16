@@ -43,7 +43,7 @@ const shown = computed<Forecast>(() => {
       const x = b.get(c.candidate_id)
       return x ? { ...c, p_win: x.win, p_qualify_r1: x.qualify } : c
     })
-    .sort((a, c) => c.p_win - a.p_win || c.p_qualify_r1 - a.p_qualify_r1)
+    .toSorted((a, c) => c.p_win - a.p_win || c.p_qualify_r1 - a.p_qualify_r1)
   return { ...props.forecast, candidates }
 })
 const { query, showAll, field } = useFieldFilter(toRef(() => shown.value.candidates))
@@ -68,8 +68,10 @@ const blendRows = computed(() => {
   const rows = new Map((props.blend?.candidates ?? []).map((c) => [c.candidate_id, c]))
   return shown.value.candidates.flatMap((c) => {
     const row = field.value.setAside.has(c.candidate_id) ? undefined : rows.get(c.candidate_id)
-    const at = blended.value?.get(c.candidate_id)
-    return row && at && Math.max(row.market.win ?? 0, row.model.win) >= 0.005 ? [{ ...row, at, name: c.name }] : []
+    const blendedRow = blended.value?.get(c.candidate_id)
+    return row && blendedRow && Math.max(row.market.win ?? 0, row.model.win) >= 0.005
+      ? [{ ...row, blended: blendedRow, name: c.name }]
+      : []
   })
 })
 const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.value))
@@ -202,10 +204,10 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               </th>
               <td class="num">{{ probability(row.model.win, locale) }}</td>
               <td class="num secondary">{{ maybe(row.market.win) }}</td>
-              <td class="num strong">{{ probability(row.at.win, locale) }}</td>
+              <td class="num strong">{{ probability(row.blended.win, locale) }}</td>
               <td class="num">{{ probability(row.model.qualify, locale) }}</td>
               <td class="num secondary">{{ maybe(row.market.qualify) }}</td>
-              <td class="num strong">{{ probability(row.at.qualify, locale) }}</td>
+              <td class="num strong">{{ probability(row.blended.qualify, locale) }}</td>
             </tr>
           </tbody>
         </table>
