@@ -4,8 +4,7 @@ name: Commits
 # neither the commits nor the pull request carry AI attribution (.gommage.yml). The pull request
 # title becomes the commit on main, because pull requests merge with a squash merge.
 #
-# The automation's pull requests are left alone: Grok Bot's inbox/polls-* proposals (opened by
-# Live) and the editor's claude/editor-* branches (landed by Land). See AGENTS.md, "Automation".
+# Grok Bot's inbox/polls-* proposals, which the Live workflow opens, are left alone.
 on:
   pull_request:
     types: [opened, edited, reopened, synchronize]
@@ -21,7 +20,7 @@ concurrency:
 jobs:
   semantic:
     name: semantic
-    if: ${{ !startsWith(github.head_ref, 'inbox/polls-') && !startsWith(github.head_ref, 'claude/editor-') }}
+    if: ${{ !startsWith(github.head_ref, 'inbox/polls-') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
@@ -45,7 +44,7 @@ jobs:
 
   authorship:
     name: authorship
-    if: ${{ !startsWith(github.head_ref, 'inbox/polls-') && !startsWith(github.head_ref, 'claude/editor-') }}
+    if: ${{ !startsWith(github.head_ref, 'inbox/polls-') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
