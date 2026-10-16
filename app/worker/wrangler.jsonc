@@ -24,4 +24,13 @@
     "bindings": [{ "name": "INBOX", "class_name": "Inbox" }],
   },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Inbox"] }],
+  // GitHub does not reliably fire the Live workflow's hourly `schedule`, so this cron starts it
+  // with a repository_dispatch (src/dispatch.ts). It signs in as the GitHub App `heb-release`
+  // with the secret GITHUB_APP_PRIVATE_KEY, also left out of `secrets.required`: without it the
+  // cron logs a warning and does nothing. The client ID is public.
+  "triggers": { "crons": ["17 * * * *"] },
+  "vars": {
+    "GITHUB_REPOSITORY": "Hebilicious/fr2027-forecaster",
+    "GITHUB_APP_CLIENT_ID": "Iv23lierXRciGQXCgOuJ",
+  },
 }

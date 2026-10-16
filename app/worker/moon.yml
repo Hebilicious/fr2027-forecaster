@@ -28,7 +28,7 @@ tasks:
       - "/pnpm-lock.yaml"
 
   test:
-    description: "Run the inbox tests in plain Node with vitest (the SQL store runs on node:sqlite)."
+    description: "Run the inbox, site and cron tests in plain Node with vitest (the SQL store runs on node:sqlite)."
     command: "vitest"
     args: ["run"]
     inputs: ["src/**/*", "vitest.config.ts", "package.json", "/pnpm-lock.yaml"]

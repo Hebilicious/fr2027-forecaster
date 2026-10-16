@@ -1,12 +1,18 @@
 import { DurableObject } from "cloudflare:workers"
+import { dispatchLiveRun } from "./dispatch"
 import { handleInbox } from "./inbox"
 import { handleApi } from "./site"
 import { SqlStore } from "./sql-store"
 
-/** Set with `wrangler secret put`; either may be missing, and its inbox routes then answer 503. */
+/**
+ * Set with `wrangler secret put`; any may be missing. Without an inbox token its routes answer
+ * 503; without the GitHub App key the cron does nothing.
+ */
 interface Secrets {
   readonly INBOX_BOT_TOKEN?: string
   readonly INBOX_PIPELINE_TOKEN?: string
+  /** The private key of the GitHub App `heb-release`, as a PKCS#8 PEM. */
+  readonly GITHUB_APP_PRIVATE_KEY?: string
 }
 
 /** The inbox's single instance (named "inbox"), holding its items in SQLite. */
@@ -28,7 +34,7 @@ export class Inbox extends DurableObject<Env & Secrets> {
 }
 
 // Only /inbox/* and /api/* reach this script (assets.run_worker_first); the rest of the static
-// site never does.
+// site never does. The cron (triggers.crons in wrangler.jsonc) starts the Live workflow hourly.
 export default {
   fetch(request, env) {
     const path = new URL(request.url).pathname
@@ -38,4 +44,13 @@ export default {
     if (path.startsWith("/api/")) return handleApi(request, env.ASSETS)
     return env.ASSETS.fetch(request)
   },
-} satisfies ExportedHandler<Env>
+  async scheduled(_controller, env) {
+    await dispatchLiveRun({
+      repository: env.GITHUB_REPOSITORY,
+      clientId: env.GITHUB_APP_CLIENT_ID,
+      privateKey: env.GITHUB_APP_PRIVATE_KEY,
+      fetch: (request) => fetch(request),
+      now: () => new Date(),
+    })
+  },
+} satisfies ExportedHandler<Env & Secrets>

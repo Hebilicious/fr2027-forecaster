@@ -1,19 +1,31 @@
 # Worker
 
-One Cloudflare Worker, `fr2027`, serves two things:
+One Cloudflare Worker, `fr2027`, does three things:
 
 - **The public site.** Static assets from `.site/` at the repository root, which `moon run cli:export` writes (the built UI plus `api/*.json`). Unknown page paths fall back to `index.html` for the single-page app. No auth. The Worker script runs only for `/api/*`, where it serves the asset and turns that fallback into a 404 `{"error": "<path>: no such document"}`.
 - **The inbox** at `/inbox/*`, for the Grok bot, which cannot hold a GitHub credential. The bot posts items; a scheduled GitHub Actions job pulls the pending ones, validates them with `fr2027`, commits the accepted ones and resolves each item. Items live in one SQLite-backed Durable Object (`Inbox`).
+- **The hourly clock.** GitHub does not reliably fire the Live workflow's `schedule` trigger, so a cron at minute 17 of every hour starts it: the Worker signs in as the GitHub App `heb-release`, mints an installation token for this repository with `contents: write` only, and sends a `repository_dispatch` event of type `live-hourly`.
 
-The site is deployed by the hourly GitHub Actions workflow, which runs `moon run worker:deploy` (it exports the site first) with `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` set.
+The site is deployed by that hourly GitHub Actions workflow, which runs `moon run worker:deploy` (it exports the site first) with `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` set.
 
-| Path               | Role                                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------ |
-| `src/inbox.ts`     | The whole inbox contract, pure: routing, auth, validation, limits, state changes, retention      |
-| `src/sql-store.ts` | The inbox's storage in SQLite                                                                    |
-| `src/site.ts`      | `/api/*`: the documents from the assets, and a JSON 404 for an unknown one                       |
-| `src/index.ts`     | The entry point (`/inbox/*` goes to the Durable Object, anything else to the assets) and `Inbox` |
-| `wrangler.jsonc`   | Name, assets, Durable Object binding and migration; no account id (it comes from CI)             |
+| Path               | Role                                                                                                                  |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| `src/inbox.ts`     | The whole inbox contract, pure: routing, auth, validation, limits, state changes, retention                           |
+| `src/sql-store.ts` | The inbox's storage in SQLite                                                                                         |
+| `src/site.ts`      | `/api/*`: the documents from the assets, and a JSON 404 for an unknown one                                            |
+| `src/dispatch.ts`  | The cron: the App's RS256 JWT, the installation token, the `live-hourly` dispatch                                     |
+| `src/index.ts`     | The entry point (`/inbox/*` to the Durable Object, the rest to the assets, the cron to `src/dispatch.ts`) and `Inbox` |
+| `wrangler.jsonc`   | Name, assets, Durable Object binding and migration, the cron and its vars; no account id (it comes from CI)           |
+
+## Cron
+
+`triggers.crons` is `17 * * * *` (UTC). Each run makes three GitHub API calls, with `Accept: application/vnd.github+json`, `X-GitHub-Api-Version: 2022-11-28` and `User-Agent: fr2027-worker`:
+
+1. `GET /repos/{GITHUB_REPOSITORY}/installation`, with a JWT signed by the App's key (`iss` the client ID, valid from a minute ago for nine minutes), to find the installation.
+2. `POST /app/installations/{id}/access_tokens` with `{"repositories": ["fr2027-forecaster"], "permissions": {"contents": "write"}}`.
+3. `POST /repos/{GITHUB_REPOSITORY}/dispatches` with `{"event_type": "live-hourly"}`, using that token.
+
+`GITHUB_REPOSITORY` and `GITHUB_APP_CLIENT_ID` are plain `vars` in `wrangler.jsonc`; the client ID is public. Without the secret `GITHUB_APP_PRIVATE_KEY` a run logs a warning and does nothing. A GitHub error throws with its status and body, so the failed run shows in the Worker's observability logs; the key and the tokens are never logged. To fire it by hand, `moon run worker:dev -- --test-scheduled` and then `curl "http://localhost:8787/__scheduled?cron=17+*+*+*+*"` (with the key in `.dev.vars`, this dispatches a real run).
 
 ## Inbox contract
 
@@ -58,12 +70,18 @@ pnpm exec wrangler secret put INBOX_PIPELINE_TOKEN
 
 From CI, pipe the value in instead: `printf %s "$TOKEN" | pnpm exec wrangler secret put INBOX_BOT_TOKEN`. Give the bot its token, and store the pipeline's as a GitHub Actions secret for the pull job. Putting a new value rotates a token at once.
 
+`GITHUB_APP_PRIVATE_KEY` is the third secret: the private key of the GitHub App `heb-release`, as PKCS#8 (`-----BEGIN PRIVATE KEY-----`), because WebCrypto cannot read the PKCS#1 key (`BEGIN RSA PRIVATE KEY`) that GitHub hands out. The Live workflow converts it and sets it on the Worker. By hand:
+
+```sh
+openssl pkcs8 -topk8 -nocrypt -in app.pem | pnpm exec wrangler secret put GITHUB_APP_PRIVATE_KEY
+```
+
 ## Tasks
 
 | Task                        | What it does                                                                                       |
 | --------------------------- | -------------------------------------------------------------------------------------------------- |
 | `moon run worker:typecheck` | Generate `worker-configuration.d.ts` with `wrangler types` (git-ignored), then type-check with tsc |
-| `moon run worker:test`      | The inbox tests, in plain Node, on an in-memory store and on the SQL store over `node:sqlite`      |
+| `moon run worker:test`      | The tests, in plain Node: the inbox (in memory and over `node:sqlite`), `/api/*`, the cron's calls |
 | `moon run worker:dev`       | `wrangler dev`: the site from `.site/` and the inbox, tokens from `app/worker/.dev.vars`           |
 | `moon run worker:deploy`    | Export the site, then `wrangler deploy`                                                            |
 
