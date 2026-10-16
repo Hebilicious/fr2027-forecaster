@@ -44,7 +44,7 @@ The binary also runs on its own: `target/release/fr2027 forecast --as-of 2026-09
 | `app/web/`        | TypeScript, Vue | The UI: Overview, Round 1, Round 2, Signals, Sources and health; French and English                                           |
 | `app/worker/`     | TypeScript      | The Cloudflare Worker: serves the public site and the Grok Bot inbox                                                          |
 | `config/`         | YAML            | `candidates.yaml` (canonical ids, blocs, who runs), `model.yaml` (parameters), `sources.yaml` (live sources), `backtest.yaml` |
-| `.github/`        | YAML            | `ci.yml` (checks), `live.yml` (the hourly pipeline) and `clock.yml` (starts Live)                                             |
+| `.github/`        | YAML            | `ci.yml` (checks) and `live.yml` (the hourly pipeline, started by the Worker's cron)                                          |
 | `docs/`           |                 | Operations and the Grok Bot routines                                                                                          |
 | `schemas/`        | JSON Schema     | Contracts for every file sources write and the model outputs                                                                  |
 | `data/raw/`       |                 | Source files, never edited: `polls/`, `markets/`, `news/`, `attention/`, `grok/`, `events/`                                   |
