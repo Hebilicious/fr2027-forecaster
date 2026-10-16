@@ -70,7 +70,8 @@
               "method": {
                 "type": "string"
               }
-            }
+            },
+            "description": "Old drops only: send null with stance, from which the pipeline derives the sentiment columns (pos = support, neg = oppose, neu = neutral, among relevant posts)."
           },
           "top_topics": {
             "type": ["array", "null"],
@@ -107,7 +108,100 @@
           "sample_size": {
             "type": ["integer", "null"],
             "minimum": 0,
-            "description": "Posts read to compute sentiment, topics and the bot share."
+            "description": "Posts read to compute sentiment, topics and the bot share. With stance, it equals stance.posts_drawn."
+          },
+          "stance": {
+            "description": "Stance counts from routine 1's random sample (docs/x-stance-rubric.md). The four labels sum to posts_drawn; the pipeline computes the shares among relevant posts and their intervals. Needs rubric_version and sampling on the drop.",
+            "oneOf": [
+              {
+                "$ref": "#/$defs/stance"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "rubric_version": {
+      "type": "string",
+      "pattern": "^stance-[1-9][0-9]*$",
+      "description": "The version of docs/x-stance-rubric.md applied to the stance labels, e.g. stance-1."
+    },
+    "sampling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "posts_per_candidate",
+        "read_all_below",
+        "max_posts_per_author",
+        "reposts_excluded",
+        "automated_excluded",
+        "relabel_share"
+      ],
+      "description": "How the posts behind stance were drawn.",
+      "properties": {
+        "method": {
+          "const": "random_spread",
+          "description": "Posts drawn at random across the whole window, not ranked by relevance or engagement."
+        },
+        "posts_per_candidate": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Posts drawn for a candidate with at least read_all_below mentions."
+        },
+        "read_all_below": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Below this many mentions, every eligible post is read."
+        },
+        "max_posts_per_author": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "reposts_excluded": {
+          "type": "boolean"
+        },
+        "automated_excluded": {
+          "type": "boolean",
+          "description": "Accounts that look automated are left out of the sample."
+        },
+        "relabel_share": {
+          "$ref": "#/$defs/fraction",
+          "description": "Share of the drawn posts labelled a second time, blind to the first labels."
+        }
+      }
+    },
+    "double_labels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["posts", "counts"],
+      "description": "The posts labelled twice, over every candidate of the drop: counts[first][second] is how many the first pass labelled <first> and the blind second pass labelled <second>. The pipeline computes Cohen's kappa from it.",
+      "properties": {
+        "posts": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Posts labelled twice: the sum of every cell."
+        },
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["support", "oppose", "neutral", "off_topic"],
+          "properties": {
+            "support": {
+              "$ref": "#/$defs/label_counts"
+            },
+            "oppose": {
+              "$ref": "#/$defs/label_counts"
+            },
+            "neutral": {
+              "$ref": "#/$defs/label_counts"
+            },
+            "off_topic": {
+              "$ref": "#/$defs/label_counts"
+            }
           }
         }
       }
@@ -145,6 +239,63 @@
       "type": "number",
       "minimum": 0,
       "maximum": 1
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "stance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["read_all", "posts_drawn", "off_topic", "support", "oppose", "neutral"],
+      "properties": {
+        "read_all": {
+          "type": "boolean",
+          "description": "true when the candidate had fewer than sampling.read_all_below mentions and every eligible post was read."
+        },
+        "posts_drawn": {
+          "$ref": "#/$defs/count",
+          "description": "Posts drawn and read, after the exclusions."
+        },
+        "off_topic": {
+          "$ref": "#/$defs/count",
+          "description": "Posts not about this candidate (another Le Pen, a namesake, a common word)."
+        },
+        "support": {
+          "$ref": "#/$defs/count"
+        },
+        "oppose": {
+          "$ref": "#/$defs/count"
+        },
+        "neutral": {
+          "$ref": "#/$defs/count",
+          "description": "About the candidate, with no stance: reporting, information, questions."
+        }
+      }
+    },
+    "label_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["support", "oppose", "neutral", "off_topic"],
+      "properties": {
+        "support": {
+          "$ref": "#/$defs/count"
+        },
+        "oppose": {
+          "$ref": "#/$defs/count"
+        },
+        "neutral": {
+          "$ref": "#/$defs/count"
+        },
+        "off_topic": {
+          "$ref": "#/$defs/count"
+        }
+      }
     }
+  },
+  "dependentRequired": {
+    "rubric_version": ["sampling"],
+    "sampling": ["rubric_version"],
+    "double_labels": ["rubric_version", "sampling"]
   }
 }

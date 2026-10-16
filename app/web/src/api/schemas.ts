@@ -217,6 +217,20 @@ const XRow = Schema.Struct({
   sentiment_neu: Schema.NullOr(Schema.Finite),
   bot_share_estimate: Schema.NullOr(Schema.Finite),
   top_topics: Schema.NullOr(Schema.Array(Schema.String)),
+  // Stance drops only (null before): posts drawn, those off topic, shares among relevant posts
+  // with 95% intervals, and the drop's Cohen's kappa. The sentiment fields above mirror the shares.
+  stance_posts_drawn: Schema.NullOr(Schema.Finite),
+  stance_off_topic: Schema.NullOr(Schema.Finite),
+  support_share: Schema.NullOr(Schema.Finite),
+  support_low: Schema.NullOr(Schema.Finite),
+  support_high: Schema.NullOr(Schema.Finite),
+  oppose_share: Schema.NullOr(Schema.Finite),
+  oppose_low: Schema.NullOr(Schema.Finite),
+  oppose_high: Schema.NullOr(Schema.Finite),
+  neutral_share: Schema.NullOr(Schema.Finite),
+  neutral_low: Schema.NullOr(Schema.Finite),
+  neutral_high: Schema.NullOr(Schema.Finite),
+  drop_kappa: Schema.NullOr(Schema.Finite),
 })
 
 const CampaignEvent = Schema.Struct({

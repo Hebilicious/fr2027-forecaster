@@ -436,7 +436,8 @@ fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str) -> Result<Valu
     }))
 }
 
-/// The last 28 windows (a week at four drops a day) of Grok Bot's X measurements.
+/// The last 28 windows (two weeks at two drops a day) of Grok Bot's X measurements. Stance shares
+/// come with their 95% intervals; `drop_kappa` is the drop's labelling agreement.
 fn x_signal(repo: &Repo) -> Result<Value> {
     let rows = grok::read_clean_rows(repo).unwrap_or_default();
     let windows: BTreeSet<&str> = rows.iter().map(|r| r.window_end.as_str()).collect();
@@ -459,6 +460,18 @@ fn x_signal(repo: &Repo) -> Result<Value> {
                 "sentiment_neu": r.sentiment_neu,
                 "bot_share_estimate": r.bot_share_estimate,
                 "top_topics": r.top_topics.as_deref().map(|t| t.split(" | ").collect::<Vec<_>>()),
+                "stance_posts_drawn": r.stance_posts_drawn,
+                "stance_off_topic": r.stance_off_topic,
+                "support_share": r.support_share,
+                "support_low": r.support_low,
+                "support_high": r.support_high,
+                "oppose_share": r.oppose_share,
+                "oppose_low": r.oppose_low,
+                "oppose_high": r.oppose_high,
+                "neutral_share": r.neutral_share,
+                "neutral_low": r.neutral_low,
+                "neutral_high": r.neutral_high,
+                "drop_kappa": r.drop_kappa,
             })
         })
         .collect();

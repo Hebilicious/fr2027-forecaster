@@ -4,6 +4,16 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-16
 
+### Grok Bot: X stance from random samples, with intervals and double-labelling
+
+The owner's design for better X data, still collected by routine 1 (`x-activity-3`), replacing `x-activity-2`'s rule of 25 posts, mixing recent and most engaged, for the 10 most-mentioned candidates.
+
+- **Representative sample.** For each candidate with at least 100 mentions in the 12-hour window, 200 posts drawn at random across the window (not top or most relevant), reposts and accounts that look automated left out, at most 2 posts per author; below 100 mentions, every eligible post. The drop records this in `sampling`. Top or most-engaged posts over-represent the loudest accounts, so their mix says little about what X writes as a whole.
+- **Stance, not tone.** Each post is checked for relevance to the candidate (namesakes such as Jean-Marie Le Pen, short surnames, a country called Hollande) and, if relevant, labelled `support`, `oppose` or `neutral` toward the candidate, following the versioned rubric `docs/x-stance-rubric.md` (`stance-1`: definitions, ten decision rules, 22 constructed French examples). Generic sentiment mixed the tone of a post with its stance: a supporter angry at the media read as negative.
+- **Counts in, shares out.** The Bot sends integer counts (`posts_drawn`, `off_topic`, `support`, `oppose`, `neutral`); the pipeline rejects counts that do not add up, and computes in `data/clean/grok.csv` the shares among relevant posts with 95% Wilson score intervals (z = 1.95996). Wilson rather than the normal interval because shares near 0 and samples of a few dozen posts are common. The `sentiment_*` columns are derived from the shares (pos = support, neg = oppose, neu = neutral), which keeps the Signals view unchanged; the Bot sends `sentiment: null` with stance, so there is one source for each number. Old drops keep their sentiment and have empty stance columns.
+- **Reliability.** 20% of each candidate's posts are labelled a second time in a pass that does not see the first labels. The drop carries the 4 × 4 table of (first, second) labels over all candidates, and the pipeline computes the observed agreement and Cohen's kappa per drop (`drop_agreement`, `drop_kappa`, repeated on each row of the drop). Kappa measures the Bot's run-to-run consistency, the open question it answers; it cannot detect a bias both passes share.
+- **Cost.** About 4,700 labels a run (3,600 posts for the 18 candidates above 100 mentions in the first drop, a few hundred for the others, 20% relabelled), against about 250 for `x-activity-2`. Not used by the model, as before.
+
 ### UI redesign: obsidian glass, the tricolour and Delacroix
 
 The UI is redesigned around three references from the owner: obsidian glass, the French colours, and Delacroix's _La Liberté guidant le peuple_.

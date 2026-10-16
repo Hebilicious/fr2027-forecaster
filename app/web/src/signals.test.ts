@@ -226,6 +226,18 @@ const xRow = (window_end: string, candidate_id: string, mentions: number | null,
     sentiment_neg: mood?.[2] ?? null,
     bot_share_estimate: 0.1,
     top_topics: null,
+    stance_posts_drawn: null,
+    stance_off_topic: null,
+    support_share: null,
+    support_low: null,
+    support_high: null,
+    oppose_share: null,
+    oppose_low: null,
+    oppose_high: null,
+    neutral_share: null,
+    neutral_low: null,
+    neutral_high: null,
+    drop_kappa: null,
   }) satisfies XRow
 
 describe("X", () => {
