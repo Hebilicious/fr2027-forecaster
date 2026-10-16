@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-16T18:18:03Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-16T17:55:00Z",
+      "title": "Mobilisation du 17 octobre : comment Jean-Luc Mélenchon espère tirer profit d’une «convergence des luttes»",
+      "url": "https://www.lefigaro.fr/politique/mobilisation-du-17-octobre-comment-jean-luc-melenchon-espere-tirer-profit-d-une-convergence-des-luttes-20261016"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-16T18:00:00Z",
+      "title": "Édouard Philippe rouvre la chasse aux ralliements… Les indiscrets du Figaro",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/edouard-philippe-rouvre-la-chasse-aux-ralliements-les-indiscrets-du-figaro-20261016"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-16T17:27:09Z",
+      "title": "Lille : comment des militants d’extrême droite proches de Génération Zemmour et de la Cocarde ont passé à tabac un homme tombé au sol",
+      "url": "https://www.liberation.fr/checknews/lille-comment-des-militants-dextreme-droite-proches-de-generation-zemmour-et-de-la-cocarde-ont-passe-a-tabac-un-homme-tombe-au-sol-20261016_3ZXIPICL6FELXOESG6MCTCUMAY/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T17:35:03Z",
+      "title": "Ce serait \"considérer que notre sécurité ne vaut pas grand-chose\": Emmanuel Macron réagit à la proposition de Marine Le Pen de suspendre les aides à l’Ukraine",
+      "url": "https://www.bfmtv.com/politique/video-ce-serait-considerer-que-notre-securite-ne-vaut-pas-grand-chose-emmanuel-macron-reagit-a-la-proposition-de-marine-le-pen-de-suspendre-les-aides-a-l-ukraine_VN-202610160754.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Condamnation de Marine Le Pen : compte à rebours judiciaire déclenché pour sa participation à la présidentielle",
+      "url": "https://www.leparisien.fr/faits-divers/condamnation-de-marine-le-pen-compte-a-rebours-judiciaire-declenche-pour-sa-participation-a-la-presidentielle-16-10-2026-XB4OUVH4EJFJ3KMGZOYINISSPY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
