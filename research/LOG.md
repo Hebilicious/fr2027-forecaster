@@ -4,6 +4,17 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-16
 
+### Field: 2026-10-14-polony-declares (via Grok Bot field_change `2026-10-14-polony-declares`)
+
+Natacha Polony declared her candidacy on France Inter on 14 October 2026; she is added as a declared candidate in her own slot.
+
+Added Natacha Polony (Nous sommes la France), who declared on France Inter on 14 October 2026 (franceinfo, Le Figaro). New slot polony at p 0.15: a first-time candidate who must still collect 500 sponsorships and has not been on a presidential ballot.
+
+- `config/candidates.yaml`: new candidate `polony` (Natacha Polony, other, declared) in slot `polony` at p 0.15; `as_of` 2026-10-16.
+- Sources: [L'essayiste Natacha Polony annonce sa candidature à l'élection présidentielle](https://www.franceinfo.fr/elections/presidentielle/l-essayiste-natacha-polony-annonce-sa-candidature-a-l-election-presidentielle_8236714.html), [Présidentielle 2027 : «Je suis candidate», annonce la journaliste Natacha Polony](https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-je-suis-candidate-annonce-la-journaliste-natacha-polony-20261014).
+- Events: none.
+- Sent by Grok Bot fr2027 (checks-1, run `checks-2026-10-16T16:39Z`); checked and applied by the Live workflow.
+
 ### UI in ten languages, checked against Wikipedia
 
 The UI is written in French, the reference, and in English (UK), German, Italian, Spanish (Spain), Portuguese (Portugal), Japanese, Korean, Chinese (simplified) and Thai, with Intlayer (rules in `AGENTS.md`, "UI languages").

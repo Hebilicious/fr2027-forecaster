@@ -346,6 +346,16 @@ candidates:
     sources:
       - url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10264-pres-opinionway-facebook-15-septembre.pdf"
         date: 2026-09-15
+  - id: polony
+    name: "Natacha Polony"
+    party: "Nous sommes la France"
+    bloc: other
+    status: declared
+    declared_on: 2026-10-14
+    notes: "Essayist, former director of Marianne; announced on France Inter on 14 Oct 2026; says she will seek the 500 sponsorships."
+    sources:
+      - url: "https://www.franceinfo.fr/elections/presidentielle/l-essayiste-natacha-polony-annonce-sa-candidature-a-l-election-presidentielle_8236714.html"
+        date: 2026-10-14
 slots:
   - id: rn
     label: "Rassemblement national nominee"
@@ -458,3 +468,7 @@ slots:
     rationale: "Declared 17 June 2026; not tested in any poll."
     options:
       - { run: [labib], p: 0.15 }
+  - id: polony
+    rationale: "Declared 14 October 2026; first presidential run, 500 sponsorships not yet collected."
+    options:
+      - { run: [polony], p: 0.15 }
