@@ -2,8 +2,9 @@
 
 GitHub Actions does everything that a fixed program can do (markets, news feeds, Wikipedia, the
 model, the site; see [operations.md](operations.md)). Grok Bot does the three jobs that need an agent:
-measuring X, reading pollsters' publications, and following the campaign. This page is what to set
-up in Grok Bot: one Bot, one secret, three routines.
+measuring X, reading pollsters' publications, and following the campaign. The Claude editor routine
+([editor.md](editor.md)) turns what it finds into polls and field changes on `main`. This page is
+what to set up in Grok Bot: one Bot, one secret, three routines.
 
 ## How Grok Bot talks to the repository
 
@@ -17,8 +18,10 @@ readable by all of them. Instead:
    checks every file in the repository:
    - X measurements (`x_drop`) and campaign events (`event`) that pass are committed to `data/raw/grok/`
      and `data/raw/events/`;
-   - polls (`poll`) that pass go into a pull request, because a poll moves the forecast and a
-     person should check its numbers before it counts;
+   - polls (`poll`) that pass go into a pull request, because a poll moves the forecast and its
+     numbers are checked against the notice before it counts. The Claude editor routine
+     ([editor.md](editor.md)) does that check twice a day and lands the verified files on `main`;
+     Live then closes the pull request;
    - anything that fails is rejected, with the reasons.
 3. The routine reads those outcomes back from the inbox at its next run, and resends corrected
    items when something was rejected.
@@ -63,7 +66,7 @@ accepted. Never print the token.
 
 Before sending, run: curl -s -H "Authorization: Bearer $INBOX_BOT_TOKEN" <INBOX>/inbox/items
 It lists what you sent in the last 30 days and what happened to each item: accepted, proposed
-(a pull request for a person to review) or rejected, with a note giving the reasons. Fix and
+(a pull request that the editor checks) or rejected, with a note giving the reasons. Fix and
 resend anything you sent that was rejected, if it can be fixed. Never resend an item that was
 accepted or proposed.
 
@@ -161,8 +164,10 @@ event instead (kind "other") proposing that they be added, and send the poll onc
 the list.
 ```
 
-The pipeline proposes each valid poll in a pull request titled "Polls from Grok Bot: …". You
-check the numbers against the linked PDF and merge; the merge refits and republishes the forecast.
+The pipeline proposes each valid poll in a pull request titled "Polls from Grok Bot: …". The
+editor routine ([editor.md](editor.md)) checks every number against the linked PDF and lands the
+file, corrected if needed; that refits and republishes the forecast. The editor also searches for
+polls on its own, so a poll this routine misses still arrives, a few hours later.
 
 ## Routine 3: campaign events, every evening
 
@@ -196,8 +201,10 @@ Report only events from the last 48 hours that you confirmed in at least one pri
 national outlet. Nothing happened: send nothing.
 ```
 
-Events are shown on the Signals page as reported. A `proposed_change` is a suggestion for a person
-to make through a pull request; the pipeline never edits `config/candidates.yaml` by itself.
+Events are shown on the Signals page as reported. The editor routine ([editor.md](editor.md)) reads
+each `proposed_change`, confirms the fact in a primary source or a national outlet, and makes the
+change in `config/candidates.yaml` with its reason in `research/LOG.md`. The Live workflow itself
+never edits the configuration.
 
 ## Checking that it works
 

@@ -5,10 +5,14 @@ name: Live
 # changed, commit the new data to main, and publish the public site to Cloudflare.
 # It also runs when a merge to main changes polls, config or code, so the page follows main.
 on:
-  # If scheduled runs stop appearing while the workflow is active, a push to main that edits this
-  # file makes GitHub register the schedule again (needed on 2026-10-16, after the first merge).
+  # The hourly clock is the Worker's cron trigger (app/worker, "17 * * * *"), which sends this
+  # repository_dispatch with a token of the heb-release App. GitHub never fired this workflow's
+  # hourly schedule (2026-10-16: no run from 04:17 to 08:17 UTC, through a re-push and a
+  # disable/enable), so the schedule below is only a backup, every 6 hours.
+  repository_dispatch:
+    types: [live-hourly]
   schedule:
-    - cron: "17 * * * *"
+    - cron: "47 */6 * * *"
   push:
     branches: [main]
     paths:
@@ -30,7 +34,7 @@ on:
         required: false
         default: ""
       sync_worker_secrets:
-        description: "Copy INBOX_BOT_TOKEN and INBOX_PIPELINE_TOKEN from the repository secrets to the Worker."
+        description: "Copy INBOX_BOT_TOKEN, INBOX_PIPELINE_TOKEN and the heb-release App key from the repository secrets to the Worker."
         type: boolean
         default: false
 
@@ -53,6 +57,7 @@ jobs:
       pull-requests: write # open the poll-proposal pull request
     env:
       FR2027: ./target/release/fr2027
+      HAS_APP_KEY: ${{ secrets.RELEASE_APP_PRIVATE_KEY != '' }}
       GIT_AUTHOR_NAME: github-actions[bot]
       GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
       GIT_COMMITTER_NAME: github-actions[bot]
@@ -157,10 +162,21 @@ jobs:
           done
           exit 1
 
+      # A pull request opened with GITHUB_TOKEN starts no CI, so the poll proposals and their
+      # clean-up use a token of the heb-release App (see docs/operations.md).
+      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        id: app
+        if: ${{ env.HAS_APP_KEY == 'true' }}
+        with:
+          client-id: ${{ vars.RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
       - name: Propose polls from the inbox
         id: proposals
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.app.outputs.token || github.token }}
         run: |
           shopt -s nullglob
           files=(data/proposals/polls/*.yaml)
@@ -180,8 +196,7 @@ jobs:
           git push -q origin "$branch"
           body=$(printf '%s\n\n%s\n\n%s\n' \
             "Grok Bot sent these polls to the inbox: ${ids}. Each file passed the schema, candidate and sum checks in the Live run ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}." \
-            "Before merging, check each number against the notice or publication in source_url / notice_url. Merging refits and republishes the forecast." \
-            "Pull requests opened by GitHub Actions do not start CI; the checks above ran in the Live workflow.")
+            "The Claude editor routine (docs/editor.md) checks each number against the notice or publication in source_url / notice_url and lands the verified files on main through a claude/editor-* branch; this pull request is then closed. Merging it by hand works too, and refits and republishes the forecast.")
           if url=$(gh pr create --base main --head "$branch" --title "Polls from Grok Bot: ${ids}" --body "$body"); then
             echo "ref=$url" >> "$GITHUB_OUTPUT"
           else
@@ -189,6 +204,23 @@ jobs:
             echo "ref=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/main...${branch}" >> "$GITHUB_OUTPUT"
           fi
           git switch -q main
+
+      # The editor lands verified polls through its own branch, so a proposal whose every file is
+      # already on main is done.
+      - name: Close poll proposals that landed
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token || github.token }}
+        run: |
+          git fetch -q origin main
+          gh pr list --state open --json number,headRefName --jq '.[] | select(.headRefName | startswith("inbox/polls-")) | .number' |
+            while read -r number; do
+              files=$(gh pr view "$number" --json files --jq '.files[].path | select(startswith("data/raw/polls/"))')
+              landed=true
+              for f in $files; do git cat-file -e "origin/main:$f" 2>/dev/null || landed=false; done
+              if [ -n "$files" ] && $landed; then
+                gh pr close "$number" --delete-branch --comment "Every poll file here is on main now (landed by the editor, possibly corrected); closing."
+              fi
+            done
 
       - name: Resolve inbox items
         env:
@@ -220,18 +252,29 @@ jobs:
           if [ "$code" -ne 0 ]; then exit "$code"; fi
           cd app/worker && pnpm exec wrangler deploy
 
-      - name: Copy the inbox tokens to the Worker
+      # The inbox tokens, and the heb-release App's key for the Worker's hourly dispatch. GitHub
+      # hands out PKCS#1 keys; WebCrypto in the Worker needs PKCS#8.
+      - name: Copy the inbox tokens and the App key to the Worker
         if: ${{ !cancelled() && inputs.sync_worker_secrets }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           INBOX_BOT_TOKEN: ${{ secrets.INBOX_BOT_TOKEN }}
           INBOX_PIPELINE_TOKEN: ${{ secrets.INBOX_PIPELINE_TOKEN }}
+          RELEASE_APP_PRIVATE_KEY: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
         run: |
           if [ -z "$INBOX_BOT_TOKEN" ] || [ -z "$INBOX_PIPELINE_TOKEN" ]; then
             echo "::error::set the INBOX_BOT_TOKEN and INBOX_PIPELINE_TOKEN repository secrets first"; exit 1
           fi
+          if [ -n "$RELEASE_APP_PRIVATE_KEY" ]; then
+            GITHUB_APP_PRIVATE_KEY=$(printf '%s\n' "$RELEASE_APP_PRIVATE_KEY" | openssl pkcs8 -topk8 -nocrypt)
+          else
+            echo "::warning::RELEASE_APP_PRIVATE_KEY is not set; the Worker's hourly dispatch stays off"
+            GITHUB_APP_PRIVATE_KEY=""
+          fi
+          export GITHUB_APP_PRIVATE_KEY
           file="$RUNNER_TEMP/worker-secrets.json"
-          jq -n '{INBOX_BOT_TOKEN: env.INBOX_BOT_TOKEN, INBOX_PIPELINE_TOKEN: env.INBOX_PIPELINE_TOKEN}' > "$file"
+          jq -n '{INBOX_BOT_TOKEN: env.INBOX_BOT_TOKEN, INBOX_PIPELINE_TOKEN: env.INBOX_PIPELINE_TOKEN}
+            + (if env.GITHUB_APP_PRIVATE_KEY != "" then {GITHUB_APP_PRIVATE_KEY: env.GITHUB_APP_PRIVATE_KEY} else {} end)' > "$file"
           (cd app/worker && pnpm exec wrangler secret bulk "$file")
           rm -f "$file"

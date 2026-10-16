@@ -7,10 +7,12 @@ needs a server or a computer left on.
 
 | When                                                    | Where                                                       | What                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Every hour at :17                                       | GitHub Actions, [`live.yml`](../.github/workflows/live.yml) | Prediction-market prices (Polymarket, Kalshi), new headlines from 13 RSS feeds, Wikipedia page views (once a day, after 06:00 UTC), the Grok Bot inbox. Then ingest, refit when the inputs changed, validate, commit the new data to `main`, and deploy the site |
+| Every hour at :17, started by the Worker's cron trigger | GitHub Actions, [`live.yml`](../.github/workflows/live.yml) | Prediction-market prices (Polymarket, Kalshi), new headlines from 13 RSS feeds, Wikipedia page views (once a day, after 06:00 UTC), the Grok Bot inbox. Then ingest, refit when the inputs changed, validate, commit the new data to `main`, and deploy the site |
 | On a merge to `main` that changes polls, config or code | GitHub Actions, `live.yml`                                  | The same, so the page follows `main` right away                                                                                                                                                                                                                  |
 | On every pull request and push to `main`                | GitHub Actions, [`ci.yml`](../.github/workflows/ci.yml)     | `moon ci`: tests, lint, format and type checks, and `fr2027 validate`                                                                                                                                                                                            |
 | Every 6 hours, twice a day, every evening               | Grok Bot routines ([grok-bot.md](grok-bot.md))              | X activity, new polls, campaign events, sent to the inbox                                                                                                                                                                                                        |
+| 07:00 and 19:00 UTC                                     | Claude editor routine ([editor.md](editor.md))              | Checks Grok Bot's polls against their notices, finds missed polls, applies confirmed field changes; pushes a `claude/editor-*` branch                                                                                                                            |
+| On each editor branch                                   | GitHub Actions, [`land.yml`](../.github/workflows/land.yml) | Path check, clean files, `moon ci`, then fast-forwards `main` with the `heb-release` App, which starts Live                                                                                                                                                      |
 | Always                                                  | Cloudflare Worker `fr2027` ([`app/worker`](../app/worker))  | The public page (static files, rebuilt hourly) and the Grok Bot inbox                                                                                                                                                                                            |
 
 The model refits once a day (the forecast date changes) and whenever polls or config change; an
@@ -49,13 +51,23 @@ added to the Worker later.
 
 In **Settings → Secrets and variables → Actions**:
 
-| Name                    | Kind     | Value                                                                                             |
-| ----------------------- | -------- | ------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARE_API_TOKEN`  | secret   | The token from step 2                                                                             |
-| `CLOUDFLARE_ACCOUNT_ID` | secret   | Your account ID                                                                                   |
-| `INBOX_BOT_TOKEN`       | secret   | A long random string, e.g. from `openssl rand -hex 32`. Grok Bot gets the same value              |
-| `INBOX_PIPELINE_TOKEN`  | secret   | Another long random string. Only GitHub Actions uses it                                           |
-| `FR2027_INBOX_URL`      | variable | The Worker's address, `https://fr2027.<your-subdomain>.workers.dev` (printed by the first deploy) |
+| Name                      | Kind     | Value                                                                                             |
+| ------------------------- | -------- | ------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARE_API_TOKEN`    | secret   | The token from step 2                                                                             |
+| `CLOUDFLARE_ACCOUNT_ID`   | secret   | Your account ID                                                                                   |
+| `INBOX_BOT_TOKEN`         | secret   | A long random string, e.g. from `openssl rand -hex 32`. Grok Bot gets the same value              |
+| `INBOX_PIPELINE_TOKEN`    | secret   | Another long random string. Only GitHub Actions uses it                                           |
+| `FR2027_INBOX_URL`        | variable | The Worker's address, `https://fr2027.<your-subdomain>.workers.dev` (printed by the first deploy) |
+| `RELEASE_APP_CLIENT_ID`   | variable | The client ID of the `heb-release` GitHub App, `Iv23lierXRciGQXCgOuJ`                             |
+| `RELEASE_APP_PRIVATE_KEY` | secret   | A private key of that App ("Generate a private key" at github.com/settings/apps/heb-release)      |
+
+The `heb-release` App (contents and pull requests: write) does three things here:
+
+- The Worker's hourly cron mints a token with it and sends the `repository_dispatch` that starts
+  Live. GitHub never fired Live's own hourly schedule (16 October 2026), so that schedule is now a
+  6-hourly backup.
+- Live opens Grok Bot's poll pull requests with it, so CI runs on them.
+- Land pushes the editor's work to `main` with it, so the push starts Live and CI.
 
 ### 4. First run
 
@@ -66,8 +78,10 @@ Schedules only run from the default branch, so the pipeline starts once this cod
    everything, backfills Wikipedia page views since January, deploys, and prints the Worker's
    address in the "Publish the site" step.
 3. Set the `FR2027_INBOX_URL` variable to that address, then run Live once more with
-   **sync_worker_secrets** ticked. That copies the two inbox tokens to the Worker.
+   **sync_worker_secrets** ticked. That copies the two inbox tokens and the App key to the
+   Worker, which turns on the hourly cron.
 4. Set up Grok Bot: [grok-bot.md](grok-bot.md).
+5. Set up the editor routine: [editor.md](editor.md).
 
 From then on it runs every hour.
 
@@ -76,6 +90,7 @@ From then on it runs every hour.
 - The **Sources** page of the site shows when each source last updated, and warns when markets or
   news are more than 3 hours old, page views more than 50 hours, X data more than 48 hours, or the
   forecast more than 36 hours.
+- **Actions → Land** shows each editor branch; a failed run leaves the branch for you to read.
 - GitHub turns off scheduled workflows in a public repository after 60 days without activity. The
   hourly data commits should count as activity, but GitHub doesn't say so. If the Sources page
   goes stale, re-enable the workflow under **Actions → Live**.
@@ -93,6 +108,9 @@ repository itself stays public during those windows, so if that matters, also pa
 workflow then.
 
 ## Running it by hand
+
+Before pushing, run `moon ci --base origin/main --head HEAD`: plain `moon ci` only checks
+uncommitted changes, so it skips work you already committed.
 
 Every step is a moon task (see the README): `moon run cli:collect-markets`,
 `cli:collect-news`, `cli:collect-attention`, `cli:forecast`, `cli:export`, `worker:deploy`.

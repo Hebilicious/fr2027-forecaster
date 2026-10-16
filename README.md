@@ -4,7 +4,7 @@ Probabilistic forecaster for the 2027 French presidential election (round 1: 18 
 
 Polls are the backbone. Prediction markets, X activity (measured by Grok Bot), news, Wikipedia attention and candidate programs are secondary layers that must earn their weight in backtests; for now they are collected and shown, not used by the model. See [SPEC.md](SPEC.md) for the build spec and milestones, and [research/LOG.md](research/LOG.md) for every decision, source and parameter change.
 
-It runs itself: a GitHub Actions workflow collects every hour, refits when polls or config change, commits the data, and publishes a public page on Cloudflare. Grok Bot routines send X measurements, new polls and campaign events to an inbox the workflow checks. Setup and operations: [docs/operations.md](docs/operations.md); the Grok Bot routines: [docs/grok-bot.md](docs/grok-bot.md).
+It runs itself: a GitHub Actions workflow, started hourly by the Cloudflare Worker's cron trigger, collects, refits when polls or config change, commits the data, and publishes a public page on Cloudflare. Grok Bot routines send X measurements, new polls and campaign events to an inbox the workflow checks, and a Claude editor routine checks polls against their notices and applies confirmed field changes, through a gated branch ([docs/editor.md](docs/editor.md)). Setup and operations: [docs/operations.md](docs/operations.md); the Grok Bot routines: [docs/grok-bot.md](docs/grok-bot.md).
 
 ## Run it
 
