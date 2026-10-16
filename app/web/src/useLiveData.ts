@@ -1,6 +1,6 @@
 import { onBeforeUnmount, onMounted, ref, shallowRef } from "vue"
 import { api, type Loaded } from "./api/client"
-import type { Forecast, Health, HistoryRun, Poll, SeriesPoint, Signals, TrackRecord } from "./api/schemas"
+import type { Blend, Forecast, Health, HistoryRun, Poll, SeriesPoint, Signals, TrackRecord } from "./api/schemas"
 
 const POLL_MS = 120_000
 
@@ -22,6 +22,7 @@ export function useLiveData() {
   const polls = shallowRef<readonly Poll[]>([])
   const health = shallowRef<Health | null>(null)
   const signals = shallowRef<Signals | null>(null)
+  const blend = shallowRef<Blend | null>(null)
   const history = shallowRef<readonly HistoryRun[]>([])
   const trackRecord = shallowRef<TrackRecord | null>(null)
   const loading = ref(true)
@@ -35,12 +36,13 @@ export function useLiveData() {
 
   async function reload(fresh: boolean): Promise<void> {
     const errors: string[] = []
-    const [f, s, p, h, g, r, t] = await Promise.all([
+    const [f, s, p, h, g, b, r, t] = await Promise.all([
       api.forecast(fresh),
       api.series(fresh),
       api.polls(fresh),
       api.health(fresh),
       api.signals(fresh),
+      api.blend(fresh),
       api.history(fresh),
       api.trackRecord(fresh),
     ])
@@ -50,12 +52,14 @@ export function useLiveData() {
     const nextPolls = unwrap(p, errors)
     const nextHealth = unwrap(h, errors)
     const nextSignals = unwrap(g, errors)
+    const nextBlend = unwrap(b, errors)
     const nextHistory = unwrap(r, errors)
     const nextTrackRecord = unwrap(t, errors)
     if (nextSeries !== null) series.value = nextSeries.points
     if (nextPolls !== null) polls.value = nextPolls.polls
     if (nextHealth !== null) health.value = nextHealth
     if (nextSignals !== null) signals.value = nextSignals
+    if (nextBlend !== null) blend.value = nextBlend
     if (nextHistory !== null) history.value = nextHistory.runs
     if (nextTrackRecord !== null) trackRecord.value = nextTrackRecord
     if (next !== null) {
@@ -102,6 +106,7 @@ export function useLiveData() {
     polls,
     health,
     signals,
+    blend,
     history,
     trackRecord,
     loading,

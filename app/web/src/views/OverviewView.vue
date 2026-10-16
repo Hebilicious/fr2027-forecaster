@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
-import type { Forecast, HistoryRun, TrackRecord } from "../api/schemas"
+import type { Blend, Forecast, HistoryRun, TrackRecord } from "../api/schemas"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import ModelExplorer from "../components/explorer/ModelExplorer.vue"
 import MethodSection from "../components/MethodSection.vue"
 import FieldFilter from "../components/FieldFilter.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
-import { count, daysUntil, list, points, probability, shareWithInterval } from "../format"
+import { count, dateOrTime, daysUntil, list, percent, points, probability, shareWithInterval } from "../format"
 import { useFieldFilter } from "../useFieldFilter"
 
 const props = defineProps<{
   forecast: Forecast
+  blend: Blend | null
   history: readonly HistoryRun[]
   trackRecord: TrackRecord | null
 }>()
@@ -31,6 +32,16 @@ const daysLeft = computed(() => daysUntil(props.forecast.election.round1, new Da
 const horizon = computed(() => content.horizon({ days: count(daysLeft.value, locale.value) }))
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const at = (share: number) => (share / maxShare.value) * 100
+// Everyone the model or the markets give at least half a point to win, in the forecast's order,
+// leaving out those the field filter sets aside.
+const blendRows = computed(() => {
+  const rows = new Map((props.blend?.candidates ?? []).map((c) => [c.candidate_id, c]))
+  return props.forecast.candidates.flatMap((c) => {
+    const row = field.value.setAside.has(c.candidate_id) ? undefined : rows.get(c.candidate_id)
+    return row && Math.max(row.market.win ?? 0, row.model.win) >= 0.005 ? [{ ...row, name: c.name }] : []
+  })
+})
+const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.value))
 </script>
 
 <template>
@@ -128,6 +139,55 @@ const at = (share: number) => (share / maxShare.value) * 100
       </div>
     </section>
 
+    <section v-if="blend && blendRows.length" aria-labelledby="blend-title" class="card rise" :style="{ '--i': 2 }">
+      <header class="card-head">
+        <p class="eyebrow">{{ content.blendEyebrow }}</p>
+        <h2 id="blend-title">{{ content.blendTitle }}</h2>
+      </header>
+      <div class="table-wrap">
+        <table class="blend">
+          <thead>
+            <tr>
+              <th rowspan="2" scope="col">{{ common.candidate }}</th>
+              <th class="group" colspan="3" scope="colgroup">{{ common.wins }}</th>
+              <th class="group" colspan="3" scope="colgroup">{{ common.qualifies }}</th>
+            </tr>
+            <tr>
+              <template v-for="q in ['win', 'qualify']" :key="q">
+                <th class="num" scope="col">{{ content.model }}</th>
+                <th class="num" scope="col">{{ content.markets }}</th>
+                <th class="num" scope="col">{{ content.blend }}</th>
+              </template>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in blendRows" :key="row.candidate_id">
+              <th scope="row">
+                <span class="who">
+                  <CandidateAvatar :id="row.candidate_id" :name="row.name" :size="26" />
+                  {{ row.name }}
+                </span>
+              </th>
+              <td class="num">{{ probability(row.model.win, locale) }}</td>
+              <td class="num secondary">{{ maybe(row.market.win) }}</td>
+              <td class="num strong">{{ probability(row.blend.win, locale) }}</td>
+              <td class="num">{{ probability(row.model.qualify, locale) }}</td>
+              <td class="num secondary">{{ maybe(row.market.qualify) }}</td>
+              <td class="num strong">{{ probability(row.blend.qualify, locale) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="secondary small blend-note">
+        {{ content.blendNote({ weight: percent(blend.model_weight, 0, locale) }) }}
+        <template v-if="blend.model_weight >= 1">{{ content.blendModelOnly }}</template>
+      </p>
+      <p v-if="!blend.market_used && blend.market_fetched_at" class="notice small" role="status">
+        <span aria-hidden="true" class="icon">!</span>
+        <span>{{ content.blendStale({ when: dateOrTime(blend.market_fetched_at, locale) }) }}</span>
+      </p>
+    </section>
+
     <section aria-labelledby="moved-title" class="card rise" :style="{ '--i': 2 }">
       <header class="card-head">
         <h2 id="moved-title">{{ content.whatMoved }}</h2>
@@ -178,6 +238,14 @@ const at = (share: number) => (share / maxShare.value) * 100
 
 .note + .note {
   margin-top: 10px;
+}
+
+.blend th.group {
+  text-align: center;
+}
+
+.blend-note {
+  margin-top: 12px;
 }
 
 .field th[scope="row"] {

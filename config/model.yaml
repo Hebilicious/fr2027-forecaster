@@ -90,3 +90,13 @@ signals:
   refractory_days: 14
   half_life_days: 10
   shock_sd_grid: [0.0]
+
+market_blend:
+  # p_blend ∝ exp(w ln p_model + (1 − w) ln p_market) (model/src/blend.rs), for who wins over the
+  # candidates the markets price plus everyone else, and one candidate at a time for reaching
+  # round 2 and being on the ballot. w = model_weight. 1, the model alone, until the backtest
+  # fits it on market history (research/LOG.md).
+  model_weight: 1.0
+  probability_floor: 0.001
+  # A market snapshot older than this many hours is not blended.
+  max_age_hours: 6
