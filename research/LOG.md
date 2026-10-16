@@ -4,6 +4,59 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-16
 
+### Model 0.2.0: round 1 and round 2 errors fitted by the backtest (milestone 3)
+
+`fr2027 backtest` (`moon run cli:backtest`, settings in `config/backtest.yaml`) replays the model on 2017 and 2022 at 182, 91, 30 and 7 days before round 1. Each replay sees only the polls published by its date whose fieldwork started in the year before round 1, as the live forecast does. The report is `research/backtest/report.md`, every number is in `results.json`, and the run is deterministic (seed 20170423, 20,000 simulations per replay and setting, shared random numbers across settings). Sources and checks of the data: `research/sources/README.md`.
+
+**Parameter changes** (`config/model.yaml`):
+
+| Parameter                   | Was                | Now   |
+| --------------------------- | ------------------ | ----- |
+| `round1_error.bloc_sd`      | 0.12 (provisional) | 0.18  |
+| `round1_error.candidate_sd` | 0.10 (provisional) | 0.20  |
+| `round2.error_sd`           | 0.08 (provisional) | 0.12  |
+| `model_version`             | 0.1.0              | 0.2.0 |
+
+`student_t_df` (5), the transfer table and every aggregation setting are unchanged.
+
+**How the values were chosen.** Each setting on a grid is scored by the log score of the realised result, the log of the predictive density the model gave it: for round 1, the realised share of each contender (a runner whose fitted share is at least 10% before the election-day error), estimated from the simulations with a Gaussian kernel; for round 2, the realised runoff share given the actual matchup, which the simulation gives exactly. Three independent bodies of evidence are scored: the 2017 replays, the 2022 replays, and the final-week poll averages of 2002, 2007 and 2012 (`research/sources/round1-final-poll-errors-2002-2022.csv` and `round2-final-poll-errors-2002-2022.csv`, both checked first). The rule: adopt the grid point with the highest total among those that score at least as well as the current setting on all three; keep the current value if none does. Round 1 first, then round 2 with round 1 at its new values. Rerun with the new values, the rule keeps them (a fixed point).
+
+- **Why not plain maximum likelihood on the total.** It runs to the edge of the grid (bloc_sd 0.22–0.4), driven by 2022 alone: Pécresse fell from 9.5% in the last polls to 4.8%, Mélenchon rose from 16–17% to 22% and Zemmour fell from 9.5% to 7.1%. 2017 on its own wants a bloc error of 0.04. With two elections, a value one election likes and the other dislikes is not justified, so the rule asks every source to agree.
+- **Why not the binary scores.** In both elections the poll leaders qualified and Macron won, so qualification log-loss rewards narrower errors whatever their true size; it gets slightly worse with the new values (0.126 → 0.135). The realised shares say how far each result fell from the forecast, which the binary events cannot. The 10% contender threshold keeps the scored candidates to those who could qualify; with 5%, small candidates' large relative misses push the fit further out (bloc_sd 0.18, candidate_sd 0.4 in an exploratory run), because the model's error is constant on the log scale whatever a candidate's size.
+
+**Scores, all eight replays** (provisional → fitted; latest-poll average in brackets):
+
+|                                     | Provisional   | Fitted              | Latest-poll average |
+| ----------------------------------- | ------------- | ------------------- | ------------------- |
+| Qualification Brier / log-loss      | 0.038 / 0.126 | 0.041 / 0.135       | 0.043 / 0.301       |
+| Win Brier / log-loss                | 0.023 / 0.080 | 0.024 / 0.083       | 0.043 / 0.301       |
+| Round 1 share MAE                   | 2.47 pts      | 2.48 pts            | 2.76 pts            |
+| 80% interval coverage               | 60%           | 66% (78% at 7 days) | –                   |
+| Share log score (contenders)        | −28.8         | −20.8               | –                   |
+| Runoff log score                    | 0.31          | 1.54                | –                   |
+| Final-week polls 2002–2012, R1 / R2 | 6.7 / 1.51    | 6.8 / 1.98          | –                   |
+
+- The model beats the latest-poll average on every score overall. The average gets 2017 wrong at 6 and 3 months (it puts Fillon or Le Pen with the wrong partner) and is exactly right at 30 and 7 days in both years; its log-loss only reflects the 0.001 floor.
+- **Leave one election out**, same rule: without 2017 it picks 0.18 / 0.20 / 0.12, which improves the 2017 replays over the provisional values (round 1 1.2 vs 1.0, round 2 −1.25 vs −2.33). Without 2022 it picks 0.15 / 0.16 / 0.18, which improves 2022's round 1 (−25.2 vs −29.8) but not its runoff (2.42 vs 2.69).
+
+**Overfitting risk, and what the backtest cannot say.** Two elections, both won by Macron by a wide margin against Le Pen, are a thin sample: the runoff evidence is two outcomes plus three older runoffs (2002 rests on one poll). The changes are small and in the direction every source agrees on; they are not precise estimates. Known gaps:
+
+- **Long horizons are still overconfident.** Coverage of the 80% intervals is 59% at 6 months, 70% at 3 months and 57% at 1 month (78% at 1 week). The error is constant across horizons, and the poll random walk chosen by marginal likelihood sits at the top of its grid (0.03 a day) in 6 of the 8 replays. A horizon-dependent error, or a wider random-walk grid, is the next model change to test; the current 2027 forecast, six months out, should be read with this in mind.
+- **Error size by candidate size.** Misses on the log scale are much larger for 5–10% candidates than for leaders; the model's constant log-scale error cannot fit both.
+- **Leakage the replays do not remove:** the runoff transfer table was set from 2022 election-day surveys, and the replays condition on the field that actually ran (no field uncertainty), so replay probabilities are sharper than a live forecast's. `published_at` is approximated as the day after fieldwork.
+
+**Effect on the 2027 forecast** (50,000 simulations). With the 33 polls and the decided PS slot (both entries below): Le Pen wins 83.8% → 81.6%, Philippe 5.5% → 6.7%, Bardella 5.9% → 5.8%, Glucksmann 1.9% → 2.6%. Measured first on the 28 polls of 9 October and the provisional slot: Le Pen wins 84.5% → 82.6%, Philippe 6.6% → 8.0%, Bardella 6.0% → 5.9%; Le Pen beats Philippe in their matchup 89% → 86%; Philippe qualifies 50.9% → 49.6%, Mélenchon 40.0% → 39.6%.
+
+**Deviations from the spec.** Replay dates are the four asked for, not monthly then weekly (`horizons_days` in `config/backtest.yaml` takes any list). Markets, news and the other layers are not in the model, so there are no ablations yet.
+
+### Data: 2017 and 2022 polls for the backtest
+
+`data/backtest/2017/polls.csv` (334 polls, 972 scenarios) and `data/backtest/2022/polls.csv` (395 polls, 1,243 scenarios), extracted from pinned English Wikipedia revisions by `data/backtest/extract-wikipedia-polls.mts`, then checked against primary sources on a sample of 155 polls: 31 of 2,422 shares differed and are corrected; 134 polls are now `entry: primary`. The 2002–2022 final-week poll averages were checked too: the results match the Conseil constitutionnel, every final-week poll of 2002–2012 matches its primary source, and the 2007 average is corrected (it used an internal TNS poll that was not published). Details and what could not be checked: `research/sources/README.md`.
+
+- Blocs of the 2017 and 2022 candidates (`data/backtest/<year>/candidates.yaml`) are judgement calls on the scale of `config/candidates.yaml`: Dupont-Aignan, Lassalle, Asselineau and Cheminade `other`; Macron and Bayrou `centre`; Zemmour `far_right`; Philippot `other`; Lagarde `centre`.
+- The backtest thins overlapping polls of one firm (Ifop's and OpinionWay's daily rolling polls): up to 110 of 282 published polls in a replay.
+- The verification found Wikipedia links pointing to the wrong poll (Elabe October 2021, Harris April 2017 and 2022). The live conseil-constitutionnel.fr refused this machine after the check probed about 240 decision URLs by number; the decisions were read from Wayback copies. Proposed rule for agents: find official documents through a search or the Wayback CDX API, never by enumerating URLs on a government site.
+
 ### Field: Glucksmann is the PS–Place publique–GRS nominee
 
 Raphaël Glucksmann won the closed primary in its first round with about 66% (Faure about 14.5%; Royal, Maurel and Guedj behind), on a vote held 9–11 October after electronic voting was extended by a day following a cyberattack. The 16–17 October round 2 was therefore not held ([Public Sénat](https://www.publicsenat.fr/actualites/politique/primaire-de-la-gauche-raphael-glucksmann-plie-le-match-et-remporte-le-scrutin-des-le-premier-tour-avec-66), [French Wikipedia](https://fr.wikipedia.org/wiki/Primaire_pr%C3%A9sidentielle_socialiste_fran%C3%A7aise_de_2026)).

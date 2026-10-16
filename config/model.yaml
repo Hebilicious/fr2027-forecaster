@@ -2,7 +2,7 @@
 # research/LOG.md; values marked "provisional" are placeholders until the backtests in
 # milestone 3 fit them.
 
-model_version: "0.1.0"
+model_version: "0.2.0"
 seed: 20270418
 simulations: 50000
 round1_date: 2027-04-18
@@ -24,17 +24,20 @@ aggregation:
   series_draws: 300
 
 round1_error:
-  # Provisional: fat-tailed election-day polling error, to be fit on 2002–2022 final-poll
-  # misses in milestone 3. 0.12 on a bloc's log strength is about ±3 points at 25%.
+  # Fat-tailed election-day polling error on each bloc's log strength and each candidate's
+  # within-bloc support. Fitted by the backtest (research/backtest/, research/LOG.md 2026-10-16)
+  # on the 2017 and 2022 replays and the 2002–2012 final-week polls; was 0.12 and 0.10.
+  # 0.18 on a bloc's log strength is about ±4.5 points at 25%. The degrees of freedom are not fitted.
   student_t_df: 5
-  bloc_sd: 0.12
-  candidate_sd: 0.10
+  bloc_sd: 0.18
+  candidate_sd: 0.20
 
 round2:
   random_walk_sd: 0.01
   design_effect: 1.5
   prior_sd: 1.5
-  error_sd: 0.08
+  # Election-day error on the logit of a finalist's share, fitted by the backtest (was 0.08).
+  error_sd: 0.12
   transfer_sd: 0.35
   loyalty: 0.95
   # Relative propensity of each round 1 bloc's voters to vote for a finalist of each bloc or

@@ -65,7 +65,7 @@ Create `data/raw/polls/<poll_id>.yaml` following `schemas/poll.schema.json` (cop
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1. Skeleton                   | Done: layout, schemas, config, CI, UI                                                                                                         |
 | 2. Polls and polls-only model | Done: 33 polls (April–October 2026), 31 checked against their notice or the pollster's report; real forecast in Overview, Round 1 and Round 2 |
-| 3. Backtest harness           | Next: 2017 and 2022 replays, which fit the provisional error parameters                                                                       |
+| 3. Backtest harness           | Done: 2017 and 2022 replays checked against primary sources; error settings fitted ([report](research/backtest/report.md))                    |
 | 4. Markets                    | Collector and comparison view done; the blend waits for the backtests                                                                         |
 | 5. Grok, news, attention      | Inbox, collectors and Signals view done; event detection and ablations wait for the backtests                                                 |
 | 6. Programs                   | Not started                                                                                                                                   |
