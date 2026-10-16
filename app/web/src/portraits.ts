@@ -189,40 +189,6 @@ export const CREDITS: Readonly<Record<string, PortraitCredit>> = {
   },
 }
 
-/** Each candidate's French Wikipedia article, from config/sources.yaml. */
-export const ARTICLES: Readonly<Record<string, string>> = {
-  arthaud: "https://fr.wikipedia.org/wiki/Nathalie_Arthaud",
-  asselineau: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Asselineau",
-  attal: "https://fr.wikipedia.org/wiki/Gabriel_Attal",
-  bardella: "https://fr.wikipedia.org/wiki/Jordan_Bardella",
-  batho: "https://fr.wikipedia.org/wiki/Delphine_Batho",
-  becht: "https://fr.wikipedia.org/wiki/Olivier_Becht",
-  bertrand: "https://fr.wikipedia.org/wiki/Xavier_Bertrand",
-  bouamrane: "https://fr.wikipedia.org/wiki/Karim_Bouamrane",
-  cazeneuve: "https://fr.wikipedia.org/wiki/Bernard_Cazeneuve",
-  dupont_aignan: "https://fr.wikipedia.org/wiki/Nicolas_Dupont-Aignan",
-  faure: "https://fr.wikipedia.org/wiki/Olivier_Faure",
-  glucksmann: "https://fr.wikipedia.org/wiki/Rapha%C3%ABl_Glucksmann",
-  guedj: "https://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Guedj",
-  hollande: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Hollande",
-  kazib: "https://fr.wikipedia.org/wiki/Anasse_Kazib",
-  labib: "https://fr.wikipedia.org/wiki/Selma_Labib",
-  le_maire: "https://fr.wikipedia.org/wiki/Bruno_Le_Maire",
-  le_pen: "https://fr.wikipedia.org/wiki/Marine_Le_Pen",
-  lisnard: "https://fr.wikipedia.org/wiki/David_Lisnard",
-  maurel: "https://fr.wikipedia.org/wiki/Emmanuel_Maurel",
-  melenchon: "https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon",
-  philippe: "https://fr.wikipedia.org/wiki/%C3%89douard_Philippe",
-  philippot: "https://fr.wikipedia.org/wiki/Florian_Philippot",
-  retailleau: "https://fr.wikipedia.org/wiki/Bruno_Retailleau",
-  roussel: "https://fr.wikipedia.org/wiki/Fabien_Roussel",
-  royal: "https://fr.wikipedia.org/wiki/S%C3%A9gol%C3%A8ne_Royal",
-  ruffin: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Ruffin",
-  tondelier: "https://fr.wikipedia.org/wiki/Marine_Tondelier",
-  villepin: "https://fr.wikipedia.org/wiki/Dominique_de_Villepin",
-  zemmour: "https://fr.wikipedia.org/wiki/%C3%89ric_Zemmour",
-}
-
 const files = import.meta.glob<string>("./assets/portraits/*.webp", { eager: true, import: "default" })
 
 export interface Portrait extends PortraitCredit {

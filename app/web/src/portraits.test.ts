@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { ARTICLES, CREDITS, initials, portrait } from "./portraits"
+import { CREDITS, initials, portrait } from "./portraits"
 
 const files = Object.keys(import.meta.glob("./assets/portraits/*.webp")).map((path) =>
   path.replace("./assets/portraits/", "").replace(".webp", ""),
@@ -17,7 +17,6 @@ describe("portraits", () => {
       expect(credit.license).not.toBe("")
       expect(credit.file).toMatch(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/)
     }
-    for (const url of Object.values(ARTICLES)) expect(url).toMatch(/^https:\/\/fr\.wikipedia\.org\/wiki\//)
   })
 
   it("has no portrait for someone without one", () => {

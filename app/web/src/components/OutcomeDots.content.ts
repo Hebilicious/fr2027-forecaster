@@ -1,0 +1,61 @@
+import { insert, t, type Dictionary } from "intlayer"
+
+export default {
+  key: "outcome-dots",
+  content: {
+    others: t({
+      fr: "Tous les autres",
+      "en-GB": "Everyone else",
+      de: "Alle anderen",
+      it: "Tutti gli altri",
+      "es-ES": "Todos los demás",
+      "pt-PT": "Todos os outros",
+      ja: "その他全員",
+      ko: "그 밖의 후보 전체",
+      "zh-Hans": "其他所有人",
+      th: "ผู้สมัครอื่นทั้งหมด",
+    }),
+    othersCount: insert(
+      t({
+        fr: "{{n}} candidats",
+        "en-GB": "{{n}} candidates",
+        de: "{{n}} Kandidaten",
+        it: "{{n}} candidati",
+        "es-ES": "{{n}} candidatos",
+        "pt-PT": "{{n}} candidatos",
+        ja: "{{n}}人の候補",
+        ko: "후보 {{n}}명",
+        "zh-Hans": "{{n}} 名候选人",
+        th: "ผู้สมัคร {{n}} คน",
+      }),
+    ),
+    group: insert(
+      t({
+        fr: "{{name}} : {{p}} de chances de l'emporter",
+        "en-GB": "{{name}}: {{p}} chance of winning",
+        de: "{{name}}: {{p}} Siegchance",
+        it: "{{name}}: {{p}} di probabilità di vittoria",
+        "es-ES": "{{name}}: {{p}} de probabilidad de ganar",
+        "pt-PT": "{{name}}: {{p}} de probabilidade de vencer",
+        ja: "{{name}}：勝利の確率{{p}}",
+        ko: "{{name}}: 승리 확률 {{p}}",
+        "zh-Hans": "{{name}}：胜选概率 {{p}}",
+        th: "{{name}}: โอกาสชนะ {{p}}",
+      }),
+    ),
+    othersGroup: insert(
+      t({
+        fr: "{{m}} autres candidats ensemble : {{p}} de chances de l'emporter",
+        "en-GB": "{{m}} other candidates together: {{p}} chance of winning",
+        de: "{{m}} weitere Kandidaten zusammen: {{p}} Siegchance",
+        it: "Altri {{m}} candidati insieme: {{p}} di probabilità di vittoria",
+        "es-ES": "Los otros {{m}} candidatos en conjunto: {{p}} de probabilidad de ganar",
+        "pt-PT": "Os outros {{m}} candidatos em conjunto: {{p}} de probabilidade de vencer",
+        ja: "その他の候補{{m}}人の合計：勝利の確率{{p}}",
+        ko: "그 밖의 후보 {{m}}명 합계: 승리 확률 {{p}}",
+        "zh-Hans": "其他 {{m}} 名候选人合计：胜选概率 {{p}}",
+        th: "ผู้สมัครอื่นอีก {{m}} คนรวมกัน: โอกาสชนะ {{p}}",
+      }),
+    ),
+  },
+} satisfies Dictionary

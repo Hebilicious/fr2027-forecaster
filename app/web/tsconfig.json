@@ -17,5 +17,12 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "vite.config.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "scripts/**/*.ts",
+    "vite.config.ts",
+    "intlayer.config.ts",
+    ".intlayer/**/*.ts"
+  ]
 }

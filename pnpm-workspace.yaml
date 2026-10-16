@@ -9,21 +9,31 @@ catalog:
   "@types/node": "24.19.1"
   "@vitejs/plugin-vue": "6.0.9"
   effect: "4.0.2"
+  flag-icons: "7.6.0"
+  intlayer: "9.7.0"
   lefthook: "2.2.2"
   oxfmt: "0.72.0"
   oxlint: "1.87.0"
   typescript: "7.0.2"
   vite: "8.3.4"
+  vite-intlayer: "9.7.0"
   vitest: "5.0.3"
   vue: "3.5.43"
+  vue-intlayer: "9.7.0"
   vize: "0.435.0"
   wrangler: "4.137.0"
+  yaml: "2.9.1"
 
 # Dependency install scripts stay off. esbuild and workerd (wrangler's) only use theirs to swap
 # a JavaScript launcher for the native binary; the launcher works without it. lefthook's would
 # install the git hooks into the hooks directory every worktree shares; `moon run repo:hooks-install`
-# does that on purpose instead.
+# does that on purpose instead. @parcel/watcher (Intlayer's file watcher) ships its native binary as a
+# platform package; its script only compiles one from source when that package is missing.
 allowBuilds:
+  "@parcel/watcher": false
   esbuild: false
   workerd: false
   lefthook: false
+
+minimumReleaseAgeExclude:
+  - flag-icons@7.6.0
