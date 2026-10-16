@@ -21,7 +21,9 @@ const summary = computed(() => props.forward.summary)
 
 // A spike's size as how far the day stood above its baseline; an X shift in points of support.
 function size(flag: ForwardFlag): string {
-  return flag.kind === "spike" ? relativeChange(Math.exp(flag.score) - 1, locale.value) : points(flag.score, locale.value)
+  return flag.kind === "spike"
+    ? relativeChange(Math.exp(flag.score) - 1, locale.value)
+    : points(flag.score, locale.value)
 }
 </script>
 
@@ -114,8 +116,7 @@ function size(flag: ForwardFlag): string {
 </template>
 
 <style scoped>
-.weights th[scope="row"],
-.flags th[scope="row"] {
+.weights th[scope="row"], .flags th[scope="row"] {
   font-weight: 400;
 }
 
