@@ -40,15 +40,15 @@ The repo is the single meeting point: every source, including the Grok bot, writ
           raw kept unchanged, clean rows dated, invalid -> quarantine
                         |
                         v
-          Model: two-round Monte Carlo            <---  Weekly review
-          field draw, R1 aggregation, transfers,        (Claude session updates
-          R2; news/social, market blend, prior           candidates + research log)
+          Model: two-round Monte Carlo            <---  Grok Bot routine 4
+          field draw, R1 aggregation, transfers,        (blind poll checks, field
+          R2; news/social, market blend, prior           changes + research log)
                         |
                         v
           data/forecasts (hourly JSON)  ---->  Local UI (moon run repo:up)
 ```
 
-Collectors run on a schedule and never feed the model directly; the weekly Claude review edits configuration through pull requests, so every change to the field of candidates is reviewable.
+Collectors run on a schedule and never feed the model directly. Grok Bot changes the field only through sourced `field_change` items, which the Live workflow validates before it writes `config/candidates.yaml` and logs the change in the research log, so every change to the field of candidates is traceable.
 
 ## Data sources
 
@@ -115,7 +115,7 @@ Rules for the drop: one file per window, never edit a pushed file, commit with m
 
 The forecast is a Monte Carlo over 50,000 simulated elections, each one drawing who runs, the round 1 vote, who qualifies, and the round 2 result. Every layer below is a separate, testable module with its own parameters file.
 
-1. **Field model.** Each potential candidate gets `p_run` (declared, rumored, needs sponsorships, likely to withdraw for an ally). Set from declarations, sponsorship counts and Polymarket where informative, and updated by hand-reviewed rules logged in the research log. Each simulation first draws a field.
+1. **Field model.** Each potential candidate gets `p_run` (declared, rumored, needs sponsorships, likely to withdraw for an ally). Set from declarations, sponsorship counts and Polymarket where informative, and updated by sourced Grok Bot field changes logged in the research log. Each simulation first draws a field.
 2. **Poll aggregation (round 1).** Bayesian state-space model of each candidate's latent share over time (random walk, logit or log-ratio scale so shares sum to 100%). Polls enter with sampling variance from sample size, plus a firm house effect and a method effect, both estimated. Scenario polls that test different fields are all used: the model works with latent support, and a scenario's shares are the latent shares renormalized over who was tested.
 3. **Missing-candidate redistribution.** When a simulated field differs from what pollsters tested, a dropped candidate's support is reallocated using a transfer matrix estimated from scenario polls that include and exclude them, falling back on ideological proximity (see Programs).
 4. **Round 1 error model.** Add a national polling error drawn from a fat-tailed distribution (Student-t), fit to 2002–2022 final-poll misses. Errors are correlated across candidates of the same bloc. Error variance shrinks as election day approaches, following the historical curve.
@@ -183,11 +183,11 @@ Collectors and the model run on a schedule inside the repo, so the forecast stay
 | Markets, news RSS, Grok Bot inbox | Hourly | GitHub Actions (`live.yml`) |
 | Wikipedia page views | Daily | GitHub Actions (`live.yml`) |
 | X activity | Every 6 hours | Grok Bot routine → inbox |
-| New polls | Twice a day | Grok Bot routine → inbox → pull request reviewed by a person |
+| New polls | Twice a day | Grok Bot routine 2 → inbox → pull request, landed on `main` when routine 4's blind second entry agrees |
 | Campaign events | Daily | Grok Bot routine → inbox |
 | Model refit, simulation and forecast file | Hourly check; refits when polls or config change, and once a day | GitHub Actions (`live.yml`, `fr2027 forecast --if-changed`) |
 | Public site | Hourly | GitHub Actions → Cloudflare Worker |
-| Research review by a Claude session | Weekly | Scheduled task: check new declarations, programs, alliances; update `config/candidates.yaml` and the research log via pull request |
+| Poll checks and field changes | Twice a day | Grok Bot routine 4 → inbox: blind second entry of proposed polls; sourced field changes to `config/candidates.yaml` and the research log |
 
 How to set it up and run it: `docs/operations.md`.
 
