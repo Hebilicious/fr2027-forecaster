@@ -1,0 +1,489 @@
+{
+  "agent": {
+    "name": "Grok Bot fr2027",
+    "skill_version": "x-activity-1"
+  },
+  "candidates": [
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "arthaud",
+      "engagement": null,
+      "mentions": 74,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nathalie Arthaud\" OR \"Arthaud\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "kazib",
+      "engagement": null,
+      "mentions": 15,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Anasse Kazib\" OR \"Kazib\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "labib",
+      "engagement": null,
+      "mentions": 1,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Selma Labib\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "melenchon",
+      "engagement": null,
+      "mentions": 9808,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jean-Luc Mélenchon\" OR \"Mélenchon\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.24,
+        "neu": 0.4,
+        "pos": 0.36
+      },
+      "top_topics": [
+        "calls to back his candidacy",
+        "communist appeal for Mélenchon",
+        "economic policy",
+        "Clermont-Ferrand meeting",
+        "OpinionWay poll"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "glucksmann",
+      "engagement": null,
+      "mentions": 7843,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Raphaël Glucksmann\" OR \"Glucksmann\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.4,
+        "neu": 0.4,
+        "pos": 0.2
+      },
+      "top_topics": [
+        "socialist primary win",
+        "past as adviser to Saakashvili",
+        "campaign programme",
+        "left-wing rivalry"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "faure",
+      "engagement": null,
+      "mentions": 33,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Olivier Faure\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "royal",
+      "engagement": null,
+      "mentions": 126,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Ségolène Royal\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "guedj",
+      "engagement": null,
+      "mentions": 54,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jérôme Guedj\" OR \"Guedj\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "maurel",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Emmanuel Maurel\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "hollande",
+      "engagement": null,
+      "mentions": 511,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Hollande\" OR \"Hollande\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "roussel",
+      "engagement": null,
+      "mentions": 309,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Fabien Roussel\" OR \"Roussel\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "tondelier",
+      "engagement": null,
+      "mentions": 184,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Tondelier\" OR \"Tondelier\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "ruffin",
+      "engagement": null,
+      "mentions": 328,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Ruffin\" OR \"Ruffin\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "bouamrane",
+      "engagement": null,
+      "mentions": 21,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Karim Bouamrane\" OR \"Bouamrane\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "cazeneuve",
+      "engagement": null,
+      "mentions": 62,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bernard Cazeneuve\" OR \"Cazeneuve\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "batho",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Delphine Batho\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "philippe",
+      "engagement": null,
+      "mentions": 1181,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Édouard Philippe\" lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.24,
+        "neu": 0.48,
+        "pos": 0.28
+      },
+      "top_topics": [
+        "absence from some poll scenarios",
+        "Horizons campaign events",
+        "comparison with Glucksmann",
+        "tax policy"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "attal",
+      "engagement": null,
+      "mentions": 2633,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Gabriel Attal\" OR \"Attal\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.32,
+        "neu": 0.48,
+        "pos": 0.2
+      },
+      "top_topics": [
+        "education proposals",
+        "campaign tone",
+        "absence from a poll",
+        "public finances letter"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "le_maire",
+      "engagement": null,
+      "mentions": 33,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Bruno Le Maire\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "becht",
+      "engagement": null,
+      "mentions": 1,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Olivier Becht\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "retailleau",
+      "engagement": null,
+      "mentions": 1806,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Retailleau\" OR \"Retailleau\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.24,
+        "neu": 0.56,
+        "pos": 0.2
+      },
+      "top_topics": [
+        "Aubagne shooting remarks",
+        "rivalry with Lisnard",
+        "LR candidacy",
+        "immigration policy"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "lisnard",
+      "engagement": null,
+      "mentions": 3227,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"David Lisnard\" OR \"Lisnard\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.16,
+        "neu": 0.36,
+        "pos": 0.48
+      },
+      "top_topics": [
+        "first poll inclusion",
+        "campaign momentum",
+        "possible alliance with Retailleau",
+        "online support and alleged bots"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "bertrand",
+      "engagement": null,
+      "mentions": 15,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Xavier Bertrand\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "villepin",
+      "engagement": null,
+      "mentions": 297,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Dominique de Villepin\" OR \"Villepin\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "le_pen",
+      "engagement": null,
+      "mentions": 19191,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Le Pen\" OR \"Le Pen\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.48,
+        "neu": 0.24,
+        "pos": 0.28
+      },
+      "top_topics": [
+        "Ukraine aid",
+        "Islam and the headscarf",
+        "attack on the Conseil constitutionnel",
+        "second-round polls",
+        "public hospital jobs"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "bardella",
+      "engagement": null,
+      "mentions": 1855,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jordan Bardella\" OR \"Bardella\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.32,
+        "neu": 0.48,
+        "pos": 0.2
+      },
+      "top_topics": [
+        "antisemitism accusations (Mediapart)",
+        "polls after the affair",
+        "Le Pen–Bardella tandem",
+        "Knafo call for union"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "zemmour",
+      "engagement": null,
+      "mentions": 3342,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Éric Zemmour\" OR \"Zemmour\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0.16,
+        "neu": 0.32,
+        "pos": 0.52
+      },
+      "top_topics": [
+        "Reconquête vote for 2027",
+        "Islam and sharia",
+        "rivalry with Le Pen",
+        "remigration",
+        "polls"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "dupont_aignan",
+      "engagement": null,
+      "mentions": 234,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nicolas Dupont-Aignan\" OR \"Dupont-Aignan\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "philippot",
+      "engagement": null,
+      "mentions": 249,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Florian Philippot\" OR \"Philippot\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "asselineau",
+      "engagement": null,
+      "mentions": 2138,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Asselineau\" OR \"Asselineau\") lang:fr",
+      "sample_size": 25,
+      "sentiment": {
+        "method": "grok-bot reading 25 posts, routine v1 (x-activity-1, 12h window, lang:fr)",
+        "neg": 0,
+        "neu": 0.28,
+        "pos": 0.72
+      },
+      "top_topics": [
+        "Frexit",
+        "complaints of exclusion from polls",
+        "UPR campaign"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "bonnal",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "\"Sébastien Bonnal\" lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "top_topics": null,
+      "unique_authors": null
+    }
+  ],
+  "collected_at": "2026-10-16T15:03:54Z",
+  "query_method": "X recent counts endpoint (get_posts_counts_recent) for mentions, one query per candidate ending in lang:fr; sentiment/topics from 25 top-relevance non-retweet posts (search_posts_all) for the 10 highest-volume candidates only. Test run, routine v1 with Heb's 12h/lang:fr override.",
+  "schema_version": "1.0",
+  "window": {
+    "end": "2026-10-16T12:00:00Z",
+    "start": "2026-10-16T00:00:00Z"
+  }
+}

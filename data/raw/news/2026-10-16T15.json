@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-16T15:09:05Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Mobilisation du 17 octobre : Bardella dénonce « une journée pour la France du chaos » et « apporte son soutien aux forces de l’ordre »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/mobilisation-du-17-octobre-bardella-denonce-une-journee-pour-la-france-du-chaos-et-apporte-son-soutien-aux-forces-de-lordre-16-10-2026-GTGJT22HKNBTVBDYWU53Q3RTHE.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : sans « candidature unique » au centre, « on sera responsables de l’élection de Marine Le Pen », alerte Aurore Bergé",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-sans-candidature-unique-au-centre-on-sera-responsables-de-lelection-de-marine-le-pen-alerte-aurore-berge-16-10-2026-EXRZXOGNH5FCJDVDCVDWI3VFGA.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-16T13:56:34Z",
+      "title": "Le RN et l’UDR saisissent le Conseil constitutionnel pour demander la tête de Richard Ferrand",
+      "url": "https://www.20minutes.fr/politique/4255026-20261016-rn-udr-saisissent-conseil-constitutionnel-demander-tete-richard-ferrand"
+    }
+  ],
+  "schema_version": "1.0"
+}
