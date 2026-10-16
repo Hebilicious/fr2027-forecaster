@@ -1,6 +1,19 @@
 import { describe, expect, it } from "vitest"
 import type { Forecast, Poll, SeriesPoint } from "./api/schemas"
-import { midpoint, outcomeGroups, round1Panels, round2Matrix, scale, shareTicks } from "./charts"
+import {
+  fitShares,
+  invert,
+  midpoint,
+  nearest,
+  outcomeGroups,
+  panDomain,
+  round1Panels,
+  round2Matrix,
+  scale,
+  shareTicks,
+  shareTicksWithin,
+  zoomDomain,
+} from "./charts"
 
 const candidate = (id: string, pQualify: number, pWin: number) => ({
   candidate_id: id,
@@ -166,5 +179,61 @@ describe("outcomeGroups", () => {
 
   it("is empty when nobody can win", () => {
     expect(outcomeGroups([withWin("a", 0)])).toEqual([])
+  })
+})
+
+describe("nearest", () => {
+  const points = [
+    { id: "low", at: [100, 150] as const },
+    { id: "high", at: [100, 143] as const },
+    { id: "same", at: [100, 143] as const },
+  ]
+  const at = (p: (typeof points)[number]) => p.at
+
+  it("picks the closest item, even when its neighbours are a few pixels away", () => {
+    expect(nearest(points, at, 101, 149, 10)?.id).toBe("low")
+    expect(nearest(points.slice(0, 2), at, 99, 144, 10)?.id).toBe("high")
+  })
+
+  it("lets the later of two items in the same place win", () => {
+    expect(nearest(points, at, 100, 143, 10)?.id).toBe("same")
+  })
+
+  it("is null when nothing lies within the radius", () => {
+    expect(nearest(points, at, 140, 150, 10)).toBeNull()
+  })
+})
+
+describe("zoom", () => {
+  const limits = [0, 100] as const
+
+  it("inverts scale", () => {
+    expect(invert(scale(30, { domain: [0, 100], range: [40, 240] }), { domain: [0, 100], range: [40, 240] })).toBe(30)
+  })
+
+  it("zooms around the anchor, which stays in place", () => {
+    expect(zoomDomain([0, 100], 20, 0.5, limits, 1)).toEqual([10, 60])
+  })
+
+  it("never zooms out past the limits nor in past the minimum span", () => {
+    expect(zoomDomain([10, 60], 20, 4, limits, 1)).toEqual([0, 100])
+    expect(zoomDomain([0, 100], 50, 0.001, limits, 10)).toEqual([45, 55])
+  })
+
+  it("pans inside the limits", () => {
+    expect(panDomain([10, 60], 20, limits)).toEqual([30, 80])
+    expect(panDomain([10, 60], 80, limits)).toEqual([50, 100])
+    expect(panDomain([10, 60], -80, limits)).toEqual([0, 50])
+  })
+
+  it("fits the share axis to the visible values, inside the limits", () => {
+    expect(fitShares([0.031, 0.06], [0, 0.4], 0.04)).toEqual([0.02, 0.07])
+    expect(fitShares([0.02, 0.021], [0, 0.4], 0.04)).toEqual([0, 0.04])
+    expect(fitShares([], [0, 0.4], 0.04)).toEqual([0, 0.4])
+  })
+
+  it("puts whole-point ticks inside a zoomed share axis", () => {
+    expect(shareTicksWithin([0.015, 0.07])).toEqual([0.02, 0.03, 0.04, 0.05, 0.06, 0.07])
+    expect(shareTicksWithin([0.03, 0.2])).toEqual([0.05, 0.1, 0.15, 0.2])
   })
 })
