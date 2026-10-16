@@ -2,7 +2,7 @@
 // Everything here is pure: the handler takes a Store, the tokens and a clock, so the Durable
 // Object (src/index.ts) and the tests run the same code. The HTTP contract is in README.md.
 
-export const KINDS = ["x_drop", "poll", "event"] as const
+export const KINDS = ["x_drop", "poll", "event", "poll_check", "field_change"] as const
 export type Kind = (typeof KINDS)[number]
 
 export const RESOLUTIONS = ["accepted", "rejected", "proposed"] as const
@@ -19,6 +19,8 @@ export const RETENTION_DAYS = 30
 export interface StoredItem {
   readonly id: string
   readonly kind: Kind
+  /** What the item is about, read from its payload (see `itemKey`); null when the field is missing. */
+  readonly key: string | null
   /** UTC, `YYYY-MM-DDTHH:MM:SSZ`, so string order is time order. */
   readonly received_at: string
   readonly status: Status
@@ -42,6 +44,8 @@ export interface Store {
   /** Replaces the item that has the same id. */
   update(item: StoredItem): void
   countPending(): number
+  /** The newest accepted or proposed item of this kind and key. */
+  findSettled(kind: Kind, key: string): StoredItem | undefined
   /** Items received at or after `since`, newest first. */
   listSince(since: string): ItemView[]
   /** Pending items, oldest first, at most `limit`. */
@@ -115,8 +119,13 @@ const submit: Endpoint = {
   role: "bot",
   async run(request, { store, now }) {
     const { kind, payload } = parseSubmission(await readJson(request))
+    const key = itemKey(kind, JSON.parse(payload) as Record<string, unknown>)
     const time = now()
     store.purgeBefore(retentionStart(time))
+    const settled = key === null ? undefined : store.findSettled(kind, key)
+    if (settled !== undefined) {
+      return respond(409, { error: `${kind} ${key} is already ${settled.status} (item ${settled.id})`, id: settled.id })
+    }
     if (store.countPending() >= MAX_PENDING) {
       throw new HttpError(429, `${MAX_PENDING} items are already pending; try again after the pipeline's next run`)
     }
@@ -125,6 +134,7 @@ const submit: Endpoint = {
     store.insert({
       id,
       kind,
+      key,
       received_at: receivedAt,
       status: "pending",
       note: null,
@@ -164,7 +174,11 @@ const resolveItem: Endpoint = {
     store.purgeBefore(retentionStart(time))
     const item = store.get(id)
     if (item === undefined) throw new HttpError(404, `no item ${id}`)
-    if (item.status !== "pending") throw new HttpError(409, `item ${id} is already ${item.status}`)
+    // A proposed poll is settled later, when a blind check matches it or not.
+    const settlesProposal = item.status === "proposed" && status !== "proposed"
+    if (item.status !== "pending" && !settlesProposal) {
+      throw new HttpError(409, `item ${id} is already ${item.status}`)
+    }
     const resolved: StoredItem = {
       ...item,
       status,
@@ -176,6 +190,34 @@ const resolveItem: Endpoint = {
     store.update(resolved)
     return respond(200, withoutPayload(resolved))
   },
+}
+
+/**
+ * What an item is about, so the bot can see what it already sent (GET /inbox/items carries no
+ * payloads) and a second copy is refused: the poll id for polls and poll checks,
+ * `<window.start>/<window.end>` for X activity, the event id, or the change id. Null when the
+ * payload lacks the field; the pipeline then rejects the item on its schema.
+ */
+export function itemKey(kind: Kind, payload: Record<string, unknown>): string | null {
+  switch (kind) {
+    case "poll":
+    case "poll_check":
+      return nonEmptyText(payload["poll_id"])
+    case "x_drop": {
+      const window = isObject(payload["window"]) ? payload["window"] : {}
+      const start = nonEmptyText(window["start"])
+      const end = nonEmptyText(window["end"])
+      return start === null || end === null ? null : `${start}/${end}`
+    }
+    case "event":
+      return nonEmptyText(payload["event_id"])
+    case "field_change":
+      return nonEmptyText(payload["change_id"])
+  }
+}
+
+function nonEmptyText(value: unknown): string | null {
+  return typeof value === "string" && value !== "" ? value : null
 }
 
 function parseSubmission(body: unknown): { kind: Kind; payload: string } {
@@ -267,8 +309,8 @@ function quoteAll(values: readonly string[]): string {
 }
 
 function withoutPayload(item: StoredItem): ItemView {
-  const { id, kind, received_at, status, note, ref, resolved_at } = item
-  return { id, kind, received_at, status, note, ref, resolved_at }
+  const { id, kind, key, received_at, status, note, ref, resolved_at } = item
+  return { id, kind, key, received_at, status, note, ref, resolved_at }
 }
 
 function respond(status: number, body: unknown, headers: Record<string, string> = {}): Response {

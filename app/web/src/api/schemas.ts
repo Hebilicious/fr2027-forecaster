@@ -113,7 +113,7 @@ export const Polls = Schema.Struct({ polls: Schema.Array(Poll) })
 export type Poll = typeof Poll.Type
 
 /** How often a source is expected to update; the UI translates it. */
-const Cadence = Schema.Literals(["on_publication", "hourly", "6h", "daily"])
+const Cadence = Schema.Literals(["on_publication", "hourly", "12h", "daily"])
 
 const Collector = Schema.Struct({
   name: Schema.String,

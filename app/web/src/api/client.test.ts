@@ -38,8 +38,8 @@ describe("api", () => {
   })
 
   it("decodes cadence codes and rejects any other cadence", async () => {
-    respond(JSON.stringify(health("6h")), 200, "application/json")
-    expect(await api.health()).toEqual({ _tag: "Loaded", value: health("6h") })
+    respond(JSON.stringify(health("12h")), 200, "application/json")
+    expect(await api.health()).toEqual({ _tag: "Loaded", value: health("12h") })
     respond(JSON.stringify(health("Grok Bot, every 6 hours")), 200, "application/json")
     expect((await api.health())._tag).toBe("Failed")
   })

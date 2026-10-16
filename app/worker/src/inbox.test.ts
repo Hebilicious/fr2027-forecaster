@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from "vitest"
 import {
   constantTimeEqual,
   handleInbox,
+  itemKey,
   MAX_BODY_BYTES,
   type InboxContext,
   type ItemView,
@@ -36,6 +37,12 @@ class MemoryStore implements Store {
 
   countPending(): number {
     return this.items.filter(({ status }) => status === "pending").length
+  }
+
+  findSettled(kind: string, key: string): StoredItem | undefined {
+    return this.items.findLast(
+      (item) => item.kind === kind && item.key === key && (item.status === "accepted" || item.status === "proposed"),
+    )
   }
 
   listSince(since: string): ItemView[] {
@@ -293,8 +300,9 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
 
     it("accepts every kind", async () => {
       const { submitted, pipeline } = inbox(makeStore)
-      for (const kind of ["x_drop", "poll", "event"]) await submitted({}, kind)
-      expect((await pipeline.pending()).map(({ kind }) => kind)).toEqual(["x_drop", "poll", "event"])
+      const kinds = ["x_drop", "poll", "event", "poll_check", "field_change"]
+      for (const kind of kinds) await submitted({}, kind)
+      expect((await pipeline.pending()).map(({ kind }) => kind)).toEqual(kinds)
     })
 
     it("gives unique ids that sort in the order items arrive", async () => {
@@ -316,7 +324,7 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
       ["an array", "[]", "the body must be a JSON object"],
       ["null", "null", "the body must be a JSON object"],
       ["a string", '"poll"', "the body must be a JSON object"],
-      ["no kind", '{"payload": {}}', '"kind" must be one of "x_drop", "poll", "event"'],
+      ["no kind", '{"payload": {}}', '"kind" must be one of "x_drop", "poll", "event", "poll_check", "field_change"'],
       ["an unknown kind", '{"kind": "tweet", "payload": {}}', '"kind" must be one of'],
       ["a kind in the wrong case", '{"kind": "POLL", "payload": {}}', '"kind" must be one of'],
       ["no payload", '{"kind": "poll"}', '"payload" must be a JSON object'],
@@ -389,6 +397,7 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
         {
           id: third,
           kind: "x_drop",
+          key: null,
           received_at: "2026-10-09T12:00:01Z",
           status: "pending",
           note: null,
@@ -398,6 +407,7 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
         {
           id: second,
           kind: "event",
+          key: null,
           received_at: "2026-10-09T12:00:01Z",
           status: "pending",
           note: null,
@@ -407,6 +417,7 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
         {
           id: first,
           kind: "poll",
+          key: null,
           received_at: "2026-10-09T12:00:00Z",
           status: "accepted",
           note: "added",
@@ -418,6 +429,55 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
 
     it("answers an empty list when there is nothing", async () => {
       expect(await inbox(makeStore).bot.list()).toEqual([])
+    })
+  })
+
+  describe("keys", () => {
+    const window = { start: "2026-10-16T00:00:00Z", end: "2026-10-16T12:00:00Z" }
+    it.each([
+      ["poll", { poll_id: "ifop-2026-10-14-10314" }, "ifop-2026-10-14-10314"],
+      ["poll_check", { poll_id: "ifop-2026-10-14-10314" }, "ifop-2026-10-14-10314"],
+      ["x_drop", { window }, "2026-10-16T00:00:00Z/2026-10-16T12:00:00Z"],
+      ["event", { event_id: "2026-10-11-ps-primary-result" }, "2026-10-11-ps-primary-result"],
+      ["field_change", { change_id: "2026-10-16-ps-primary" }, "2026-10-16-ps-primary"],
+    ])("stores the key of a %s and lists it", async (kind, payload, key) => {
+      const { bot, submitted } = inbox(makeStore)
+      const id = await submitted(payload, kind)
+      expect(await bot.list()).toEqual([expect.objectContaining({ id, kind, key })])
+    })
+
+    it.each(["accepted", "proposed"])("answers 409 with the item's id to a copy of a %s item", async (status) => {
+      const { bot, pipeline, submitted, store } = inbox(makeStore)
+      const id = await submitted({ poll_id: "ifop-2026-10-14-10314" })
+      await pipeline.resolve(id, { status, note: "" })
+      const copy = await bot.submit({ kind: "poll", payload: { poll_id: "ifop-2026-10-14-10314", n: 2 } })
+      expect(copy.status).toBe(409)
+      expect(copy.body).toEqual({ error: `poll ifop-2026-10-14-10314 is already ${status} (item ${id})`, id })
+      expect(await bot.list()).toHaveLength(1)
+      expect(store.countPending()).toBe(0)
+    })
+
+    it("takes a copy again once the earlier item was rejected", async () => {
+      const { pipeline, submitted } = inbox(makeStore)
+      const id = await submitted({ event_id: "e1" }, "event")
+      await pipeline.resolve(id, { status: "rejected", note: "schema" })
+      await submitted({ event_id: "e1" }, "event")
+    })
+
+    it("dedupes per kind: a poll check may share its poll's key", async () => {
+      const { pipeline, submitted } = inbox(makeStore)
+      await pipeline.resolve(await submitted({ poll_id: "p" }, "poll"), { status: "proposed", note: "" })
+      await submitted({ poll_id: "p" }, "poll_check")
+    })
+
+    it("gives a null key, and no dedupe, to a payload without the field", async () => {
+      const { bot, pipeline, submitted } = inbox(makeStore)
+      await pipeline.resolve(await submitted({ window: { start: "2026-10-16T00:00:00Z" } }, "x_drop"), {
+        status: "accepted",
+        note: "",
+      })
+      await submitted({ window: { start: "2026-10-16T00:00:00Z" } }, "x_drop")
+      expect((await bot.list()).map(({ key }) => key)).toEqual([null, null])
     })
   })
 
@@ -463,6 +523,7 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
       const resolved = {
         id,
         kind: "poll",
+        key: null,
         received_at: "2026-10-09T12:00:00Z",
         status,
         note: "ok",
@@ -498,6 +559,31 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
       expect(again.status).toBe(409)
       expect(again.body).toEqual({ error: `item ${id} is already rejected` })
       expect(store.get(id)).toMatchObject({ status: "rejected", note: "first" })
+    })
+
+    it.each(["accepted", "rejected"])("settles a proposed item once, as %s", async (status) => {
+      const { pipeline, submitted, store } = inbox(makeStore)
+      const id = await submitted({ poll_id: "x" })
+      await pipeline.resolve(id, {
+        status: "proposed",
+        note: "in a pull request",
+        ref: "https://github.com/o/r/pull/1",
+      })
+      const settled = await pipeline.resolve(id, { status, note: "a blind check settled it", ref: null })
+      expect(settled.status).toBe(200)
+      expect(store.get(id)).toMatchObject({ status, note: "a blind check settled it", payload: null })
+      const again = await pipeline.resolve(id, { status: "accepted", note: "third" })
+      expect(again.status).toBe(409)
+      expect(again.body).toEqual({ error: `item ${id} is already ${status}` })
+    })
+
+    it("does not propose a proposed item again", async () => {
+      const { pipeline, submitted } = inbox(makeStore)
+      const id = await submitted()
+      await pipeline.resolve(id, { status: "proposed", note: "first" })
+      const again = await pipeline.resolve(id, { status: "proposed", note: "second" })
+      expect(again.status).toBe(409)
+      expect(again.body).toEqual({ error: `item ${id} is already proposed` })
     })
 
     it("answers 404 for an unknown id", async () => {
@@ -584,6 +670,36 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
     expect(reply.headers.get("content-type")).toBe("application/json; charset=utf-8")
     expect(logged).toHaveBeenCalledOnce()
     logged.mockRestore()
+  })
+})
+
+describe("itemKey", () => {
+  it("reads only non-empty strings", () => {
+    expect(itemKey("poll", { poll_id: "" })).toBeNull()
+    expect(itemKey("poll", { poll_id: 42 })).toBeNull()
+    expect(itemKey("x_drop", { window: "2026-10-16T00" })).toBeNull()
+  })
+})
+
+describe("SqlStore", () => {
+  it("adds the key column to a table created before items had keys", () => {
+    const database = new DatabaseSync(":memory:")
+    database.exec(`CREATE TABLE items (
+      seq INTEGER PRIMARY KEY, id TEXT NOT NULL UNIQUE, kind TEXT NOT NULL, received_at TEXT NOT NULL,
+      status TEXT NOT NULL, note TEXT, ref TEXT, resolved_at TEXT, payload TEXT)`)
+    database.exec(
+      `INSERT INTO items (id, kind, received_at, status) VALUES ('old', 'poll', '2026-10-09T12:00:00Z', 'accepted')`,
+    )
+    const sql: Sql = {
+      exec(query, ...bindings) {
+        const rows = database.prepare(query).all(...bindings) as ReturnType<ReturnType<Sql["exec"]>["toArray"]>
+        return { toArray: () => rows }
+      },
+    }
+    const store = new SqlStore(sql)
+    expect(store.get("old")).toMatchObject({ id: "old", key: null })
+    expect(() => new SqlStore(sql)).not.toThrow() // a second start finds the column and leaves it
+    expect(store.findSettled("poll", "anything")).toBeUndefined()
   })
 })
 

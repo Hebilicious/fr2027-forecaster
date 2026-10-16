@@ -4,7 +4,7 @@ Probabilistic forecaster for the 2027 French presidential election (round 1: 18 
 
 Polls are the backbone. Prediction markets, X activity (measured by Grok Bot), news, Wikipedia attention and candidate programs are secondary layers that must earn their weight in backtests; for now they are collected and shown, not used by the model. See [SPEC.md](SPEC.md) for the build spec and milestones, and [research/LOG.md](research/LOG.md) for every decision, source and parameter change.
 
-It runs itself: a GitHub Actions workflow, started hourly by the Cloudflare Worker's cron trigger, collects, refits when polls or config change, commits the data, and publishes a public page on Cloudflare. Grok Bot routines send X measurements, new polls and campaign events to an inbox the workflow checks, and a Claude editor routine checks polls against their notices and applies confirmed field changes, through a gated branch ([docs/editor.md](docs/editor.md)). Setup and operations: [docs/operations.md](docs/operations.md); the Grok Bot routines: [docs/grok-bot.md](docs/grok-bot.md).
+It runs itself: a GitHub Actions workflow, started hourly by the Cloudflare Worker's cron trigger, collects, refits when polls or config change, commits the data, and publishes a public page on Cloudflare. Grok Bot routines send X measurements, new polls, campaign events, blind checks of the polls and sourced field changes to an inbox the workflow checks: a poll counts once a second routine run, entering it from the notice without seeing the first entry, agrees on every number, and a field change is applied to `config/candidates.yaml` and the research log once it validates. No person is in the loop. Setup and operations: [docs/operations.md](docs/operations.md); the Grok Bot routines: [docs/grok-bot.md](docs/grok-bot.md).
 
 ## Run it
 
@@ -44,7 +44,7 @@ The binary also runs on its own: `target/release/fr2027 forecast --as-of 2026-09
 | `app/web/`        | TypeScript, Vue | The UI: Overview, Round 1, Round 2, Signals, Sources and health; French and English                                           |
 | `app/worker/`     | TypeScript      | The Cloudflare Worker: serves the public site and the Grok Bot inbox                                                          |
 | `config/`         | YAML            | `candidates.yaml` (canonical ids, blocs, who runs), `model.yaml` (parameters), `sources.yaml` (live sources), `backtest.yaml` |
-| `.github/`        | YAML            | `ci.yml` (checks) and `live.yml` (the hourly pipeline)                                                                        |
+| `.github/`        | YAML            | `ci.yml` (checks), `live.yml` (the hourly pipeline) and `clock.yml` (starts Live)                                             |
 | `docs/`           |                 | Operations and the Grok Bot routines                                                                                          |
 | `schemas/`        | JSON Schema     | Contracts for every file sources write and the model outputs                                                                  |
 | `data/raw/`       |                 | Source files, never edited: `polls/`, `markets/`, `news/`, `attention/`, `grok/`, `events/`                                   |
@@ -57,16 +57,16 @@ Why Rust and TypeScript rather than Python: see [research/LOG.md](research/LOG.m
 
 ## Adding a poll
 
-Create `data/raw/polls/<poll_id>.yaml` following `schemas/poll.schema.json` (copy a recent file), using candidate ids from `config/candidates.yaml`. Set `entry: primary` only if you checked the numbers against the pollster's own publication or its Commission des sondages notice. Then run `moon run cli:forecast`. A file that fails validation is copied to `data/quarantine/polls/` with a note saying why, and the rest still flow through.
+Create `data/raw/polls/<poll_id>.yaml` following `schemas/poll.schema.json` (copy a recent file), using candidate ids from `config/candidates.yaml`. Set `entry: primary` only if you checked the numbers against the pollster's own publication or its Commission des sondages notice. Polls normally arrive through Grok Bot's inbox instead ([docs/grok-bot.md](docs/grok-bot.md)), and land after a blind check. Then run `moon run cli:forecast`. A file that fails validation is copied to `data/quarantine/polls/` with a note saying why, and the rest still flow through.
 
 ## Status
 
-| Milestone                     | State                                                                                                                                         |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Skeleton                   | Done: layout, schemas, config, CI, UI                                                                                                         |
-| 2. Polls and polls-only model | Done: 33 polls (April–October 2026), 32 checked against their notice or the pollster's report; real forecast in Overview, Round 1 and Round 2 |
-| 3. Backtest harness           | Done: 2017 and 2022 replays checked against primary sources; error settings fitted ([report](research/backtest/report.md))                    |
-| 4. Markets                    | Collector and comparison view done; the blend waits for the backtests                                                                         |
-| 5. Grok, news, attention      | Inbox, collectors and Signals view done; event detection and ablations wait for the backtests                                                 |
-| 6. Programs                   | Not started                                                                                                                                   |
-| 7. Ops hardening              | Hourly schedule, public page and health view done; needs 7 unattended days                                                                    |
+| Milestone                     | State                                                                                                                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Skeleton                   | Done: layout, schemas, config, CI, UI                                                                                                                                 |
+| 2. Polls and polls-only model | Done: 33 polls (April–October 2026), 32 checked against their notice or the pollster's report; real forecast in Overview, Round 1 and Round 2                         |
+| 3. Backtest harness           | Done: 2017 and 2022 replays checked against primary sources; error settings fitted ([report](research/backtest/report.md))                                            |
+| 4. Markets                    | Collector and comparison view done; the blend waits for the backtests                                                                                                 |
+| 5. Grok, news, attention      | Inbox, collectors and Signals view done; event detection and ablations wait for the backtests                                                                         |
+| 6. Programs                   | Not started                                                                                                                                                           |
+| 7. Ops hardening              | Hourly schedule, public page and health view done; Grok Bot enters polls, checks them blind and changes the field with no person in the loop; needs 7 unattended days |

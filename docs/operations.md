@@ -5,20 +5,24 @@ needs a server or a computer left on.
 
 ## What runs where
 
-| When                                                    | Where                                                       | What                                                                                                                                                                                                                                                             |
-| ------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Every hour at :17, started by the Worker's cron trigger | GitHub Actions, [`live.yml`](../.github/workflows/live.yml) | Prediction-market prices (Polymarket, Kalshi), new headlines from 13 RSS feeds, Wikipedia page views (once a day, after 06:00 UTC), the Grok Bot inbox. Then ingest, refit when the inputs changed, validate, commit the new data to `main`, and deploy the site |
-| On a merge to `main` that changes polls, config or code | GitHub Actions, `live.yml`                                  | The same, so the page follows `main` right away                                                                                                                                                                                                                  |
-| On every pull request and push to `main`                | GitHub Actions, [`ci.yml`](../.github/workflows/ci.yml)     | `moon ci`: tests, lint, format and type checks, and `fr2027 validate`                                                                                                                                                                                            |
-| Every 6 hours, twice a day, every evening               | Grok Bot routines ([grok-bot.md](grok-bot.md))              | X activity, new polls, campaign events, sent to the inbox                                                                                                                                                                                                        |
-| 07:00 and 19:00 UTC                                     | Claude editor routine ([editor.md](editor.md))              | Checks Grok Bot's polls against their notices, finds missed polls, applies confirmed field changes; pushes a `claude/editor-*` branch                                                                                                                            |
-| On each editor branch                                   | GitHub Actions, [`land.yml`](../.github/workflows/land.yml) | Path check, clean files, `moon ci`, then fast-forwards `main` and starts Live                                                                                                                                                                                    |
-| Always                                                  | Cloudflare Worker `fr2027` ([`app/worker`](../app/worker))  | The public page (static files, rebuilt hourly) and the Grok Bot inbox                                                                                                                                                                                            |
+| When                                                                        | Where                                                       | What                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Every hour at :17, started by the Worker's cron trigger                     | GitHub Actions, [`live.yml`](../.github/workflows/live.yml) | Prediction-market prices (Polymarket, Kalshi), new headlines from 13 RSS feeds, Wikipedia page views (once a day, after 06:00 UTC), the Grok Bot inbox: X drops and events committed, polls proposed in pull requests and committed when a blind check agrees, field changes applied to `config/candidates.yaml` and `research/LOG.md`. Then ingest, refit when the inputs changed, validate, commit to `main`, and deploy the site |
+| On a merge to `main` that changes polls, config or code                     | GitHub Actions, `live.yml`                                  | The same, so the page follows `main` right away                                                                                                                                                                                                                                                                                                                                                                                     |
+| On every pull request and push to `main`                                    | GitHub Actions, [`ci.yml`](../.github/workflows/ci.yml)     | `moon ci`: tests, lint, format and type checks, and `fr2027 validate`                                                                                                                                                                                                                                                                                                                                                               |
+| 00:20 and 12:20 UTC; 09:00, 09:30, 10:30, 21:00, 21:30 and 22:30 Paris time | Grok Bot routines ([grok-bot.md](grok-bot.md))              | X activity, new polls, campaign events, and blind poll checks and field changes, sent to the inbox                                                                                                                                                                                                                                                                                                                                  |
+| Always                                                                      | Cloudflare Worker `fr2027` ([`app/worker`](../app/worker))  | The public page (static files, rebuilt hourly) and the Grok Bot inbox                                                                                                                                                                                                                                                                                                                                                               |
 
 The model refits once a day (the forecast date changes) and whenever polls or config change; an
 hour with no new input doesn't add a forecast file. Every collector writes one new file per run
 under `data/raw/` and never edits an old one. A source that fails is recorded with its error and
 warned about in the run's summary; it never stops the others.
+
+No person is in the loop. Grok Bot is the only agent that collects and edits: it enters polls,
+checks each poll blind from another routine run before it counts, and sends sourced field
+changes ([grok-bot.md](grok-bot.md)). The Live workflow validates every item and commits only
+files under `data/`, plus `config/candidates.yaml`, `config/sources.yaml` and `research/LOG.md`
+when a field change it applied in the same run explains them.
 
 ## One-time setup
 
@@ -28,9 +32,10 @@ In the repository's **Settings → Actions → General**:
 
 - **Workflow permissions:** keep "Read repository contents and packages permissions". Each
   workflow asks for exactly what it needs: `live.yml` writes to the repository, `ci.yml` only reads.
-- **Allow GitHub Actions to create and approve pull requests:** on. The Live workflow opens a pull
-  request for each batch of polls Grok Bot finds. Without it, the branch is still pushed, and the
-  run's summary links to it so you can open the pull request yourself.
+- **Allow GitHub Actions to create and approve pull requests:** on, unless the `heb-release` App
+  key is set (below). The Live workflow opens a pull request for each batch of polls Grok Bot
+  sends, comments on it with each blind check's outcome, and closes it once its polls are on
+  `main`. Without a way to open it, the branch is still pushed and the run's summary links to it.
 - **Fork pull request workflows:** "Require approval for all external contributors".
 - **Require actions to be pinned to a full-length commit SHA:** on. Every action in the workflows
   is pinned.
@@ -69,9 +74,10 @@ GitHub never fired Live's own hourly schedule (16 October 2026). Live is started
   `repository_dispatch`;
 - Live's own schedule, every 6 hours, as a last backup.
 
-The two App rows above are optional. With them, the Worker's cron runs, and Live opens Grok Bot's
-poll pull requests with the App so CI runs on them; without them, those pull requests are opened
-with `GITHUB_TOKEN` (Land runs `moon ci` before anything reaches `main` anyway).
+The two App rows above are optional. With them, the Worker's cron runs, and Live opens, comments
+on and closes Grok Bot's poll pull requests with the App so CI runs on them; without them, Live
+does that with `GITHUB_TOKEN`, and CI does not run on those pull requests (Live validates every
+file before it commits it to `main` either way).
 
 ### 4. First run
 
@@ -84,8 +90,7 @@ Schedules only run from the default branch, so the pipeline starts once this cod
 3. Set the `FR2027_INBOX_URL` variable to that address, then run Live once more with
    **sync_worker_secrets** ticked. That copies the two inbox tokens and the App key to the
    Worker, which turns on the hourly cron.
-4. Set up Grok Bot: [grok-bot.md](grok-bot.md).
-5. Set up the editor routine: [editor.md](editor.md).
+4. Set up Grok Bot's four routines: [grok-bot.md](grok-bot.md).
 
 From then on it runs every hour.
 
@@ -94,7 +99,11 @@ From then on it runs every hour.
 - The **Sources** page of the site shows when each source last updated, and warns when markets or
   news are more than 3 hours old, page views more than 50 hours, X data more than 48 hours, or the
   forecast more than 36 hours.
-- **Actions → Land** shows each editor branch; a failed run leaves the branch for you to read.
+- Open pull requests titled "Polls from Grok Bot" are polls waiting for a blind check that agrees;
+  each check's differences are in a comment. One that stays open for days means the two routines
+  keep reading the PDF differently.
+- Every field change is an entry in `research/LOG.md` marked "via Grok Bot field_change"; a
+  rejected one is in the inbox with its reasons.
 - GitHub turns off scheduled workflows in a public repository after 60 days without activity. The
   hourly data commits should count as activity, but GitHub doesn't say so. If the Sources page
   goes stale, re-enable the workflow under **Actions → Live**.
@@ -119,4 +128,6 @@ uncommitted changes, so it skips work you already committed.
 Every step is a moon task (see the README): `moon run cli:collect-markets`,
 `cli:collect-news`, `cli:collect-attention`, `cli:forecast`, `cli:export`, `worker:deploy`.
 `fr2027 inbox pull` and `fr2027 inbox resolve` need `FR2027_INBOX_URL` and
-`INBOX_PIPELINE_TOKEN` in the environment.
+`INBOX_PIPELINE_TOKEN` in the environment. `pull` compares poll checks with the open proposals
+it finds in `.inbox/open/<pull request number>/` (the Live workflow gathers them), and writes
+`.inbox/resolutions.json`, `pr-actions.json` and `field-changes.json` for the later steps.

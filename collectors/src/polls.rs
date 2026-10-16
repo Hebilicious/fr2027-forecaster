@@ -37,7 +37,17 @@ pub struct PollEntry {
     pub index_url: Option<String>,
     pub retrieved_at: String,
     pub entry: String,
+    #[serde(default)]
+    pub agent: Option<Agent>,
     pub scenarios: Vec<ScenarioEntry>,
+}
+
+/// Who entered a poll sent through the inbox, and in which routine run.
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+pub struct Agent {
+    pub name: String,
+    pub skill_version: String,
+    pub run_id: String,
 }
 
 #[derive(Clone, Debug, Deserialize)]

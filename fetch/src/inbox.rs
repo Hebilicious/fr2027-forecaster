@@ -28,6 +28,11 @@ pub struct Resolution {
     pub note: String,
     #[serde(rename = "ref")]
     pub reference: Option<String>,
+    /// A second resolution of an item already resolved as proposed, when a later check settles
+    /// the proposal. The inbox refuses it if the item was settled in between, which is not an
+    /// error for the pipeline.
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub followup: bool,
 }
 
 #[derive(Serialize)]
