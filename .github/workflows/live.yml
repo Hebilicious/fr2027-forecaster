@@ -6,7 +6,8 @@ name: Live
 # From the inbox: X drops and events are committed; polls are proposed in a pull request and
 # committed when a blind poll_check from another Grok Bot run matches them; field changes are
 # applied to config/candidates.yaml and logged in research/LOG.md (docs/grok-bot.md).
-# It also runs when a merge to main changes polls, config or code, so the page follows main.
+# It also runs on every merge to main, so the page follows main. Its own data commits are pushed
+# with GITHUB_TOKEN, which starts no workflow, so they don't start it again.
 on:
   # The hourly clock is the Worker's cron trigger (app/worker, "17 * * * *"), which sends this
   # repository_dispatch with a token of the heb-release App. GitHub never fired this workflow's
@@ -18,18 +19,6 @@ on:
     - cron: "47 */6 * * *"
   push:
     branches: [main]
-    paths:
-      - "config/**"
-      - "data/raw/polls/**"
-      - "schemas/**"
-      - "model/**"
-      - "collectors/**"
-      - "fetch/**"
-      - "cli/**"
-      - "app/**"
-      - "Cargo.lock"
-      - "pnpm-lock.yaml"
-      - ".github/workflows/live.yml"
   workflow_dispatch:
     inputs:
       attention_start:

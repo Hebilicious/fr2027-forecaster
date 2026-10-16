@@ -188,7 +188,7 @@ Collectors and the model run on a schedule inside the repo, so the forecast stay
 | New polls | Twice a day | Grok Bot routine 2 → inbox → pull request, landed on `main` when routine 4's blind second entry agrees |
 | Campaign events | Twice a day | Grok Bot routine 3 → inbox |
 | Model refit, simulation and forecast file | Hourly check; refits when polls or config change, and once a day | GitHub Actions (`live.yml`, `fr2027 forecast --if-changed`) |
-| Public site | Hourly | GitHub Actions → Cloudflare Worker |
+| Public site | Hourly, and on every merge to `main` | GitHub Actions → Cloudflare Worker |
 | Poll checks and field changes | Twice a day | Grok Bot routine 4 → inbox: blind second entry of proposed polls; sourced field changes to `config/candidates.yaml` and the research log |
 
 How to set it up and run it: `docs/operations.md`.
