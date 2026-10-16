@@ -1,20 +1,21 @@
 <script setup lang="ts">
 import { computed } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
 import { outcomeGroups, type OutcomeGroup } from "../charts"
 import CandidateAvatar from "./CandidateAvatar.vue"
 import { probability } from "../format"
-import { useI18n } from "../i18n"
 
 const props = defineProps<{ forecast: Forecast }>()
-const { t, locale } = useI18n()
+const content = useIntlayer("outcome-dots")
+const { locale } = useLocale()
 
 // One dot per percentage point. Every candidate's dots are the same bleu; the pooled tail is grey.
 const groups = computed(() => outcomeGroups(props.forecast.candidates))
 const label = (g: OutcomeGroup) =>
   g.name === null
-    ? t("outcomesOthersGroup", { m: g.members, p: probability(g.probability, locale.value) })
-    : t("outcomesGroup", { name: g.name, p: probability(g.probability, locale.value) })
+    ? content.othersGroup({ m: g.members, p: probability(g.probability, locale.value) })
+    : content.group({ name: g.name, p: probability(g.probability, locale.value) })
 </script>
 
 <template>
@@ -31,8 +32,8 @@ const label = (g: OutcomeGroup) =>
         <CandidateAvatar v-if="g.candidateId && g.name" :id="g.candidateId" :name="g.name" :size="40" />
         <p class="text">
           <span class="value">{{ probability(g.probability, locale) }}</span>
-          <span class="name">{{ g.name ?? t("outcomesOthers") }}</span>
-          <span v-if="g.candidateId === null" class="members">{{ t("outcomesOthersCount", { n: g.members }) }}</span>
+          <span class="name">{{ g.name ?? content.others }}</span>
+          <span v-if="g.candidateId === null" class="members">{{ content.othersCount({ n: g.members }) }}</span>
         </p>
       </div>
       <span aria-hidden="true" class="dots">

@@ -24,3 +24,6 @@ data/proposals/
 .env.*
 !.env.example
 .dev.vars*
+
+# Intlayer builds its dictionaries and types here from the *.content.ts files
+.intlayer/

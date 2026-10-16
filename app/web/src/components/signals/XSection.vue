@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { XRow } from "../../api/schemas"
 import { count, dateTime, percent } from "../../format"
-import { useI18n, type MessageKey } from "../../i18n"
 import { latestXWindow, nameOf, sentiment, type Sentiment } from "../../signals"
 import CandidateAvatar from "../CandidateAvatar.vue"
 
 const props = defineProps<{ rows: readonly XRow[]; names: ReadonlyMap<string, string> }>()
-const { t, locale } = useI18n()
+const content = useIntlayer("x-section")
+const common = useIntlayer("common")
+const { locale } = useLocale()
 
 const latest = computed(() => latestXWindow(props.rows))
 const rows = computed(() =>
@@ -16,39 +18,35 @@ const rows = computed(() =>
 const hasSentiment = computed(() => rows.value.some((r) => r.mood !== null))
 // The sample is the posts read for sentiment and the bot share, so it sits under the sentiment bar.
 const hasSample = computed(() => hasSentiment.value || rows.value.some((r) => r.row.sample_size !== null))
-const methods: Record<NonNullable<XRow["mentions_method"]>, MessageKey> = {
-  x_counts_endpoint: "methodXCounts",
-  native_count: "methodNative",
-  sample_estimate: "methodSample",
-}
 const share = (x: number) => percent(x, 0, locale.value)
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
-const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu: share(s.neu), neg: share(s.neg) })
+const moodLabel = (s: Sentiment) =>
+  content.sentimentLabel({ pos: share(s.pos), neu: share(s.neu), neg: share(s.neg) }).value
 </script>
 
 <template>
   <section aria-labelledby="x-title" class="card">
     <header class="card-head">
-      <h2 id="x-title">{{ t("xTitle") }}</h2>
+      <h2 id="x-title">{{ content.title }}</h2>
       <p v-if="latest" class="muted small">
-        {{ t("xWindow", { start: dateTime(latest.start, locale), end: dateTime(latest.end, locale) }) }}
+        {{ content.window({ start: dateTime(latest.start, locale), end: dateTime(latest.end, locale) }) }}
       </p>
     </header>
-    <p v-if="!latest" class="secondary small">{{ t("xEmpty") }}</p>
+    <p v-if="!latest" class="secondary small">{{ content.empty }}</p>
     <template v-else>
       <p v-if="hasSentiment" aria-hidden="true" class="legend small">
-        <span class="key"><span class="swatch pos" />{{ t("positive") }}</span>
-        <span class="key"><span class="swatch neu" />{{ t("neutral") }}</span>
-        <span class="key"><span class="swatch neg" />{{ t("negative") }}</span>
+        <span class="key"><span class="swatch pos" />{{ content.positive }}</span>
+        <span class="key"><span class="swatch neu" />{{ content.neutral }}</span>
+        <span class="key"><span class="swatch neg" />{{ content.negative }}</span>
       </p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th scope="col">{{ t("candidate") }}</th>
-              <th class="num" scope="col">{{ t("mentions") }}</th>
-              <th v-if="hasSample" scope="col">{{ hasSentiment ? t("sentiment") : t("sample") }}</th>
-              <th class="num" scope="col">{{ t("botShare") }}</th>
+              <th scope="col">{{ common.candidate }}</th>
+              <th class="num" scope="col">{{ content.mentions }}</th>
+              <th v-if="hasSample" scope="col">{{ hasSentiment ? content.sentiment : common.sample }}</th>
+              <th class="num" scope="col">{{ content.botShare }}</th>
             </tr>
           </thead>
           <tbody>
@@ -61,7 +59,7 @@ const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu
               </th>
               <td class="num">
                 <span class="strong">{{ row.mentions === null ? "—" : count(row.mentions, locale) }}</span>
-                <span v-if="row.mentions_method" class="method muted small">{{ t(methods[row.mentions_method]) }}</span>
+                <span v-if="row.mentions_method" class="method muted small">{{ content.methods[row.mentions_method] }}</span>
               </td>
               <td v-if="hasSample">
                 <div v-if="mood" class="mood" role="img" :aria-label="moodLabel(mood)" :title="moodLabel(mood)">
@@ -71,8 +69,8 @@ const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu
                 </div>
                 <span v-else-if="hasSentiment" class="muted">—</span>
                 <template v-if="row.sample_size !== null">
-                  <span aria-hidden="true" class="posts muted small num">n = {{ count(row.sample_size, locale) }}</span>
-                  <span class="sr-only">{{ t("postsRead", { n: count(row.sample_size, locale) }) }}</span>
+                  <span aria-hidden="true" class="posts muted small num" translate="no">n = {{ count(row.sample_size, locale) }}</span>
+                  <span class="sr-only">{{ content.postsRead({ n: count(row.sample_size, locale) }) }}</span>
                 </template>
               </td>
               <td class="num secondary">{{ row.bot_share_estimate === null ? "—" : share(row.bot_share_estimate) }}</td>

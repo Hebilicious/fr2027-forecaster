@@ -1,34 +1,18 @@
 <script setup lang="ts">
 import { computed } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
 import { byFamily } from "../candidates"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
-import { probability, safeUrl, shareWithInterval } from "../format"
-import { useI18n, type MessageKey } from "../i18n"
+import { list, probability, safeUrl, shareWithInterval } from "../format"
+import { labelOf } from "../labels"
 import { PARTY_SITES, PROGRAMMES } from "../links"
 import { ARTICLES, CREDITS } from "../portraits"
 
 const props = defineProps<{ forecast: Forecast }>()
-const { t, locale } = useI18n()
-
-// Family and status codes; known ones are translated, others shown as sent.
-const familyNames: Record<string, MessageKey> = {
-  far_left: "blocFarLeft",
-  left: "blocLeft",
-  centre: "blocCentre",
-  right: "blocRight",
-  far_right: "blocFarRight",
-  other: "blocOther",
-}
-const statusNames: Record<string, MessageKey> = {
-  declared: "statusDeclared",
-  likely: "statusLikely",
-  possible: "statusPossible",
-}
-const translated = (keys: Record<string, MessageKey>, value: string) => {
-  const key = keys[value]
-  return key ? t(key) : value
-}
+const content = useIntlayer("candidates-view")
+const common = useIntlayer("common")
+const { locale } = useLocale()
 
 const groups = computed(() => byFamily(props.forecast.candidates))
 const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, "fr")
@@ -58,7 +42,7 @@ const uncredited = computed(() =>
       :style="{ '--i': i }"
     >
       <header class="group-head">
-        <h2 :id="`family-${group.family}`">{{ translated(familyNames, group.family) }}</h2>
+        <h2 :id="`family-${group.family}`">{{ labelOf(content.families, group.family) }}</h2>
         <span class="count num">{{ group.candidates.length }}</span>
       </header>
       <ul class="cards">
@@ -68,40 +52,40 @@ const uncredited = computed(() =>
             <div class="identity">
               <h3>{{ c.name }}</h3>
               <p class="party">{{ c.party }}</p>
-              <p><span class="badge">{{ translated(statusNames, c.status) }}</span></p>
+              <p><span class="badge">{{ labelOf(content.statuses, c.status) }}</span></p>
             </div>
           </div>
           <dl class="stats">
             <div>
-              <dt>{{ t("runs") }}</dt>
+              <dt>{{ common.runs }}</dt>
               <dd>{{ probability(c.p_run, locale) }}</dd>
             </div>
             <div>
-              <dt>{{ t("statRound2") }}</dt>
+              <dt>{{ content.round2 }}</dt>
               <dd>{{ probability(c.p_qualify_r1, locale) }}</dd>
             </div>
             <div>
-              <dt>{{ t("wins") }}</dt>
+              <dt>{{ common.wins }}</dt>
               <dd class="strong">{{ probability(c.p_win, locale) }}</dd>
             </div>
           </dl>
           <p class="share">
-            <span class="muted">{{ t("r1Share") }}</span>
+            <span class="muted">{{ common.r1Share }}</span>
             <span v-if="c.r1_share" class="num">{{
                 shareWithInterval(c.r1_share.mean, c.r1_share.lo80, c.r1_share.hi80, locale)
               }}</span>
-            <span v-else class="muted">{{ c.simulated ? "—" : t("notPolled") }}</span>
+            <span v-else class="muted">{{ c.simulated ? "—" : common.notPolled }}</span>
           </p>
           <p class="links">
             <a v-if="PARTY_SITES[c.candidate_id]" :href="safeUrl(PARTY_SITES[c.candidate_id])" rel="noopener noreferrer">
-              {{ t("partySite") }}<span aria-hidden="true"> ↗</span>
+              {{ content.partySite }}<span aria-hidden="true"> ↗</span>
             </a>
             <a v-if="PROGRAMMES[c.candidate_id]" :href="safeUrl(PROGRAMMES[c.candidate_id])" rel="noopener noreferrer">
-              {{ t("programme") }}<span aria-hidden="true"> ↗</span>
+              {{ content.programme }}<span aria-hidden="true"> ↗</span>
             </a>
-            <span v-else class="muted">{{ t("programmeNone") }}</span>
+            <span v-else class="muted">{{ content.programmeNone }}</span>
             <a v-if="ARTICLES[c.candidate_id]" :href="safeUrl(ARTICLES[c.candidate_id])" rel="noopener noreferrer">
-              {{ t("wikipedia") }}<span aria-hidden="true"> ↗</span>
+              {{ content.wikipedia }}<span aria-hidden="true"> ↗</span>
             </a>
           </p>
         </li>
@@ -110,8 +94,8 @@ const uncredited = computed(() =>
 
     <section aria-labelledby="credits-title" class="card rise" :style="{ '--i': groups.length }">
       <header class="card-head">
-        <h2 id="credits-title">{{ t("photoCredits") }}</h2>
-        <p class="secondary small">{{ t("photoCreditsNote") }}</p>
+        <h2 id="credits-title">{{ content.photoCredits }}</h2>
+        <p class="secondary small">{{ content.photoCreditsNote }}</p>
       </header>
       <ul class="credits small">
         <li v-for="c in credited" :key="c.id">
@@ -120,11 +104,11 @@ const uncredited = computed(() =>
           <span>
             <a v-if="c.credit.licenseUrl" :href="safeUrl(c.credit.licenseUrl)" rel="noopener noreferrer">{{ c.credit.license }}</a>
             <span v-else>{{ c.credit.license }}</span>
-            · <a :href="safeUrl(c.credit.file)" rel="noopener noreferrer">Wikimedia Commons</a>
+            · <a :href="safeUrl(c.credit.file)" rel="noopener noreferrer">{{ content.commons }}</a>
           </span>
         </li>
       </ul>
-      <p v-if="uncredited.length" class="muted small none">{{ t("photoCreditsNone", { names: uncredited.join(", ") }) }}</p>
+      <p v-if="uncredited.length" class="muted small none">{{ content.photoCreditsNone({ names: list(uncredited, locale) }) }}</p>
     </section>
   </div>
 </template>

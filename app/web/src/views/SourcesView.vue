@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { computed } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast, Health, Poll } from "../api/schemas"
-import { dateOrTime, dateTime, longDate, safeUrl, shortDate } from "../format"
-import { cadenceMessages, useI18n, type MessageKey } from "../i18n"
+import { count, dateOrTime, dateTime, longDate, safeUrl, shortDate } from "../format"
+import { labelOf } from "../labels"
 
 const props = defineProps<{ forecast: Forecast; polls: readonly Poll[]; health: Health | null }>()
-const { t, locale } = useI18n()
+const content = useIntlayer("sources-view")
+const common = useIntlayer("common")
+const { locale } = useLocale()
 
 interface PollSummary {
   id: string
@@ -39,19 +42,6 @@ const summaries = computed<PollSummary[]>(() =>
     .toSorted((a, b) => b.published.localeCompare(a.published) || a.id.localeCompare(b.id)),
 )
 const used = computed(() => new Set(props.forecast.aggregation.poll_ids))
-// Collector names come from `fr2027`; known ones are translated, others shown as sent.
-const collectorNames: Record<string, MessageKey> = {
-  polls: "collectorPolls",
-  markets: "collectorMarkets",
-  news: "collectorNews",
-  attention: "collectorAttention",
-  x: "collectorX",
-  events: "collectorEvents",
-}
-const translated = (keys: Record<string, MessageKey>, value: string) => {
-  const key = keys[value]
-  return key ? t(key) : value
-}
 const quarantined = computed(() =>
   Object.entries(props.health?.quarantine ?? {}).flatMap(([area, files]) => files.map((f) => `${area}/${f}`)),
 )
@@ -67,75 +57,75 @@ const quarantined = computed(() =>
     </div>
     <p v-else-if="health" class="healthy rise">
       <span aria-hidden="true" class="tick">✓</span>
-      {{ t("healthy") }}
+      {{ content.healthy }}
     </p>
 
     <div class="grid-2">
       <section aria-labelledby="run-title" class="card rise" :style="{ '--i': 1 }">
         <header class="card-head">
-          <h2 id="run-title">{{ t("latestRun") }}</h2>
+          <h2 id="run-title">{{ content.latestRun }}</h2>
         </header>
         <dl class="facts">
-          <dt>{{ t("file") }}</dt>
-          <dd class="mono">data/forecasts/{{ health?.latest_forecast?.file ?? "—" }}</dd>
-          <dt>{{ t("generatedAt") }}</dt>
+          <dt>{{ content.file }}</dt>
+          <dd class="mono" translate="no">data/forecasts/{{ health?.latest_forecast?.file ?? "—" }}</dd>
+          <dt>{{ content.generatedAt }}</dt>
           <dd>{{ dateTime(forecast.generated_at, locale) }}</dd>
-          <dt>{{ t("lastFieldwork") }}</dt>
+          <dt>{{ content.lastFieldwork }}</dt>
           <dd>{{ forecast.aggregation.last_field_end ? longDate(forecast.aggregation.last_field_end, locale) : "—" }}</dd>
-          <dt>inputs_hash</dt>
+          <dt translate="no">inputs_hash</dt>
           <dd class="mono hash">{{ forecast.inputs_hash }}</dd>
         </dl>
       </section>
 
       <section aria-labelledby="collectors-title" class="card rise" :style="{ '--i': 2 }">
         <header class="card-head">
-          <h2 id="collectors-title">{{ t("collectors") }}</h2>
+          <h2 id="collectors-title">{{ content.collectorsTitle }}</h2>
         </header>
         <div class="table-wrap">
           <table class="collectors">
             <thead>
               <tr>
-                <th scope="col">{{ t("source") }}</th>
-                <th scope="col">{{ t("cadence") }}</th>
-                <th scope="col">{{ t("lastUpdate") }}</th>
+                <th scope="col">{{ common.source }}</th>
+                <th scope="col">{{ content.cadence }}</th>
+                <th scope="col">{{ content.lastUpdate }}</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="c in health?.collectors ?? []" :key="c.name">
-                <th scope="row">{{ translated(collectorNames, c.name) }}</th>
-                <td class="secondary">{{ t(cadenceMessages[c.cadence]) }}</td>
+                <th scope="row">{{ labelOf(content.collectors, c.name) }}</th>
+                <td class="secondary">{{ content.cadences[c.cadence] }}</td>
                 <td>
-                  <span class="when" :class="{ muted: !c.updated }">{{ c.updated ? dateOrTime(c.updated, locale) : t("never") }}</span>
-                  <span v-if="c.stale" class="badge stale"><span aria-hidden="true" class="dot" />{{ t("staleBadge") }}</span>
+                  <span class="when" :class="{ muted: !c.updated }">{{ c.updated ? dateOrTime(c.updated, locale) : content.never }}</span>
+                  <span v-if="c.stale" class="badge stale"><span aria-hidden="true" class="dot" />{{ content.stale }}</span>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h3 class="sub">{{ t("quarantine") }}</h3>
+        <h3 class="sub">{{ content.quarantine }}</h3>
         <ul v-if="quarantined.length" class="quarantine small">
-          <li v-for="q in quarantined" :key="q" class="mono">data/quarantine/{{ q }}</li>
+          <li v-for="q in quarantined" :key="q" class="mono" translate="no">data/quarantine/{{ q }}</li>
         </ul>
-        <p v-else class="small secondary">{{ t("none") }}</p>
+        <p v-else class="small secondary">{{ common.none }}</p>
       </section>
     </div>
 
     <section aria-labelledby="polls-title" class="card rise" :style="{ '--i': 3 }">
       <header class="card-head">
-        <h2 id="polls-title">{{ t("pollsTitle") }}</h2>
+        <h2 id="polls-title">{{ content.pollsTitle }}</h2>
       </header>
       <div class="table-wrap">
         <table class="polls">
           <thead>
             <tr>
-              <th scope="col">{{ t("published") }}</th>
-              <th scope="col">{{ t("firm") }}</th>
-              <th scope="col">{{ t("sponsor") }}</th>
-              <th scope="col">{{ t("fieldwork") }}</th>
-              <th class="num" scope="col">{{ t("sample") }}</th>
-              <th class="num" scope="col">{{ t("ballots") }}</th>
-              <th scope="col">{{ t("entry") }}</th>
-              <th scope="col">{{ t("source") }}</th>
+              <th scope="col">{{ content.published }}</th>
+              <th scope="col">{{ common.firm }}</th>
+              <th scope="col">{{ content.sponsor }}</th>
+              <th scope="col">{{ content.fieldwork }}</th>
+              <th class="num" scope="col">{{ common.sample }}</th>
+              <th class="num" scope="col">{{ content.ballots }}</th>
+              <th scope="col">{{ content.entry }}</th>
+              <th scope="col">{{ common.source }}</th>
             </tr>
           </thead>
           <tbody>
@@ -144,17 +134,17 @@ const quarantined = computed(() =>
               <td class="firm">{{ p.firm }}</td>
               <td class="secondary">{{ p.sponsor ?? "—" }}</td>
               <td class="num nowrap">{{ shortDate(p.fieldStart, locale) }}–{{ shortDate(p.fieldEnd, locale) }}</td>
-              <td class="num">{{ p.sample.toLocaleString(locale === "fr" ? "fr-FR" : "en-GB") }}</td>
+              <td class="num">{{ count(p.sample, locale) }}</td>
               <td class="num">{{ p.ballots }}</td>
               <td>
                 <span class="badge" :class="{ checked: p.entry === 'primary' }">
-                  {{ p.entry === "primary" ? t("entryPrimary") : t("entryIndex") }}
+                  {{ p.entry === "primary" ? content.entryPrimary : content.entryIndex }}
                 </span>
               </td>
               <td class="small nowrap">
-                <a :href="safeUrl(p.source)" rel="noopener noreferrer" target="_blank">{{ t("source") }}</a>
+                <a :href="safeUrl(p.source)" rel="noopener noreferrer" target="_blank">{{ common.source }}</a>
                 <template v-if="p.notice">
-                  · <a :href="safeUrl(p.notice)" rel="noopener noreferrer" target="_blank">{{ t("notice") }}</a>
+                  · <a :href="safeUrl(p.notice)" rel="noopener noreferrer" target="_blank">{{ common.notice }}</a>
                 </template>
               </td>
             </tr>
