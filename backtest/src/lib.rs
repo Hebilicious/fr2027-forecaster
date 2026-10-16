@@ -5,6 +5,7 @@
 //! the log score of the realised result.
 //!
 //! - [`ablation`]: the signal layers, each scored against the polls-only model.
+//! - [`blend`]: the market blend's weight, fitted where market history exists.
 //! - [`config`]: the settings in `config/backtest.yaml`.
 //! - [`election`]: one past election: its field, polls and result.
 //! - [`replay`]: the polls a replay may see, and the model fitted to them.
@@ -16,6 +17,7 @@
 
 pub mod ablation;
 pub mod baseline;
+pub mod blend;
 pub mod config;
 pub mod election;
 pub mod final_polls;
