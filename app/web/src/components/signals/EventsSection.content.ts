@@ -1,4 +1,4 @@
-import { insert, t, type Dictionary } from "intlayer"
+import { t, type Dictionary } from "intlayer"
 
 export default {
   key: "events-section",
@@ -137,19 +137,5 @@ export default {
         th: "อื่น ๆ",
       }),
     },
-    proposedChange: insert(
-      t({
-        fr: "Modification proposée : {{change}}",
-        "en-GB": "Proposed change: {{change}}",
-        de: "Vorgeschlagene Änderung: {{change}}",
-        it: "Modifica proposta: {{change}}",
-        "es-ES": "Cambio propuesto: {{change}}",
-        "pt-PT": "Alteração proposta: {{change}}",
-        ja: "変更案：{{change}}",
-        ko: "변경 제안: {{change}}",
-        "zh-Hans": "建议修改：{{change}}",
-        th: "การแก้ไขที่เสนอ: {{change}}",
-      }),
-    ),
   },
 } satisfies Dictionary

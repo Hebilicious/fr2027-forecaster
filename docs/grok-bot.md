@@ -248,8 +248,9 @@ run once a day at 00:20 UTC with a 24-hour window. The pipeline accepts any wind
    - its notice supersedes a data/raw/polls file whose name has no five-digit notice number
      (e.g. "opinionway-2026-10-14-cnews"): routine 4(b) owns those;
    - a scenario tests someone with no id in candidates.yaml. Send an event instead (kind
-     "other", format in routine 3) saying who was tested in which poll; routine 4 adds them, and
-     you send the poll once they are in the list.
+     "other", format in routine 3) whose summary says, for readers, who was tested in which poll
+     (e.g. "Ifop tested Natacha Polony in its 14 October poll"); routine 4 adds them, and you send
+     the poll once they are in the list.
 3. ENTER each remaining poll from the Commission's notice or the pollster's publication (the
    PDF), never from an article or Wikipedia. Commission PDFs often time out: if one won't load,
    use its Wayback Machine copy (https://web.archive.org/web/<notice PDF URL>), then the
@@ -302,24 +303,28 @@ Routine 4 enters each one again from the PDF; Live commits it when both agree.
    event_id is not in https://github.com/Hebilicious/fr2027-forecaster/tree/main/data/raw/events
    and not an accepted, proposed or pending key in the inbox. A regional outlet carrying an AFP
    or Reuters wire counts as a national outlet. Nothing left: send nothing.
-   DECLARATIONS BY SOMEONE NOT IN candidates.yaml: send a kind "other" event proposing they be
-   added (proposed_change "add_candidate <name>: <party>, <slot>"), even if the declaration is
-   up to 7 days old, unless the inbox or data/raw/events already has it.
+   DECLARATIONS BY SOMEONE NOT IN candidates.yaml: send a kind "declaration" event with empty
+   candidate_ids, even if the declaration is up to 7 days old, unless the inbox or
+   data/raw/events already has it. Routine 4 adds them from the event's facts and sources.
 3. POST each as {"kind": "event", "payload": {
      "schema_version": "1.0",
      "event_id": "<date>-<short-slug>", e.g. "2026-10-17-faure-withdraws",
      "date": "<YYYY-MM-DD, when it happened, Paris time>",
      "kind": "declaration" | "withdrawal" | "endorsement" | "primary_result" | "sponsorships" | "legal" | "poll_published" | "other",
      "candidate_ids": [ids involved, only ids in candidates.yaml; may be empty],
-     "summary": "<one or two neutral sentences, at most 400 characters; name anyone without an id here>",
+     "summary": {"fr": "<one or two neutral sentences in French, at most 400 characters>",
+                 "en": "<the same in English, at most 400 characters>"},
      "sources": [{"url": "<primary source or a national outlet>", "title": "<headline>"}],
-     "proposed_change": "<optional: the change to config/candidates.yaml this suggests, e.g. 'faure: status withdrawn; ps_primary slot: faure 0', or null>",
      "reported_by": "Grok Bot fr2027",
      "reported_at": "<now>"}}
 ```
 
-Events are shown on the Signals page as reported. Routine 4 turns the confirmed ones into field
-changes.
+Events are shown to readers on the Signals page as reported: summary.fr on the French site,
+summary.en in every other language. Write each summary from the sources, about the event itself
+only: who did what, when, and what follows from it in the real world. Name anyone without an id
+in full. Never mention candidates.yaml, ids, slots, probabilities, the inbox, the pipeline or what
+should change in the forecast; that belongs in routine 4's field_change. Routine 4 turns the
+confirmed events into field changes.
 
 ## Routine 4: poll checks and field changes
 
@@ -373,9 +378,9 @@ Every payload in this run carries
    - Every candidate stays in exactly one slot. A candidate who loses or withdraws stays in
      their slot with p 0. A slot's options sum to at most 1 (1 minus the sum is the chance
      nobody from the slot runs).
-   - A candidate tested in a poll but missing from candidates.yaml (see routine 2's "other"
-     events) gets add_candidate, with a sourced entry, the names that identify them in
-     headlines, and a slot.
+   - Someone who declared, or was tested in a poll, but is missing from candidates.yaml (see
+     routine 3's declaration events and routine 2's "other" events) gets add_candidate, with a
+     sourced entry, the names that identify them in headlines, and a slot.
    - Dedupe on change_id. A rejected one: fix what the note says and resend with the same
      change_id.
 3. POST {"kind": "field_change", "payload": {

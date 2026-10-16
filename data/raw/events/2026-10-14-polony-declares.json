@@ -3,7 +3,6 @@
   "date": "2026-10-14",
   "event_id": "2026-10-14-polony-declares",
   "kind": "other",
-  "proposed_change": "add_candidate Natacha Polony: Nous sommes la France, new slot polony",
   "reported_at": "2026-10-16T16:39:48Z",
   "reported_by": "Grok Bot fr2027",
   "schema_version": "1.0",
@@ -17,5 +16,8 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-je-suis-candidate-annonce-la-journaliste-natacha-polony-20261014"
     }
   ],
-  "summary": "Essayist Natacha Polony, former director of Marianne and founder of the movement Nous sommes la France, announced her candidacy for the 2027 presidential election on France Inter on 14 October 2026. She is not in candidates.yaml."
+  "summary": {
+    "en": "Essayist Natacha Polony, former director of Marianne and founder of the movement Nous sommes la France, announced her candidacy for the 2027 presidential election on France Inter on 14 October 2026.",
+    "fr": "L'essayiste Natacha Polony, ancienne directrice de Marianne et fondatrice du mouvement Nous sommes la France, a annoncé sa candidature à l'élection présidentielle de 2027 sur France Inter le 14 octobre 2026."
+  }
 }

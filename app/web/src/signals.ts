@@ -311,3 +311,9 @@ export function sparkline(
   const last = placed.at(-1) ?? null
   return { line, end: last && { x: Number(last.x.toFixed(1)), y: Number(last.y.toFixed(1)) } }
 }
+
+/** The French summary on a French page, the English one everywhere else; a legacy string as is. */
+export function eventSummary(summary: CampaignEvent["summary"], locale: string): string {
+  if (typeof summary === "string") return summary
+  return locale === "fr" || locale.startsWith("fr-") ? summary.fr : summary.en
+}

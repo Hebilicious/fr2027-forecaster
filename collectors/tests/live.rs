@@ -219,9 +219,9 @@ fn events_need_matching_ids_and_known_candidates() {
     let event = |id: &str, date: &str, candidate: &str| {
         format!(
             r#"{{"schema_version": "1.0", "event_id": "{id}", "date": "{date}", "kind": "declaration",
-              "candidate_ids": ["{candidate}"], "summary": "Alice Martin declares her candidacy on the evening news.",
+              "candidate_ids": ["{candidate}"], "summary": {{"fr": "Alice Martin annonce sa candidature au journal du soir.", "en": "Alice Martin declares her candidacy on the evening news."}},
               "sources": [{{"url": "https://example.org/news", "title": "Alice Martin candidate"}}],
-              "proposed_change": "Raise alice p_run to 0.95.", "reported_by": "grok-bot", "reported_at": "2026-10-09T20:00:00Z"}}"#
+              "reported_by": "grok-bot", "reported_at": "2026-10-09T20:00:00Z"}}"#
         )
     };
     fs::write(

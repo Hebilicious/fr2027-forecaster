@@ -303,7 +303,7 @@ fn a_field_change_is_applied_and_logged_once() {
     let (_dir, repo) = scratch();
     let event = json!({
         "schema_version": "1.0", "event_id": "2026-10-16-chloe-declares", "date": "2026-10-16",
-        "kind": "declaration", "candidate_ids": ["chloe"], "summary": "Chloé declared her candidacy.",
+        "kind": "declaration", "candidate_ids": ["chloe"], "summary": {"fr": "Chloé a annoncé sa candidature.", "en": "Chloé declared her candidacy."},
         "sources": [{"url": "https://www.lemonde.fr/x"}], "reported_by": "Grok Bot fr2027",
         "reported_at": "2026-10-16T20:00:00Z"
     });

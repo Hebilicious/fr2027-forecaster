@@ -13,6 +13,7 @@ import {
   sparkline,
   sparkRange,
   unmatchedRows,
+  eventSummary,
 } from "./signals"
 
 const candidate = (id: string, pRun: number, pQualify: number, pWin: number) => ({
@@ -271,10 +272,9 @@ const event = (date: string, event_id: string): CampaignEvent => ({
   event_id,
   kind: "declaration",
   candidate_ids: ["a"],
-  summary: "Something happened in the campaign.",
+  summary: { fr: "Il s'est passé quelque chose.", en: "Something happened in the campaign." },
   source_url: "https://example.org",
   source_title: null,
-  proposed_change: null,
   reported_by: "grok",
 })
 
@@ -344,5 +344,17 @@ describe("sparkline", () => {
   it("steps calendar days across month ends", () => {
     expect(addDays("2026-10-01", -1)).toBe("2026-09-30")
     expect(addDays("2026-12-31", 1)).toBe("2027-01-01")
+  })
+})
+
+describe("eventSummary", () => {
+  const both = { fr: "En français.", en: "In English." }
+  it("shows French on a French page and English elsewhere", () => {
+    expect(eventSummary(both, "fr")).toBe("En français.")
+    expect(eventSummary(both, "en-GB")).toBe("In English.")
+    expect(eventSummary(both, "de")).toBe("In English.")
+  })
+  it("shows a legacy string as is", () => {
+    expect(eventSummary("Old summary.", "fr")).toBe("Old summary.")
   })
 })

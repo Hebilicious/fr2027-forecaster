@@ -238,10 +238,10 @@ const CampaignEvent = Schema.Struct({
   event_id: Schema.String,
   kind: Schema.String,
   candidate_ids: Schema.Array(Schema.String),
-  summary: Schema.String,
+  /** French and English; a plain string from an older API build is shown as is. */
+  summary: Schema.Union([Schema.String, Schema.Struct({ fr: Schema.String, en: Schema.String })]),
   source_url: Schema.String,
   source_title: Schema.NullOr(Schema.String),
-  proposed_change: Schema.NullOr(Schema.String),
   reported_by: Schema.String,
 })
 

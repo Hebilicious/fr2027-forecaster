@@ -4,7 +4,7 @@ import { useIntlayer, useLocale } from "vue-intlayer"
 import type { CampaignEvent } from "../../api/schemas"
 import { list, safeUrl, shortDate } from "../../format"
 import { labelOf } from "../../labels"
-import { eventsNewestFirst, nameOf } from "../../signals"
+import { eventSummary, eventsNewestFirst, nameOf } from "../../signals"
 
 const props = defineProps<{ events: readonly CampaignEvent[]; names: ReadonlyMap<string, string> }>()
 const content = useIntlayer("events-section")
@@ -18,6 +18,7 @@ const events = computed(() =>
       locale.value,
     ),
     host: hostOf(e.source_url),
+    text: eventSummary(e.summary, locale.value),
   })),
 )
 
@@ -44,12 +45,11 @@ function hostOf(url: string): string {
           <span class="badge">{{ labelOf(content.kinds, e.kind) }}</span>
           <span v-if="e.who" class="secondary">{{ e.who }}</span>
         </p>
-        <p class="summary">{{ e.summary }}</p>
+        <p class="summary">{{ e.text }}</p>
         <p class="small">
           <a v-if="safeUrl(e.source_url)" :href="safeUrl(e.source_url)" rel="noopener">{{ e.source_title ?? e.host }}</a>
           <span v-else class="muted">{{ e.source_title ?? e.source_url }}</span>
         </p>
-        <p v-if="e.proposed_change" class="muted small">{{ content.proposedChange({ change: e.proposed_change }) }}</p>
       </li>
     </ol>
   </section>
