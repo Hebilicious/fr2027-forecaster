@@ -35,15 +35,36 @@ and when.
   main checkout's `main` up to `origin/main`: `git -C <repository root> pull --ff-only origin main`. Pull only with
   `--ff-only`; when it refuses, stop and tell the user rather than resetting, stashing or merging.
 
-### Automation
+## Commits
 
-The workflows below write to `main` without a pull request reviewed by a person; that is how the forecast keeps itself
-up to date, and the rules above do not apply to them:
+- Commit titles and pull request titles are Conventional Commits, `type(scope): subject`, for example
+  `fix(model): clamp the poll weights`. The types are `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`,
+  `refactor`, `revert`, `style` and `test`; the scope is optional and lowercase (a moon project ID fits), and `!` before
+  the colon marks a breaking change.
+- Commits and pull requests carry no AI attribution: no `Co-Authored-By` line for an AI tool, no "Generated with"
+  line. [.gommage.yml](.gommage.yml) sets the rules; `gommage fix` rewrites a branch's commits that break them.
+- Install the git hooks once per clone with `moon run repo:hooks-install` ([lefthook.yml](lefthook.yml)): the
+  `commit-msg` hook checks the title and the attribution, and `pre-commit` checks the formatting of staged files.
+  `moon run repo:semantic-check repo:authorship-check` checks every commit of the current branch.
+- The [Commits workflow](.github/workflows/commits.yml) runs the same checks on every pull request. Never bypass the
+  hooks with `--no-verify`.
 
-- the Live workflow commits `data:` updates to `main` every hour;
-- the editor routine pushes `claude/editor-*` branches, and the Land workflow checks them and fast-forwards `main`
-  ([docs/editor.md](docs/editor.md));
-- Grok Bot's polls arrive as `inbox/polls-*` pull requests that the editor checks ([docs/grok-bot.md](docs/grok-bot.md)).
+## Automation
 
-Because Live pushes to `main` often, rebase a branch on `origin/main` right before it merges. Do not name a branch
-`claude/editor-*` or `inbox/polls-*`: Land and Live act on those names.
+These write to `main` by themselves, without a pull request reviewed by a person; that is how the forecast keeps
+itself up to date:
+
+- the Live workflow commits data updates (`chore(data): …`) to `main` every hour;
+- the scheduled editor routine pushes `claude/editor-*` branches, and the Land workflow checks them and fast-forwards
+  `main` ([docs/editor.md](docs/editor.md));
+- Live opens Grok Bot's polls as `inbox/polls-*` pull requests, which the editor checks and Live closes once their files
+  are on `main` ([docs/grok-bot.md](docs/grok-bot.md)).
+
+Their changes need no authorization: they land without review. Do not hold them for approval or ask before they land. The rules
+under "Branches and pull requests" do not apply to them.
+
+The editor's route to `main` belongs to the scheduled editor routine alone. A session never creates, pushes or
+names a branch `claude/editor-*` or `inbox/polls-*`, never starts Land or the editor routine, and never uses either to
+put its own work on `main`: its work goes through a pull request like any other change.
+
+Because Live pushes to `main` often, rebase a branch on `origin/main` right before it merges.
