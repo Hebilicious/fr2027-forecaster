@@ -18,6 +18,9 @@ use crate::{Client, Error, Result};
 const API: &str = "https://api.gdeltproject.org/api/v2/doc/doc";
 /// GDELT's limit is one request every 5 seconds; keep a margin.
 const SPACING: Duration = Duration::from_secs(8);
+/// The first day the DOC API covers: earlier start dates are refused ("Invalid query start date").
+pub const FIRST_DAY: Date = jiff::civil::date(2017, 1, 1);
+
 /// Days per request: about 15 seconds of GDELT's time for 90 days.
 const WINDOW_DAYS: i64 = 92;
 /// How long one request may take.
@@ -97,9 +100,10 @@ impl<'a> Reader<'a> {
 
     /// Daily counts of articles matching `query` from `start` to `end`, both included, read in
     /// windows of at most [`WINDOW_DAYS`] days (a longer timeline takes GDELT over a minute).
+    /// Days before [`FIRST_DAY`], which GDELT does not cover, are skipped.
     pub fn fetch(&mut self, query: &str, start: Date, end: Date) -> Result<Vec<DayCount>> {
         let mut days = Vec::new();
-        let mut from = start;
+        let mut from = start.max(FIRST_DAY);
         while from <= end {
             let to = from
                 .checked_add(jiff::Span::new().days(WINDOW_DAYS - 1))

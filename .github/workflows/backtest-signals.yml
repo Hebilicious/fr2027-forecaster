@@ -28,15 +28,41 @@ permissions:
   contents: read
 
 jobs:
+  # The elections to fetch: the one given by hand; on a push, the year a branch named
+  # backtest-signals/<year> ends with, or every election in config/backtest.yaml.
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      years: ${{ steps.years.outputs.years }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - id: years
+        env:
+          INPUT_YEAR: ${{ inputs.year }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          if [ -n "$INPUT_YEAR" ]; then
+            years="$INPUT_YEAR"
+          elif [[ "$BRANCH" =~ /([0-9]{4})$ ]]; then
+            years="${BASH_REMATCH[1]}"
+          else
+            years=$(sed -n 's/^  - { year: \([0-9]\{4\}\),.*/\1/p' config/backtest.yaml | paste -sd' ' -)
+          fi
+          for y in $years; do [[ "$y" =~ ^[0-9]{4}$ ]] || { echo "::error::bad year $y"; exit 1; }; done
+          echo "years=$(printf '%s\n' $years | jq -Rsc 'split("\n") | map(select(length > 0))')" >> "$GITHUB_OUTPUT"
+
   fetch:
     name: fetch ${{ matrix.year }}
+    needs: plan
     runs-on: ubuntu-24.04
     # GDELT is read 92 days at a time, 8 seconds apart, with minutes of back-off when refused.
     timeout-minutes: 300
     strategy:
       fail-fast: false
       matrix:
-        year: ${{ fromJSON(github.event_name == 'workflow_dispatch' && format('["{0}"]', inputs.year) || '["2017", "2022"]') }}
+        year: ${{ fromJSON(needs.plan.outputs.years) }}
     steps:
       # Actions are pinned to full commit SHAs; the tag is in the comment.
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0

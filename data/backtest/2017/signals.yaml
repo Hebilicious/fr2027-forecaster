@@ -4,7 +4,8 @@
 # only when it is not a common word or another well-known person's name). Every title was
 # checked on 2026-10-16 to exist without a redirect; Charlotte Marchandise has no article.
 # The window starts 400 days before round 1: the replays see polls from 365 days out, and event
-# detection needs four weeks of history before that.
+# detection needs four weeks of history before that. GDELT's DOC API starts on 2017-01-01, so
+# news volume covers only the last 112 days before round 1; page views cover the whole window.
 start: 2016-03-19
 end: 2017-04-22
 candidates:
