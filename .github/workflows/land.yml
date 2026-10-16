@@ -3,8 +3,10 @@ name: Land
 # Lands the Claude editor routine's work (docs/editor.md) on main without a person: polls it
 # checked against their notices, and the field changes its sources confirm. The routine pushes a
 # claude/editor-* branch; this workflow accepts only the paths the editor may touch, rebuilds the
-# clean files, runs every check, and fast-forwards main with a token of the heb-release App, so
-# the push starts the Live workflow (refit and publish) and CI like any other change to main.
+# clean files, runs every check, fast-forwards main, and starts the Live workflow (refit and
+# publish). It pushes with GITHUB_TOKEN, whose pushes start no workflow; a workflow_dispatch is
+# the one event that token may send, so Live is started explicitly. CI is not re-run on main:
+# this workflow already ran `moon ci` on the exact commit it lands.
 on:
   push:
     branches: ["claude/editor-**"]
@@ -22,6 +24,9 @@ jobs:
     if: github.repository == 'Hebilicious/fr2027-forecaster'
     runs-on: ubuntu-24.04
     timeout-minutes: 40
+    permissions:
+      contents: write # push to main, delete the branch
+      actions: write # start Live
     env:
       FR2027: ./target/release/fr2027
       BRANCH: ${{ github.ref_name }}
@@ -31,16 +36,9 @@ jobs:
       GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
     steps:
       # Actions are pinned to full commit SHAs; the tag is in the comment.
-      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
-        id: app
-        with:
-          client-id: ${{ vars.RELEASE_APP_CLIENT_ID }}
-          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
-          permission-contents: write
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           fetch-depth: 0
-          token: ${{ steps.app.outputs.token }}
 
       # The editor adds poll files and edits the field, the research log and the README's counts.
       # Anything else, and any change to an existing raw file, needs a person.
@@ -96,12 +94,15 @@ jobs:
       - name: Run every check
         run: moon ci --base origin/main --head HEAD
 
-      - name: Land on main
+      - name: Land on main and start Live
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           for attempt in 1 2 3; do
             if git push -q origin HEAD:main; then
               git push -q origin --delete "$BRANCH"
-              echo "Landed $BRANCH on main."; exit 0
+              gh workflow run live.yml --ref main
+              echo "Landed $BRANCH on main and started Live."; exit 0
             fi
             # Live commits data to main every hour. Raw files never conflict; clean files are
             # rebuilt from raw.
