@@ -90,7 +90,7 @@ export default {
       }),
       round1: t({
         fr: "Premier tour",
-        "en-GB": "Round 1",
+        "en-GB": "First round",
         de: "Erster Wahlgang",
         it: "Primo turno",
         "es-ES": "Primera vuelta",
@@ -102,7 +102,7 @@ export default {
       }),
       round2: t({
         fr: "Second tour",
-        "en-GB": "Round 2",
+        "en-GB": "Second round",
         de: "Stichwahl",
         it: "Ballottaggio",
         "es-ES": "Segunda vuelta",
@@ -154,7 +154,7 @@ export default {
         lede: t({
           fr: "Toutes les personnes que le modèle considère, par famille politique, avec la probabilité que chacune se présente, accède au second tour et l'emporte.",
           "en-GB":
-            "Everyone the model considers, by political family, with the chance each one runs, reaches round 2 and wins.",
+            "Everyone the model considers, by political family, with the chance each one runs, reaches the second round and wins.",
           de: "Alle Personen, die das Modell berücksichtigt, nach politischem Lager, mit der Wahrscheinlichkeit, dass sie kandidieren, die Stichwahl erreichen und gewinnen.",
           it: "Tutte le persone che il modello considera, per area politica, con la probabilità che ciascuna si candidi, arrivi al ballottaggio e vinca.",
           "es-ES":
@@ -200,7 +200,7 @@ export default {
       round2: {
         title: t({
           fr: "Qui affronte qui au second tour, et qui l'emporte",
-          "en-GB": "Who meets whom in round 2, and who wins",
+          "en-GB": "Who meets whom in the second round, and who wins",
           de: "Wer in der Stichwahl auf wen trifft – und wer gewinnt",
           it: "Chi sfida chi al ballottaggio, e chi vince",
           "es-ES": "Quién se enfrenta a quién en la segunda vuelta, y quién gana",
@@ -213,7 +213,7 @@ export default {
         lede: t({
           fr: "Lignes et colonnes : les candidats les plus susceptibles d'accéder au second tour. Chaque case donne la probabilité de ce duel et la fréquence à laquelle le candidat de la ligne l'emporte.",
           "en-GB":
-            "Rows and columns are the candidates most likely to reach round 2. Each cell gives the probability that this pairing happens and how often the row candidate wins it.",
+            "Rows and columns are the candidates most likely to reach the second round. Each cell gives the probability that this pairing happens and how often the row candidate wins it.",
           de: "Zeilen und Spalten sind die Kandidaten mit den besten Chancen, die Stichwahl zu erreichen. Jede Zelle zeigt die Wahrscheinlichkeit dieses Duells und wie oft der Kandidat der Zeile es gewinnt.",
           it: "Righe e colonne sono i candidati con più probabilità di arrivare al ballottaggio. Ogni casella indica la probabilità di quella sfida e quanto spesso la vince il candidato della riga.",
           "es-ES":
@@ -300,7 +300,7 @@ export default {
     }),
     countdownLabel: t({
       fr: "jours avant le premier tour",
-      "en-GB": "days to round 1",
+      "en-GB": "days to the first round",
       de: "Tage bis zum ersten Wahlgang",
       it: "giorni al primo turno",
       "es-ES": "días para la primera vuelta",
@@ -313,7 +313,7 @@ export default {
     roundDates: insert(
       t({
         fr: "Premier tour le {{r1}}, second tour le {{r2}}",
-        "en-GB": "Round 1 on {{r1}}, round 2 on {{r2}}",
+        "en-GB": "First round on {{r1}}, second round on {{r2}}",
         de: "Erster Wahlgang am {{r1}}, Stichwahl am {{r2}}",
         it: "Primo turno il {{r1}}, ballottaggio il {{r2}}",
         "es-ES": "Primera vuelta el {{r1}}, segunda vuelta el {{r2}}",
@@ -327,7 +327,7 @@ export default {
     daysToRound1: insert(
       t({
         fr: "J-{{n}} avant le premier tour",
-        "en-GB": "{{n}} days to round 1",
+        "en-GB": "{{n}} days to the first round",
         de: "Noch {{n}} Tage bis zum ersten Wahlgang",
         it: "{{n}} giorni al primo turno",
         "es-ES": "Faltan {{n}} días para la primera vuelta",

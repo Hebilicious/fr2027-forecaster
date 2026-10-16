@@ -108,7 +108,7 @@ export default {
       fr: "sondé en duel",
       "en-GB": "polled head-to-head",
       de: "im direkten Duell abgefragt",
-      it: "sondato testa a testa",
+      it: "sondato in sfida diretta",
       "es-ES": "con encuestas del duelo",
       "pt-PT": "com sondagens do duelo",
       ja: "対決形式で調査",
