@@ -375,11 +375,12 @@
       "description": "Event detection (model/src/signals.rs): the news and attention spikes of the 60 days before as_of, and the extra variance each spike adds at the shock_sd chosen by marginal likelihood (0: the spikes are shown but change nothing).",
       "type": "object",
       "additionalProperties": false,
-      "required": ["sources", "shock_sd", "half_life_days", "spikes"],
+      "required": ["sources", "shock_sd", "half_life_days", "momentum_weight", "spikes"],
       "properties": {
         "sources": { "type": "array", "items": { "enum": ["attention", "news"] } },
         "shock_sd": { "type": "number", "minimum": 0 },
         "half_life_days": { "type": "number", "exclusiveMinimum": 0 },
+        "momentum_weight": { "type": "number" },
         "spikes": {
           "type": "array",
           "items": {

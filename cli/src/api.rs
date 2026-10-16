@@ -483,6 +483,97 @@ fn signals(repo: &Repo, now: Timestamp) -> Result<Value> {
         "news": news_signal(repo, &inputs.sources, &since(30))?,
         "x": x_signal(repo)?,
         "events": events_signal(repo)?,
+        "forward": forward_signal(repo, &inputs)?,
+    }))
+}
+
+/// Days after a flag over which the latent share's move is measured.
+const FORWARD_DAYS: i32 = 14;
+
+/// The forward log scored against the latest latent share history (`series.json`): each flag's
+/// move in the candidate's share over the next [`FORWARD_DAYS`] days, against the typical move
+/// over any such stretch. A flag too recent to have its stretch is pending.
+fn forward_signal(repo: &Repo, inputs: &Inputs) -> Result<Value> {
+    let (logged, _) = fr2027_collectors::forward::read(repo, &inputs.schemas)?;
+    let series_path = repo.forecasts_dir().join(SERIES_FILE);
+    let points = if series_path.exists() {
+        read_json(&series_path)?["points"].clone()
+    } else {
+        json!([])
+    };
+    let mut series: BTreeMap<String, BTreeMap<i32, f64>> = BTreeMap::new();
+    for point in points.as_array().into_iter().flatten() {
+        let (Some(id), Some(date), Some(mean)) = (
+            point["candidate_id"].as_str(),
+            point["date"].as_str().and_then(|d| d.parse::<Date>().ok()),
+            point["mean"].as_f64(),
+        ) else {
+            continue;
+        };
+        series
+            .entry(id.into())
+            .or_default()
+            .insert(fr2027_model::day_number(date), mean);
+    }
+    // The share's move from the last point on or before `day` to the first point at least
+    // FORWARD_DAYS later.
+    let change = |candidate: &str, day: i32| -> Option<f64> {
+        let points = series.get(candidate)?;
+        let (_, start) = points.range(..=day).next_back()?;
+        let (_, end) = points.range(day + FORWARD_DAYS..).next()?;
+        Some(end - start)
+    };
+    let typical: Vec<f64> = series
+        .iter()
+        .flat_map(|(id, points)| {
+            points
+                .keys()
+                .filter_map(|d| change(id, *d))
+                .map(f64::abs)
+                .collect::<Vec<_>>()
+        })
+        .collect();
+    let mean = |values: &[f64]| (!values.is_empty()).then(|| values.iter().sum::<f64>() / values.len() as f64);
+    let mut flags = Vec::new();
+    let (mut spike_moves, mut x_agree, mut x_scored) = (Vec::new(), 0usize, 0usize);
+    for l in &logged {
+        let day = l.flag.date.parse::<Date>().map(fr2027_model::day_number).ok();
+        let moved = day.and_then(|d| change(&l.flag.candidate_id, d));
+        if let Some(m) = moved {
+            match l.flag.kind {
+                fr2027_collectors::forward::FlagKind::Spike => spike_moves.push(m.abs()),
+                fr2027_collectors::forward::FlagKind::XShift => {
+                    x_scored += 1;
+                    if m * l.flag.score > 0.0 {
+                        x_agree += 1;
+                    }
+                }
+            }
+        }
+        flags.push(json!({
+            "detected_at": l.detected_at,
+            "kind": l.flag.kind,
+            "candidate_id": l.flag.candidate_id,
+            "date": l.flag.date,
+            "score": l.flag.score,
+            "detail": l.flag.detail,
+            "change": moved.map(|m| (m * 10_000.0).round() / 10_000.0),
+        }));
+    }
+    flags.reverse();
+    flags.truncate(60);
+    let round = |x: Option<f64>| x.map(|v| (v * 10_000.0).round() / 10_000.0);
+    Ok(json!({
+        "horizon_days": FORWARD_DAYS,
+        "flags": flags,
+        "summary": {
+            "logged": logged.len(),
+            "spikes_scored": spike_moves.len(),
+            "spike_mean_move": round(mean(&spike_moves)),
+            "typical_mean_move": round(mean(&typical)),
+            "x_shifts_scored": x_scored,
+            "x_shifts_agreeing": x_agree,
+        },
     }))
 }
 

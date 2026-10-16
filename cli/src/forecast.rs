@@ -129,6 +129,7 @@ struct SignalsOut {
     sources: Vec<SignalSource>,
     shock_sd: f64,
     half_life_days: f64,
+    momentum_weight: f64,
     spikes: Vec<SpikeOut>,
 }
 
@@ -497,6 +498,7 @@ fn build(
             sources: params.signals.sources.clone(),
             shock_sd: forecast.round1.noise.shock_sd,
             half_life_days: params.signals.half_life_days,
+            momentum_weight: params.signals.momentum_weight,
             spikes: forecast
                 .round1
                 .spikes

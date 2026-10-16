@@ -311,6 +311,26 @@ describe("filterSignals", () => {
       },
       x: { rows: [xRow("2026-10-09T12:00:00Z", "a", 100), xRow("2026-10-09T12:00:00Z", "b", 50)] },
       events: [event("2026-10-01", "2026-10-01-a"), { ...event("2026-10-02", "2026-10-02-b"), candidate_ids: ["b"] }],
+      forward: {
+        horizon_days: 14,
+        flags: (["a", "b"] as const).map((id) => ({
+          detected_at: "2026-10-10T07:17:00Z",
+          kind: "spike" as const,
+          candidate_id: id,
+          date: "2026-10-09",
+          score: 1.2,
+          detail: "",
+          change: null,
+        })),
+        summary: {
+          logged: 2,
+          spikes_scored: 0,
+          spike_mean_move: null,
+          typical_mean_move: null,
+          x_shifts_scored: 0,
+          x_shifts_agreeing: 0,
+        },
+      },
     }
     const shown = filterSignals(signals, new Set(["a"]))
     expect(shown.markets.latest.some((q) => q.candidate_id === "a")).toBe(false)
@@ -320,6 +340,7 @@ describe("filterSignals", () => {
     expect(shown.news.headlines.map((h) => h.candidate_ids)).toEqual([["a", "b"], []])
     expect(shown.x.rows.map((r) => r.candidate_id)).toEqual(["b"])
     expect(shown.events.map((e) => e.event_id)).toEqual(["2026-10-02-b"])
+    expect(shown.forward.flags.map((f) => f.candidate_id)).toEqual(["b"])
   })
 })
 

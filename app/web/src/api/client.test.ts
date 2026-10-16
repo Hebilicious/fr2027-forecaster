@@ -52,6 +52,18 @@ describe("api", () => {
       news: { fetched_at: null, feeds: [], daily: [], headlines: [] },
       x: { rows: [] },
       events: [],
+      forward: {
+        horizon_days: 14,
+        flags: [],
+        summary: {
+          logged: 0,
+          spikes_scored: 0,
+          spike_mean_move: null,
+          typical_mean_move: null,
+          x_shifts_scored: 0,
+          x_shifts_agreeing: 0,
+        },
+      },
     }
     respond(JSON.stringify(empty), 200, "application/json")
     expect(await api.signals()).toEqual({ _tag: "Loaded", value: empty })
