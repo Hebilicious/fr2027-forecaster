@@ -20,7 +20,7 @@ const en = {
   navCandidates: "Candidates",
   candidatesTitle: "Who could be on the ballot",
   candidatesIntro:
-    "Everyone the model considers, grouped by political family as the model groups them for vote transfers, with the chance each one runs, reaches round 2 and wins.",
+    "Everyone the model considers, by political family, with the chance each one runs, reaches round 2 and wins.",
   blocFarLeft: "Far left",
   blocLeft: "Left",
   blocCentre: "Centre",
@@ -210,7 +210,7 @@ const fr: Messages = {
   navCandidates: "Candidats",
   candidatesTitle: "Qui pourrait être sur le bulletin",
   candidatesIntro:
-    "Toutes les personnes que le modèle considère, rangées par famille politique comme il les regroupe pour les reports de voix, avec la probabilité que chacune se présente, accède au second tour et l'emporte.",
+    "Toutes les personnes que le modèle considère, par famille politique, avec la probabilité que chacune se présente, accède au second tour et l'emporte.",
   blocFarLeft: "Extrême gauche",
   blocLeft: "Gauche",
   blocCentre: "Centre",

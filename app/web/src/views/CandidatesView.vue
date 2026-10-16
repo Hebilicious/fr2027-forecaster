@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import type { Forecast } from "../api/schemas"
-import { byBloc } from "../candidates"
+import { byFamily } from "../candidates"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import { probability, safeUrl, shareWithInterval } from "../format"
 import { useI18n, type MessageKey } from "../i18n"
@@ -10,8 +10,8 @@ import { ARTICLES, CREDITS } from "../portraits"
 const props = defineProps<{ forecast: Forecast }>()
 const { t, locale } = useI18n()
 
-// Bloc and status codes come from config/candidates.yaml; known ones are translated, others shown as sent.
-const blocNames: Record<string, MessageKey> = {
+// Family and status codes; known ones are translated, others shown as sent.
+const familyNames: Record<string, MessageKey> = {
   far_left: "blocFarLeft",
   left: "blocLeft",
   centre: "blocCentre",
@@ -29,7 +29,7 @@ const translated = (keys: Record<string, MessageKey>, value: string) => {
   return key ? t(key) : value
 }
 
-const groups = computed(() => byBloc(props.forecast.candidates))
+const groups = computed(() => byFamily(props.forecast.candidates))
 const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, "fr")
 const credited = computed(() =>
   props.forecast.candidates
@@ -51,13 +51,13 @@ const uncredited = computed(() =>
   <div class="candidates">
     <section
       v-for="(group, i) in groups"
-      :key="group.bloc"
-      :aria-labelledby="`bloc-${group.bloc}`"
-      class="bloc rise"
+      :key="group.family"
+      :aria-labelledby="`family-${group.family}`"
+      class="group rise"
       :style="{ '--i': i }"
     >
-      <header class="bloc-head">
-        <h2 :id="`bloc-${group.bloc}`">{{ translated(blocNames, group.bloc) }}</h2>
+      <header class="group-head">
+        <h2 :id="`family-${group.family}`">{{ translated(familyNames, group.family) }}</h2>
         <span class="count num">{{ group.candidates.length }}</span>
       </header>
       <ul class="cards">
@@ -130,19 +130,19 @@ const uncredited = computed(() =>
   gap: clamp(28px, 3.4vw, 44px);
 }
 
-.bloc {
+.group {
   display: grid;
   gap: 16px;
 }
 
-/* The family's name, its count, then a hairline running to the edge. */
-.bloc-head {
+/* The group's name, its count, then a hairline running to the edge. */
+.group-head {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.bloc-head::after {
+.group-head::after {
   content: "";
   flex: 1;
   height: 1px;
@@ -175,6 +175,10 @@ const uncredited = computed(() =>
   transition: transform 0.3s var(--ease-out);
 }
 
+.identity .badge {
+  margin-top: 4px;
+}
+
 .person:hover {
   transform: translateY(-2px);
 }
@@ -200,10 +204,6 @@ h3 {
   font-size: 0.82rem;
   color: var(--muted);
   line-height: 1.35;
-}
-
-.identity .badge {
-  margin-top: 4px;
 }
 
 .stats {
