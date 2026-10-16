@@ -2,6 +2,8 @@
   "name": "fr2027-forecaster",
   "private": true,
   "devDependencies": {
+    "@gommage/cli": "catalog:",
+    "lefthook": "catalog:",
     "oxfmt": "catalog:",
     "oxlint": "catalog:"
   },

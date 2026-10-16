@@ -1,0 +1,13 @@
+version: 1
+
+# gommage refuses AI attribution in commit messages (the lefthook commit-msg hook) and in pull
+# requests (the Commits workflow). A bare pattern matches as a case-insensitive substring, so a
+# bare "Generated with" would also refuse ordinary prose.
+rules:
+  no-ai-coauthor: true
+  allow-human-coauthors: true
+  blocked-patterns:
+    - "/🤖.*(generated|claude|codex|copilot|cursor)/i"
+
+scope:
+  range: "origin/main..HEAD"

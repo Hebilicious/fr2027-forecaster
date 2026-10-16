@@ -35,3 +35,29 @@ tasks:
     command: "oxlint"
     args: ["--deny-warnings", "app"]
     inputs: ["app/**/*.ts", ".oxlintrc.json"]
+
+  hooks-install:
+    description: "Install the lefthook git hooks (commit titles, AI attribution, formatting) for every worktree of this clone."
+    command: "lefthook"
+    args: ["install"]
+    inputs: ["lefthook.yml"]
+    options:
+      cache: false
+      runInCI: false
+
+  semantic-check:
+    description: "Fail when a commit title on this branch is not of the form type(scope): subject."
+    script: "git log --no-merges --format=%s origin/main..HEAD | scripts/check-semantic.sh"
+    inputs: ["scripts/check-semantic.sh"]
+    options:
+      cache: false
+      runInCI: false
+
+  authorship-check:
+    description: "Fail when a commit on this branch carries AI attribution (.gommage.yml)."
+    command: "gommage"
+    args: ["check"]
+    inputs: [".gommage.yml"]
+    options:
+      cache: false
+      runInCI: false

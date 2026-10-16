@@ -3,9 +3,11 @@ packages:
 
 # Every package names its versions with `catalog:`; versions live only here.
 catalog:
+  "@gommage/cli": "0.1.0"
   "@types/node": "24.19.1"
   "@vitejs/plugin-vue": "6.0.9"
   effect: "4.0.2"
+  lefthook: "2.2.2"
   oxfmt: "0.72.0"
   oxlint: "1.87.0"
   typescript: "7.0.2"
@@ -16,7 +18,10 @@ catalog:
   wrangler: "4.137.0"
 
 # Dependency install scripts stay off. esbuild and workerd (wrangler's) only use theirs to swap
-# a JavaScript launcher for the native binary; the launcher works without it.
+# a JavaScript launcher for the native binary; the launcher works without it. lefthook's would
+# install the git hooks into the hooks directory every worktree shares; `moon run repo:hooks-install`
+# does that on purpose instead.
 allowBuilds:
   esbuild: false
   workerd: false
+  lefthook: false

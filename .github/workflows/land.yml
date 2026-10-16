@@ -89,7 +89,7 @@ jobs:
           moon run cli:build
           $FR2027 ingest
           git add -A -- data/clean
-          git diff --cached --quiet || git commit -q -m "data: clean files for $BRANCH"
+          git diff --cached --quiet || git commit -q -m "chore(data): clean files for $BRANCH"
 
       - name: Run every check
         run: moon ci --base origin/main --head HEAD
