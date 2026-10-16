@@ -29,11 +29,13 @@ export interface Framing {
   readonly narrow: Point
 }
 
-export type View = "overview" | "round1" | "round2" | "signals" | "sources"
+export type View = "overview" | "candidates" | "round1" | "round2" | "signals" | "sources"
 
 export const FRAMINGS: Readonly<Record<View, Framing>> = {
   // Liberty raising the flag.
   overview: { focus: { x: 0.6, y: 0.14 }, zoom: 1.15, wide: { x: 0.7, y: 0.3 }, narrow: { x: 0.6, y: 0.32 } },
+  // The crowd behind her: a student in a bicorne, a worker raising a sabre, a man in a top hat.
+  candidates: { focus: { x: 0.39, y: 0.37 }, zoom: 2.1, wide: { x: 0.74, y: 0.5 }, narrow: { x: 0.5, y: 0.55 } },
   // The man kneeling at her feet, looking up, dressed in the flag's blue, white and red.
   round1: { focus: { x: 0.44, y: 0.53 }, zoom: 2, wide: { x: 0.76, y: 0.55 }, narrow: { x: 0.62, y: 0.6 } },
   // The boy with the pistols, and Notre-Dame in the smoke.

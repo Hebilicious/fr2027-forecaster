@@ -2,6 +2,7 @@
 import { computed } from "vue"
 import type { Forecast } from "../api/schemas"
 import { outcomeGroups, type OutcomeGroup } from "../charts"
+import CandidateAvatar from "./CandidateAvatar.vue"
 import { probability } from "../format"
 import { useI18n } from "../i18n"
 
@@ -26,11 +27,14 @@ const label = (g: OutcomeGroup) =>
       :style="{ '--i': i }"
     >
       <span class="sr-only">{{ label(g) }}</span>
-      <p aria-hidden="true" class="label">
-        <span class="value">{{ probability(g.probability, locale) }}</span>
-        <span class="name">{{ g.name ?? t("outcomesOthers") }}</span>
-        <span v-if="g.candidateId === null" class="members">{{ t("outcomesOthersCount", { n: g.members }) }}</span>
-      </p>
+      <div aria-hidden="true" class="label">
+        <CandidateAvatar v-if="g.candidateId && g.name" :id="g.candidateId" :name="g.name" :size="40" />
+        <p class="text">
+          <span class="value">{{ probability(g.probability, locale) }}</span>
+          <span class="name">{{ g.name ?? t("outcomesOthers") }}</span>
+          <span v-if="g.candidateId === null" class="members">{{ t("outcomesOthersCount", { n: g.members }) }}</span>
+        </p>
+      </div>
       <span aria-hidden="true" class="dots">
         <span v-for="n in g.dots" :key="n" class="dot" :style="{ '--n': n }" />
       </span>
@@ -53,7 +57,7 @@ const label = (g: OutcomeGroup) =>
   display: grid;
   gap: 12px;
   justify-items: start;
-  max-width: 11rem;
+  max-width: 14rem;
 }
 
 .group.wide {
@@ -61,6 +65,12 @@ const label = (g: OutcomeGroup) =>
 }
 
 .label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.text {
   display: grid;
   gap: 2px;
 }

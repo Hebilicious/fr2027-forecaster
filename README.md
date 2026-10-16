@@ -41,7 +41,7 @@ The binary also runs on its own: `target/release/fr2027 forecast --as-of 2026-09
 | `fetch/`          | Rust            | Network readers: Polymarket, Kalshi, RSS feeds, Wikipedia page views, the Grok Bot inbox                                      |
 | `backtest/`       | Rust            | Replays 2017 and 2022 with the polls of each date, scores them, fits the election-day error settings                          |
 | `cli/`            | Rust            | The `fr2027` binary: `validate`, `ingest`, `forecast`, `backtest`, `collect`, `inbox`, `export`, `serve`                      |
-| `app/web/`        | TypeScript, Vue | The UI: Overview, Round 1, Round 2, Signals, Sources and health; French and English                                           |
+| `app/web/`        | TypeScript, Vue | The UI: Overview, Candidates, Round 1, Round 2, Signals, Sources and health; French and English                               |
 | `app/worker/`     | TypeScript      | The Cloudflare Worker: serves the public site and the Grok Bot inbox                                                          |
 | `config/`         | YAML            | `candidates.yaml` (canonical ids, blocs, who runs), `model.yaml` (parameters), `sources.yaml` (live sources), `backtest.yaml` |
 | `.github/`        | YAML            | `ci.yml` (checks) and `live.yml` (the hourly pipeline, started by the Worker's cron)                                          |

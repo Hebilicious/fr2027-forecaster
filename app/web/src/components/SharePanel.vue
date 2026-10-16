@@ -5,6 +5,7 @@ import { scale, shareTicks } from "../charts"
 import type { SeriesPoint } from "../api/schemas"
 import { percent, safeUrl, shareWithInterval, shortDate } from "../format"
 import { useI18n, type Locale } from "../i18n"
+import CandidateAvatar from "./CandidateAvatar.vue"
 
 const props = defineProps<{
   panel: Panel
@@ -91,7 +92,10 @@ const sortedDots = computed(() =>
 <template>
   <figure class="card panel">
     <figcaption>
-      <h2>{{ panel.candidate.name }}</h2>
+      <div class="who">
+        <CandidateAvatar :id="panel.candidate.candidate_id" :name="panel.candidate.name" :size="38" />
+        <h2>{{ panel.candidate.name }}</h2>
+      </div>
       <p v-if="latest" class="latest">
         <span class="latest-value">{{ percent(latest.mean, 0, locale) }}</span>
         <span class="latest-range num">
@@ -168,12 +172,18 @@ figcaption {
   gap: 12px;
 }
 
+.who {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
 h2 {
   font-family: var(--font-sans);
   font-size: 0.98rem;
   font-weight: 600;
   letter-spacing: -0.005em;
-  padding-top: 4px;
 }
 
 .latest {

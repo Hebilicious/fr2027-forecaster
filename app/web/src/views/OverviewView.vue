@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import type { Forecast } from "../api/schemas"
+import CandidateAvatar from "../components/CandidateAvatar.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
 import { count, points, probability, shareWithInterval } from "../format"
 import { useI18n } from "../i18n"
@@ -49,8 +50,13 @@ const at = (share: number) => (share / maxShare.value) * 100
           <tbody>
             <tr v-for="(c, i) in forecast.candidates" :key="c.candidate_id" :style="{ '--i': i }">
               <th scope="row">
-                <span class="name">{{ c.name }}</span>
-                <span class="party">{{ c.party }}</span>
+                <span class="who">
+                  <CandidateAvatar :id="c.candidate_id" :name="c.name" :size="36" />
+                  <span>
+                    <span class="name">{{ c.name }}</span>
+                    <span class="party">{{ c.party }}</span>
+                  </span>
+                </span>
               </th>
               <td>
                 <div class="bar-cell">
@@ -99,7 +105,10 @@ const at = (share: number) => (share / maxShare.value) * 100
         <template v-if="forecast.changes.previous">
           <ul v-if="movers.length" class="movers">
             <li v-for="d in movers" :key="d.candidate_id">
-              <span>{{ names.get(d.candidate_id) ?? d.candidate_id }}</span>
+              <span class="who">
+                <CandidateAvatar :id="d.candidate_id" :name="names.get(d.candidate_id) ?? d.candidate_id" :size="24" />
+                {{ names.get(d.candidate_id) ?? d.candidate_id }}
+              </span>
               <span class="delta num">
                 <span aria-hidden="true" class="arrow">{{ d.delta > 0 ? "▲" : "▼" }}</span>
                 {{ points(d.delta, locale) }}
@@ -159,7 +168,13 @@ const at = (share: number) => (share / maxShare.value) * 100
 
 .field th[scope="row"] {
   font-weight: 400;
-  min-width: 11rem;
+  min-width: 13rem;
+}
+
+.who {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .name {
@@ -325,7 +340,7 @@ const at = (share: number) => (share / maxShare.value) * 100
   }
 
   .field th[scope="row"] {
-    min-width: 8.5rem;
+    min-width: 11rem;
   }
 
   th,

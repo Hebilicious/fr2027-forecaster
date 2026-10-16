@@ -4,6 +4,7 @@ import type { News } from "../../api/schemas"
 import { count, dateTime, safeUrl } from "../../format"
 import { useI18n } from "../../i18n"
 import { latestHeadlines, nameOf, newsCounts } from "../../signals"
+import CandidateAvatar from "../CandidateAvatar.vue"
 
 const props = defineProps<{ news: News; names: ReadonlyMap<string, string> }>()
 const { t, locale } = useI18n()
@@ -27,7 +28,10 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
         <h3 class="sub">{{ t("newsCounts") }}</h3>
         <ul class="bars">
           <li v-for="(c, i) in counts" :key="c.candidateId" :style="{ '--i': i }">
-            <span class="bar-name">{{ c.name }}</span>
+            <span class="bar-name">
+              <CandidateAvatar :id="c.candidateId" :name="c.name" :size="22" />
+              <span class="bar-label">{{ c.name }}</span>
+            </span>
             <span class="bar-track"><span class="bar" :style="{ width: pct(c.items / maxCount) }" /></span>
             <span class="num bar-value">{{ count(c.items, locale) }}</span>
           </li>
@@ -101,16 +105,23 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 
 .bars li {
   display: grid;
-  grid-template-columns: minmax(0, 10.5rem) minmax(0, 1fr) 2.5em;
+  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr) 2.5em;
   gap: 12px;
   align-items: center;
 }
 
 .bar-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: var(--ink);
+}
+
+.bar-label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--ink);
 }
 
 .bar-track {
@@ -181,7 +192,7 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 
 @media (max-width: 760px) {
   .bars li {
-    grid-template-columns: minmax(0, 9rem) minmax(0, 1fr) 2.5em;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 2.5em;
   }
 }
 </style>

@@ -4,6 +4,7 @@ import type { Attention } from "../../api/schemas"
 import { count, longDate, relativeChange } from "../../format"
 import { useI18n } from "../../i18n"
 import { attentionRows, type AttentionRow } from "../../signals"
+import CandidateAvatar from "../CandidateAvatar.vue"
 import Sparkline from "../Sparkline.vue"
 
 const props = defineProps<{ attention: Attention; names: ReadonlyMap<string, string> }>()
@@ -38,7 +39,12 @@ const trendLabel = (row: AttentionRow) =>
           </thead>
           <tbody>
             <tr v-for="row in table.rows" :key="row.candidateId">
-              <th scope="row">{{ row.name }}</th>
+              <th scope="row">
+                <span class="who">
+                  <CandidateAvatar :id="row.candidateId" :name="row.name" :size="26" />
+                  {{ row.name }}
+                </span>
+              </th>
               <td class="num strong">{{ count(row.total, locale) }}</td>
               <td class="num secondary">{{ row.change === null ? "—" : relativeChange(row.change, locale) }}</td>
               <td>
@@ -59,6 +65,12 @@ const trendLabel = (row: AttentionRow) =>
 </template>
 
 <style scoped>
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 th[scope="row"] {
   font-weight: 500;
   color: var(--ink);

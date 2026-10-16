@@ -4,6 +4,7 @@ import type { Forecast, Markets, Question, Venue } from "../../api/schemas"
 import { dateTime, probability } from "../../format"
 import { useI18n, type MessageKey } from "../../i18n"
 import { marketRows, unmatchedRows, VENUES, type Point } from "../../signals"
+import CandidateAvatar from "../CandidateAvatar.vue"
 import Sparkline from "../Sparkline.vue"
 
 const props = defineProps<{ forecast: Forecast; markets: Markets }>()
@@ -64,7 +65,12 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
           </thead>
           <tbody>
             <tr v-for="row in table.rows" :key="row.candidateId">
-              <th scope="row">{{ row.name }}</th>
+              <th scope="row">
+                <span class="who">
+                  <CandidateAvatar :id="row.candidateId" :name="row.name" :size="26" />
+                  {{ row.name }}
+                </span>
+              </th>
               <td class="num model">{{ price(row.model) }}</td>
               <td v-for="venue in VENUES" :key="venue" class="num">
                 <div class="price">
@@ -106,6 +112,12 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
 </template>
 
 <style scoped>
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .head {
   display: flex;
   flex-wrap: wrap;

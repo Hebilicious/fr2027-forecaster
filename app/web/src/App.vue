@@ -6,6 +6,7 @@ import { daysUntil, dateTime, longDate } from "./format"
 import { useI18n, type MessageKey } from "./i18n"
 import { FRAMINGS, type View } from "./painting"
 import { useLiveData } from "./useLiveData"
+import CandidatesView from "./views/CandidatesView.vue"
 import OverviewView from "./views/OverviewView.vue"
 import Round1View from "./views/Round1View.vue"
 import Round2View from "./views/Round2View.vue"
@@ -22,10 +23,16 @@ interface ViewEntry {
 }
 const views: readonly ViewEntry[] = [
   { id: "overview", label: "navOverview", numeral: "I", plate: null },
-  { id: "round1", label: "navRound1", numeral: "II", plate: { title: "round1Title", lede: "round1Help" } },
-  { id: "round2", label: "navRound2", numeral: "III", plate: { title: "round2Title", lede: "round2Help" } },
-  { id: "signals", label: "navSignals", numeral: "IV", plate: { title: "signalsTitle", lede: "signalsIntro" } },
-  { id: "sources", label: "navSources", numeral: "V", plate: { title: "sourcesTitle", lede: "sourcesIntro" } },
+  {
+    id: "candidates",
+    label: "navCandidates",
+    numeral: "II",
+    plate: { title: "candidatesTitle", lede: "candidatesIntro" },
+  },
+  { id: "round1", label: "navRound1", numeral: "III", plate: { title: "round1Title", lede: "round1Help" } },
+  { id: "round2", label: "navRound2", numeral: "IV", plate: { title: "round2Title", lede: "round2Help" } },
+  { id: "signals", label: "navSignals", numeral: "V", plate: { title: "signalsTitle", lede: "signalsIntro" } },
+  { id: "sources", label: "navSources", numeral: "VI", plate: { title: "sourcesTitle", lede: "sourcesIntro" } },
 ]
 
 const { t, locale, toggle } = useI18n()
@@ -148,6 +155,7 @@ const credit = computed(() => t("footerPainting", { title: "\u0000" }).split("\u
       </div>
       <template v-else-if="forecast">
         <OverviewView v-if="view === 'overview'" :forecast="forecast" />
+        <CandidatesView v-else-if="view === 'candidates'" :forecast="forecast" />
         <Round1View v-else-if="view === 'round1'" :forecast="forecast" :series="series" :polls="polls" />
         <Round2View v-else-if="view === 'round2'" :forecast="forecast" />
         <SignalsView v-else-if="view === 'signals'" :forecast="forecast" :signals="signals" />
@@ -520,7 +528,7 @@ const credit = computed(() => t("footerPainting", { title: "\u0000" }).split("\u
   color: var(--ink-2);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1140px) {
   .nav .numeral {
     display: none;
   }
@@ -535,7 +543,7 @@ const credit = computed(() => t("footerPainting", { title: "\u0000" }).split("\u
 }
 
 /* Two rows: the brand and the language, then the views, which scroll sideways if they must. */
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
   .topbar-inner {
     display: grid;
     grid-template-columns: 1fr auto;

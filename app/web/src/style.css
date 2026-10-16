@@ -45,15 +45,19 @@
   --link: #a9bcff;
   --focus: #a9bcff;
 
-  /* Sequential bleu for magnitude, dim to bright: low values sink into the obsidian. */
+  /*
+   * Magnitude from rouge to bleu: the hue turns through violet as lightness rises, so a brighter,
+   * bluer cell is a likelier one. Every step is dark enough for white text (5:1 or more); step 0 is
+   * a neutral grey for nothing at all.
+   */
   --seq-0: #1d1f24;
-  --seq-1: #1d2c51;
-  --seq-2: #263c74;
-  --seq-3: #304d99;
-  --seq-4: #3d5fbb;
-  --seq-5: #4c73db;
-  --seq-6: #6a90f1;
-  --seq-7: #92b2fe;
+  --seq-1: #7a1615;
+  --seq-2: #83163b;
+  --seq-3: #851d5f;
+  --seq-4: #812984;
+  --seq-5: #7538a6;
+  --seq-6: #5f49c2;
+  --seq-7: #355cd4;
 
   /* Glass. */
   --glass: rgba(14, 16, 22, 0.66);
@@ -89,8 +93,8 @@
   text-rendering: optimizeLegibility;
 }
 
-/* Two rows below 960px: the brand and the language, then the views. */
-@media (max-width: 960px) {
+/* Two rows below 1000px: the brand and the language, then the views. */
+@media (max-width: 1000px) {
   :root {
     --topbar-h: 100px;
   }

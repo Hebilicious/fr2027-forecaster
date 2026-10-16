@@ -4,6 +4,7 @@ import type { XRow } from "../../api/schemas"
 import { count, dateTime, percent } from "../../format"
 import { useI18n, type MessageKey } from "../../i18n"
 import { latestXWindow, nameOf, sentiment, type Sentiment } from "../../signals"
+import CandidateAvatar from "../CandidateAvatar.vue"
 
 const props = defineProps<{ rows: readonly XRow[]; names: ReadonlyMap<string, string> }>()
 const { t, locale } = useI18n()
@@ -52,7 +53,12 @@ const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu
           </thead>
           <tbody>
             <tr v-for="{ row, name, mood } in rows" :key="row.candidate_id">
-              <th scope="row">{{ name }}</th>
+              <th scope="row">
+                <span class="who">
+                  <CandidateAvatar :id="row.candidate_id" :name="name" :size="26" />
+                  {{ name }}
+                </span>
+              </th>
               <td class="num">
                 <span class="strong">{{ row.mentions === null ? "—" : count(row.mentions, locale) }}</span>
                 <span v-if="row.mentions_method" class="method muted small">{{ t(methods[row.mentions_method]) }}</span>
@@ -79,6 +85,12 @@ const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu
 </template>
 
 <style scoped>
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 th[scope="row"] {
   font-weight: 500;
   color: var(--ink);

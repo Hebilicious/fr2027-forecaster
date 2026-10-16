@@ -2,6 +2,7 @@
 import { computed } from "vue"
 import type { Forecast } from "../api/schemas"
 import { round2Matrix, type MatrixCell } from "../charts"
+import CandidateAvatar from "../components/CandidateAvatar.vue"
 import { probability } from "../format"
 import { useI18n } from "../i18n"
 
@@ -20,7 +21,7 @@ const rows = computed(() =>
   })),
 )
 
-// Sequential bleu by how likely the pairing is, dim to bright; the brightest steps carry dark text.
+// From rouge to bleu by how likely the pairing is (--seq-* in style.css); every step carries white text.
 const steps = ["--seq-0", "--seq-1", "--seq-2", "--seq-3", "--seq-4", "--seq-5", "--seq-6", "--seq-7"]
 const maxMatchup = computed(() => Math.max(0.01, ...props.forecast.pairs.map((p) => p.p_matchup)))
 function stepFor(p: number): number {
@@ -42,17 +43,27 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
           <thead>
             <tr>
               <th scope="col"><span class="sr-only">{{ t("candidate") }}</span></th>
-              <th v-for="c in matrix.candidates" :key="c.candidate_id" class="column-head" scope="col">{{ c.name }}</th>
+              <th v-for="c in matrix.candidates" :key="c.candidate_id" class="column-head" scope="col">
+                <span class="head-in">
+                  <CandidateAvatar :id="c.candidate_id" :name="c.name" :size="30" />
+                  <span>{{ c.name }}</span>
+                </span>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="row in rows" :key="row.candidate.candidate_id">
-              <th scope="row">{{ row.candidate.name }}</th>
+              <th scope="row">
+                <span class="row-in">
+                  <CandidateAvatar :id="row.candidate.candidate_id" :name="row.candidate.name" :size="30" />
+                  {{ row.candidate.name }}
+                </span>
+              </th>
               <td v-for="(c, i) in row.cells" :key="i" class="cell-wrap">
                 <div
                   v-if="c"
                   class="cell"
-                  :class="{ bright: stepFor(c.pMatchup) >= 5, empty: c.pMatchup <= 0 }"
+                  :class="{ empty: c.pMatchup <= 0 }"
                   :style="{ background: `var(${steps[stepFor(c.pMatchup)]})` }"
                   :title="c.rowWins !== null
                     ? t('matchupCell', { p: probability(c.pMatchup, locale), w: probability(c.rowWins, locale) })
@@ -106,8 +117,11 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
               <td>
                 <div class="duel">
                   <span class="side">
-                    <span class="who">{{ names.get(pair.a) }}</span>
-                    <strong class="num">{{ probability(share(pair, pair.a), locale) }}</strong>
+                    <CandidateAvatar :id="pair.a" :name="names.get(pair.a) ?? pair.a" :size="34" />
+                    <span class="side-text">
+                      <span class="who">{{ names.get(pair.a) }}</span>
+                      <strong class="num">{{ probability(share(pair, pair.a), locale) }}</strong>
+                    </span>
                   </span>
                   <span aria-hidden="true" class="split">
                     <span class="part" :style="{ flexGrow: share(pair, pair.a) }" />
@@ -115,8 +129,11 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
                     <span class="midline" />
                   </span>
                   <span class="side end">
-                    <span class="who">{{ names.get(pair.b) }}</span>
-                    <strong class="num">{{ probability(share(pair, pair.b), locale) }}</strong>
+                    <span class="side-text">
+                      <span class="who">{{ names.get(pair.b) }}</span>
+                      <strong class="num">{{ probability(share(pair, pair.b), locale) }}</strong>
+                    </span>
+                    <CandidateAvatar :id="pair.b" :name="names.get(pair.b) ?? pair.b" :size="34" />
                   </span>
                 </div>
               </td>
@@ -165,6 +182,18 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
   line-height: 1.35;
 }
 
+.head-in {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.row-in {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .cell {
   border-radius: 10px;
   min-height: 52px;
@@ -188,10 +217,6 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
     inset 0 1px 0 rgba(255, 255, 255, 0.16),
     inset 0 0 0 1px rgba(255, 255, 255, 0.22),
     0 8px 20px -8px rgba(0, 0, 0, 0.8);
-}
-
-.cell.bright {
-  color: var(--page);
 }
 
 .cell.empty {
@@ -274,21 +299,31 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
 
 .duel {
   display: grid;
-  grid-template-columns: minmax(0, 9rem) minmax(120px, 1fr) minmax(0, 9rem);
+  grid-template-columns: minmax(0, 12rem) minmax(120px, 1fr) minmax(0, 12rem);
   align-items: center;
   gap: 14px;
-  min-width: 380px;
+  min-width: 460px;
 }
 
+/* Face to face: each side's portrait on its outer edge. */
 .side {
-  display: grid;
-  gap: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
   font-size: 0.8rem;
   color: var(--muted);
 }
 
 .side.end {
+  justify-content: flex-end;
   text-align: right;
+}
+
+.side-text {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
 }
 
 .side strong {
