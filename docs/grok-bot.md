@@ -307,7 +307,7 @@ Routine 4 enters each one again from the PDF; Live commits it when both agree.
    candidate_ids, even if the declaration is up to 7 days old, unless the inbox or
    data/raw/events already has it. Routine 4 adds them from the event's facts and sources.
 3. POST each as {"kind": "event", "payload": {
-     "schema_version": "1.0",
+     "schema_version": "2.0",
      "event_id": "<date>-<short-slug>", e.g. "2026-10-17-faure-withdraws",
      "date": "<YYYY-MM-DD, when it happened, Paris time>",
      "kind": "declaration" | "withdrawal" | "endorsement" | "primary_result" | "sponsorships" | "legal" | "poll_published" | "other",
@@ -380,7 +380,9 @@ Every payload in this run carries
      nobody from the slot runs).
    - Someone who declared, or was tested in a poll, but is missing from candidates.yaml (see
      routine 3's declaration events and routine 2's "other" events) gets add_candidate, with a
-     sourced entry, the names that identify them in headlines, and a slot.
+     sourced entry, the names that identify them in headlines, and a slot. Put their declaration
+     event in event_ids, and add one candidate per field change: the pipeline then writes the new
+     id into that event's candidate_ids.
    - Dedupe on change_id. A rejected one: fix what the note says and resend with the same
      change_id.
 3. POST {"kind": "field_change", "payload": {

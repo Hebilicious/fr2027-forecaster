@@ -1,11 +1,13 @@
 {
-  "candidate_ids": [],
+  "candidate_ids": [
+    "polony"
+  ],
   "date": "2026-10-14",
   "event_id": "2026-10-14-polony-declares",
-  "kind": "other",
+  "kind": "declaration",
   "reported_at": "2026-10-16T16:39:48Z",
   "reported_by": "Grok Bot fr2027",
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "sources": [
     {
       "title": "L'essayiste Natacha Polony annonce sa candidature à l'élection présidentielle",

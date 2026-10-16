@@ -39,6 +39,18 @@ export default {
       "zh-Hans": "暂无事件报告。",
       th: "ยังไม่มีเหตุการณ์ที่รายงาน",
     }),
+    summaryInEnglish: t({
+      fr: "Résumé en anglais.",
+      "en-GB": "Summary in English.",
+      de: "Zusammenfassung auf Englisch.",
+      it: "Sintesi in inglese.",
+      "es-ES": "Resumen en inglés.",
+      "pt-PT": "Resumo em inglês.",
+      ja: "要約は英語です。",
+      ko: "요약은 영어로 제공됩니다.",
+      "zh-Hans": "摘要为英文。",
+      th: "สรุปเป็นภาษาอังกฤษ",
+    }),
     kinds: {
       declaration: t({
         fr: "candidature",

@@ -18,7 +18,7 @@ const events = computed(() =>
       locale.value,
     ),
     host: hostOf(e.source_url),
-    text: eventSummary(e.summary, locale.value),
+    summary: eventSummary(e.summary, locale.value),
   })),
 )
 
@@ -45,7 +45,8 @@ function hostOf(url: string): string {
           <span class="badge">{{ labelOf(content.kinds, e.kind) }}</span>
           <span v-if="e.who" class="secondary">{{ e.who }}</span>
         </p>
-        <p class="summary">{{ e.text }}</p>
+        <p class="summary" :lang="e.summary.lang">{{ e.summary.text }}</p>
+        <p v-if="e.summary.foreign" class="muted small">{{ content.summaryInEnglish }}</p>
         <p class="small">
           <a v-if="safeUrl(e.source_url)" :href="safeUrl(e.source_url)" rel="noopener">{{ e.source_title ?? e.host }}</a>
           <span v-else class="muted">{{ e.source_title ?? e.source_url }}</span>

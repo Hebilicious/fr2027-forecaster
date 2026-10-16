@@ -4,6 +4,7 @@ import {
   addDays,
   attentionRows,
   candidateNames,
+  eventSummary,
   eventsNewestFirst,
   latestHeadlines,
   latestXWindow,
@@ -13,7 +14,6 @@ import {
   sparkline,
   sparkRange,
   unmatchedRows,
-  eventSummary,
 } from "./signals"
 
 const candidate = (id: string, pRun: number, pQualify: number, pWin: number) => ({
@@ -349,12 +349,12 @@ describe("sparkline", () => {
 
 describe("eventSummary", () => {
   const both = { fr: "En français.", en: "In English." }
-  it("shows French on a French page and English elsewhere", () => {
-    expect(eventSummary(both, "fr")).toBe("En français.")
-    expect(eventSummary(both, "en-GB")).toBe("In English.")
-    expect(eventSummary(both, "de")).toBe("In English.")
+  it("shows French on the French site and English on every other", () => {
+    expect(eventSummary(both, "fr")).toEqual({ text: "En français.", lang: "fr", foreign: false })
+    expect(eventSummary(both, "en-GB")).toEqual({ text: "In English.", lang: "en", foreign: false })
+    expect(eventSummary(both, "ja")).toEqual({ text: "In English.", lang: "en", foreign: true })
   })
-  it("shows a legacy string as is", () => {
-    expect(eventSummary("Old summary.", "fr")).toBe("Old summary.")
+  it("shows a legacy string as English", () => {
+    expect(eventSummary("Old summary.", "fr")).toEqual({ text: "Old summary.", lang: "en", foreign: true })
   })
 })
