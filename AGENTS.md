@@ -19,6 +19,8 @@ and when.
 - Every handoff message includes the clickable URL of the task's pull request, or of every pull request in its stack,
   each time, including handoffs after a review correction. Copy the URL from `gh pr view --json url` or `gh stack view`
   rather than retyping it.
+- A handoff of a change a visitor can see (`app/web`, `app/worker`) includes the URL of a server left running from the
+  task's worktree, with data that shows the change.
 - Use `gh stack` whenever the work splits into layers a reviewer can read one at a time, and always for a change too
   large for one pull request: one branch and pull request per layer, all in the task's worktree, submitted with
   `gh stack submit`. [.agents/skills/gh-stack/SKILL.md](.agents/skills/gh-stack/SKILL.md) covers the commands; it is
