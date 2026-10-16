@@ -1,0 +1,260 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-16T17:18:05Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-14T06:25:56Z",
+      "title": "Présidentielle 2027 : Natacha Polony se déclare candidate pour « perturber le jeu politique »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/14/presidentielle-2027-natacha-polony-se-declare-candidate_6793497_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-14T06:32:13Z",
+      "title": "Natacha Polony se sent «obligée» d’ajouter une énième candidature à l’élection présidentielle",
+      "url": "https://www.liberation.fr/politique/natacha-polony-se-sent-obligee-dajouter-une-enimene-candidature-a-lelection-presidentielle-20261014_YTMYBQ5RPVGCHAIJI3PECRAQQM/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-16T17:15:21Z",
+      "title": "\"Franc-Jeu\". Avec Bruno Retailleau",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/franc-jeu/franc-jeu-avec-bruno-retailleau_8217481.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-16T16:59:04Z",
+      "title": "Le recours du RN contre Richard Ferrand, appelant à le débarquer de la présidence du Conseil constitutionnel, est-il fondé juridiquement ?",
+      "url": "https://www.franceinfo.fr/politique/front-national/le-recours-du-rn-contre-richard-ferrand-appelant-a-le-debarquer-de-la-presidence-du-conseil-constitutionnel-est-il-fonde-juridiquement_8240527.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-15T13:38:19Z",
+      "title": "Pourquoi sont-ils si nombreux à vouloir l’Élysée en 2027 ?",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/pourquoi-sont-ils-si-nombreux-a-vouloir-l-elysee-en-2027_8238811.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T17:07:58Z",
+      "title": "Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/front-national/jordan-bardella_DN-202403060432.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T17:07:58Z",
+      "title": "\"Des propos innacceptables\": Jordan Bardella charge Richard Ferrand qui a balayé la proposition duu RN de réviser la Constitution par référendum",
+      "url": "https://www.bfmtv.com/politique/front-national/des-propos-innacceptables-jordan-bardella-charge-richard-ferrand-qui-a-balaye-la-proposition-duu-rn-de-reviser-la-constitution-par-referendum_AV-202610160728.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:23:40Z",
+      "title": "L'essayiste Natacha Polony explique les raisons de sa candidature à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-essayiste-natacha-polony-explique-les-raisons-de-sa-candidature-a-l-election-presidentielle_VN-202610140861.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:19:25Z",
+      "title": "\"Le principe d'une nation, c'est qu'elle décide qui vient sur son sol\", estime Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-principe-d-une-nation-c-est-qu-elle-decide-qui-vient-sur-son-sol-estime-natacha-polony-candidate-a-l-election-presidentielle_VN-202610140849.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:17:48Z",
+      "title": "\"L'aide à l'Ukraine est indispensable à une condition, c'est qu'elle aille à des armes européennes\" pour Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-aide-a-l-ukraine-est-indispensable-a-une-condition-c-est-qu-elle-aille-a-des-armes-europeennes-pour-natacha-polony-candidate-a-l-election-presidentielle_VN-202610140848.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:15:44Z",
+      "title": "\"Je ne peux pas ne pas agir\", assure Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-ne-peux-pas-ne-pas-agir-assure-natacha-polony-candidate-a-l-election-presidentielle_VN-202610140846.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:12:40Z",
+      "title": "\"Nous avons besoin d'indépendance de l'Europe\", affirme Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-avons-besoin-d-independance-de-l-europe-affirme-natacha-polony-candidate-a-l-election-presidentielle_VN-202610140844.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Des maires m’écrivent »… Natacha Polony confiante sur sa faculté à récolter les 500 parrainages",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-des-maires-mecrivent-natacha-polony-confiante-sur-sa-faculte-a-recolter-les-500-parrainages-15-10-2026-PNMOYEJGSFAZLBIAMVNKGZ2QSY.php"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : prof démissionnaire, « On n’est pas couché » et polémiques… Natacha Polony désormais candidate",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-prof-demissionnaire-on-nest-pas-couche-et-polemiques-natacha-polony-desormais-candidate-14-10-2026-DZ5BQODZ7NFQVFA7KHV3EHDVKU.php"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Un autre chemin peut se dessiner », assure Natacha Polony, nouvellement candidate",
+      "url": "https://www.leparisien.fr/elections/presidentielle/direct-presidentielle-2027-il-ne-faut-pas-se-mettre-sur-le-bas-cote-pour-faire-1-reproche-yannick-jadot-a-marine-tondelier-14-10-2026-PPJCH4BCWZGE5ITFTEMBB5KJAE.php"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« La situation m’oblige » : l’essayiste Natacha Polony annonce sa candidature à la présidentielle",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-la-situation-moblige-natacha-polony-annonce-etre-candidate-14-10-2026-MT4CBZFHHVBCXNNMCHAJ6XWTNA.php"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-14T20:58:51Z",
+      "title": "Présidentielle 2027 : « Des maires m’écrivent pour me parrainer », assure Natacha Polony",
+      "url": "https://www.20minutes.fr/politique/4254411-20261014-presidentielle-2027-maires-ecrivent-parrainer-assure-natacha-polony"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-16T16:03:54Z",
+      "title": "Marine Le Pen demande la démission de Richard Ferrand : le président du Conseil constitutionnel est-il vraiment sorti de sa réserve ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/marine-le-pen-demande-la-demission-de-richard-ferrand-le-president-du-conseil-constitutionnel-est-il-vraiment-sorti-de-sa-reserve"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-16T14:58:04Z",
+      "title": "Vote à 16 ans : la jeunesse doit-elle avoir son mot à dire dans les urnes ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/vote-a-16-ans-la-jeunesse-doit-elle-avoir-son-mot-a-dire-dans-les-urnes"
+    }
+  ],
+  "schema_version": "1.0"
+}
