@@ -1,4 +1,4 @@
-import { insert, t, type Dictionary } from "intlayer"
+import { t, type Dictionary } from "intlayer"
 
 export default {
   key: "events-section",
@@ -38,6 +38,18 @@ export default {
       ko: "아직 보고된 사건이 없습니다.",
       "zh-Hans": "暂无事件报告。",
       th: "ยังไม่มีเหตุการณ์ที่รายงาน",
+    }),
+    summaryInEnglish: t({
+      fr: "Résumé en anglais.",
+      "en-GB": "Summary in English.",
+      de: "Zusammenfassung auf Englisch.",
+      it: "Sintesi in inglese.",
+      "es-ES": "Resumen en inglés.",
+      "pt-PT": "Resumo em inglês.",
+      ja: "要約は英語です。",
+      ko: "요약은 영어로 제공됩니다.",
+      "zh-Hans": "摘要为英文。",
+      th: "สรุปเป็นภาษาอังกฤษ",
     }),
     kinds: {
       declaration: t({
@@ -137,19 +149,5 @@ export default {
         th: "อื่น ๆ",
       }),
     },
-    proposedChange: insert(
-      t({
-        fr: "Modification proposée : {{change}}",
-        "en-GB": "Proposed change: {{change}}",
-        de: "Vorgeschlagene Änderung: {{change}}",
-        it: "Modifica proposta: {{change}}",
-        "es-ES": "Cambio propuesto: {{change}}",
-        "pt-PT": "Alteração proposta: {{change}}",
-        ja: "変更案：{{change}}",
-        ko: "변경 제안: {{change}}",
-        "zh-Hans": "建议修改：{{change}}",
-        th: "การแก้ไขที่เสนอ: {{change}}",
-      }),
-    ),
   },
 } satisfies Dictionary

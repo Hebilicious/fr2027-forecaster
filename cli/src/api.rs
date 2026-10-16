@@ -490,10 +490,9 @@ fn events_signal(repo: &Repo) -> Result<Value> {
                     "event_id": r.event_id,
                     "kind": r.kind,
                     "candidate_ids": r.candidate_ids.split_whitespace().collect::<Vec<_>>(),
-                    "summary": r.summary,
+                    "summary": {"fr": r.summary_fr, "en": r.summary_en},
                     "source_url": r.source_url,
                     "source_title": r.source_title,
-                    "proposed_change": r.proposed_change,
                     "reported_by": r.reported_by,
                 })
             })

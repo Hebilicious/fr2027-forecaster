@@ -192,8 +192,8 @@ jobs:
             fi
             git fetch -q origin main
             if ! git rebase -q origin/main; then
-              # Raw files are new and never conflict; only derived files can. Take main's, rebuild
-              # them from raw, and carry on.
+              # Raw files are new, or an event only this run links to a new candidate, and never
+              # conflict; only derived files can. Take main's, rebuild them from raw, and carry on.
               git checkout -q origin/main -- data/clean data/forecasts
               $FR2027 ingest
               git add -A -- data

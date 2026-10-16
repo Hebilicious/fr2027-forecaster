@@ -9,7 +9,7 @@ use crate::{
 };
 
 pub const CLEAN_FILE: &str = "events.csv";
-const HEADER: &str = "date,event_id,kind,candidate_ids,summary,source_url,source_title,proposed_change,reported_by,reported_at,source_file";
+const HEADER: &str = "date,event_id,kind,candidate_ids,summary_fr,summary_en,source_url,source_title,reported_by,reported_at,source_file";
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Event {
@@ -18,12 +18,17 @@ pub struct Event {
     pub date: String,
     pub kind: String,
     pub candidate_ids: Vec<String>,
-    pub summary: String,
+    pub summary: EventSummary,
     pub sources: Vec<EventSource>,
-    #[serde(default)]
-    pub proposed_change: Option<String>,
     pub reported_by: String,
     pub reported_at: String,
+}
+
+/// One or two neutral sentences for readers, in French and in English.
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct EventSummary {
+    pub fr: String,
+    pub en: String,
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -42,10 +47,10 @@ pub struct EventRow {
     pub kind: String,
     /// Space-separated.
     pub candidate_ids: String,
-    pub summary: String,
+    pub summary_fr: String,
+    pub summary_en: String,
     pub source_url: String,
     pub source_title: Option<String>,
-    pub proposed_change: Option<String>,
     pub reported_by: String,
     pub reported_at: String,
     pub source_file: String,
@@ -93,10 +98,10 @@ pub fn ingest(repo: &Repo, schemas: &Schemas, config: &CandidatesConfig) -> Resu
                 event_id: event.event_id.clone(),
                 kind: event.kind.clone(),
                 candidate_ids: event.candidate_ids.join(" "),
-                summary: event.summary.clone(),
+                summary_fr: event.summary.fr.clone(),
+                summary_en: event.summary.en.clone(),
                 source_url: first.map(|s| s.url.clone()).unwrap_or_default(),
                 source_title: first.and_then(|s| s.title.clone()),
-                proposed_change: event.proposed_change.clone(),
                 reported_by: event.reported_by.clone(),
                 reported_at: event.reported_at.clone(),
                 source_file: repo.relative(&a.path),

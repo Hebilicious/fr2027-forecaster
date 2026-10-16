@@ -14,6 +14,7 @@ import type {
   XRow,
 } from "./api/schemas"
 import { scale } from "./charts"
+import type { Locale } from "./locales"
 
 export const VENUES: readonly Venue[] = ["polymarket", "kalshi"]
 
@@ -336,4 +337,31 @@ export function sparkline(
   const line = placed.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join("")
   const last = placed.at(-1) ?? null
   return { line, end: last && { x: Number(last.x.toFixed(1)), y: Number(last.y.toFixed(1)) } }
+}
+
+/** Which of an event's two summaries each locale shows: the French site reads French, every other one English. */
+const SUMMARY_LANGUAGE: Readonly<Record<Locale, "fr" | "en">> = {
+  fr: "fr",
+  "en-GB": "en",
+  de: "en",
+  it: "en",
+  "es-ES": "en",
+  "pt-PT": "en",
+  ja: "en",
+  ko: "en",
+  "zh-Hans": "en",
+  th: "en",
+}
+
+/**
+ * An event's summary for `locale`, the language it is written in, and whether that differs from the page's language
+ * (so the page can say so). A legacy string from an older API build is English, as those summaries were.
+ */
+export function eventSummary(
+  summary: CampaignEvent["summary"],
+  locale: Locale,
+): { text: string; lang: "fr" | "en"; foreign: boolean } {
+  const lang = typeof summary === "string" ? "en" : SUMMARY_LANGUAGE[locale]
+  const text = typeof summary === "string" ? summary : summary[lang]
+  return { text, lang, foreign: new Intl.Locale(locale).language !== lang }
 }

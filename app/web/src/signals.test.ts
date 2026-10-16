@@ -4,6 +4,7 @@ import {
   addDays,
   attentionRows,
   candidateNames,
+  eventSummary,
   eventsNewestFirst,
   filterSignals,
   latestHeadlines,
@@ -272,10 +273,9 @@ const event = (date: string, event_id: string): CampaignEvent => ({
   event_id,
   kind: "declaration",
   candidate_ids: ["a"],
-  summary: "Something happened in the campaign.",
+  summary: { fr: "Il s'est passé quelque chose.", en: "Something happened in the campaign." },
   source_url: "https://example.org",
   source_title: null,
-  proposed_change: null,
   reported_by: "grok",
 })
 
@@ -378,5 +378,17 @@ describe("sparkline", () => {
   it("steps calendar days across month ends", () => {
     expect(addDays("2026-10-01", -1)).toBe("2026-09-30")
     expect(addDays("2026-12-31", 1)).toBe("2027-01-01")
+  })
+})
+
+describe("eventSummary", () => {
+  const both = { fr: "En français.", en: "In English." }
+  it("shows French on the French site and English on every other", () => {
+    expect(eventSummary(both, "fr")).toEqual({ text: "En français.", lang: "fr", foreign: false })
+    expect(eventSummary(both, "en-GB")).toEqual({ text: "In English.", lang: "en", foreign: false })
+    expect(eventSummary(both, "ja")).toEqual({ text: "In English.", lang: "en", foreign: true })
+  })
+  it("shows a legacy string as English", () => {
+    expect(eventSummary("Old summary.", "fr")).toEqual({ text: "Old summary.", lang: "en", foreign: true })
   })
 })

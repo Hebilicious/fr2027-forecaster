@@ -302,8 +302,8 @@ fn field_change(operations: Value, event_ids: Value) -> Value {
 fn a_field_change_is_applied_and_logged_once() {
     let (_dir, repo) = scratch();
     let event = json!({
-        "schema_version": "1.0", "event_id": "2026-10-16-chloe-declares", "date": "2026-10-16",
-        "kind": "declaration", "candidate_ids": ["chloe"], "summary": "Chloé declared her candidacy.",
+        "schema_version": "2.0", "event_id": "2026-10-16-chloe-declares", "date": "2026-10-16",
+        "kind": "declaration", "candidate_ids": ["chloe"], "summary": {"fr": "Chloé a annoncé sa candidature.", "en": "Chloé declared her candidacy."},
         "sources": [{"url": "https://www.lemonde.fr/x"}], "reported_by": "Grok Bot fr2027",
         "reported_at": "2026-10-16T20:00:00Z"
     });
@@ -394,4 +394,51 @@ fn a_field_change_adds_a_candidate_a_poll_can_use_in_the_same_pull() {
     assert!(config.starts_with("# Header comment, kept.\n"));
     let sources = fs::read_to_string(repo.config_dir().join("sources.yaml")).unwrap();
     assert!(sources.contains("  david: { wikipedia: null, names: [\"David\"] }\n"));
+}
+
+#[test]
+fn an_event_in_the_old_format_is_rejected_with_the_new_one() {
+    let (_dir, repo) = scratch();
+    let event = json!({
+        "schema_version": "1.0", "event_id": "2026-10-16-chloe-declares", "date": "2026-10-16",
+        "kind": "declaration", "candidate_ids": ["chloe"], "summary": "Chloé declared her candidacy.",
+        "sources": [{"url": "https://www.lemonde.fr/x"}], "proposed_change": null,
+        "reported_by": "Grok Bot fr2027", "reported_at": "2026-10-16T20:00:00Z"
+    });
+    let out = run(&repo, &[item("item-event", "event", event)], &[]);
+    let note = &status(&out.now, "item-event").note;
+    assert!(note.starts_with("schema_version 1.0 is not 2.0"), "{note}");
+    assert!(!repo.raw_events_dir().join("2026-10-16-chloe-declares.json").exists());
+}
+
+#[test]
+fn adding_a_candidate_links_their_declaration() {
+    let (_dir, repo) = scratch();
+    let event = json!({
+        "schema_version": "2.0", "event_id": "2026-10-16-david-declares", "date": "2026-10-16",
+        "kind": "declaration", "candidate_ids": [],
+        "summary": {"fr": "David a annoncé sa candidature.", "en": "David declared his candidacy."},
+        "sources": [{"url": "https://www.lemonde.fr/d"}], "reported_by": "Grok Bot fr2027",
+        "reported_at": "2026-10-16T20:00:00Z"
+    });
+    let change = field_change(
+        json!([{"op": "add_candidate",
+                "candidate": {"id": "david", "name": "David", "party": "Other party", "bloc": "right",
+                              "status": "declared", "sources": [{"url": "https://www.lemonde.fr/d"}]},
+                "names": ["David"], "wikipedia": null,
+                "slot": {"slot_id": "david", "p": 0.2, "rationale": "Declared on 16 October."}}]),
+        json!(["2026-10-16-david-declares"]),
+    );
+    let out = run(
+        &repo,
+        &[
+            item("item-event", "event", event),
+            item("item-change", "field_change", change),
+        ],
+        &[],
+    );
+    assert!(out.now.is_empty(), "{:?}", out.now);
+    let path = repo.raw_events_dir().join("2026-10-16-david-declares.json");
+    let linked: Value = serde_json::from_str(&fs::read_to_string(path).unwrap()).unwrap();
+    assert_eq!(linked["candidate_ids"], json!(["david"]));
 }

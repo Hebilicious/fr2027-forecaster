@@ -375,6 +375,7 @@ impl Pull<'_> {
                 write(path, new.as_bytes()).map_err(|e| vec![format!("could not write: {e}")])?;
             }
         }
+        link_declarations(&events, &change).map_err(|e| vec![format!("could not link events: {e}")])?;
         self.out.field_changes.push(change.change_id.clone());
         self.out.after_push.push(resolution(
             &item.id,
@@ -686,6 +687,14 @@ fn handle_data(repo: &Repo, inputs: &Inputs, item: &PendingItem) -> Result<Resol
         };
         return Ok(accepted(note, &path));
     }
+    let version = item.payload.get("schema_version").and_then(Value::as_str);
+    if version != Some(EVENT_VERSION) {
+        return Err(vec![format!(
+            "schema_version {} is not {EVENT_VERSION}: an event now has summary {{\"fr\", \"en\"}} and no proposed_change; \
+             see routine 3 in docs/grok-bot.md",
+            version.unwrap_or("missing")
+        )]);
+    }
     let event: events::Event = validate_value(item.payload.clone(), &inputs.schemas, SchemaKind::Event)?;
     let errors = events::check(None, &event, &inputs.config);
     if !errors.is_empty() {
@@ -700,6 +709,33 @@ fn handle_data(repo: &Repo, inputs: &Inputs, item: &PendingItem) -> Result<Resol
         )]);
     }
     Ok(accepted("accepted".into(), &path))
+}
+
+/// The event format the inbox takes (`schemas/event.schema.json`).
+const EVENT_VERSION: &str = "2.0";
+
+/// A declaration by someone not yet in candidates.yaml arrives with no candidate id. When the
+/// field change that adds them cites it, the event gets the new id, so the Signals page names
+/// them. Only a change adding a single candidate links: with several, the event says whose it is
+/// in prose only.
+fn link_declarations(dir: &Path, change: &field_change::FieldChange) -> Result<()> {
+    let mut added = change.operations.iter().filter_map(|op| match op {
+        field_change::Operation::AddCandidate { candidate, .. } => Some(&candidate.id),
+        _ => None,
+    });
+    let (Some(id), None) = (added.next(), added.next()) else {
+        return Ok(());
+    };
+    for event_id in &change.event_ids {
+        let path = dir.join(format!("{event_id}.json"));
+        let mut event: Value = serde_json::from_slice(&read(&path)?)?;
+        let unlinked = event["kind"] == "declaration" && event["candidate_ids"].as_array().is_some_and(Vec::is_empty);
+        if unlinked {
+            event["candidate_ids"] = Value::from(vec![id.clone()]);
+            write(&path, &pretty_json(&event)?)?;
+        }
+    }
+    Ok(())
 }
 
 /// Whether `path` already holds exactly `bytes`: an item a previous run wrote but could not

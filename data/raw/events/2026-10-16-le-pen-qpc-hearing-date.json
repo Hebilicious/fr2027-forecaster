@@ -5,15 +5,17 @@
   "date": "2026-10-16",
   "event_id": "2026-10-16-le-pen-qpc-hearing-date",
   "kind": "legal",
-  "proposed_change": null,
   "reported_at": "2026-10-16T15:09:06Z",
   "reported_by": "Grok Bot fr2027",
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "sources": [
     {
       "title": "Procès du RN : les questions prioritaires de constitutionnalité de Marine Le Pen seront examinées le 16 décembre (Sud Ouest avec AFP)",
       "url": "https://www.sudouest.fr/politique/proces-du-rn-les-questions-prioritaires-de-constitutionnalite-de-marine-le-pen-seront-examinees-le-16-decembre-31099093.php"
     }
   ],
-  "summary": "The Cour de cassation said it will examine on 16 December 2026 the priority questions of constitutionality (QPC) filed with the appeals of Marine Le Pen and co-defendants against their conviction in the FN European assistants case. If referred, the Conseil constitutionnel has three months to rule, delaying the appeal."
+  "summary": {
+    "en": "The Cour de cassation will examine on 16 December 2026 the priority questions of constitutionality filed with the appeals of Marine Le Pen and co-defendants against their conviction in the FN European assistants case. If referred, the Conseil constitutionnel has three months to rule.",
+    "fr": "La Cour de cassation examinera le 16 décembre 2026 les questions prioritaires de constitutionnalité déposées avec les pourvois de Marine Le Pen et de ses coprévenus contre leur condamnation dans l'affaire des assistants parlementaires européens du FN. En cas de renvoi, le Conseil constitutionnel aura trois mois pour statuer."
+  }
 }
