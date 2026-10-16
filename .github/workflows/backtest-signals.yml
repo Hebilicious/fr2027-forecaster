@@ -1,0 +1,78 @@
+name: Backtest signals
+
+# Fetches a past election's page views or news volume (`fr2027 backtest-signals`) on a GitHub
+# runner and uploads the files as an artifact, to be committed by hand into data/backtest/<year>/.
+# GDELT allows one request every 5 seconds per address, and a home connection behind a carrier's
+# shared address can stay refused for hours; a runner has its own address.
+#
+# Run it from the Actions tab, or push a branch named backtest-signals/<anything> to fetch every
+# election's news volume.
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Election year, as in config/backtest.yaml"
+        required: true
+        type: string
+      source:
+        description: "attention, news, or both"
+        required: true
+        default: news
+        type: choice
+        options: [news, attention, both]
+  push:
+    branches: ["backtest-signals/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    name: fetch ${{ matrix.year }}
+    runs-on: ubuntu-24.04
+    # GDELT is read 92 days at a time, 8 seconds apart, with minutes of back-off when refused.
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        year: ${{ fromJSON(github.event_name == 'workflow_dispatch' && format('["{0}"]', inputs.year) || '["2017", "2022"]') }}
+    steps:
+      # Actions are pinned to full commit SHAs; the tag is in the comment.
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
+        with:
+          auto-install: true
+      # The runner image's rustup may hold the pinned channel without cargo; reinstall it then.
+      - name: Check the Rust toolchain
+        run: |
+          channel=$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)
+          complete() { rustup run "$channel" rustc --version && rustup run "$channel" cargo --version; }
+          if ! complete; then
+            rustup toolchain uninstall "$channel" || true
+            rustup toolchain install "$channel" --profile minimal --no-self-update
+            complete
+          fi
+      - name: Build
+        run: moon run cli:build
+      - name: Fetch
+        env:
+          YEAR: ${{ matrix.year }}
+          SOURCE: ${{ inputs.source || 'news' }}
+        run: |
+          [[ "$YEAR" =~ ^[0-9]{4}$ ]] || { echo "::error::year must be YYYY"; exit 1; }
+          case "$SOURCE" in
+            news | attention) only=(--only "$SOURCE") ;;
+            both) only=() ;;
+            *) echo "::error::unknown source $SOURCE"; exit 1 ;;
+          esac
+          target/release/fr2027 backtest-signals "$YEAR" "${only[@]}"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: backtest-signals-${{ matrix.year }}
+          path: |
+            data/backtest/${{ matrix.year }}/gdelt.csv
+            data/backtest/${{ matrix.year }}/attention.csv
+          if-no-files-found: error
