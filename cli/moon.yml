@@ -5,13 +5,14 @@ project:
   title: "fr2027 command"
   description: "Validate, ingest, forecast and serve: the binary every schedule and the local app run."
 
-dependsOn: ["model", "collectors", "fetch"]
+dependsOn: ["model", "collectors", "fetch", "backtest"]
 
 fileGroups:
   rust:
     - "/model/src/**/*"
     - "/collectors/src/**/*"
     - "/fetch/src/**/*"
+    - "/backtest/src/**/*"
     - "src/**/*"
     - "Cargo.toml"
     - "/Cargo.lock"
@@ -77,6 +78,15 @@ tasks:
     command: "$workspaceRoot/target/release/fr2027"
     args: ["forecast"]
     deps: ["ingest"]
+    options:
+      cache: false
+      runInCI: false
+
+  backtest:
+    description: "Replay the model on 2017 and 2022, fit the election-day error settings, and write research/backtest/ (a few minutes)."
+    command: "$workspaceRoot/target/release/fr2027"
+    args: ["backtest"]
+    deps: ["build"]
     options:
       cache: false
       runInCI: false

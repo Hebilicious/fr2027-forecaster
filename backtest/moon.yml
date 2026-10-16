@@ -1,0 +1,61 @@
+language: "rust"
+layer: "library"
+
+project:
+  title: "Backtest"
+  description: "Replays the model on 2017 and 2022, scores it against the results and a latest-poll baseline, and fits the election-day error settings."
+
+dependsOn: ["model", "collectors"]
+
+tasks:
+  test:
+    description: "Run the backtest's tests, including the checks on the real 2017 and 2022 data."
+    command: "cargo"
+    args: ["test", "--locked", "-p", "fr2027-backtest"]
+    inputs:
+      [
+        "Cargo.toml",
+        "src/**/*",
+        "tests/**/*",
+        "/model/src/**/*",
+        "/collectors/src/**/*",
+        "/schemas/**/*",
+        "/config/**/*",
+        "/data/backtest/**/*",
+        "/research/sources/**/*",
+        "/Cargo.lock",
+        "/rust-toolchain.toml",
+      ]
+    toolchains: ["rust"]
+
+  clippy:
+    description: "Lint the backtest with clippy, warnings as errors."
+    command: "cargo"
+    args: ["clippy", "--locked", "-p", "fr2027-backtest", "--all-targets", "--", "-D", "warnings"]
+    inputs:
+      [
+        "Cargo.toml",
+        "src/**/*",
+        "tests/**/*",
+        "/model/src/**/*",
+        "/collectors/src/**/*",
+        "/Cargo.lock",
+        "/rust-toolchain.toml",
+      ]
+    toolchains: ["rust"]
+
+  format:
+    description: "Format the backtest's Rust sources."
+    command: "cargo"
+    args: ["fmt", "-p", "fr2027-backtest"]
+    options:
+      cache: false
+      runInCI: false
+    toolchains: ["rust"]
+
+  format-check:
+    description: "Fail when the backtest's Rust sources are not formatted."
+    command: "cargo"
+    args: ["fmt", "-p", "fr2027-backtest", "--check"]
+    inputs: ["src/**/*", "tests/**/*", "/rustfmt.toml"]
+    toolchains: ["rust"]

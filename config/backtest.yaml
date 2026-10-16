@@ -1,0 +1,55 @@
+# Backtest settings (`fr2027 backtest`, milestone 3). The model parameters come from config/model.yaml;
+# this file says which past elections are replayed, when, and which error settings are tried.
+# Every change goes through a pull request with the reason in research/LOG.md.
+
+seed: 20170423
+# Simulations per replay and per error setting. The error settings share their random numbers, so
+# differences between them are not Monte Carlo noise.
+simulations: 20000
+# Replay dates, in days before round 1: about 6 months, 3 months, 1 month and 1 week.
+horizons_days: [182, 91, 30, 7]
+# A replay sees the polls published by its date whose fieldwork started at most this many days
+# before round 1. One year matches the live forecast, whose first 2027 polls are from April 2026.
+poll_window_days: 365
+# Round 1 shares are scored for contenders: runners whose share in the replay's fitted mean
+# state (before the election-day error) is at least this fraction.
+contender_share: 0.10
+# Probabilities are clipped to [floor, 1 - floor] before taking logs.
+probability_floor: 0.001
+
+elections:
+  - { year: 2017, dir: data/backtest/2017, round1: 2017-04-23, round2: 2017-05-07 }
+  - { year: 2022, dir: data/backtest/2022, round1: 2022-04-10, round2: 2022-04-24 }
+# Official results, checked against the Conseil constitutionnel decisions.
+results_file: research/sources/results-2017-2022.csv
+
+# Final-week poll averages of earlier elections: extra evidence for the election-day error. 2017 and
+# 2022 are left out here because the replays already score them.
+final_polls:
+  round1_file: research/sources/round1-final-poll-errors-2002-2022.csv
+  round2_file: research/sources/round2-final-poll-errors-2002-2022.csv
+  years: [2002, 2007, 2012]
+  # Blocs of the 2002–2012 candidates in that file, on the scale of config/candidates.yaml.
+  blocs:
+    "Jacques Chirac": right
+    "Jean-Marie Le Pen": far_right
+    "Lionel Jospin": left
+    "François Bayrou": centre
+    "Arlette Laguiller": far_left
+    "Jean-Pierre Chevènement": left
+    "Noël Mamère": left
+    "Olivier Besancenot": far_left
+    "Jean Saint-Josse": other
+    "Alain Madelin": right
+    "Robert Hue": left
+    "Nicolas Sarkozy": right
+    "Ségolène Royal": left
+    "François Hollande": left
+    "Marine Le Pen": far_right
+    "Jean-Luc Mélenchon": left
+
+# Error settings tried by the fit (grid search on the log score of the realised result).
+grid:
+  bloc_sd: [0.04, 0.06, 0.08, 0.10, 0.12, 0.15, 0.18, 0.22, 0.27, 0.33, 0.40]
+  candidate_sd: [0.03, 0.05, 0.07, 0.10, 0.13, 0.16, 0.20, 0.25, 0.30, 0.40]
+  round2_error_sd: [0.02, 0.03, 0.05, 0.08, 0.10, 0.12, 0.15, 0.18, 0.22, 0.27, 0.33, 0.40]

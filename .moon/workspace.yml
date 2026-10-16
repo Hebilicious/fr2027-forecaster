@@ -4,6 +4,7 @@ projects:
   model: "model"
   collectors: "collectors"
   fetch: "fetch"
+  backtest: "backtest"
   cli: "cli"
   web: "app/web"
   worker: "app/worker"

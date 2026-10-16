@@ -23,7 +23,7 @@ use jiff::civil::Date;
 use serde::{Deserialize, Serialize};
 
 pub use field::{Candidate, Field, Slot, SlotOption};
-pub use simulate::{Forecast, run_forecast};
+pub use simulate::{Draw, Fit, Forecast, Simulation, fit, run_forecast, simulate};
 
 #[derive(Debug, thiserror::Error)]
 pub enum ModelError {

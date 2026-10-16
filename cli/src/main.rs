@@ -3,6 +3,7 @@
 //! `--repo`.
 
 mod api;
+mod backtest;
 mod collect;
 mod data;
 mod export;
@@ -44,6 +45,9 @@ enum Command {
     /// Bring in what Grok Bot posted to the inbox Worker.
     #[command(subcommand)]
     Inbox(inbox::Command),
+    /// Replay the model on 2017 and 2022, score it, fit the election-day errors, and write
+    /// research/backtest/.
+    Backtest(backtest::Args),
     /// Write the public site: the built UI plus api/*.json.
     Export(export::Args),
     /// Serve the UI and its JSON documents locally.
@@ -72,6 +76,7 @@ fn run(cli: Cli) -> Result<ExitCode> {
         Command::Forecast(args) => forecast::run(&repo, &args).map(|()| ExitCode::SUCCESS),
         Command::Collect(source) => collect::run(&repo, &source).map(|()| ExitCode::SUCCESS),
         Command::Inbox(command) => inbox::run(&repo, &command).map(|()| ExitCode::SUCCESS),
+        Command::Backtest(args) => backtest::run(&repo, &args).map(|()| ExitCode::SUCCESS),
         Command::Export(args) => export::run(&repo, &args),
         Command::Serve(args) => serve::run(repo, args).map(|()| ExitCode::SUCCESS),
     }

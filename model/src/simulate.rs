@@ -56,6 +56,41 @@ pub struct Forecast {
 
 const MAX_FIELD_DRAWS: usize = 10_000;
 
+/// Both rounds' poll aggregations, fitted to the polls published by `as_of`.
+#[derive(Clone, Debug)]
+pub struct Fit {
+    pub as_of: jiff::civil::Date,
+    pub round1: Round1Fit,
+    pub round2: Round2Fit,
+}
+
+/// The probabilities a simulation gives, without the fits it started from.
+#[derive(Clone, Debug)]
+pub struct Simulation {
+    pub simulations: u32,
+    pub seed: u64,
+    pub candidates: Vec<CandidateForecast>,
+    pub pairs: Vec<PairForecast>,
+    pub warnings: Vec<String>,
+}
+
+/// One simulated election, as [`simulate`] hands it to an observer (the backtest scores these).
+#[derive(Debug)]
+pub struct Draw<'a> {
+    /// Who ran in this simulation.
+    pub present: &'a [bool],
+    /// Round 1 shares, fractions summing to 1 over `present`.
+    pub shares: &'a [f64],
+    /// The two qualifiers, lower candidate index first.
+    pub finalists: (usize, usize),
+    /// Location of the logit of the first finalist's round 2 share, before the election-day draw.
+    pub round2_mean: f64,
+    /// Standard deviation of that logit, including the election-day error.
+    pub round2_sd: f64,
+    /// Whether the first finalist won.
+    pub first_wins: bool,
+}
+
 /// Fits both rounds to the polls published by `as_of` and simulates the election.
 pub fn run_forecast(
     field: &Field,
@@ -63,14 +98,22 @@ pub fn run_forecast(
     params: &ModelParams,
     as_of: jiff::civil::Date,
 ) -> Result<Forecast, ModelError> {
-    if params.simulations == 0 {
-        return Err(ModelError::InvalidParameters("simulations must be positive".into()));
-    }
-    if params.round1_error.student_t_df <= 2.0 {
-        return Err(ModelError::InvalidParameters(
-            "round1_error.student_t_df must exceed 2".into(),
-        ));
-    }
+    let fit = fit(field, polls, params, as_of)?;
+    let simulation = simulate(field, &fit, params, &mut |_| {})?;
+    Ok(Forecast {
+        as_of,
+        simulations: simulation.simulations,
+        seed: simulation.seed,
+        candidates: simulation.candidates,
+        pairs: simulation.pairs,
+        round1: fit.round1,
+        round2: fit.round2,
+        warnings: simulation.warnings,
+    })
+}
+
+/// Fits the round 1 and round 2 aggregations to the polls published by `as_of`.
+pub fn fit(field: &Field, polls: &[Poll], params: &ModelParams, as_of: jiff::civil::Date) -> Result<Fit, ModelError> {
     if day_number(params.round2_date) <= day_number(params.round1_date) {
         return Err(ModelError::InvalidParameters("round 2 must follow round 1".into()));
     }
@@ -83,6 +126,28 @@ pub fn run_forecast(
         as_of,
         params.round2_date,
     )?;
+    Ok(Fit { as_of, round1, round2 })
+}
+
+/// Simulates the election from a fit. Besides the dates, only the simulation settings of
+/// `params` are read (seed, simulations, `round1_error`, and the `round2` error, transfer and
+/// loyalty settings), so one fit can be simulated under several error settings; with the same
+/// seed those simulations share their random numbers. `observe` sees every simulated election.
+pub fn simulate(
+    field: &Field,
+    fit: &Fit,
+    params: &ModelParams,
+    observe: &mut dyn FnMut(&Draw),
+) -> Result<Simulation, ModelError> {
+    if params.simulations == 0 {
+        return Err(ModelError::InvalidParameters("simulations must be positive".into()));
+    }
+    if params.round1_error.student_t_df <= 2.0 {
+        return Err(ModelError::InvalidParameters(
+            "round1_error.student_t_df must exceed 2".into(),
+        ));
+    }
+    let (round1, round2) = (&fit.round1, &fit.round2);
     let transfers = Transfers::new(&field.blocs, &params.round2)?;
 
     let layout = &round1.layout;
@@ -179,6 +244,14 @@ pub fn run_forecast(
         };
         let sd = (var + params.round2.error_sd.powi(2)).sqrt();
         let a_wins = mean + sd * rng_round2.student_t_unit(error.student_t_df) > 0.0;
+        observe(&Draw {
+            present: &present,
+            shares: &shares,
+            finalists: (a, b),
+            round2_mean: mean,
+            round2_sd: sd,
+            first_wins: a_wins,
+        });
         let winner = if a_wins { a } else { b };
         wins[winner] += 1;
         matchups[a * n + b] += 1;
@@ -220,14 +293,11 @@ pub fn run_forecast(
         .collect();
     pairs.sort_by(|x, y| y.p_matchup.total_cmp(&x.p_matchup).then((x.a, x.b).cmp(&(y.a, y.b))));
 
-    Ok(Forecast {
-        as_of,
+    Ok(Simulation {
         simulations: params.simulations,
         seed: params.seed,
         candidates,
         pairs,
-        round1,
-        round2,
         warnings,
     })
 }

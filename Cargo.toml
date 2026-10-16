@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["model", "collectors", "fetch", "cli"]
+members = ["model", "collectors", "fetch", "backtest", "cli"]
 
 [workspace.package]
 edition = "2024"
@@ -12,3 +12,4 @@ rust-version = "1.99"
 fr2027-model = { path = "model" }
 fr2027-collectors = { path = "collectors" }
 fr2027-fetch = { path = "fetch" }
+fr2027-backtest = { path = "backtest" }

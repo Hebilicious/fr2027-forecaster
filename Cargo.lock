@@ -713,12 +713,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "fr2027-backtest"
+version = "0.1.0"
+dependencies = [
+ "csv",
+ "fr2027-collectors",
+ "fr2027-model",
+ "jiff",
+ "serde",
+ "serde-saphyr",
+ "serde_json",
+ "tempfile",
+ "thiserror",
+]
+
+[[package]]
 name = "fr2027-cli"
 version = "0.1.0"
 dependencies = [
  "anyhow",
  "axum",
  "clap",
+ "fr2027-backtest",
  "fr2027-collectors",
  "fr2027-fetch",
  "fr2027-model",

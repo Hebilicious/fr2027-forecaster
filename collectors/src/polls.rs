@@ -245,13 +245,17 @@ pub fn write_clean(repo: &Repo, ingest: &PollIngest) -> Result<()> {
 
 /// Reads `data/clean/polls.csv`.
 pub fn read_clean_rows(repo: &Repo) -> Result<Vec<PollRow>> {
-    let path = repo.clean_dir().join(CLEAN_FILE);
-    let bytes = read(&path)?;
+    read_rows(&repo.clean_dir().join(CLEAN_FILE))
+}
+
+/// Reads poll rows in the clean file's columns from any path (the backtest's past polls).
+pub fn read_rows(path: &Path) -> Result<Vec<PollRow>> {
+    let bytes = read(path)?;
     let mut reader = csv::Reader::from_reader(bytes.as_slice());
     reader
         .deserialize()
         .collect::<Result<Vec<PollRow>, _>>()
-        .map_err(|e| Error::invalid(&path, e.to_string()))
+        .map_err(|e| Error::invalid(path, e.to_string()))
 }
 
 /// Groups clean rows into the model's polls, in file order.

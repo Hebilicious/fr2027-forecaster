@@ -1,6 +1,8 @@
 //! `config/candidates.yaml` (the canonical candidate list and field model) and
 //! `config/model.yaml` (model parameters).
 
+use std::path::Path;
+
 use fr2027_model::{Candidate, Field, ModelParams, Slot, SlotOption};
 use jiff::civil::Date;
 use serde::{Deserialize, Serialize};
@@ -51,15 +53,19 @@ pub struct SlotEntry {
 
 impl CandidatesConfig {
     pub fn load(repo: &Repo, schemas: &Schemas) -> Result<Self> {
-        let path = repo.config_dir().join("candidates.yaml");
-        let text = String::from_utf8(read(&path)?).map_err(|_| Error::invalid(&path, "not UTF-8"))?;
-        let value = yaml_to_json(&text).map_err(|e| Error::invalid(&path, e))?;
+        Self::load_from(&repo.config_dir().join("candidates.yaml"), schemas)
+    }
+
+    /// Reads and checks a field file at any path (the backtest keeps one per past election).
+    pub fn load_from(path: &Path, schemas: &Schemas) -> Result<Self> {
+        let text = String::from_utf8(read(path)?).map_err(|_| Error::invalid(path, "not UTF-8"))?;
+        let value = yaml_to_json(&text).map_err(|e| Error::invalid(path, e))?;
         let violations = schemas.violations(SchemaKind::Candidates, &value);
         if !violations.is_empty() {
-            return Err(Error::invalid(&path, violations.join("; ")));
+            return Err(Error::invalid(path, violations.join("; ")));
         }
-        let config: Self = serde_json::from_value(value).map_err(|e| Error::invalid(&path, e.to_string()))?;
-        config.field().map_err(|e| Error::invalid(&path, e.to_string()))?;
+        let config: Self = serde_json::from_value(value).map_err(|e| Error::invalid(path, e.to_string()))?;
+        config.field().map_err(|e| Error::invalid(path, e.to_string()))?;
         Ok(config)
     }
 
