@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from "vue"
+import { computed, ref, toRef } from "vue"
 import { useIntlayer } from "vue-intlayer"
 import type { Forecast, Poll, SeriesPoint } from "../api/schemas"
 import { round1Panels } from "../charts"
+import FieldFilter from "../components/FieldFilter.vue"
 import SharePanel from "../components/SharePanel.vue"
+import { useFieldFilter } from "../useFieldFilter"
 
 const props = defineProps<{
   forecast: Forecast
@@ -12,25 +14,34 @@ const props = defineProps<{
 }>()
 const content = useIntlayer("round1-view")
 
-const panels = computed(() => round1Panels(props.forecast, props.series, props.polls))
-const firms = computed(() => [...new Set(panels.value.flatMap((p) => p.polls.map((d) => d.firm)))].toSorted())
+const { query, showAll, field } = useFieldFilter(toRef(() => props.forecast.candidates))
+const allPanels = computed(() => round1Panels(props.forecast, props.series, props.polls))
+const panels = computed(() => allPanels.value.filter((p) => !field.value.hidden.has(p.candidate.candidate_id)))
+const firms = computed(() => [...new Set(allPanels.value.flatMap((p) => p.polls.map((d) => d.firm)))].toSorted())
 const highlight = ref<string | null>(null)
 
 const xDomain = computed<readonly [number, number]>(() => {
-  const dates = panels.value.flatMap((p) => [...p.points.map((q) => q.date), ...p.polls.map((d) => d.date)])
+  const dates = allPanels.value.flatMap((p) => [...p.points.map((q) => q.date), ...p.polls.map((d) => d.date)])
   const times = dates.map((d) => Date.parse(`${d}T00:00:00Z`))
   const end = Date.parse(`${props.forecast.as_of}T00:00:00Z`)
   return [Math.min(end, ...times), end]
 })
 const yMax = computed(() =>
-  Math.max(0.1, ...panels.value.flatMap((p) => [...p.points.map((q) => q.hi80), ...p.polls.map((d) => d.share)])),
+  Math.max(0.1, ...allPanels.value.flatMap((p) => [...p.points.map((q) => q.hi80), ...p.polls.map((d) => d.share)])),
 )
 </script>
 
 <template>
   <section class="round1">
-    <div v-if="firms.length" class="card toolbar rise">
-      <div class="chips" role="group" :aria-label="content.highlightFirm.value">
+    <div class="card toolbar rise">
+      <FieldFilter
+        v-model:query="query"
+        v-model:show-all="showAll"
+        :field="field"
+        :shown="panels.length"
+        :total="allPanels.length"
+      />
+      <div v-if="firms.length" class="chips" role="group" :aria-label="content.highlightFirm.value">
         <span class="eyebrow">{{ content.highlightFirm }}</span>
         <button class="chip" type="button" :aria-pressed="highlight === null" @click="highlight = null">
           {{ content.allFirms }}

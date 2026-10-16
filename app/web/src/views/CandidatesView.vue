@@ -1,20 +1,29 @@
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
 import { articleFor, byFamily } from "../candidates"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
+import FieldFilter from "../components/FieldFilter.vue"
+import { standing } from "../field"
 import { list, probability, safeUrl, shareWithInterval } from "../format"
 import { labelOf } from "../labels"
 import { PARTY_SITES, PROGRAMMES } from "../links"
 import { CREDITS } from "../portraits"
+import { useFieldFilter } from "../useFieldFilter"
 
 const props = defineProps<{ forecast: Forecast }>()
 const content = useIntlayer("candidates-view")
 const common = useIntlayer("common")
+const filterContent = useIntlayer("field-filter")
 const { locale } = useLocale()
 
-const groups = computed(() => byFamily(props.forecast.candidates))
+const { query, showAll, field } = useFieldFilter(toRef(() => props.forecast.candidates))
+const groups = computed(() => byFamily(field.value.visible))
+// Shown once the toggle brings them back, so a stand-in is never read as a runner.
+const standings = computed(
+  () => new Map(props.forecast.candidates.map((c) => [c.candidate_id, standing(c, props.forecast.candidates)])),
+)
 // The reader's own Wikipedia when it has the article, else the French one, labelled as such.
 const articles = computed(
   () => new Map(props.forecast.candidates.map((c) => [c.candidate_id, articleFor(c.candidate_id, locale.value)])),
@@ -38,6 +47,13 @@ const uncredited = computed(() =>
 
 <template>
   <div class="candidates">
+    <FieldFilter
+      v-model:query="query"
+      v-model:show-all="showAll"
+      class="card filter rise"
+      :field="field"
+      :total="forecast.candidates.length"
+    />
     <section
       v-for="(group, i) in groups"
       :key="group.family"
@@ -56,7 +72,15 @@ const uncredited = computed(() =>
             <div class="identity">
               <h3>{{ c.name }}</h3>
               <p class="party">{{ c.party }}</p>
-              <p><span class="badge">{{ labelOf(content.statuses, c.status) }}</span></p>
+              <p class="badges">
+                <span class="badge">{{ labelOf(content.statuses, c.status) }}</span>
+                <span v-if="standings.get(c.candidate_id) === 'standIn'" class="badge set-aside">
+                  {{ filterContent.standings.standIn }}
+                </span>
+                <span v-else-if="standings.get(c.candidate_id) === 'out'" class="badge set-aside">
+                  {{ filterContent.standings.out }}
+                </span>
+              </p>
             </div>
           </div>
           <dl class="stats">
@@ -186,8 +210,19 @@ const uncredited = computed(() =>
   transition: transform 0.3s var(--ease-out);
 }
 
-.identity .badge {
+.filter {
+  padding: 18px 22px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-top: 4px;
+}
+
+.badge.set-aside {
+  color: var(--warning);
 }
 
 .person:hover {

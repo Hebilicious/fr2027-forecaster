@@ -1,19 +1,26 @@
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
+import FieldFilter from "../components/FieldFilter.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
 import { count, list, points, probability, shareWithInterval } from "../format"
+import { useFieldFilter } from "../useFieldFilter"
 
 const props = defineProps<{ forecast: Forecast }>()
 const content = useIntlayer("overview-view")
 const common = useIntlayer("common")
 const { locale } = useLocale()
+const { query, showAll, field } = useFieldFilter(toRef(() => props.forecast.candidates))
 
 const maxShare = computed(() => Math.max(0.05, ...props.forecast.candidates.map((c) => c.r1_share?.hi80 ?? 0)))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
-const movers = computed(() => props.forecast.changes.p_win_delta.filter((d) => Math.abs(d.delta) >= 0.005).slice(0, 6))
+const movers = computed(() =>
+  props.forecast.changes.p_win_delta
+    .filter((d) => Math.abs(d.delta) >= 0.005 && !field.value.setAside.has(d.candidate_id))
+    .slice(0, 6),
+)
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const at = (share: number) => (share / maxShare.value) * 100
 </script>
@@ -26,7 +33,8 @@ const at = (share: number) => (share / maxShare.value) * 100
         <h2 id="outcomes-title">{{ content.outcomesTitle }}</h2>
         <p class="secondary">{{ content.outcomesHelp({ sims: count(forecast.simulations, locale) }) }}</p>
       </header>
-      <OutcomeDots :forecast="forecast" />
+      <!-- The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside. -->
+      <OutcomeDots :forecast="forecast" :pool="field.setAside" />
       <p class="notice note" role="note">
         <span aria-hidden="true" class="icon" translate="no">i</span>
         <span>{{ content.uncertainty }}</span>
@@ -38,7 +46,14 @@ const at = (share: number) => (share / maxShare.value) * 100
         <p class="eyebrow">{{ content.fieldEyebrow }}</p>
         <h2 id="field-title">{{ content.fieldTitle }}</h2>
       </header>
-      <div class="table-wrap">
+      <FieldFilter
+        v-model:query="query"
+        v-model:show-all="showAll"
+        class="filter"
+        :field="field"
+        :total="forecast.candidates.length"
+      />
+      <div v-if="field.visible.length" class="table-wrap">
         <table class="field">
           <thead>
             <tr>
@@ -50,7 +65,7 @@ const at = (share: number) => (share / maxShare.value) * 100
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(c, i) in forecast.candidates" :key="c.candidate_id" :style="{ '--i': i }">
+            <tr v-for="(c, i) in field.visible" :key="c.candidate_id" :style="{ '--i': i }">
               <th scope="row">
                 <span class="who">
                   <CandidateAvatar :id="c.candidate_id" :name="c.name" :size="36" />
@@ -166,6 +181,10 @@ const at = (share: number) => (share / maxShare.value) * 100
 /* The first card rises over the bottom of the painting. */
 .outcomes-card {
   margin-top: -132px;
+}
+
+.filter {
+  margin-bottom: 18px;
 }
 
 .field th[scope="row"] {

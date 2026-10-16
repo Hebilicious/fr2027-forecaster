@@ -96,6 +96,10 @@ describe("round2Matrix", () => {
       { row: "b", column: "a", pMatchup: 0.6, rowWins: 0.45, polled: true },
     ])
   })
+
+  it("leaves out the candidates it is told to", () => {
+    expect(round2Matrix(forecast, 2, new Set(["a"])).candidates.map((c) => c.candidate_id)).not.toContain("a")
+  })
 })
 
 describe("helpers", () => {
@@ -144,6 +148,15 @@ describe("outcomeGroups", () => {
     ])
     expect(groups[2]?.probability).toBeCloseTo(0.016)
     expect(outcomeGroups([withWin("a", 0.997), withWin("b", 0.003)]).map((g) => g.candidateId)).toEqual(["a"])
+  })
+
+  it("pools the candidates it is given, whatever their chance", () => {
+    const groups = outcomeGroups([withWin("a", 0.8), withWin("b", 0.15), withWin("c", 0.05)], new Set(["b"]))
+    expect(groups.map((g) => [g.candidateId, g.dots, g.members])).toEqual([
+      ["a", 80, 1],
+      ["c", 5, 1],
+      [null, 15, 1],
+    ])
   })
 
   it("keeps a full hundred dots for certainty", () => {

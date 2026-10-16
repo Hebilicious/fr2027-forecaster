@@ -45,6 +45,7 @@
           "party",
           "bloc",
           "status",
+          "slot",
           "p_run",
           "simulated",
           "p_qualify_r1",
@@ -57,6 +58,10 @@
           "party": { "type": "string" },
           "bloc": { "type": "string" },
           "status": { "type": "string" },
+          "slot": {
+            "type": "string",
+            "description": "The id of the config/candidates.yaml slot the candidate runs from; candidates sharing a slot can only run instead of one another."
+          },
           "p_run": { "$ref": "#/$defs/probability" },
           "simulated": {
             "type": "boolean",

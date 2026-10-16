@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest"
-import type { CampaignEvent, Forecast, Headline, Markets, NewsDay, PageViews, XRow } from "./api/schemas"
+import type { CampaignEvent, Forecast, Headline, Markets, NewsDay, PageViews, Signals, XRow } from "./api/schemas"
 import {
   addDays,
   attentionRows,
   candidateNames,
   eventsNewestFirst,
+  filterSignals,
   latestHeadlines,
   latestXWindow,
   marketRows,
@@ -286,6 +287,39 @@ describe("eventsNewestFirst", () => {
       event("2026-10-05", "2026-10-05-b"),
     ])
     expect(sorted.map((e) => e.event_id)).toEqual(["2026-10-05-b", "2026-10-05-a", "2026-10-01-a"])
+  })
+})
+
+describe("filterSignals", () => {
+  it("drops hidden candidates, keeping what also names someone shown or nobody", () => {
+    const signals: Signals = {
+      generated_at: "2026-10-16T16:00:00Z",
+      markets,
+      attention: {
+        fetched_at: null,
+        rows: views("a", "2026-10-09", () => 10, 2).concat(views("b", "2026-10-09", () => 5, 2)),
+      },
+      news: {
+        fetched_at: null,
+        feeds: [],
+        daily: [day("2026-10-09", "a", 3), day("2026-10-09", "b", 2)],
+        headlines: [
+          headline("2026-10-09T08:00:00Z", ["a"]),
+          headline("2026-10-09T09:00:00Z", ["a", "b"]),
+          headline("2026-10-09T10:00:00Z", []),
+        ],
+      },
+      x: { rows: [xRow("2026-10-09T12:00:00Z", "a", 100), xRow("2026-10-09T12:00:00Z", "b", 50)] },
+      events: [event("2026-10-01", "2026-10-01-a"), { ...event("2026-10-02", "2026-10-02-b"), candidate_ids: ["b"] }],
+    }
+    const shown = filterSignals(signals, new Set(["a"]))
+    expect(shown.markets.latest.some((q) => q.candidate_id === "a")).toBe(false)
+    expect(shown.markets.history.some((q) => q.candidate_id === "a")).toBe(false)
+    expect(new Set(shown.attention.rows.map((r) => r.candidate_id))).toEqual(new Set(["b"]))
+    expect(shown.news.daily.map((d) => d.candidate_id)).toEqual(["b"])
+    expect(shown.news.headlines.map((h) => h.candidate_ids)).toEqual([["a", "b"], []])
+    expect(shown.x.rows.map((r) => r.candidate_id)).toEqual(["b"])
+    expect(shown.events.map((e) => e.event_id)).toEqual(["2026-10-02-b"])
   })
 })
 
