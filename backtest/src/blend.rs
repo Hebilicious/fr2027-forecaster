@@ -179,6 +179,7 @@ pub fn fit(elections: &[Election], replays: &[ReplayScore], weights: &[f64], flo
                 model_weight: w,
                 probability_floor: floor,
                 max_age_hours: f64::from(MAX_AGE_DAYS * 24),
+                ballot_hand_weight: 1.0,
             };
             let mut qualify_log_loss = BTreeMap::new();
             let mut win_log_loss = BTreeMap::new();

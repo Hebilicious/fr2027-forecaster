@@ -2,13 +2,16 @@
 import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Blend, Forecast, HistoryRun, TrackRecord } from "../api/schemas"
+import { blendAt } from "../blend"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import ModelExplorer from "../components/explorer/ModelExplorer.vue"
 import MethodSection from "../components/MethodSection.vue"
 import FieldFilter from "../components/FieldFilter.vue"
+import MarketWeight from "../components/MarketWeight.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
-import { count, dateOrTime, daysUntil, list, percent, points, probability, shareWithInterval } from "../format"
+import { count, daysUntil, list, percent, points, probability, shareWithInterval } from "../format"
 import { useFieldFilter } from "../useFieldFilter"
+import { useMarketWeight } from "../useMarketWeight"
 
 const props = defineProps<{
   forecast: Forecast
@@ -19,7 +22,31 @@ const props = defineProps<{
 const content = useIntlayer("overview-view")
 const common = useIntlayer("common")
 const { locale } = useLocale()
-const { query, showAll, field } = useFieldFilter(toRef(() => props.forecast.candidates))
+
+// The markets' weight: the reader's slider, or the site's published one.
+const chosenWeight = useMarketWeight()
+const publishedWeight = computed(() => (props.blend ? 1 - props.blend.model_weight : 0))
+const marketWeight = computed({
+  get: () => chosenWeight.value ?? publishedWeight.value,
+  set: (w: number) => {
+    chosenWeight.value = w
+  },
+})
+const blended = computed(() => (props.blend ? blendAt(props.blend, 1 - marketWeight.value) : null))
+// The forecast as shown: chances of winning and of reaching round 2 blended at the slider's
+// weight, candidates in that order.
+const shown = computed<Forecast>(() => {
+  const b = blended.value
+  if (!b) return props.forecast
+  const candidates = props.forecast.candidates
+    .map((c) => {
+      const x = b.get(c.candidate_id)
+      return x ? { ...c, p_win: x.win, p_qualify_r1: x.qualify } : c
+    })
+    .sort((a, c) => c.p_win - a.p_win || c.p_qualify_r1 - a.p_qualify_r1)
+  return { ...props.forecast, candidates }
+})
+const { query, showAll, field } = useFieldFilter(toRef(() => shown.value.candidates))
 
 const maxShare = computed(() => Math.max(0.05, ...props.forecast.candidates.map((c) => c.r1_share?.hi80 ?? 0)))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
@@ -39,9 +66,10 @@ const at = (share: number) => (share / maxShare.value) * 100
 // leaving out those the field filter sets aside.
 const blendRows = computed(() => {
   const rows = new Map((props.blend?.candidates ?? []).map((c) => [c.candidate_id, c]))
-  return props.forecast.candidates.flatMap((c) => {
+  return shown.value.candidates.flatMap((c) => {
     const row = field.value.setAside.has(c.candidate_id) ? undefined : rows.get(c.candidate_id)
-    return row && Math.max(row.market.win ?? 0, row.model.win) >= 0.005 ? [{ ...row, name: c.name }] : []
+    const at = blended.value?.get(c.candidate_id)
+    return row && at && Math.max(row.market.win ?? 0, row.model.win) >= 0.005 ? [{ ...row, at, name: c.name }] : []
   })
 })
 const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.value))
@@ -55,8 +83,9 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
         <h2 id="outcomes-title">{{ content.outcomesTitle }}</h2>
         <p class="secondary">{{ content.outcomesHelp({ sims: count(forecast.simulations, locale) }) }}</p>
       </header>
+      <MarketWeight v-if="blend" v-model="marketWeight" :blend="blend" :published="publishedWeight" />
       <!-- The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside. -->
-      <OutcomeDots :forecast="forecast" :pool="field.setAside" />
+      <OutcomeDots :forecast="shown" :pool="field.setAside" />
       <p class="notice note" role="note">
         <span aria-hidden="true" class="icon" translate="no">i</span>
         <span>{{ content.uncertainty }}</span>
@@ -173,21 +202,16 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               </th>
               <td class="num">{{ probability(row.model.win, locale) }}</td>
               <td class="num secondary">{{ maybe(row.market.win) }}</td>
-              <td class="num strong">{{ probability(row.blend.win, locale) }}</td>
+              <td class="num strong">{{ probability(row.at.win, locale) }}</td>
               <td class="num">{{ probability(row.model.qualify, locale) }}</td>
               <td class="num secondary">{{ maybe(row.market.qualify) }}</td>
-              <td class="num strong">{{ probability(row.blend.qualify, locale) }}</td>
+              <td class="num strong">{{ probability(row.at.qualify, locale) }}</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p class="secondary small blend-note">
-        {{ content.blendNote({ weight: percent(blend.model_weight, 0, locale) }) }}
-        <template v-if="blend.model_weight >= 1">{{ content.blendModelOnly }}</template>
-      </p>
-      <p v-if="!blend.market_used && blend.market_fetched_at" class="notice small" role="status">
-        <span aria-hidden="true" class="icon">!</span>
-        <span>{{ content.blendStale({ when: dateOrTime(blend.market_fetched_at, locale) }) }}</span>
+        {{ content.blendNote({ weight: percent(1 - marketWeight, 0, locale) }) }}
       </p>
     </section>
 

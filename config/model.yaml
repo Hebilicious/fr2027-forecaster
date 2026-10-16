@@ -74,13 +74,15 @@ round2:
     other: { far_left: 0.20, left: 0.20, centre: 0.25, right: 0.35, far_right: 0.40, other: 0.90, abstain: 0.35 }
 
 signals:
+  # The weights below are the owner's choices (research/LOG.md, 2026-10-16), not fitted: the
+  # backtest reports what each one does to the 2017 and 2022 replays, it does not gate them.
+  #
   # Event detection (model/src/signals.rs): a day when a candidate's Wikipedia page views and
   # GDELT article count, averaged on the log scale, reach spike_ratio times the median of the
   # baseline_days before it is a spike, and lets that candidate's support and their bloc's strength
   # move by up to shock_sd more (log scale), spread over the following days with half_life_days.
-  # shock_sd is picked with the other noise settings by marginal likelihood on the polls; the
-  # backtest decides which values the grid may hold (research/LOG.md). [0.0] keeps the spikes
-  # detected and shown but adds nothing: the polls-only model.
+  # With one value in shock_sd_grid every spike adds it; with several, the polls' marginal
+  # likelihood picks one.
   sources: [attention, news]
   baseline_days: 28
   min_baseline_days: 21
@@ -89,20 +91,28 @@ signals:
   news_floor: 5
   refractory_days: 14
   half_life_days: 10
-  shock_sd_grid: [0.0]
+  shock_sd_grid: [0.1]
   # Momentum (model/src/signals.rs): each simulated round 1 vote tilted by
   # exp(momentum_weight · m · 2^(−days to the election / half_life_days)), m the log change of the
   # candidate's share of page views and articles over the last momentum_days against the
-  # baseline_days before. 0: off, unless the backtest shows a gain.
-  momentum_weight: 0.0
+  # baseline_days before. 0.15 scored best of the four weights the backtest tried.
+  momentum_weight: 0.15
   momentum_days: 7
+  # X momentum: the same tilt from the change in the share of sampled X posts supporting the
+  # candidate (Grok Bot drops whose double-labelling kappa is at least 0.4), last momentum_days
+  # against the baseline_days before, times x_momentum_weight. X has no history to backtest; the
+  # forward log (fr2027 forward) scores it as polls arrive.
+  x_momentum_weight: 0.5
 
 market_blend:
   # p_blend ∝ exp(w ln p_model + (1 − w) ln p_market) (model/src/blend.rs), for who wins over the
   # candidates the markets price plus everyone else, and one candidate at a time for reaching
-  # round 2 and being on the ballot. w = model_weight. 1, the model alone, until the backtest
-  # fits it on market history (research/LOG.md).
-  model_weight: 1.0
+  # round 2. w = model_weight, the published default: 75% model, 25% markets. The Overview has a
+  # slider to see the forecast at any other weight.
+  model_weight: 0.75
   probability_floor: 0.001
   # A market snapshot older than this many hours is not blended.
   max_age_hours: 6
+  # Who runs: each candidate's chance in config/candidates.yaml pooled the same way with the
+  # "on the ballot" markets, half and half, before the simulation draws the field.
+  ballot_hand_weight: 0.5

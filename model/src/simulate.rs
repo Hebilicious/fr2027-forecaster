@@ -55,6 +55,8 @@ pub struct Forecast {
     pub pairs: Vec<PairForecast>,
     pub round1: Round1Fit,
     pub round2: Round2Fit,
+    /// Each candidate's momentum tilt on the round 1 vote (log scale).
+    pub momentum: Vec<f64>,
     pub warnings: Vec<String>,
 }
 
@@ -116,6 +118,7 @@ pub fn run_forecast(
         pairs: simulation.pairs,
         round1: fit.round1,
         round2: fit.round2,
+        momentum: fit.momentum,
         warnings: simulation.warnings,
     })
 }
@@ -470,6 +473,7 @@ mod tests {
                 model_weight: 1.0,
                 probability_floor: 0.001,
                 max_age_hours: 6.0,
+                ballot_hand_weight: 0.5,
             },
         }
     }

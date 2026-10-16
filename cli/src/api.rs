@@ -60,76 +60,31 @@ pub fn document(repo: &Repo, name: &str, now: Timestamp) -> Result<Option<Value>
 }
 
 /// The latest forecast pooled with the newest market snapshot (model/src/blend.rs). Computed on
-/// every build, so it follows the markets hourly while the forecast refits once a day.
+/// every build, so it follows the markets hourly while the forecast refits when its inputs move.
+/// It carries what the UI needs to pool again at any other weight (its slider): each side's
+/// probabilities, the markets' share on people outside the field, and the floor.
 fn blend(repo: &Repo, now: Timestamp) -> Result<Value> {
     let params = fr2027_collectors::config::load_model_params(repo)?.market_blend;
     params.check()?;
+    let empty = json!({
+        "forecast": null, "model_weight": params.model_weight, "probability_floor": params.probability_floor,
+        "market_fetched_at": null, "market_used": false, "market_others_win": 0.0, "candidates": [],
+    });
     let Some((file, forecast)) = latest_forecast(repo)? else {
-        return Ok(
-            json!({ "forecast": null, "model_weight": params.model_weight, "market_fetched_at": null, "market_used": false, "candidates": [] }),
-        );
+        return Ok(empty);
     };
     let candidates: Vec<&Value> = forecast["candidates"]
         .as_array()
         .map(|a| a.iter().collect())
         .unwrap_or_default();
     let ids: Vec<&str> = candidates.iter().filter_map(|c| c["candidate_id"].as_str()).collect();
-    let snapshot: Option<markets::Snapshot> = newest_raw(&repo.raw_markets_dir())?
+    let newest: Option<markets::Snapshot> = newest_raw(&repo.raw_markets_dir())?
         .map(serde_json::from_value)
         .transpose()?;
-    let fresh = snapshot.as_ref().filter(|s| {
-        s.fetched_at
-            .parse::<Timestamp>()
-            .is_ok_and(|t| (now.duration_since(t).as_secs_f64() / 3600.0) <= params.max_age_hours)
-    });
-    // Per question, each candidate's price averaged over the venues that list them; for who wins,
-    // each venue's prices are first scaled to sum to 1 with the people outside the field.
-    let market = |question: &str| -> (Vec<Option<f64>>, f64) {
-        let mut sums = vec![(0.0, 0usize); ids.len()];
-        let (mut others, mut venues) = (0.0, 0usize);
-        for m in fresh
-            .iter()
-            .flat_map(|s| &s.markets)
-            .filter(|m| m.question == question && m.status == "ok")
-        {
-            let listed: Vec<(Option<usize>, f64)> = m
-                .contracts
-                .iter()
-                .filter_map(|c| {
-                    let price = c.price?;
-                    Some((
-                        c.candidate_id
-                            .as_deref()
-                            .and_then(|id| ids.iter().position(|i| *i == id)),
-                        price,
-                    ))
-                })
-                .collect();
-            if listed.is_empty() {
-                continue;
-            }
-            let scale = if question == "win" {
-                let total: f64 = listed.iter().map(|(_, p)| p).sum();
-                if total <= 0.0 {
-                    continue;
-                }
-                total
-            } else {
-                1.0
-            };
-            venues += 1;
-            for (c, price) in listed {
-                match c {
-                    Some(c) => {
-                        sums[c].0 += price / scale;
-                        sums[c].1 += 1;
-                    }
-                    None => others += price / scale,
-                }
-            }
-        }
-        let prices = sums.iter().map(|(sum, n)| (*n > 0).then(|| sum / *n as f64)).collect();
-        (prices, if venues > 0 { others / venues as f64 } else { 0.0 })
+    let fresh = markets::fresh_snapshot(repo, now, params.max_age_hours)?;
+    let market = |question: &str| match &fresh {
+        Some(s) => markets::venue_average(s, question, &ids),
+        None => (vec![None; ids.len()], 0.0),
     };
     let model = |key: &str| -> Vec<f64> { candidates.iter().map(|c| c[key].as_f64().unwrap_or(0.0)).collect() };
     let (win_prices, win_others) = market("win");
@@ -139,7 +94,7 @@ fn blend(repo: &Repo, now: Timestamp) -> Result<Value> {
         prices: win_prices,
         others: win_others,
     };
-    let (win_normalised, _) = win_market.normalised();
+    let (win_normalised, others_normalised) = win_market.normalised();
     let (p_win, p_qualify, p_run) = (model("p_win"), model("p_qualify_r1"), model("p_run"));
     let win_blend = fr2027_model::blend::pool_win(&p_win, &win_market, &params);
     let round = |x: f64| (x * 10_000.0).round() / 10_000.0;
@@ -148,15 +103,15 @@ fn blend(repo: &Repo, now: Timestamp) -> Result<Value> {
         .iter()
         .enumerate()
         .map(|(i, id)| {
-            let pool = |p: f64, m: Option<f64>| round(fr2027_model::blend::pool_binary(p, m, &params));
             json!({
                 "candidate_id": id,
                 "model": { "win": p_win[i], "qualify": p_qualify[i], "run": p_run[i] },
                 "market": { "win": opt(win_normalised[i]), "qualify": opt(qualify_prices[i]), "run": opt(ballot_prices[i]) },
+                // Who runs is already pooled with the ballot markets inside the model.
                 "blend": {
                     "win": round(win_blend[i]),
-                    "qualify": pool(p_qualify[i], qualify_prices[i]),
-                    "run": pool(p_run[i], ballot_prices[i]),
+                    "qualify": round(fr2027_model::blend::pool_binary(p_qualify[i], qualify_prices[i], &params)),
+                    "run": p_run[i],
                 },
             })
         })
@@ -164,8 +119,10 @@ fn blend(repo: &Repo, now: Timestamp) -> Result<Value> {
     Ok(json!({
         "forecast": file,
         "model_weight": params.model_weight,
-        "market_fetched_at": snapshot.as_ref().map(|s| s.fetched_at.clone()),
+        "probability_floor": params.probability_floor,
+        "market_fetched_at": newest.as_ref().map(|s| s.fetched_at.clone()),
         "market_used": fresh.is_some(),
+        "market_others_win": round(others_normalised),
         "candidates": rows,
     }))
 }

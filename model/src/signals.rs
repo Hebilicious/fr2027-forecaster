@@ -51,6 +51,8 @@ pub enum SignalSource {
     Attention,
     /// Daily count of French articles naming the candidate (GDELT).
     News,
+    /// Share of sampled X posts supporting the candidate (Grok Bot drops), for X momentum only.
+    XSupport,
 }
 
 /// Event detection settings, read from `config/model.yaml` (`signals`).
@@ -80,6 +82,8 @@ pub struct SignalParams {
     pub momentum_weight: f64,
     /// Days of recent attention the momentum compares with the baseline before them.
     pub momentum_days: u32,
+    /// Weight of X momentum: the change in the X support share over the same windows.
+    pub x_momentum_weight: f64,
 }
 
 impl SignalParams {
@@ -97,6 +101,7 @@ impl SignalParams {
             shock_sd_grid: vec![0.0],
             momentum_weight: 0.0,
             momentum_days: 7,
+            x_momentum_weight: 0.0,
         }
     }
 
@@ -117,7 +122,7 @@ impl SignalParams {
         if !(self.attention_floor >= 0.0 && self.news_floor >= 0.0) {
             return invalid("floors must be non-negative");
         }
-        if !self.momentum_weight.is_finite() || self.momentum_days == 0 {
+        if !self.momentum_weight.is_finite() || !self.x_momentum_weight.is_finite() || self.momentum_days == 0 {
             return invalid("momentum_weight must be a number and momentum_days positive");
         }
         Ok(())
@@ -127,6 +132,7 @@ impl SignalParams {
         match source {
             SignalSource::Attention => self.attention_floor,
             SignalSource::News => self.news_floor,
+            SignalSource::XSupport => 0.0,
         }
     }
 }
@@ -223,31 +229,27 @@ pub fn detect(signals: &Signals, field: &Field, params: &SignalParams, as_of: Da
     spikes
 }
 
-/// Each candidate's momentum tilt on the log scale, `momentum_weight · m_c · 2^(−days / half-life)`
-/// (see the module notes), from values dated before `as_of`; 0 for a candidate without data.
+/// Each candidate's momentum tilt on the log scale (see the module notes), from values dated
+/// before `as_of`: `momentum_weight` times the log change of their share of attention, plus
+/// `x_momentum_weight` times the change in their X support share, decayed with the half-life over
+/// the days left to `election`. 0 for a candidate without data.
 pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: Date, election: Date) -> Vec<f64> {
     let n = field.len();
-    if params.momentum_weight == 0.0 || params.sources.is_empty() {
-        return vec![0.0; n];
-    }
     let last = day_number(as_of) - 1;
     let recent_start = last - params.momentum_days as i32 + 1;
     let baseline_start = recent_start - params.baseline_days as i32;
+    let series = |c: usize, source: SignalSource| signals.series.get(&(field.candidates[c].id.clone(), source));
+
+    // Attention: the log change of each candidate's share of the page views and articles.
     // Floor on a share, so a candidate nobody reads does not swing from nothing.
     const SHARE_FLOOR: f64 = 0.001;
     let mut sums = vec![0.0; n];
     let mut counts = vec![0usize; n];
-    for &source in &params.sources {
+    let volume = params.sources.iter().filter(|s| **s != SignalSource::XSupport);
+    for &source in volume.filter(|_| params.momentum_weight != 0.0) {
         let totals = |from: i32, to: i32| -> Vec<f64> {
-            field
-                .candidates
-                .iter()
-                .map(|c| {
-                    signals
-                        .series
-                        .get(&(c.id.clone(), source))
-                        .map_or(0.0, |s| s.range(from..=to).map(|(_, v)| v).sum())
-                })
+            (0..n)
+                .map(|c| series(c, source).map_or(0.0, |s| s.range(from..=to).map(|(_, v)| v).sum()))
                 .collect()
         };
         let recent = totals(recent_start, last);
@@ -264,15 +266,35 @@ pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: 
             }
         }
     }
+
+    // X: the change in the mean support share between the two windows.
+    let x_shift = |c: usize| -> f64 {
+        if params.x_momentum_weight == 0.0 {
+            return 0.0;
+        }
+        let Some(s) = series(c, SignalSource::XSupport) else {
+            return 0.0;
+        };
+        let mean = |from: i32, to: i32| {
+            let values: Vec<f64> = s.range(from..=to).map(|(_, v)| *v).collect();
+            (!values.is_empty()).then(|| values.iter().sum::<f64>() / values.len() as f64)
+        };
+        match (mean(recent_start, last), mean(baseline_start, recent_start - 1)) {
+            (Some(recent), Some(baseline)) => params.x_momentum_weight * (recent - baseline),
+            _ => 0.0,
+        }
+    };
+
     let days = f64::from((day_number(election) - day_number(as_of)).max(0));
     let decay = (-std::f64::consts::LN_2 * days / params.half_life_days).exp();
     (0..n)
         .map(|c| {
-            if counts[c] == 0 {
+            let attention = if counts[c] == 0 {
                 0.0
             } else {
-                params.momentum_weight * sums[c] / counts[c] as f64 * decay
-            }
+                params.momentum_weight * sums[c] / counts[c] as f64
+            };
+            (attention + x_shift(c)) * decay
         })
         .collect()
 }
@@ -421,6 +443,30 @@ mod tests {
         let later = momentum(&s, &field(), &p, as_of, date(2026, 10, 11));
         assert!((later[1] - now[1] / 2.0).abs() < 1e-9, "one half-life later");
         assert_eq!(momentum(&s, &field(), &params(), as_of, as_of), vec![0.0, 0.0]);
+    }
+
+    #[test]
+    fn x_momentum_follows_the_support_share() {
+        // r1's X support share: 0.30 through September, 0.40 from the 24th.
+        let mut s = Signals::new();
+        let start = day_number(date(2026, 8, 20));
+        for d in 0..42 {
+            let day = crate::date_from_day_number(start + d);
+            s.add(
+                "r1",
+                SignalSource::XSupport,
+                day,
+                if day >= date(2026, 9, 24) { 0.4 } else { 0.3 },
+            );
+        }
+        let p = SignalParams {
+            x_momentum_weight: 0.5,
+            ..params()
+        };
+        let as_of = date(2026, 10, 1);
+        let tilt = momentum(&s, &field(), &p, as_of, as_of);
+        assert_eq!(tilt[0], 0.0, "no X data for l1");
+        assert!((tilt[1] - 0.5 * 0.1).abs() < 1e-9, "{tilt:?}");
     }
 
     #[test]
