@@ -4,6 +4,27 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-16
 
+### Editor run 08 UTC: notices for the two OpinionWay polls of 13–14 October
+
+**Late notices.** The Commission's list now carries notices 10318 (OpinionWay, Présitrack wave 3 for Les Echos and Radio Classique) and 10319 (OpinionWay for CNews), both filed 15 October. Two new files supersede the files entered this morning without a notice number:
+
+| File                          | Supersedes                        | Checked against | Entry               | R1 / R2 |
+| ----------------------------- | --------------------------------- | --------------- | ------------------- | ------- |
+| `opinionway-2026-10-14-10318` | `opinionway-2026-10-14-les-echos` | notice 10318    | primary             | 3 / 0   |
+| `opinionway-2026-10-14-10319` | `opinionway-2026-10-14-cnews`     | notice 10319    | primary (was index) | 1 / 3   |
+
+- Every share of every scenario was compared with the notices' "Publié" column. CNews: all 13 round 1 shares and the three runoffs match the earlier file, which had been taken from the JDD's reproduction of OpinionWay's chart. Présitrack: all shares match OpinionWay's report, except that the notice's scenario 1 table prints Le Pen 4% and Zemmour 35%, the reverse of the report and of the notice's scenarios 2 and 3; the report's values are kept.
+- **Population changed to `likely`** for both: each notice states that the published intentions are computed on registered voters certain to vote (9–10 out of 10, 731 respondents), and the "Publié" column equals that column, not the all-registered one. This differs from the `registered` classification given to earlier OpinionWay polls in `research/sources/polls-2026-bootstrap-notes.md`; earlier OpinionWay notices were not re-read in this run.
+- Présitrack's notice says 978 registered drawn from 1,001 people on its methodology page and 1,043 in its weighting tables; 1,043 (also in OpinionWay's report) is kept.
+- The CNews questionnaire lists François Hollande among round 1 options, but the results table has no Hollande row; nothing is entered for him.
+- The poll count is unchanged (33 polls); 32 are now checked against a notice or the pollster's report.
+
+**Inbox.** No open pull requests from `inbox/polls-` branches.
+
+**New polls.** None. The Commission's list (to notice 10320) has no other voting-intention notice after 10314; notices 10315, 10316 and 10320 are not voting intentions. The French Wikipedia table's newest polls are the two OpinionWay polls above.
+
+**Field.** No change to `config/candidates.yaml`. There is no `data/raw/events/` directory yet, and the headlines in `data/clean/news.csv` up to 16 October 08:29 UTC report no confirmed declaration, withdrawal or ruling (Le Figaro, 13 October, on the Ecologists moving towards an autonomous candidacy, describes it as uncertain).
+
 ### Model 0.2.0: round 1 and round 2 errors fitted by the backtest (milestone 3)
 
 `fr2027 backtest` (`moon run cli:backtest`, settings in `config/backtest.yaml`) replays the model on 2017 and 2022 at 182, 91, 30 and 7 days before round 1. Each replay sees only the polls published by its date whose fieldwork started in the year before round 1, as the live forecast does. The report is `research/backtest/report.md`, every number is in `results.json`, and the run is deterministic (seed 20170423, 20,000 simulations per replay and setting, shared random numbers across settings). Sources and checks of the data: `research/sources/README.md`.

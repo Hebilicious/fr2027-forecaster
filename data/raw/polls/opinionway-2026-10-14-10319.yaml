@@ -1,0 +1,53 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-10-14-10319
+supersedes: opinionway-2026-10-14-cnews
+firm: opinionway
+sponsor: "CNews"
+field_start: 2026-10-13
+field_end: 2026-10-14
+published_at: 2026-10-15
+sample_size: 1043
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10319-pres-iv-opinionway-cnews-15-octobre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10319-pres-iv-opinionway-cnews-15-octobre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-16T08:45Z
+entry: primary
+notes: "Supersedes opinionway-2026-10-14-cnews (entered from the JDD's reproduction of OpinionWay's chart before the notice was filed). Notice 10319, filed 15 October 2026: 978 registered drawn from 1,043; online (CAWI), 13–14 October. Every share of the round 1 scenario and the three runoffs matches the notice's 'Publié' column and the earlier file. The notice states that the published column is computed on registered voters certain to vote (9–10 out of 10, 731 respondents), so population is likely. Bouamrane '<1%' is entered as 0.5. The questionnaire lists François Hollande among the round 1 options, but the results table has no row for him; he is not entered. published_at kept from the earlier file (the JDD article of 15 October)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Bouamrane+Attal+Philippe+Lisnard"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 1
+      tondelier: 2
+      glucksmann: 13
+      bouamrane: 0.5
+      attal: 5
+      philippe: 12
+      retailleau: 6
+      lisnard: 4
+      dupont_aignan: 1
+      zemmour: 5
+      le_pen: 35
+  - scenario_id: H1
+    round: 2
+    label: "Jean-Luc Mélenchon v Marine Le Pen"
+    shares:
+      melenchon: 32
+      le_pen: 68
+  - scenario_id: H2
+    round: 2
+    label: "Raphaël Glucksmann v Marine Le Pen"
+    shares:
+      glucksmann: 44
+      le_pen: 56
+  - scenario_id: H3
+    round: 2
+    label: "Édouard Philippe v Marine Le Pen"
+    shares:
+      philippe: 44
+      le_pen: 56

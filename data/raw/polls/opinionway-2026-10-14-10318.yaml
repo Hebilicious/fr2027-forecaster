@@ -1,0 +1,61 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-10-14-10318
+supersedes: opinionway-2026-10-14-les-echos
+firm: opinionway
+sponsor: "Les Echos / Radio Classique"
+field_start: 2026-10-13
+field_end: 2026-10-14
+published_at: 2026-10-15
+sample_size: 1043
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10318-pres-presitrack-v3-opinionway-15-octobre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10318-pres-presitrack-v3-opinionway-15-octobre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-16T08:45Z
+entry: primary
+notes: "Supersedes opinionway-2026-10-14-les-echos (entered from OpinionWay's Présitrack wave 3 report before the notice was filed). Notice 10318, filed 15 October 2026: online (CAWI), 13–14 October. The notice states that the published column is computed on registered voters certain to vote (9–10 out of 10, 731 respondents), so population is likely. The notice's methodology page says 978 registered 'issu d'un échantillon de 1001 personnes', while its weighting tables and OpinionWay's report give 1,043; 1,043 is kept. Every share of the three scenarios matches the notice's 'Publié' column and the report, with one exception: in the notice's scenario 1 table the Le Pen row reads 4% and the Zemmour row 35%, the reverse of OpinionWay's report and of the notice's own scenarios 2 and 3; the report's values (Le Pen 35, Zemmour 4) are kept. Arthaud '<1%' in S1 is entered as 0.5. No runoff voting intentions are published."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Attal+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 14
+      roussel: 3
+      tondelier: 3
+      glucksmann: 13
+      attal: 7
+      philippe: 12
+      retailleau: 7
+      dupont_aignan: 2
+      zemmour: 4
+      le_pen: 35
+  - scenario_id: S2
+    round: 1
+    label: "Glucksmann+Attal"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 2
+      tondelier: 3
+      glucksmann: 16
+      attal: 11
+      retailleau: 9
+      dupont_aignan: 2
+      zemmour: 4
+      le_pen: 37
+  - scenario_id: S3
+    round: 1
+    label: "Glucksmann+Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 2
+      tondelier: 3
+      glucksmann: 15
+      philippe: 15
+      retailleau: 8
+      dupont_aignan: 2
+      zemmour: 4
+      le_pen: 35
