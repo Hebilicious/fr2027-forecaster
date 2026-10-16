@@ -1,0 +1,96 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-16T22:18:45Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "arthaud",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-16T21:28:54Z",
+      "title": "Jean-Luc Mélenchon annoncé au second tour de l'élection présidentielle: \"Cela reflète une aspiration à plus d'égalité, à plus de tolérance\", estime Nathalie Arthaud, candidate Lutte Ouvrière à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-annonce-au-second-tour-de-l-election-presidentielle-cela-reflete-une-aspiration-a-plus-d-egalite-a-plus-de-tolerance-estime-nathalie-arthaud-candidate-lutte-ouvriere-a-l-election-presidentielle_VN-202610160867.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
