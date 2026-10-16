@@ -30,10 +30,13 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+      # Read the title now, not from the event: an edit and a push start two runs at once, and
+      # the one that survives may carry the title from before the edit.
       - name: Check the pull request title
         env:
-          TITLE: ${{ github.event.pull_request.title }}
-        run: printf '%s\n' "$TITLE" | scripts/check-semantic.sh
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.pull_request.number }}
+        run: gh pr view "$NUMBER" --repo "$GITHUB_REPOSITORY" --json title --jq .title | scripts/check-semantic.sh
       - name: Check the commit titles
         env:
           BASE: ${{ github.event.pull_request.base.sha }}
