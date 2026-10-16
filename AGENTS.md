@@ -39,6 +39,11 @@ Run project tools through their moon tasks (`moon run web:dev`, `moon run cli:se
 `vite`, `cargo` or the `fr2027` binary directly only for something no task covers, such as a flag a task does not pass.
 `moon tasks` lists them.
 
+## Reporting
+
+- When a backtest, a gate or a rule would leave a feature the owner asked for with no effect, stop and report it to the
+  owner before finishing the work; don't deliver the feature switched off.
+
 ## UI languages
 
 The web UI (`app/web`) is written in fourteen languages with [Intlayer](https://intlayer.org): French, the reference,

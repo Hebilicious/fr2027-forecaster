@@ -17,7 +17,7 @@ Build a local, self-updating forecaster that outputs calibrated win probabilitie
 **Success criteria:**
 
 - Calibration: in backtests, events forecast at ~70% happen roughly 70% of the time (Brier score and reliability plot reported).
-- Beats a polls-only baseline and the Polymarket price on log-loss in backtests, or the extra layers get their weight cut to zero.
+- The signal layers carry the weights the owner sets (research log, 2026-10-16), and the backtest reports what each one does against a polls-only baseline and the market price.
 - Every number in the UI traces back to a dated source row.
 - Runs end to end on a laptop with one command.
 
@@ -117,13 +117,13 @@ Since routine 1's `x-activity-3`, a drop sends stance counts instead of `sentime
 
 The forecast is a Monte Carlo over 50,000 simulated elections, each one drawing who runs, the round 1 vote, who qualifies, and the round 2 result. Every layer below is a separate, testable module with its own parameters file.
 
-1. **Field model.** Each potential candidate gets `p_run` (declared, rumored, needs sponsorships, likely to withdraw for an ally). Set from declarations, sponsorship counts and Polymarket where informative, and updated by sourced Grok Bot field changes logged in the research log. Each simulation first draws a field.
+1. **Field model.** Each potential candidate gets `p_run` (declared, rumored, needs sponsorships, likely to withdraw for an ally). Set from declarations and sponsorship counts, updated by sourced Grok Bot field changes logged in the research log, then pooled on the log scale with the averaged "on the ballot" market prices (`market_blend.ballot_hand_weight`). Each simulation first draws a field.
 2. **Poll aggregation (round 1).** Bayesian state-space model of each candidate's latent share over time (random walk, logit or log-ratio scale so shares sum to 100%). Polls enter with sampling variance from sample size, plus a firm house effect and a method effect, both estimated. Scenario polls that test different fields are all used: the model works with latent support, and a scenario's shares are the latent shares renormalized over who was tested.
 3. **Missing-candidate redistribution.** When a simulated field differs from what pollsters tested, a dropped candidate's support is reallocated using a transfer matrix estimated from scenario polls that include and exclude them, falling back on ideological proximity (see Programs).
 4. **Round 1 error model.** Add a national polling error drawn from a fat-tailed distribution (Student-t), fit to 2002–2022 final-poll misses. Errors are correlated across candidates of the same bloc. Error variance shrinks as election day approaches, following the historical curve.
 5. **Round 2.** For matchups with direct polls, aggregate them as in step 2. For untested matchups, build the vote from round 1 shares times a transfer matrix (R1 vote → R2 choice or abstention), estimated from 2017/2022 post-election surveys and current second-round polls. Add its own correlated error.
-6. **News and social layer.** Not a vote-share predictor by default. It does two things: (a) event detection, where a spike in news or X volume for a candidate flags a possible shock, temporarily widening that candidate's latent-share variance; (b) an optional short-horizon momentum term with weight fit in backtests, decaying with a half-life estimated from past shocks (start with ~10 days). If backtests show no gain, weight = 0 and the UI still displays the signals.
-7. **Market blend.** Report three numbers side by side: model-only, Polymarket-implied (normalized, fees and long-shot bias noted), and a blend. Blend weight is fit on log-loss in backtests where market history exists; otherwise default to model-only and show the market as a comparison.
+6. **News and social layer.** It does two things: (a) event detection, where a spike in news volume and Wikipedia attention for a candidate flags a possible shock and widens that candidate's and their bloc's latent-share variance for some days; (b) a short-horizon momentum term from the change in a candidate's share of attention and in their X support share, decaying with a half-life (10 days). The weights (`signals` in `config/model.yaml`) are set by the owner; the backtest reports their effect, and the forward log scores the X term, which has no history.
+7. **Market blend.** Report three numbers side by side: model-only, market-implied (Polymarket and Kalshi averaged, normalized, fees and long-shot bias noted), and a blend. The published blend uses the weight the owner sets (`market_blend.model_weight`), and the UI has a slider to see any other weight. The backtest reports the weight its rule would pick where market history exists.
 8. **Fundamentals prior.** Far from election day, shrink round 1 shares toward a prior built from bloc strength in 2022 and 2024 results, adjusted by government approval. Prior weight decays to near zero by March 2027.
 
 ```
@@ -148,7 +148,7 @@ Expected effect is modest. Backtests must show whether program-based transfers b
 
 ## Backtesting and calibration
 
-No layer ships with nonzero weight unless it improves out-of-sample log-loss on past French elections. Backtests replay history as of each date, using only data published before that date.
+Every layer's effect is measured on past French elections and reported beside its weight; the weights themselves are the owner's (research log, 2026-10-16). Backtests replay history as of each date, using only data published before that date.
 
 - **Elections:** 2017 and 2022 presidential as primary tests (both had rich polling and, for 2022, some market data); 2012 and 2007 for the poll model and error curve only.
 - **Replay dates:** monthly from 12 months out, weekly in the final 3 months.

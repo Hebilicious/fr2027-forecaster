@@ -64,8 +64,13 @@ pub fn load(dir: &Path, known: &dyn Fn(&str) -> bool) -> Result<Vec<MarketRow>> 
 const MAX_AGE_DAYS: i32 = 7;
 
 /// The market's view on `as_of`: for each venue and contract its last price within
-/// [`MAX_AGE_DAYS`]; for who wins, each venue's prices scaled to sum to 1 with everyone outside
-/// the field, then averaged over venues; for reaching round 2, averaged as they are.
+/// [`MAX_AGE_DAYS`]; for who wins, each venue's prices on the candidates who actually ran, scaled
+/// to sum to 1, then averaged over venues; for reaching round 2, averaged as they are.
+///
+/// The replays condition the model on the field that ran; a market price on that date also bet on
+/// who would run (Juppé, Hollande, Bayrou in late 2016). Scaling the markets to the runners
+/// conditions them on the same field, so the comparison does not favour the model for knowing who
+/// ran.
 fn market_on(rows: &[MarketRow], election: &Election, as_of: Date) -> Option<(WinPrices, Vec<Option<f64>>)> {
     let n = election.field.len();
     let first_day = fr2027_model::day_number(as_of) - MAX_AGE_DAYS;
@@ -83,13 +88,14 @@ fn market_on(rows: &[MarketRow], election: &Election, as_of: Date) -> Option<(Wi
         return None;
     }
     let index = |row: &MarketRow| row.candidate_id.as_deref().and_then(|id| election.field.index_of(id));
+    let runner = |row: &MarketRow| index(row).filter(|c| election.ran[*c]);
     let venues: Vec<&str> = {
         let mut v: Vec<&str> = last.keys().map(|(venue, _, _)| *venue).collect();
         v.dedup();
         v
     };
     let mut win_sum = vec![(0.0, 0usize); n];
-    let (mut others, mut win_venues) = (0.0, 0usize);
+    let mut win_venues = 0usize;
     let mut qualify_sum = vec![(0.0, 0usize); n];
     for venue in venues {
         let of = |question: &str| -> Vec<&MarketRow> {
@@ -98,18 +104,16 @@ fn market_on(rows: &[MarketRow], election: &Election, as_of: Date) -> Option<(Wi
                 .map(|(_, r)| *r)
                 .collect()
         };
-        let win = of("win");
-        let total: f64 = win.iter().map(|r| r.price).sum();
+        let win: Vec<(usize, f64)> = of("win")
+            .into_iter()
+            .filter_map(|r| runner(r).map(|c| (c, r.price)))
+            .collect();
+        let total: f64 = win.iter().map(|(_, p)| p).sum();
         if total > 0.0 {
             win_venues += 1;
-            for row in win {
-                match index(row) {
-                    Some(c) => {
-                        win_sum[c].0 += row.price / total;
-                        win_sum[c].1 += 1;
-                    }
-                    None => others += row.price / total,
-                }
+            for (c, price) in win {
+                win_sum[c].0 += price / total;
+                win_sum[c].1 += 1;
             }
         }
         for row in of("qualify") {
@@ -123,13 +127,10 @@ fn market_on(rows: &[MarketRow], election: &Election, as_of: Date) -> Option<(Wi
         sums.iter().map(|(s, k)| (*k > 0).then(|| s / *k as f64)).collect()
     };
     Some((
+        // Conditioned on the runners, nobody outside them can win.
         WinPrices {
-            prices: average(&win_sum),
-            others: if win_venues > 0 {
-                others / win_venues as f64
-            } else {
-                0.0
-            },
+            prices: if win_venues > 0 { average(&win_sum) } else { vec![None; n] },
+            others: 0.0,
         },
         average(&qualify_sum),
     ))
