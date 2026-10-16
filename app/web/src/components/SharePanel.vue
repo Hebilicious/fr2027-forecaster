@@ -122,6 +122,8 @@ let lastTap: { time: number; clientX: number; clientY: number } | null = null
 function onDown(event: PointerEvent) {
   onMove(event)
   if (event.pointerType === "mouse" && event.button === 0 && zoom.value) {
+    // Keeps the press from starting a text selection that the drag would then extend.
+    event.preventDefault()
     drag = { clientX: event.clientX, from: zoom.value, moved: false }
   }
 }
@@ -351,6 +353,8 @@ svg {
   display: block;
   overflow: visible;
   touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .grid line {
