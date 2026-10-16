@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-16T23:18:36Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:08:51Z",
+      "title": "\"Il faut recréer de la richesse en urgence\" selon Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faut-recreer-de-la-richesse-en-urgence-selon-natacha-polony-candidate-a-l-election-presidentielle_VN-202610140842.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:04:53Z",
+      "title": "\"C'est un État stratège dont nous avons besoin\", estime Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-c-est-un-etat-stratege-dont-nous-avons-besoin-estime-natacha-polony-candidate-a-l-election-presidentielle_VN-202610140841.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-16T22:16:42Z",
+      "title": "Présidentielle 2027 : Quand Emmanuel Macron s’étonne du « manque d’humilité » de Marine Le Pen",
+      "url": "https://www.20minutes.fr/politique/4255111-20261017-presidentielle-2027-quand-emmanuel-macron-etonne-manque-humilite-marine-pen"
+    }
+  ],
+  "schema_version": "1.0"
+}
