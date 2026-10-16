@@ -66,6 +66,8 @@ pub struct Fit {
     pub as_of: jiff::civil::Date,
     pub round1: Round1Fit,
     pub round2: Round2Fit,
+    /// Each candidate's momentum tilt on the round 1 vote (log scale; [`crate::signals::momentum`]).
+    pub momentum: Vec<f64>,
 }
 
 /// The probabilities a simulation gives, without the fits it started from.
@@ -150,7 +152,13 @@ pub fn fit(
         as_of,
         params.round2_date,
     )?;
-    Ok(Fit { as_of, round1, round2 })
+    let momentum = crate::signals::momentum(signals, field, &params.signals, as_of, params.round1_date);
+    Ok(Fit {
+        as_of,
+        round1,
+        round2,
+        momentum,
+    })
 }
 
 /// Simulates the election from a fit. Besides the dates, only the simulation settings of
@@ -225,6 +233,7 @@ pub fn simulate(
     let round2_error_sd = params
         .round2
         .error_at_horizon(days_before(fit.as_of, params.round2_date));
+    let tilted = fit.momentum.iter().any(|m| *m != 0.0);
 
     for _ in 0..params.simulations {
         let mut attempts = 0;
@@ -255,6 +264,16 @@ pub fn simulate(
             candidate: &candidate_error,
         };
         round1_shares(layout, &x, &present, Some(&errors), &mut scratch, &mut shares);
+        if tilted {
+            let mut total = 0.0;
+            for (share, tilt) in shares.iter_mut().zip(&fit.momentum) {
+                *share *= tilt.exp();
+                total += *share;
+            }
+            for share in shares.iter_mut() {
+                *share /= total;
+            }
+        }
 
         let (first, second) = top_two(&shares, &present);
         qualify[first] += 1;
@@ -482,6 +501,20 @@ mod tests {
                 ],
             })
             .collect()
+    }
+
+    #[test]
+    fn momentum_tilts_the_round_1_vote() {
+        let params = params(4000, 7);
+        let mut fit = fit(&field(), &polls(), &Signals::new(), &params, date(2026, 7, 1)).unwrap();
+        assert!(fit.momentum.iter().all(|m| *m == 0.0), "no signals, no momentum");
+        let before = simulate(&field(), &fit, &params, &mut |_| {}).unwrap();
+        fit.momentum[2] = 0.3;
+        let after = simulate(&field(), &fit, &params, &mut |_| {}).unwrap();
+        let qualify = |s: &Simulation, c: usize| s.candidates.iter().find(|x| x.candidate == c).unwrap().p_qualify_r1;
+        assert!(qualify(&after, 2) > qualify(&before, 2) + 0.05);
+        let total: f64 = after.candidates.iter().map(|c| c.p_win).sum();
+        assert!((total - 1.0).abs() < 1e-9);
     }
 
     #[test]

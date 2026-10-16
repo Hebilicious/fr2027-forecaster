@@ -23,6 +23,18 @@
 //! `shock_sd` is chosen with the other noise settings by marginal likelihood on the polls, from
 //! [`SignalParams::shock_sd_grid`]; a grid of `[0.0]` turns the layer off. The backtest decides
 //! whether the grid may hold anything else.
+//!
+//! The spec's optional **momentum** term tilts each simulated round 1 vote by how a candidate's
+//! share of attention moved: over the last [`SignalParams::momentum_days`] against the
+//! [`SignalParams::baseline_days`] before, on the log scale, averaged over the sources, and
+//! decayed with the half-life over the days left to the election:
+//!
+//! ```text
+//! p_c ∝ p_c · exp(momentum_weight · m_c · 2^(−days_to_election / half_life_days))
+//! ```
+//!
+//! Attention says nothing about its sign (a scandal draws readers too), so the weight may be
+//! negative; it is 0 unless the backtest shows a gain.
 
 use std::collections::BTreeMap;
 
@@ -64,6 +76,10 @@ pub struct SignalParams {
     /// Candidate values of the total extra standard deviation (log scale) a spike lets a
     /// candidate's support and bloc strength move; chosen by marginal likelihood.
     pub shock_sd_grid: Vec<f64>,
+    /// Weight of the momentum term; 0 turns it off.
+    pub momentum_weight: f64,
+    /// Days of recent attention the momentum compares with the baseline before them.
+    pub momentum_days: u32,
 }
 
 impl SignalParams {
@@ -79,6 +95,8 @@ impl SignalParams {
             refractory_days: 14,
             half_life_days: 10.0,
             shock_sd_grid: vec![0.0],
+            momentum_weight: 0.0,
+            momentum_days: 7,
         }
     }
 
@@ -98,6 +116,9 @@ impl SignalParams {
         }
         if !(self.attention_floor >= 0.0 && self.news_floor >= 0.0) {
             return invalid("floors must be non-negative");
+        }
+        if !self.momentum_weight.is_finite() || self.momentum_days == 0 {
+            return invalid("momentum_weight must be a number and momentum_days positive");
         }
         Ok(())
     }
@@ -200,6 +221,60 @@ pub fn detect(signals: &Signals, field: &Field, params: &SignalParams, as_of: Da
     }
     spikes.sort_by_key(|s| (s.date, s.candidate));
     spikes
+}
+
+/// Each candidate's momentum tilt on the log scale, `momentum_weight · m_c · 2^(−days / half-life)`
+/// (see the module notes), from values dated before `as_of`; 0 for a candidate without data.
+pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: Date, election: Date) -> Vec<f64> {
+    let n = field.len();
+    if params.momentum_weight == 0.0 || params.sources.is_empty() {
+        return vec![0.0; n];
+    }
+    let last = day_number(as_of) - 1;
+    let recent_start = last - params.momentum_days as i32 + 1;
+    let baseline_start = recent_start - params.baseline_days as i32;
+    // Floor on a share, so a candidate nobody reads does not swing from nothing.
+    const SHARE_FLOOR: f64 = 0.001;
+    let mut sums = vec![0.0; n];
+    let mut counts = vec![0usize; n];
+    for &source in &params.sources {
+        let totals = |from: i32, to: i32| -> Vec<f64> {
+            field
+                .candidates
+                .iter()
+                .map(|c| {
+                    signals
+                        .series
+                        .get(&(c.id.clone(), source))
+                        .map_or(0.0, |s| s.range(from..=to).map(|(_, v)| v).sum())
+                })
+                .collect()
+        };
+        let recent = totals(recent_start, last);
+        let baseline = totals(baseline_start, recent_start - 1);
+        let (recent_all, baseline_all): (f64, f64) = (recent.iter().sum(), baseline.iter().sum());
+        if recent_all <= 0.0 || baseline_all <= 0.0 {
+            continue;
+        }
+        for c in 0..n {
+            if recent[c] > 0.0 || baseline[c] > 0.0 {
+                let share = |x: f64, total: f64| x / total + SHARE_FLOOR;
+                sums[c] += (share(recent[c], recent_all) / share(baseline[c], baseline_all)).ln();
+                counts[c] += 1;
+            }
+        }
+    }
+    let days = f64::from((day_number(election) - day_number(as_of)).max(0));
+    let decay = (-std::f64::consts::LN_2 * days / params.half_life_days).exp();
+    (0..n)
+        .map(|c| {
+            if counts[c] == 0 {
+                0.0
+            } else {
+                params.momentum_weight * sums[c] / counts[c] as f64 * decay
+            }
+        })
+        .collect()
 }
 
 fn median(mut values: Vec<f64>) -> f64 {
@@ -321,6 +396,31 @@ mod tests {
     fn no_sources_detects_nothing() {
         let s = signals(&[(9, 10, 50_000.0)]);
         assert!(detect(&s, &field(), &SignalParams::off(), date(2026, 10, 1)).is_empty());
+    }
+
+    #[test]
+    fn momentum_follows_a_rising_share_and_decays() {
+        // l1 has 1,000 views a day, r1 1,000 until 23 September and 3,000 from the 24th.
+        let mut s = Signals::new();
+        let start = day_number(date(2026, 8, 1));
+        for d in 0..61 {
+            let day = crate::date_from_day_number(start + d);
+            s.add("l1", SignalSource::Attention, day, 1000.0);
+            let r1 = if day >= date(2026, 9, 24) { 3000.0 } else { 1000.0 };
+            s.add("r1", SignalSource::Attention, day, r1);
+        }
+        let p = SignalParams {
+            momentum_weight: 0.1,
+            ..params()
+        };
+        let as_of = date(2026, 10, 1);
+        let now = momentum(&s, &field(), &p, as_of, as_of);
+        // Recent shares 0.25 / 0.75 against 0.5 / 0.5 before.
+        assert!((now[1] - 0.1 * (0.751f64 / 0.501).ln()).abs() < 1e-9, "{now:?}");
+        assert!(now[0] < 0.0);
+        let later = momentum(&s, &field(), &p, as_of, date(2026, 10, 11));
+        assert!((later[1] - now[1] / 2.0).abs() < 1e-9, "one half-life later");
+        assert_eq!(momentum(&s, &field(), &params(), as_of, as_of), vec![0.0, 0.0]);
     }
 
     #[test]
