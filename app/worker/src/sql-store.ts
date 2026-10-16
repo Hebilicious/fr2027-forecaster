@@ -16,6 +16,7 @@ const SCHEMA = [
     seq INTEGER PRIMARY KEY,
     id TEXT NOT NULL UNIQUE,
     kind TEXT NOT NULL,
+    key TEXT,
     received_at TEXT NOT NULL,
     status TEXT NOT NULL,
     note TEXT,
@@ -27,7 +28,11 @@ const SCHEMA = [
   "CREATE INDEX IF NOT EXISTS items_by_received ON items (received_at, seq)",
 ]
 
-const VIEW_COLUMNS = "id, kind, received_at, status, note, ref, resolved_at"
+/** Tables created before items had a key get the column; their old items keep a null key. */
+const ADD_KEY = "ALTER TABLE items ADD COLUMN key TEXT"
+const KEY_INDEX = "CREATE INDEX IF NOT EXISTS items_by_key ON items (kind, key, status)"
+
+const VIEW_COLUMNS = "id, kind, key, received_at, status, note, ref, resolved_at"
 
 /** The inbox's items in SQLite. `seq` (insertion order) breaks ties between items received in the same second. */
 export class SqlStore implements Store {
@@ -36,13 +41,17 @@ export class SqlStore implements Store {
   constructor(sql: Sql) {
     this.#sql = sql
     for (const statement of SCHEMA) sql.exec(statement)
+    const columns = sql.exec("PRAGMA table_info(items)").toArray()
+    if (!columns.some((column) => column["name"] === "key")) sql.exec(ADD_KEY)
+    sql.exec(KEY_INDEX)
   }
 
   insert(item: StoredItem): void {
     this.#sql.exec(
-      `INSERT INTO items (${VIEW_COLUMNS}, payload) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO items (${VIEW_COLUMNS}, payload) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       item.id,
       item.kind,
+      item.key,
       item.received_at,
       item.status,
       item.note,
@@ -72,6 +81,19 @@ export class SqlStore implements Store {
   countPending(): number {
     const [row] = this.#sql.exec("SELECT count(*) AS n FROM items WHERE status = 'pending'").toArray()
     return Number(row?.["n"] ?? 0)
+  }
+
+  findSettled(kind: string, key: string): StoredItem | undefined {
+    const [row] = this.#sql
+      .exec(
+        `SELECT ${VIEW_COLUMNS}, payload FROM items
+         WHERE kind = ? AND key = ? AND status IN ('accepted', 'proposed')
+         ORDER BY received_at DESC, seq DESC LIMIT 1`,
+        kind,
+        key,
+      )
+      .toArray()
+    return row === undefined ? undefined : (row as unknown as StoredItem)
   }
 
   listSince(since: string): ItemView[] {
