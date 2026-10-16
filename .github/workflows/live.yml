@@ -88,6 +88,17 @@ jobs:
           key: cargo-live-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ hashFiles('**/*.rs') }}
           restore-keys: |
             cargo-live-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
+      # Moon's cache holds the outputs of cli:build and web:build by the hash of their inputs, so a
+      # run whose Rust and web sources match an earlier run's restores the binary and dist/ instead
+      # of building them. Without it cargo recompiles the workspace crates every run (~30 s): a
+      # fresh checkout's file times don't match the cached target/. The key changes only with the
+      # sources; restore-keys bring the newest cache when they changed.
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: .moon/cache
+          key: moon-live-${{ hashFiles('**/*.rs', '**/Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml', '.prototools', 'app/web/**', 'pnpm-lock.yaml', '!target/**', '!**/node_modules/**') }}
+          restore-keys: |
+            moon-live-
 
       - name: Build
         run: moon run cli:build web:build
