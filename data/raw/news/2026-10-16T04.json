@@ -1,0 +1,1639 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-16T04:09:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-15T19:55:47Z",
+      "title": "Présidentielle 2027 : Raphaël Glucksmann dénonce la « capitulation » de Marine Le Pen sur l’aide à l’Ukraine",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/15/presidentielle-2027-raphael-glucksmann-denonce-la-capitulation-de-marine-le-pen-sur-l-aide-a-l-ukraine_6794796_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-15T16:59:44Z",
+      "title": "Marine Le Pen exige la démission de Richard Ferrand, le Conseil constitutionnel fait corps avec son président",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/15/marine-le-pen-exige-la-demission-de-richard-ferrand-le-conseil-constitutionnel-fait-corps-avec-son-president_6794623_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "le_pen",
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-15T06:51:05Z",
+      "title": "Présidentielle 2027 : les candidats esquissent leur programme pour la presse",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/15/presse-les-candidats-a-la-presidentielle-esquissent-leur-programme_6794251_3234.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-14T12:56:04Z",
+      "title": "Présidentielle 2027 : LFI promet 106 milliards d’euros de recettes supplémentaires dans son programme budgétaire",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/14/presidentielle-2027-lfi-promet-106-milliards-d-euros-de-recettes-supplementaires-dans-son-programme-budgetaire_6793741_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-13T18:55:48Z",
+      "title": "Présidentielle 2027 : la conversion partielle de Marine Le Pen aux recettes économiques d’Emmanuel Macron",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/13/presidentielle-2027-la-conversion-partielle-de-marine-le-pen-aux-recettes-economiques-d-emmanuel-macron_6793170_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-13T09:30:01Z",
+      "title": "Présidentielle 2027 : Raphaël Glucksmann doit sortir du flou programmatique",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/13/presidentielle-2027-raphael-glucksmann-doit-sortir-du-flou-programmatique_6793086_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-13T08:30:08Z",
+      "title": "Bruno Retailleau présente un plan de 197 milliards d’euros d’économies pour redresser une France « quasiment en faillite »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/13/bruno-retailleau-presente-un-plan-de-197-milliards-d-euros-d-economies-pour-redresser-une-france-quasiment-en-faillite_6793077_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-13T03:30:01Z",
+      "title": "Marine Le Pen, en campagne sur le sujet de la protection de l’enfance à Moissac, privilégie la préservation de la famille",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/13/protection-de-l-enfance-marine-le-pen-privilegie-la-preservation-de-la-famille_6793046_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "guedj",
+        "maurel",
+        "royal"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-12T05:49:00Z",
+      "title": "Primaire à gauche : au lendemain de sa victoire, Raphaël Glucksmann veut que la gauche sociale-démocrate renoue avec la « radicalité » et incarne la « rupture »",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/live/2026/10/12/en-direct-primaire-a-gauche-les-socialistes-ont-dit-qu-ils-souhaitaient-mettre-fin-a-la-politique-de-zig-zag-d-olivier-faure-estime-philippe-brun-au-lendemain-de-la-victoire-de-raphael-glucksmann_6791926_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-12T04:00:08Z",
+      "title": "Présidentielle 2027 : refuser toute alliance avec LFI aux législatives, l’engagement fragile de Raphaël Glucksmann",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/10/12/presidentielle-2027-refuser-toute-alliance-avec-lfi-aux-legislatives-l-engagement-fragile-de-raphael-glucksmann_6792415_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-12T03:33:09Z",
+      "title": "Présidentielle 2027 : Raphaël Glucksmann, vainqueur de la primaire à gauche, doit désormais mettre la famille sociale-démocrate en ordre de bataille",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/10/12/presidentielle-2027-raphael-glucksmann-vainqueur-de-la-primaire-a-gauche-au-defi-de-mettre-la-famille-sociale-democrate-en-ordre-de-bataille_6792381_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-11T17:32:30Z",
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon promet de supprimer « l’ignominie » Parcoursup devant une salle comble à Clermont-Ferrand",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/10/11/presidentielle-2027-jean-luc-melenchon-promet-de-supprimer-l-ignominie-parcoursup-devant-une-salle-comble-a-clermont-ferrand_6792108_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-15T04:00:00Z",
+      "title": "Marine Le Pen isolée à Bruxelles après avoir menacé d’engager un « bras de fer » avec l’Europe au sujet de la contribution financière de la France",
+      "url": "https://www.lemonde.fr/international/article/2026/10/15/a-bruxelles-marine-le-pen-bien-isolee-apres-avoir-menace-l-europe-d-un-bras-de-fer_6794068_3210.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-15T03:00:16Z",
+      "title": "Présidentielle : Raphaël Glucksmann peut-il rassembler la gauche ?",
+      "url": "https://www.lemonde.fr/podcasts/article/2026/10/15/presidentielle-raphael-glucksmann-peut-il-rassembler-la-gauche_6793965_5463015.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-15T17:30:00Z",
+      "title": "« Éviter la droite la plus bête du monde » : Bruno Retailleau et David Lisnard face au risque d’une déchirure interne",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/eviter-la-droite-la-plus-bete-du-monde-bruno-retailleau-et-david-lisnard-face-au-risque-d-une-dechirure-interne-20261015"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-15T17:10:00Z",
+      "title": "Le Rassemblement national part en guerre contre le Conseil constitutionnel et Richard Ferrand",
+      "url": "https://www.lefigaro.fr/politique/le-rassemblement-national-part-en-guerre-contre-le-conseil-constitutionnel-et-richard-ferrand-20261015"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "tondelier"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-13T21:32:49Z",
+      "title": "Présidentielle 2027 : Marine Tondelier précipite les Écologistes vers une candidature autonome et incertaine",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-marine-tondelier-precipite-les-ecologistes-vers-une-candidature-autonome-et-incertaine-20261013"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-15T19:31:53Z",
+      "title": "Présidentielle 2027 : Jordan Bardella-Marine Le Pen, les secrets d’un tandem sous haute pression",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-jordan-bardella-marine-le-pen-les-secrets-d-un-tandem-sous-haute-pression-20261015"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-15T17:20:00Z",
+      "title": "Guillaume Tabard : «David Lisnard face à Bruno Retailleau, du danger d’une confrontation à l’intérêt d’une addition»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-david-lisnard-face-a-bruno-retailleau-du-danger-d-une-confrontation-a-l-interet-d-une-addition-20261015"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-15T20:18:04Z",
+      "title": "Présidentielle 2027 : 21 % des Français envisagent de quitter la France si Marine Le Pen est élue",
+      "url": "https://www.lefigaro.fr/politique/presidentielle-2027-46-des-musulmans-envisagent-de-quitter-la-france-si-marine-le-pen-est-elue-20261015"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-15T16:15:07Z",
+      "title": "Présidentielle 2027 : l’étrange flou autour de la venue de Marion Maréchal au meeting de Marine Le Pen",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-l-etrange-flou-autour-de-la-venue-de-marion-marechal-au-meeting-de-marine-le-pen-20261015"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-15T09:50:52Z",
+      "title": "Julien Aubert (LR) : « Il faut que Bruno Retailleau et David Lisnard s’entendent »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/julien-aubert-lr-il-faut-que-bruno-retailleau-et-david-lisnard-s-entendent-20261015"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-15T07:00:00Z",
+      "title": "Stéphane Azihari : « Raphaël Glucksmann, l’apostat du libéralisme »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/stephane-azihari-raphael-glucksmann-l-apostat-du-liberalisme-20261015"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-15T06:00:00Z",
+      "title": "« La victoire de Raphaël Glucksmann rapproche Jean-Luc Mélenchon du second tour » : les indiscrétions du Figaro Magazine",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/la-victoire-de-raphael-glucksmann-rapproche-jean-luc-melenchon-du-second-tour-les-indiscretions-du-figaro-magazine-20261015"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-15T07:54:15Z",
+      "title": "Guillaume Tabard : « Dettes et retraites, des choix qui ne peuvent pas attendre 2027 »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-dettes-et-retraites-des-choix-qui-ne-peuvent-pas-attendre-2027-20261014"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-14T16:37:11Z",
+      "title": "80 milliards de dépenses, festival d’impôts : le budget coup de poing de Jean-Luc Mélenchon en cas d’élection",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/80-milliards-de-depenses-festival-d-impots-le-budget-coup-de-poing-de-jean-luc-melenchon-en-cas-d-election-20261014"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T20:55:30Z",
+      "title": "«Une question assez explosive» : Edouard Philippe évoque des vacances plus courtes et un apprentissage concentré le matin",
+      "url": "https://www.liberation.fr/politique/une-question-assez-explosive-edouard-philippe-evoque-des-vacances-plus-courtes-et-un-apprentissage-concentre-le-matin-20261015_6OL2IPY2CVC3TL23TJOXZZKAZ4/"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T18:19:35Z",
+      "title": "«Personne n’a envie d’être Manuel Valls» : chez les socialistes, Olivier Faure effacé mais loin d’être évincé",
+      "url": "https://www.liberation.fr/politique/personne-na-envie-detre-manuel-valls-chez-les-socialistes-olivier-faure-efface-mais-loin-detre-evince-20261015_UMQY5FMDFRBKBEABGM2NV75JIA/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T14:34:54Z",
+      "title": "Attal, Retailleau, Philippe… Des candidats à la présidentielle 2027 au chevet de la presse écrite en souffrance",
+      "url": "https://www.liberation.fr/economie/medias/attal-retailleau-philippe-des-candidats-a-la-presidentielle-2027-au-chevet-de-la-presse-ecrite-en-souffrance-20261015_X63Z3IIVFJGTPIDJ5UCT27STUU/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T13:52:02Z",
+      "title": "Avec son référendum sur l’immigration, Marine Le Pen voudrait imposer un coup de force",
+      "url": "https://www.liberation.fr/politique/avec-son-referendum-sur-limmigration-marine-le-pen-voudrait-imposer-un-coup-de-force-20261015_I7275J5F3RAHBFZAKYCQZYMBTA/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T09:39:48Z",
+      "title": "Sur l’économie, Mélenchon poursuit son duel avec le «banquier central français» Emmanuel Moulin",
+      "url": "https://www.liberation.fr/politique/sur-leconomie-melenchon-poursuit-son-duel-avec-le-banquier-central-francais-emmanuel-moulin-20261015_2UWIQROLHRH6XGDZ3GCPMG3EMU/"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T09:08:50Z",
+      "title": "Bruno Retailleau met encore un vent à Edouard Philippe",
+      "url": "https://www.liberation.fr/politique/bruno-retailleau-met-encore-un-vent-a-edouard-philippe-20261015_QHBBGV6DPJDI3LTORN5QYY7YFQ/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T08:27:32Z",
+      "title": "Glucksmann-Mélenchon, l’heure du face-à-face : on en parle dans «Chez Pol, l’émission»",
+      "url": "https://www.liberation.fr/politique/glucksmann-melenchon-lheure-du-face-a-face-on-en-parle-dans-chez-pol-lemission-20261015_BYWRPXXZQFDMHC2VGFYUCMZTUM/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T07:58:33Z",
+      "title": "Quand le sage Ferrand montre la Constitution, Le Pen regarde le doigt",
+      "url": "https://www.liberation.fr/politique/quand-le-sage-ferrand-montre-la-constitution-le-pen-regarde-le-doigt-20261015_C5RHB6XEQBHB5FKU7QWT6FLG64/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T07:50:41Z",
+      "title": "Macron repeint en «Gulliver», Mélenchon diabolisé et une conversation avec son ânesse : on a lu «De combats et d’espoir», le dernier livre de Bruno Retailleau",
+      "url": "https://www.liberation.fr/politique/macron-repeint-en-gulliver-melenchon-diabolise-et-une-conversation-avec-son-anesse-on-a-lu-de-combats-et-despoir-le-dernier-livre-de-bruno-retailleau-20261015_JKASDWUFSFEJPEVAW4KLX3ROZM/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-15T07:28:17Z",
+      "title": "Si elle est élue en 2027, Marine Le Pen entend bien couper les aides à l’Ukraine",
+      "url": "https://www.liberation.fr/politique/elections/si-elle-est-elue-en-2027-marine-le-pen-entend-bien-couper-les-aides-a-lukraine-20261015_ILJ2ROS7DFAGDJL5J5DMT4WC44/"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-14T19:47:02Z",
+      "title": "«Incroyable de devoir se justifier sur ce sujet» : quatre semaines après avoir accouché, Marine Tondelier reprend sa campagne présidentielle",
+      "url": "https://www.liberation.fr/politique/elections/incroyable-de-devoir-se-justifier-sur-ce-sujet-quatre-semaines-apres-avoir-accouche-marine-tondelier-reprend-sa-campagne-presidentielle-20261014_DFVY3KWT5NGYBMISCNATOAKCTU/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-14T09:05:27Z",
+      "title": "Aubagne : obsédé par LFI, Bruno Retailleau va un peu trop vite en besogne",
+      "url": "https://www.liberation.fr/politique/aubagne-obsede-par-lfi-bruno-retailleau-va-un-peu-trop-vite-en-besogne-20261014_7LJEZ4LK2NAFDI5JLWOXYNUI4Y/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-14T05:06:00Z",
+      "title": "Julia Cagé et Alain Finkielkraut en débat : «Pour la gauche, éviter l’élection de Marine Le Pen n’est pas un programme politique»",
+      "url": "https://www.liberation.fr/idees-et-debats/julia-cage-et-alain-finkielkraut-en-debat-pour-la-gauche-eviter-lelection-de-marine-le-pen-nest-pas-un-programme-politique-20261014_D5XVWP2KNFGUJFG7KC3ZAMNUH4/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-13T16:08:04Z",
+      "title": "«C’est la deuxième fois que vous me faites le coup !» : David Lisnard se fait remonter les bretelles par Apolline de Malherbe en pleine interview",
+      "url": "https://www.liberation.fr/politique/cest-la-deuxieme-fois-que-vous-me-faites-le-coup-david-lisnard-se-fait-remonter-les-bretelles-par-apolline-de-malherbe-en-pleine-interview-20261013_FCVPZF4MLFEJFPC5GEL4OK2RVA/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-13T09:54:18Z",
+      "title": "Boris Vallaud compare Raphaël Glucksmann à François Mitterrand (mais celui de 1965)",
+      "url": "https://www.liberation.fr/politique/boris-vallaud-compare-raphael-glucksmann-a-francois-mitterrand-mais-celui-de-1965-20261013_CN47DVJL2FEV5CWENMN27QBRA4/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-13T09:15:19Z",
+      "title": "David Lisnard revendique plus d’adhérents qu’Edouard Philippe mais n’en apporte aucune preuve",
+      "url": "https://www.liberation.fr/politique/david-lisnard-revendique-plus-dadherents-quedouard-philippe-mais-nen-apporte-aucune-preuve-20261013_XKZORPPHBFD2ZI42M2Y6K3UK7M/"
+    },
+    {
+      "candidate_ids": [
+        "bertrand"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-13T03:55:00Z",
+      "title": "Présidentielle : Xavier Bertrand, l’ambition qui ne meurt jamais",
+      "url": "https://www.liberation.fr/politique/presidentielle-xavier-bertrand-lambition-qui-ne-meurt-jamais-20261013_26GT7N4TGBFGFDIDASGOX2R7FM/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-12T19:04:10Z",
+      "title": "Comment Raphaël Glucksmann peut-il transformer sa victoire à la primaire en dynamique de campagne ?",
+      "url": "https://www.liberation.fr/politique/comment-raphael-glucksmann-peut-il-transformer-sa-victoire-a-la-primaire-en-dynamique-de-campagne-20261012_IVZDIXG2ZZBC5MB4TR56TIXI2Q/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-12T18:45:49Z",
+      "title": "«Si ça dérive vers le macronisme, ce sera sans moi» : au lendemain de sa défaite, Royal menace déjà de ne pas faire la campagne de Glucksmann",
+      "url": "https://www.liberation.fr/politique/si-ca-derive-vers-le-macronisme-ce-sera-sans-moi-au-lendemain-de-sa-defaite-royal-menace-deja-de-ne-pas-soutenir-glucksmann-20261012_DXS3WXOHEJFL3BW3AETNL4ZP3Q/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-12T16:38:47Z",
+      "title": "Budget 2027 : Retailleau évoque une «France quasiment en faillite» et griffe Philippe et Attal",
+      "url": "https://www.liberation.fr/politique/budget-2027-retailleau-evoque-une-france-quasiment-en-faillite-et-griffe-philippe-et-attal-20261012_FFPR6VNG2FDTPCA3SGLTGHL5YA/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-12T14:24:29Z",
+      "title": "Raphaël Glucksmann peut-il rendre désirable la social-démocratie ?",
+      "url": "https://www.liberation.fr/politique/raphael-glucksmann-peut-il-rendre-desirable-la-social-democratie-20261012_QMQZMGVMYBCEBEEPO6ZJVOVUYE/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-12T11:05:00Z",
+      "title": "La Constitution selon Marine Le Pen : une autocratie électorale, par Dominique Rousseau",
+      "url": "https://www.liberation.fr/idees-et-debats/tribunes/la-constitution-selon-marine-le-pen-une-autocratie-electorale-20261012_2WWGLJ2XWREXZD4VHMZJFSXMKI/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-12T10:01:49Z",
+      "title": "Glucksmann enfariné : Bardella ne rit plus des attaques alimentaires contre les hommes politiques",
+      "url": "https://www.liberation.fr/politique/glucksmann-enfarine-bardella-ne-rit-plus-des-attaques-alimentaires-contre-les-hommes-politiques-20261012_YDJHJ2SVMVH43CSZXXKIUNXDW4/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-12T09:49:48Z",
+      "title": "Après avoir fait main basse sur le PS, le numéro vert de Glucksmann",
+      "url": "https://www.liberation.fr/politique/apres-avoir-fait-main-basse-sur-le-ps-le-numero-vert-de-glucksmann-20261012_H3YICCSTTFHQXBGXDJ54Z7RUZM/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-12T03:00:00Z",
+      "title": "Primaire PS : pourquoi la victoire de Raphaël Glucksmann est une bonne nouvelle pour Jean-Luc Mélenchon",
+      "url": "https://www.liberation.fr/politique/elections/primaire-ps-pourquoi-la-victoire-de-raphael-glucksmann-est-une-bonne-nouvelle-pour-jean-luc-melenchon-20261012_Y4NJUICFOJG23DKSAZXZLNQ42M/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-11T19:15:12Z",
+      "title": "Primaire du PS et de ses alliés : pour Raphaël Glucksmann, un premier pari réussi",
+      "url": "https://www.liberation.fr/idees-et-debats/editorial/primaire-du-ps-et-de-ses-allies-pour-raphael-glucksmann-un-premier-pari-reussi-20261011_OIKUI75ZYFDZ7CYZLRRWN2Q4V4/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-11T19:12:33Z",
+      "title": "Pendant ce temps-là, à Clermont-Ferrand, Mélenchon ignore le PS et attaque d’abord Philippe et Attal",
+      "url": "https://www.liberation.fr/politique/pendant-ce-temps-la-a-clermont-ferrand-melenchon-ignore-le-ps-et-attaque-dabord-philippe-et-attal-20261011_4VN57SIFK5CFNCWQVHEHBCHKPI/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "glucksmann",
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T21:14:38Z",
+      "title": "Présidentielle 2027 : Glucksmann boudé par la gauche, le duel Le Pen-Bardella sous tension et l'entrée en piste de David Lisnard",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-glucksmann-boude-par-la-gauche-le-duel-le-pen-bardella-sous-tension-et-l-entree-en-piste-de-david-lisnard_8239339.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T16:09:59Z",
+      "title": "Aides à l'Ukraine : \"Ne plus soutenir l'Ukraine, c'est choisir la Russie\", estime le vice-président du Congrès mondial ukrainien en réponse à Marine Le Pen",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/aides-a-l-ukraine-ne-plus-soutenir-l-ukraine-c-est-choisir-la-russie-estime-le-vice-president-du-congres-mondial-ukrainien-en-reponse-a-marine-le-pen_8239057.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T14:52:33Z",
+      "title": "Le complotiste Alain Soral, \"formateur de Jordan Bardella\" ?",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/le-complotiste-alain-soral-formateur-de-jordan-bardella_8238931.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T14:00:02Z",
+      "title": "Le RN a \"toujours défendu les intérêts de la Russie\" Gabriel Attal",
+      "url": "https://www.franceinfo.fr/politique/le-rn-a-toujours-defendu-les-interets-de-la-russie-gabriel-attal_8238646.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T11:01:02Z",
+      "title": "\"Les Européens resteront endurants, résilients, dans le soutien à l'Ukraine, c'est notre sécurité qui est en jeu\", affirme Benjamin Haddad",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/les-europeens-resteront-endurants-resilients-dans-le-soutien-a-l-ukraine-c-est-notre-securite-qui-est-en-jeu-affirme-benjamin-haddad_8238664.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T07:46:03Z",
+      "title": "Le Rassemblement national \"veut laisser les Ukrainiens se faire trucider\", lance Gabriel Attal",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/le-rassemblement-national-veut-laisser-les-ukrainiens-se-faire-trucider-lance-gabriel-attal_8238367.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T07:31:04Z",
+      "title": "\"Le nombre de lycées bloqués ne peut pas être le baromètre du mouvement, car le malaise reste\", assure Gabriel Attal",
+      "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/le-nombre-de-lycees-bloques-ne-peut-pas-etre-le-barometre-du-mouvement-car-le-malaise-reste-assure-gabriel-attal_8238310.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T07:15:44Z",
+      "title": "Gabriel Attal veut \"chercher à ce que le budget soit le moins mauvais possible\", alors que les députés ont entamé l'examen du projet de loi de finances",
+      "url": "https://www.franceinfo.fr/economie/budget/gabriel-attal-veut-chercher-a-ce-que-le-budget-soit-le-moins-mauvais-possible-alors-que-les-deputes-ont-entame-l-examen-du-projet-de-loi-de-finances_8238358.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T07:05:35Z",
+      "title": "Colère lycéenne, budget, présidentielle... Le \"8h30 franceinfo\" de Gabriel Attal",
+      "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/colere-lyceenne-budget-presidentielle-le-8h30-franceinfo-de-gabriel-attal_8217262.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-15T06:39:44Z",
+      "title": "Jean-Noël Barrot assure que la primaire du bloc central \"est ouverte jusqu'à Raphaël Glucksmann\"",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/jean-noel-barrot-assure-que-la-primaire-du-bloc-central-est-ouverte-jusqu-a-raphael-glucksmann_8238292.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-14T21:48:00Z",
+      "title": "Marine Le Pen présentera \"de manière extrêmement précise\" sa réforme des retraites le 17 novembre",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/marine-le-pen-presentera-de-maniere-extremement-precise-sa-reforme-des-retraites-le-17-novembre_8237821.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-14T18:58:18Z",
+      "title": "Présidentielle 2027 : Marine Tondelier reprend sa campagne après quatre semaines de congé maternité, et appelle à \"lâcher la grappe aux femmes\"",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/marine-tondelier-reprend-sa-campagne-apres-quatre-semaines-de-conge-maternite-et-appelle-a-lacher-la-grappe-aux-femmes_8237659.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-14T11:15:06Z",
+      "title": "La France insoumise présente son projet de budget 2027 avec 25 milliards d'euros dédiés à la \"diminution\" de la dette",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/la-france-insoumise-presente-son-projet-de-budget-2027-avec-25-milliards-d-euros-dedies-a-la-diminution-de-la-dette_8237077.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-14T07:23:45Z",
+      "title": "Contre-budget de Jean-Luc Mélenchon : \"On est environ à 108 milliards de recettes pour 80 milliards de dépenses\", précise Clémence Guetté",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/l-invite-politique/l-invite-politique-du-mercredi-14-octobre-2026_8207213.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-13T11:09:13Z",
+      "title": "Présidentielle 2027 : Richard Ferrand balaie la promesse de Marine Le Pen d'une révision de la Constitution par référendum",
+      "url": "https://www.franceinfo.fr/politique/front-national/presidentielle-2027-richard-ferrand-balaie-la-promesse-de-marine-le-pen-d-une-revision-de-la-constitution-par-referendum_8235298.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T19:07:05Z",
+      "title": "Parcoursup: \"C'est l'abandon de la méritocratie\", estime Nicolas Dupont-Aignan, candidat Debout la France à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-parcoursup-c-est-l-abandon-de-la-meritocratie-estime-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle_VN-202610150896.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T19:01:32Z",
+      "title": "Nicolas Dupont-Aignan, candidat Debout la France à l'élection présidentielle, estime que les policiers \"sont totalement abandonnés par leur hiérarchie\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle-estime-que-les-policiers-sont-totalement-abandonnes-par-leur-hierarchie_VN-202610150895.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T18:59:52Z",
+      "title": "Nicolas Dupont-Aignan, candidat Debout la France à la présidentielle, qualifie l'Union européenne \"d'organisation malfaisante\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nicolas-dupont-aignan-candidat-debout-la-france-a-la-presidentielle-qualifie-l-union-europeenne-d-organisation-malfaisante_VN-202610150894.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T18:36:13Z",
+      "title": "Raphaël Glucksmann propose un salaire de 1.000 euros pour les stagiaires: \"Par rapport à la gravité de la situation, il faut autre chose pour les jeunes\", estime Ségolène Royal",
+      "url": "https://www.bfmtv.com/politique/video-raphael-glucksmann-propose-un-salaire-de-1-000-euros-pour-les-stagiaires-par-rapport-a-la-gravite-de-la-situation-il-faut-autre-chose-pour-les-jeunes-estime-segolene-royal_VN-202610150889.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T18:33:56Z",
+      "title": "Mobilisation du 17 octobre: \"Un dirigeant qui dit que ça va être violent, suscite la violence\", pointe Ségolène Royal",
+      "url": "https://www.bfmtv.com/politique/video-mobilisation-du-17-octobre-un-dirigeant-qui-dit-que-ca-va-etre-violent-suscite-la-violence-pointe-segolene-royal_VN-202610150888.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T18:09:34Z",
+      "title": "\"Je pense que les jeunes veulent changer le système et c'est pour ça qu'il y a une radicalisation de la vie politique\", juge Ségolène Royal",
+      "url": "https://www.bfmtv.com/politique/video-je-pense-que-les-jeunes-veulent-changer-le-systeme-et-c-est-pour-ca-qu-il-y-a-une-radicalisation-de-la-vie-politique-juge-segolene-royal_VN-202610150865.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T18:07:51Z",
+      "title": "Retraites: \"Tous les discours culpabilisants sur les retraités sont devenus insupportables\", assure Ségolène Royal",
+      "url": "https://www.bfmtv.com/politique/video-retraites-tous-les-discours-culpabilisants-sur-les-retraites-sont-devenus-insupportables-assure-segolene-royal_VN-202610150863.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T18:05:20Z",
+      "title": "Mobilisation lycéenne: \"On ne peut pas leur laisser cette dette générationnelle\", assure Ségolène Royal",
+      "url": "https://www.bfmtv.com/politique/video-mobilisation-lyceenne-on-ne-peut-pas-leur-laisser-cette-dette-generationnelle-assure-segolene-royal_VN-202610150861.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T17:47:33Z",
+      "title": "\"Votre dernière déclaration est une trahison\": Édouard Philippe répond à Marine Le Pen qui veut supprimer les aides à l'Ukraine si elle est élue",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/votre-derniere-declaration-est-une-trahison-edouard-philippe-repond-a-marine-le-pen-qui-veut-supprimer-les-aides-a-l-ukraine-si-elle-est-elue_AN-202610150845.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T16:08:35Z",
+      "title": "L'EFFET GRABLY - Guerre en Ukraine: les positions de Marine Le Pen depuis le début de la guerre",
+      "url": "https://www.bfmtv.com/politique/video-l-effet-grably-guerre-en-ukraine-les-positions-de-marine-le-pen-depuis-le-debut-de-la-guerre_VN-202610150745.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T15:40:19Z",
+      "title": "LES ÉCLAIREURS - Présidentielle: selon un nouveau sondage Odoxa, Marine Le Pen s'impose à presque 40% au 1er tour en province",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-eclaireurs-presidentielle-selon-un-nouveau-sondage-odoxa-marine-le-pen-s-impose-a-presque-40-au-1er-tour-en-province_VN-202610150709.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T12:41:35Z",
+      "title": "\"Les sondages ne changent en rien ma détermination\": Bruno Retailleau s'exprime sur les résultats d'un sondage qui le place derrière David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-sondages-ne-changent-en-rien-ma-determination-bruno-retailleau-s-exprime-sur-les-resultats-d-un-sondage-qui-le-place-derriere-david-lisnard_VN-202610150569.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T12:27:37Z",
+      "title": "\"Les discussions vont commencer bientôt\": Marine Tondelier revient sur la stratégie à gauche pour la présidentielle",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-les-discussions-vont-commencer-bientot-marine-tondelier-revient-sur-la-strategie-a-gauche-pour-la-presidentielle_VN-202610150550.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-15T12:22:41Z",
+      "title": "Marine Tondelier veut \"mettre en place un vrai service public du post-partum\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-veut-mettre-en-place-un-vrai-service-public-du-post-partum_VN-202610150546.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-15T10:18:49Z",
+      "title": "Marine Tondelier à bord de la Citroën 2CV au Mondial de l'Auto",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-a-bord-de-la-citroen-2cv-au-mondial-de-l-auto_VN-202610150441.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-15T08:31:20Z",
+      "title": "\"Elle veut laisser les Ukrainiens se faire trucider\": Gabriel Attal fustige la volonté de Marine Le Pen de couper les aides à l'Ukraine si elle est élue",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/elle-veut-laisser-les-ukrainiens-se-faire-trucider-gabriel-attal-fustige-la-volonte-de-marine-le-pen-de-couper-les-aides-a-l-ukraine-si-elle-est-elue_AN-202610150350.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-15T08:25:00Z",
+      "title": "Thomas Piketty juge Raphaël Glucksmann \"pas assez à gauche\" et regrette une primaire socialiste \"assez élitiste\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/thomas-piketty-juge-raphael-glucksmann-pas-assez-a-gauche-et-regrette-une-primaire-socialiste-assez-elitiste_AV-202610150344.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T21:51:36Z",
+      "title": "Présidentielle: vers un duel Jean-Luc Mélenchon-Marine Le Pen au second tour quel que soit le candidat du bloc central, selon un sondage",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-vers-un-duel-jean-luc-melenchon-marine-le-pen-au-second-tour-quel-que-soit-le-candidat-du-bloc-central-selon-un-sondage_AD-202610140912.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T21:11:31Z",
+      "title": "\"Il va falloir qu'on se parle\": Marine Tondelier estime qu'à gauche \"personne n'est capable de remporter seul\" l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/il-va-falloir-qu-on-se-parle-marine-tondelier-estime-qu-a-gauche-personne-n-est-capable-de-remporter-seul-l-election-presidentielle_AV-202610140897.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T21:02:29Z",
+      "title": "Présidentielle: Marine Tondelier, candidate Les Écologistes, estime qu'à gauche \"personne ne peut l'emporter seul\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-marine-tondelier-candidate-les-ecologistes-estime-qu-a-gauche-personne-ne-peut-l-emporter-seul_VN-202610140894.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T20:14:44Z",
+      "title": "Présidentielle: Marine Tondelier estime qu'à gauche \"personne n'est capable de l'emporter seul\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-marine-tondelier-estime-qu-a-gauche-personne-n-est-capable-de-l-emporter-seul_VN-202610140885.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T20:01:19Z",
+      "title": "Présidentielle: Marine Tondelier revient sur son retour en campagne après son accouchement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-marine-tondelier-revient-sur-son-retour-en-campagne-apres-son-accouchement_VN-202610140872.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:57:57Z",
+      "title": "\"Il y a des femmes qui se retrouvent toutes seules\", alerte Marine Tondelier à propos du post-partum, un sujet que la candidate Les Écologistes à la présidentielle souhaite porter dans le débat public",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-y-a-des-femmes-qui-se-retrouvent-toutes-seules-alerte-marine-tondelier-a-propos-du-post-partum-un-sujet-que-la-candidate-les-ecologistes-a-la-presidentielle-souhaite-porter-dans-le-debat-public_VN-202610140870.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:48:33Z",
+      "title": "Présidentielle: Marine Tondelier, candidate Les Écologistes à l'élection présidentielle, estime qu'à gauche \"personne n'est capable de l'emporter seul\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-estime-qu-a-gauche-personne-n-est-capable-de-l-emporter-seul_VN-202610140866.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:41:12Z",
+      "title": "Pour Marine Tondelier, candidate Les Écologistes à l'élection présidentielle, \"il y a un gros problème de santé mentale des jeunes\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-il-y-a-un-gros-probleme-de-sante-mentale-des-jeunes_VN-202610140863.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:34:34Z",
+      "title": "Mobilisation lycéenne: \"Moi présidente, on ne serait pas arrivé à cette situation-là\", estime Marine Tondelier, candidate Les Écologistes à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-mobilisation-lyceenne-moi-presidente-on-ne-serait-pas-arrive-a-cette-situation-la-estime-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202610140856.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-10-14T19:31:00Z",
+      "title": "\"Beaucoup d'heures de sommeil en retard\" mais \"extrêmement déterminée\": Marine Tondelier, candidate Les Écologistes à l'élection présidentielle, revient sur son retour en campagne après sa grossesse",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-beaucoup-d-heures-de-sommeil-en-retard-mais-extremement-determinee-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-revient-sur-son-retour-en-campagne-apres-sa-grossesse_VN-202610140853.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je vois que la bouteille est entamée » : on a suivi la réunion d’appartement d’Édouard Philippe depuis chez lui",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-vois-que-la-bouteille-est-entamee-on-a-suivi-la-reunion-dappartement-dedouard-philippe-depuis-chez-lui-15-10-2026-AJGJUDG3VZE6PJFO5GHY7M3S3E.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Raphaël Glucksmann remonte dans les sondages et se rapproche d’un possible 2e tour",
+      "url": "https://www.leparisien.fr/politique/presidentielle-raphael-glucksmann-remonte-dans-les-sondages-et-se-rapproche-dun-possible-2e-tour-15-10-2026-4U3NHKINLJGM3K4F6TVM3B6KXU.php"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« S’il ne prend pas de risques… » : la mauvaise passe de Bruno Retailleau",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sil-ne-prend-pas-de-risques-la-mauvaise-passe-de-bruno-retailleau-15-10-2026-G4AB5A2QQFFX3ELEHU62PZ6IKQ.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Il faut que le travail paie »... Raphaël Glucksmann promet d’augmenter la rémunération des stagiaires",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-il-faut-que-le-travail-paie-raphael-glucksmann-promet-daugmenter-la-remuneration-des-stagiaires-15-10-2026-WKFENBD4MZCYRP3BPFHOS3H4OM.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Nous donnons en retour » : en réponse à Le Pen, Zelensky affirme que Paris « ne peut que gagner » de sa « coopération » avec Kiev",
+      "url": "https://www.leparisien.fr/international/ukraine/nous-donnons-en-retour-en-reponse-a-le-pen-zelensky-affirme-que-paris-ne-peut-que-gagner-de-sa-cooperation-avec-kiev-15-10-2026-6EMNZEE3SZDP7NMGYPIRE2ULWQ.php"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Personne n’est capable de l’emporter seul »... Marine Tondelier veut une union à gauche",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-personne-nest-capable-de-lemporter-seul-marine-tondelier-veut-une-union-a-gauche-15-10-2026-QZFISJXE7ZAK7H4VQ3GQ6NRIQY.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Jordan Bardella accusé d’antisémitisme : les Français ne le croient majoritairement pas, les électeurs du RN prêts à l’excuser",
+      "url": "https://www.leparisien.fr/elections/presidentielle/jordan-bardella-accuse-dantisemitisme-les-francais-ne-le-croient-majoritairement-pas-les-electeurs-du-rn-prets-a-lexcuser-15-10-2026-2TLNRNF735D2FFJAXELWLESAXM.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Bruno Retailleau repousse l’appel au rassemblement d’Édouard Philippe pour « laisser aux électeurs la liberté »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-bruno-retailleau-repousse-lappel-au-rassemblement-dedouard-philippe-pour-laisser-aux-electeurs-la-liberte-15-10-2026-LIIE6YFBG5FLPMNNNU6O4OBMXE.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : David Lisnard devant Bruno Retailleau selon un sondage, le candidat LR répond « très bien le vivre »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-david-lisnard-devant-bruno-retailleau-selon-un-sondage-le-candidat-lr-repond-tres-bien-le-vivre-15-10-2026-BS3HYOSMMJDCDGXA6YWFHZYLBQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Nous n’avons plus les moyens » : Marine Le Pen coupera les aides à l’Ukraine au bout de six mois si elle est élue présidente",
+      "url": "https://www.leparisien.fr/elections/presidentielle/nous-navons-plus-les-moyens-marine-le-pen-coupera-les-aides-a-lukraine-au-bout-de-six-mois-si-elle-est-elue-presidente-14-10-2026-EHQ32MUEURAVHJ7SBL22EMC3CA.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Référendum : Richard Ferrand « doit quitter la tête du Conseil constitutionnel », estime Marine Le Pen",
+      "url": "https://www.leparisien.fr/politique/referendum-richard-ferrand-doit-quitter-la-tete-du-conseil-constitutionnel-estime-marine-le-pen-14-10-2026-3HQWOGFH25HMJF4V677MWIXYNA.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : vers un duel Mélenchon-Le Pen au second tour, selon deux sondages",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-vers-un-duel-melenchon-le-pen-au-second-tour-selon-deux-sondages-14-10-2026-YQ3X2HPI25DPROYPQL3AQCQ6J4.php"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il y a Sarah Knafo avec lui ? » : la précampagne diesel d’Éric Zemmour",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-y-a-sarah-knafo-avec-lui-la-precampagne-diesel-deric-zemmour-14-10-2026-BPBEAXDNSJCU3AL7CZ457AZG54.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « N’est pas De Gaulle qui veut »… Marine Le Pen ne pourra pas réviser la Constitution par référendum, assure Richard Ferrand",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-nest-pas-de-gaulle-qui-veut-marine-le-pen-ne-pourra-pas-reviser-la-constitution-par-referendum-assure-richard-ferrand-14-10-2026-TMDB2BBOYND4TBDWXN6L6OES7A.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Yannick Jadot accuse Marine Tondelier d’être « le trait d’union des partis de gauche » et soutient Raphaël Glucksmann",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-yannick-jadot-accuse-marine-tondelier-detre-le-trait-dunion-des-partis-de-gauche-et-soutient-raphael-glucksmann-14-10-2026-RXBTUTGM7RDCDMIJE5JWPM23TM.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : Le Pen, Philippe… À qui les Français font-ils le plus confiance pour améliorer leur pouvoir d’achat ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-le-pen-philippe-a-qui-les-francais-font-ils-le-plus-confiance-pour-ameliorer-leur-pouvoir-dachat-14-10-2026-HBPDS7DZAZAYXNBHC76MBGFNG4.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Une épreuve de force » : face à la dette française, Marine Le Pen veut retirer 11 milliards d’euros de contributions à l’UE",
+      "url": "https://www.leparisien.fr/politique/une-epreuve-de-force-face-a-la-dette-francaise-marine-le-pen-veut-retirer-11-milliards-deuros-de-contributions-a-lue-14-10-2026-SMA5XPBF5FCZ3JDCT7LB75QA5E.php"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il crame la caisse » : le camp Attal se défend de vider le trésor macroniste",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-crame-la-caisse-le-camp-attal-se-defend-de-vider-le-tresor-macroniste-14-10-2026-CP2B4A3FVNEN3MD5NFUV2VMLJ4.php"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Fusillade à Aubagne : Éric Zemmour déplore une ville « largement islamisée », le maire dénonce « une provocation insoutenable »",
+      "url": "https://www.leparisien.fr/faits-divers/fusillade-a-aubagne-eric-zemmour-deplore-une-ville-largement-islamisee-le-maire-denonce-une-provocation-insoutenable-13-10-2026-YM5UMBRDMVHTPG6B6EOKMGFR3M.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ce n’est pas sur nos terres qu’il va chasser » : Raphaël Glucksmann candidat, LFI joue l’indifférence",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ce-nest-pas-sur-nos-terres-quil-va-chasser-raphael-glucksmann-candidat-lfi-joue-lindifference-13-10-2026-57G7VH2OA5DZDHCEOVJSAKYCTE.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Marion Maréchal se paie Édouard Philippe sur le dos de l’andouille de Guéméné",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-marion-marechal-se-paie-edouard-philippe-sur-le-dos-de-landouille-de-guemene-13-10-2026-7JECRGZWUBG4NKJ5GA3TH5RKOQ.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Raphaël Glucksmann : une victoire claire, une gauche toujours fracturée",
+      "url": "https://www.leparisien.fr/podcasts/code-source/raphael-glucksmann-une-victoire-claire-une-gauche-toujours-fracturee-13-10-2026-GNVN3IWBPRERJBDKR667ZVQK6A.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Extravagant », « pas une candidate sérieuse » : Terra Nova fustige le programme économique présidentiel de Marine Le Pen et du RN",
+      "url": "https://www.leparisien.fr/elections/presidentielle/extravagant-pas-une-candidate-serieuse-terra-nova-fustige-le-programme-economique-presidentiel-de-marine-le-pen-et-du-rn-13-10-2026-3SIZYATO6BGL3D6EJEQRZPUADA.php"
+    },
+    {
+      "candidate_ids": [
+        "asselineau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : François Asselineau aurait recueilli 130 000 euros pour sa 4e campagne",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-francois-asselineau-aurait-recueilli-130-000-euros-pour-sa-4e-campagne-13-10-2026-7IZ4YLLKVJEINFPX3XK2T5M3CM.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « C’est violent », Valérie Trierweiler avertit Léa Salamé après la victoire de Raphaël Glucksmann à la primaire",
+      "url": "https://www.leparisien.fr/politique/cest-violent-valerie-trierweiler-avertit-lea-salame-apres-la-victoire-de-raphael-glucksmann-a-la-primaire-13-10-2026-KMDOS3N6Z5EQBICGIF22HNSRKY.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Le téléphone n’arrête pas de sonner » : Raphaël Glucksmann au défi du rassemblement",
+      "url": "https://www.leparisien.fr/elections/presidentielle/le-telephone-narrete-pas-de-sonner-raphael-glucksmann-au-defi-du-rassemblement-13-10-2026-BAFFNXIA4VB7ZIJDA2PLJ7IWEE.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Retraites, fonctionnaires, arrêts maladie : les solutions d’urgence que va proposer le parti d’Édouard Philippe sur le budget",
+      "url": "https://www.leparisien.fr/politique/retraites-fonctionnaires-arrets-maladie-les-solutions-durgence-que-va-proposer-le-parti-dedouard-philippe-sur-le-budget-13-10-2026-7PHFKCMC7JCHJPFN35XRWZFZ7E.php"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« J’ai été bonne dans cette campagne ! » : pour Ségolène Royal, une défaite à la primaire au goût pas si amer",
+      "url": "https://www.leparisien.fr/elections/presidentielle/jai-ete-bonne-dans-cette-campagne-pour-segolene-royal-une-defaite-a-la-primaire-au-gout-pas-si-amer-12-10-2026-V5B3EKNKUBFXXJH2YM2NI3IZ4M.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« On avance en marchant » : Léa Salamé voit son retour au 20 Heures s’éloigner après la victoire de Raphaël Glucksmann à la primaire",
+      "url": "https://www.leparisien.fr/culture-loisirs/tv/on-avance-en-marchant-lea-salame-voit-son-retour-au-20-heures-seloigner-apres-la-victoire-de-raphael-glucksmann-a-la-primaire-12-10-2026-BE7SW67U2ZAXBGMWJZ6OBRJLJY.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ça n’est pas sérieux » : Bruno Retailleau attaque toujours Marine Le Pen sur l’économie",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ses-chiffres-rappellent-ceux-des-economies-socialistes-bruno-retailleau-attaque-toujours-marine-le-pen-sur-leconomie-12-10-2026-OQFROYIZ4JBQNPYSP3CVDPU72M.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : depuis Ceuta, Jordan Bardella détaille les propositions du RN sur l’immigration avec l’extrême droite espagnole",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-depuis-ceuta-jordan-bardella-detaille-les-propositions-du-rn-sur-limmigration-aux-cotes-lextreme-droite-espagnole-12-10-2026-OSZPFHRRNFE25DNDJEVXKCVSDQ.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il faut se mettre d’accord ! » : après la victoire de Raphaël Glucksmann, le bloc central dans l’incertitude",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-faut-se-mettre-daccord-apres-la-victoire-de-raphael-glucksmann-le-bloc-central-dans-lincertitude-12-10-2026-SZMWO2GM3FENBJ34676DYUML2U.php"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : face à la « poudrière financière », Bruno Retailleau promet des économies de près de 197 milliards d’euros",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-face-a-la-poudriere-financiere-bruno-retailleau-promet-des-economies-de-pres-de-197-milliards-deuros-12-10-2026-TRVEVPXGNBHL5AWDOKD7IBPXBQ.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Effacement » du PS, « convergences », « repli » : après la victoire de Raphaël Glucksmann, les réactions contrastées des responsables de gauche",
+      "url": "https://www.leparisien.fr/elections/presidentielle/effacement-du-ps-convergences-repli-apres-la-victoire-de-raphael-glucksmann-les-reactions-contrastees-des-responsables-de-gauche-12-10-2026-OS5L7THXDRHIFO7HMX254J7SYU.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ça ne changera pas mon vote » : malgré la polémique, les partisans de Bardella croient encore en lui",
+      "url": "https://www.leparisien.fr/politique/ca-ne-changera-pas-mon-vote-malgre-la-polemique-les-electeurs-de-bardella-croient-encore-en-lui-12-10-2026-RBCFXUXMVZCEZIQHYOKG6UVFAU.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : Marine Le Pen largement en tête, devant Jean-Luc Mélenchon au second tour dans tous les scénarios",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-marine-le-pen-largement-en-tete-devant-jean-luc-melenchon-au-second-tour-dans-tous-les-scenarios-12-10-2026-LP7J2RQTVVGWPLPLAYJ3YJMG4E.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ce que dit Jordan Bardella sur son téléphone m’intéresse peu » : Éric Zemmour réagit aux propos antisémites prêtés au patron du RN",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ce-que-dit-jordan-bardella-sur-son-telephone-minteresse-peu-eric-zemmour-reagit-aux-propos-antisemites-pretes-au-patron-du-rn-12-10-2026-VCKXMFOUYFFG5ARTDMPP7GA5UI.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je suis prêt à affronter la violence de cette campagne » : Raphaël Glucksmann cible LFI après son enfarinage le soir de sa victoire à la primaire",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-suis-pret-a-affronter-la-violence-de-cette-campagne-raphael-glucksmann-reagit-a-son-enfarinage-apres-sa-victoire-a-la-primaire-12-10-2026-EJEENP3RBBC7JHHC4A5CW7MWWU.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Primaire sociale-démocrate : au lendemain de sa victoire, le candidat Glucksmann compte « chasser l'esprit de la défaite »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/direct-primaire-sociale-democrate-au-lendemain-de-la-victoire-de-raphael-glucksmann-la-gauche-non-melenchoniste-lance-sa-campagne-12-10-2026-I5Y3KVQN65CJTIQSVFHNGBH5E4.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Primaire sociale-démocrate : Raphaël Glucksmann enfariné à la sortie de son QG à Paris",
+      "url": "https://www.leparisien.fr/politique/raphael-glucksmann-enfarine-apres-sa-victoire-a-la-primaire-de-la-gauche-11-10-2026-NJKLYUEXFNEJRM3MQHY62UXMAI.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ce soir, la bataille de France commence ! » : la victoire haut la main de Raphaël Glucksmann à la primaire",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ce-soir-la-bataille-de-france-commence-la-victoire-haut-la-main-de-raphael-glucksmann-a-la-primaire-11-10-2026-IEN7C32GL5CBNEGPCHNHCVWDBE.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Le stagiaire a gagné » : Ségolène Royal s’en prend de nouveau à Raphaël Glucksmann après sa victoire à la primaire sociale-démocrate",
+      "url": "https://www.leparisien.fr/politique/primaire-a-gauche-cest-le-stagiaire-qui-a-gagne-segolene-royal-pique-a-nouveau-raphael-glucksmann-apres-sa-victoire-11-10-2026-ZDL63QM7YRFTHOS4XQSGQU7A4A.php"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« C’est dur pour lui » : la sévère défaite d’Olivier Faure qui fragilise le numéro un du PS",
+      "url": "https://www.leparisien.fr/elections/presidentielle/cest-dur-pour-lui-la-severe-defaite-dolivier-faure-qui-fragilise-le-numero-un-du-ps-11-10-2026-I2JMQ3A6BNAXRIQQYBWTLEFNR4.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Le cri qui annonce la fin d’une période » : à Clermont-Ferrand, Jean-Luc Mélenchon en porte-voix d’une jeunesse en colère",
+      "url": "https://www.leparisien.fr/elections/presidentielle/le-cri-qui-annonce-la-fin-dune-periode-a-clermont-ferrand-jean-luc-melenchon-en-porte-voix-dune-jeunesse-en-colere-11-10-2026-7IVCMMG2C5DJLONAC4XTX2EUI4.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Primaire à gauche pour la présidentielle 2027 : Raphaël Glucksmann désigné candidat dès le premier tour avec 66,13 % des voix",
+      "url": "https://www.leparisien.fr/politique/primaire-a-gauche-pour-la-presidentielle-2027-raphael-glucksmann-designe-candidat-des-le-premier-tour-avec-6613-des-voix-11-10-2026-LXUHW2AU5VBNLGKZMJI7FABLFM.php"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je veux bien faire tiers de confiance » : devant Philippe et Attal, Borloo fait offre de service",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-veux-bien-faire-tiers-de-confiance-devant-philippe-et-attal-borloo-fait-offre-de-service-11-10-2026-UI74P25TZ5A6PMRGF4XYAFTC44.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-15T17:10:55Z",
+      "title": "Présidentielle 2027 : Glucksmann rattrape Mélenchon et Philippe pour la deuxième place, dans un nouveau sondage",
+      "url": "https://www.20minutes.fr/politique/4254742-20261015-presidentielle-2027-glucksmann-rattrape-melenchon-philippe-deuxieme-place-nouveau-sondage"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-15T13:51:30Z",
+      "title": "Accusations d’antisémitisme : Une majorité de Français ne croit pas Bardella mais les électeurs RN prêts à passer l’éponge",
+      "url": "https://www.20minutes.fr/politique/4254665-20261015-accusations-antisemitisme-majorite-francais-croit-bardella-electeurs-rn-prets-passer-eponge"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-15T13:23:59Z",
+      "title": "Présidentielle 2027 : « 1.000 euros minimum »… Raphaël Glucksmann promet à ses « amis » stagiaires de les augmenter",
+      "url": "https://www.20minutes.fr/politique/4254658-20261015-presidentielle-2027-1-000-euros-minimum-raphael-glucksmann-promet-amis-stagiaires-augmenter"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-14T18:54:06Z",
+      "title": "Présidentielle 2027 : Richard Ferrand « doit quitter la tête du Conseil constitutionnel », estime Marine Le Pen",
+      "url": "https://www.20minutes.fr/politique/4254402-20261014-presidentielle-richard-ferrand-doit-quitter-tete-conseil-constitutionnel-estime-marine-pen"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-14T17:59:24Z",
+      "title": "Présidentielle 2027 : Mélenchon chipe la deuxième place à Philippe, mais serait balayé par Le Pen au second tour",
+      "url": "https://www.20minutes.fr/politique/4254394-20261014-presidentielle-melenchon-chipe-deuxieme-place-philippe-balaye-pen-second-tour"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-14T14:03:15Z",
+      "title": "Présidentielle : Dette réduite, relance économique… Que propose Jean-Luc Mélenchon pour le budget 2027 ?",
+      "url": "https://www.20minutes.fr/politique/4254310-20261014-presidentielle-dette-reduite-relance-economique-propose-jean-luc-melenchon-budget-2027"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-14T12:29:29Z",
+      "title": "Dans quels pays peut-on voter dès l’âge de 16 ans ?",
+      "url": "https://www.20minutes.fr/monde/4254185-20261014-pays-peut-voter-age-16-ans"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-14T02:54:46Z",
+      "title": "Présidentielle 2027 : Ségolène Royal pose ses conditions pour aider Raphaël Glucksmann",
+      "url": "https://www.20minutes.fr/politique/4254121-20261014-presidentielle-2027-segolene-royal-pose-conditions-aider-raphael-glucksmann"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-15T15:47:11Z",
+      "title": "Union européenne : comment est abondé le budget et que finance-t-il ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/union-europeenne-comment-est-abonde-le-budget-et-que-finance-t-il"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-14T16:02:00Z",
+      "title": "Sondage : Marine Le Pen creuse l’écart et s’installe en grande favorite à quelques mois de la présidentielle",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-marine-le-pen-creuse-lecart-et-sinstalle-en-grande-favorite-a-quelques-mois-de-la-presidentielle"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-14T16:00:00Z",
+      "title": "Sondage présidentielle 2027 : Jean-Luc Mélenchon passe devant Édouard Philippe au premier tour, le centre cherche son cap",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-presidentielle-2027-jean-luc-melenchon-passe-devant-edouard-philippe-au-premier-tour-le-centre-cherche-son-cap"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-14T15:32:30Z",
+      "title": "Crise lycéenne : Bruno Retailleau veut « une sélection à l’université »",
+      "url": "https://www.publicsenat.fr/actualites/politique/crise-lyceenne-bruno-retailleau-veut-une-selection-a-luniversite"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-14T12:43:20Z",
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon table sur 106 milliards de recettes supplémentaires et 82 milliards de dépenses nouvelles pour 2027",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-jean-luc-melenchon-table-sur-106-milliards-de-recettes-supplementaires-et-82-milliards-de-depenses-nouvelles-pour-2027"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-13T16:34:00Z",
+      "title": "« Maintenant, il doit rassembler tout le monde » : les sénateurs PS attendent « des signes » d’unité de Raphaël Glucksmann",
+      "url": "https://www.publicsenat.fr/actualites/politique/maintenant-il-doit-rassembler-tout-le-monde-les-senateurs-ps-attendent-des-signes-dunite-de-raphael-glucksmann"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "glucksmann",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-12T07:40:47Z",
+      "title": "Bonjour chez vous ! — Mélenchon, Le Pen, profiteurs du chaos ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/melenchon-le-pen-profiteurs-du-chaos-e0"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-12T07:40:44Z",
+      "title": "Bonjour chez vous ! — Glucksmann est-il de gauche ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/glucksmann-est-il-de-gauche-e0"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-12T07:40:43Z",
+      "title": "Bonjour chez vous ! — 2027 : Glucksmann a-t-il ses chances ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/2027-glucksmann-a-t-il-ses-chances-e0"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-12T07:40:42Z",
+      "title": "Bonjour chez vous ! — Nicolas Mayer-Rossignol : « Les querelles internes du PS, on s’en fout »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/nicolas-mayer-rossignol-les-querelles-internes-du-ps-on-sen-fout-e0"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-15T16:44:31Z",
+      "title": "Lecornu face aux crises, Marine Le Pen veut supprimer l'aide à l'Ukraine",
+      "url": "https://www.france24.com/fr/%C3%A9missions/politique/20261015-lecornu-face-aux-crises-marine-le-pen-veut-supprimer-l-aide-%C3%A0-l-ukraine"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-15T13:13:37Z",
+      "title": "Raphaël Glucksmann pourra-t-il rassembler ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/questions-directes/20261015-rapha%C3%ABl-glucksmann-rassembler-gauche-presidentielle"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-15T06:29:28Z",
+      "title": "Présidentielle 2027 : Marine Le Pen coupera l'aide à l'Ukraine au bout de six mois si elle est élue",
+      "url": "https://www.france24.com/fr/france/20261015-pr%C3%A9sidentielle-2027-marine-le-pen-coupera-aide-ukraine-six-mois-si-%C3%A9lue"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-14T11:06:42Z",
+      "title": "Victoire de Raphaël Glucksmann à la primaire PS-Place Publique : le défi du rassemblement",
+      "url": "https://www.france24.com/fr/%C3%A9missions/face-%C3%A0-face/20261014-victoire-de-rapha%C3%ABl-glucksmann-%C3%A0-la-primaire-ps-place-publique-le-d%C3%A9fi-du-rassemblement"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-14T10:09:03Z",
+      "title": "Présidentielle 2027 : \"le plus dur commence\" pour Raphaël Glusksmann",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261014-pr%C3%A9sidentielle-2027-le-plus-dur-commence-pour-rapha%C3%ABl-glusksmann"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-14T07:12:48Z",
+      "title": "Ségolène Royal : si Raphaël Glucksmann \"dérive vers le macronisme, ce sera sans moi\"",
+      "url": "https://www.france24.com/fr/%C3%A9missions/mardi-politique/20261014-s%C3%A9gol%C3%A8ne-royal-si-rapha%C3%ABl-glucksmann-d%C3%A9rive-vers-le-macronisme-ce-sera-sans-moi"
+    }
+  ],
+  "schema_version": "1.0"
+}
