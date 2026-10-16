@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import type { Forecast, Poll, SeriesPoint } from "./api/schemas"
-import { midpoint, round1Panels, round2Matrix, scale, shareTicks } from "./charts"
+import { midpoint, outcomeGroups, round1Panels, round2Matrix, scale, shareTicks } from "./charts"
 
 const candidate = (id: string, pQualify: number, pWin: number) => ({
   candidate_id: id,
@@ -111,5 +111,47 @@ describe("helpers", () => {
   it("picks clean share ticks", () => {
     expect(shareTicks(0.27)).toEqual([0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3])
     expect(shareTicks(0.36)).toEqual([0, 0.1, 0.2, 0.3, 0.4])
+  })
+})
+
+const withWin = (id: string, pWin: number) => ({ ...candidate(id, 0, pWin), p_win: pWin })
+
+describe("outcomeGroups", () => {
+  it("gives a dot per point of probability, rounded as the tables round, largest first", () => {
+    const groups = outcomeGroups([withWin("b", 0.067), withWin("a", 0.816), withWin("c", 0.058), withWin("d", 0.059)])
+    expect(groups.map((g) => [g.candidateId, g.dots])).toEqual([
+      ["a", 82],
+      ["b", 7],
+      ["d", 6],
+      ["c", 6],
+    ])
+  })
+
+  it("pools everyone below half a point last, and drops what rounds to no dot", () => {
+    const groups = outcomeGroups([
+      withWin("a", 0.9),
+      withWin("b", 0.08),
+      withWin("c", 0.004),
+      withWin("d", 0.004),
+      withWin("e", 0.004),
+      withWin("f", 0.004),
+      withWin("g", 0),
+    ])
+    expect(groups.map((g) => [g.candidateId, g.dots, g.members])).toEqual([
+      ["a", 90, 1],
+      ["b", 8, 1],
+      [null, 2, 4],
+    ])
+    expect(groups[2]?.probability).toBeCloseTo(0.016)
+    expect(outcomeGroups([withWin("a", 0.997), withWin("b", 0.003)]).map((g) => g.candidateId)).toEqual(["a"])
+  })
+
+  it("keeps a full hundred dots for certainty", () => {
+    expect(outcomeGroups([withWin("a", 0.997), withWin("b", 0.003)])[0]?.dots).toBe(99)
+    expect(outcomeGroups([withWin("a", 1)])[0]?.dots).toBe(100)
+  })
+
+  it("is empty when nobody can win", () => {
+    expect(outcomeGroups([withWin("a", 0)])).toEqual([])
   })
 })

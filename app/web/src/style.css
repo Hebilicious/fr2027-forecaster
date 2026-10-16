@@ -1,109 +1,296 @@
+/*
+ * Obsidienne: the page is polished volcanic glass, Delacroix's painting shows through it, and the
+ * tricolour is kept for punctuation, as the painting keeps it for the flag. One dark theme only.
+ *
+ * Data marks follow one rule for every candidate (SPEC: identical treatment and color logic):
+ * bleu for the model's numbers, a neutral grey for context, rouge only for what the reader picks.
+ * Bleu and rouge pass the data-viz palette checks on --surface (CVD ΔE 26, contrast over 3:1).
+ */
 :root {
-  color-scheme: light;
-  --page: #f9f9f7;
-  --surface: #fcfcfb;
-  --ink: #0b0b0b;
-  --ink-2: #52514e;
-  --muted: #6f6d68;
-  --grid: #e1e0d9;
-  --axis: #c3c2b7;
-  --border: rgba(11, 11, 11, 0.1);
-  --series: #2a78d6;
-  --series-wash: rgba(42, 120, 214, 0.12);
-  --accent: #eb6834;
-  --dot: #898781;
-  --warning: #fab219;
-  --seq-0: #f0efec;
-  --seq-1: #cde2fb;
-  --seq-2: #9ec5f4;
-  --seq-3: #6da7ec;
-  --seq-4: #3987e5;
-  --seq-5: #256abf;
-  --seq-6: #184f95;
-  --seq-7: #0d366b;
-  --radius: 8px;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  line-height: 1.45;
+  color-scheme: dark;
+
+  /* Obsidian, darkest first. --surface is what a glass card looks like over the page. */
+  --page: #07090d;
+  --page-deep: #040508;
+  --surface: #111419;
+  --surface-raised: #1c1f25;
+
+  /* Ink is a warm white, like the flag's white in the painting. */
+  --ink: #f3efe6;
+  --ink-2: #cfc8ba;
+  --muted: #9a9384;
+
+  /* Data. */
+  --series: #587cf1;
+  --series-wash: rgba(88, 124, 241, 0.16);
+  --series-glow: rgba(88, 124, 241, 0.4);
+  --accent: #e64343;
+  --dot: #8a857e;
+  --grid: rgba(243, 239, 230, 0.07);
+  --axis: rgba(243, 239, 230, 0.2);
+  --warning: #f2b544;
+
+  /* The flag, for ornament only: never on a candidate. */
+  --flag-bleu: #3d5bf0;
+  --flag-blanc: #f3efe6;
+  --flag-rouge: #e8413c;
+  --tricolore: linear-gradient(
+    90deg,
+    var(--flag-bleu) 0 33.33%,
+    var(--flag-blanc) 33.33% 66.66%,
+    var(--flag-rouge) 66.66% 100%
+  );
+
+  /* Links and focus rings: a pale bleu that reads as text on obsidian (8:1). */
+  --link: #a9bcff;
+  --focus: #a9bcff;
+
+  /* Sequential bleu for magnitude, dim to bright: low values sink into the obsidian. */
+  --seq-0: #1d1f24;
+  --seq-1: #1d2c51;
+  --seq-2: #263c74;
+  --seq-3: #304d99;
+  --seq-4: #3d5fbb;
+  --seq-5: #4c73db;
+  --seq-6: #6a90f1;
+  --seq-7: #92b2fe;
+
+  /* Glass. */
+  --glass: rgba(14, 16, 22, 0.66);
+  --glass-sheen: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.018) 42%,
+    rgba(255, 255, 255, 0.01)
+  );
+  --rim: rgba(255, 255, 255, 0.075);
+  --border: rgba(255, 255, 255, 0.09);
+  --shadow: 0 1px 1px rgba(0, 0, 0, 0.35), 0 28px 60px -28px rgba(0, 0, 0, 0.9);
+  --radius: 20px;
+  --radius-sm: 12px;
+
+  --font-display: "Bodoni Moda Variable", "Bodoni 72", Didot, "Bodoni MT", Georgia, serif;
+  --font-sans: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  --content: 1240px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --topbar-h: 64px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
+  font-feature-settings: "cv11", "ss03";
+  line-height: 1.5;
   color: var(--ink);
   background: var(--page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --page: #0d0d0d;
-    --surface: #1a1a19;
-    --ink: #ffffff;
-    --ink-2: #c3c2b7;
-    --muted: #a3a29b;
-    --grid: #2c2c2a;
-    --axis: #383835;
-    --border: rgba(255, 255, 255, 0.1);
-    --series: #3987e5;
-    --series-wash: rgba(57, 135, 229, 0.18);
-    --accent: #d95926;
-    --dot: #898781;
-    --seq-0: #383835;
+/* Two rows below 960px: the brand and the language, then the views. */
+@media (max-width: 960px) {
+  :root {
+    --topbar-h: 100px;
   }
-}
-
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --page: #0d0d0d;
-  --surface: #1a1a19;
-  --ink: #ffffff;
-  --ink-2: #c3c2b7;
-  --muted: #a3a29b;
-  --grid: #2c2c2a;
-  --axis: #383835;
-  --border: rgba(255, 255, 255, 0.1);
-  --series: #3987e5;
-  --series-wash: rgba(57, 135, 229, 0.18);
-  --accent: #d95926;
-  --dot: #898781;
-  --seq-0: #383835;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: calc(var(--topbar-h) + 16px);
+}
+
+/* No background here: the root carries it, and a body background would cover .backdrop. */
 body {
   margin: 0;
-  background: var(--page);
+  min-height: 100vh;
   color: var(--ink);
+  font-size: 0.9375rem;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(88, 124, 241, 0.45);
+  color: #ffffff;
+}
+
+/*
+ * The page behind everything: the flag's blue and red as faint glows in the glass, the painting's
+ * smoke-gold rising from below, and a fine grain so large dark areas read as stone, not as a screen.
+ */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(70rem 42rem at -6% -12%, rgba(43, 68, 214, 0.2), transparent 62%),
+    radial-gradient(56rem 38rem at 108% 2%, rgba(225, 0, 15, 0.11), transparent 64%),
+    radial-gradient(80rem 48rem at 50% 118%, rgba(196, 150, 92, 0.1), transparent 62%),
+    linear-gradient(180deg, var(--page) 0%, var(--page-deep) 100%);
+}
+
+.backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 a {
-  color: var(--series);
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(169, 188, 255, 0.4);
+  transition:
+    color 0.2s,
+    text-decoration-color 0.2s;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
 }
 
 h1,
 h2,
-h3 {
-  line-height: 1.2;
+h3,
+h4 {
+  line-height: 1.15;
   margin: 0;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 h2 {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: clamp(1.45rem, 1.2rem + 0.9vw, 1.85rem);
 }
 
 h3 {
-  font-size: 0.95rem;
+  font-size: 1rem;
+  letter-spacing: -0.005em;
+}
+
+h4 {
+  font-size: 0.72rem;
   font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 p {
   margin: 0;
 }
 
+/* A small uppercase label above a heading. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+/* The three bands of the flag as a short rule. */
+.tricolore-rule {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--tricolore);
+  flex: none;
+}
+
+/*
+ * Glass: a translucent panel that blurs what lies behind it, lit along its top edge, with a rim
+ * that catches light at the top left and a faint blue and red at the bottom right.
+ */
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  position: relative;
+  background: var(--glass-sheen), var(--glass);
   border-radius: var(--radius);
-  padding: 16px;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px var(--rim),
+    var(--shadow);
+  padding: clamp(18px, 2.4vw, 28px);
+  isolation: isolate;
+  /* A grid item may shrink below its widest table, which then scrolls inside the card. */
+  min-width: 0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.26),
+    rgba(255, 255, 255, 0.05) 22%,
+    rgba(255, 255, 255, 0) 48%,
+    rgba(61, 91, 240, 0.2) 80%,
+    rgba(232, 65, 60, 0.18)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/*
+ * A card over the painting blurs it. Elsewhere the page behind a card is a smooth gradient that a
+ * blur would not change, so cards skip the cost of blurring while the page scrolls.
+ */
+.card.over-painting {
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .card.over-painting {
+    background: var(--glass-sheen), #0e1116;
+  }
+}
+
+/* A card's heading block: optional eyebrow, the title, a line of help. */
+.card-head {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.card-head p {
+  max-width: 68ch;
 }
 
 .muted {
@@ -115,35 +302,61 @@ p {
 }
 
 .small {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
 }
 
 .num {
   font-variant-numeric: tabular-nums;
 }
 
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+/* Positioned, so screen-reader-only text in a wide table is clipped with it instead of widening the page. */
 .table-wrap {
+  position: relative;
   overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
 th,
 td {
   text-align: left;
-  padding: 8px 10px;
+  padding: 11px 12px;
   border-bottom: 1px solid var(--grid);
   vertical-align: middle;
 }
 
-th {
+thead th {
   font-weight: 600;
-  color: var(--ink-2);
-  font-size: 0.82rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-top: 0;
+  border-bottom-color: rgba(243, 239, 230, 0.12);
+  white-space: nowrap;
+}
+
+tbody tr {
+  transition: background-color 0.25s;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+tbody tr:last-child > * {
+  border-bottom: none;
 }
 
 td.num,
@@ -152,33 +365,40 @@ th.num {
 }
 
 .badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  padding: 1px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 2px 10px;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px var(--border);
   color: var(--ink-2);
   white-space: nowrap;
 }
 
+/* A status line: an icon, then text. The icon carries the state, never the color alone. */
 .notice {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: flex-start;
-  padding: 10px 12px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: var(--surface);
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(242, 181, 68, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(242, 181, 68, 0.22);
   font-size: 0.9rem;
+  color: var(--ink-2);
 }
 
 .notice .icon {
   flex: none;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: var(--warning);
-  color: #0b0b0b;
+  color: #1a1206;
   font-weight: 700;
   font-size: 12px;
   display: grid;
@@ -186,32 +406,68 @@ th.num {
   margin-top: 1px;
 }
 
+/* The note on what a probability means: informative, not a warning. */
+.notice.note {
+  background: rgba(88, 124, 241, 0.07);
+  box-shadow: inset 0 0 0 1px rgba(88, 124, 241, 0.24);
+}
+
+.notice.note .icon {
+  background: var(--ink);
+  color: var(--page);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+}
+
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   align-items: center;
 }
 
 .chip {
   font: inherit;
-  font-size: 0.85rem;
-  padding: 3px 10px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 7px 14px;
+  border: none;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--ink);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: inset 0 0 0 1px var(--border);
+  color: var(--ink-2);
   cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+
+.chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink);
 }
 
 .chip[aria-pressed="true"] {
-  border-color: var(--accent);
-  box-shadow: inset 0 0 0 1px var(--accent);
+  background: var(--ink);
+  color: var(--page);
+  box-shadow:
+    0 0 0 1px var(--ink),
+    0 6px 18px -6px rgba(243, 239, 230, 0.45);
 }
 
 .stack {
   display: grid;
   gap: 16px;
+}
+
+.grid-2 {
+  display: grid;
+  gap: clamp(16px, 2vw, 24px);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  align-items: start;
 }
 
 .sr-only {
@@ -224,4 +480,40 @@ th.num {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Views and their cards rise into place. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+.rise {
+  animation: rise 0.8s var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .card::before,
+  .backdrop {
+    display: none;
+  }
 }

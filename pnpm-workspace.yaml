@@ -3,6 +3,8 @@ packages:
 
 # Every package names its versions with `catalog:`; versions live only here.
 catalog:
+  "@fontsource-variable/bodoni-moda": "5.3.0"
+  "@fontsource-variable/inter": "5.3.0"
   "@gommage/cli": "0.1.0"
   "@types/node": "24.19.1"
   "@vitejs/plugin-vue": "6.0.9"

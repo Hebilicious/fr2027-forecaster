@@ -4,6 +4,17 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-16
 
+### UI redesign: obsidian glass, the tricolour and Delacroix
+
+The UI is redesigned around three references from the owner: obsidian glass, the French colours, and Delacroix's _La Liberté guidant le peuple_.
+
+- **One dark theme.** Panels are frosted glass over a near-black page; the light theme is gone.
+- **The painting.** `app/web/src/assets/liberte.avif` (3,200 px wide, 242 kB) and `liberte.webp` (2,400 px, 311 kB, for browsers without AVIF) are made from the Wikimedia Commons file "La Liberté guidant le peuple - Eugène Delacroix - Musée du Louvre Peintures RF 129 - après restauration 2024.jpg", a photograph of the canvas after its 2024 restoration, public domain. Each view shows its own detail behind its heading (Liberty and the flag, the man kneeling in blue, white and red, the boy and Notre-Dame, the flag, the signature), and changing view pans across the canvas (`app/web/src/painting.ts`). The footer credits the work.
+- **Fonts.** Bodoni Moda for headings and Inter for text and every number, both under the SIL Open Font License, bundled from the `@fontsource-variable` packages. The site's Content-Security-Policy allows only same-origin fonts, styles and scripts: every view, loaded in a browser under that policy, reports no violation. Files under `/assets/` are named after their content, so `_headers` now lets browsers cache them for a year.
+- **Neutrality.** The flag's colours are ornament only: the rule along the top, the cocarde, the current view's marker. Neither colour is tied to a candidate or a bloc. Every candidate's numbers are drawn in one blue; polls and the pooled small candidates in grey; red marks only the pollster a reader highlights, and the negative share of X sentiment. The blue (#587cf1) and red (#e64343) pass the data-viz palette checks on the glass surface: colour-blind separation ΔE 26 (target 8), contrast over 3:1.
+- **Overview.** A dot chart leads: one dot per percentage point of each candidate's chance of winning, with everyone below half a point pooled (`outcomeGroups` in `app/web/src/charts.ts`). Dots are rounded as the table rounds its percentages, so they can add up to 99 or 101, and only a certainty fills all 100 (a ">99%" chance gets 99). Sharing out exactly 100 by largest remainder was tried and dropped: it gave Le Pen 81 dots while the table shows 82%. The candidate table, sorted by chance of winning, now shows that column first, then reaching round 2, then running, so the first three stay on screen on a phone.
+- **Round 2.** The matrix uses a sequential blue that brightens with the chance of the pairing. Each likely duel is a split bar in one blue, with a mark at 50%: where the gap falls says who is ahead.
+
 ### Pipeline: Grok Bot checks polls blind and changes the field
 
 The owner's decision: Grok Bot is the only agent that collects and edits, and no person is in the loop. The two jobs a person did, checking polls against their notices and changing `config/candidates.yaml`, go through the inbox as two new item kinds that the Live workflow checks and commits like any other data (`docs/grok-bot.md`, routine 4).

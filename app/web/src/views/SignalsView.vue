@@ -16,21 +16,33 @@ const names = computed(() => candidateNames(props.forecast))
 </script>
 
 <template>
-  <section class="stack">
-    <div class="stack">
-      <h2>{{ t("signalsTitle") }}</h2>
-      <p class="secondary small">{{ t("signalsIntro") }}</p>
-    </div>
+  <div class="signals">
     <p v-if="!signals" class="notice" role="status">
       <span aria-hidden="true" class="icon">!</span>
       <span>{{ t("signalsMissing") }}</span>
     </p>
     <template v-else>
-      <MarketsSection :forecast="forecast" :markets="signals.markets" />
-      <AttentionSection :attention="signals.attention" :names="names" />
-      <NewsSection :news="signals.news" :names="names" />
-      <XSection :rows="signals.x.rows" :names="names" />
-      <EventsSection :events="signals.events" :names="names" />
+      <MarketsSection class="rise" :forecast="forecast" :markets="signals.markets" />
+      <div class="pair">
+        <AttentionSection class="rise" :style="{ '--i': 1 }" :attention="signals.attention" :names="names" />
+        <XSection class="rise" :style="{ '--i': 2 }" :rows="signals.x.rows" :names="names" />
+      </div>
+      <NewsSection class="rise" :style="{ '--i': 3 }" :news="signals.news" :names="names" />
+      <EventsSection class="rise" :style="{ '--i': 4 }" :events="signals.events" :names="names" />
     </template>
-  </section>
+  </div>
 </template>
+
+<style scoped>
+.signals {
+  display: grid;
+  gap: clamp(20px, 2.4vw, 28px);
+}
+
+.pair {
+  display: grid;
+  gap: clamp(20px, 2.4vw, 28px);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+  align-items: start;
+}
+</style>

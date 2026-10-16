@@ -58,35 +58,41 @@ const quarantined = computed(() =>
 </script>
 
 <template>
-  <section class="stack">
-    <h2>{{ t("sourcesTitle") }}</h2>
-
-    <div v-if="health?.warnings.length" class="stack">
+  <div class="sources">
+    <div v-if="health?.warnings.length" class="stack rise">
       <p v-for="w in health.warnings" :key="w" class="notice" role="status">
         <span aria-hidden="true" class="icon">!</span>
         <span>{{ w }}</span>
       </p>
     </div>
-    <p v-else-if="health" class="secondary">{{ t("healthy") }}</p>
+    <p v-else-if="health" class="healthy rise">
+      <span aria-hidden="true" class="tick">✓</span>
+      {{ t("healthy") }}
+    </p>
 
     <div class="grid-2">
-      <div class="card stack">
-        <h3>{{ t("latestRun") }}</h3>
-        <dl class="facts small">
+      <section aria-labelledby="run-title" class="card rise" :style="{ '--i': 1 }">
+        <header class="card-head">
+          <h2 id="run-title">{{ t("latestRun") }}</h2>
+        </header>
+        <dl class="facts">
           <dt>{{ t("file") }}</dt>
-          <dd class="num">data/forecasts/{{ health?.latest_forecast?.file ?? "—" }}</dd>
+          <dd class="mono">data/forecasts/{{ health?.latest_forecast?.file ?? "—" }}</dd>
           <dt>{{ t("generatedAt") }}</dt>
           <dd>{{ dateTime(forecast.generated_at, locale) }}</dd>
           <dt>{{ t("lastFieldwork") }}</dt>
           <dd>{{ forecast.aggregation.last_field_end ? longDate(forecast.aggregation.last_field_end, locale) : "—" }}</dd>
           <dt>inputs_hash</dt>
-          <dd class="num hash">{{ forecast.inputs_hash }}</dd>
+          <dd class="mono hash">{{ forecast.inputs_hash }}</dd>
         </dl>
-      </div>
-      <div class="card stack">
-        <h3>{{ t("collectors") }}</h3>
+      </section>
+
+      <section aria-labelledby="collectors-title" class="card rise" :style="{ '--i': 2 }">
+        <header class="card-head">
+          <h2 id="collectors-title">{{ t("collectors") }}</h2>
+        </header>
         <div class="table-wrap">
-          <table class="collectors small">
+          <table class="collectors">
             <thead>
               <tr>
                 <th scope="col">{{ t("source") }}</th>
@@ -106,86 +112,122 @@ const quarantined = computed(() =>
             </tbody>
           </table>
         </div>
-        <h3>{{ t("quarantine") }}</h3>
-        <ul v-if="quarantined.length" class="small">
-          <li v-for="q in quarantined" :key="q" class="num">data/quarantine/{{ q }}</li>
+        <h3 class="sub">{{ t("quarantine") }}</h3>
+        <ul v-if="quarantined.length" class="quarantine small">
+          <li v-for="q in quarantined" :key="q" class="mono">data/quarantine/{{ q }}</li>
         </ul>
         <p v-else class="small secondary">{{ t("none") }}</p>
-      </div>
+      </section>
     </div>
 
-    <div class="card table-wrap">
-      <h3>{{ t("pollsTitle") }}</h3>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">{{ t("published") }}</th>
-            <th scope="col">{{ t("firm") }}</th>
-            <th scope="col">{{ t("sponsor") }}</th>
-            <th scope="col">{{ t("fieldwork") }}</th>
-            <th class="num" scope="col">{{ t("sample") }}</th>
-            <th class="num" scope="col">{{ t("ballots") }}</th>
-            <th scope="col">{{ t("entry") }}</th>
-            <th scope="col">{{ t("source") }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="p in summaries" :key="p.id" :class="{ unused: !used.has(p.id) }">
-            <td class="num">{{ shortDate(p.published, locale) }}</td>
-            <td>{{ p.firm }}</td>
-            <td class="secondary">{{ p.sponsor ?? "—" }}</td>
-            <td class="num">{{ shortDate(p.fieldStart, locale) }}–{{ shortDate(p.fieldEnd, locale) }}</td>
-            <td class="num">{{ p.sample.toLocaleString(locale === "fr" ? "fr-FR" : "en-GB") }}</td>
-            <td class="num">{{ p.ballots }}</td>
-            <td class="small">{{ p.entry === "primary" ? t("entryPrimary") : t("entryIndex") }}</td>
-            <td class="small">
-              <a :href="safeUrl(p.source)" rel="noopener noreferrer" target="_blank">{{ t("source") }}</a>
-              <template v-if="p.notice">
-                · <a :href="safeUrl(p.notice)" rel="noopener noreferrer" target="_blank">{{ t("notice") }}</a>
-              </template>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <section aria-labelledby="polls-title" class="card rise" :style="{ '--i': 3 }">
+      <header class="card-head">
+        <h2 id="polls-title">{{ t("pollsTitle") }}</h2>
+      </header>
+      <div class="table-wrap">
+        <table class="polls">
+          <thead>
+            <tr>
+              <th scope="col">{{ t("published") }}</th>
+              <th scope="col">{{ t("firm") }}</th>
+              <th scope="col">{{ t("sponsor") }}</th>
+              <th scope="col">{{ t("fieldwork") }}</th>
+              <th class="num" scope="col">{{ t("sample") }}</th>
+              <th class="num" scope="col">{{ t("ballots") }}</th>
+              <th scope="col">{{ t("entry") }}</th>
+              <th scope="col">{{ t("source") }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="p in summaries" :key="p.id" :class="{ unused: !used.has(p.id) }">
+              <td class="num">{{ shortDate(p.published, locale) }}</td>
+              <td class="firm">{{ p.firm }}</td>
+              <td class="secondary">{{ p.sponsor ?? "—" }}</td>
+              <td class="num nowrap">{{ shortDate(p.fieldStart, locale) }}–{{ shortDate(p.fieldEnd, locale) }}</td>
+              <td class="num">{{ p.sample.toLocaleString(locale === "fr" ? "fr-FR" : "en-GB") }}</td>
+              <td class="num">{{ p.ballots }}</td>
+              <td>
+                <span class="badge" :class="{ checked: p.entry === 'primary' }">
+                  {{ p.entry === "primary" ? t("entryPrimary") : t("entryIndex") }}
+                </span>
+              </td>
+              <td class="small nowrap">
+                <a :href="safeUrl(p.source)" rel="noopener noreferrer" target="_blank">{{ t("source") }}</a>
+                <template v-if="p.notice">
+                  · <a :href="safeUrl(p.notice)" rel="noopener noreferrer" target="_blank">{{ t("notice") }}</a>
+                </template>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
 </template>
 
 <style scoped>
-.grid-2 {
+.sources {
   display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  align-items: start;
+  gap: clamp(20px, 2.4vw, 28px);
+}
+
+.healthy {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 12px;
+  border-radius: 999px;
+  background: rgba(12, 163, 12, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(12, 163, 12, 0.3);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.tick {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0ca30c;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 
 .facts {
   display: grid;
   grid-template-columns: max-content 1fr;
-  gap: 4px 12px;
+  gap: 12px 20px;
   margin: 0;
+  font-size: 0.9rem;
 }
 
 .facts dt {
-  color: var(--ink-2);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-top: 2px;
 }
 
 .facts dd {
   margin: 0;
   min-width: 0;
+  color: var(--ink);
+  overflow-wrap: anywhere;
 }
 
 .hash {
   overflow-wrap: anywhere;
+  color: var(--ink-2);
 }
 
 .collectors th[scope="row"] {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--ink);
-}
-
-.collectors th, .collectors td {
-  padding: 6px 8px 6px 0;
 }
 
 .when {
@@ -193,10 +235,7 @@ const quarantined = computed(() =>
 }
 
 .stale {
-  margin-left: 6px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  margin-left: 8px;
 }
 
 .stale .dot {
@@ -206,12 +245,38 @@ const quarantined = computed(() =>
   background: var(--warning);
 }
 
-tr.unused td {
+.sub {
+  margin: 22px 0 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
-ul {
+.quarantine {
   margin: 0;
   padding-left: 18px;
+  display: grid;
+  gap: 4px;
+}
+
+.firm {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.badge.checked {
+  color: var(--ink);
+  background: rgba(88, 124, 241, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(88, 124, 241, 0.35);
+}
+
+tr.unused td {
+  color: var(--muted);
 }
 </style>

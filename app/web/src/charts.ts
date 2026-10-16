@@ -116,3 +116,39 @@ export function round2Matrix(
 export function findPair(pairs: readonly PairForecast[], a: string, b: string): PairForecast | undefined {
   return pairs.find((p) => (p.a === a && p.b === b) || (p.a === b && p.b === a))
 }
+
+/** One dot per percentage point; a full hundred would read as certainty, which no chance short of 1 is. */
+const dotsFor = (p: number) => Math.min(Math.round(p * 100), p < 1 ? 99 : 100)
+
+export interface OutcomeGroup {
+  /** The candidate, or `null` for everyone pooled together. */
+  readonly candidateId: string | null
+  readonly name: string | null
+  /** The chance of winning, summed over the pool. */
+  readonly probability: number
+  /** One dot per percentage point, rounded as the tables round it. */
+  readonly dots: number
+  /** 1, or how many candidates the pool holds. */
+  readonly members: number
+}
+
+/**
+ * Each candidate's chance of winning as dots, one per percentage point, largest first. Everyone a
+ * table would show as "<1%" (below half a point) is pooled into one group, last; a group that
+ * rounds to no dot is left out, and only a certainty fills all 100. Rounding can make the dots add
+ * up to 99 or 101.
+ */
+export function outcomeGroups(candidates: readonly CandidateForecast[], min = 0.005): OutcomeGroup[] {
+  const ranked = candidates.filter((c) => c.p_win > 0).toSorted((a, b) => b.p_win - a.p_win)
+  const pooled = ranked.filter((c) => c.p_win < min)
+  const pooledProbability = pooled.reduce((sum, c) => sum + c.p_win, 0)
+  const groups = [
+    ...ranked
+      .filter((c) => c.p_win >= min)
+      .map((c) => ({ candidateId: c.candidate_id, name: c.name, probability: c.p_win, members: 1 })),
+    ...(pooled.length > 0
+      ? [{ candidateId: null, name: null, probability: pooledProbability, members: pooled.length }]
+      : []),
+  ]
+  return groups.map((g) => ({ ...g, dots: dotsFor(g.probability) })).filter((g) => g.dots > 0)
+}

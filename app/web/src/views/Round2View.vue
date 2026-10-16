@@ -20,7 +20,7 @@ const rows = computed(() =>
   })),
 )
 
-// Sequential blue by how likely the pairing is; the darkest steps carry white text.
+// Sequential bleu by how likely the pairing is, dim to bright; the brightest steps carry dark text.
 const steps = ["--seq-0", "--seq-1", "--seq-2", "--seq-3", "--seq-4", "--seq-5", "--seq-6", "--seq-7"]
 const maxMatchup = computed(() => Math.max(0.01, ...props.forecast.pairs.map((p) => p.p_matchup)))
 function stepFor(p: number): number {
@@ -28,134 +28,324 @@ function stepFor(p: number): number {
   return Math.min(steps.length - 1, 1 + Math.floor((p / maxMatchup.value) * (steps.length - 1.0001)))
 }
 const topPairs = computed(() => props.forecast.pairs.slice(0, 10))
+const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_matchup[id] ?? 0
 </script>
 
 <template>
-  <section class="stack">
-    <div class="stack">
-      <h2>{{ t("round2Title") }}</h2>
-      <p class="secondary small">{{ t("round2Help") }}</p>
-    </div>
+  <div class="round2">
+    <section aria-labelledby="matrix-title" class="card rise">
+      <header class="card-head">
+        <h2 id="matrix-title">{{ t("matrixTitle") }}</h2>
+      </header>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">{{ t("candidate") }}</span></th>
+              <th v-for="c in matrix.candidates" :key="c.candidate_id" class="column-head" scope="col">{{ c.name }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in rows" :key="row.candidate.candidate_id">
+              <th scope="row">{{ row.candidate.name }}</th>
+              <td v-for="(c, i) in row.cells" :key="i" class="cell-wrap">
+                <div
+                  v-if="c"
+                  class="cell"
+                  :class="{ bright: stepFor(c.pMatchup) >= 5, empty: c.pMatchup <= 0 }"
+                  :style="{ background: `var(${steps[stepFor(c.pMatchup)]})` }"
+                  :title="c.rowWins !== null
+                    ? t('matchupCell', { p: probability(c.pMatchup, locale), w: probability(c.rowWins, locale) })
+                    : undefined"
+                >
+                  <template v-if="c.pMatchup > 0">
+                    <span class="p num">{{ probability(c.pMatchup, locale) }}</span>
+                    <span v-if="c.rowWins !== null" class="w num">{{ probability(c.rowWins, locale) }}</span>
+                  </template>
+                  <span v-else class="p">—</span>
+                </div>
+                <div v-else aria-hidden="true" class="cell self" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="legend small">
+        <div aria-hidden="true" class="scale">
+          <span class="scale-title">{{ t("matrixScale") }}</span>
+          <span class="ramp">
+            <span v-for="step in steps.slice(1)" :key="step" class="ramp-step" :style="{ background: `var(${step})` }" />
+          </span>
+          <span class="scale-ends num">
+            <span>{{ probability(0.005, locale) }}</span>
+            <span>{{ probability(maxMatchup, locale) }}</span>
+          </span>
+        </div>
+        <p class="figures">{{ t("matrixFigures") }}</p>
+      </div>
+    </section>
 
-    <div class="card table-wrap">
-      <table class="matrix">
-        <thead>
-          <tr>
-            <th scope="col"><span class="sr-only">{{ t("candidate") }}</span></th>
-            <th v-for="c in matrix.candidates" :key="c.candidate_id" class="column-head" scope="col">{{ c.name }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="row in rows" :key="row.candidate.candidate_id">
-            <th scope="row">{{ row.candidate.name }}</th>
-            <td v-for="(c, i) in row.cells" :key="i" class="cell-wrap">
-              <div
-                v-if="c"
-                class="cell"
-                :class="{ dark: stepFor(c.pMatchup) >= 5 }"
-                :style="{ background: `var(${steps[stepFor(c.pMatchup)]})` }"
-                :title="c.rowWins !== null
-                  ? t('matchupCell', { p: probability(c.pMatchup, locale), w: probability(c.rowWins, locale) })
-                  : undefined"
-              >
-                <template v-if="c.pMatchup > 0">
-                  <span class="p num">{{ probability(c.pMatchup, locale) }}</span>
-                  <span v-if="c.rowWins !== null" class="w num">{{ probability(c.rowWins, locale) }}</span>
-                </template>
-                <span v-else class="p">—</span>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="small muted legend">
-        <span class="swatch" style="background: var(--seq-2)" /> {{ t("happens") }} ·
-        <span class="num">→</span> {{ t("winner") }}
-      </p>
-    </div>
-
-    <div class="card table-wrap">
-      <h2>{{ t("topMatchups") }}</h2>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">{{ t("pairing") }}</th>
-            <th class="num" scope="col">{{ t("happens") }}</th>
-            <th scope="col">{{ t("winner") }}</th>
-            <th scope="col"><span class="sr-only">{{ t("source") }}</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="pair in topPairs" :key="`${pair.a}-${pair.b}`">
-            <td>{{ names.get(pair.a) }} – {{ names.get(pair.b) }}</td>
-            <td class="num">{{ probability(pair.p_matchup, locale) }}</td>
-            <td class="num">
-              {{ names.get(pair.a) }} {{ probability(pair.p_win_given_matchup[pair.a] ?? 0, locale) }} ·
-              {{ names.get(pair.b) }} {{ probability(pair.p_win_given_matchup[pair.b] ?? 0, locale) }}
-            </td>
-            <td>
-              <span class="badge">{{ pair.polled ? t("polledBadge") : t("modelledBadge") }}</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <section aria-labelledby="top-title" class="card rise" :style="{ '--i': 1 }">
+      <header class="card-head">
+        <h2 id="top-title">{{ t("topMatchups") }}</h2>
+      </header>
+      <div class="table-wrap">
+        <table class="duels">
+          <thead>
+            <tr>
+              <th scope="col">{{ t("pairing") }}</th>
+              <th class="num" scope="col">{{ t("happens") }}</th>
+              <th scope="col">{{ t("winner") }}</th>
+              <th scope="col"><span class="sr-only">{{ t("source") }}</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="pair in topPairs" :key="`${pair.a}-${pair.b}`">
+              <th scope="row">{{ names.get(pair.a) }} – {{ names.get(pair.b) }}</th>
+              <td class="num happens">{{ probability(pair.p_matchup, locale) }}</td>
+              <td>
+                <div class="duel">
+                  <span class="side">
+                    <span class="who">{{ names.get(pair.a) }}</span>
+                    <strong class="num">{{ probability(share(pair, pair.a), locale) }}</strong>
+                  </span>
+                  <span aria-hidden="true" class="split">
+                    <span class="part" :style="{ flexGrow: share(pair, pair.a) }" />
+                    <span class="part" :style="{ flexGrow: share(pair, pair.b) }" />
+                    <span class="midline" />
+                  </span>
+                  <span class="side end">
+                    <span class="who">{{ names.get(pair.b) }}</span>
+                    <strong class="num">{{ probability(share(pair, pair.b), locale) }}</strong>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <span class="badge">{{ pair.polled ? t("polledBadge") : t("modelledBadge") }}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
 </template>
 
 <style scoped>
+.round2 {
+  display: grid;
+  gap: clamp(20px, 2.4vw, 28px);
+}
+
+.matrix {
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+.matrix th,
+.matrix td {
+  border-bottom: none;
+  padding: 0;
+}
+
 .matrix th[scope="row"] {
   white-space: nowrap;
+  padding-right: 14px;
+  font-weight: 500;
   color: var(--ink);
 }
 
 .column-head {
-  font-size: 0.78rem;
+  font-size: 0.66rem;
   text-align: center;
   min-width: 84px;
-}
-
-.cell-wrap {
-  padding: 2px;
-  border-bottom: none;
+  padding-bottom: 8px !important;
+  vertical-align: bottom;
+  white-space: normal;
+  line-height: 1.35;
 }
 
 .cell {
-  border-radius: 4px;
-  min-height: 44px;
+  border-radius: 10px;
+  min-height: 52px;
   display: grid;
   place-items: center;
   align-content: center;
+  gap: 1px;
   color: var(--ink);
-  padding: 4px;
+  padding: 6px 4px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  transition:
+    transform 0.2s var(--ease-out),
+    box-shadow 0.2s;
 }
 
-.cell.dark {
-  color: #ffffff;
+.cell:not(.self):hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.22),
+    0 8px 20px -8px rgba(0, 0, 0, 0.8);
 }
 
-.cell .p {
-  font-weight: 600;
-  font-size: 0.9rem;
+.cell.bright {
+  color: var(--page);
 }
 
-.cell .w {
-  font-size: 0.75rem;
+.cell.empty {
+  color: var(--muted);
+}
+
+.cell.self {
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 7px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.p {
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+
+.w {
+  font-size: 0.72rem;
+  font-weight: 500;
 }
 
 .legend {
-  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-top: 22px;
+  color: var(--muted);
 }
 
-.swatch {
-  display: inline-block;
-  width: 10px;
+.figures {
+  max-width: 40rem;
+  color: var(--ink-2);
+}
+
+.scale {
+  display: grid;
+  gap: 6px;
+  min-width: min(100%, 300px);
+}
+
+.scale-title {
+  color: var(--ink-2);
+}
+
+.ramp {
+  display: flex;
+  gap: 2px;
   height: 10px;
-  border-radius: 2px;
-  vertical-align: middle;
 }
 
-h2 {
-  margin-bottom: 8px;
+.ramp-step {
+  flex: 1;
+}
+
+.ramp-step:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.ramp-step:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.scale-ends {
+  display: flex;
+  justify-content: space-between;
+}
+
+.duels th[scope="row"] {
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.happens {
+  font-weight: 650;
+  font-size: 1rem;
+}
+
+.duel {
+  display: grid;
+  grid-template-columns: minmax(0, 9rem) minmax(120px, 1fr) minmax(0, 9rem);
+  align-items: center;
+  gap: 14px;
+  min-width: 380px;
+}
+
+.side {
+  display: grid;
+  gap: 1px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.side.end {
+  text-align: right;
+}
+
+.side strong {
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.who {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* One bleu for both sides: where the 2px gap falls against the midline says who is ahead. */
+.split {
+  position: relative;
+  display: flex;
+  gap: 2px;
+  height: 8px;
+}
+
+.part {
+  flex-basis: 0;
+  min-width: 2px;
+  background: var(--series);
+  box-shadow: 0 0 10px var(--series-glow);
+}
+
+.part:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.part:nth-child(2) {
+  border-radius: 0 4px 4px 0;
+}
+
+.midline {
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  bottom: -5px;
+  width: 1px;
+  background: var(--axis);
+}
+
+@media (max-width: 760px) {
+  .matrix th[scope="row"] {
+    font-size: 0.8rem;
+  }
+
+  .column-head {
+    min-width: 64px;
+  }
+
+  .cell {
+    min-height: 46px;
+  }
 }
 </style>

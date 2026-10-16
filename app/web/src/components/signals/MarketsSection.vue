@@ -36,15 +36,13 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
 </script>
 
 <template>
-  <section aria-labelledby="markets-title" class="card stack">
-    <h3 id="markets-title">{{ t("marketsTitle") }}</h3>
-    <p v-if="!markets.fetched_at" class="secondary small">{{ t("marketsEmpty") }}</p>
-    <template v-else>
-      <div class="chips" role="group" :aria-label="t('marketsQuestion')">
+  <section aria-labelledby="markets-title" class="card">
+    <header class="card-head head">
+      <h2 id="markets-title">{{ t("marketsTitle") }}</h2>
+      <div v-if="markets.fetched_at" class="segmented" role="group" :aria-label="t('marketsQuestion')">
         <button
           v-for="q in questions"
           :key="q.id"
-          class="chip"
           type="button"
           :aria-pressed="question === q.id"
           @click="question = q.id"
@@ -52,7 +50,9 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
           {{ t(q.label) }}
         </button>
       </div>
-
+    </header>
+    <p v-if="!markets.fetched_at" class="secondary small">{{ t("marketsEmpty") }}</p>
+    <template v-else>
       <div class="table-wrap">
         <table>
           <thead>
@@ -65,7 +65,7 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
           <tbody>
             <tr v-for="row in table.rows" :key="row.candidateId">
               <th scope="row">{{ row.name }}</th>
-              <td class="num strong">{{ price(row.model) }}</td>
+              <td class="num model">{{ price(row.model) }}</td>
               <td v-for="venue in VENUES" :key="venue" class="num">
                 <div class="price">
                   <Sparkline
@@ -83,8 +83,8 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
         </table>
       </div>
 
-      <div v-if="unmatched.length" class="stack-tight">
-        <h4>{{ t("unmatchedTitle") }}</h4>
+      <div v-if="unmatched.length" class="unmatched-block">
+        <h3 class="sub">{{ t("unmatchedTitle") }}</h3>
         <ul class="unmatched small">
           <li v-for="u in unmatched" :key="u.label">
             <span>{{ u.label }}</span>
@@ -93,49 +93,96 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
         </ul>
       </div>
 
-      <div class="stack-tight small">
-        <p class="muted">{{ t("fetchedAt", { when: dateTime(markets.fetched_at, locale) }) }}</p>
+      <footer class="foot small">
         <p v-for="s in failing" :key="s.id" class="notice" role="status">
           <span aria-hidden="true" class="icon">!</span>
           <span>{{ t("marketFailed", { venue: venueName[s.venue], question: questionLabel(s.question), error: s.error ?? s.status }) }}</span>
         </p>
         <p class="secondary">{{ t("marketsNote") }}</p>
-      </div>
+        <p class="muted">{{ t("fetchedAt", { when: dateTime(markets.fetched_at, locale) }) }}</p>
+      </footer>
     </template>
   </section>
 </template>
 
 <style scoped>
-th[scope="row"] {
-  font-weight: 600;
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+}
+
+/* The question the markets answer: one choice of three, set like a segmented glass control. */
+.segmented {
+  display: inline-flex;
+  padding: 4px;
+  gap: 2px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.segmented button {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.segmented button:hover {
   color: var(--ink);
 }
 
-.strong {
-  font-weight: 600;
+.segmented button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--page);
+  box-shadow: 0 4px 14px -4px rgba(243, 239, 230, 0.4);
+}
+
+th[scope="row"] {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.model {
+  font-weight: 650;
+  color: var(--ink);
 }
 
 .price {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 12px;
 }
 
 .value {
   min-width: 3.2em;
-}
-
-h4 {
-  margin: 0;
-  font-size: 0.85rem;
-  font-weight: 600;
   color: var(--ink-2);
 }
 
-.stack-tight {
+.sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.unmatched-block {
   display: grid;
-  gap: 6px;
+  gap: 10px;
+  margin-top: 22px;
 }
 
 .unmatched {
@@ -143,17 +190,25 @@ h4 {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 2px 16px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 4px 24px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
 }
 
 .unmatched li {
   display: flex;
   justify-content: space-between;
   gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--grid);
 }
 
-@media (max-width: 720px) {
+.foot {
+  display: grid;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+@media (max-width: 760px) {
   .price {
     flex-direction: column-reverse;
     align-items: flex-end;
@@ -166,7 +221,7 @@ h4 {
 
   th,
   td {
-    padding: 8px 6px;
+    padding: 10px 6px;
   }
 }
 </style>
