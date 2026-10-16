@@ -199,22 +199,25 @@ const resolveItem: Endpoint = {
  * payload lacks the field; the pipeline then rejects the item on its schema.
  */
 export function itemKey(kind: Kind, payload: Record<string, unknown>): string | null {
-  const text = (value: unknown): string | null => (typeof value === "string" && value !== "" ? value : null)
   switch (kind) {
     case "poll":
     case "poll_check":
-      return text(payload["poll_id"])
+      return nonEmptyText(payload["poll_id"])
     case "x_drop": {
       const window = isObject(payload["window"]) ? payload["window"] : {}
-      const start = text(window["start"])
-      const end = text(window["end"])
+      const start = nonEmptyText(window["start"])
+      const end = nonEmptyText(window["end"])
       return start === null || end === null ? null : `${start}/${end}`
     }
     case "event":
-      return text(payload["event_id"])
+      return nonEmptyText(payload["event_id"])
     case "field_change":
-      return text(payload["change_id"])
+      return nonEmptyText(payload["change_id"])
   }
+}
+
+function nonEmptyText(value: unknown): string | null {
+  return typeof value === "string" && value !== "" ? value : null
 }
 
 function parseSubmission(body: unknown): { kind: Kind; payload: string } {

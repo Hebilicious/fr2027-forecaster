@@ -698,7 +698,7 @@ describe("SqlStore", () => {
     }
     const store = new SqlStore(sql)
     expect(store.get("old")).toMatchObject({ id: "old", key: null })
-    new SqlStore(sql) // a second start finds the column and leaves it
+    expect(() => new SqlStore(sql)).not.toThrow() // a second start finds the column and leaves it
     expect(store.findSettled("poll", "anything")).toBeUndefined()
   })
 })

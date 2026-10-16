@@ -207,8 +207,8 @@ enum Cadence {
     OnPublication,
     #[serde(rename = "hourly")]
     Hourly,
-    #[serde(rename = "6h")]
-    Every6Hours,
+    #[serde(rename = "12h")]
+    Every12Hours,
     #[serde(rename = "daily")]
     Daily,
 }
@@ -257,8 +257,8 @@ fn health(repo: &Repo, now: Timestamp) -> Result<Value> {
         ("markets", field(&markets, "fetched_at"), Some(3), Cadence::Hourly),
         ("news", field(&news, "fetched_at"), Some(3), Cadence::Hourly),
         ("attention", field(&attention, "fetched_at"), Some(50), Cadence::Daily),
-        ("x", field(&grok_drop, "collected_at"), Some(48), Cadence::Every6Hours),
-        ("events", event.map(|e| e.reported_at), None, Cadence::Daily),
+        ("x", field(&grok_drop, "collected_at"), Some(48), Cadence::Every12Hours),
+        ("events", event.map(|e| e.reported_at), None, Cadence::Every12Hours),
     ];
     let mut collectors = Vec::new();
     for (name, updated, stale_after, cadence) in sources {
