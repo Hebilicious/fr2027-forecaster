@@ -4,6 +4,13 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-16
 
+### Field: Glucksmann is the PS–Place publique–GRS nominee
+
+Raphaël Glucksmann won the closed primary in its first round with about 66% (Faure about 14.5%; Royal, Maurel and Guedj behind), on a vote held 9–11 October after electronic voting was extended by a day following a cyberattack. The 16–17 October round 2 was therefore not held ([Public Sénat](https://www.publicsenat.fr/actualites/politique/primaire-de-la-gauche-raphael-glucksmann-plie-le-match-et-remporte-le-scrutin-des-le-premier-tour-avec-66), [French Wikipedia](https://fr.wikipedia.org/wiki/Primaire_pr%C3%A9sidentielle_socialiste_fran%C3%A7aise_de_2026)).
+
+- `config/candidates.yaml`, slot `ps_primary`: Glucksmann 0.55 → 0.95, the same level as other designated nominees (Mélenchon 0.95); the remaining 0.05 covers a left-union deal or a withdrawal. Faure, Royal, Guedj and Maurel go to 0 and stay in the slot, because every candidate must sit in one. `as_of` moves to 2026-10-16.
+- With this and the five new polls, a local run gives Le Pen 83.8% to win, Bardella 5.9%, Philippe 5.5%, Glucksmann 1.9% (15.4% to reach round 2, up from 5.9% with the provisional slot).
+
 ### Data: polls from 24 September to 14 October 2026
 
 Five polls added, bringing `data/raw/polls/` to 33 polls: 15 round 1 scenarios and 6 head-to-heads. Indexed from the French and English Wikipedia tables (raw wikitext fetched 2026-10-16 about 06:50 UTC), then every number of every scenario compared with the notice or the pollster's report.

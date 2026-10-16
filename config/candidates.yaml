@@ -4,7 +4,7 @@
 # Each candidate belongs to exactly one slot. A slot draws at most one option, and an option lists
 # the candidates who run together; 1 - sum(p) is the chance nobody from the slot runs.
 schema_version: "1.0"
-as_of: 2026-10-09
+as_of: 2026-10-16
 blocs: [far_left, left, centre, right, far_right, other]
 candidates:
   - id: arthaud
@@ -411,13 +411,13 @@ slots:
       - { run: [melenchon], p: 0.95 }
   - id: ps_primary
     label: "PS–Place publique–GRS primary nominee"
-    rationale: "Closed primary, round 1 on 9–10 October and round 2 on 16–17 October 2026; no poll of its electorate exists. Glucksmann leads the national polls, but the electorate is party members and donors, where Faure leads the party. Provisional until the result."
+    rationale: "Glucksmann won the closed primary in round 1 (vote 9–11 October 2026, extended after a cyberattack) with 66%, so the 16–17 October round 2 was not held. The other contenders lost and stay here at 0; the rest is the chance he does not run (a left-union deal, a withdrawal)."
     options:
-      - { run: [glucksmann], p: 0.55 }
-      - { run: [faure], p: 0.25 }
-      - { run: [royal], p: 0.07 }
-      - { run: [guedj], p: 0.05 }
-      - { run: [maurel], p: 0.03 }
+      - { run: [glucksmann], p: 0.95 }
+      - { run: [faure], p: 0 }
+      - { run: [royal], p: 0 }
+      - { run: [guedj], p: 0 }
+      - { run: [maurel], p: 0 }
   - id: hollande
     rationale: "Not in the primary; will decide in December 2026 whether to run."
     options:
