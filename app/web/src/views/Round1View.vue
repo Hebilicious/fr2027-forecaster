@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { computed, ref } from "vue"
+import { useIntlayer } from "vue-intlayer"
 import type { Forecast, Poll, SeriesPoint } from "../api/schemas"
 import { round1Panels } from "../charts"
 import SharePanel from "../components/SharePanel.vue"
-import { useI18n } from "../i18n"
 
 const props = defineProps<{
   forecast: Forecast
   series: readonly SeriesPoint[]
   polls: readonly Poll[]
 }>()
-const { t } = useI18n()
+const content = useIntlayer("round1-view")
 
 const panels = computed(() => round1Panels(props.forecast, props.series, props.polls))
 const firms = computed(() => [...new Set(panels.value.flatMap((p) => p.polls.map((d) => d.firm)))].toSorted())
@@ -30,10 +30,10 @@ const yMax = computed(() =>
 <template>
   <section class="round1">
     <div v-if="firms.length" class="card toolbar rise">
-      <div class="chips" role="group" :aria-label="t('highlightFirm')">
-        <span class="eyebrow">{{ t("highlightFirm") }}</span>
+      <div class="chips" role="group" :aria-label="content.highlightFirm.value">
+        <span class="eyebrow">{{ content.highlightFirm }}</span>
         <button class="chip" type="button" :aria-pressed="highlight === null" @click="highlight = null">
-          {{ t("allFirms") }}
+          {{ content.allFirms }}
         </button>
         <button
           v-for="firm in firms"
@@ -47,9 +47,9 @@ const yMax = computed(() =>
         </button>
       </div>
       <p aria-hidden="true" class="legend small">
-        <span class="key"><span class="line-key" />{{ t("legendAverage") }}</span>
-        <span class="key"><span class="band-key" />{{ t("legendBand") }}</span>
-        <span class="key"><span class="dot-key" />{{ t("legendPolls") }}</span>
+        <span class="key"><span class="line-key" />{{ content.legend.average }}</span>
+        <span class="key"><span class="band-key" />{{ content.legend.band }}</span>
+        <span class="key"><span class="dot-key" />{{ content.legend.polls }}</span>
         <span v-if="highlight" class="key"><span class="dot-key picked" />{{ highlight }}</span>
       </p>
     </div>

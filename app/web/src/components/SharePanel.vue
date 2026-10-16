@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed, ref } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Panel, PollDot } from "../charts"
 import { scale, shareTicks } from "../charts"
 import type { SeriesPoint } from "../api/schemas"
 import { percent, safeUrl, shareWithInterval, shortDate } from "../format"
-import { useI18n, type Locale } from "../i18n"
+import type { Locale } from "../locales"
 import CandidateAvatar from "./CandidateAvatar.vue"
 
 const props = defineProps<{
@@ -16,7 +17,8 @@ const props = defineProps<{
   highlightFirm: string | null
 }>()
 
-const { t, locale } = useI18n()
+const content = useIntlayer("share-panel")
+const { locale } = useLocale()
 const shareDate = (point: SeriesPoint, l: Locale) =>
   `${shareWithInterval(point.mean, point.lo80, point.hi80, l)} · ${shortDate(point.date, l)}`
 
@@ -50,7 +52,7 @@ const monthTicks = computed(() => {
   while (d.getTime() <= end) {
     result.push({
       at: scale(d.getTime(), { domain: props.xDomain, range: [margin.left, width - margin.right] }),
-      label: d.toLocaleDateString(locale.value === "fr" ? "fr-FR" : "en-GB", { month: "short", timeZone: "UTC" }),
+      label: d.toLocaleDateString(locale.value, { month: "short", timeZone: "UTC" }),
     })
     d.setUTCMonth(d.getUTCMonth() + step)
   }
@@ -78,12 +80,12 @@ const hovered = computed(() => (hover.value ? props.panel.points[hover.value.ind
 
 const focusedDot = ref<PollDot | null>(null)
 const dotLabel = (dot: PollDot) =>
-  t("pollTooltip", {
+  content.poll({
     firm: dot.firm,
     date: shortDate(dot.date, locale.value),
     share: percent(dot.share, 1, locale.value),
     scenario: dot.scenario,
-  })
+  }).value
 const sortedDots = computed(() =>
   props.panel.polls.toSorted((a, b) => Number(a.firm === props.highlightFirm) - Number(b.firm === props.highlightFirm)),
 )
@@ -107,7 +109,7 @@ const sortedDots = computed(() =>
       <svg
         :viewBox="`0 0 ${width} ${height}`"
         role="img"
-        :aria-label="`${panel.candidate.name}: ${latest ? shareDate(latest, locale) : ''}`"
+        :aria-label="content.label({ name: panel.candidate.name, latest: latest ? shareDate(latest, locale) : '' }).value"
         @pointermove="onMove"
         @pointerleave="hover = null"
       >

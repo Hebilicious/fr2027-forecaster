@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
-import { count, points, probability, shareWithInterval } from "../format"
-import { useI18n } from "../i18n"
+import { count, list, points, probability, shareWithInterval } from "../format"
 
 const props = defineProps<{ forecast: Forecast }>()
-const { t, locale } = useI18n()
+const content = useIntlayer("overview-view")
+const common = useIntlayer("common")
+const { locale } = useLocale()
 
 const maxShare = computed(() => Math.max(0.05, ...props.forecast.candidates.map((c) => c.r1_share?.hi80 ?? 0)))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
@@ -20,31 +22,31 @@ const at = (share: number) => (share / maxShare.value) * 100
   <div class="overview">
     <section aria-labelledby="outcomes-title" class="card over-painting outcomes-card rise">
       <header class="card-head">
-        <p class="eyebrow"><span class="tricolore-rule" />{{ t("outcomesEyebrow") }}</p>
-        <h2 id="outcomes-title">{{ t("outcomesTitle") }}</h2>
-        <p class="secondary">{{ t("outcomesHelp", { sims: count(forecast.simulations, locale) }) }}</p>
+        <p class="eyebrow"><span class="tricolore-rule" />{{ content.outcomesEyebrow }}</p>
+        <h2 id="outcomes-title">{{ content.outcomesTitle }}</h2>
+        <p class="secondary">{{ content.outcomesHelp({ sims: count(forecast.simulations, locale) }) }}</p>
       </header>
       <OutcomeDots :forecast="forecast" />
       <p class="notice note" role="note">
-        <span aria-hidden="true" class="icon">i</span>
-        <span>{{ t("uncertainty") }}</span>
+        <span aria-hidden="true" class="icon" translate="no">i</span>
+        <span>{{ content.uncertainty }}</span>
       </p>
     </section>
 
     <section aria-labelledby="field-title" class="card rise" :style="{ '--i': 1 }">
       <header class="card-head">
-        <p class="eyebrow">{{ t("fieldEyebrow") }}</p>
-        <h2 id="field-title">{{ t("fieldTitle") }}</h2>
+        <p class="eyebrow">{{ content.fieldEyebrow }}</p>
+        <h2 id="field-title">{{ content.fieldTitle }}</h2>
       </header>
       <div class="table-wrap">
         <table class="field">
           <thead>
             <tr>
-              <th scope="col">{{ t("candidate") }}</th>
-              <th scope="col">{{ t("wins") }}</th>
-              <th scope="col">{{ t("qualifies") }}</th>
-              <th class="num" scope="col">{{ t("runs") }}</th>
-              <th scope="col">{{ t("r1Share") }}</th>
+              <th scope="col">{{ common.candidate }}</th>
+              <th scope="col">{{ common.wins }}</th>
+              <th scope="col">{{ common.qualifies }}</th>
+              <th class="num" scope="col">{{ common.runs }}</th>
+              <th scope="col">{{ common.r1Share }}</th>
             </tr>
           </thead>
           <tbody>
@@ -89,7 +91,7 @@ const at = (share: number) => (share / maxShare.value) * 100
                       shareWithInterval(c.r1_share.mean, c.r1_share.lo80, c.r1_share.hi80, locale)
                     }}</span>
                 </div>
-                <span v-else class="muted small">{{ c.simulated ? "—" : t("notPolled") }}</span>
+                <span v-else class="muted small">{{ c.simulated ? "—" : common.notPolled }}</span>
               </td>
             </tr>
           </tbody>
@@ -100,7 +102,7 @@ const at = (share: number) => (share / maxShare.value) * 100
     <div class="grid-2">
       <section aria-labelledby="moved-title" class="card rise" :style="{ '--i': 2 }">
         <header class="card-head">
-          <h2 id="moved-title">{{ t("whatMoved") }}</h2>
+          <h2 id="moved-title">{{ content.whatMoved }}</h2>
         </header>
         <template v-if="forecast.changes.previous">
           <ul v-if="movers.length" class="movers">
@@ -115,25 +117,25 @@ const at = (share: number) => (share / maxShare.value) * 100
               </span>
             </li>
           </ul>
-          <p v-else class="secondary">{{ t("noChange") }}</p>
+          <p v-else class="secondary">{{ content.noChange }}</p>
           <p class="small muted polls">
             {{
               forecast.changes.new_polls.length
-                ? t("newPolls", { list: forecast.changes.new_polls.join(", ") })
-                : t("noNewPolls")
+                ? content.newPolls({ list: list(forecast.changes.new_polls, locale) })
+                : content.noNewPolls
             }}
           </p>
         </template>
-        <p v-else class="secondary">{{ t("noPrevious") }}</p>
+        <p v-else class="secondary">{{ content.noPrevious }}</p>
       </section>
 
       <section aria-labelledby="model-title" class="card rise" :style="{ '--i': 3 }">
         <header class="card-head">
-          <h2 id="model-title">{{ t("modelTitle") }}</h2>
+          <h2 id="model-title">{{ content.modelTitle }}</h2>
         </header>
         <p class="secondary model-note">
           {{
-            t("modelNote", {
+            content.modelNote({
               version: forecast.model_version,
               polls: forecast.aggregation.polls_used,
               scenarios: forecast.aggregation.scenarios_used,
@@ -142,7 +144,7 @@ const at = (share: number) => (share / maxShare.value) * 100
           }}
         </p>
         <template v-if="forecast.warnings.length">
-          <h3 class="warnings-title">{{ t("warnings") }}</h3>
+          <h3 class="warnings-title">{{ content.warnings }}</h3>
           <ul class="warnings">
             <li v-for="w in forecast.warnings" :key="w" class="notice">
               <span aria-hidden="true" class="icon">!</span>

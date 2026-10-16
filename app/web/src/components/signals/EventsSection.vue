@@ -1,31 +1,22 @@
 <script setup lang="ts">
 import { computed } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { CampaignEvent } from "../../api/schemas"
-import { safeUrl, shortDate } from "../../format"
-import { useI18n, type MessageKey } from "../../i18n"
+import { list, safeUrl, shortDate } from "../../format"
+import { labelOf } from "../../labels"
 import { eventsNewestFirst, nameOf } from "../../signals"
 
 const props = defineProps<{ events: readonly CampaignEvent[]; names: ReadonlyMap<string, string> }>()
-const { t, locale } = useI18n()
+const content = useIntlayer("events-section")
+const { locale } = useLocale()
 
-const kinds: Record<string, MessageKey> = {
-  declaration: "kindDeclaration",
-  withdrawal: "kindWithdrawal",
-  endorsement: "kindEndorsement",
-  primary_result: "kindPrimaryResult",
-  sponsorships: "kindSponsorships",
-  legal: "kindLegal",
-  poll_published: "kindPollPublished",
-  other: "kindOther",
-}
-const kindLabel = (kind: string) => {
-  const key = kinds[kind]
-  return key ? t(key) : kind
-}
 const events = computed(() =>
   eventsNewestFirst(props.events).map((e) => ({
     ...e,
-    who: e.candidate_ids.map((id) => nameOf(props.names, id)).join(", "),
+    who: list(
+      e.candidate_ids.map((id) => nameOf(props.names, id)),
+      locale.value,
+    ),
     host: hostOf(e.source_url),
   })),
 )
@@ -42,15 +33,15 @@ function hostOf(url: string): string {
 <template>
   <section aria-labelledby="events-title" class="card">
     <header class="card-head">
-      <h2 id="events-title">{{ t("eventsTitle") }}</h2>
-      <p class="secondary small">{{ t("eventsReported") }}</p>
+      <h2 id="events-title">{{ content.title }}</h2>
+      <p class="secondary small">{{ content.reported }}</p>
     </header>
-    <p v-if="events.length === 0" class="secondary small">{{ t("eventsEmpty") }}</p>
-    <ol v-else class="timeline" :aria-label="t('eventsReported')">
+    <p v-if="events.length === 0" class="secondary small">{{ content.empty }}</p>
+    <ol v-else class="timeline" :aria-label="content.reported.value">
       <li v-for="e in events" :key="e.event_id">
         <p class="meta small">
           <span class="date num">{{ shortDate(e.date, locale) }}</span>
-          <span class="badge">{{ kindLabel(e.kind) }}</span>
+          <span class="badge">{{ labelOf(content.kinds, e.kind) }}</span>
           <span v-if="e.who" class="secondary">{{ e.who }}</span>
         </p>
         <p class="summary">{{ e.summary }}</p>
@@ -58,7 +49,7 @@ function hostOf(url: string): string {
           <a v-if="safeUrl(e.source_url)" :href="safeUrl(e.source_url)" rel="noopener">{{ e.source_title ?? e.host }}</a>
           <span v-else class="muted">{{ e.source_title ?? e.source_url }}</span>
         </p>
-        <p v-if="e.proposed_change" class="muted small">{{ t("proposedChange", { change: e.proposed_change }) }}</p>
+        <p v-if="e.proposed_change" class="muted small">{{ content.proposedChange({ change: e.proposed_change }) }}</p>
       </li>
     </ol>
   </section>

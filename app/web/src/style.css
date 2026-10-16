@@ -521,3 +521,11 @@ th.num {
     display: none;
   }
 }
+
+/* Chinese, Japanese, Korean and Thai have no italic in these fonts; a slanted imitation reads worse than upright. */
+:root:lang(ja),
+:root:lang(ko),
+:root:lang(zh),
+:root:lang(th) {
+  font-synthesis-style: none;
+}

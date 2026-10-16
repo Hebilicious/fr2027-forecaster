@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { computed, shallowRef } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { News } from "../../api/schemas"
 import { count, dateTime, safeUrl } from "../../format"
-import { useI18n } from "../../i18n"
 import { latestHeadlines, nameOf, newsCounts } from "../../signals"
 import CandidateAvatar from "../CandidateAvatar.vue"
 
 const props = defineProps<{ news: News; names: ReadonlyMap<string, string> }>()
-const { t, locale } = useI18n()
+const content = useIntlayer("news-section")
+const { locale } = useLocale()
 
 const counts = computed(() => newsCounts(props.news.daily, props.names))
 const maxCount = computed(() => Math.max(1, ...counts.value.map((c) => c.items)))
@@ -20,12 +21,12 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 <template>
   <section aria-labelledby="news-title" class="card">
     <header class="card-head">
-      <h2 id="news-title">{{ t("newsTitle") }}</h2>
+      <h2 id="news-title">{{ content.title }}</h2>
     </header>
-    <p v-if="news.headlines.length === 0 && counts.length === 0" class="secondary small">{{ t("newsEmpty") }}</p>
+    <p v-if="news.headlines.length === 0 && counts.length === 0" class="secondary small">{{ content.empty }}</p>
     <div v-else class="layout">
       <div v-if="counts.length" class="block">
-        <h3 class="sub">{{ t("newsCounts") }}</h3>
+        <h3 class="sub">{{ content.counts }}</h3>
         <ul class="bars">
           <li v-for="(c, i) in counts" :key="c.candidateId" :style="{ '--i': i }">
             <span class="bar-name">
@@ -39,11 +40,11 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
       </div>
 
       <div class="block">
-        <h3 class="sub">{{ t("latestHeadlines") }}</h3>
-        <div v-if="counts.length" class="chips" role="group" :aria-label="t('newsFilter')">
-          <span class="small muted">{{ t("newsFilter") }}</span>
+        <h3 class="sub">{{ content.latestHeadlines }}</h3>
+        <div v-if="counts.length" class="chips" role="group" :aria-label="content.filter.value">
+          <span class="small muted">{{ content.filter }}</span>
           <button class="chip" type="button" :aria-pressed="filter === null" @click="filter = null">
-            {{ t("allCandidates") }}
+            {{ content.allCandidates }}
           </button>
           <button
             v-for="c in counts"
@@ -63,12 +64,12 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
           </li>
         </ul>
         <p v-else class="secondary small">
-          {{ filter ? t("noHeadlines", { name: nameOf(names, filter) }) : t("newsEmpty") }}
+          {{ filter ? content.noHeadlines({ name: nameOf(names, filter) }) : content.empty }}
         </p>
       </div>
     </div>
     <p v-if="news.fetched_at" class="muted small foot">
-      {{ t("feedStatus", { n: news.feeds.length, m: failing, when: dateTime(news.fetched_at, locale) }) }}
+      {{ content.feedStatus({ n: news.feeds.length, m: failing, when: dateTime(news.fetched_at, locale) }) }}
     </p>
   </section>
 </template>

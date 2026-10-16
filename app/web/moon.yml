@@ -11,8 +11,32 @@ tasks:
     description: "Build the UI into dist/ for fr2027 serve."
     command: "vite"
     args: ["build"]
-    inputs: ["src/**/*", "index.html", "vite.config.ts", "tsconfig.json", "package.json", "/pnpm-lock.yaml"]
+    inputs:
+      [
+        "src/**/*",
+        "index.html",
+        "vite.config.ts",
+        "intlayer.config.ts",
+        "tsconfig.json",
+        "package.json",
+        "/pnpm-lock.yaml",
+      ]
     outputs: ["dist"]
+
+  # The *.content.ts dictionaries, compiled into .intlayer/ with the types that make `useIntlayer` typed.
+  dictionaries:
+    description: "Build the Intlayer dictionaries and their types into .intlayer/."
+    command: "intlayer"
+    args: ["build"]
+    inputs: ["src/**/*.content.ts", "intlayer.config.ts", "package.json", "/pnpm-lock.yaml"]
+    outputs: [".intlayer"]
+
+  i18n-check:
+    description: "Fail when a dictionary lacks a locale listed in intlayer.config.ts."
+    command: "intlayer"
+    args: ["test"]
+    deps: ["~:dictionaries"]
+    inputs: ["src/**/*.content.ts", "intlayer.config.ts"]
 
   dev:
     description: "Vite dev server with hot reload; proxies /api to fr2027 serve (FR2027_API overrides the address)."
@@ -26,7 +50,8 @@ tasks:
     description: "Type-check TypeScript and Vue with vize."
     command: "vize"
     args: ["check"]
-    inputs: ["src/**/*", "tsconfig.json", "vize.config.json", "package.json", "/pnpm-lock.yaml"]
+    deps: ["~:dictionaries"]
+    inputs: ["src/**/*", "intlayer.config.ts", "tsconfig.json", "vize.config.json", "package.json", "/pnpm-lock.yaml"]
 
   lint:
     description: "Lint Vue files with vize."
@@ -35,10 +60,11 @@ tasks:
     inputs: ["src/**/*.vue", "vize.config.json"]
 
   test:
-    description: "Run the UI's headless unit tests."
+    description: "Run the UI's headless unit tests, the catalog check among them (src/catalog.test.ts)."
     command: "vitest"
     args: ["run"]
-    inputs: ["src/**/*", "vite.config.ts", "package.json", "/pnpm-lock.yaml"]
+    deps: ["~:dictionaries"]
+    inputs: ["src/**/*", "vite.config.ts", "intlayer.config.ts", "package.json", "/pnpm-lock.yaml"]
 
   # No shell for the two format tasks: bash would expand src/**/*.vue as src/*/*.vue (no globstar),
   # skipping src/App.vue and nested folders. vize expands the glob itself.

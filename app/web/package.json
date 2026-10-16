@@ -6,13 +6,17 @@
     "@fontsource-variable/bodoni-moda": "catalog:",
     "@fontsource-variable/inter": "catalog:",
     "effect": "catalog:",
-    "vue": "catalog:"
+    "flag-icons": "catalog:",
+    "intlayer": "catalog:",
+    "vue": "catalog:",
+    "vue-intlayer": "catalog:"
   },
   "devDependencies": {
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
+    "vite-intlayer": "catalog:",
     "vitest": "catalog:",
     "vize": "catalog:"
   }

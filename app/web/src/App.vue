@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, watchEffect } from "vue"
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch, watchEffect } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import Cocarde from "./components/Cocarde.vue"
+import LocaleSwitcher from "./components/LocaleSwitcher.vue"
 import Masthead from "./components/Masthead.vue"
 import { daysUntil, dateTime, longDate } from "./format"
-import { useI18n, type MessageKey } from "./i18n"
 import { FRAMINGS, type View } from "./painting"
 import { useLiveData } from "./useLiveData"
 import CandidatesView from "./views/CandidatesView.vue"
@@ -15,27 +16,22 @@ import SourcesView from "./views/SourcesView.vue"
 
 interface ViewEntry {
   id: View
-  label: MessageKey
   /** The plate number, as in a salon catalogue. */
   numeral: string
-  /** The masthead's heading and lede; the overview has its own hero instead. */
-  plate: { title: MessageKey; lede: MessageKey } | null
+  /** Whether the masthead shows the view's own heading and lede; the overview has its own hero instead. */
+  plate: boolean
 }
 const views: readonly ViewEntry[] = [
-  { id: "overview", label: "navOverview", numeral: "I", plate: null },
-  {
-    id: "candidates",
-    label: "navCandidates",
-    numeral: "II",
-    plate: { title: "candidatesTitle", lede: "candidatesIntro" },
-  },
-  { id: "round1", label: "navRound1", numeral: "III", plate: { title: "round1Title", lede: "round1Help" } },
-  { id: "round2", label: "navRound2", numeral: "IV", plate: { title: "round2Title", lede: "round2Help" } },
-  { id: "signals", label: "navSignals", numeral: "V", plate: { title: "signalsTitle", lede: "signalsIntro" } },
-  { id: "sources", label: "navSources", numeral: "VI", plate: { title: "sourcesTitle", lede: "sourcesIntro" } },
+  { id: "overview", numeral: "I", plate: false },
+  { id: "candidates", numeral: "II", plate: true },
+  { id: "round1", numeral: "III", plate: true },
+  { id: "round2", numeral: "IV", plate: true },
+  { id: "signals", numeral: "V", plate: true },
+  { id: "sources", numeral: "VI", plate: true },
 ]
 
-const { t, locale, toggle } = useI18n()
+const content = useIntlayer("app")
+const { locale } = useLocale()
 const { forecast, series, polls, health, signals, loading, error, missing } = useLiveData()
 
 function viewFromHash(): View {
@@ -47,77 +43,97 @@ const onHash = () => {
   view.value = viewFromHash()
   window.scrollTo({ top: 0 })
 }
+// Each line of the hero's title stays whole ("Frankreich", "フランス"), so the title shrinks until the longer
+// line fits the column.
+const heroTitle = ref<HTMLElement | null>(null)
+const titleFit = ref(1)
+function fitTitle() {
+  const title = heroTitle.value
+  if (!title) return
+  const widest = Math.max(...[...title.children].map((line) => (line as HTMLElement).offsetWidth / titleFit.value))
+  titleFit.value = widest > 0 ? Math.min(1, title.clientWidth / widest) : 1
+}
+const titleObserver = new ResizeObserver(() => fitTitle())
+watch(heroTitle, (title, previous) => {
+  if (previous) titleObserver.unobserve(previous)
+  if (title) titleObserver.observe(title)
+})
+
 onMounted(() => {
   window.addEventListener("hashchange", onHash)
-  document.documentElement.lang = locale.value
+  void document.fonts.ready.then(fitTitle)
 })
-onBeforeUnmount(() => window.removeEventListener("hashchange", onHash))
+onBeforeUnmount(() => {
+  window.removeEventListener("hashchange", onHash)
+  titleObserver.disconnect()
+})
 
 const current = computed(() => views.find((v) => v.id === view.value) ?? views[0]!)
+const plate = computed(() => (view.value === "overview" ? null : content.plates[view.value]))
 // The views live in the hash, so the skip link moves focus itself rather than following "#main".
 const main = ref<HTMLElement | null>(null)
 const skipToMain = () => main.value?.focus()
 watchEffect(() => {
-  document.title = current.value.plate ? `${t(current.value.label)} · ${t("title")}` : t("title")
+  document.documentElement.lang = locale.value
+  document.title = plate.value ? `${content.nav[view.value].value} · ${content.title.value}` : content.title.value
 })
 
 const daysLeft = computed(() => (forecast.value ? daysUntil(forecast.value.election.round1, new Date()) : null))
 // "France 2027" set on two lines in the hero.
 const brandLines = computed(() => {
-  const brand = t("brand")
+  const brand = content.brand.value
   const split = brand.lastIndexOf(" ")
   return split > 0 ? [brand.slice(0, split), brand.slice(split + 1)] : [brand, ""]
 })
+watch(brandLines, () => nextTick(fitTitle))
 // The painting's title stays in French, set in italics inside the credit.
 const PAINTING_TITLE = "Le 28 juillet. La Liberté guidant le peuple"
-const credit = computed(() => t("footerPainting", { title: "\u0000" }).split("\u0000"))
+const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.split("\u0000"))
 </script>
 
 <template>
   <div aria-hidden="true" class="backdrop" />
-  <a class="skip-link" href="#main" @click.prevent="skipToMain">{{ t("skipToContent") }}</a>
+  <a class="skip-link" href="#main" @click.prevent="skipToMain">{{ content.skipToContent }}</a>
 
   <header class="topbar">
     <div aria-hidden="true" class="flagline" />
     <div class="topbar-inner">
       <a class="brand" href="#/overview">
         <Cocarde />
-        <span class="brand-name">{{ t("brand") }}</span>
+        <span class="brand-name">{{ content.brand }}</span>
       </a>
-      <nav :aria-label="t('navLabel')" class="nav">
+      <nav :aria-label="content.navLabel.value" class="nav">
         <a v-for="v in views" :key="v.id" :href="`#/${v.id}`" :aria-current="view === v.id ? 'page' : undefined">
           <span aria-hidden="true" class="numeral">{{ v.numeral }}</span>
-          <span>{{ t(v.label) }}</span>
+          <span>{{ content.nav[v.id] }}</span>
         </a>
       </nav>
-      <button class="chip lang" type="button" :lang="locale === 'fr' ? 'en' : 'fr'" @click="toggle">
-        {{ t("language") }}
-      </button>
+      <LocaleSwitcher />
     </div>
   </header>
 
   <main id="main" ref="main" class="main" tabindex="-1">
     <Masthead :framing="FRAMINGS[view]" :tall="view === 'overview'">
-      <div :class="current.plate ? 'plate' : 'hero'">
-        <template v-if="!current.plate">
-          <p class="eyebrow"><span class="tricolore-rule" />{{ t("heroEyebrow") }}</p>
-          <h1 class="hero-title">
+      <div :class="plate ? 'plate' : 'hero'">
+        <template v-if="!plate">
+          <p class="eyebrow"><span class="tricolore-rule" />{{ content.heroEyebrow }}</p>
+          <h1 ref="heroTitle" class="hero-title" :style="{ '--fit': titleFit }">
             <span>{{ brandLines[0] }}</span>
             <em>{{ brandLines[1] }}</em>
           </h1>
-          <p class="hero-lede">{{ t("subtitle") }}</p>
+          <p class="hero-lede">{{ content.subtitle }}</p>
           <div v-if="forecast" class="hero-facts">
             <p v-if="daysLeft !== null && daysLeft >= 0" class="countdown">
               <span class="countdown-n">{{ daysLeft }}</span>
-              <span class="countdown-label">{{ t("countdownLabel") }}</span>
+              <span class="countdown-label">{{ content.countdownLabel }}</span>
             </p>
             <dl class="rounds">
               <div>
-                <dt>{{ t("navRound1") }}</dt>
+                <dt>{{ content.nav.round1 }}</dt>
                 <dd>{{ longDate(forecast.election.round1, locale) }}</dd>
               </div>
               <div>
-                <dt>{{ t("navRound2") }}</dt>
+                <dt>{{ content.nav.round2 }}</dt>
                 <dd>{{ longDate(forecast.election.round2, locale) }}</dd>
               </div>
             </dl>
@@ -127,31 +143,36 @@ const credit = computed(() => t("footerPainting", { title: "\u0000" }).split("\u
           <p class="eyebrow">
             <span class="numeral">{{ current.numeral }}</span>
             <span class="tricolore-rule" />
-            {{ t(current.label) }}
+            {{ content.nav[view] }}
           </p>
-          <h1>{{ t(current.plate.title) }}</h1>
-          <p class="lede">{{ t(current.plate.lede) }}</p>
+          <h1>{{ plate.title }}</h1>
+          <p class="lede">{{ plate.lede }}</p>
           <p v-if="forecast" class="updated">
-            {{ t("roundDates", { r1: longDate(forecast.election.round1, locale), r2: longDate(forecast.election.round2, locale) }) }}
-            <template v-if="daysLeft !== null && daysLeft >= 0"> · {{ t("daysToRound1", { n: daysLeft }) }}</template>
+            {{
+              content.roundDates({
+                r1: longDate(forecast.election.round1, locale),
+                r2: longDate(forecast.election.round2, locale),
+              })
+            }}
+            <template v-if="daysLeft !== null && daysLeft >= 0"> · {{ content.daysToRound1({ n: daysLeft }) }}</template>
           </p>
         </template>
         <p v-if="forecast" class="updated">
-          {{ t("updated", { when: dateTime(forecast.generated_at, locale) }) }} ·
-          {{ t("asOf", { date: longDate(forecast.as_of, locale) }) }}
+          {{ content.updated({ when: dateTime(forecast.generated_at, locale) }) }} ·
+          {{ content.asOf({ date: longDate(forecast.as_of, locale) }) }}
         </p>
         <p v-if="error && forecast" class="notice" role="status">
           <span aria-hidden="true" class="icon">!</span>
-          <span>{{ t("stale", { error }) }}</span>
+          <span>{{ content.stale({ error }) }}</span>
         </p>
       </div>
     </Masthead>
 
     <div class="content">
-      <p v-if="loading && !forecast" class="loading">{{ t("loading") }}</p>
+      <p v-if="loading && !forecast" class="loading">{{ content.loading }}</p>
       <div v-else-if="missing || (!forecast && error)" class="notice" role="alert">
         <span aria-hidden="true" class="icon">!</span>
-        <span>{{ missing ? t("noForecast") : error }}</span>
+        <span>{{ missing ? content.noForecast : error }}</span>
       </div>
       <template v-else-if="forecast">
         <OverviewView v-if="view === 'overview'" :forecast="forecast" />
@@ -168,14 +189,14 @@ const credit = computed(() => t("footerPainting", { title: "\u0000" }).split("\u
     <div class="footer-inner">
       <p class="footer-brand">
         <Cocarde />
-        <span class="brand-name">{{ t("brand") }}</span>
-        <span class="muted">{{ t("subtitle") }}</span>
+        <span class="brand-name">{{ content.brand }}</span>
+        <span class="muted">{{ content.subtitle }}</span>
       </p>
       <p class="credit">
-        {{ credit[0] }}<cite>{{ PAINTING_TITLE }}</cite>{{ credit[1] }}
+        {{ credit[0] }}<cite lang="fr">{{ PAINTING_TITLE }}</cite>{{ credit[1] }}
       </p>
       <p>
-        <a href="https://github.com/Hebilicious/fr2027-forecaster" rel="noopener noreferrer">{{ t("footerCode") }}</a>
+        <a href="https://github.com/Hebilicious/fr2027-forecaster" rel="noopener noreferrer">{{ content.footerCode }}</a>
       </p>
     </div>
   </footer>
@@ -306,12 +327,6 @@ const credit = computed(() => t("footerPainting", { title: "\u0000" }).split("\u
   background: var(--tricolore);
 }
 
-.lang {
-  flex: none;
-  padding: 6px 13px;
-  font-size: 0.8rem;
-}
-
 /* The overview's hero. --text-max keeps it on the obsidian, off the painting (Masthead.vue). */
 .hero {
   max-width: min(31rem, var(--text-max, 31rem));
@@ -322,11 +337,18 @@ const credit = computed(() => t("footerPainting", { title: "\u0000" }).split("\u
 
 .hero-title {
   display: grid;
-  font-size: clamp(4.4rem, 2.6rem + 6.4vw, 8.75rem);
+  justify-items: start;
+  /* The column's width, not the title's: fitTitle() measures the lines against it. */
+  min-width: 0;
+  font-size: calc(clamp(4.4rem, 2.6rem + 6.4vw, 8.75rem) * var(--fit, 1));
   font-weight: 500;
   line-height: 0.86;
   letter-spacing: -0.035em;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title > * {
+  white-space: nowrap;
 }
 
 .hero-title em {

@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed } from "vue"
+import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
 import { round2Matrix, type MatrixCell } from "../charts"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import { probability } from "../format"
-import { useI18n } from "../i18n"
 
 const props = defineProps<{ forecast: Forecast }>()
-const { t, locale } = useI18n()
+const content = useIntlayer("round2-view")
+const common = useIntlayer("common")
+const { locale } = useLocale()
 
 const matrix = computed(() => round2Matrix(props.forecast, 8))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
@@ -36,13 +38,13 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
   <div class="round2">
     <section aria-labelledby="matrix-title" class="card rise">
       <header class="card-head">
-        <h2 id="matrix-title">{{ t("matrixTitle") }}</h2>
+        <h2 id="matrix-title">{{ content.matrixTitle }}</h2>
       </header>
       <div class="table-wrap">
         <table class="matrix">
           <thead>
             <tr>
-              <th scope="col"><span class="sr-only">{{ t("candidate") }}</span></th>
+              <th scope="col"><span class="sr-only">{{ common.candidate }}</span></th>
               <th v-for="c in matrix.candidates" :key="c.candidate_id" class="column-head" scope="col">
                 <span class="head-in">
                   <CandidateAvatar :id="c.candidate_id" :name="c.name" :size="30" />
@@ -66,7 +68,7 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
                   :class="{ empty: c.pMatchup <= 0 }"
                   :style="{ background: `var(${steps[stepFor(c.pMatchup)]})` }"
                   :title="c.rowWins !== null
-                    ? t('matchupCell', { p: probability(c.pMatchup, locale), w: probability(c.rowWins, locale) })
+                    ? content.matchupCell({ p: probability(c.pMatchup, locale), w: probability(c.rowWins, locale) }).value
                     : undefined"
                 >
                   <template v-if="c.pMatchup > 0">
@@ -83,7 +85,7 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
       </div>
       <div class="legend small">
         <div aria-hidden="true" class="scale">
-          <span class="scale-title">{{ t("matrixScale") }}</span>
+          <span class="scale-title">{{ content.matrixScale }}</span>
           <span class="ramp">
             <span v-for="step in steps.slice(1)" :key="step" class="ramp-step" :style="{ background: `var(${step})` }" />
           </span>
@@ -92,22 +94,22 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
             <span>{{ probability(maxMatchup, locale) }}</span>
           </span>
         </div>
-        <p class="figures">{{ t("matrixFigures") }}</p>
+        <p class="figures">{{ content.matrixFigures }}</p>
       </div>
     </section>
 
     <section aria-labelledby="top-title" class="card rise" :style="{ '--i': 1 }">
       <header class="card-head">
-        <h2 id="top-title">{{ t("topMatchups") }}</h2>
+        <h2 id="top-title">{{ content.topMatchups }}</h2>
       </header>
       <div class="table-wrap">
         <table class="duels">
           <thead>
             <tr>
-              <th scope="col">{{ t("pairing") }}</th>
-              <th class="num" scope="col">{{ t("happens") }}</th>
-              <th scope="col">{{ t("winner") }}</th>
-              <th scope="col"><span class="sr-only">{{ t("source") }}</span></th>
+              <th scope="col">{{ content.pairing }}</th>
+              <th class="num" scope="col">{{ content.happens }}</th>
+              <th scope="col">{{ content.winner }}</th>
+              <th scope="col"><span class="sr-only">{{ common.source }}</span></th>
             </tr>
           </thead>
           <tbody>
@@ -138,7 +140,7 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
                 </div>
               </td>
               <td>
-                <span class="badge">{{ pair.polled ? t("polledBadge") : t("modelledBadge") }}</span>
+                <span class="badge">{{ pair.polled ? content.polledBadge : content.modelledBadge }}</span>
               </td>
             </tr>
           </tbody>
