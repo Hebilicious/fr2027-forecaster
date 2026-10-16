@@ -81,5 +81,6 @@ describe("filterField", () => {
     const view = filterField(field, { query: "rassemblement", showAll: true })
     expect(view.visible.map((c) => c.candidate_id)).toEqual(["le_pen", "bardella"])
     expect(view.setAside.size).toBe(0)
+    expect(view.notRunning).toBe(2)
   })
 })

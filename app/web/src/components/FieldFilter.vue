@@ -14,40 +14,43 @@ const { locale } = useLocale()
 
 <template>
   <div class="field-filter" role="search" :aria-label="content.label.value">
-    <div class="controls">
-      <label class="search">
-        <span class="sr-only">{{ content.search }}</span>
-        <span aria-hidden="true" class="glass-icon" />
-        <input v-model="query" type="search" :placeholder="content.placeholder.value" autocomplete="off" />
-        <button v-if="query" class="clear" type="button" :aria-label="content.clear.value" @click="query = ''">
-          <span aria-hidden="true">×</span>
-        </button>
-      </label>
-      <button class="chip" type="button" :aria-pressed="showAll" @click="showAll = !showAll">
-        {{ content.showAll }}
+    <label class="search">
+      <span class="sr-only">{{ content.search }}</span>
+      <span aria-hidden="true" class="glass-icon" />
+      <input v-model="query" type="search" :placeholder="content.placeholder.value" autocomplete="off" />
+      <button v-if="query" class="clear" type="button" :aria-label="content.clear.value" @click="query = ''">
+        <span aria-hidden="true">×</span>
       </button>
-      <span class="small muted num" role="status">
-        {{ content.shown({ shown: count(props.shown ?? field.visible.length, locale), total: count(total, locale) }) }}
-      </span>
-    </div>
-    <p v-if="field.setAside.size > 0" class="small muted">
-      {{ content.hidden({ n: count(field.setAside.size, locale) }) }}
-    </p>
-    <p v-if="(shown ?? field.visible.length) === 0" class="secondary">{{ content.noMatch }}</p>
+    </label>
+    <button v-if="field.notRunning > 0" class="chip" type="button" :aria-pressed="showAll" @click="showAll = !showAll">
+      {{ content.showAll }} <span class="num tally">{{ count(field.notRunning, locale) }}</span>
+    </button>
+    <span class="small muted num shown" role="status">
+      {{ content.shown({ shown: count(props.shown ?? field.visible.length, locale), total: count(total, locale) }) }}
+    </span>
+    <p v-if="(shown ?? field.visible.length) === 0" class="secondary empty">{{ content.noMatch }}</p>
   </div>
 </template>
 
 <style scoped>
 .field-filter {
-  display: grid;
-  gap: 10px;
-}
-
-.controls {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px 14px;
+  gap: 10px 12px;
+}
+
+.shown {
+  margin-left: auto;
+}
+
+.tally {
+  margin-left: 4px;
+  opacity: 0.6;
+}
+
+.empty {
+  flex-basis: 100%;
 }
 
 .search {

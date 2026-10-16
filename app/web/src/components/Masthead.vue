@@ -153,7 +153,7 @@ const mastheadStyle = computed(() => ({
 .masthead {
   position: relative;
   margin-top: calc(-1 * var(--topbar-h));
-  min-height: clamp(420px, 52vh, 480px);
+  min-height: clamp(320px, 40vh, 380px);
   overflow: hidden;
   isolation: isolate;
   display: flex;
@@ -262,7 +262,7 @@ const mastheadStyle = computed(() => ({
   width: 100%;
   max-width: var(--content);
   margin: 0 auto;
-  padding: calc(var(--topbar-h) + 28px) var(--gutter) 88px;
+  padding: calc(var(--topbar-h) + 28px) var(--gutter) 48px;
 }
 
 .tall .masthead-inner {
