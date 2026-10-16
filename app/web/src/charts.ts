@@ -49,6 +49,30 @@ export function round1Panels(forecast: Forecast, series: readonly SeriesPoint[],
   return panels.toSorted((a, b) => (b.points.at(-1)?.mean ?? 0) - (a.points.at(-1)?.mean ?? 0))
 }
 
+/**
+ * The item whose position is closest to (x, y), if it lies within `radius`. On a tie the later item
+ * wins, so the dot drawn on top is the one picked.
+ */
+export function nearest<T>(
+  items: readonly T[],
+  position: (item: T) => readonly [number, number],
+  x: number,
+  y: number,
+  radius: number,
+): T | null {
+  let best: T | null = null
+  let bestDistance = radius
+  for (const item of items) {
+    const [ix, iy] = position(item)
+    const distance = Math.hypot(ix - x, iy - y)
+    if (distance <= bestDistance) {
+      best = item
+      bestDistance = distance
+    }
+  }
+  return best
+}
+
 /** The fieldwork midpoint, as the model places a poll. */
 export function midpoint(start: string, end: string): string {
   const a = Date.parse(`${start}T00:00:00Z`)

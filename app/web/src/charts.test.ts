@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import type { Forecast, Poll, SeriesPoint } from "./api/schemas"
-import { midpoint, outcomeGroups, round1Panels, round2Matrix, scale, shareTicks } from "./charts"
+import { midpoint, nearest, outcomeGroups, round1Panels, round2Matrix, scale, shareTicks } from "./charts"
 
 const candidate = (id: string, pQualify: number, pWin: number) => ({
   candidate_id: id,
@@ -153,5 +153,27 @@ describe("outcomeGroups", () => {
 
   it("is empty when nobody can win", () => {
     expect(outcomeGroups([withWin("a", 0)])).toEqual([])
+  })
+})
+
+describe("nearest", () => {
+  const points = [
+    { id: "low", at: [100, 150] as const },
+    { id: "high", at: [100, 143] as const },
+    { id: "same", at: [100, 143] as const },
+  ]
+  const at = (p: (typeof points)[number]) => p.at
+
+  it("picks the closest item, even when its neighbours are a few pixels away", () => {
+    expect(nearest(points, at, 101, 149, 10)?.id).toBe("low")
+    expect(nearest(points.slice(0, 2), at, 99, 144, 10)?.id).toBe("high")
+  })
+
+  it("lets the later of two items in the same place win", () => {
+    expect(nearest(points, at, 100, 143, 10)?.id).toBe("same")
+  })
+
+  it("is null when nothing lies within the radius", () => {
+    expect(nearest(points, at, 140, 150, 10)).toBeNull()
   })
 })

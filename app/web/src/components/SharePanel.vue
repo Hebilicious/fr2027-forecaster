@@ -2,7 +2,7 @@
 import { computed, ref } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Panel, PollDot } from "../charts"
-import { scale, shareTicks } from "../charts"
+import { nearest, scale, shareTicks } from "../charts"
 import type { SeriesPoint } from "../api/schemas"
 import { percent, safeUrl, shareWithInterval, shortDate } from "../format"
 import type { Locale } from "../locales"
@@ -59,12 +59,19 @@ const monthTicks = computed(() => {
   return result
 })
 
-// Crosshair: snaps to the nearest history point.
+// Pointer: within DOT_RADIUS screen pixels of a poll dot it picks the nearest dot, otherwise the
+// crosshair snaps to the nearest history point. Picking by distance, rather than by overlapping hit
+// circles, keeps dots a few pixels apart separately reachable.
+const DOT_RADIUS = 14
 const hover = ref<{ index: number } | null>(null)
+const pointedDot = ref<PollDot | null>(null)
 function onMove(event: PointerEvent) {
   const svg = event.currentTarget as SVGSVGElement
   const box = svg.getBoundingClientRect()
-  const px = ((event.clientX - box.left) / box.width) * width
+  const units = width / box.width
+  const px = (event.clientX - box.left) * units
+  const py = (event.clientY - box.top) * units
+  pointedDot.value = nearest(sortedDots.value, (dot) => [x(dot.date), y(dot.share)], px, py, DOT_RADIUS * units)
   let best = 0
   let bestDistance = Infinity
   props.panel.points.forEach((p, i) => {
@@ -76,9 +83,14 @@ function onMove(event: PointerEvent) {
   })
   hover.value = { index: best }
 }
+function onLeave() {
+  hover.value = null
+  pointedDot.value = null
+}
 const hovered = computed(() => (hover.value ? props.panel.points[hover.value.index] : undefined))
 
 const focusedDot = ref<PollDot | null>(null)
+const activeDot = computed(() => pointedDot.value ?? focusedDot.value)
 const dotLabel = (dot: PollDot) =>
   content.poll({
     firm: dot.firm,
@@ -111,7 +123,8 @@ const sortedDots = computed(() =>
         role="img"
         :aria-label="content.label({ name: panel.candidate.name, latest: latest ? shareDate(latest, locale) : '' }).value"
         @pointermove="onMove"
-        @pointerleave="hover = null"
+        @pointerdown="onMove"
+        @pointerleave="onLeave"
       >
         <g class="grid">
           <g v-for="tick in ticks" :key="tick">
@@ -122,7 +135,8 @@ const sortedDots = computed(() =>
         </g>
         <path :d="band" class="band" />
         <path :d="line" class="line" />
-        <g>
+        <!-- The links are for the keyboard; the pointer reaches a poll through the overlay below. -->
+        <g class="dots">
           <a
             v-for="(dot, i) in sortedDots"
             :key="`${dot.pollId}-${dot.scenario}-${i}`"
@@ -132,24 +146,40 @@ const sortedDots = computed(() =>
             :aria-label="dotLabel(dot)"
             @focus="focusedDot = dot"
             @blur="focusedDot = null"
-            @pointerenter="focusedDot = dot"
-            @pointerleave="focusedDot = null"
           >
-            <circle :cx="x(dot.date)" :cy="y(dot.share)" class="hit" r="12" />
             <circle
               :cx="x(dot.date)"
               :cy="y(dot.share)"
               :r="dot.firm === highlightFirm ? 4.5 : 3.5"
-              :class="['dot', { highlighted: dot.firm === highlightFirm, faded: highlightFirm && dot.firm !== highlightFirm }]"
+              :class="[
+                'dot',
+                {
+                  active: dot === activeDot,
+                  highlighted: dot.firm === highlightFirm,
+                  faded: highlightFirm && dot.firm !== highlightFirm,
+                },
+              ]"
             />
           </a>
         </g>
-        <g v-if="hovered" class="crosshair" pointer-events="none">
+        <!-- While the pointer is near a dot, a click anywhere on the plot opens that dot's poll. -->
+        <a
+          v-if="pointedDot"
+          :href="safeUrl(pointedDot.sourceUrl)"
+          rel="noopener noreferrer"
+          tabindex="-1"
+          target="_blank"
+          :aria-label="dotLabel(pointedDot)"
+          class="pointed"
+        >
+          <rect :width="width" :height="height" />
+        </a>
+        <g v-if="hovered && !activeDot" class="crosshair" pointer-events="none">
           <line :x1="x(hovered.date)" :x2="x(hovered.date)" :y1="margin.top" :y2="height - margin.bottom" />
           <circle :cx="x(hovered.date)" :cy="y(hovered.mean)" r="4" />
         </g>
       </svg>
-      <p v-if="focusedDot" class="tooltip small" role="status">{{ dotLabel(focusedDot) }}</p>
+      <p v-if="activeDot" class="tooltip small" role="status">{{ dotLabel(activeDot) }}</p>
       <p v-else-if="hovered" class="tooltip small num" role="status">
         <strong>{{ percent(hovered.mean, 1, locale) }}</strong>
         <span class="secondary">
@@ -244,7 +274,11 @@ svg {
   filter: drop-shadow(0 0 4px rgba(88, 124, 241, 0.55));
 }
 
-.hit {
+.dots {
+  pointer-events: none;
+}
+
+.pointed rect {
   fill: transparent;
 }
 
@@ -264,8 +298,9 @@ svg {
   stroke-width: 2;
 }
 
-a:hover .dot {
+.dot.active {
   stroke: var(--ink);
+  opacity: 1;
 }
 
 /* Keyboard focus rings the dot itself, and the tooltip names the poll. */
