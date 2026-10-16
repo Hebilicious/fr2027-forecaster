@@ -115,6 +115,8 @@ export const Forecast = Schema.Struct({
   changes: Schema.Struct({
     previous: Schema.NullOr(Schema.String),
     new_polls: Schema.Array(Schema.String),
+    /** Forecasts written before event detection lack it. */
+    new_spikes: Schema.optionalKey(Schema.Array(Schema.Struct({ candidate_id: Schema.String, date: Schema.String }))),
     p_win_delta: Schema.Array(Schema.Struct({ candidate_id: Schema.String, delta: Schema.Finite })),
   }),
   warnings: Schema.Array(Schema.String),

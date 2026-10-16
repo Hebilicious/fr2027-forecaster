@@ -408,7 +408,7 @@
       "description": "What moved since the previous forecast file.",
       "type": "object",
       "additionalProperties": false,
-      "required": ["previous", "new_polls", "p_win_delta"],
+      "required": ["previous", "new_polls", "new_spikes", "p_win_delta"],
       "properties": {
         "previous": {
           "type": ["string", "null"]
@@ -417,6 +417,16 @@
           "type": "array",
           "items": {
             "type": "string"
+          }
+        },
+        "new_spikes": {
+          "description": "News and attention spikes this run found that the previous forecast had not.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["candidate_id", "date"],
+            "properties": { "candidate_id": { "type": "string" }, "date": { "$ref": "#/$defs/date" } }
           }
         },
         "p_win_delta": {
