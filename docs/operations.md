@@ -66,18 +66,14 @@ In **Settings → Secrets and variables → Actions**:
 | `RELEASE_APP_CLIENT_ID`   | variable | The client ID of the `heb-release` GitHub App, `Iv23lierXRciGQXCgOuJ`                             |
 | `RELEASE_APP_PRIVATE_KEY` | secret   | A private key of that App ("Generate a private key" at github.com/settings/apps/heb-release)      |
 
-GitHub never fired Live's own hourly schedule (16 October 2026). Live is started by:
+GitHub never fired a schedule in this repository (16 October 2026: neither Live's hourly one nor a
+separate 20-minute clock workflow). Live is started by the Worker's cron (`17 * * * *`), which
+mints a token of the `heb-release` App and sends a `repository_dispatch`; it first ran at 14:17
+UTC that day. Live's own schedule, every 6 hours, stays as a backup in case GitHub starts firing
+it.
 
-- [`clock.yml`](../.github/workflows/clock.yml), every 20 minutes, which sends a
-  `workflow_dispatch` with `GITHUB_TOKEN` unless Live began in the last 50 minutes;
-- the Worker's cron (`17 * * * *`), once the `heb-release` App key is set, through a
-  `repository_dispatch`;
-- Live's own schedule, every 6 hours, as a last backup.
-
-The two App rows above are optional. With them, the Worker's cron runs, and Live opens, comments
-on and closes Grok Bot's poll pull requests with the App so CI runs on them; without them, Live
-does that with `GITHUB_TOKEN`, and CI does not run on those pull requests (Live validates every
-file before it commits it to `main` either way).
+The App rows above are required for that clock. Live also opens, comments on and closes Grok
+Bot's poll pull requests with the App, so CI runs on them.
 
 ### 4. First run
 
