@@ -276,6 +276,10 @@ fn previous_forecast(dir: &std::path::Path, current: &str) -> Result<Option<(Str
     Ok(Some((name, value)))
 }
 
+/// Bumped whenever the forecast file gains, loses or changes a field, so that the next run refits rather than
+/// keep a file the UI can no longer read in full.
+const OUTPUT_VERSION: u32 = 2;
+
 fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date) -> Result<String> {
     let mut bytes = Vec::new();
     for path in [
@@ -286,7 +290,13 @@ fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date) -> Result<String>
         bytes.extend(std::fs::read(&path).with_context(|| format!("reading {}", path.display()))?);
         bytes.push(0);
     }
-    bytes.extend(format!("as_of={as_of};simulations={}", params.simulations).bytes());
+    bytes.extend(
+        format!(
+            "output={OUTPUT_VERSION};as_of={as_of};simulations={}",
+            params.simulations
+        )
+        .bytes(),
+    );
     Ok(content_hash(&bytes))
 }
 
