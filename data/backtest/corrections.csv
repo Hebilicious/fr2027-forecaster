@@ -1,0 +1,34 @@
+year,poll_id,round,scenario_id,candidate_id,index_share,primary_share,primary_url,note
+2022,opinionway-2021-09-23,1,S1,montebourg,4,3,http://www.commission-des-sondages.fr/notices/files/notices/2021/septembre/9214-p-ow-presitrack-n-1-les-2chos-c-news.pdf,Wikipedia rows sum to 101-102; the notice's PUBLIE column sums to 100
+2022,opinionway-2021-09-23,1,S1,roussel,4,3,http://www.commission-des-sondages.fr/notices/files/notices/2021/septembre/9214-p-ow-presitrack-n-1-les-2chos-c-news.pdf,
+2022,opinionway-2021-09-23,1,S2,roussel,4,3,http://www.commission-des-sondages.fr/notices/files/notices/2021/septembre/9214-p-ow-presitrack-n-1-les-2chos-c-news.pdf,
+2022,opinionway-2021-09-23,1,S3,roussel,4,3,http://www.commission-des-sondages.fr/notices/files/notices/2021/septembre/9214-p-ow-presitrack-n-1-les-2chos-c-news.pdf,
+2022,opinionway-2021-09-23,1,S4,montebourg,4,3,http://www.commission-des-sondages.fr/notices/files/notices/2021/septembre/9214-p-ow-presitrack-n-1-les-2chos-c-news.pdf,
+2022,opinionway-2021-09-23,1,S4,roussel,4,3,http://www.commission-des-sondages.fr/notices/files/notices/2021/septembre/9214-p-ow-presitrack-n-1-les-2chos-c-news.pdf,
+2022,elabe-2021-10-06,1,S1,dupont_aignan,4,3,https://elabe.fr/fichier-pdf/9072-les-francais-et-lelection-presidentielle-2022/,Wikipedia links the September report; this is the October one
+2022,elabe-2021-10-06,1,S2,dupont_aignan,4,3,https://elabe.fr/fichier-pdf/9072-les-francais-et-lelection-presidentielle-2022/,
+2022,ifop-2021-10-06,1,S2,dupont_aignan,4,3,https://www.ifopgroup.com/wp-content/uploads/2021/10/118499-rapport.pdf,
+2022,ifop-2022-03-08,1,S1,lassalle,1,1.5,https://www.ifopgroup.com/wp-content/uploads/2022/03/rol22_2022.03.08.pdf,
+2022,ifop-2022-04-08,2,H2,macron,59,58,https://www.ifopgroup.com/wp-content/uploads/2022/04/rol22_2022.04.08.pdf,
+2022,ifop-2022-04-08,2,H2,melenchon,41,42,https://www.ifopgroup.com/wp-content/uploads/2022/04/rol22_2022.04.08.pdf,
+2022,cluster17-2022-04-08,1,S1,pecresse,9,9.5,https://cluster17.com/wp-content/uploads/2022/04/20220408_Cluster17_Rolling_hebdomadaire_Notice_technique_Publique.pdf,
+2022,atlasintel-2022-04-06,1,S1,hidalgo,2.3,2.4,https://cdn.atlasintel.org/cd03767f-0b01-4810-b2b8-7ad965f7942d.pdf,Wikipedia took these two from the all-respondents page; the others are of expressed votes
+2022,atlasintel-2022-04-06,1,S1,roussel,2.2,2.3,https://cdn.atlasintel.org/cd03767f-0b01-4810-b2b8-7ad965f7942d.pdf,
+2022,atlasintel-2022-04-21,2,H1,macron,53,53.3,https://cdn.atlasintel.org/76a45593-1f01-47c6-a7c7-1f21d278935b.pdf,Wikipedia rounded
+2022,atlasintel-2022-04-21,2,H1,le_pen,47,46.7,https://cdn.atlasintel.org/76a45593-1f01-47c6-a7c7-1f21d278935b.pdf,
+2022,harris-interactive-2021-12-31-2,2,H1,macron,62,61,https://harris-interactive.fr/wp-content/uploads/sites/6/2021/12/MREFQDZF-54D.pdf,Wikipedia cites the 10-13 Dec report; Harris's own 28-31 Dec report gives 61/39 (n=2550)
+2022,harris-interactive-2021-12-31-2,2,H1,zemmour,38,39,https://harris-interactive.fr/wp-content/uploads/sites/6/2021/12/MREFQDZF-54D.pdf,
+2017,ifop-2016-06-17,1,S5,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3432-1-study_file.pdf,"The source shows ""-"" and the column sums to 100 without him: not tested"
+2017,ifop-2016-06-17,1,S9,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3432-1-study_file.pdf,
+2017,ifop-2016-09-07,1,S1,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3479-1-study_file.pdf,
+2017,ifop-2016-09-07,1,S2,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3479-1-study_file.pdf,
+2017,ifop-2016-09-07,1,S6,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3479-1-study_file.pdf,
+2017,ifop-2016-10-20,1,S3,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3535-1-study_file.pdf,
+2017,ifop-2016-10-20,1,S4,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3535-1-study_file.pdf,
+2017,ifop-2016-10-20,1,S7,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3535-1-study_file.pdf,
+2017,ifop-2017-01-06,1,S1,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3605-1-study_file.pdf,
+2017,ifop-2017-01-06,1,S2,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3605-1-study_file.pdf,
+2017,ifop-2017-01-06,1,S4,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3605-1-study_file.pdf,
+2017,ifop-2017-04-08,1,S1,asselineau,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3724-1-study_file.pdf,
+2017,ifop-2017-04-08,1,S1,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3724-1-study_file.pdf,
+2017,ifop-2017-04-15,1,S1,cheminade,0.5,,https://web.archive.org/web/20170702172854/https://www.fiducial.fr/telechargement/36468/472670/barometre-election-presidentielle-4.pdf,

@@ -1,0 +1,77 @@
+# The 2017 field for the backtest (fr2027 backtest). Same schema and blocs as config/candidates.yaml.
+# Every person tested in a 2017 poll is listed so each poll resolves; the replays condition on the
+# field that actually ran (the "ran" slot options, p = 1), and everyone else has p = 0. Blocs are
+# judgement calls made for the backtest, recorded in research/LOG.md.
+schema_version: "1.0"
+as_of: 2017-04-23
+blocs: [far_left, left, centre, right, far_right, other]
+candidates:
+  - { id: arthaud, name: "Nathalie Arthaud", party: "LO", bloc: far_left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: poutou, name: "Philippe Poutou", party: "NPA", bloc: far_left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: besancenot, name: "Olivier Besancenot", party: "NPA", bloc: far_left, status: withdrawn, sources: [] }
+  - { id: melenchon, name: "Jean-Luc Mélenchon", party: "LFI", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: hamon, name: "Benoît Hamon", party: "PS", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: hollande, name: "François Hollande", party: "PS", bloc: left, status: withdrawn, sources: [] }
+  - { id: valls, name: "Manuel Valls", party: "PS", bloc: left, status: withdrawn, sources: [] }
+  - { id: montebourg, name: "Arnaud Montebourg", party: "PS", bloc: left, status: withdrawn, sources: [] }
+  - { id: peillon, name: "Vincent Peillon", party: "PS", bloc: left, status: withdrawn, sources: [] }
+  - { id: pinel, name: "Sylvia Pinel", party: "PRG", bloc: left, status: withdrawn, sources: [] }
+  - { id: duflot, name: "Cécile Duflot", party: "EELV", bloc: left, status: withdrawn, sources: [] }
+  - { id: jadot, name: "Yannick Jadot", party: "EELV", bloc: left, status: withdrawn, sources: [] }
+  - { id: joly, name: "Eva Joly", party: "EELV", bloc: left, status: withdrawn, sources: [] }
+  - { id: hulot, name: "Nicolas Hulot", party: "DVG", bloc: left, status: withdrawn, sources: [] }
+  - { id: aubry, name: "Martine Aubry", party: "PS", bloc: left, status: withdrawn, sources: [] }
+  - { id: larrouturou, name: "Pierre Larrouturou", party: "Nouvelle Donne", bloc: left, status: withdrawn, sources: [] }
+  - { id: macron, name: "Emmanuel Macron", party: "EM", bloc: centre, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: bayrou, name: "François Bayrou", party: "MoDem", bloc: centre, status: withdrawn, sources: [] }
+  - { id: fillon, name: "François Fillon", party: "LR", bloc: right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: juppe, name: "Alain Juppé", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: sarkozy, name: "Nicolas Sarkozy", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: le_maire, name: "Bruno Le Maire", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: kosciusko_morizet, name: "Nathalie Kosciusko-Morizet", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: cope, name: "Jean-François Copé", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: alliot_marie, name: "Michèle Alliot-Marie", party: "DVD", bloc: right, status: withdrawn, sources: [] }
+  - { id: guaino, name: "Henri Guaino", party: "DVD", bloc: right, status: withdrawn, sources: [] }
+  - { id: yade, name: "Rama Yade", party: "La France qui ose", bloc: right, status: withdrawn, sources: [] }
+  - { id: le_pen, name: "Marine Le Pen", party: "FN", bloc: far_right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: dupont_aignan, name: "Nicolas Dupont-Aignan", party: "DLF", bloc: other, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: lassalle, name: "Jean Lassalle", party: "RES", bloc: other, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: asselineau, name: "François Asselineau", party: "UPR", bloc: other, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: cheminade, name: "Jacques Cheminade", party: "SP", bloc: other, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2017/2017169PDR.htm", note: "Official round 1 result." }] }
+  - { id: de_villiers, name: "Philippe de Villiers", party: "MPF", bloc: other, status: withdrawn, sources: [] }
+  - { id: marchandise, name: "Charlotte Marchandise", party: "LaPrimaire.org", bloc: other, status: withdrawn, sources: [] }
+slots:
+  - { id: arthaud, options: [{ run: [arthaud], p: 1 }] }
+  - { id: poutou, options: [{ run: [poutou], p: 1 }] }
+  - { id: besancenot, options: [{ run: [besancenot], p: 0 }] }
+  - { id: melenchon, options: [{ run: [melenchon], p: 1 }] }
+  - { id: hamon, options: [{ run: [hamon], p: 1 }] }
+  - { id: hollande, options: [{ run: [hollande], p: 0 }] }
+  - { id: valls, options: [{ run: [valls], p: 0 }] }
+  - { id: montebourg, options: [{ run: [montebourg], p: 0 }] }
+  - { id: peillon, options: [{ run: [peillon], p: 0 }] }
+  - { id: pinel, options: [{ run: [pinel], p: 0 }] }
+  - { id: duflot, options: [{ run: [duflot], p: 0 }] }
+  - { id: jadot, options: [{ run: [jadot], p: 0 }] }
+  - { id: joly, options: [{ run: [joly], p: 0 }] }
+  - { id: hulot, options: [{ run: [hulot], p: 0 }] }
+  - { id: aubry, options: [{ run: [aubry], p: 0 }] }
+  - { id: larrouturou, options: [{ run: [larrouturou], p: 0 }] }
+  - { id: macron, options: [{ run: [macron], p: 1 }] }
+  - { id: bayrou, options: [{ run: [bayrou], p: 0 }] }
+  - { id: fillon, options: [{ run: [fillon], p: 1 }] }
+  - { id: juppe, options: [{ run: [juppe], p: 0 }] }
+  - { id: sarkozy, options: [{ run: [sarkozy], p: 0 }] }
+  - { id: le_maire, options: [{ run: [le_maire], p: 0 }] }
+  - { id: kosciusko_morizet, options: [{ run: [kosciusko_morizet], p: 0 }] }
+  - { id: cope, options: [{ run: [cope], p: 0 }] }
+  - { id: alliot_marie, options: [{ run: [alliot_marie], p: 0 }] }
+  - { id: guaino, options: [{ run: [guaino], p: 0 }] }
+  - { id: yade, options: [{ run: [yade], p: 0 }] }
+  - { id: le_pen, options: [{ run: [le_pen], p: 1 }] }
+  - { id: dupont_aignan, options: [{ run: [dupont_aignan], p: 1 }] }
+  - { id: lassalle, options: [{ run: [lassalle], p: 1 }] }
+  - { id: asselineau, options: [{ run: [asselineau], p: 1 }] }
+  - { id: cheminade, options: [{ run: [cheminade], p: 1 }] }
+  - { id: de_villiers, options: [{ run: [de_villiers], p: 0 }] }
+  - { id: marchandise, options: [{ run: [marchandise], p: 0 }] }

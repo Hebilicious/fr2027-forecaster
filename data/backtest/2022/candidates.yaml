@@ -1,0 +1,81 @@
+# The 2022 field for the backtest (fr2027 backtest). Same schema and blocs as config/candidates.yaml.
+# Every person tested in a 2022 poll is listed so each poll resolves; the replays condition on the
+# field that actually ran (the "ran" slot options, p = 1), and everyone else has p = 0. Blocs are
+# judgement calls made for the backtest, recorded in research/LOG.md.
+schema_version: "1.0"
+as_of: 2022-04-10
+blocs: [far_left, left, centre, right, far_right, other]
+candidates:
+  - { id: arthaud, name: "Nathalie Arthaud", party: "LO", bloc: far_left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: poutou, name: "Philippe Poutou", party: "NPA", bloc: far_left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: melenchon, name: "Jean-Luc Mélenchon", party: "LFI", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: hidalgo, name: "Anne Hidalgo", party: "PS", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: jadot, name: "Yannick Jadot", party: "EELV", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: roussel, name: "Fabien Roussel", party: "PCF", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: montebourg, name: "Arnaud Montebourg", party: "DVG", bloc: left, status: withdrawn, sources: [] }
+  - { id: taubira, name: "Christiane Taubira", party: "DVG", bloc: left, status: withdrawn, sources: [] }
+  - { id: hamon, name: "Benoît Hamon", party: "Génération.s", bloc: left, status: withdrawn, sources: [] }
+  - { id: faure, name: "Olivier Faure", party: "PS", bloc: left, status: withdrawn, sources: [] }
+  - { id: cazeneuve, name: "Bernard Cazeneuve", party: "DVG", bloc: left, status: withdrawn, sources: [] }
+  - { id: royal, name: "Ségolène Royal", party: "DVG", bloc: left, status: withdrawn, sources: [] }
+  - { id: hollande, name: "François Hollande", party: "PS", bloc: left, status: withdrawn, sources: [] }
+  - { id: piolle, name: "Éric Piolle", party: "EELV", bloc: left, status: withdrawn, sources: [] }
+  - { id: macron, name: "Emmanuel Macron", party: "LREM", bloc: centre, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: lagarde, name: "Jean-Christophe Lagarde", party: "UDI", bloc: centre, status: withdrawn, sources: [] }
+  - { id: pecresse, name: "Valérie Pécresse", party: "LR", bloc: right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: bertrand, name: "Xavier Bertrand", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: barnier, name: "Michel Barnier", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: ciotti, name: "Éric Ciotti", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: juvin, name: "Philippe Juvin", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: payre, name: "Denis Payre", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: baroin, name: "François Baroin", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: wauquiez, name: "Laurent Wauquiez", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: retailleau, name: "Bruno Retailleau", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: dati, name: "Rachida Dati", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: fillon, name: "François Fillon", party: "LR", bloc: right, status: withdrawn, sources: [] }
+  - { id: poisson, name: "Jean-Frédéric Poisson", party: "VIA", bloc: right, status: withdrawn, sources: [] }
+  - { id: le_pen, name: "Marine Le Pen", party: "RN", bloc: far_right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: zemmour, name: "Éric Zemmour", party: "REC", bloc: far_right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: dupont_aignan, name: "Nicolas Dupont-Aignan", party: "DLF", bloc: other, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: lassalle, name: "Jean Lassalle", party: "RES", bloc: other, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2022/2022195PDR.htm", note: "Official round 1 result." }] }
+  - { id: asselineau, name: "François Asselineau", party: "UPR", bloc: other, status: withdrawn, sources: [] }
+  - { id: cheminade, name: "Jacques Cheminade", party: "SP", bloc: other, status: withdrawn, sources: [] }
+  - { id: thouy, name: "Hélène Thouy", party: "Parti animaliste", bloc: other, status: withdrawn, sources: [] }
+  - { id: philippot, name: "Florian Philippot", party: "Les Patriotes", bloc: other, status: withdrawn, sources: [] }
+slots:
+  - { id: arthaud, options: [{ run: [arthaud], p: 1 }] }
+  - { id: poutou, options: [{ run: [poutou], p: 1 }] }
+  - { id: melenchon, options: [{ run: [melenchon], p: 1 }] }
+  - { id: hidalgo, options: [{ run: [hidalgo], p: 1 }] }
+  - { id: jadot, options: [{ run: [jadot], p: 1 }] }
+  - { id: roussel, options: [{ run: [roussel], p: 1 }] }
+  - { id: montebourg, options: [{ run: [montebourg], p: 0 }] }
+  - { id: taubira, options: [{ run: [taubira], p: 0 }] }
+  - { id: hamon, options: [{ run: [hamon], p: 0 }] }
+  - { id: faure, options: [{ run: [faure], p: 0 }] }
+  - { id: cazeneuve, options: [{ run: [cazeneuve], p: 0 }] }
+  - { id: royal, options: [{ run: [royal], p: 0 }] }
+  - { id: hollande, options: [{ run: [hollande], p: 0 }] }
+  - { id: piolle, options: [{ run: [piolle], p: 0 }] }
+  - { id: macron, options: [{ run: [macron], p: 1 }] }
+  - { id: lagarde, options: [{ run: [lagarde], p: 0 }] }
+  - { id: pecresse, options: [{ run: [pecresse], p: 1 }] }
+  - { id: bertrand, options: [{ run: [bertrand], p: 0 }] }
+  - { id: barnier, options: [{ run: [barnier], p: 0 }] }
+  - { id: ciotti, options: [{ run: [ciotti], p: 0 }] }
+  - { id: juvin, options: [{ run: [juvin], p: 0 }] }
+  - { id: payre, options: [{ run: [payre], p: 0 }] }
+  - { id: baroin, options: [{ run: [baroin], p: 0 }] }
+  - { id: wauquiez, options: [{ run: [wauquiez], p: 0 }] }
+  - { id: retailleau, options: [{ run: [retailleau], p: 0 }] }
+  - { id: dati, options: [{ run: [dati], p: 0 }] }
+  - { id: fillon, options: [{ run: [fillon], p: 0 }] }
+  - { id: poisson, options: [{ run: [poisson], p: 0 }] }
+  - { id: le_pen, options: [{ run: [le_pen], p: 1 }] }
+  - { id: zemmour, options: [{ run: [zemmour], p: 1 }] }
+  - { id: dupont_aignan, options: [{ run: [dupont_aignan], p: 1 }] }
+  - { id: lassalle, options: [{ run: [lassalle], p: 1 }] }
+  - { id: asselineau, options: [{ run: [asselineau], p: 0 }] }
+  - { id: cheminade, options: [{ run: [cheminade], p: 0 }] }
+  - { id: thouy, options: [{ run: [thouy], p: 0 }] }
+  - { id: philippot, options: [{ run: [philippot], p: 0 }] }
