@@ -103,6 +103,8 @@ The Grok bot and the forecaster talk only through files in the repo, so the bot 
 
 Rules for the drop: one file per window, never edit a pushed file, commit with message `grok: <window end>`. The bot must use the canonical `candidate_id` list in `config/candidates.yaml`. If the bot can't fill a field, it sends `null`, not a guess.
 
+Since routine 1's `x-activity-3`, a drop sends stance counts instead of `sentiment`: per candidate `stance: {read_all, posts_drawn, off_topic, support, oppose, neutral}` from a random sample, plus `rubric_version` ([docs/x-stance-rubric.md](docs/x-stance-rubric.md)), `sampling` and a `double_labels` table of blind relabels. The pipeline computes the shares among relevant posts, their 95% Wilson intervals, the sentiment columns and Cohen's kappa per drop ([docs/grok-bot.md](docs/grok-bot.md), routine 1).
+
 **Poll row (`data/clean/polls.csv`, rebuilt from `data/raw/polls/<poll_id>.yaml`):** `poll_id, firm, sponsor, field_start, field_end, published_at, sample_size, method (online/phone/mixed), population (registered/likely), round (1/2), scenario_id, candidate_id, share, source_url, notice_url`, plus provenance: `index_url, entry (primary/index), retrieved_at, content_hash`. One row per candidate per scenario; a scenario is the exact set of candidates tested. Clean data is CSV rather than Parquet so every change is readable in a pull request (research log, 2026-10-09).
 
 **Market row (`data/clean/markets.csv`):** `ts, candidate_id, market_id, mid_price, best_bid, best_ask, volume_24h, liquidity`.

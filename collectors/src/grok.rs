@@ -17,6 +17,84 @@ struct Drop {
     collected_at: String,
     window: Window,
     candidates: Vec<CandidateActivity>,
+    #[serde(default)]
+    rubric_version: Option<String>,
+    #[serde(default)]
+    sampling: Option<Sampling>,
+    #[serde(default)]
+    double_labels: Option<DoubleLabels>,
+}
+
+/// How routine 1 drew the posts behind `stance` (only the fields the checks use).
+#[derive(Clone, Debug, Deserialize)]
+struct Sampling {
+    posts_per_candidate: u64,
+}
+
+/// The posts labelled twice: `counts[first][second]`, in [`LABELS`] order once parsed.
+#[derive(Clone, Debug, Deserialize)]
+struct DoubleLabels {
+    posts: u64,
+    counts: LabelTable,
+}
+
+#[derive(Clone, Debug, Deserialize)]
+struct LabelTable {
+    support: LabelCounts,
+    oppose: LabelCounts,
+    neutral: LabelCounts,
+    off_topic: LabelCounts,
+}
+
+#[derive(Clone, Copy, Debug, Deserialize)]
+struct LabelCounts {
+    support: u64,
+    oppose: u64,
+    neutral: u64,
+    off_topic: u64,
+}
+
+/// The four labels of the stance rubric, in the order of every table here.
+const LABELS: [&str; 4] = ["support", "oppose", "neutral", "off_topic"];
+
+impl LabelCounts {
+    fn cells(self) -> [u64; 4] {
+        [self.support, self.oppose, self.neutral, self.off_topic]
+    }
+}
+
+impl LabelTable {
+    /// `matrix()[first][second]`, rows and columns in [`LABELS`] order.
+    fn matrix(&self) -> [[u64; 4]; 4] {
+        [
+            self.support.cells(),
+            self.oppose.cells(),
+            self.neutral.cells(),
+            self.off_topic.cells(),
+        ]
+    }
+}
+
+#[derive(Clone, Copy, Debug, Deserialize)]
+struct Stance {
+    read_all: bool,
+    posts_drawn: u64,
+    off_topic: u64,
+    support: u64,
+    oppose: u64,
+    neutral: u64,
+}
+
+impl Stance {
+    /// Posts about the candidate: the denominator of every share.
+    fn relevant(self) -> u64 {
+        self.support + self.oppose + self.neutral
+    }
+
+    /// The first-pass totals, in [`LABELS`] order.
+    fn cells(self) -> [u64; 4] {
+        [self.support, self.oppose, self.neutral, self.off_topic]
+    }
 }
 
 #[derive(Clone, Debug, Deserialize)]
@@ -38,6 +116,8 @@ struct CandidateActivity {
     mentions_method: Option<String>,
     #[serde(default)]
     sample_size: Option<u64>,
+    #[serde(default)]
+    stance: Option<Stance>,
 }
 
 #[derive(Clone, Debug, Deserialize)]
@@ -66,6 +146,31 @@ pub struct GrokRow {
     pub bot_share_estimate: Option<f64>,
     /// Topics joined with ` | `.
     pub top_topics: Option<String>,
+    /// The stance rubric the labels follow (`docs/x-stance-rubric.md`); empty for old drops.
+    pub rubric_version: Option<String>,
+    /// Whether every eligible post was read (fewer mentions than the sampling threshold).
+    pub stance_read_all: Option<bool>,
+    pub stance_posts_drawn: Option<u64>,
+    pub stance_off_topic: Option<u64>,
+    pub stance_support: Option<u64>,
+    pub stance_oppose: Option<u64>,
+    pub stance_neutral: Option<u64>,
+    /// Shares among relevant posts (support + oppose + neutral), each with its 95% Wilson
+    /// interval; empty when no drawn post was about the candidate.
+    pub support_share: Option<f64>,
+    pub support_low: Option<f64>,
+    pub support_high: Option<f64>,
+    pub oppose_share: Option<f64>,
+    pub oppose_low: Option<f64>,
+    pub oppose_high: Option<f64>,
+    pub neutral_share: Option<f64>,
+    pub neutral_low: Option<f64>,
+    pub neutral_high: Option<f64>,
+    /// Drop-level, repeated on each of the drop's rows: posts labelled twice, the share of them
+    /// given the same label both times, and Cohen's kappa over the four labels.
+    pub drop_double_labelled: Option<u64>,
+    pub drop_agreement: Option<f64>,
+    pub drop_kappa: Option<f64>,
     pub source_file: String,
     pub content_hash: String,
 }
@@ -86,8 +191,33 @@ pub fn ingest(repo: &Repo, schemas: &Schemas, config: &CandidatesConfig) -> Resu
                 ingest.accepted += 1;
                 let source_file = repo.relative(&path);
                 let hash = content_hash(&bytes);
+                let reliability = drop.double_labels.as_ref().map(|d| Reliability::of(&d.counts.matrix()));
                 for activity in drop.candidates {
-                    let sentiment = activity.sentiment;
+                    let stance = activity.stance;
+                    let shares = stance.and_then(StanceShares::of);
+                    // Old drops carry sentiment; new ones carry stance, from which it is derived.
+                    let sentiment = activity.sentiment.or_else(|| {
+                        stance.zip(shares).zip(drop.rubric_version.as_deref()).map(
+                            |((stance, shares), rubric)| {
+                                let method = format!(
+                                    "stance counts, rubric {rubric}: support, oppose, neutral among {} relevant of {} drawn posts",
+                                    stance.relevant(),
+                                    stance.posts_drawn
+                                );
+                                Sentiment {
+                                    pos: shares.support.share,
+                                    neg: shares.oppose.share,
+                                    neu: shares.neutral.share,
+                                    method,
+                                }
+                            },
+                        )
+                    });
+                    let (support, oppose, neutral) = (
+                        shares.map(|s| s.support),
+                        shares.map(|s| s.oppose),
+                        shares.map(|s| s.neutral),
+                    );
                     ingest.rows.push(GrokRow {
                         window_start: drop.window.start.clone(),
                         window_end: drop.window.end.clone(),
@@ -103,7 +233,27 @@ pub fn ingest(repo: &Repo, schemas: &Schemas, config: &CandidatesConfig) -> Resu
                         sentiment_neu: sentiment.as_ref().map(|s| s.neu),
                         sentiment_method: sentiment.map(|s| s.method),
                         bot_share_estimate: activity.bot_share_estimate,
-                        top_topics: activity.top_topics.map(|t| t.join(" | ")),
+                        // An empty list is stored as an empty cell, like null.
+                        top_topics: activity.top_topics.filter(|t| !t.is_empty()).map(|t| t.join(" | ")),
+                        rubric_version: stance.and(drop.rubric_version.clone()),
+                        stance_read_all: stance.map(|s| s.read_all),
+                        stance_posts_drawn: stance.map(|s| s.posts_drawn),
+                        stance_off_topic: stance.map(|s| s.off_topic),
+                        stance_support: stance.map(|s| s.support),
+                        stance_oppose: stance.map(|s| s.oppose),
+                        stance_neutral: stance.map(|s| s.neutral),
+                        support_share: support.map(|i| i.share),
+                        support_low: support.map(|i| i.low),
+                        support_high: support.map(|i| i.high),
+                        oppose_share: oppose.map(|i| i.share),
+                        oppose_low: oppose.map(|i| i.low),
+                        oppose_high: oppose.map(|i| i.high),
+                        neutral_share: neutral.map(|i| i.share),
+                        neutral_low: neutral.map(|i| i.low),
+                        neutral_high: neutral.map(|i| i.high),
+                        drop_double_labelled: reliability.map(|r| r.posts),
+                        drop_agreement: reliability.and_then(|r| r.agreement),
+                        drop_kappa: reliability.and_then(|r| r.kappa),
                         source_file: source_file.clone(),
                         content_hash: hash.clone(),
                     });
@@ -184,15 +334,197 @@ fn validate_value(
                 ));
             }
         }
+        if let Some(stance) = activity.stance {
+            check_stance(&drop, activity, stance, &mut errors);
+        }
+    }
+    if let Some(double) = &drop.double_labels {
+        check_double_labels(&drop, double, &mut errors);
     }
     if errors.is_empty() { Ok(drop) } else { Err(errors) }
+}
+
+/// A candidate's stance counts: they add up, agree with the rest of the entry, and come with the
+/// rubric and sampling that produced them.
+fn check_stance(drop: &Drop, activity: &CandidateActivity, stance: Stance, errors: &mut Vec<String>) {
+    let id = &activity.candidate_id;
+    let labelled = stance.relevant() + stance.off_topic;
+    if labelled != stance.posts_drawn {
+        errors.push(format!(
+            "stance for `{id}`: support + oppose + neutral + off_topic = {labelled}, but posts_drawn is {}",
+            stance.posts_drawn
+        ));
+    }
+    if drop.rubric_version.is_none() || drop.sampling.is_none() {
+        errors.push(format!(
+            "stance for `{id}` needs rubric_version and sampling on the drop"
+        ));
+    }
+    if activity.sentiment.is_some() {
+        errors.push(format!(
+            "`{id}` has both stance and sentiment; send sentiment null, the pipeline derives it from stance"
+        ));
+    }
+    if let Some(size) = activity.sample_size
+        && size != stance.posts_drawn
+    {
+        errors.push(format!(
+            "`{id}`: sample_size {size} must equal stance.posts_drawn {}",
+            stance.posts_drawn
+        ));
+    }
+    if activity.mentions_method.as_deref() == Some("x_counts_endpoint")
+        && let Some(mentions) = activity.mentions
+        && stance.posts_drawn > mentions
+    {
+        errors.push(format!(
+            "`{id}`: {} posts drawn but only {mentions} mentions in the window",
+            stance.posts_drawn
+        ));
+    }
+    if let Some(sampling) = &drop.sampling
+        && !stance.read_all
+        && stance.posts_drawn > sampling.posts_per_candidate
+    {
+        errors.push(format!(
+            "`{id}`: {} posts drawn, more than sampling.posts_per_candidate {}",
+            stance.posts_drawn, sampling.posts_per_candidate
+        ));
+    }
+}
+
+/// The double-label table: its cells add up to `posts`, and its first-pass labels fit within the
+/// drop's stance counts, since every post labelled twice is one of the posts drawn.
+fn check_double_labels(drop: &Drop, double: &DoubleLabels, errors: &mut Vec<String>) {
+    let matrix = double.counts.matrix();
+    let cells: u64 = matrix.iter().flatten().sum();
+    if cells != double.posts {
+        errors.push(format!(
+            "double_labels: the counts add up to {cells}, but posts is {}",
+            double.posts
+        ));
+    }
+    let mut first_pass = [0u64; 4];
+    for stance in drop.candidates.iter().filter_map(|c| c.stance) {
+        for (total, n) in first_pass.iter_mut().zip(stance.cells()) {
+            *total += n;
+        }
+    }
+    for (k, label) in LABELS.iter().enumerate() {
+        let labelled_twice: u64 = matrix[k].iter().sum();
+        if labelled_twice > first_pass[k] {
+            errors.push(format!(
+                "double_labels: {labelled_twice} posts first labelled {label}, more than the {} {label} posts in the drop's stance counts",
+                first_pass[k]
+            ));
+        }
+    }
+}
+
+/// z for a two-sided 95% interval.
+const Z95: f64 = 1.959_963_984_540_054;
+
+/// Shares, intervals and kappa are stored to four decimals, so the clean file is stable.
+fn round4(x: f64) -> f64 {
+    (x * 10_000.0).round() / 10_000.0
+}
+
+/// A share and its 95% Wilson score interval.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct Interval {
+    pub share: f64,
+    pub low: f64,
+    pub high: f64,
+}
+
+/// The 95% Wilson score interval for `k` successes out of `n`; `None` when `n` is 0.
+///
+/// centre = (p + z²/2n) / (1 + z²/n), half-width = z / (1 + z²/n) · √(p(1−p)/n + z²/4n²).
+pub fn wilson(k: u64, n: u64) -> Option<Interval> {
+    if n == 0 {
+        return None;
+    }
+    let (k, n) = (k as f64, n as f64);
+    let p = k / n;
+    let z2 = Z95 * Z95;
+    let denominator = 1.0 + z2 / n;
+    let centre = (p + z2 / (2.0 * n)) / denominator;
+    let half = Z95 / denominator * (p * (1.0 - p) / n + z2 / (4.0 * n * n)).sqrt();
+    Some(Interval {
+        share: round4(p),
+        low: round4((centre - half).max(0.0)),
+        high: round4((centre + half).min(1.0)),
+    })
+}
+
+/// Support, oppose and neutral shares among the posts about the candidate.
+#[derive(Clone, Copy, Debug)]
+struct StanceShares {
+    support: Interval,
+    oppose: Interval,
+    neutral: Interval,
+}
+
+impl StanceShares {
+    fn of(stance: Stance) -> Option<Self> {
+        let n = stance.relevant();
+        Some(Self {
+            support: wilson(stance.support, n)?,
+            oppose: wilson(stance.oppose, n)?,
+            neutral: wilson(stance.neutral, n)?,
+        })
+    }
+}
+
+/// Agreement between the two labelling passes of a drop.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct Reliability {
+    /// Posts labelled twice.
+    pub posts: u64,
+    /// Share of them given the same label twice; `None` when there are none.
+    pub agreement: Option<f64>,
+    /// Cohen's kappa, (p_o − p_e) / (1 − p_e); `None` when there are no posts or when chance
+    /// agreement is already 1 (both passes used one and the same label for every post).
+    pub kappa: Option<f64>,
+}
+
+impl Reliability {
+    /// From `matrix[first][second]`, the counts of posts by first-pass and second-pass label.
+    pub fn of(matrix: &[[u64; 4]; 4]) -> Self {
+        let posts: u64 = matrix.iter().flatten().sum();
+        if posts == 0 {
+            return Self {
+                posts,
+                agreement: None,
+                kappa: None,
+            };
+        }
+        let n = posts as f64;
+        let observed = (0..4).map(|k| matrix[k][k]).sum::<u64>() as f64 / n;
+        let chance: f64 = (0..4)
+            .map(|k| {
+                let first: u64 = matrix[k].iter().sum();
+                let second: u64 = matrix.iter().map(|row| row[k]).sum();
+                (first as f64 / n) * (second as f64 / n)
+            })
+            .sum();
+        let kappa = (chance < 1.0).then(|| round4((observed - chance) / (1.0 - chance)));
+        Self {
+            posts,
+            agreement: Some(round4(observed)),
+            kappa,
+        }
+    }
 }
 
 /// The bytes of `data/clean/grok.csv` for this ingest.
 pub fn clean_bytes(ingest: &GrokIngest) -> Result<Vec<u8>> {
     csv_bytes(
         &ingest.rows,
-        "window_start,window_end,collected_at,candidate_id,mentions,mentions_method,sample_size,unique_authors,engagement,sentiment_pos,sentiment_neg,sentiment_neu,sentiment_method,bot_share_estimate,top_topics,source_file,content_hash",
+        "window_start,window_end,collected_at,candidate_id,mentions,mentions_method,sample_size,unique_authors,engagement,sentiment_pos,sentiment_neg,sentiment_neu,sentiment_method,bot_share_estimate,top_topics,\
+         rubric_version,stance_read_all,stance_posts_drawn,stance_off_topic,stance_support,stance_oppose,stance_neutral,\
+         support_share,support_low,support_high,oppose_share,oppose_low,oppose_high,neutral_share,neutral_low,neutral_high,\
+         drop_double_labelled,drop_agreement,drop_kappa,source_file,content_hash",
     )
 }
 

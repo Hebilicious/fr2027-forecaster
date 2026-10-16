@@ -140,13 +140,17 @@ Neutral, factual English.
 
 ## Routine 1: X activity
 
-**Schedule:** 00:20 and 12:20 UTC. Skill version `x-activity-2`.
+**Schedule:** 00:20 and 12:20 UTC. Skill version `x-activity-3`.
 
 ```text
 1. WINDOW: the last full 12 hours, ending at the most recent 00:00 or 12:00 UTC. Its key is
    "<start>/<end>". If the inbox has an x_drop with that key, stop.
-2. CANDIDATES: every id in candidates.yaml whose status is not "withdrawn" or "ineligible".
-3. For each candidate, search X for posts in the window with
+2. RUBRIC: fetch
+   https://raw.githubusercontent.com/Hebilicious/fr2027-forecaster/main/docs/x-stance-rubric.md
+   and read all of it. RUBRIC_VERSION is the version it states near the top (e.g.
+   "stance-1"). Label every post in this run with it, and only with it.
+3. CANDIDATES: every id in candidates.yaml whose status is not "withdrawn" or "ineligible".
+4. For each candidate, search X for posts in the window with
    query = (<each name from sources.yaml, in quotes, joined with OR>) lang:fr
    French-language posts only; every query ends with lang:fr. Record:
    - query: the exact search you ran, lang:fr included.
@@ -154,38 +158,78 @@ Neutral, factual English.
      endpoint: mentions_method "x_counts_endpoint". If the counts endpoint fails, your native X
      count ("native_count"), else an estimate from what you read ("sample_estimate"), else
      mentions null.
-   - sample_size: read 25 posts (mixing most recent and most engaged) only for the 10
-     candidates with the most mentions in the window. Every other candidate gets sample_size 0,
-     sentiment null and top_topics [].
-   - sentiment: among the posts read, fractions positive, negative and neutral toward the
-     candidate (pos + neg + neu = 1), method "grok-bot reading <N> posts, routine v2"; null if
-     you read fewer than 20 or none were sampled.
-   - top_topics: up to 5 short topics, in English.
-   - bot_share_estimate: fraction of posts read from accounts that look automated or
-     coordinated (0 to 1), or null.
-   - unique_authors, engagement: null unless measured over every post in the window.
+5. DRAW the sample for each candidate:
+   - Eligible posts: matching the query, in the window, not reposts, not from accounts that look
+     automated (posting every few minutes all day, only links or slogans, a handle of random
+     digits), at most 2 per author (keep the first 2 drawn).
+   - 100 mentions or more: draw 200 eligible posts at random, spread over the whole 12 hours
+     (split the window into 12 one-hour slices and draw from each in proportion to its posts).
+     Never take the top, most relevant or most engaged posts. read_all false.
+   - Fewer than 100 mentions: read every eligible post. read_all true.
+   - posts_drawn: the posts you drew and read. sample_size: the same number.
+   - bot_share_estimate: of the posts you looked at while drawing, the fraction you left out as
+     automated (0 to 1), or null.
+6. LABEL each drawn post with the rubric, for this candidate: off_topic, support, oppose or
+   neutral, exactly one each. Count them: stance = {"read_all": ..., "posts_drawn": N,
+   "off_topic": ..., "support": ..., "oppose": ..., "neutral": ...}, where support + oppose +
+   neutral + off_topic = N. Write each post's first label to a file under /workspace, keyed by
+   a local number (never the post id), and do not reopen that file until step 7 is done.
+   - top_topics: up to 5 short topics of the relevant posts, in English.
+7. RELABEL: for each candidate, pick at random 20% of its drawn posts (rounded up). In a separate
+   pass, with the first labels out of view, label those posts again from the rubric and the post
+   text alone. Then join the two passes and add up, over every candidate, how many posts got
+   each pair (first label, second label): double_labels = {"posts": <posts relabelled>,
+   "counts": {"<first>": {"support": n, "oppose": n, "neutral": n, "off_topic": n}, ...}} with
+   all four first labels and all sixteen cells, zeros included. Send the counts as they are;
+   never change a first label after seeing the second.
+8. sentiment: null for every candidate; the pipeline derives it from stance.
+   unique_authors, engagement: null unless measured over every post in the window.
    No post ids, user names or post text.
-4. POST one item:
+9. POST one item:
    {"kind": "x_drop", "payload": {
      "schema_version": "1.0",
      "collected_at": "<now>",
      "window": {"start": "<window start>", "end": "<window end>"},
-     "query_method": "Grok Bot native X search, one query per candidate, lang:fr, routine v2",
-     "agent": {"name": "Grok Bot fr2027", "skill_version": "x-activity-2", "run_id": RUN_ID},
+     "query_method": "Grok Bot native X search, one query per candidate, lang:fr, routine v3",
+     "agent": {"name": "Grok Bot fr2027", "skill_version": "x-activity-3", "run_id": RUN_ID},
+     "rubric_version": RUBRIC_VERSION,
+     "sampling": {"method": "random_spread", "posts_per_candidate": 200, "read_all_below": 100,
+                  "max_posts_per_author": 2, "reposts_excluded": true,
+                  "automated_excluded": true, "relabel_share": 0.2},
+     "double_labels": {"posts": ..., "counts": {...}},
      "candidates": [{"candidate_id": "...", "query": "... lang:fr", "mentions": ...,
                      "mentions_method": "...", "sample_size": ..., "unique_authors": null,
-                     "engagement": null,
-                     "sentiment": {"pos": ..., "neg": ..., "neu": ..., "method": "..."} or null,
+                     "engagement": null, "sentiment": null,
+                     "stance": {"read_all": ..., "posts_drawn": ..., "off_topic": ...,
+                                "support": ..., "oppose": ..., "neutral": ...},
                      "top_topics": [...], "bot_share_estimate": ...}, ...]}}
+   A rejection names the counts that do not add up: recount from your files and resend with the
+   same window key.
 ```
 
 The contract is [`schemas/grok_drop.schema.json`](../schemas/grok_drop.schema.json). The pipeline
 drops any `sample_post_ids`, so that a post deleted on X never lives on in the public repository.
+It rejects a drop whose stance counts do not add up to `posts_drawn`, whose `sample_size` differs
+from `posts_drawn`, which draws more posts than `mentions` (counts endpoint) or than
+`posts_per_candidate`, which sends both `stance` and `sentiment`, or whose double-label table does
+not add up to `posts` or holds more posts of a first label than the drop's stance counts.
 
-**Cost:** two runs a day, each about 40 X calls: one count per candidate, plus 25 posts read for
-each of the 10 most-mentioned candidates (about 500 posts a day). Grok Bot's docs warn that frequent routines can
-use a week's allowance in a day; if it still runs low, run once a day at 00:20 UTC with a 24-hour
-window. The pipeline accepts any window length.
+**What the pipeline computes.** `data/clean/grok.csv` keeps the counts and adds, per candidate,
+the support, oppose and neutral shares among relevant posts (support + oppose + neutral, off-topic
+posts left out), each with its 95% Wilson score interval (`support_low`, `support_high`, ...).
+It derives the `sentiment_*` columns from them (pos = support, neg = oppose, neu = neutral), so the
+Signals view shows stance drops and older sentiment drops alike. For each drop, it computes from
+`double_labels` the share of relabelled posts given the same label twice (`drop_agreement`) and
+Cohen's kappa over the four labels (`drop_kappa`), repeated on every row of the drop. Shares,
+intervals and kappa are rounded to four decimals. Drops before `x-activity-3` keep their
+sentiment, and their stance columns are empty.
+
+**Cost:** two runs a day. Each makes one count per candidate (31 in the first drop), then reads
+200 posts for each candidate with at least 100 mentions (18 in the first drop: 3,600 posts) and
+every eligible post of the others (at most about 300), and relabels 20% of what it read (about
+780): about 4,700 labels a run and 9,400 a day, against 500 posts a day for `x-activity-2`.
+Grok Bot's docs warn that frequent routines can use a week's allowance in a day; if it runs low,
+run once a day at 00:20 UTC with a 24-hour window. The pipeline accepts any window length.
 
 ## Routine 2: new polls
 
@@ -397,4 +441,9 @@ These open points come from Grok Bot's documentation as read on 2026-10-09:
   same misreading of a table, or the same convention applied wrongly, would pass the check.
   Entering the check from the other primary document (routine 4(a) step 4) reduces this, but
   does not remove it.
+- Whether Grok Bot labels the same post the same way from one run, or one pass, to the next. The
+  stance shares are only as good as that consistency. Routine 1 relabels 20% of its posts blind to
+  the first labels, and the pipeline's `drop_kappa` (Cohen's kappa per drop, in
+  `data/clean/grok.csv`) measures it: watch it, and revise the rubric, under a new version, if it
+  stays low. Both passes come from one agent, so kappa shows inconsistency, not shared bias.
 - The cost of a run is not published. Watch the weekly usage after the first day.
