@@ -172,7 +172,7 @@ A public web page on Cloudflare (static files rebuilt hourly by `fr2027 export`)
 | Programs | Issue-position table with source quotes |
 | Sources and health | Last successful run per collector, quarantined files, data freshness warnings |
 
-Every chart point links to its source row. Language toggle FR/EN. Candidates are shown in neutral, consistent colors not tied to party branding.
+Every chart point links to its source row. A language menu offers French, the reference, and English (UK), German, Italian, Spanish (Spain), Portuguese (Portugal), Japanese, Korean, Chinese (simplified) and Thai; every screen exists in all of them. Candidates are shown in neutral, consistent colors not tied to party branding.
 
 ## Scheduling, ops and research log
 
