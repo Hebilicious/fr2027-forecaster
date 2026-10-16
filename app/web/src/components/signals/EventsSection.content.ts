@@ -96,7 +96,7 @@ export default {
         "es-ES": "avales",
         "pt-PT": "assinaturas de eleitos",
         ja: "推薦署名",
-        ko: "추천 서명",
+        ko: "추천인 서명",
         "zh-Hans": "联署推荐",
         th: "รายชื่อผู้รับรอง",
       }),

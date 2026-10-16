@@ -4,6 +4,13 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-16
 
+### UI in ten languages, checked against Wikipedia
+
+The UI is written in French, the reference, and in English (UK), German, Italian, Spanish (Spain), Portuguese (Portugal), Japanese, Korean, Chinese (simplified) and Thai, with Intlayer (rules in `AGENTS.md`, "UI languages").
+
+- **Terms.** The election vocabulary of each translation (rounds, pollster, fieldwork, parrainages, primaries, political families, being on the official ballot) was compared with that language's Wikipedia articles on the 2027 and 2022 French presidential elections and on French presidential elections in general, found through the French articles' interlanguage links. Korean and Portuguese have no 2027 article; Portuguese Wikipedia's 2022 article is in Brazilian Portuguese, so its "turno", "pesquisa" and "cédula" were not taken, and Spanish Wikipedia's Latin American "boleta" and "balotaje" were not either. Changed to match the articles: English says "first round" and "second round", never "round 1", and "scenarios" for the line-ups a poll tests; German "Befragungszeitraum" for fieldwork and "Kandidatur angekündigt"; Thai "ระยะเวลาการสำรวจ" for fieldwork; Japanese "正式候補" and Korean "후보 등록" for being on the official ballot; Korean "추천인 서명" for parrainages. Italian "sondato in sfida diretta" replaces "testa a testa", which reads as "neck and neck" (a judgment call, not from the articles). Chinese, Spanish and Portuguese needed no change. The articles do not settle the poll sponsor, the methodology notice or vote transfers in most languages; those stay as translated.
+- **Candidates' articles.** Each candidate card links to the candidate's article in the reader's language when that Wikipedia has one, found through the French article's interlanguage links, and otherwise to the French article, labelled as French. `app/web/scripts/wikipedia-articles.ts` writes the links to `app/web/src/articles.ts` (`moon run web:articles`). English Wikipedia has all 29 candidates who have a French article; Thai has 8. "Selma Labib", the title `config/sources.yaml` gives for Selma Labib, does not exist on French Wikipedia, so her card has no link and her page views cannot be collected.
+
 ### UI redesign: obsidian glass, the tricolour and Delacroix
 
 The UI is redesigned around three references from the owner: obsidian glass, the French colours, and Delacroix's _La Liberté guidant le peuple_.

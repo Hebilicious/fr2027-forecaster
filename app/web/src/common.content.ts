@@ -30,7 +30,7 @@ export default {
     }),
     qualifies: t({
       fr: "Accède au second tour",
-      "en-GB": "Reaches round 2",
+      "en-GB": "Reaches the second round",
       de: "Erreicht die Stichwahl",
       it: "Arriva al ballottaggio",
       "es-ES": "Pasa a la segunda vuelta",
@@ -54,7 +54,7 @@ export default {
     }),
     r1Share: t({
       fr: "Score au premier tour s'il se présente",
-      "en-GB": "Round 1 share if running",
+      "en-GB": "First-round share if running",
       de: "Ergebnis im ersten Wahlgang bei Kandidatur",
       it: "Voti al primo turno se candidato",
       "es-ES": "Voto en la primera vuelta si se presenta",
