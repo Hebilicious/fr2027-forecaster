@@ -282,6 +282,9 @@ fn export_writes_the_site_and_respects_the_blackout() {
             serde_json::from_slice(&fs::read(site.join(format!("api/{name}.json"))).unwrap()).unwrap();
         assert!(value.is_object() || value.is_array(), "{name}");
     }
+    let polls: serde_json::Value = serde_json::from_slice(&fs::read(site.join("api/polls.json")).unwrap()).unwrap();
+    assert_eq!(polls["polls"].as_array().map(Vec::len), Some(6));
+    assert!(polls["polls"][0]["scenarios"][0]["shares"].is_object());
     let health: serde_json::Value = serde_json::from_slice(&fs::read(site.join("api/health.json")).unwrap()).unwrap();
     assert_eq!(health["checked_at"], "2026-10-01T13:00:00Z");
     assert_eq!(health["latest_forecast"]["file"], "2026-10-01T12.json");

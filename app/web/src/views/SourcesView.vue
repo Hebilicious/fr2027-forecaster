@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed } from "vue"
-import type { Forecast, Health, PollRow } from "../api/schemas"
+import type { Forecast, Health, Poll } from "../api/schemas"
 import { dateOrTime, dateTime, longDate, safeUrl, shortDate } from "../format"
 import { useI18n, type MessageKey } from "../i18n"
 
-const props = defineProps<{ forecast: Forecast; polls: readonly PollRow[]; health: Health | null }>()
+const props = defineProps<{ forecast: Forecast; polls: readonly Poll[]; health: Health | null }>()
 const { t, locale } = useI18n()
 
 interface PollSummary {
@@ -21,29 +21,23 @@ interface PollSummary {
   notice: string | null
 }
 
-const summaries = computed<PollSummary[]>(() => {
-  const byPoll = new Map<string, { row: PollRow; scenarios: Set<string> }>()
-  for (const row of props.polls) {
-    const entry = byPoll.get(row.poll_id) ?? { row, scenarios: new Set<string>() }
-    entry.scenarios.add(`${row.round}:${row.scenario_id}`)
-    byPoll.set(row.poll_id, entry)
-  }
-  return [...byPoll.values()]
-    .map(({ row, scenarios }) => ({
-      id: row.poll_id,
-      firm: row.firm,
-      sponsor: row.sponsor,
-      fieldStart: row.field_start,
-      fieldEnd: row.field_end,
-      published: row.published_at,
-      sample: row.sample_size,
-      ballots: scenarios.size,
-      entry: row.entry,
-      source: row.source_url,
-      notice: row.notice_url,
+const summaries = computed<PollSummary[]>(() =>
+  props.polls
+    .map((poll) => ({
+      id: poll.poll_id,
+      firm: poll.firm,
+      sponsor: poll.sponsor,
+      fieldStart: poll.field_start,
+      fieldEnd: poll.field_end,
+      published: poll.published_at,
+      sample: poll.sample_size,
+      ballots: poll.scenarios.length,
+      entry: poll.entry,
+      source: poll.source_url,
+      notice: poll.notice_url,
     }))
-    .toSorted((a, b) => b.published.localeCompare(a.published) || a.id.localeCompare(b.id))
-})
+    .toSorted((a, b) => b.published.localeCompare(a.published) || a.id.localeCompare(b.id)),
+)
 const used = computed(() => new Set(props.forecast.aggregation.poll_ids))
 // Collector names and cadences come from `fr2027`; known ones are translated, others shown as sent.
 const collectorNames: Record<string, MessageKey> = {

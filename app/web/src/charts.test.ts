@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import type { Forecast, PollRow, SeriesPoint } from "./api/schemas"
+import type { Forecast, Poll, SeriesPoint } from "./api/schemas"
 import { midpoint, round1Panels, round2Matrix, scale, shareTicks } from "./charts"
 
 const candidate = (id: string, pQualify: number, pWin: number) => ({
@@ -54,7 +54,7 @@ const point = (candidate_id: string, date: string, mean: number): SeriesPoint =>
   hi80: mean + 0.02,
 })
 
-const row = (candidate_id: string, share: number, round = 1): PollRow => ({
+const poll: Poll = {
   poll_id: "p",
   firm: "ifop",
   sponsor: null,
@@ -62,26 +62,21 @@ const row = (candidate_id: string, share: number, round = 1): PollRow => ({
   field_end: "2026-09-04",
   published_at: "2026-09-05",
   sample_size: 1000,
-  method: "online",
-  population: null,
-  round,
-  scenario_id: "A",
-  candidate_id,
-  share,
+  entry: "primary",
   source_url: "https://example.org",
   notice_url: null,
-  index_url: null,
-  entry: "primary",
-  retrieved_at: "2026-10-09T00:00:00Z",
-  content_hash: "sha256:0",
-})
+  scenarios: [
+    { round: 1, scenario_id: "A", shares: { a: 21, b: 30 } },
+    { round: 2, scenario_id: "A", shares: { a: 55, b: 45 } },
+  ],
+}
 
 describe("round1Panels", () => {
   it("orders panels by latest mean and attaches round 1 polls only", () => {
     const panels = round1Panels(
       forecast,
       [point("b", "2026-09-02", 0.3), point("a", "2026-09-02", 0.2), point("a", "2026-09-01", 0.25)],
-      [row("a", 21), row("a", 55, 2), row("b", 30)],
+      [poll],
     )
     expect(panels.map((p) => p.candidate.candidate_id)).toEqual(["b", "a"])
     const a = panels[1]

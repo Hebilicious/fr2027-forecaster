@@ -9,7 +9,8 @@ use anyhow::{Context, Result, anyhow};
 use fr2027_collectors::{
     Repo, attention, events, grok, list_files, markets, news, polls, read, sources::SourcesConfig,
 };
-use jiff::{Timestamp, ToSpan, tz::TimeZone};
+use jiff::{Timestamp, ToSpan, civil::Date, tz::TimeZone};
+use serde::Serialize;
 use serde_json::{Value, json};
 
 use crate::data::Inputs;
@@ -35,7 +36,7 @@ pub fn document(repo: &Repo, name: &str, now: Timestamp) -> Result<Option<Value>
                 .1
         }
         "series" => read_json(&repo.forecasts_dir().join(SERIES_FILE))?,
-        "polls" => json!({ "rows": polls::read_clean_rows(repo)? }),
+        "polls" => polls_document(&polls::read_clean_rows(repo)?)?,
         "history" => history(repo)?,
         "signals" => signals(repo, now)?,
         "health" => health(repo, now)?,
@@ -83,6 +84,76 @@ pub fn latest_forecast(repo: &Repo) -> Result<Option<(String, Value)>> {
         }
         None => Ok(None),
     }
+}
+
+/// One poll as the UI reads it: the poll's details once, then each scenario's shares. The clean
+/// CSV repeats every detail on each candidate's row and adds provenance the UI doesn't show
+/// (`index_url`, `retrieved_at`, `content_hash`, `method`, `population`); that stays in
+/// `data/clean/polls.csv`.
+#[derive(Serialize)]
+struct PollSummary<'a> {
+    poll_id: &'a str,
+    firm: &'a str,
+    sponsor: Option<&'a str>,
+    field_start: Date,
+    field_end: Date,
+    published_at: Date,
+    sample_size: u32,
+    entry: &'a str,
+    source_url: &'a str,
+    notice_url: Option<&'a str>,
+    scenarios: Vec<ScenarioShares<'a>>,
+}
+
+#[derive(Serialize)]
+struct ScenarioShares<'a> {
+    round: u8,
+    scenario_id: &'a str,
+    /// Percent, by candidate id.
+    shares: BTreeMap<&'a str, f64>,
+}
+
+/// The clean poll rows grouped back into polls and scenarios, in file order.
+fn polls_document(rows: &[polls::PollRow]) -> Result<Value> {
+    let mut summaries: Vec<PollSummary> = Vec::new();
+    for row in rows {
+        let poll = match summaries.iter().position(|p| p.poll_id == row.poll_id) {
+            Some(index) => &mut summaries[index],
+            None => {
+                summaries.push(PollSummary {
+                    poll_id: &row.poll_id,
+                    firm: &row.firm,
+                    sponsor: row.sponsor.as_deref(),
+                    field_start: row.field_start,
+                    field_end: row.field_end,
+                    published_at: row.published_at,
+                    sample_size: row.sample_size,
+                    entry: &row.entry,
+                    source_url: &row.source_url,
+                    notice_url: row.notice_url.as_deref(),
+                    scenarios: Vec::new(),
+                });
+                summaries.last_mut().expect("just pushed")
+            }
+        };
+        let scenario = match poll
+            .scenarios
+            .iter()
+            .position(|s| s.round == row.round && s.scenario_id == row.scenario_id)
+        {
+            Some(index) => &mut poll.scenarios[index],
+            None => {
+                poll.scenarios.push(ScenarioShares {
+                    round: row.round,
+                    scenario_id: &row.scenario_id,
+                    shares: BTreeMap::new(),
+                });
+                poll.scenarios.last_mut().expect("just pushed")
+            }
+        };
+        scenario.shares.insert(&row.candidate_id, row.share);
+    }
+    Ok(json!({ "polls": serde_json::to_value(summaries)? }))
 }
 
 /// Every forecast's headline numbers, oldest first.
@@ -410,7 +481,8 @@ fn events_signal(repo: &Repo) -> Result<Value> {
 
 #[cfg(test)]
 mod tests {
-    use super::is_forecast_name;
+    use super::{is_forecast_name, polls_document};
+    use fr2027_collectors::polls::PollRow;
 
     #[test]
     fn forecast_names_are_strict() {
@@ -419,5 +491,49 @@ mod tests {
         assert!(!is_forecast_name("../etc/passwd"));
         assert!(!is_forecast_name("2026-10-09T14.json.bak"));
         assert!(!is_forecast_name("2026-10-0xT14.json"));
+    }
+
+    #[test]
+    fn polls_are_grouped_by_poll_and_scenario() {
+        let row = |poll_id: &str, round: u8, scenario_id: &str, candidate_id: &str, share: f64| PollRow {
+            poll_id: poll_id.into(),
+            firm: "ifop".into(),
+            sponsor: None,
+            field_start: "2026-09-01".parse().unwrap(),
+            field_end: "2026-09-03".parse().unwrap(),
+            published_at: "2026-09-04".parse().unwrap(),
+            sample_size: 1000,
+            method: Some("online".into()),
+            population: None,
+            round,
+            scenario_id: scenario_id.into(),
+            candidate_id: candidate_id.into(),
+            share,
+            source_url: "https://example.org/p".into(),
+            notice_url: None,
+            index_url: None,
+            entry: "primary".into(),
+            retrieved_at: "2026-09-04T10:00Z".into(),
+            content_hash: "sha256:0".into(),
+        };
+        let rows = [
+            row("p1", 1, "A", "a", 30.0),
+            row("p1", 1, "A", "b", 70.0),
+            row("p1", 2, "A", "a", 45.0),
+            row("p2", 1, "A", "a", 40.0),
+        ];
+        let doc = polls_document(&rows).unwrap();
+        let polls = doc["polls"].as_array().unwrap();
+        assert_eq!(polls.len(), 2);
+        assert_eq!(polls[0]["poll_id"], "p1");
+        assert_eq!(polls[0]["field_end"], "2026-09-03");
+        assert_eq!(
+            polls[0]["scenarios"],
+            serde_json::json!([
+                { "round": 1, "scenario_id": "A", "shares": { "a": 30.0, "b": 70.0 } },
+                { "round": 2, "scenario_id": "A", "shares": { "a": 45.0 } },
+            ])
+        );
+        assert!(polls[0].get("content_hash").is_none());
     }
 }

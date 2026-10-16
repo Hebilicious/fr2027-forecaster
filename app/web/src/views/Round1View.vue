@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue"
-import type { Forecast, PollRow, SeriesPoint } from "../api/schemas"
+import type { Forecast, Poll, SeriesPoint } from "../api/schemas"
 import { round1Panels } from "../charts"
 import SharePanel from "../components/SharePanel.vue"
 import { useI18n } from "../i18n"
@@ -8,7 +8,7 @@ import { useI18n } from "../i18n"
 const props = defineProps<{
   forecast: Forecast
   series: readonly SeriesPoint[]
-  polls: readonly PollRow[]
+  polls: readonly Poll[]
 }>()
 const { t } = useI18n()
 

@@ -87,7 +87,15 @@ export const Series = Schema.Struct({
 export type Series = typeof Series.Type
 export type SeriesPoint = typeof SeriesPoint.Type
 
-const PollRow = Schema.Struct({
+const PollScenario = Schema.Struct({
+  round: Schema.Finite,
+  scenario_id: Schema.String,
+  /** Percent, by candidate id. */
+  shares: Schema.Record(Schema.String, Schema.Finite),
+})
+
+// One poll with its scenarios. The full rows, with provenance, are in data/clean/polls.csv.
+const Poll = Schema.Struct({
   poll_id: Schema.String,
   firm: Schema.String,
   sponsor: Schema.NullOr(Schema.String),
@@ -95,22 +103,14 @@ const PollRow = Schema.Struct({
   field_end: Schema.String,
   published_at: Schema.String,
   sample_size: Schema.Finite,
-  method: Schema.NullOr(Schema.String),
-  population: Schema.NullOr(Schema.String),
-  round: Schema.Finite,
-  scenario_id: Schema.String,
-  candidate_id: Schema.String,
-  share: Schema.Finite,
+  entry: Schema.String,
   source_url: Schema.String,
   notice_url: Schema.NullOr(Schema.String),
-  index_url: Schema.NullOr(Schema.String),
-  entry: Schema.String,
-  retrieved_at: Schema.String,
-  content_hash: Schema.String,
+  scenarios: Schema.Array(PollScenario),
 })
 
-export const Polls = Schema.Struct({ rows: Schema.Array(PollRow) })
-export type PollRow = typeof PollRow.Type
+export const Polls = Schema.Struct({ polls: Schema.Array(Poll) })
+export type Poll = typeof Poll.Type
 
 const Collector = Schema.Struct({
   name: Schema.String,

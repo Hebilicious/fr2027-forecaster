@@ -1,6 +1,6 @@
 import { onBeforeUnmount, onMounted, ref, shallowRef } from "vue"
 import { api, type Loaded } from "./api/client"
-import type { Forecast, Health, PollRow, SeriesPoint, Signals } from "./api/schemas"
+import type { Forecast, Health, Poll, SeriesPoint, Signals } from "./api/schemas"
 
 const POLL_MS = 120_000
 
@@ -19,7 +19,7 @@ function unwrap<A>(result: Loaded<A>, errors: string[]): A | null {
 export function useLiveData() {
   const forecast = shallowRef<Forecast | null>(null)
   const series = shallowRef<readonly SeriesPoint[]>([])
-  const polls = shallowRef<readonly PollRow[]>([])
+  const polls = shallowRef<readonly Poll[]>([])
   const health = shallowRef<Health | null>(null)
   const signals = shallowRef<Signals | null>(null)
   const loading = ref(true)
@@ -47,7 +47,7 @@ export function useLiveData() {
     const nextHealth = unwrap(h, errors)
     const nextSignals = unwrap(g, errors)
     if (nextSeries !== null) series.value = nextSeries.points
-    if (nextPolls !== null) polls.value = nextPolls.rows
+    if (nextPolls !== null) polls.value = nextPolls.polls
     if (nextHealth !== null) health.value = nextHealth
     if (nextSignals !== null) signals.value = nextSignals
     if (next !== null) {

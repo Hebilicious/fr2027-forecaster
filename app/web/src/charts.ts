@@ -1,5 +1,5 @@
 // Pure preparation of chart data, kept out of the components so it can be tested headlessly.
-import type { CandidateForecast, Forecast, PairForecast, PollRow, SeriesPoint } from "./api/schemas"
+import type { CandidateForecast, Forecast, PairForecast, Poll, SeriesPoint } from "./api/schemas"
 
 export interface PollDot {
   readonly pollId: string
@@ -17,7 +17,7 @@ export interface Panel {
 }
 
 /** One small-multiple panel per candidate with a latent-share history, latest mean first. */
-export function round1Panels(forecast: Forecast, series: readonly SeriesPoint[], polls: readonly PollRow[]): Panel[] {
+export function round1Panels(forecast: Forecast, series: readonly SeriesPoint[], polls: readonly Poll[]): Panel[] {
   const byCandidate = new Map<string, SeriesPoint[]>()
   for (const point of series) {
     const list = byCandidate.get(point.candidate_id) ?? []
@@ -28,16 +28,22 @@ export function round1Panels(forecast: Forecast, series: readonly SeriesPoint[],
   for (const candidate of forecast.candidates) {
     const points = (byCandidate.get(candidate.candidate_id) ?? []).toSorted((a, b) => a.date.localeCompare(b.date))
     if (points.length === 0) continue
-    const dots = polls
-      .filter((row) => row.round === 1 && row.candidate_id === candidate.candidate_id)
-      .map((row) => ({
-        pollId: row.poll_id,
-        firm: row.firm,
-        date: midpoint(row.field_start, row.field_end),
-        scenario: row.scenario_id,
-        share: row.share / 100,
-        sourceUrl: row.source_url,
-      }))
+    const dots = polls.flatMap((poll) =>
+      poll.scenarios.flatMap((scenario) => {
+        const share = scenario.shares[candidate.candidate_id]
+        if (scenario.round !== 1 || share === undefined) return []
+        return [
+          {
+            pollId: poll.poll_id,
+            firm: poll.firm,
+            date: midpoint(poll.field_start, poll.field_end),
+            scenario: scenario.scenario_id,
+            share: share / 100,
+            sourceUrl: poll.source_url,
+          },
+        ]
+      }),
+    )
     panels.push({ candidate, points, polls: dots })
   }
   return panels.toSorted((a, b) => (b.points.at(-1)?.mean ?? 0) - (a.points.at(-1)?.mean ?? 0))
