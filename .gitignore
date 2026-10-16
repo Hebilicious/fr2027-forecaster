@@ -17,6 +17,7 @@ data/proposals/
 .artifacts/
 .wrangler/
 .claude/worktrees/
+.worktrees/
 
 # Secrets
 .env

@@ -2,6 +2,7 @@
   "semi": false,
   "printWidth": 120,
   "ignorePatterns": [
+    ".agents/skills/gh-stack/**",
     "**/*.vue",
     "SPEC.md",
     "data/**",
