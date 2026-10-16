@@ -33,6 +33,15 @@ impl Client {
         Ok(Self { inner })
     }
 
+    /// GET `url` once, without retrying: for a source with its own pacing rules.
+    pub fn get_once(&self, url: &str) -> Result<Vec<u8>> {
+        let response = self.inner.get(url).send().map_err(|e| Error::Http {
+            url: url.into(),
+            message: e.to_string(),
+        })?;
+        checked(url, response)
+    }
+
     /// GET `url` and return the body, retrying twice on 429 and 5xx.
     pub fn get_bytes(&self, url: &str, bearer: Option<&str>) -> Result<Vec<u8>> {
         self.send(url, |c| {

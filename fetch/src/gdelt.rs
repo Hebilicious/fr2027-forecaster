@@ -2,8 +2,9 @@
 //! `GET https://api.gdeltproject.org/api/v2/doc/doc?query=<q>&mode=timelinevolraw&format=json&startdatetime=<start>000000&enddatetime=<end>235959`.
 //!
 //! GDELT asks for at most one request every 5 seconds and answers a faster one with a plain-text
-//! notice (status 429, sometimes 200), so [`Reader`] waits between requests and backs off when it
-//! sees the notice.
+//! notice (status 429, sometimes 200); it keeps refusing for several minutes after that, and a
+//! quick retry starts the wait again. So [`Reader`] waits between requests, never retries
+//! quickly, and backs off for minutes when refused or cut off.
 
 use std::collections::BTreeMap;
 use std::time::{Duration, Instant};
@@ -16,15 +17,17 @@ use crate::{Client, Error, Result};
 
 const API: &str = "https://api.gdeltproject.org/api/v2/doc/doc";
 /// GDELT's limit is one request every 5 seconds; keep a margin.
-const SPACING: Duration = Duration::from_secs(6);
+const SPACING: Duration = Duration::from_secs(8);
 /// Days per request: about 15 seconds of GDELT's time for 90 days.
 const WINDOW_DAYS: i64 = 92;
 /// How long one request may take.
 pub const TIMEOUT: Duration = Duration::from_secs(120);
-const RATE_LIMIT_WAITS: [Duration; 3] = [
-    Duration::from_secs(20),
+/// Waits after a refusal or a dropped connection, before trying the same request again.
+const BACK_OFF: [Duration; 4] = [
     Duration::from_secs(60),
-    Duration::from_secs(120),
+    Duration::from_secs(180),
+    Duration::from_secs(300),
+    Duration::from_secs(600),
 ];
 
 #[derive(Deserialize)]
@@ -115,21 +118,28 @@ impl<'a> Reader<'a> {
             start.strftime("%Y%m%d"),
             end.strftime("%Y%m%d"),
         );
-        for wait in RATE_LIMIT_WAITS.iter().map(Some).chain([None]) {
+        let mut last_error = None;
+        for wait in BACK_OFF.iter().map(Some).chain([None]) {
             self.pause(SPACING);
-            let response = self.client.get_bytes(&url, None);
+            let response = self.client.get_once(&url);
             self.last_request = Some(Instant::now());
             match response {
                 Ok(body) if !is_rate_limited(&body) => return parse(&body).map_err(|e| Error::parse(&url, e)),
-                Ok(_) => {}
-                Err(error) if error.status() == Some(429) => {}
+                Ok(_) => last_error = Some(Error::parse(&url, "GDELT asked to slow down")),
+                // Refused, cut off or timed out: GDELT is busy or still holding a refusal.
+                Err(error) if error.status().is_none_or(|s| s == 429 || s >= 500) => last_error = Some(error),
                 Err(error) => return Err(error),
             }
             if let Some(wait) = wait {
+                eprintln!(
+                    "GDELT: {}; waiting {}s",
+                    last_error.as_ref().expect("set above"),
+                    wait.as_secs()
+                );
                 self.pause(*wait);
             }
         }
-        Err(Error::parse(&url, "GDELT kept asking to slow down"))
+        Err(last_error.expect("at least one attempt"))
     }
 
     fn pause(&self, at_least: Duration) {
