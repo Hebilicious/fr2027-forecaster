@@ -1,0 +1,460 @@
+# The canonical candidate list and field model. Every source, including the Grok bot, uses these ids.
+# Edited through pull requests; the reason for every change goes in research/LOG.md.
+#
+# Each candidate belongs to exactly one slot. A slot draws at most one option, and an option lists
+# the candidates who run together; 1 - sum(p) is the chance nobody from the slot runs.
+schema_version: "1.0"
+as_of: 2026-10-09
+blocs: [far_left, left, centre, right, far_right, other]
+candidates:
+  - id: arthaud
+    name: "Nathalie Arthaud"
+    party: "Lutte ouvrière (LO)"
+    bloc: far_left
+    status: declared
+    declared_on: 2025-12-08
+    notes: "Announced 8 Dec 2025 (RFI/Le Monde refs on FR Wikipedia; RFI returned 403 here)."
+    sources:
+      - url: "https://www.rfi.fr/fr/en-bref/20251208-pr%C3%A9sidentielle-2027-en-france-nathalie-arthaud-lutte-ouvri%C3%A8re-annonce-sa-candidature"
+        date: 2025-12-08
+        note: "Not fetched; cited by another source."
+  - id: kazib
+    name: "Anasse Kazib"
+    party: "Révolution permanente"
+    bloc: far_left
+    status: declared
+    declared_on: 2026-06-01
+    notes: "Not tested in polls."
+    sources:
+      - url: "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-cheminot-anasse-kazib-annonce-sa-candidature_8040020.html"
+        date: 2026-06-01
+  - id: labib
+    name: "Selma Labib"
+    party: "NPA-Révolutionnaires"
+    bloc: far_left
+    status: declared
+    declared_on: 2026-06-17
+    notes: "Not tested in polls."
+    sources:
+      - url: "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-le-npa-revolutionnaires-annonce-presenter-la-candidature-de-sa-porte-parole-selma-labib_AD-202606170500.html"
+        date: 2026-06-17
+  - id: melenchon
+    name: "Jean-Luc Mélenchon"
+    party: "La France insoumise (LFI)"
+    bloc: left
+    status: declared
+    declared_on: 2026-05-03
+    notes: "Announced on TF1 20h, 3 May 2026 (4th run). Refuses any primary. NPA-A (Poutou) backs him."
+    sources:
+      - url: "https://www.rtl.fr/actu/politique/presidentielle-2027-jean-luc-melenchon-officialise-sa-candidature-a-un-an-du-scrutin-7900630247"
+        date: 2026-05-03
+  - id: glucksmann
+    name: "Raphaël Glucksmann"
+    party: "Place publique (PP)"
+    bloc: left
+    status: declared
+    declared_on: 2026-08-23
+    notes: "Candidate in the PS-PP-GRS 'primaire de la gauche socialiste et democratique' (R1 9-10 Oct, R2 16-17 Oct 2026). EN Wikipedia's primary article notes he was the only primary contender polling in double figures nationally. Only one of Glucksmann/Faure/Royal/Guedj/Maurel will be the primary's nominee."
+    sources:
+      - url: "https://www.tf1info.fr/politique/oui-je-suis-candidat-a-l-election-presidentielle-2027-confirme-raphael-glucksmann-place-publique-sur-tf1-2459966.html"
+        date: 2026-08-23
+      - url: "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-plus-de-140-000-inscrits-appeles-a-voter-a-la-primaire-sociale-democrate_AD-202610060096.html"
+        date: 2026-10-06
+  - id: faure
+    name: "Olivier Faure"
+    party: "Parti socialiste (PS)"
+    bloc: left
+    status: declared
+    declared_on: 2026-08-30
+    notes: "PS first secretary; candidate in the PS-PP-GRS primary (declared on TF1, 30 Aug 2026)."
+    sources:
+      - url: "https://www.tf1info.fr/politique/oui-je-suis-candidat-a-la-presidence-de-la-republique-confirme-olivier-faure-sur-tf1-2461307.html"
+        date: 2026-08-30
+  - id: royal
+    name: "Ségolène Royal"
+    party: "Parti socialiste (PS)"
+    bloc: left
+    status: declared
+    declared_on: 2026-07-10
+    notes: "Candidate in the PS-PP-GRS primary."
+    sources:
+      - url: "https://www.franceinfo.fr/elections/presidentielle/segolene-royal-annonce-qu-elle-participera-a-la-primaire-socialiste-en-vue-de-l-election-presidentielle_8102696.html"
+        date: 2026-07-10
+  - id: guedj
+    name: "Jérôme Guedj"
+    party: "Parti socialiste (PS)"
+    bloc: left
+    status: declared
+    declared_on: 2026-02-05
+    notes: "Declared outside any primary on 5 Feb 2026 (France Inter), then joined the PS-PP-GRS primary on 23 Aug 2026 (FR Wikipedia)."
+    sources:
+      - url: "https://www.leparisien.fr/politique/le-socialiste-jerome-guedj-annonce-sa-candidature-a-lelection-presidentielle-de-2027-sans-passer-par-la-primaire-05-02-2026-NOW5U3FEE5DZ3B7EO6GVG43DXE.php"
+        date: 2026-02-05
+        note: "Not fetched; cited by another source."
+      - url: "https://fr.wikipedia.org/wiki/Primaire_pr%C3%A9sidentielle_socialiste_fran%C3%A7aise_de_2026"
+        date: 2026-10-09
+  - id: maurel
+    name: "Emmanuel Maurel"
+    party: "Gauche républicaine et socialiste (GRS)"
+    bloc: left
+    status: declared
+    declared_on: 2026-09-04
+    notes: "Candidate in the PS-PP-GRS primary."
+    sources:
+      - url: "https://www.franceinfo.fr/politique/ps/primaire-socialiste/le-depute-emmanuel-maurel-annonce-sa-candidature-a-la-primaire-socialiste-pour-l-election-presidentielle_8176532.html"
+        date: 2026-09-04
+  - id: hollande
+    name: "François Hollande"
+    party: "Parti socialiste (PS)"
+    bloc: left
+    status: possible
+    notes: "Not in the PS primary; said (Face a BFM, 15 Sep 2026) he is not declaring and will judge in December whether the primary winner can rally the social-democratic left."
+    sources:
+      - url: "https://www.parlons-politique.fr/elections/candidature-hollande-2027-pourquoi-son-choix-de-decembre-peut-rebattre-les-cartes-a-gauche_27122/"
+        date: 2026-09-15
+  - id: roussel
+    name: "Fabien Roussel"
+    party: "Parti communiste français (PCF)"
+    bloc: left
+    status: declared
+    declared_on: 2026-09-06
+    notes: "Designated by PCF members, officialised 6 Sep 2026; PCF excluded any left primary."
+    sources:
+      - url: "https://www.franceinfo.fr/elections/presidentielle/le-communiste-fabien-roussel-officialise-sa-candidature-a-l-election-presidentielle-de-2027-pour-defendre-un-projet-de-rupture_8179856.html"
+        date: 2026-09-06
+  - id: tondelier
+    name: "Marine Tondelier"
+    party: "Les Écologistes (LE)"
+    bloc: left
+    status: declared
+    declared_on: 2025-10-22
+    notes: "Declared 22 Oct 2025, designated by Les Ecologistes on 8 Dec 2025 (86%) to run in the 'gauche unitaire' primary planned for 11 Oct 2026. That primary collapsed in July 2026 after PS members chose a closed PS-PP-GRS primary (9 Jul, 55.5%). As of a 21 Jul 2026 summary she was consulting her party on an autonomous candidacy; no later confirmation or withdrawal found. Still tested in nearly all polls (2-7%)."
+    sources:
+      - url: "https://www.franceinfo.fr/elections/presidentielle/la-patronne-des-ecologistes-marine-tondelier-se-declare-candidate-a-l-election-presidentielle-de-2027_7568824.html"
+        date: 2025-10-22
+      - url: "https://votons-2027.fr/primaires-presidentielle-2027"
+        date: 2026-07-21
+        note: "page states it is dated 21 Jul 2026"
+  - id: ruffin
+    name: "François Ruffin"
+    party: "Debout !"
+    bloc: left
+    status: declared
+    declared_on: 2025-04-01
+    notes: "Declared for a single left candidacy (Montreuil meeting, 1 Apr 2025 per FR Wikipedia). Was refused entry to the PS-PP-GRS primary; La Gazette France (16 Sep 2026) calls him a declared candidate continuing alone."
+    sources:
+      - url: "https://www.lagazettefrance.fr/article/presidentielle-francois-ruffin-l-ex-insoumis-qui-a-du-mal-a-socialiser"
+        date: 2026-09-16
+      - url: "https://fr.wikipedia.org/wiki/Primaire_de_la_gauche_unitaire_de_2026"
+        date: 2026-10-09
+  - id: bouamrane
+    name: "Karim Bouamrane"
+    party: "Parti socialiste (PS)"
+    bloc: left
+    status: declared
+    declared_on: 2026-06-09
+    notes: "Declared 9 Jun 2026; confirmed (26 Aug 2026) he will not take part in the PS primary."
+    sources:
+      - url: "https://www.lefigaro.fr/politique/presidentielle-2027-je-suis-candidat-annonce-karim-bouamrane-ps-20260609"
+        date: 2026-06-09
+      - url: "https://www.bfmtv.com/politique/parti-socialiste/se-renfermer-entre-nous-karim-bouamrane-confirme-sa-non-participation-a-la-primaire-socialiste-pour-la-presidentielle-2027_AN-202608260150.html"
+        date: 2026-08-26
+  - id: cazeneuve
+    name: "Bernard Cazeneuve"
+    party: "La Convention"
+    bloc: left
+    status: declared
+    declared_on: 2026-07-16
+    notes: "Declared in Le Parisien on 16 Jul 2026 outside the PS primary (FR Wikipedia; ref without URL). Not tested in any Apr-Oct 2026 poll in polls_r1.csv."
+    sources:
+      - url: "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+        date: 2026-10-09
+      - url: "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-la-candidature-de-bernard-cazeneuve-traduit-la-difficulte-de-notre-personnel-politique-a-se-renouveler-selon-bruno-cautres"
+        date: 2026-09-18
+        note: "Not fetched; cited by another source."
+  - id: batho
+    name: "Delphine Batho"
+    party: "Génération écologie"
+    bloc: left
+    status: declared
+    declared_on: 2025-11-25
+    notes: "Declared 25 Nov 2025; opposed to the left-unity primary."
+    sources:
+      - url: "https://www.nouvelobs.com/politique/20251125.OBS110076/delphine-batho-je-suis-candidate-a-l-election-presidentielle-pour-reconstruire-une-ecologie-capable-de-gouverner.html"
+        date: 2025-11-25
+  - id: philippe
+    name: "Édouard Philippe"
+    party: "Horizons"
+    bloc: centre
+    status: declared
+    declared_on: 2024-09-03
+    notes: "Declared in Le Point on 3 Sep 2024. Rejects any primary. Endorsed by Gerald Darmanin (17 Aug 2026) and Laurent Wauquiez (1 Jul 2026)."
+    sources:
+      - url: "https://www.lepoint.fr/politique/exclusif-edouard-philippe-je-serai-candidat-a-la-prochaine-election-presidentielle-03-09-2024-2569359_20.php"
+        date: 2024-09-03
+        note: "Not fetched; cited by another source. Le Point returned HTTP 403 here"
+      - url: "https://www.rtl.fr/actu/politique/edouard-philippe-peut-incarner-l-ordre-et-le-serieux-laurent-wauquiez-soutient-le-candidat-horizons-et-invite-bruno-retailleau-a-se-retirer-7900651585"
+        date: 2026-07-01
+  - id: attal
+    name: "Gabriel Attal"
+    party: "Renaissance (RE)"
+    bloc: centre
+    status: declared
+    declared_on: 2026-05-22
+    notes: "Declared at Mur-de-Barrez (Aveyron) on 22 May 2026. Has floated a tie-break vote/primary with Philippe, which Philippe refuses (web-search summary, not independently fetched)."
+    sources:
+      - url: "https://www.rtl.fr/actu/politique/presidentielle-2027-gabriel-attal-officialise-sa-candidature-a-l-election-presidentielle-7900637844"
+        date: 2026-05-22
+  - id: le_maire
+    name: "Bruno Le Maire"
+    party: "Renaissance (RE)"
+    bloc: centre
+    status: possible
+    notes: "Said on 22 Jun 2026 (BFMTV) 'Ma reponse sera donnee en octobre'. No decision found as of 2026-10-09. Tested at 3-6% in two polls."
+    sources:
+      - url: "https://lcp.fr/actualites/presidentielle-2027-bruno-le-maire-dira-en-octobre-s-il-est-candidat-437967"
+        date: 2026-06-23
+  - id: becht
+    name: "Olivier Becht"
+    party: "Renaissance (RE)"
+    bloc: centre
+    status: declared
+    declared_on: 2026-09-24
+    notes: "Declared in Paris Match on 24 Sep 2026 per FR Wikipedia (ref has no URL). Not tested in polls."
+    sources:
+      - url: "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+        date: 2026-10-09
+  - id: retailleau
+    name: "Bruno Retailleau"
+    party: "Les Républicains (LR)"
+    bloc: right
+    status: declared
+    declared_on: 2026-04-19
+    notes: "LR members (about 77,000 invited, online vote) chose on 19 Apr 2026 to designate him directly (73.4%) rather than a closed LR primary (12.2%) or an open right/centre primary (14%). No LR primary will be held. Laurent Wauquiez later (1 Jul 2026) said Retailleau should 'know how to step aside' and backed Philippe."
+    sources:
+      - url: "https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-bruno-retailleau-largement-designe-candidat-par-les-adherents-du-parti-les-republicains_7949957.html"
+        date: 2026-04-19
+      - url: "https://www.rtl.fr/actu/politique/edouard-philippe-peut-incarner-l-ordre-et-le-serieux-laurent-wauquiez-soutient-le-candidat-horizons-et-invite-bruno-retailleau-a-se-retirer-7900651585"
+        date: 2026-07-01
+  - id: lisnard
+    name: "David Lisnard"
+    party: "Nouvelle Énergie (left LR on 31 Mar 2026)"
+    bloc: right
+    status: declared
+    declared_on: 2026-03-31
+    notes: "Announced candidacy and departure from LR on France 2, 31 Mar 2026; still calls for a right-wing primary. Polls ~2-5% when tested; his Polymarket price jumped from ~3c (early Sep) to ~13c (Oct) amid a social-media campaign (CryptoActu 2026-10-06)."
+    sources:
+      - url: "https://www.franceinfo.fr/elections/presidentielle/le-maire-de-cannes-david-lisnard-annonce-sa-candidature-a-l-election-presidentielle-et-officialise-son-depart-des-republicains_7907063.html"
+        date: 2026-03-31
+      - url: "https://cryptoactu.com/lisnard-polymarket-cote-explose/"
+        date: 2026-10-06
+  - id: bertrand
+    name: "Xavier Bertrand"
+    party: "Nous France / Les Républicains"
+    bloc: right
+    status: declared
+    declared_on: 2026-08-27
+    notes: "Confirmed 'Je le serai' (candidate) at the Medef summer meeting, 27 Aug 2026; said he would formally declare 'at the end of the year, not before', as an independent candidate."
+    sources:
+      - url: "https://www.lalibre.be/international/europe/2026/08/27/un-pretendant-de-plus-a-la-presidence-de-la-republique-francaise-xavier-bertrand-lr-confirme-quil-sera-bien-candidat-a-lelection-presidentielle-SBDWBEGIIFCP7O3WCK3VVHAAZQ/"
+        date: 2026-08-27
+  - id: villepin
+    name: "Dominique de Villepin"
+    party: "La France humaniste (LFH)"
+    bloc: right
+    status: likely
+    notes: "Not formally declared as of the sources found: FR Wikipedia lists him as 'pressenti' (ref 2026-08-17: 'En septembre, tout sera pret'); a web search summary of late-Aug coverage said he would confirm 'when the campaign has started' and rejects any primary. Tested at 2-4% in several polls."
+    sources:
+      - url: "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+        date: 2026-10-09
+      - url: "https://www.huffingtonpost.fr/politique/article/pourquoi-villepin-ne-croit-pas-que-sa-candidature-a-la-presidentielle-2027-se-heurtera-au-meme-mur-qu-en-2012_262038.html"
+        date: 2026-03-29
+        note: "Not fetched; cited by another source."
+  - id: le_pen
+    name: "Marine Le Pen"
+    party: "Rassemblement national (RN)"
+    bloc: far_right
+    status: declared
+    declared_on: 2026-07-07
+    notes: "Paris court of appeal, 7 Jul 2026: 3 years prison (1 firm, to be served under electronic tag), 45 months ineligibility of which 30 suspended; the 15 firm months were already served under the provisional execution of the 31 Mar 2025 first-instance judgment, so she is eligible for 2027. She announced her candidacy the same evening (TF1) and filed a cassation appeal (suspends the tag). Prosecutors did NOT appeal to cassation (announced 15 Jul 2026). Cour de cassation said it 'could' rule 'at the latest early April 2027' (timetable may move). Backed by UDR (Ciotti) and Identite-Libertes (Marechal)."
+    sources:
+      - url: "https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-condamnee-en-appel-a-trois-ans-de-prison-dont-un-an-sous-bracelet-electronique-mais-eligible-en-2027_8097896.html"
+        date: 2026-07-07
+      - url: "https://www.bluewin.ch/fr/infos/monde/le-pen-la-cour-de-cassation-pourrait-se-prononcer-d-but-avril-li.3521506"
+        date: 2026-07-08
+        note: "AFP wire; page has no date metadata, text says 'mercredi' after the Tuesday 7 Jul ruling"
+      - url: "https://www.leclubdesjuristes.com/en-bref/affaire-des-assistants-parlementaires-du-fn-le-parquet-renonce-a-un-pourvoi-en-cassation-16990/"
+        date: 2026-07-16
+  - id: bardella
+    name: "Jordan Bardella"
+    party: "Rassemblement national (RN)"
+    bloc: far_right
+    status: possible
+    notes: "Not a candidate: listed by FR Wikipedia among those who declined, backing Le Pen (ref: Le Figaro interview 2026-07-12). Only a contingency if Le Pen were prevented from running. Tested in polls only before 7 Jul 2026."
+    sources:
+      - url: "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+        date: 2026-10-09
+        note: "section 'Candidats pressentis ayant decline / Extreme droite' (page revision timestamp 2026-10-09T11:39Z)"
+  - id: zemmour
+    name: "Éric Zemmour"
+    party: "Reconquête"
+    bloc: far_right
+    status: declared
+    declared_on: 2026-09-17
+    notes: "Announced on BFMTV 17 Sep 2026. Sarah Knafo said she is not a candidate (29 Apr 2026) and backs him."
+    sources:
+      - url: "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-president-du-parti-d-extreme-droite-reconquete-annonce-sa-candidature-a-l-election-presidentielle_8198141.html"
+        date: 2026-09-17
+  - id: dupont_aignan
+    name: "Nicolas Dupont-Aignan"
+    party: "Debout la France (DLF)"
+    bloc: other
+    status: declared
+    declared_on: 2026-09-19
+    notes: "First said he had 'the duty to be a candidate' on 8 Mar 2025; formal launch at Yerres on 19 Sep 2026."
+    sources:
+      - url: "https://www.cnews.fr/france/2026-09-19/presidentielle-2027-depuis-son-fief-de-yerres-nicolas-dupont-aignan-se-lance-dans"
+        date: 2026-09-19
+  - id: philippot
+    name: "Florian Philippot"
+    party: "Les Patriotes"
+    bloc: other
+    status: declared
+    declared_on: 2026-05-09
+    notes: "Announced on France 2, 9 May 2026; said he would step aside for a more unifying sovereigntist (e.g. Philippe de Villiers)."
+    sources:
+      - url: "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-le-souverainiste-florian-philippot-annonce-sa-candidature-a-l-elysee_7993346.html"
+        date: 2026-05-09
+  - id: asselineau
+    name: "François Asselineau"
+    party: "Union populaire républicaine (UPR)"
+    bloc: other
+    status: declared
+    notes: "Listed as declared by FR/EN Wikipedia; seeking sponsorships (x-pression.media 2026-06-29 per EN Wikipedia ref). Due to be tried for sexual assault/harassment (20 Minutes 2026-05-19 per FR Wikipedia ref). Exact declaration date not established."
+    sources:
+      - url: "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+        date: 2026-10-09
+      - url: "https://www.20minutes.fr/justice/4224280-20260519-candidat-presidentielle-2027-francois-asselineau-bientot-juge-agressions-harcelement-sexuels"
+        date: 2026-05-19
+        note: "Not fetched; cited by another source."
+  - id: bonnal
+    name: "Sébastien Bonnal"
+    party: "none (self-declared)"
+    bloc: other
+    status: declared
+    notes: "Commissioned an OpinionWay poll (2-4 Sep 2026) in which he scores '<1%'; the notice calls him 'candidat a l'election presidentielle'. No other information established."
+    sources:
+      - url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10264-pres-opinionway-facebook-15-septembre.pdf"
+        date: 2026-09-15
+slots:
+  - id: rn
+    label: "Rassemblement national nominee"
+    rationale: "Le Pen is eligible after the 7 July 2026 appeal ruling and declared that evening; Bardella backs her. Residual risk is her own cassation appeal (ruling 'at the latest early April 2027'). Probabilities follow Polymarket's 'who will be on the ballot' market on 2026-10-09 (Le Pen 0.91, Bardella 0.07)."
+    options:
+      - { run: [le_pen], p: 0.91 }
+      - { run: [bardella], p: 0.07 }
+  - id: zemmour
+    rationale: "Declared 17 September 2026; on the ballot in 2022."
+    options:
+      - { run: [zemmour], p: 0.85 }
+  - id: dupont_aignan
+    rationale: "Declared 19 September 2026; on the ballot in 2012, 2017 and 2022."
+    options:
+      - { run: [dupont_aignan], p: 0.6 }
+  - id: philippot
+    rationale: "Declared 9 May 2026 but offered to step aside for a more unifying sovereigntist; never on a presidential ballot."
+    options:
+      - { run: [philippot], p: 0.2 }
+  - id: asselineau
+    rationale: "Declared and seeking the 500 sponsorships, which he reached in 2017 but not 2022."
+    options:
+      - { run: [asselineau], p: 0.25 }
+  - id: bonnal
+    rationale: "Self-declared; known only from a poll he commissioned."
+    options:
+      - { run: [bonnal], p: 0.02 }
+  - id: retailleau
+    label: "Les Républicains nominee"
+    rationale: "Designated by LR members on 19 April 2026 (no primary); under pressure to step aside for Philippe. Polymarket's ballot market: 0.57."
+    options:
+      - { run: [retailleau], p: 0.6 }
+  - id: lisnard
+    rationale: "Declared 31 March 2026 and left LR; polls 2–5%. His Polymarket winner price (0.13) is treated as noise, not evidence."
+    options:
+      - { run: [lisnard], p: 0.4 }
+  - id: bertrand
+    rationale: "Said on 27 August 2026 he will run as an independent; formal declaration promised for the end of the year."
+    options:
+      - { run: [bertrand], p: 0.35 }
+  - id: villepin
+    rationale: "Not formally declared; described as preparing a run and rejecting any primary."
+    options:
+      - { run: [villepin], p: 0.45 }
+  - id: centre
+    label: "Centre: Philippe and Attal"
+    rationale: "Both declared, no agreed tie-break; Philippe leads Attal in every poll that tests both. Probabilities follow the thin Polymarket 'Attal vs Philippe' market on 2026-10-09 (Philippe only 0.795, Attal only 0.1355, both 0.07, neither 0.028)."
+    options:
+      - { run: [philippe], p: 0.78 }
+      - { run: [attal], p: 0.13 }
+      - { run: [philippe, attal], p: 0.07 }
+  - id: le_maire
+    rationale: "Said he would decide in October 2026; no decision found by 2026-10-09."
+    options:
+      - { run: [le_maire], p: 0.1 }
+  - id: becht
+    rationale: "Declared 24 September 2026 (Renaissance); not tested in any poll."
+    options:
+      - { run: [becht], p: 0.1 }
+  - id: melenchon
+    rationale: "Declared 3 May 2026; refuses any primary."
+    options:
+      - { run: [melenchon], p: 0.95 }
+  - id: ps_primary
+    label: "PS–Place publique–GRS primary nominee"
+    rationale: "Closed primary, round 1 on 9–10 October and round 2 on 16–17 October 2026; no poll of its electorate exists. Glucksmann leads the national polls, but the electorate is party members and donors, where Faure leads the party. Provisional until the result."
+    options:
+      - { run: [glucksmann], p: 0.55 }
+      - { run: [faure], p: 0.25 }
+      - { run: [royal], p: 0.07 }
+      - { run: [guedj], p: 0.05 }
+      - { run: [maurel], p: 0.03 }
+  - id: hollande
+    rationale: "Not in the primary; will decide in December 2026 whether to run."
+    options:
+      - { run: [hollande], p: 0.2 }
+  - id: roussel
+    rationale: "Designated by PCF members, made official 6 September 2026; on the ballot in 2022."
+    options:
+      - { run: [roussel], p: 0.8 }
+  - id: tondelier
+    rationale: "Designated by Les Écologistes for a unity primary that collapsed in July 2026; no later confirmation or withdrawal found."
+    options:
+      - { run: [tondelier], p: 0.55 }
+  - id: ruffin
+    rationale: "Refused entry to the PS-led primary; continuing alone."
+    options:
+      - { run: [ruffin], p: 0.5 }
+  - id: bouamrane
+    rationale: "Declared 9 June 2026 outside the primary."
+    options:
+      - { run: [bouamrane], p: 0.15 }
+  - id: cazeneuve
+    rationale: "Declared 16 July 2026 outside the primary; not tested in any poll."
+    options:
+      - { run: [cazeneuve], p: 0.15 }
+  - id: batho
+    rationale: "Declared 25 November 2025; not tested in any poll."
+    options:
+      - { run: [batho], p: 0.1 }
+  - id: arthaud
+    rationale: "Lutte ouvrière has been on every presidential ballot since 1974."
+    options:
+      - { run: [arthaud], p: 0.9 }
+  - id: kazib
+    rationale: "Declared 1 June 2026; not tested in any poll."
+    options:
+      - { run: [kazib], p: 0.2 }
+  - id: labib
+    rationale: "Declared 17 June 2026; not tested in any poll."
+    options:
+      - { run: [labib], p: 0.15 }

@@ -1,0 +1,63 @@
+schema_version: "1.0"
+poll_id: ifop-2026-07-08-10222
+firm: ifop
+sponsor: "LCI / Le Figaro"
+field_start: 2026-07-07
+field_end: 2026-07-08
+published_at: 2026-07-09
+sample_size: 1075
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/juillet/10222-pres-ifop-le-figaro-8-juillet.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/juillet/10222-pres-ifop-le-figaro-8-juillet.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-07-08)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Attal"
+    shares:
+      arthaud: 0.5
+      melenchon: 15
+      roussel: 2
+      tondelier: 4
+      glucksmann: 12
+      attal: 15
+      retailleau: 10
+      dupont_aignan: 2
+      le_pen: 36
+      zemmour: 3.5
+  - scenario_id: S2
+    round: 1
+    label: "Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 15
+      roussel: 3
+      tondelier: 3.5
+      glucksmann: 9
+      philippe: 19
+      retailleau: 8
+      dupont_aignan: 2
+      le_pen: 36
+      zemmour: 4
+  - scenario_id: H1
+    round: 2
+    label: "Gabriel Attal v Marine Le Pen"
+    shares:
+      attal: 45
+      le_pen: 55
+  - scenario_id: H2
+    round: 2
+    label: "Jean-Luc Mélenchon v Marine Le Pen"
+    shares:
+      melenchon: 30
+      le_pen: 70
+  - scenario_id: H3
+    round: 2
+    label: "Édouard Philippe v Marine Le Pen"
+    shares:
+      philippe: 46
+      le_pen: 54

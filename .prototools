@@ -1,0 +1,10 @@
+moon = "2.6.1"
+node = "24.21.0"
+pnpm = "12.10.1"
+proto = "0.63.1"
+rust = "1.99.0"
+
+[settings]
+auto-install = true
+detect-strategy = "prefer-prototools"
+telemetry = false

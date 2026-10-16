@@ -1,0 +1,32 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-09-04-10264
+firm: opinionway
+sponsor: "Sebastien Bonnal (declared candidate)"
+field_start: 2026-09-02
+field_end: 2026-09-04
+published_at: 2026-09-15
+sample_size: 1034
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10264-pres-opinionway-facebook-15-septembre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/septembre/10264-pres-opinionway-facebook-15-septembre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-09-15). Commissioned by an interested party."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "single scenario"
+    shares:
+      arthaud: 1
+      melenchon: 16
+      roussel: 2
+      tondelier: 3
+      glucksmann: 12
+      attal: 7
+      philippe: 15
+      retailleau: 7
+      le_pen: 34
+      zemmour: 3
+      bonnal: 0.5

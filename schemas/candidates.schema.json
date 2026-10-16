@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "candidates.schema.json",
+  "title": "Candidate field",
+  "description": "config/candidates.yaml: the canonical candidate ids every source must use, their blocs, and the field model (slots of mutually exclusive outcomes).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "as_of", "blocs", "candidates", "slots"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "as_of": { "$ref": "#/$defs/date" },
+    "blocs": {
+      "description": "Political blocs. Within a bloc, a candidate who drops out passes support to the rest of the bloc first.",
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/id" }
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "party", "bloc", "status", "sources"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "name": { "type": "string", "minLength": 1 },
+          "party": { "type": "string", "minLength": 1 },
+          "bloc": { "$ref": "#/$defs/id" },
+          "status": { "enum": ["declared", "likely", "possible", "withdrawn", "ineligible"] },
+          "declared_on": { "$ref": "#/$defs/date" },
+          "notes": { "type": "string" },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["url"],
+              "properties": {
+                "url": { "type": "string", "pattern": "^https?://" },
+                "date": { "$ref": "#/$defs/date" },
+                "note": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "slots": {
+      "description": "Every candidate belongs to exactly one slot. A slot draws at most one option; 1 - sum(p) is the probability that nobody from the slot runs.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "options"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "label": { "type": "string" },
+          "rationale": { "type": "string" },
+          "options": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["run", "p"],
+              "properties": {
+                "run": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/id" } },
+                "p": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+  }
+}

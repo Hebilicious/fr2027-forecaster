@@ -1,0 +1,173 @@
+schema_version: "1.0"
+poll_id: ifop-2026-05-28-10193
+firm: ifop
+sponsor: "LCI / Le Figaro / Sud Radio"
+field_start: 2026-05-26
+field_end: 2026-05-28
+published_at: 2026-05-29
+sample_size: 1501
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/mai/10193-pres-ifop-le-figaro-29-mai.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/mai/10193-pres-ifop-le-figaro-29-mai.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-05-29)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Roussel+Tondelier+Glucksmann+Attal+Philippe+Bardella"
+    shares:
+      arthaud: 0.5
+      melenchon: 13
+      roussel: 2.5
+      tondelier: 4
+      glucksmann: 9
+      attal: 9
+      philippe: 14
+      retailleau: 8
+      dupont_aignan: 2
+      bardella: 34
+      zemmour: 4
+  - scenario_id: S2
+    round: 1
+    label: "Roussel+Tondelier+Glucksmann+Philippe+Villepin+Bardella"
+    shares:
+      arthaud: 0.5
+      melenchon: 13
+      roussel: 3.5
+      tondelier: 4
+      glucksmann: 10
+      philippe: 18
+      villepin: 2.5
+      retailleau: 9
+      dupont_aignan: 2
+      bardella: 34
+      zemmour: 3.5
+  - scenario_id: S3
+    round: 1
+    label: "Roussel+Tondelier+Glucksmann+Attal+Villepin+Bardella"
+    shares:
+      arthaud: 0.5
+      melenchon: 13
+      roussel: 3
+      tondelier: 4
+      glucksmann: 11
+      attal: 16
+      villepin: 3
+      retailleau: 10
+      dupont_aignan: 2.5
+      bardella: 34
+      zemmour: 3
+  - scenario_id: S4
+    round: 1
+    label: "Roussel+Tondelier+Glucksmann+Philippe+Villepin+Le Pen"
+    shares:
+      arthaud: 0.5
+      melenchon: 13
+      roussel: 3
+      tondelier: 4
+      glucksmann: 11
+      philippe: 19
+      villepin: 2
+      retailleau: 9
+      dupont_aignan: 1.5
+      le_pen: 33
+      zemmour: 4
+  - scenario_id: S5
+    round: 1
+    label: "Roussel+Tondelier+Glucksmann+Attal+Villepin+Le Pen"
+    shares:
+      arthaud: 0.5
+      melenchon: 13
+      roussel: 3
+      tondelier: 3.5
+      glucksmann: 11.5
+      attal: 16
+      villepin: 3
+      retailleau: 11.5
+      dupont_aignan: 2
+      le_pen: 32
+      zemmour: 4
+  - scenario_id: S6
+    round: 1
+    label: "Roussel+Tondelier+Hollande+Philippe+Bardella"
+    shares:
+      arthaud: 0.5
+      melenchon: 14
+      roussel: 4
+      tondelier: 5
+      hollande: 8
+      philippe: 20
+      retailleau: 9
+      dupont_aignan: 1.5
+      bardella: 34
+      zemmour: 4
+  - scenario_id: S7
+    round: 1
+    label: "Roussel+Tondelier+Hollande+Attal+Bardella"
+    shares:
+      arthaud: 1
+      melenchon: 13.5
+      roussel: 3.5
+      tondelier: 5
+      hollande: 8
+      attal: 18.5
+      retailleau: 10
+      dupont_aignan: 2
+      bardella: 35
+      zemmour: 3.5
+  - scenario_id: S8
+    round: 1
+    label: "Roussel+Tondelier+Glucksmann+Philippe+Bardella+Ruffin"
+    shares:
+      arthaud: 0.5
+      melenchon: 12.5
+      roussel: 3
+      tondelier: 4
+      glucksmann: 9
+      philippe: 20
+      retailleau: 9
+      dupont_aignan: 2
+      bardella: 34
+      zemmour: 3
+      ruffin: 3
+  - scenario_id: S9
+    round: 1
+    label: "Roussel+Tondelier+Faure+Philippe+Bardella"
+    shares:
+      arthaud: 0.5
+      melenchon: 13.5
+      roussel: 6
+      tondelier: 4
+      faure: 4
+      philippe: 21
+      retailleau: 10
+      dupont_aignan: 2.5
+      bardella: 35
+      zemmour: 3.5
+  - scenario_id: S10
+    round: 1
+    label: "Hollande+Philippe+Bardella"
+    shares:
+      arthaud: 1.5
+      melenchon: 15
+      hollande: 11
+      philippe: 22
+      retailleau: 10
+      dupont_aignan: 2.5
+      bardella: 34
+      zemmour: 4
+  - scenario_id: S11
+    round: 1
+    label: "Glucksmann+Philippe+Bardella"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      glucksmann: 12
+      philippe: 22
+      retailleau: 10
+      dupont_aignan: 3
+      bardella: 33
+      zemmour: 4

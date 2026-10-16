@@ -1,0 +1,37 @@
+schema_version: "1.0"
+poll_id: odoxa-2026-05-21
+firm: odoxa
+sponsor: "Public Senat / regional press (per odoxa.fr page)"
+field_start: 2026-05-20
+field_end: 2026-05-21
+published_at: 2026-05-26
+sample_size: 1005
+method: null
+population: null
+source_url: "https://www.odoxa.fr/sondage/philippe-seffondre-melenchon-decolle-bardella-simpose/"
+notice_url: null
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: index
+notes: "Only some figures could be checked against the pollster's page; the rest are from the poll index."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "single scenario"
+    shares:
+      arthaud: 0.5
+      melenchon: 16
+      roussel: 2.5
+      tondelier: 4
+      glucksmann: 11
+      philippe: 17
+      retailleau: 9
+      dupont_aignan: 2
+      bardella: 32
+      zemmour: 6
+  - scenario_id: H1
+    round: 2
+    label: "Édouard Philippe v Jordan Bardella"
+    shares:
+      philippe: 48
+      bardella: 52

@@ -1,0 +1,60 @@
+language: "typescript"
+layer: "application"
+stack: "frontend"
+
+project:
+  title: "Web UI"
+  description: "The local Vue app: reads only the fr2027 serve API."
+
+tasks:
+  build:
+    description: "Build the UI into dist/ for fr2027 serve."
+    command: "vite"
+    args: ["build"]
+    inputs: ["src/**/*", "index.html", "vite.config.ts", "tsconfig.json", "package.json", "/pnpm-lock.yaml"]
+    outputs: ["dist"]
+
+  dev:
+    description: "Vite dev server with hot reload; proxies /api to fr2027 serve (FR2027_API overrides the address)."
+    command: "vite"
+    options:
+      cache: false
+      persistent: true
+      runInCI: false
+
+  typecheck:
+    description: "Type-check TypeScript and Vue with vize."
+    command: "vize"
+    args: ["check"]
+    inputs: ["src/**/*", "tsconfig.json", "vize.config.json", "package.json", "/pnpm-lock.yaml"]
+
+  lint:
+    description: "Lint Vue files with vize."
+    command: "vize"
+    args: ["lint", "--max-warnings", "0", "src"]
+    inputs: ["src/**/*.vue", "vize.config.json"]
+
+  test:
+    description: "Run the UI's headless unit tests."
+    command: "vitest"
+    args: ["run"]
+    inputs: ["src/**/*", "vite.config.ts", "package.json", "/pnpm-lock.yaml"]
+
+  # No shell for the two format tasks: bash would expand src/**/*.vue as src/*/*.vue (no globstar),
+  # skipping src/App.vue and nested folders. vize expands the glob itself.
+  format:
+    description: "Format Vue files with vize."
+    command: "vize"
+    args: ["fmt", "--write", "src/**/*.vue"]
+    options:
+      cache: false
+      runInCI: false
+      shell: false
+
+  format-check:
+    description: "Fail when a Vue file is not formatted."
+    command: "vize"
+    args: ["fmt", "--check", "src/**/*.vue"]
+    inputs: ["src/**/*.vue", "vize.config.json"]
+    options:
+      shell: false

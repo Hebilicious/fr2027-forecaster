@@ -45,7 +45,7 @@ The repo is the single meeting point: every source, including the Grok bot, writ
           R2; news/social, market blend, prior           candidates + research log)
                         |
                         v
-          data/forecasts (hourly JSON)  ---->  Local UI (make up)
+          data/forecasts (hourly JSON)  ---->  Local UI (moon run repo:up)
 ```
 
 Collectors run on a schedule and never feed the model directly; the weekly Claude review edits configuration through pull requests, so every change to the field of candidates is reviewable.
@@ -57,10 +57,12 @@ Polls carry the forecast; every other source is a challenger that must prove its
 | Source | What to collect | Access | Refresh | Role in model |
 | --- | --- | --- | --- | --- |
 | Voting-intention polls | Every published R1 and R2 poll: firm, fieldwork dates, sample, method, scenario (which candidates were tested), toplines | Pollster sites (Ifop, Elabe, Odoxa, OpinionWay, Ipsos, Harris/Toluna, Cluster17, BVA/Verian), Commission des sondages notices, Wikipedia poll tables as an index only | Daily | Primary signal |
-| Polymarket | Price and volume per candidate in the "Next French Presidential Election" event, full price history | Public Gamma API (event/market metadata) and CLOB price-history endpoint; verify current endpoints | Hourly | Benchmark and optional blend input |
-| X trends (Grok bot) | Mention volume, sentiment, engagement, top topics per candidate | Grok bot writes JSON files into `data/raw/grok/` (contract below) | Whenever the bot pushes | Low-weight momentum signal |
-| News | Article counts and headlines per candidate from French national outlets | RSS feeds (Le Monde, Le Figaro, Libération, France Info, BFMTV, Les Échos, Ouest-France) plus GDELT | Hourly | Event detection, uncertainty widening |
-| Search interest | Google Trends per candidate, France | pytrends or the official Trends API if available | Daily | Low-weight momentum signal |
+| Prediction markets | Price, bid, ask and volume per candidate for three questions: wins, reaches round 2, is on the ballot | Polymarket Gamma API and Kalshi's public market-data API (`config/sources.yaml`) | Hourly | Benchmark and optional blend input |
+| X trends (Grok Bot) | Mention volume, sentiment, top topics, bot share per candidate | Grok Bot routines send JSON to the inbox Worker; the Live workflow validates and commits it to `data/raw/grok/` (contract below; see `docs/grok-bot.md`) | Every 6 hours | Low-weight momentum signal |
+| News | Headlines naming a candidate, per outlet | RSS feeds of 13 national outlets (`config/sources.yaml`); Les Échos and Ouest-France have no open feed | Hourly | Event detection, uncertainty widening |
+| Attention | Daily page views of each candidate's French Wikipedia article (Wikimedia API, bots excluded) | `config/sources.yaml` | Daily | Low-weight momentum signal |
+| Campaign events | Declarations, withdrawals, endorsements, primary results, sponsorships, rulings | Grok Bot routine, through the inbox, to `data/raw/events/` | Daily | Field model (by hand, through pull requests) |
+| Search interest | Google Trends per candidate, France | The official Google Trends API if access is available (pytrends is an unofficial Python scraper) | Daily | Low-weight momentum signal |
 | Candidate programs | Declared program, or the previous program and recent statements | Official campaign sites, party platforms, 2022 programs | On release | Transfer modeling (see Programs) |
 | Fundamentals | Approval ratings, unemployment, inflation, consumer confidence | INSEE, Banque de France, approval barometers (Ifop-JDD, Elabe, Odoxa) | Monthly | Priors far from election day |
 | Historical results | 2002–2022 presidential results R1 and R2, plus 2024 European and legislative results | data.gouv.fr (Ministère de l'Intérieur) | Once | Backtests, transfer matrices, error model |
@@ -101,11 +103,11 @@ The Grok bot and the forecaster talk only through files in the repo, so the bot 
 
 Rules for the drop: one file per window, never edit a pushed file, commit with message `grok: <window end>`. The bot must use the canonical `candidate_id` list in `config/candidates.yaml`. If the bot can't fill a field, it sends `null`, not a guess.
 
-**Poll row (`data/clean/polls.parquet`):** `poll_id, firm, sponsor, field_start, field_end, published_at, sample_size, method (online/phone/mixed), population (registered/likely), round (1/2), scenario_id, candidate_id, share, source_url, notice_url`. One row per candidate per scenario; a scenario is the exact set of candidates tested.
+**Poll row (`data/clean/polls.csv`, rebuilt from `data/raw/polls/<poll_id>.yaml`):** `poll_id, firm, sponsor, field_start, field_end, published_at, sample_size, method (online/phone/mixed), population (registered/likely), round (1/2), scenario_id, candidate_id, share, source_url, notice_url`, plus provenance: `index_url, entry (primary/index), retrieved_at, content_hash`. One row per candidate per scenario; a scenario is the exact set of candidates tested. Clean data is CSV rather than Parquet so every change is readable in a pull request (research log, 2026-10-09).
 
-**Market row (`data/clean/markets.parquet`):** `ts, candidate_id, market_id, mid_price, best_bid, best_ask, volume_24h, liquidity`.
+**Market row (`data/clean/markets.csv`):** `ts, candidate_id, market_id, mid_price, best_bid, best_ask, volume_24h, liquidity`.
 
-**News row (`data/clean/news.parquet`):** `ts, outlet, url, title, candidate_ids[], event_tags[]`. Store titles and links only, not article bodies.
+**News row (`data/clean/news.csv`):** `ts, outlet, url, title, candidate_ids[], event_tags[]`. Store titles and links only, not article bodies.
 
 **Forecast output (`data/forecasts/YYYY-MM-DDTHH.json`):** per candidate: `p_run`, `p_qualify_r1`, `p_win`, R1 vote share mean and 80% interval; per pair: `p_matchup`, `p_win_given_matchup`; plus `model_version`, `inputs_hash`, and the top drivers of change since the previous run.
 
@@ -126,7 +128,7 @@ The forecast is a Monte Carlo over 50,000 simulated elections, each one drawing 
 p_blend = softmax( w * log p_model + (1 - w) * log p_market )
 ```
 
-**Implementation:** Python 3.12, PyMC or NumPyro for the state-space model (refit nightly), NumPy for simulation (runs hourly from posterior draws). Seed every run; store posterior summaries, not full traces.
+**Implementation:** Rust for collectors, model and the local API (one binary, `fr2027`); TypeScript and Vue for the UI; proto pins the tools and moon runs every task. The state-space model is linear-Gaussian once polls are written as log-ratios, so a Kalman filter fits it exactly, with hyperparameters chosen by marginal likelihood; it refits on every run in about a second, and the simulation draws from its posterior. Seed every run; store summaries, not draws. Why not Python: research log, 2026-10-09.
 
 **Explainability:** each run computes a change attribution: how much each new poll, market move or flagged event shifted `p_win` since the last run, by re-running with that input removed.
 
@@ -157,7 +159,7 @@ Two past elections are a thin sample, so treat backtest weights as rough and pre
 
 ## Local UI
 
-A single local web app, started with `make up` (or `docker compose up`), reading only from `data/forecasts/` and `data/clean/`. Suggested stack: FastAPI backend + a lightweight frontend (React + Vite, or Streamlit for a faster first version). Auto-refreshes when a new forecast file lands.
+A public web page on Cloudflare (static files rebuilt hourly by `fr2027 export`), and the same app locally with `moon run repo:up`, both reading only `api/*.json` documents built from `data/forecasts/` and `data/clean/`. Stack: Rust (`fr2027 export` / `fr2027 serve`), a Vue + TypeScript frontend built with Vite, and a Cloudflare Worker serving the files. Auto-refreshes when a new build lands.
 
 | View | Shows |
 | --- | --- |
@@ -178,16 +180,20 @@ Collectors and the model run on a schedule inside the repo, so the forecast stay
 
 | Job | Frequency | Runs where |
 | --- | --- | --- |
-| Polymarket, news RSS | Hourly | Local scheduler (APScheduler in the app, or cron) and/or a GitHub Actions workflow |
-| Polls, Google Trends | Daily | Same |
-| Ingest Grok drops | On each push to `data/raw/grok/` | GitHub Actions on push, plus local poll of the folder |
-| Model refit | Nightly | Local or Actions (budget ~10 min) |
-| Simulation + forecast file | Hourly, and after any refit | Local or Actions |
+| Markets, news RSS, Grok Bot inbox | Hourly | GitHub Actions (`live.yml`) |
+| Wikipedia page views | Daily | GitHub Actions (`live.yml`) |
+| X activity | Every 6 hours | Grok Bot routine → inbox |
+| New polls | Twice a day | Grok Bot routine → inbox → pull request reviewed by a person |
+| Campaign events | Daily | Grok Bot routine → inbox |
+| Model refit, simulation and forecast file | Hourly check; refits when polls or config change, and once a day | GitHub Actions (`live.yml`, `fr2027 forecast --if-changed`) |
+| Public site | Hourly | GitHub Actions → Cloudflare Worker |
 | Research review by a Claude session | Weekly | Scheduled task: check new declarations, programs, alliances; update `config/candidates.yaml` and the research log via pull request |
+
+How to set it up and run it: `docs/operations.md`.
 
 **Research log (`research/LOG.md`):** dated entries for every assumption, parameter change, source added or dropped, and reason. Model changes go through pull requests with a backtest diff in the description.
 
-**Repo layout:** `collectors/`, `model/`, `backtest/`, `app/`, `config/`, `schemas/`, `data/{raw,clean,forecasts,quarantine}/`, `research/`, `tests/`. Large raw files go to Git LFS or are pruned to summaries after 30 days.
+**Repo layout:** `collectors/`, `model/`, `backtest/`, `cli/`, `app/web/`, `config/`, `schemas/`, `data/{raw,clean,forecasts,quarantine}/`, `research/`. Tests live beside the code they test (each crate's `tests/`, `app/web/src/*.test.ts`). Large raw files go to Git LFS or are pruned to summaries after 30 days.
 
 **Tests:** schema validation, collector parsers against saved fixtures, a simulation sanity test (probabilities sum to 1, deterministic with seed), and the leakage test from Backtesting.
 
@@ -196,17 +202,17 @@ Collectors and the model run on a schedule inside the repo, so the forecast stay
 The tool forecasts; it never advocates. These rules are requirements, not suggestions.
 
 - **Neutrality:** no persuasive text, no ranking of programs as better or worse, identical treatment and color logic for every candidate.
-- **French publication law:** the law on election polls (loi du 19 juillet 1977, as amended) bans publishing polls on the eve and day of the vote, and regulates how polls are presented. The app is for private use; if any output is ever shared publicly, freeze public outputs during the blackout and have the rules checked by someone qualified. Verify current rules before launch.
-- **Polymarket in France:** French regulators restricted Polymarket access for French users in late 2024. Reading public price data is a separate question from trading; check the platform's terms and current status before relying on it. No trading code in this repo.
+- **French publication law:** the law on election polls (loi du 19 juillet 1977, as amended) bans publishing polls on the eve and day of the vote. The page is public, so `fr2027 export` refuses to build it during the windows in `config/sources.yaml` and the last version stays online.
+- **Markets:** market data is read from public APIs only. No trading code in this repo.
 - **Privacy:** aggregate counts and public post IDs only; no profiles of private individuals, no storing personal data beyond what's needed for de-duplication.
 - **Honest uncertainty:** the UI always shows intervals and a short note that a 70% favorite loses about 3 times in 10.
-- **Secrets:** API keys in `.env`, never committed; the Grok bot gets a scoped token that can only write to `data/raw/grok/`.
+- **Secrets:** API keys in `.env` locally and in GitHub Actions secrets, never committed. Grok Bot gets no GitHub credential (GitHub can't limit a token to one folder of a public repository): it gets a token that can only add items to the inbox Worker, and the pipeline validates every item before anything is committed.
 
 ## Milestones and acceptance criteria
 
 Build in this order; each milestone ends with a working, tested state committed to `main`.
 
-1. **Skeleton.** Repo layout, schemas, `config/candidates.yaml`, CI running tests, empty UI that reads a dummy forecast file. *Done when:* `make up` shows the dummy forecast.
+1. **Skeleton.** Repo layout, schemas, `config/candidates.yaml`, CI running tests, empty UI that reads a dummy forecast file. *Done when:* `moon run repo:up` shows the dummy forecast.
 2. **Polls + polls-only model.** Poll collector or manual CSV entry, state-space aggregation, R1/R2 Monte Carlo with field uncertainty. *Done when:* a real forecast file is produced and shown in Overview and Round 1.
 3. **Backtest harness.** 2017 and 2022 replays, baselines, calibration report. *Done when:* the polls-only model's report is committed to `research/`.
 4. **Polymarket.** Collector, comparison view, blend fit. *Done when:* model vs market vs blend shown, with blend weight justified in the log.
@@ -217,6 +223,6 @@ Build in this order; each milestone ends with a working, tested state committed 
 **Open questions for the owner:**
 
 - [ ] Which Grok bot fields are realistic to collect (sentiment, bot share)? Adjust the contract before milestone 5.
-- [x] Should the GitHub repo be private? Yes — the repo is private.
-- [ ] Run schedules locally, on GitHub Actions, or both?
-- [ ] Is the output ever going to be shared publicly? This changes the legal checks.
+- [x] Should the GitHub repo be private? No: it is public (2026-10-09), so GitHub Actions runs free.
+- [x] Run schedules locally, on GitHub Actions, or both? GitHub Actions, plus Grok Bot routines for X, polls and events.
+- [x] Is the output ever going to be shared publicly? Yes: a public page on Cloudflare, with the publication blackout enforced.

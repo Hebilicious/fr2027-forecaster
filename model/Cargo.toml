@@ -1,0 +1,17 @@
+[package]
+name = "fr2027-model"
+version = "0.1.0"
+description = "Two-round Monte Carlo forecaster for the 2027 French presidential election: pure computation, no I/O."
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+jiff = { version = "0.2.38", default-features = false, features = ["std", "serde"] }
+nalgebra = { version = "0.35.0", default-features = false, features = ["std"] }
+serde = { version = "1.0.229", features = ["derive"] }
+thiserror = "2.0.21"
+
+[dev-dependencies]
+serde_json = "1.0.151"

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Exemple : politique</title>
+    <link>https://www.example.fr/politique/</link>
+    <description>Flux de test</description>
+    <item>
+      <title><![CDATA[Présidentielle 2027 : Marine Le Pen et Jordan Bardella en meeting à Perpignan]]></title>
+      <link>https://www.example.fr/politique/article/2026/10/09/meeting_123.html?xtor=RSS-3208</link>
+      <description><![CDATA[Le RN lance sa campagne.]]></description>
+      <pubDate>Fri, 09 Oct 2026 18:12:00 +0200</pubDate>
+      <guid>https://www.example.fr/politique/article/2026/10/09/meeting_123.html</guid>
+    </item>
+    <item>
+      <title>Le maire de Lyon présente son budget</title>
+      <link>https://www.example.fr/politique/article/2026/10/09/budget_124.html</link>
+      <description>Rien sur la présidentielle.</description>
+      <pubDate>Fri, 09 Oct 2026 17:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Primaire : le dernier débat avant le vote</title>
+      <link>https://www.example.fr/politique/article/2026/10/09/primaire_125.html</link>
+      <description><![CDATA[Raphaël Glucksmann et Olivier Faure s&rsquo;opposent sur l&rsquo;Europe.]]></description>
+      <pubDate>Fri, 09 Oct 2026 16:30:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Édouard Philippe : « Je serai candidat jusqu’au bout »</title>
+      <link>https://www.example.fr/politique/article/2026/10/09/philippe_126.html</link>
+    </item>
+  </channel>
+</rss>

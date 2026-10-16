@@ -1,0 +1,77 @@
+schema_version: "1.0"
+poll_id: cluster17-2026-07-24-10246
+firm: cluster17
+sponsor: "Le Grand Continent"
+field_start: 2026-07-22
+field_end: 2026-07-24
+published_at: 2026-08-31
+sample_size: 1506
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/aout/10246-pres-cluster17-le-grand-continent-31-aout.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/aout/10246-pres-cluster17-le-grand-continent-31-aout.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-09T14:35Z
+entry: primary
+notes: "published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-08-31)."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Philippe"
+    shares:
+      arthaud: 0.9
+      melenchon: 18.2
+      roussel: 2
+      tondelier: 2.8
+      glucksmann: 10.2
+      philippe: 18.1
+      villepin: 2.9
+      retailleau: 7.8
+      dupont_aignan: 3.2
+      le_pen: 30.1
+      zemmour: 3.8
+  - scenario_id: S2
+    round: 1
+    label: "Attal"
+    shares:
+      arthaud: 1
+      melenchon: 18.3
+      roussel: 1.8
+      tondelier: 3.1
+      glucksmann: 10.3
+      attal: 13.8
+      villepin: 3.9
+      retailleau: 9.7
+      dupont_aignan: 4
+      le_pen: 29.9
+      zemmour: 4.2
+  - scenario_id: H1
+    round: 2
+    label: "Gabriel Attal v Marine Le Pen"
+    shares:
+      attal: 43.8
+      le_pen: 56.2
+  - scenario_id: H2
+    round: 2
+    label: "Raphaël Glucksmann v Marine Le Pen"
+    shares:
+      glucksmann: 44.1
+      le_pen: 55.9
+  - scenario_id: H3
+    round: 2
+    label: "Jean-Luc Mélenchon v Marine Le Pen"
+    shares:
+      melenchon: 39.2
+      le_pen: 60.8
+  - scenario_id: H4
+    round: 2
+    label: "Édouard Philippe v Marine Le Pen"
+    shares:
+      philippe: 48.2
+      le_pen: 51.8
+  - scenario_id: H5
+    round: 2
+    label: "Bruno Retailleau v Marine Le Pen"
+    shares:
+      retailleau: 42.9
+      le_pen: 57.1

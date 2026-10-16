@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "poll.schema.json",
+  "title": "Poll entry",
+  "description": "data/raw/polls/<poll_id>.yaml: one published voting-intention poll, entered by hand or by a collector. Never edited once merged; a correction is a new file that names the one it supersedes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "poll_id",
+    "firm",
+    "sponsor",
+    "field_start",
+    "field_end",
+    "published_at",
+    "sample_size",
+    "method",
+    "population",
+    "source_url",
+    "retrieved_at",
+    "entry",
+    "scenarios"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "poll_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "supersedes": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "firm": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Pollster slug, e.g. ifop, elabe, odoxa, opinionway, ipsos, toluna-harris, cluster17, verian."
+    },
+    "sponsor": { "type": ["string", "null"] },
+    "field_start": { "$ref": "#/$defs/date" },
+    "field_end": { "$ref": "#/$defs/date" },
+    "published_at": { "$ref": "#/$defs/date" },
+    "sample_size": { "type": "integer", "minimum": 100 },
+    "method": { "enum": ["online", "phone", "mixed", null] },
+    "population": { "enum": ["registered", "likely", null] },
+    "source_url": { "type": "string", "pattern": "^https?://" },
+    "notice_url": { "type": ["string", "null"], "pattern": "^https?://" },
+    "index_url": { "type": ["string", "null"], "pattern": "^https?://" },
+    "retrieved_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?Z$" },
+    "entry": {
+      "description": "index: numbers copied from a poll index such as the Wikipedia tables; primary: checked against the pollster's or sponsor's own publication.",
+      "enum": ["index", "primary"]
+    },
+    "notes": { "type": "string" },
+    "scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["scenario_id", "round", "shares"],
+        "properties": {
+          "scenario_id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$" },
+          "round": { "enum": [1, 2] },
+          "label": { "type": "string" },
+          "shares": {
+            "description": "Percent of expressed votes per candidate id. Report '<0.5' as 0.5.",
+            "type": "object",
+            "minProperties": 2,
+            "propertyNames": { "pattern": "^[a-z][a-z0-9_]*$" },
+            "additionalProperties": { "type": "number", "minimum": 0, "maximum": 100 }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+  }
+}

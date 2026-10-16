@@ -1,0 +1,5 @@
+{
+  "semi": false,
+  "printWidth": 120,
+  "ignorePatterns": ["**/*.vue", "SPEC.md", "data/**", "target/**", "**/dist/**", "pnpm-lock.yaml"]
+}

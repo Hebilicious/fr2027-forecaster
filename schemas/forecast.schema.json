@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "forecast.schema.json",
+  "title": "Forecast",
+  "description": "data/forecasts/YYYY-MM-DDTHH.json: one model run. Probabilities are fractions; shares are fractions of expressed votes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "model_version",
+    "generated_at",
+    "as_of",
+    "inputs_hash",
+    "seed",
+    "simulations",
+    "election",
+    "candidates",
+    "pairs",
+    "aggregation",
+    "changes",
+    "warnings"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "model_version": { "type": "string" },
+    "generated_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$" },
+    "as_of": { "$ref": "#/$defs/date" },
+    "inputs_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "seed": { "type": "integer", "minimum": 0 },
+    "simulations": { "type": "integer", "minimum": 1 },
+    "election": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["round1", "round2"],
+      "properties": { "round1": { "$ref": "#/$defs/date" }, "round2": { "$ref": "#/$defs/date" } }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_id",
+          "name",
+          "party",
+          "bloc",
+          "status",
+          "p_run",
+          "simulated",
+          "p_qualify_r1",
+          "p_win",
+          "r1_share"
+        ],
+        "properties": {
+          "candidate_id": { "type": "string" },
+          "name": { "type": "string" },
+          "party": { "type": "string" },
+          "bloc": { "type": "string" },
+          "status": { "type": "string" },
+          "p_run": { "$ref": "#/$defs/probability" },
+          "simulated": {
+            "type": "boolean",
+            "description": "False when no round 1 poll has tested the candidate; they are then left out of every simulated field."
+          },
+          "p_qualify_r1": { "$ref": "#/$defs/probability" },
+          "p_win": { "$ref": "#/$defs/probability" },
+          "r1_share": {
+            "description": "Round 1 share when the candidate runs: mean and 80% interval.",
+            "oneOf": [{ "$ref": "#/$defs/interval" }, { "type": "null" }]
+          }
+        }
+      }
+    },
+    "pairs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["a", "b", "p_matchup", "p_win_given_matchup", "polled"],
+        "properties": {
+          "a": { "type": "string" },
+          "b": { "type": "string" },
+          "p_matchup": { "$ref": "#/$defs/probability" },
+          "p_win_given_matchup": {
+            "description": "Keyed by candidate id: each finalist's probability of winning this matchup.",
+            "type": "object",
+            "additionalProperties": { "$ref": "#/$defs/probability" }
+          },
+          "polled": {
+            "type": "boolean",
+            "description": "Whether head-to-head polls informed this matchup, beyond the transfer model."
+          }
+        }
+      }
+    },
+    "aggregation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "random_walk_sd",
+        "design_effect",
+        "scenario_noise_share",
+        "log_likelihood",
+        "polls_used",
+        "scenarios_used",
+        "round2_pairs_polled",
+        "last_field_end",
+        "poll_ids",
+        "house_effects"
+      ],
+      "properties": {
+        "random_walk_sd": { "type": "number" },
+        "design_effect": { "type": "number" },
+        "scenario_noise_share": { "type": "number" },
+        "log_likelihood": {
+          "type": "number",
+          "description": "Marginal log-likelihood of the round 1 polls at the chosen noise settings."
+        },
+        "polls_used": { "type": "integer", "minimum": 0 },
+        "scenarios_used": { "type": "integer", "minimum": 0 },
+        "round2_pairs_polled": { "type": "integer", "minimum": 0 },
+        "last_field_end": { "oneOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
+        "poll_ids": {
+          "description": "Every poll this run used; each is a file in data/raw/polls/.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "house_effects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["firm", "bloc", "mean", "sd"],
+            "properties": {
+              "firm": { "type": "string" },
+              "bloc": { "type": "string" },
+              "mean": { "type": "number" },
+              "sd": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "changes": {
+      "description": "What moved since the previous forecast file.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["previous", "new_polls", "p_win_delta"],
+      "properties": {
+        "previous": { "type": ["string", "null"] },
+        "new_polls": { "type": "array", "items": { "type": "string" } },
+        "p_win_delta": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["candidate_id", "delta"],
+            "properties": { "candidate_id": { "type": "string" }, "delta": { "type": "number" } }
+          }
+        }
+      }
+    },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "probability": { "type": "number", "minimum": 0, "maximum": 1 },
+    "interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mean", "lo80", "hi80"],
+      "properties": {
+        "mean": { "$ref": "#/$defs/probability" },
+        "lo80": { "$ref": "#/$defs/probability" },
+        "hi80": { "$ref": "#/$defs/probability" }
+      }
+    }
+  }
+}
