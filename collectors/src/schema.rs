@@ -16,10 +16,12 @@ pub enum SchemaKind {
     News,
     Attention,
     Event,
+    PollCheck,
+    FieldChange,
 }
 
 impl SchemaKind {
-    pub const ALL: [SchemaKind; 10] = [
+    pub const ALL: [SchemaKind; 12] = [
         SchemaKind::Candidates,
         SchemaKind::Poll,
         SchemaKind::GrokDrop,
@@ -30,6 +32,8 @@ impl SchemaKind {
         SchemaKind::News,
         SchemaKind::Attention,
         SchemaKind::Event,
+        SchemaKind::PollCheck,
+        SchemaKind::FieldChange,
     ];
 
     pub fn file_name(self) -> &'static str {
@@ -44,6 +48,8 @@ impl SchemaKind {
             SchemaKind::News => "news.schema.json",
             SchemaKind::Attention => "attention.schema.json",
             SchemaKind::Event => "event.schema.json",
+            SchemaKind::PollCheck => "poll_check.schema.json",
+            SchemaKind::FieldChange => "field_change.schema.json",
         }
     }
 }

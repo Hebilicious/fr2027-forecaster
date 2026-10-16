@@ -9,14 +9,17 @@
 pub mod attention;
 pub mod config;
 pub mod events;
+pub mod field_change;
 pub mod grok;
 pub mod markets;
 pub mod names;
 pub mod news;
+pub mod poll_check;
 pub mod polls;
 pub mod repo;
 pub mod schema;
 pub mod sources;
+pub mod yaml_text;
 
 use std::path::{Path, PathBuf};
 

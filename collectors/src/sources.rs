@@ -60,12 +60,17 @@ impl SourcesConfig {
     pub fn load(repo: &Repo, schemas: &Schemas, candidates: &CandidatesConfig) -> Result<Self> {
         let path = repo.config_dir().join(Self::FILE);
         let text = String::from_utf8(read(&path)?).map_err(|_| Error::invalid(&path, "not UTF-8"))?;
-        let value = yaml_to_json(&text).map_err(|e| Error::invalid(&path, e))?;
+        Self::from_text(&text, schemas, candidates).map_err(|e| Error::invalid(&path, e))
+    }
+
+    /// Parses and checks the file's text against the candidate list.
+    pub fn from_text(text: &str, schemas: &Schemas, candidates: &CandidatesConfig) -> Result<Self, String> {
+        let value = yaml_to_json(text)?;
         let violations = schemas.violations(SchemaKind::Sources, &value);
         if !violations.is_empty() {
-            return Err(Error::invalid(&path, violations.join("; ")));
+            return Err(violations.join("; "));
         }
-        let config: Self = serde_json::from_value(value).map_err(|e| Error::invalid(&path, e.to_string()))?;
+        let config: Self = serde_json::from_value(value).map_err(|e| e.to_string())?;
         let mut errors = Vec::new();
         for candidate in &candidates.candidates {
             if !config.candidates.contains_key(&candidate.id) {
@@ -99,7 +104,7 @@ impl SourcesConfig {
         if errors.is_empty() {
             Ok(config)
         } else {
-            Err(Error::invalid(&path, errors.join("; ")))
+            Err(errors.join("; "))
         }
     }
 

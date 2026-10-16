@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "field_change.schema.json",
+  "title": "Field change",
+  "description": "The payload of an inbox item of kind field_change: a sourced change to config/candidates.yaml, made of a few closed operations. The pipeline applies it to the file's affected blocks only (comments and every other block stay as they are), sets as_of, adds an entry to research/LOG.md, checks the result like any config change, and commits it, or rejects the whole change with the reasons.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "change_id", "event_ids", "sources", "summary", "log", "agent", "operations"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "change_id": {
+      "description": "<date>-<short slug>, e.g. 2026-10-17-faure-withdraws. Recorded in the research log; a change id is applied once.",
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}-[a-z0-9][a-z0-9-]{2,80}$"
+    },
+    "event_ids": {
+      "description": "Accepted campaign events (data/raw/events/<event_id>.json) the change relies on; may be empty.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}-[a-z0-9][a-z0-9-]{2,80}$" }
+    },
+    "sources": {
+      "description": "Where the fact is confirmed: a primary source or a national outlet.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "title"],
+        "properties": {
+          "url": { "type": "string", "pattern": "^https?://[^\\s<>]+$" },
+          "title": { "$ref": "#/$defs/line", "minLength": 1, "maxLength": 300 }
+        }
+      }
+    },
+    "summary": { "$ref": "#/$defs/line", "minLength": 10, "maxLength": 400 },
+    "log": {
+      "description": "One short paragraph for research/LOG.md: what changed and why, in neutral English.",
+      "$ref": "#/$defs/line",
+      "minLength": 20,
+      "maxLength": 3000
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "skill_version", "run_id"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "skill_version": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "run_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*-\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}Z$" }
+      }
+    },
+    "operations": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "required": ["op"],
+        "properties": { "op": { "enum": ["set_status", "set_slot", "add_candidate"] } },
+        "allOf": [
+          { "if": { "properties": { "op": { "const": "set_status" } } }, "then": { "$ref": "#/$defs/set_status" } },
+          { "if": { "properties": { "op": { "const": "set_slot" } } }, "then": { "$ref": "#/$defs/set_slot" } },
+          {
+            "if": { "properties": { "op": { "const": "add_candidate" } } },
+            "then": { "$ref": "#/$defs/add_candidate" }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "line": {
+      "description": "Text on one line: no newlines or other control characters.",
+      "type": "string",
+      "pattern": "^[^\\u0000-\\u001f\\u007f]*$"
+    },
+    "status": { "enum": ["declared", "likely", "possible", "withdrawn", "ineligible"] },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url"],
+      "properties": {
+        "url": { "type": "string", "pattern": "^https?://[^\\s<>]+$" },
+        "date": { "$ref": "#/$defs/date" },
+        "note": { "$ref": "#/$defs/line", "maxLength": 300 }
+      }
+    },
+    "set_status": {
+      "description": "A candidate's status; optionally new notes (replacing the old ones), the declaration date, and a source added to the candidate's sources.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["op", "candidate_id", "status"],
+      "properties": {
+        "op": { "const": "set_status" },
+        "candidate_id": { "$ref": "#/$defs/id" },
+        "status": { "$ref": "#/$defs/status" },
+        "notes": { "$ref": "#/$defs/line", "minLength": 1, "maxLength": 1000 },
+        "declared_on": { "$ref": "#/$defs/date" },
+        "source": { "$ref": "#/$defs/source" }
+      }
+    },
+    "set_slot": {
+      "description": "Replaces an existing slot's options and rationale. Every candidate of the slot must stay in it (a loser stays with p 0).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["op", "slot_id", "options", "rationale"],
+      "properties": {
+        "op": { "const": "set_slot" },
+        "slot_id": { "$ref": "#/$defs/id" },
+        "options": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["run", "p"],
+            "properties": {
+              "run": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/id" } },
+              "p": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          }
+        },
+        "rationale": { "$ref": "#/$defs/line", "minLength": 1, "maxLength": 1000 }
+      }
+    },
+    "add_candidate": {
+      "description": "A new candidate: the entry as in config/candidates.yaml, how news and X name them (config/sources.yaml, which every candidate needs), and their slot. An existing slot gets a new option and the new rationale; an unknown slot id makes a new slot.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["op", "candidate", "names", "wikipedia", "slot"],
+      "properties": {
+        "op": { "const": "add_candidate" },
+        "candidate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "name", "party", "bloc", "status", "sources"],
+          "properties": {
+            "id": { "$ref": "#/$defs/id" },
+            "name": { "$ref": "#/$defs/line", "minLength": 1, "maxLength": 120 },
+            "party": { "$ref": "#/$defs/line", "minLength": 1, "maxLength": 200 },
+            "bloc": { "$ref": "#/$defs/id" },
+            "status": { "$ref": "#/$defs/status" },
+            "declared_on": { "$ref": "#/$defs/date" },
+            "notes": { "$ref": "#/$defs/line", "minLength": 1, "maxLength": 1000 },
+            "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } }
+          }
+        },
+        "names": {
+          "description": "Names that identify the candidate in headlines and on X, full name first.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/line", "minLength": 2, "maxLength": 120 }
+        },
+        "wikipedia": {
+          "description": "Title of the French Wikipedia article, with underscores, or null.",
+          "type": ["string", "null"],
+          "pattern": "^[^\\s\\u0000-\\u001f]+$"
+        },
+        "slot": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["slot_id", "p", "rationale"],
+          "properties": {
+            "slot_id": { "$ref": "#/$defs/id" },
+            "p": { "type": "number", "minimum": 0, "maximum": 1 },
+            "label": { "$ref": "#/$defs/line", "minLength": 1, "maxLength": 200 },
+            "rationale": { "$ref": "#/$defs/line", "minLength": 1, "maxLength": 1000 }
+          }
+        }
+      }
+    }
+  }
+}

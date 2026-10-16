@@ -1,0 +1,129 @@
+# Where the live collectors read, and how each candidate is recognised in each source.
+# Edited through pull requests, like candidates.yaml; record the reason for a change in research/LOG.md.
+#
+# The scheduled GitHub Actions workflow (.github/workflows/live.yml) runs `fr2027 collect ...`
+# against this file every hour. Each collector writes one new file under data/raw/ per run and
+# never edits an old one.
+schema_version: "1.0"
+
+# Sent with every request, so site operators can see who is reading and how to reach the project.
+user_agent: "fr2027-forecaster/0.2 (+https://github.com/Hebilicious/fr2027-forecaster)"
+
+# Prediction markets, read through their public, unauthenticated APIs. Read only: no trading code.
+# question: win (wins the election), qualify (reaches round 2), on_ballot (is an official candidate).
+# They are shown beside the model's p_win, p_qualify_r1 and p_run; the model does not read them.
+markets:
+  - id: polymarket-win
+    venue: polymarket
+    question: win
+    event: next-french-presidential-election
+    url: "https://polymarket.com/event/next-french-presidential-election"
+  - id: polymarket-qualify
+    venue: polymarket
+    question: qualify
+    event: next-french-presidential-election-who-will-advance-to-the-2nd-round
+    url: "https://polymarket.com/event/next-french-presidential-election-who-will-advance-to-the-2nd-round"
+  - id: polymarket-on-ballot
+    venue: polymarket
+    question: on_ballot
+    event: 2027-french-presidential-election-who-will-be-on-the-ballot
+    url: "https://polymarket.com/event/2027-french-presidential-election-who-will-be-on-the-ballot"
+  - id: kalshi-win
+    venue: kalshi
+    question: win
+    event: KXFRENCHPRES-27
+    url: "https://kalshi.com/markets/kxfrenchpres"
+  - id: kalshi-qualify
+    venue: kalshi
+    question: qualify
+    # Kalshi's ticker says 26APR18 but the event is the 2027 first round (its markets close in 2028).
+    event: KXFRPRESADVANCE-26APR18
+    url: "https://kalshi.com/markets/kxfrpresadvance"
+  - id: kalshi-on-ballot
+    venue: kalshi
+    question: on_ballot
+    event: KXFRPRESBALLOT-27JUN30
+    url: "https://kalshi.com/markets/kxfrpresballot"
+
+# RSS feeds of national outlets, read as a feed reader would. Only the headline, link and
+# publication time of items that name a candidate are kept; article text is never stored.
+# Checked 2026-10-09: all return 200 with items. Les Échos (403 to non-browsers) and
+# Ouest-France (404) are left out rather than worked around.
+feeds:
+  - {
+      id: lemonde-presidentielle,
+      outlet: "Le Monde",
+      url: "https://www.lemonde.fr/election-presidentielle-2027/rss_full.xml",
+    }
+  - { id: lemonde-politique, outlet: "Le Monde", url: "https://www.lemonde.fr/politique/rss_full.xml" }
+  - { id: lefigaro-politique, outlet: "Le Figaro", url: "https://www.lefigaro.fr/rss/figaro_politique.xml" }
+  - { id: lefigaro-elections, outlet: "Le Figaro", url: "https://www.lefigaro.fr/rss/figaro_elections.xml" }
+  - {
+      id: liberation-politique,
+      outlet: "Libération",
+      url: "https://www.liberation.fr/arc/outboundfeeds/rss/category/politique/?outputType=xml",
+    }
+  - { id: franceinfo-politique, outlet: "franceinfo", url: "https://www.franceinfo.fr/politique.rss" }
+  - {
+      id: franceinfo-presidentielle,
+      outlet: "franceinfo",
+      url: "https://www.franceinfo.fr/elections/presidentielle.rss",
+    }
+  - { id: bfmtv-politique, outlet: "BFMTV", url: "https://www.bfmtv.com/rss/politique/" }
+  - { id: bfmtv-presidentielle, outlet: "BFMTV", url: "https://www.bfmtv.com/rss/politique/elections/presidentielle/" }
+  - { id: leparisien-politique, outlet: "Le Parisien", url: "https://feeds.leparisien.fr/leparisien/rss/politique" }
+  - { id: 20minutes-politique, outlet: "20 Minutes", url: "https://www.20minutes.fr/feeds/rss-politique.xml" }
+  - { id: publicsenat, outlet: "Public Sénat", url: "https://www.publicsenat.fr/feed" }
+  - { id: france24-france, outlet: "France 24", url: "https://www.france24.com/fr/france/rss" }
+
+# Daily page views of each candidate's French Wikipedia article (Wikimedia pageviews API,
+# agent=user, so known crawlers are excluded).
+wikipedia:
+  project: fr.wikipedia.org
+
+# How each candidate is recognised. Every id in config/candidates.yaml needs an entry.
+# - wikipedia: the French Wikipedia article title (underscores for spaces).
+# - names: how headlines name them. Matched case-sensitively as whole words, ignoring accents.
+#   Use the full name when the surname alone is a common word or name ("Le Maire", "Royal",
+#   "Philippe", "Bertrand", "Faure").
+# - market_names: extra contract labels used by the markets, when they differ from the name.
+candidates:
+  arthaud: { wikipedia: Nathalie_Arthaud, names: ["Nathalie Arthaud", "Arthaud"] }
+  kazib: { wikipedia: Anasse_Kazib, names: ["Anasse Kazib", "Kazib"] }
+  labib: { wikipedia: Selma_Labib, names: ["Selma Labib"] }
+  melenchon: { wikipedia: Jean-Luc_Mélenchon, names: ["Jean-Luc Mélenchon", "Mélenchon"] }
+  glucksmann: { wikipedia: Raphaël_Glucksmann, names: ["Raphaël Glucksmann", "Glucksmann"] }
+  faure: { wikipedia: Olivier_Faure, names: ["Olivier Faure"] }
+  royal: { wikipedia: Ségolène_Royal, names: ["Ségolène Royal"] }
+  guedj: { wikipedia: Jérôme_Guedj, names: ["Jérôme Guedj", "Guedj"] }
+  maurel: { wikipedia: Emmanuel_Maurel, names: ["Emmanuel Maurel"] }
+  hollande: { wikipedia: François_Hollande, names: ["François Hollande", "Hollande"] }
+  roussel: { wikipedia: Fabien_Roussel, names: ["Fabien Roussel", "Roussel"] }
+  tondelier: { wikipedia: Marine_Tondelier, names: ["Marine Tondelier", "Tondelier"] }
+  ruffin: { wikipedia: François_Ruffin, names: ["François Ruffin", "Ruffin"] }
+  bouamrane: { wikipedia: Karim_Bouamrane, names: ["Karim Bouamrane", "Bouamrane"] }
+  cazeneuve: { wikipedia: Bernard_Cazeneuve, names: ["Bernard Cazeneuve", "Cazeneuve"] }
+  batho: { wikipedia: Delphine_Batho, names: ["Delphine Batho"] }
+  philippe: { wikipedia: Édouard_Philippe, names: ["Édouard Philippe"] }
+  attal: { wikipedia: Gabriel_Attal, names: ["Gabriel Attal", "Attal"] }
+  le_maire: { wikipedia: Bruno_Le_Maire, names: ["Bruno Le Maire"] }
+  becht: { wikipedia: Olivier_Becht, names: ["Olivier Becht"] }
+  retailleau: { wikipedia: Bruno_Retailleau, names: ["Bruno Retailleau", "Retailleau"] }
+  lisnard: { wikipedia: David_Lisnard, names: ["David Lisnard", "Lisnard"] }
+  bertrand: { wikipedia: Xavier_Bertrand, names: ["Xavier Bertrand"] }
+  villepin: { wikipedia: Dominique_de_Villepin, names: ["Dominique de Villepin", "Villepin"] }
+  le_pen: { wikipedia: Marine_Le_Pen, names: ["Marine Le Pen", "Le Pen"] }
+  bardella: { wikipedia: Jordan_Bardella, names: ["Jordan Bardella", "Bardella"] }
+  zemmour: { wikipedia: Éric_Zemmour, names: ["Éric Zemmour", "Zemmour"] }
+  dupont_aignan: { wikipedia: Nicolas_Dupont-Aignan, names: ["Nicolas Dupont-Aignan", "Dupont-Aignan"] }
+  philippot: { wikipedia: Florian_Philippot, names: ["Florian Philippot", "Philippot"] }
+  asselineau: { wikipedia: François_Asselineau, names: ["François Asselineau", "Asselineau"] }
+  bonnal: { wikipedia: null, names: ["Sébastien Bonnal"] }
+
+# French law bans publishing, broadcasting or commenting on any poll on the eve and the day of each
+# round (loi n° 77-808 du 19 juillet 1977, art. 11). The page is public, so `fr2027 export`
+# refuses to build it inside these windows (Paris summer time, UTC+2) and the hourly deploy keeps the last
+# page from before. Collection and the model keep running.
+publication_blackouts:
+  - { from: "2027-04-17T00:00:00+02:00", until: "2027-04-18T20:00:00+02:00" }
+  - { from: "2027-05-01T00:00:00+02:00", until: "2027-05-02T20:00:00+02:00" }

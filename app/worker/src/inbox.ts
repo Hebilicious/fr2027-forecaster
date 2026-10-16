@@ -2,7 +2,7 @@
 // Everything here is pure: the handler takes a Store, the tokens and a clock, so the Durable
 // Object (src/index.ts) and the tests run the same code. The HTTP contract is in README.md.
 
-export const KINDS = ["x_drop", "poll", "event"] as const
+export const KINDS = ["x_drop", "poll", "event", "poll_check", "field_change"] as const
 export type Kind = (typeof KINDS)[number]
 
 export const RESOLUTIONS = ["accepted", "rejected", "proposed"] as const
@@ -164,7 +164,11 @@ const resolveItem: Endpoint = {
     store.purgeBefore(retentionStart(time))
     const item = store.get(id)
     if (item === undefined) throw new HttpError(404, `no item ${id}`)
-    if (item.status !== "pending") throw new HttpError(409, `item ${id} is already ${item.status}`)
+    // A proposed poll is settled later, when a blind check matches it or not.
+    const settlesProposal = item.status === "proposed" && status !== "proposed"
+    if (item.status !== "pending" && !settlesProposal) {
+      throw new HttpError(409, `item ${id} is already ${item.status}`)
+    }
     const resolved: StoredItem = {
       ...item,
       status,

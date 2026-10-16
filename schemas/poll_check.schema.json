@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "poll_check.schema.json",
+  "title": "Poll check",
+  "description": "The payload of an inbox item of kind poll_check: a blind second entry of a poll that has an open proposal, made from the notice or the pollster's publication without reading the proposal's numbers. It is a full poll (poll.schema.json, checked too) that must also say who entered it, so the pipeline can refuse a check from the run that made the proposal. Never written to the repository: when it matches, the proposal is committed unchanged.",
+  "type": "object",
+  "required": ["poll_id", "agent"],
+  "properties": {
+    "poll_id": { "type": "string" },
+    "agent": {
+      "type": "object",
+      "required": ["name", "skill_version", "run_id"]
+    }
+  }
+}

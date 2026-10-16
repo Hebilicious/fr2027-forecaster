@@ -46,6 +46,10 @@
       "enum": ["index", "primary"]
     },
     "notes": { "type": "string" },
+    "agent": {
+      "description": "Who entered the poll, when an agent sent it through the inbox: the agent, the version of its instructions, and the routine run (a blind check must come from another run).",
+      "$ref": "#/$defs/agent"
+    },
     "scenarios": {
       "type": "array",
       "minItems": 1,
@@ -69,6 +73,20 @@
     }
   },
   "$defs": {
-    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "skill_version", "run_id"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "skill_version": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "run_id": {
+          "description": "One id per routine run, e.g. polls-2026-10-16T07:30Z: the routine's name and the UTC minute the run started.",
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*-\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}Z$"
+        }
+      }
+    }
   }
 }

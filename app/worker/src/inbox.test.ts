@@ -293,8 +293,9 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
 
     it("accepts every kind", async () => {
       const { submitted, pipeline } = inbox(makeStore)
-      for (const kind of ["x_drop", "poll", "event"]) await submitted({}, kind)
-      expect((await pipeline.pending()).map(({ kind }) => kind)).toEqual(["x_drop", "poll", "event"])
+      const kinds = ["x_drop", "poll", "event", "poll_check", "field_change"]
+      for (const kind of kinds) await submitted({}, kind)
+      expect((await pipeline.pending()).map(({ kind }) => kind)).toEqual(kinds)
     })
 
     it("gives unique ids that sort in the order items arrive", async () => {
@@ -316,7 +317,7 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
       ["an array", "[]", "the body must be a JSON object"],
       ["null", "null", "the body must be a JSON object"],
       ["a string", '"poll"', "the body must be a JSON object"],
-      ["no kind", '{"payload": {}}', '"kind" must be one of "x_drop", "poll", "event"'],
+      ["no kind", '{"payload": {}}', '"kind" must be one of "x_drop", "poll", "event", "poll_check", "field_change"'],
       ["an unknown kind", '{"kind": "tweet", "payload": {}}', '"kind" must be one of'],
       ["a kind in the wrong case", '{"kind": "POLL", "payload": {}}', '"kind" must be one of'],
       ["no payload", '{"kind": "poll"}', '"payload" must be a JSON object'],
@@ -498,6 +499,31 @@ describe.each(stores)("the inbox on the %s store", (_name, makeStore) => {
       expect(again.status).toBe(409)
       expect(again.body).toEqual({ error: `item ${id} is already rejected` })
       expect(store.get(id)).toMatchObject({ status: "rejected", note: "first" })
+    })
+
+    it.each(["accepted", "rejected"])("settles a proposed item once, as %s", async (status) => {
+      const { pipeline, submitted, store } = inbox(makeStore)
+      const id = await submitted({ poll_id: "x" })
+      await pipeline.resolve(id, {
+        status: "proposed",
+        note: "in a pull request",
+        ref: "https://github.com/o/r/pull/1",
+      })
+      const settled = await pipeline.resolve(id, { status, note: "a blind check settled it", ref: null })
+      expect(settled.status).toBe(200)
+      expect(store.get(id)).toMatchObject({ status, note: "a blind check settled it", payload: null })
+      const again = await pipeline.resolve(id, { status: "accepted", note: "third" })
+      expect(again.status).toBe(409)
+      expect(again.body).toEqual({ error: `item ${id} is already ${status}` })
+    })
+
+    it("does not propose a proposed item again", async () => {
+      const { pipeline, submitted } = inbox(makeStore)
+      const id = await submitted()
+      await pipeline.resolve(id, { status: "proposed", note: "first" })
+      const again = await pipeline.resolve(id, { status: "proposed", note: "second" })
+      expect(again.status).toBe(409)
+      expect(again.body).toEqual({ error: `item ${id} is already proposed` })
     })
 
     it("answers 404 for an unknown id", async () => {

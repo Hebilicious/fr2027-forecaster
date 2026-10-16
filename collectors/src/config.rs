@@ -59,13 +59,18 @@ impl CandidatesConfig {
     /// Reads and checks a field file at any path (the backtest keeps one per past election).
     pub fn load_from(path: &Path, schemas: &Schemas) -> Result<Self> {
         let text = String::from_utf8(read(path)?).map_err(|_| Error::invalid(path, "not UTF-8"))?;
-        let value = yaml_to_json(&text).map_err(|e| Error::invalid(path, e))?;
+        Self::from_text(&text, schemas).map_err(|e| Error::invalid(path, e))
+    }
+
+    /// Parses and checks the file's text: schema, then the field (see [`Self::field`]).
+    pub fn from_text(text: &str, schemas: &Schemas) -> Result<Self, String> {
+        let value = yaml_to_json(text)?;
         let violations = schemas.violations(SchemaKind::Candidates, &value);
         if !violations.is_empty() {
-            return Err(Error::invalid(path, violations.join("; ")));
+            return Err(violations.join("; "));
         }
-        let config: Self = serde_json::from_value(value).map_err(|e| Error::invalid(path, e.to_string()))?;
-        config.field().map_err(|e| Error::invalid(path, e.to_string()))?;
+        let config: Self = serde_json::from_value(value).map_err(|e| e.to_string())?;
+        config.field().map_err(|e| e.to_string())?;
         Ok(config)
     }
 
