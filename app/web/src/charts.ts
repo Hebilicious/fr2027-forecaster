@@ -93,6 +93,66 @@ export function scale(value: number, { domain, range }: Scale): number {
   return r0 + ((value - d0) / (d1 - d0)) * (r1 - r0)
 }
 
+/** The inverse of `scale`: the domain value drawn at `position`. */
+export function invert(position: number, { domain, range }: Scale): number {
+  const [d0, d1] = domain
+  const [r0, r1] = range
+  if (r1 === r0) return (d0 + d1) / 2
+  return d0 + ((position - r0) / (r1 - r0)) * (d1 - d0)
+}
+
+export type Domain = readonly [number, number]
+
+/**
+ * `domain` zoomed by `factor` (below 1 zooms in) so that `anchor` stays where it is, no narrower
+ * than `minSpan` and kept inside `limits`.
+ */
+export function zoomDomain(domain: Domain, anchor: number, factor: number, limits: Domain, minSpan: number): Domain {
+  const span = domain[1] - domain[0]
+  const next = Math.min(limits[1] - limits[0], Math.max(minSpan, span * factor))
+  const at = span === 0 ? 0.5 : (anchor - domain[0]) / span
+  return clampDomain(anchor - at * next, next, limits)
+}
+
+/** `domain` moved by `delta`, kept inside `limits`. */
+export function panDomain(domain: Domain, delta: number, limits: Domain): Domain {
+  return clampDomain(domain[0] + delta, domain[1] - domain[0], limits)
+}
+
+function clampDomain(start: number, span: number, limits: Domain): Domain {
+  const from = Math.min(Math.max(start, limits[0]), limits[1] - span)
+  return [from, from + span]
+}
+
+/**
+ * A share axis that fits `values` with a little room around them, rounded out to whole points, at
+ * least `minSpan` wide and inside `limits`. Falls back to `limits` when there is nothing to fit.
+ */
+export function fitShares(values: readonly number[], limits: Domain, minSpan: number): Domain {
+  if (values.length === 0) return limits
+  const lo = Math.min(...values)
+  const hi = Math.max(...values)
+  const pad = Math.max((hi - lo) * 0.1, 0.005)
+  let from = Math.floor((lo - pad) * 100) / 100
+  let to = Math.ceil((hi + pad) * 100) / 100
+  if (to - from < minSpan) {
+    const middle = (from + to) / 2
+    from = middle - minSpan / 2
+    to = middle + minSpan / 2
+  }
+  return clampDomain(from, Math.min(to - from, limits[1] - limits[0]), limits)
+}
+
+/** Y-axis ticks for a zoomed share axis: whole points (1, 2, 5 or 10 apart) inside `domain`. */
+export function shareTicksWithin(domain: Domain): number[] {
+  const step = [0.01, 0.02, 0.05].find((s) => (domain[1] - domain[0]) / s <= 6) ?? 0.1
+  const ticks: number[] = []
+  for (let t = Math.ceil(domain[0] / step - 1e-9) * step; t <= domain[1] + 1e-9; t += step) {
+    ticks.push(Math.round(t * 100) / 100)
+  }
+  return ticks
+}
+
 /** Clean y-axis ticks for shares: steps of 5 or 10 points from 0 to just above `max`. */
 export function shareTicks(max: number): number[] {
   const step = max > 0.3 ? 0.1 : 0.05
