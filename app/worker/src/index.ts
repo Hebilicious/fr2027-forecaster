@@ -1,5 +1,6 @@
 import { DurableObject } from "cloudflare:workers"
 import { handleInbox } from "./inbox"
+import { handleApi } from "./site"
 import { SqlStore } from "./sql-store"
 
 /** Set with `wrangler secret put`; either may be missing, and its inbox routes then answer 503. */
@@ -26,12 +27,15 @@ export class Inbox extends DurableObject<Env & Secrets> {
   }
 }
 
-// Only /inbox/* reaches this script (assets.run_worker_first); the static site never does.
+// Only /inbox/* and /api/* reach this script (assets.run_worker_first); the rest of the static
+// site never does.
 export default {
   fetch(request, env) {
-    if (new URL(request.url).pathname.startsWith("/inbox/")) {
+    const path = new URL(request.url).pathname
+    if (path.startsWith("/inbox/")) {
       return env.INBOX.get(env.INBOX.idFromName("inbox")).fetch(request)
     }
+    if (path.startsWith("/api/")) return handleApi(request, env.ASSETS)
     return env.ASSETS.fetch(request)
   },
 } satisfies ExportedHandler<Env>

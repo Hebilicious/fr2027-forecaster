@@ -24,7 +24,7 @@ describe("api", () => {
     })
   })
 
-  it("reports a missing document from the public site (index.html fallback, 200)", async () => {
+  it("reports a missing document behind a single-page fallback (index.html, 200)", async () => {
     respond("<!doctype html><html></html>", 200, "text/html")
     expect((await api.forecast())._tag).toBe("Missing")
   })

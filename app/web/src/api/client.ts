@@ -1,8 +1,9 @@
 import { Result, Schema } from "effect"
 import { Forecast, Health, Polls, Series, Signals } from "./schemas"
 
-// `Missing`: the document does not exist yet. `fr2027 serve` answers 404; the public site has no
-// such file and its single-page fallback answers index.html with 200, so non-JSON counts too.
+// `Missing`: the document does not exist yet. `fr2027 serve` and the public site's Worker answer
+// 404 with an error; a single-page fallback that answers index.html with 200 (a static server
+// without that Worker) counts too.
 export type Loaded<A> =
   | { readonly _tag: "Loaded"; readonly value: A }
   | { readonly _tag: "Missing"; readonly message: string }

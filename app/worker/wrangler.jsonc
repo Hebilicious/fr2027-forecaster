@@ -8,12 +8,13 @@
   "observability": { "enabled": true },
   "send_metrics": false,
   // The public site: what `moon run cli:export` writes to .site/ at the repository root.
-  // Only /inbox/* runs the Worker script; every other request is served from the assets.
+  // Only /inbox/* and /api/* run the Worker script: /api/* so that a missing document answers 404
+  // rather than the single-page fallback. Every other request is served from the assets.
   "assets": {
     "directory": "../../.site",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    "run_worker_first": ["/inbox/*"],
+    "run_worker_first": ["/inbox/*", "/api/*"],
   },
   // The inbox lives in one SQLite-backed Durable Object instance (see src/index.ts).
   // INBOX_BOT_TOKEN and INBOX_PIPELINE_TOKEN are secrets, set with `wrangler secret put`.

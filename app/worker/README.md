@@ -2,7 +2,7 @@
 
 One Cloudflare Worker, `fr2027`, serves two things:
 
-- **The public site.** Static assets from `.site/` at the repository root, which `moon run cli:export` writes (the built UI plus `api/*.json`). Unknown paths fall back to `index.html` for the single-page app. No auth, and the Worker script never runs for these requests.
+- **The public site.** Static assets from `.site/` at the repository root, which `moon run cli:export` writes (the built UI plus `api/*.json`). Unknown page paths fall back to `index.html` for the single-page app. No auth. The Worker script runs only for `/api/*`, where it serves the asset and turns that fallback into a 404 `{"error": "<path>: no such document"}`.
 - **The inbox** at `/inbox/*`, for the Grok bot, which cannot hold a GitHub credential. The bot posts items; a scheduled GitHub Actions job pulls the pending ones, validates them with `fr2027`, commits the accepted ones and resolves each item. Items live in one SQLite-backed Durable Object (`Inbox`).
 
 The site is deployed by the hourly GitHub Actions workflow, which runs `moon run worker:deploy` (it exports the site first) with `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` set.
@@ -11,6 +11,7 @@ The site is deployed by the hourly GitHub Actions workflow, which runs `moon run
 | ------------------ | ------------------------------------------------------------------------------------------------ |
 | `src/inbox.ts`     | The whole inbox contract, pure: routing, auth, validation, limits, state changes, retention      |
 | `src/sql-store.ts` | The inbox's storage in SQLite                                                                    |
+| `src/site.ts`      | `/api/*`: the documents from the assets, and a JSON 404 for an unknown one                       |
 | `src/index.ts`     | The entry point (`/inbox/*` goes to the Durable Object, anything else to the assets) and `Inbox` |
 | `wrangler.jsonc`   | Name, assets, Durable Object binding and migration; no account id (it comes from CI)             |
 
