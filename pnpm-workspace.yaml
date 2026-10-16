@@ -22,6 +22,7 @@ catalog:
   vue-intlayer: "9.7.0"
   vize: "0.435.0"
   wrangler: "4.137.0"
+  yaml: "2.9.1"
 
 # Dependency install scripts stay off. esbuild and workerd (wrangler's) only use theirs to swap
 # a JavaScript launcher for the native binary; the launcher works without it. lefthook's would
