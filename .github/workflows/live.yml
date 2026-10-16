@@ -6,7 +6,8 @@ name: Live
 # From the inbox: X drops and events are committed; polls are proposed in a pull request and
 # committed when a blind poll_check from another Grok Bot run matches them; field changes are
 # applied to config/candidates.yaml and logged in research/LOG.md (docs/grok-bot.md).
-# It also runs when a merge to main changes polls, config or code, so the page follows main.
+# It also runs on every merge to main, so the page follows main. Its own data commits are pushed
+# with GITHUB_TOKEN, which starts no workflow, so they don't start it again.
 on:
   # The hourly clock is the Worker's cron trigger (app/worker, "17 * * * *"), which sends this
   # repository_dispatch with a token of the heb-release App. GitHub never fired this workflow's
@@ -18,18 +19,6 @@ on:
     - cron: "47 */6 * * *"
   push:
     branches: [main]
-    paths:
-      - "config/**"
-      - "data/raw/polls/**"
-      - "schemas/**"
-      - "model/**"
-      - "collectors/**"
-      - "fetch/**"
-      - "cli/**"
-      - "app/**"
-      - "Cargo.lock"
-      - "pnpm-lock.yaml"
-      - ".github/workflows/live.yml"
   workflow_dispatch:
     inputs:
       attention_start:
@@ -99,6 +88,17 @@ jobs:
           key: cargo-live-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ hashFiles('**/*.rs') }}
           restore-keys: |
             cargo-live-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
+      # Moon's cache holds the outputs of cli:build and web:build by the hash of their inputs, so a
+      # run whose Rust and web sources match an earlier run's restores the binary and dist/ instead
+      # of building them. Without it cargo recompiles the workspace crates every run (~30 s): a
+      # fresh checkout's file times don't match the cached target/. The key changes only with the
+      # sources; restore-keys bring the newest cache when they changed.
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: .moon/cache
+          key: moon-live-${{ hashFiles('**/*.rs', '**/Cargo.toml', 'Cargo.lock', 'rust-toolchain.toml', '.prototools', 'app/web/**', 'pnpm-lock.yaml', '!target/**', '!**/node_modules/**') }}
+          restore-keys: |
+            moon-live-
 
       - name: Build
         run: moon run cli:build web:build
