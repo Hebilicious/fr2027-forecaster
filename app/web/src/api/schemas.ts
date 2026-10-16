@@ -112,11 +112,14 @@ const Poll = Schema.Struct({
 export const Polls = Schema.Struct({ polls: Schema.Array(Poll) })
 export type Poll = typeof Poll.Type
 
+/** How often a source is expected to update; the UI translates it. */
+const Cadence = Schema.Literals(["on_publication", "hourly", "6h", "daily"])
+
 const Collector = Schema.Struct({
   name: Schema.String,
   /** A timestamp, or a calendar date for sources dated by publication (polls). */
   updated: Schema.NullOr(Schema.String),
-  cadence: Schema.String,
+  cadence: Cadence,
   stale: Schema.Boolean,
 })
 
@@ -139,6 +142,7 @@ export const Health = Schema.Struct({
 })
 export type Health = typeof Health.Type
 export type Collector = typeof Collector.Type
+export type Cadence = typeof Cadence.Type
 
 // Signals: what is recorded beside the polls but not read by the model.
 const Venue = Schema.Literals(["polymarket", "kalshi"])

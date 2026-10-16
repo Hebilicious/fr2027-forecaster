@@ -288,6 +288,13 @@ fn export_writes_the_site_and_respects_the_blackout() {
     let health: serde_json::Value = serde_json::from_slice(&fs::read(site.join("api/health.json")).unwrap()).unwrap();
     assert_eq!(health["checked_at"], "2026-10-01T13:00:00Z");
     assert_eq!(health["latest_forecast"]["file"], "2026-10-01T12.json");
+    let cadences: Vec<&str> = health["collectors"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .map(|c| c["cadence"].as_str().unwrap())
+        .collect();
+    assert_eq!(cadences, ["on_publication", "hourly", "hourly", "daily", "6h", "daily"]);
 
     // Inside a publication blackout nothing is built, and the exit code says so.
     fs::remove_dir_all(&site).unwrap();

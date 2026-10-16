@@ -2,7 +2,7 @@
 import { computed } from "vue"
 import type { Forecast, Health, Poll } from "../api/schemas"
 import { dateOrTime, dateTime, longDate, safeUrl, shortDate } from "../format"
-import { useI18n, type MessageKey } from "../i18n"
+import { cadenceMessages, useI18n, type MessageKey } from "../i18n"
 
 const props = defineProps<{ forecast: Forecast; polls: readonly Poll[]; health: Health | null }>()
 const { t, locale } = useI18n()
@@ -39,7 +39,7 @@ const summaries = computed<PollSummary[]>(() =>
     .toSorted((a, b) => b.published.localeCompare(a.published) || a.id.localeCompare(b.id)),
 )
 const used = computed(() => new Set(props.forecast.aggregation.poll_ids))
-// Collector names and cadences come from `fr2027`; known ones are translated, others shown as sent.
+// Collector names come from `fr2027`; known ones are translated, others shown as sent.
 const collectorNames: Record<string, MessageKey> = {
   polls: "collectorPolls",
   markets: "collectorMarkets",
@@ -47,13 +47,6 @@ const collectorNames: Record<string, MessageKey> = {
   attention: "collectorAttention",
   x: "collectorX",
   events: "collectorEvents",
-}
-const cadences: Record<string, MessageKey> = {
-  "when a poll is published": "cadencePoll",
-  hourly: "cadenceHourly",
-  daily: "cadenceDaily",
-  "Grok Bot, every 6 hours": "cadenceGrok6h",
-  "Grok Bot, daily": "cadenceGrokDaily",
 }
 const translated = (keys: Record<string, MessageKey>, value: string) => {
   const key = keys[value]
@@ -104,7 +97,7 @@ const quarantined = computed(() =>
             <tbody>
               <tr v-for="c in health?.collectors ?? []" :key="c.name">
                 <th scope="row">{{ translated(collectorNames, c.name) }}</th>
-                <td class="secondary">{{ translated(cadences, c.cadence) }}</td>
+                <td class="secondary">{{ t(cadenceMessages[c.cadence]) }}</td>
                 <td>
                   <span class="when" :class="{ muted: !c.updated }">{{ c.updated ? dateOrTime(c.updated, locale) : t("never") }}</span>
                   <span v-if="c.stale" class="badge stale"><span aria-hidden="true" class="dot" />{{ t("staleBadge") }}</span>

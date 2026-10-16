@@ -4,6 +4,15 @@ import { api } from "./client"
 const respond = (body: string, status: number, type: string) =>
   vi.stubGlobal("fetch", async () => new Response(body, { status, headers: { "content-type": type } }))
 
+const health = (cadence: string) => ({
+  checked_at: "2026-10-16T12:00:00Z",
+  latest_forecast: null,
+  forecast_count: 0,
+  collectors: [{ name: "x", updated: null, cadence, stale: false }],
+  quarantine: {},
+  warnings: [],
+})
+
 afterEach(() => vi.unstubAllGlobals())
 
 describe("api", () => {
@@ -26,6 +35,13 @@ describe("api", () => {
     respond(JSON.stringify({ checked_at: 1 }), 200, "application/json")
     const result = await api.health()
     expect(result._tag).toBe("Failed")
+  })
+
+  it("decodes cadence codes and rejects any other cadence", async () => {
+    respond(JSON.stringify(health("6h")), 200, "application/json")
+    expect(await api.health()).toEqual({ _tag: "Loaded", value: health("6h") })
+    respond(JSON.stringify(health("Grok Bot, every 6 hours")), 200, "application/json")
+    expect((await api.health())._tag).toBe("Failed")
   })
 
   it("decodes an empty signals document", async () => {

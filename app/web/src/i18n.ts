@@ -1,4 +1,5 @@
 import { computed, ref } from "vue"
+import type { Cadence } from "./api/schemas"
 
 export type Locale = "fr" | "en"
 
@@ -66,11 +67,10 @@ const en = {
   collectorAttention: "Wikipedia page views",
   collectorX: "X (Grok Bot)",
   collectorEvents: "Events (Grok Bot)",
-  cadencePoll: "when a poll is published",
+  cadenceOnPublication: "when a poll is published",
   cadenceHourly: "hourly",
+  cadenceEvery6Hours: "every 6 hours",
   cadenceDaily: "daily",
-  cadenceGrok6h: "Grok Bot, every 6 hours",
-  cadenceGrokDaily: "Grok Bot, daily",
   quarantine: "Quarantined files",
   none: "None",
   pollsTitle: "Polls in the model",
@@ -210,11 +210,10 @@ const fr: Messages = {
   collectorAttention: "Consultations Wikipédia",
   collectorX: "X (Grok Bot)",
   collectorEvents: "Événements (Grok Bot)",
-  cadencePoll: "à chaque sondage publié",
+  cadenceOnPublication: "à chaque sondage publié",
   cadenceHourly: "toutes les heures",
+  cadenceEvery6Hours: "toutes les 6 heures",
   cadenceDaily: "chaque jour",
-  cadenceGrok6h: "Grok Bot, toutes les 6 heures",
-  cadenceGrokDaily: "Grok Bot, chaque jour",
   quarantine: "Fichiers en quarantaine",
   none: "Aucun",
   pollsTitle: "Sondages utilisés",
@@ -290,6 +289,14 @@ const fr: Messages = {
 }
 
 export type MessageKey = keyof Messages
+
+/** The message for each cadence code in `api/health.json`. */
+export const cadenceMessages: Record<Cadence, MessageKey> = {
+  on_publication: "cadenceOnPublication",
+  hourly: "cadenceHourly",
+  "6h": "cadenceEvery6Hours",
+  daily: "cadenceDaily",
+}
 
 const STORAGE_KEY = "fr2027.locale"
 

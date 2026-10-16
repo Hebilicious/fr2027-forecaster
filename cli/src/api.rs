@@ -199,6 +199,20 @@ fn hours_since(now: Timestamp, when: Option<&str>) -> Option<i64> {
     Some(now.duration_since(then).as_secs() / 3600)
 }
 
+/// How often a source is expected to update. The UI translates these codes.
+#[derive(Clone, Copy, Serialize)]
+enum Cadence {
+    /// Whenever a pollster publishes: no fixed schedule.
+    #[serde(rename = "on_publication")]
+    OnPublication,
+    #[serde(rename = "hourly")]
+    Hourly,
+    #[serde(rename = "6h")]
+    Every6Hours,
+    #[serde(rename = "daily")]
+    Daily,
+}
+
 /// Freshness of every input and output, with plain-language warnings. Times come from the data
 /// itself, not from file dates, so a fresh checkout reports the same thing.
 fn health(repo: &Repo, now: Timestamp) -> Result<Value> {
@@ -238,18 +252,13 @@ fn health(repo: &Repo, now: Timestamp) -> Result<Value> {
     let event = events::read_clean_rows(repo).ok().and_then(|rows| rows.last().cloned());
     let field = |doc: &Option<Value>, key: &str| doc.as_ref().and_then(|d| d[key].as_str().map(String::from));
     // name, last update, warn after this many hours (None: never), expected cadence
-    let sources: [(&str, Option<String>, Option<i64>, &str); 6] = [
-        ("polls", last_poll, None, "when a poll is published"),
-        ("markets", field(&markets, "fetched_at"), Some(3), "hourly"),
-        ("news", field(&news, "fetched_at"), Some(3), "hourly"),
-        ("attention", field(&attention, "fetched_at"), Some(50), "daily"),
-        (
-            "x",
-            field(&grok_drop, "collected_at"),
-            Some(48),
-            "Grok Bot, every 6 hours",
-        ),
-        ("events", event.map(|e| e.reported_at), None, "Grok Bot, daily"),
+    let sources: [(&str, Option<String>, Option<i64>, Cadence); 6] = [
+        ("polls", last_poll, None, Cadence::OnPublication),
+        ("markets", field(&markets, "fetched_at"), Some(3), Cadence::Hourly),
+        ("news", field(&news, "fetched_at"), Some(3), Cadence::Hourly),
+        ("attention", field(&attention, "fetched_at"), Some(50), Cadence::Daily),
+        ("x", field(&grok_drop, "collected_at"), Some(48), Cadence::Every6Hours),
+        ("events", event.map(|e| e.reported_at), None, Cadence::Daily),
     ];
     let mut collectors = Vec::new();
     for (name, updated, stale_after, cadence) in sources {
