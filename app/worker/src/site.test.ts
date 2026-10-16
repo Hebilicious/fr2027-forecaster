@@ -28,6 +28,9 @@ describe("handleApi", () => {
     expect(response.status).toBe(404)
     expect(response.headers.get("content-type")).toBe("application/json; charset=utf-8")
     expect(response.headers.get("cache-control")).toBe("no-store")
+    // _headers does not reach a response the Worker builds (src/headers.ts).
+    expect(response.headers.get("x-content-type-options")).toBe("nosniff")
+    expect(response.headers.get("referrer-policy")).toBe("no-referrer")
     expect(await response.json()).toEqual({ error: "/api/nope.json: no such document" })
   })
 

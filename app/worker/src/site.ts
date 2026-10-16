@@ -3,6 +3,8 @@
 // right for page routes but not for a document, so /api/* runs the Worker first and turns that
 // fallback into a 404.
 
+import { JSON_HEADERS } from "./headers"
+
 /** The part of the ASSETS binding this module uses. */
 export interface Assets {
   fetch(request: Request): Promise<Response>
@@ -14,13 +16,9 @@ export async function handleApi(request: Request, assets: Assets): Promise<Respo
   const fallback = response.ok && (response.headers.get("content-type") ?? "").startsWith("text/html")
   if (!fallback) return response
   const path = new URL(request.url).pathname
+  // _headers does not apply to responses the Worker builds, so this one sets its own (src/headers.ts).
   return new Response(JSON.stringify({ error: `${path}: no such document` }), {
     status: 404,
-    // _headers does not apply to responses the Worker builds, so this one sets its own.
-    headers: {
-      "content-type": "application/json; charset=utf-8",
-      "cache-control": "no-store",
-      "x-content-type-options": "nosniff",
-    },
+    headers: JSON_HEADERS,
   })
 }
