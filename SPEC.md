@@ -59,7 +59,7 @@ Polls carry the forecast; every other source is a challenger that must prove its
 | Voting-intention polls | Every published R1 and R2 poll: firm, fieldwork dates, sample, method, scenario (which candidates were tested), toplines | Pollster sites (Ifop, Elabe, Odoxa, OpinionWay, Ipsos, Harris/Toluna, Cluster17, BVA/Verian), Commission des sondages notices, Wikipedia poll tables as an index only | Daily | Primary signal |
 | Prediction markets | Price, bid, ask and volume per candidate for three questions: wins, reaches round 2, is on the ballot | Polymarket Gamma API and Kalshi's public market-data API (`config/sources.yaml`) | Hourly | Benchmark and optional blend input |
 | X trends (Grok Bot) | Mention volume, sentiment, top topics, bot share per candidate | Grok Bot routines send JSON to the inbox Worker; the Live workflow validates and commits it to `data/raw/grok/` (contract below; see `docs/grok-bot.md`) | Every 12 hours | Low-weight momentum signal |
-| News | Headlines naming a candidate, per outlet | RSS feeds of 13 national outlets (`config/sources.yaml`); Les Échos and Ouest-France have no open feed | Hourly | Event detection, uncertainty widening |
+| News | Headlines naming a candidate, per outlet; daily article counts per candidate | RSS feeds of 13 national outlets (`config/sources.yaml`); Les Échos and Ouest-France have no open feed. Counts from the GDELT DOC API, which also covers 2017 and 2022 | Hourly; counts daily | Event detection, uncertainty widening |
 | Attention | Daily page views of each candidate's French Wikipedia article (Wikimedia API, bots excluded) | `config/sources.yaml` | Daily | Low-weight momentum signal |
 | Campaign events | Declarations, withdrawals, endorsements, primary results, sponsorships, rulings | Grok Bot routine, through the inbox, to `data/raw/events/` | Daily | Signals page; cited by the field changes (Grok Bot routine 4, through the inbox) that edit `config/candidates.yaml` |
 | Search interest | Google Trends per candidate, France | The official Google Trends API if access is available (pytrends is an unofficial Python scraper) | Daily | Low-weight momentum signal |
@@ -183,7 +183,8 @@ Collectors and the model run on a schedule inside the repo, so the forecast stay
 | Job | Frequency | Runs where |
 | --- | --- | --- |
 | Markets, news RSS, Grok Bot inbox | Hourly | GitHub Actions (`live.yml`) |
-| Wikipedia page views | Daily | GitHub Actions (`live.yml`) |
+| Wikipedia page views, GDELT news volume | Daily | GitHub Actions (`live.yml`) |
+| Forward log of signal flags | Hourly | GitHub Actions (`live.yml`, `fr2027 forward`) |
 | X activity | Every 12 hours (French-language posts) | Grok Bot routine 1 → inbox |
 | New polls | Twice a day | Grok Bot routine 2 → inbox → pull request, landed on `main` when routine 4's blind second entry agrees |
 | Campaign events | Twice a day | Grok Bot routine 3 → inbox |

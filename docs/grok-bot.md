@@ -49,9 +49,10 @@ proposal's, so a poll and its check never come from the same run. Routine 2 prop
 routine 4 checks them, and the polls routine 4 itself proposes (late notices) are checked by a
 later run of routine 4, or are refused until then.
 
-The model does not use X measurements or events yet. They are recorded and shown on the Signals
-page so their value can be measured against later polls before they get any weight. Field changes
-do change the forecast: the field is the first step of every simulation.
+The model does not use X measurements or events. They are recorded and shown on the Signals page,
+and X support shifts go into the forward log (`fr2027 forward`, `data/forward/`), which scores them
+against later polls, since X cannot be backtested; they get weight only if that check earns it.
+Field changes do change the forecast: the field is the first step of every simulation.
 
 The payload contracts are the JSON Schemas in [`schemas/`](../schemas): `grok_drop`, `poll`,
 `event`, `poll_check` and `field_change`.
