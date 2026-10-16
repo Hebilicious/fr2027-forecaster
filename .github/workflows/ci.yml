@@ -16,6 +16,9 @@ concurrency:
 jobs:
   ci:
     name: moon ci
+    # The editor routine's branches leave data/clean to the Land workflow, which rebuilds it and
+    # runs these same checks before landing; checking its pull requests here would always fail.
+    if: ${{ !startsWith(github.head_ref, 'claude/editor-') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
