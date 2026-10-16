@@ -4,6 +4,7 @@ import type { Attention } from "../../api/schemas"
 import { count, longDate, relativeChange } from "../../format"
 import { useI18n } from "../../i18n"
 import { attentionRows, type AttentionRow } from "../../signals"
+import CandidateAvatar from "../CandidateAvatar.vue"
 import Sparkline from "../Sparkline.vue"
 
 const props = defineProps<{ attention: Attention; names: ReadonlyMap<string, string> }>()
@@ -19,11 +20,11 @@ const trendLabel = (row: AttentionRow) =>
 </script>
 
 <template>
-  <section aria-labelledby="attention-title" class="card stack">
-    <div class="stack-tight">
-      <h3 id="attention-title">{{ t("attentionTitle") }}</h3>
+  <section aria-labelledby="attention-title" class="card">
+    <header class="card-head">
+      <h2 id="attention-title">{{ t("attentionTitle") }}</h2>
       <p class="secondary small">{{ t("attentionHelp") }}</p>
-    </div>
+    </header>
     <p v-if="table.rows.length === 0" class="secondary small">{{ t("attentionEmpty") }}</p>
     <template v-else>
       <div class="table-wrap">
@@ -38,9 +39,14 @@ const trendLabel = (row: AttentionRow) =>
           </thead>
           <tbody>
             <tr v-for="row in table.rows" :key="row.candidateId">
-              <th scope="row">{{ row.name }}</th>
+              <th scope="row">
+                <span class="who">
+                  <CandidateAvatar :id="row.candidateId" :name="row.name" :size="26" />
+                  {{ row.name }}
+                </span>
+              </th>
               <td class="num strong">{{ count(row.total, locale) }}</td>
-              <td class="num">{{ row.change === null ? "—" : relativeChange(row.change, locale) }}</td>
+              <td class="num secondary">{{ row.change === null ? "—" : relativeChange(row.change, locale) }}</td>
               <td>
                 <Sparkline
                   v-if="table.window && row.daily.length >= 2"
@@ -53,30 +59,36 @@ const trendLabel = (row: AttentionRow) =>
           </tbody>
         </table>
       </div>
-      <p v-if="table.window" class="muted small">{{ t("dataTo", { date: longDate(table.window[1], locale) }) }}</p>
+      <p v-if="table.window" class="muted small foot">{{ t("dataTo", { date: longDate(table.window[1], locale) }) }}</p>
     </template>
   </section>
 </template>
 
 <style scoped>
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 th[scope="row"] {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--ink);
 }
 
 .strong {
-  font-weight: 600;
+  font-weight: 650;
+  color: var(--ink);
 }
 
-.stack-tight {
-  display: grid;
-  gap: 6px;
+.foot {
+  margin-top: 16px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 760px) {
   th,
   td {
-    padding: 8px 6px;
+    padding: 10px 6px;
   }
 }
 </style>

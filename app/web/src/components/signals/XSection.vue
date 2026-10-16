@@ -4,6 +4,7 @@ import type { XRow } from "../../api/schemas"
 import { count, dateTime, percent } from "../../format"
 import { useI18n, type MessageKey } from "../../i18n"
 import { latestXWindow, nameOf, sentiment, type Sentiment } from "../../signals"
+import CandidateAvatar from "../CandidateAvatar.vue"
 
 const props = defineProps<{ rows: readonly XRow[]; names: ReadonlyMap<string, string> }>()
 const { t, locale } = useI18n()
@@ -26,14 +27,16 @@ const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu
 </script>
 
 <template>
-  <section aria-labelledby="x-title" class="card stack">
-    <h3 id="x-title">{{ t("xTitle") }}</h3>
-    <p v-if="!latest" class="secondary small">{{ t("xEmpty") }}</p>
-    <template v-else>
-      <p class="muted small">
+  <section aria-labelledby="x-title" class="card">
+    <header class="card-head">
+      <h2 id="x-title">{{ t("xTitle") }}</h2>
+      <p v-if="latest" class="muted small">
         {{ t("xWindow", { start: dateTime(latest.start, locale), end: dateTime(latest.end, locale) }) }}
       </p>
-      <p v-if="hasSentiment" aria-hidden="true" class="legend small secondary">
+    </header>
+    <p v-if="!latest" class="secondary small">{{ t("xEmpty") }}</p>
+    <template v-else>
+      <p v-if="hasSentiment" aria-hidden="true" class="legend small">
         <span class="key"><span class="swatch pos" />{{ t("positive") }}</span>
         <span class="key"><span class="swatch neu" />{{ t("neutral") }}</span>
         <span class="key"><span class="swatch neg" />{{ t("negative") }}</span>
@@ -50,7 +53,12 @@ const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu
           </thead>
           <tbody>
             <tr v-for="{ row, name, mood } in rows" :key="row.candidate_id">
-              <th scope="row">{{ name }}</th>
+              <th scope="row">
+                <span class="who">
+                  <CandidateAvatar :id="row.candidate_id" :name="name" :size="26" />
+                  {{ name }}
+                </span>
+              </th>
               <td class="num">
                 <span class="strong">{{ row.mentions === null ? "—" : count(row.mentions, locale) }}</span>
                 <span v-if="row.mentions_method" class="method muted small">{{ t(methods[row.mentions_method]) }}</span>
@@ -67,7 +75,7 @@ const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu
                   <span class="sr-only">{{ t("postsRead", { n: count(row.sample_size, locale) }) }}</span>
                 </template>
               </td>
-              <td class="num">{{ row.bot_share_estimate === null ? "—" : share(row.bot_share_estimate) }}</td>
+              <td class="num secondary">{{ row.bot_share_estimate === null ? "—" : share(row.bot_share_estimate) }}</td>
             </tr>
           </tbody>
         </table>
@@ -77,13 +85,20 @@ const moodLabel = (s: Sentiment) => t("sentimentLabel", { pos: share(s.pos), neu
 </template>
 
 <style scoped>
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 th[scope="row"] {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--ink);
 }
 
 .strong {
-  font-weight: 600;
+  font-weight: 650;
+  color: var(--ink);
 }
 
 .method, .posts {
@@ -92,14 +107,14 @@ th[scope="row"] {
 }
 
 .posts {
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
-/* Diverging: positive and negative in two hues around a grey neutral, 2px surface gaps between. */
+/* Diverging: bleu for positive and rouge for negative around a grey neutral, 2px gaps between. */
 .mood {
   display: flex;
   gap: 2px;
-  height: 10px;
+  height: 8px;
   min-width: 120px;
 }
 
@@ -121,7 +136,7 @@ th[scope="row"] {
 }
 
 .neu {
-  background: var(--axis);
+  background: var(--dot);
 }
 
 .neg {
@@ -131,23 +146,25 @@ th[scope="row"] {
 .legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 14px;
+  gap: 4px 18px;
+  margin-bottom: 14px;
+  color: var(--ink-2);
 }
 
 .key {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .swatch {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 8px;
   border-radius: 2px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 760px) {
   .mood {
     min-width: 44px;
   }
@@ -158,7 +175,7 @@ th[scope="row"] {
 
   th,
   td {
-    padding: 8px 6px;
+    padding: 10px 6px;
   }
 }
 </style>

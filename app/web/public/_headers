@@ -5,6 +5,10 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'
 
+# Vite names every file under /assets/ after a hash of its content, so a given file never changes.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # The documents are rebuilt hourly and the UI checks /api/health.json every 2 minutes.
 /api/*
   Cache-Control: public, max-age=120

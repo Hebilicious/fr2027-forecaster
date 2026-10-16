@@ -5,6 +5,7 @@ import { scale, shareTicks } from "../charts"
 import type { SeriesPoint } from "../api/schemas"
 import { percent, safeUrl, shareWithInterval, shortDate } from "../format"
 import { useI18n, type Locale } from "../i18n"
+import CandidateAvatar from "./CandidateAvatar.vue"
 
 const props = defineProps<{
   panel: Panel
@@ -91,9 +92,15 @@ const sortedDots = computed(() =>
 <template>
   <figure class="card panel">
     <figcaption>
-      <h3>{{ panel.candidate.name }}</h3>
-      <p v-if="latest" class="secondary small num">
-        {{ shareDate(latest, locale) }}
+      <div class="who">
+        <CandidateAvatar :id="panel.candidate.candidate_id" :name="panel.candidate.name" :size="38" />
+        <h2>{{ panel.candidate.name }}</h2>
+      </div>
+      <p v-if="latest" class="latest">
+        <span class="latest-value">{{ percent(latest.mean, 0, locale) }}</span>
+        <span class="latest-range num">
+          {{ Math.round(latest.lo80 * 100) }}–{{ Math.round(latest.hi80 * 100) }} · {{ shortDate(latest.date, locale) }}
+        </span>
       </p>
     </figcaption>
     <div class="plot">
@@ -107,7 +114,7 @@ const sortedDots = computed(() =>
         <g class="grid">
           <g v-for="tick in ticks" :key="tick">
             <line :x1="margin.left" :x2="width - margin.right" :y1="y(tick)" :y2="y(tick)" />
-            <text :x="margin.left - 6" :y="y(tick) + 3.5" text-anchor="end">{{ Math.round(tick * 100) }}</text>
+            <text :x="margin.left - 8" :y="y(tick) + 3.5" text-anchor="end">{{ Math.round(tick * 100) }}</text>
           </g>
           <text v-for="m in monthTicks" :key="m.at" :x="m.at" :y="height - 6" text-anchor="middle">{{ m.label }}</text>
         </g>
@@ -130,7 +137,7 @@ const sortedDots = computed(() =>
             <circle
               :cx="x(dot.date)"
               :cy="y(dot.share)"
-              r="4"
+              :r="dot.firm === highlightFirm ? 4.5 : 3.5"
               :class="['dot', { highlighted: dot.firm === highlightFirm, faded: highlightFirm && dot.firm !== highlightFirm }]"
             />
           </a>
@@ -154,14 +161,49 @@ const sortedDots = computed(() =>
 .panel {
   margin: 0;
   display: grid;
-  gap: 6px;
+  gap: 12px;
+  padding: 20px 20px 14px;
 }
 
 figcaption {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.who {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+h2 {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.latest {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  text-align: right;
+}
+
+.latest-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.latest-range {
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 .plot {
@@ -172,6 +214,7 @@ svg {
   width: 100%;
   height: auto;
   display: block;
+  overflow: visible;
   touch-action: pan-y;
 }
 
@@ -196,6 +239,7 @@ svg {
   stroke-width: 2;
   stroke-linejoin: round;
   stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgba(88, 124, 241, 0.55));
 }
 
 .hit {
@@ -205,19 +249,32 @@ svg {
 .dot {
   fill: var(--dot);
   stroke: var(--surface);
-  stroke-width: 2;
+  stroke-width: 1.5;
+  transition: opacity 0.25s;
 }
 
 .dot.faded {
-  opacity: 0.35;
+  opacity: 0.28;
 }
 
 .dot.highlighted {
   fill: var(--accent);
+  stroke-width: 2;
+}
+
+a:hover .dot {
+  stroke: var(--ink);
+}
+
+/* Keyboard focus rings the dot itself, and the tooltip names the poll. */
+a:focus-visible {
+  outline: none;
 }
 
 a:focus-visible .dot {
-  stroke: var(--ink);
+  stroke: var(--focus);
+  stroke-width: 3;
+  opacity: 1;
 }
 
 .crosshair line {
@@ -233,13 +290,18 @@ a:focus-visible .dot {
 
 .tooltip {
   position: absolute;
-  top: 2px;
-  right: 6px;
+  top: 0;
+  right: 4px;
   margin: 0;
-  padding: 2px 8px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  max-width: 80%;
+  padding: 4px 10px;
+  max-width: 82%;
+  border-radius: 8px;
+  background: rgba(16, 19, 26, 0.92);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 8px 24px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
 }
 </style>

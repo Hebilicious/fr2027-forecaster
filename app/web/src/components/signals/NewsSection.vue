@@ -4,6 +4,7 @@ import type { News } from "../../api/schemas"
 import { count, dateTime, safeUrl } from "../../format"
 import { useI18n } from "../../i18n"
 import { latestHeadlines, nameOf, newsCounts } from "../../signals"
+import CandidateAvatar from "../CandidateAvatar.vue"
 
 const props = defineProps<{ news: News; names: ReadonlyMap<string, string> }>()
 const { t, locale } = useI18n()
@@ -17,25 +18,30 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 </script>
 
 <template>
-  <section aria-labelledby="news-title" class="card stack">
-    <h3 id="news-title">{{ t("newsTitle") }}</h3>
+  <section aria-labelledby="news-title" class="card">
+    <header class="card-head">
+      <h2 id="news-title">{{ t("newsTitle") }}</h2>
+    </header>
     <p v-if="news.headlines.length === 0 && counts.length === 0" class="secondary small">{{ t("newsEmpty") }}</p>
-    <template v-else>
-      <div v-if="counts.length" class="stack-tight">
-        <h4>{{ t("newsCounts") }}</h4>
+    <div v-else class="layout">
+      <div v-if="counts.length" class="block">
+        <h3 class="sub">{{ t("newsCounts") }}</h3>
         <ul class="bars">
-          <li v-for="c in counts" :key="c.candidateId">
-            <span class="bar-name">{{ c.name }}</span>
+          <li v-for="(c, i) in counts" :key="c.candidateId" :style="{ '--i': i }">
+            <span class="bar-name">
+              <CandidateAvatar :id="c.candidateId" :name="c.name" :size="22" />
+              <span class="bar-label">{{ c.name }}</span>
+            </span>
             <span class="bar-track"><span class="bar" :style="{ width: pct(c.items / maxCount) }" /></span>
             <span class="num bar-value">{{ count(c.items, locale) }}</span>
           </li>
         </ul>
       </div>
 
-      <div class="stack-tight">
-        <h4>{{ t("latestHeadlines") }}</h4>
+      <div class="block">
+        <h3 class="sub">{{ t("latestHeadlines") }}</h3>
         <div v-if="counts.length" class="chips" role="group" :aria-label="t('newsFilter')">
-          <span class="small secondary">{{ t("newsFilter") }}</span>
+          <span class="small muted">{{ t("newsFilter") }}</span>
           <button class="chip" type="button" :aria-pressed="filter === null" @click="filter = null">
             {{ t("allCandidates") }}
           </button>
@@ -60,24 +66,32 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
           {{ filter ? t("noHeadlines", { name: nameOf(names, filter) }) : t("newsEmpty") }}
         </p>
       </div>
-    </template>
-    <p v-if="news.fetched_at" class="muted small">
+    </div>
+    <p v-if="news.fetched_at" class="muted small foot">
       {{ t("feedStatus", { n: news.feeds.length, m: failing, when: dateTime(news.fetched_at, locale) }) }}
     </p>
   </section>
 </template>
 
 <style scoped>
-h4 {
-  margin: 0;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--ink-2);
+.layout {
+  display: grid;
+  gap: 28px 40px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  align-items: start;
 }
 
-.stack-tight {
+.block {
   display: grid;
-  gap: 8px;
+  gap: 14px;
+}
+
+.sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .bars {
@@ -85,26 +99,35 @@ h4 {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 4px;
-  font-size: 0.9rem;
-  max-width: 760px;
+  gap: 10px;
+  font-size: 0.88rem;
 }
 
 .bars li {
   display: grid;
-  grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 2.5em;
-  gap: 10px;
+  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr) 2.5em;
+  gap: 12px;
   align-items: center;
 }
 
 .bar-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: var(--ink);
+}
+
+.bar-label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .bar-track {
-  height: 10px;
+  height: 6px;
+  background: rgba(243, 239, 230, 0.06);
+  border-radius: 0 3px 3px 0;
 }
 
 .bar {
@@ -112,11 +135,16 @@ h4 {
   height: 100%;
   min-width: 2px;
   background: var(--series);
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 0 10px var(--series-glow);
+  transform-origin: left;
+  animation: grow 1s var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 40ms + 200ms);
 }
 
 .bar-value {
   text-align: right;
+  color: var(--ink-2);
 }
 
 .headlines {
@@ -124,12 +152,20 @@ h4 {
   margin: 0;
   padding: 0;
   display: grid;
+  max-height: 34rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+  /* The list scrolls: its last lines fade out to say so. */
+  -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 56px), transparent);
+  mask-image: linear-gradient(180deg, #000 calc(100% - 56px), transparent);
+  padding-bottom: 32px;
 }
 
 .headlines li {
   display: grid;
-  gap: 2px;
-  padding: 8px 0;
+  gap: 4px;
+  padding: 12px 0;
   border-bottom: 1px solid var(--grid);
 }
 
@@ -138,12 +174,25 @@ h4 {
 }
 
 .headlines a {
+  color: var(--ink);
+  text-decoration: none;
   overflow-wrap: anywhere;
+  line-height: 1.4;
 }
 
-@media (max-width: 720px) {
+.headlines a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(243, 239, 230, 0.4);
+}
+
+.foot {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
   .bars li {
-    grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr) 2.5em;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 2.5em;
   }
 }
 </style>

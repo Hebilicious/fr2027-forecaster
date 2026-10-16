@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@fontsource-variable/bodoni-moda": "catalog:",
+    "@fontsource-variable/inter": "catalog:",
     "effect": "catalog:",
     "vue": "catalog:"
   },
