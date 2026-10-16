@@ -1,0 +1,57 @@
+schema_version: "1.0"
+poll_id: odoxa-2026-10-07-10310
+firm: odoxa
+sponsor: "Backbone / Public Sénat / regional press / Le Nouvel Obs"
+field_start: 2026-09-24
+field_end: 2026-10-07
+published_at: 2026-10-14
+sample_size: 12005
+method: online
+population: likely
+source_url: "https://www.odoxa.fr/wp-content/uploads/2026/10/Odoxa-Backbone-pour-la-Presse-Regionale-Public-Senat-et-le-Nouvel-Obs-IV-a-lelection-presidentielle-de-2027.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10310-pres-iv-odoxa-14-octobre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-16T07:00Z
+entry: primary
+notes: "About 1,000 interviews per region, reweighted to each region's real weight; 11,103 registered drawn from 12,005. Shares are of registered voters intending to vote who expressed a choice. The notice gives the method, base and 'première publication le 14 octobre 2026' but no results; the numbers were checked against Odoxa's full report (source_url). Fieldwork ended before Glucksmann won the PS-PP primary. Odoxa also tested Glucksmann and Attal v Le Pen but did not publish them, because neither qualifies on its own first-round figures."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Philippe"
+    shares:
+      arthaud: 0.5
+      roussel: 2
+      melenchon: 18
+      tondelier: 3
+      glucksmann: 9.5
+      philippe: 17
+      retailleau: 6.5
+      dupont_aignan: 2
+      le_pen: 37
+      zemmour: 4.5
+  - scenario_id: S2
+    round: 1
+    label: "Attal"
+    shares:
+      arthaud: 1
+      roussel: 2
+      melenchon: 18.5
+      tondelier: 3.5
+      glucksmann: 10.5
+      attal: 11
+      retailleau: 9
+      dupont_aignan: 2
+      le_pen: 38
+      zemmour: 4.5
+  - scenario_id: H1
+    round: 2
+    label: "Jean-Luc Mélenchon v Marine Le Pen"
+    shares:
+      melenchon: 32
+      le_pen: 68
+  - scenario_id: H2
+    round: 2
+    label: "Édouard Philippe v Marine Le Pen"
+    shares:
+      philippe: 47
+      le_pen: 53

@@ -2,6 +2,30 @@
 
 Dated entries for every assumption, parameter change, source added or dropped, and the reason. Newest first within a day.
 
+## 2026-10-16
+
+### Data: polls from 24 September to 14 October 2026
+
+Five polls added, bringing `data/raw/polls/` to 33 polls: 15 round 1 scenarios and 6 head-to-heads. Indexed from the French and English Wikipedia tables (raw wikitext fetched 2026-10-16 about 06:50 UTC), then every number of every scenario compared with the notice or the pollster's report.
+
+| File                              | Sponsor                                            | Fieldwork      | Checked against                                     | Entry   | R1 / R2 |
+| --------------------------------- | -------------------------------------------------- | -------------- | --------------------------------------------------- | ------- | ------- |
+| `odoxa-2026-10-07-10310`          | Backbone, Public Sénat, regional press, Nouvel Obs | 24 Sep – 7 Oct | Odoxa's full report (the notice has no results)     | primary | 2 / 2   |
+| `toluna-harris-2026-10-08-10305`  | M6, RTL                                            | 5–8 Oct        | notice 10305                                        | primary | 5 / 2   |
+| `ifop-2026-10-14-10314`           | LCI, Sud Radio                                     | 12–14 Oct      | notice 10314                                        | primary | 4 / 0   |
+| `opinionway-2026-10-14-les-echos` | Les Echos, Radio Classique (Présitrack wave 3)     | 13–14 Oct      | OpinionWay's report; no notice yet                  | primary | 3 / 0   |
+| `opinionway-2026-10-14-cnews`     | CNews                                              | 13–14 Oct      | OpinionWay's chart as printed by the JDD; no notice | index   | 1 / 3   |
+
+- **Indexes vs sources.** Both indexes match the Harris, Ifop, Odoxa and Présitrack sources exactly. For the OpinionWay/CNews poll, the English index's only round 1 row differs from OpinionWay's chart on Arthaud (0.5 vs 1), Roussel (2 vs 1) and Tondelier (1 vs 2); the file uses the chart.
+- **No notice yet for either OpinionWay poll.** The Commission's list on 2026-10-16 ends at notice 10316. The two files are named `<firm>-<field_end>-<sponsor>` instead of a notice number, following the Odoxa May file, which has none. A later file can supersede each one once its notice is filed.
+- **OpinionWay/CNews is `entry: index`.** No pollster publication was found; CNews and Europe 1 serve a bot challenge, which was not worked around. The JDD, which belongs to the same group as CNews, printed OpinionWay's round 1 chart and all three runoff figures (Le Pen 68 v Mélenchon, 56 v Philippe, 56 v Glucksmann); the runoffs agree with the French index. Its population base is not established (`population: null`).
+- **Unpublished runoffs.** Harris asked six runoffs but published only Mélenchon and Philippe v Le Pen. Odoxa tested Glucksmann and Attal v Le Pen and did not publish them, because neither qualifies on its round 1 figures. Neither set is available, so neither is entered.
+- **Conventions.** `published_at`: Odoxa's notice gives 14 Oct; Sud Radio published the Ifop poll on 15 Oct; both OpinionWay polls appeared on 15 Oct; Harris follows the bootstrap rule (deposit date, 12 Oct). Ifop prints Arthaud as "-" in two scenarios, entered as 0 (the model floors shares at 0.5 anyway). "<1%" is entered as 0.5. `sample_size` is the total sample.
+- **Odoxa's sample is 12,005**, about 1,000 per region reweighted to national weights. The model's sampling variance is a design effect over sample size (3 in today's round 1 fit, 1.5 in round 2), so this poll counts for about ten ordinary ones. Whether its regional design deserves a larger design effect is a modelling question, not settled here.
+- **No interested-party sponsors** among the five. Backbone, an Odoxa partner for this poll, is a social-media analytics firm, not a party or candidate.
+- **Considered and left out** (no voting intention for the 2027 presidential election in the notice): Verian stature barometer (10297, which uses vote intention only as a breakdown variable), Harris electoral potential (10300, "ne constitue nullement une intention de vote"), Harris PS primary (10304), Ipsos BVA barometer (10303), YouGov popularity (10288), Cluster17 personalities (10296), CSA for CNews (10301, 10316), Ifop on Bardella's remarks (10299), Ifop for Franc-Tireur (10309), Ifop "peuple de droite" (10312), and notices 10271–10285 rechecked for late September. No other poll from 30 September to 14 October appears in either index or in the notice list.
+- **Glucksmann won the PS-PP primary on 11 October** (66% in the first round, per the French index). `config/candidates.yaml` still holds the provisional primary slot; updating it is a config change for a separate entry.
+
 ## 2026-10-09
 
 ### Live pipeline: GitHub Actions, a public page on Cloudflare, and Grok Bot through an inbox

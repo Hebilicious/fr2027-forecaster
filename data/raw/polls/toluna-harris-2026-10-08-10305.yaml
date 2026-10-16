@@ -1,0 +1,100 @@
+schema_version: "1.0"
+poll_id: toluna-harris-2026-10-08-10305
+firm: toluna-harris
+sponsor: "M6 / RTL"
+field_start: 2026-10-05
+field_end: 2026-10-08
+published_at: 2026-10-12
+sample_size: 2348
+method: online
+population: likely
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10305-pres-iv-toluna-harris-interactive-12-octobre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10305-pres-iv-toluna-harris-interactive-12-octobre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-16T07:00Z
+entry: primary
+notes: "Wave 7. 2,004 registered drawn from 2,348; shares are of registered voters certain to vote who expressed a choice. published_at is not stated in the notice; set to the later of the day after fieldwork and the notice's deposit date (2026-10-12). Six runoffs were asked (also Attal, Glucksmann, Retailleau and Hollande v Le Pen), but only Mélenchon and Philippe v Le Pen are published, in the notice and in Toluna's report."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Attal+Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 18
+      roussel: 2
+      tondelier: 2
+      glucksmann: 10
+      attal: 5
+      philippe: 13
+      retailleau: 7
+      dupont_aignan: 2
+      le_pen: 35
+      zemmour: 5
+  - scenario_id: S2
+    round: 1
+    label: "Glucksmann+Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 18
+      roussel: 2
+      tondelier: 3
+      glucksmann: 10
+      philippe: 17
+      retailleau: 7
+      dupont_aignan: 2
+      le_pen: 36
+      zemmour: 4
+  - scenario_id: S3
+    round: 1
+    label: "Glucksmann+Attal"
+    shares:
+      arthaud: 1
+      melenchon: 18
+      roussel: 2
+      tondelier: 3
+      glucksmann: 11
+      attal: 12
+      retailleau: 10
+      dupont_aignan: 2
+      le_pen: 36
+      zemmour: 5
+  - scenario_id: S4
+    round: 1
+    label: "Hollande+Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 18
+      roussel: 3
+      tondelier: 4
+      hollande: 7
+      philippe: 17
+      retailleau: 8
+      dupont_aignan: 2
+      le_pen: 36
+      zemmour: 4
+  - scenario_id: S5
+    round: 1
+    label: "Hollande+Attal"
+    shares:
+      arthaud: 1
+      melenchon: 19
+      roussel: 2
+      tondelier: 5
+      hollande: 7
+      attal: 12
+      retailleau: 10
+      dupont_aignan: 2
+      le_pen: 37
+      zemmour: 5
+  - scenario_id: H1
+    round: 2
+    label: "Jean-Luc Mélenchon v Marine Le Pen"
+    shares:
+      melenchon: 33
+      le_pen: 67
+  - scenario_id: H2
+    round: 2
+    label: "Édouard Philippe v Marine Le Pen"
+    shares:
+      philippe: 44
+      le_pen: 56

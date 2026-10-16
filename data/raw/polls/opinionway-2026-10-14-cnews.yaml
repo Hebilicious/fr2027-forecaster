@@ -1,0 +1,52 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-10-14-cnews
+firm: opinionway
+sponsor: "CNews"
+field_start: 2026-10-13
+field_end: 2026-10-14
+published_at: 2026-10-15
+sample_size: 1043
+method: online
+population: null
+source_url: "https://www.lejdd.fr/politique/sondage-presidentielle-2027-le-pen-loin-devant-glucksmann-talonne-melenchon-186135"
+notice_url: null
+index_url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2027_French_presidential_election"
+retrieved_at: 2026-10-16T07:00Z
+entry: index
+notes: "A separate OpinionWay poll from the Les Echos Présitrack, same fieldwork and total sample. No notice on the Commission's list on 2026-10-16 and no OpinionWay publication found; CNews and Europe 1 pages returned a bot challenge. Round 1 is taken from OpinionWay's chart reproduced in the JDD article (source_url); the English index's row differs on Arthaud (0.5), Roussel (2) and Tondelier (1). Bouamrane '<1%' is entered as 0.5; the chart's integers sum to 100.5. Runoffs from the French index, matching the JDD text (Le Pen 68 v Mélenchon, 56 v Philippe, 56 v Glucksmann). Population base not established; method online assumed from OpinionWay's other notices. Named with a sponsor suffix for want of a notice number."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Bouamrane+Attal+Philippe+Lisnard"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 1
+      tondelier: 2
+      glucksmann: 13
+      bouamrane: 0.5
+      attal: 5
+      philippe: 12
+      retailleau: 6
+      lisnard: 4
+      dupont_aignan: 1
+      zemmour: 5
+      le_pen: 35
+  - scenario_id: H1
+    round: 2
+    label: "Jean-Luc Mélenchon v Marine Le Pen"
+    shares:
+      melenchon: 32
+      le_pen: 68
+  - scenario_id: H2
+    round: 2
+    label: "Raphaël Glucksmann v Marine Le Pen"
+    shares:
+      glucksmann: 44
+      le_pen: 56
+  - scenario_id: H3
+    round: 2
+    label: "Édouard Philippe v Marine Le Pen"
+    shares:
+      philippe: 44
+      le_pen: 56

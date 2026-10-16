@@ -1,0 +1,78 @@
+schema_version: "1.0"
+poll_id: ifop-2026-10-14-10314
+firm: ifop
+sponsor: "LCI / Sud Radio"
+field_start: 2026-10-12
+field_end: 2026-10-14
+published_at: 2026-10-15
+sample_size: 1525
+method: online
+population: registered
+source_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10314-pres-climat-politique-post-primaire-ps-pp-ifop-lci-14-octobre.pdf"
+notice_url: "https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10314-pres-climat-politique-post-primaire-ps-pp-ifop-lci-14-octobre.pdf"
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-16T07:00Z
+entry: primary
+notes: "Ifop-Fiducial, after Glucksmann won the PS-PP primary on 11 Oct. 1,390 registered drawn from 1,525. published_at is the date of Sud Radio's article on the poll (2026-10-15 08:38 UTC); the notice was deposited on 14 Oct. The notice prints Arthaud as '-' in S1 and S4; entered as 0. No runoff was published."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Attal+Philippe+Ruffin+Villepin+Lisnard"
+    shares:
+      arthaud: 0
+      melenchon: 16
+      roussel: 2
+      ruffin: 2
+      tondelier: 2
+      glucksmann: 11.5
+      attal: 5
+      philippe: 13
+      villepin: 1.5
+      lisnard: 6
+      retailleau: 5
+      dupont_aignan: 1
+      le_pen: 32
+      zemmour: 3
+  - scenario_id: S2
+    round: 1
+    label: "Glucksmann+Attal"
+    shares:
+      arthaud: 0.5
+      melenchon: 17
+      roussel: 2.5
+      tondelier: 2
+      glucksmann: 16
+      attal: 13
+      retailleau: 8
+      dupont_aignan: 2
+      le_pen: 36
+      zemmour: 3
+  - scenario_id: S3
+    round: 1
+    label: "Glucksmann+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 16
+      roussel: 3
+      tondelier: 2.5
+      glucksmann: 13.5
+      philippe: 18
+      retailleau: 6.5
+      dupont_aignan: 2
+      le_pen: 35
+      zemmour: 3
+  - scenario_id: S4
+    round: 1
+    label: "Glucksmann+Attal+Philippe"
+    shares:
+      arthaud: 0
+      melenchon: 16
+      roussel: 2.5
+      tondelier: 2
+      glucksmann: 14
+      attal: 6
+      philippe: 14
+      retailleau: 6.5
+      dupont_aignan: 2
+      le_pen: 34
+      zemmour: 3

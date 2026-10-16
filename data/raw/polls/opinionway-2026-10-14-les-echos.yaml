@@ -1,0 +1,60 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-10-14-les-echos
+firm: opinionway
+sponsor: "Les Echos / Radio Classique"
+field_start: 2026-10-13
+field_end: 2026-10-14
+published_at: 2026-10-15
+sample_size: 1043
+method: online
+population: registered
+source_url: "https://f.dviz.factoviz.com/UserFiles/0/9/2/2027/OpinionWay%20pour%20Les%20Echos%20et%20Radio%20Classique%20-%20Barom%C3%A8tre%20Pr%C3%A9sitrack%202027%20Vague%203%20-%20Octobre%202026.pdf"
+notice_url: null
+index_url: "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
+retrieved_at: 2026-10-16T07:00Z
+entry: primary
+notes: "Présitrack 2027 wave 3, dated 15 October 2026 on its cover. 978 registered drawn from 1,043; online (CAWI). Checked against OpinionWay's own report (source_url, linked from opinion-way.com). No notice was on the Commission's list on 2026-10-16 (latest 10316), so the file is named with a sponsor suffix instead of a notice number. Arthaud '<1%' in S1 is entered as 0.5. The report publishes qualification probabilities, not runoff voting intentions."
+scenarios:
+  - scenario_id: S1
+    round: 1
+    label: "Glucksmann+Attal+Philippe"
+    shares:
+      arthaud: 0.5
+      melenchon: 14
+      roussel: 3
+      tondelier: 3
+      glucksmann: 13
+      attal: 7
+      philippe: 12
+      retailleau: 7
+      dupont_aignan: 2
+      zemmour: 4
+      le_pen: 35
+  - scenario_id: S2
+    round: 1
+    label: "Glucksmann+Attal"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 2
+      tondelier: 3
+      glucksmann: 16
+      attal: 11
+      retailleau: 9
+      dupont_aignan: 2
+      zemmour: 4
+      le_pen: 37
+  - scenario_id: S3
+    round: 1
+    label: "Glucksmann+Philippe"
+    shares:
+      arthaud: 1
+      melenchon: 15
+      roussel: 2
+      tondelier: 3
+      glucksmann: 15
+      philippe: 15
+      retailleau: 8
+      dupont_aignan: 2
+      zemmour: 4
+      le_pen: 35

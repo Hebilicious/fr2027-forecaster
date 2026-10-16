@@ -58,12 +58,12 @@ Create `data/raw/polls/<poll_id>.yaml` following `schemas/poll.schema.json` (cop
 
 ## Status
 
-| Milestone                     | State                                                                                                               |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| 1. Skeleton                   | Done: layout, schemas, config, CI, UI                                                                               |
-| 2. Polls and polls-only model | Done: 28 polls (April–September 2026) checked against their notices; real forecast in Overview, Round 1 and Round 2 |
-| 3. Backtest harness           | Next: 2017 and 2022 replays, which fit the provisional error parameters                                             |
-| 4. Markets                    | Collector and comparison view done; the blend waits for the backtests                                               |
-| 5. Grok, news, attention      | Inbox, collectors and Signals view done; event detection and ablations wait for the backtests                       |
-| 6. Programs                   | Not started                                                                                                         |
-| 7. Ops hardening              | Hourly schedule, public page and health view done; needs 7 unattended days                                          |
+| Milestone                     | State                                                                                                                                         |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Skeleton                   | Done: layout, schemas, config, CI, UI                                                                                                         |
+| 2. Polls and polls-only model | Done: 33 polls (April–October 2026), 31 checked against their notice or the pollster's report; real forecast in Overview, Round 1 and Round 2 |
+| 3. Backtest harness           | Next: 2017 and 2022 replays, which fit the provisional error parameters                                                                       |
+| 4. Markets                    | Collector and comparison view done; the blend waits for the backtests                                                                         |
+| 5. Grok, news, attention      | Inbox, collectors and Signals view done; event detection and ablations wait for the backtests                                                 |
+| 6. Programs                   | Not started                                                                                                                                   |
+| 7. Ops hardening              | Hourly schedule, public page and health view done; needs 7 unattended days                                                                    |
