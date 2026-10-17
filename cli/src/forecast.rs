@@ -8,7 +8,7 @@ use anyhow::{Context, Result, bail};
 use fr2027_collectors::{
     Repo, SchemaKind, Schemas, config::CandidatesConfig, config::load_model_params, content_hash, polls,
 };
-use fr2027_model::{Forecast, ModelParams, run_forecast};
+use fr2027_model::{Forecast, ModelParams, SignalSource, run_forecast, signals::detect};
 use jiff::{Timestamp, civil::Date, tz::TimeZone};
 use serde::Serialize;
 use serde_json::Value;
@@ -51,6 +51,7 @@ struct ForecastFile {
     /// The settings of config/model.yaml this run simulated with, so the page explains the model
     /// that produced the numbers it shows.
     parameters: Parameters,
+    signals: SignalsOut,
     changes: Changes,
     warnings: Vec<String>,
 }
@@ -122,6 +123,27 @@ struct AggregationOut {
     house_effects: Vec<HouseOut>,
 }
 
+/// The spikes of the last [`SPIKE_DAYS`] days and what they add.
+#[derive(Serialize)]
+struct SignalsOut {
+    sources: Vec<SignalSource>,
+    shock_sd: f64,
+    half_life_days: f64,
+    spikes: Vec<SpikeOut>,
+}
+
+#[derive(Serialize)]
+struct SpikeOut {
+    candidate_id: String,
+    date: Date,
+    score: f64,
+    ratios: BTreeMap<SignalSource, f64>,
+}
+
+/// Spikes older than this are left out of the forecast file: by then a spike with a 10-day
+/// half-life has accrued 98% of its variance.
+const SPIKE_DAYS: i32 = 60;
+
 #[derive(Serialize)]
 struct HouseOut {
     firm: String,
@@ -177,7 +199,16 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
     let now = args.now.unwrap_or_else(Timestamp::now);
     let as_of = args.as_of.unwrap_or_else(|| now.to_zoned(TimeZone::UTC).date());
     let out_dir = args.out_dir.clone().unwrap_or_else(|| repo.forecasts_dir());
-    let inputs_hash = inputs_hash(repo, &params, as_of)?;
+    let field = config.field()?;
+    let signals = fr2027_collectors::signals::read_clean(repo)?;
+    // The spikes, not the raw signal files, go into the hash: a day of page views that changes no
+    // spike changes nothing the model computes.
+    let spikes = detect(&signals, &field, &params.signals, as_of);
+    let spike_key: Vec<String> = spikes
+        .iter()
+        .map(|s| format!("{}@{}", config.candidates[s.candidate].id, s.date))
+        .collect();
+    let inputs_hash = inputs_hash(repo, &params, as_of, &spike_key)?;
     if args.if_changed
         && let Some((name, latest)) = previous_forecast(&out_dir, "")?
         && latest["inputs_hash"].as_str() == Some(inputs_hash.as_str())
@@ -185,8 +216,7 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
         println!("inputs unchanged since {name}; no new forecast");
         return Ok(());
     }
-    let field = config.field()?;
-    let forecast = run_forecast(&field, &all_polls, &params, as_of)?;
+    let forecast = run_forecast(&field, &all_polls, &signals, &params, as_of)?;
 
     let file_name = format!("{}.json", now.strftime("%Y-%m-%dT%H"));
     let previous = previous_forecast(&out_dir, &file_name)?;
@@ -296,9 +326,9 @@ fn previous_forecast(dir: &std::path::Path, current: &str) -> Result<Option<(Str
 
 /// Bumped whenever the forecast file gains, loses or changes a field, so that the next run refits rather than
 /// keep a file the UI can no longer read in full.
-const OUTPUT_VERSION: u32 = 2;
+const OUTPUT_VERSION: u32 = 3;
 
-fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date) -> Result<String> {
+fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date, spikes: &[String]) -> Result<String> {
     let mut bytes = Vec::new();
     for path in [
         repo.clean_dir().join(polls::CLEAN_FILE),
@@ -315,6 +345,9 @@ fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date) -> Result<String>
         )
         .bytes(),
     );
+    if !spikes.is_empty() {
+        bytes.extend(format!(";spikes={}", spikes.join(",")).bytes());
+    }
     Ok(content_hash(&bytes))
 }
 
@@ -459,6 +492,23 @@ fn build(
             last_field_end,
             poll_ids,
             house_effects,
+        },
+        signals: SignalsOut {
+            sources: params.signals.sources.clone(),
+            shock_sd: forecast.round1.noise.shock_sd,
+            half_life_days: params.signals.half_life_days,
+            spikes: forecast
+                .round1
+                .spikes
+                .iter()
+                .filter(|s| fr2027_model::day_number(forecast.as_of) - fr2027_model::day_number(s.date) <= SPIKE_DAYS)
+                .map(|s| SpikeOut {
+                    candidate_id: id(s.candidate),
+                    date: s.date,
+                    score: round4(s.score),
+                    ratios: s.ratios.iter().map(|(source, r)| (*source, round4(*r))).collect(),
+                })
+                .collect(),
         },
         changes: Changes {
             previous: previous_name,

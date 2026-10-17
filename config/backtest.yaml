@@ -6,8 +6,9 @@ seed: 20170423
 # Simulations per replay and per error setting. The error settings share their random numbers, so
 # differences between them are not Monte Carlo noise.
 simulations: 20000
-# Replay dates, in days before round 1: about 6 months, 3 months, 1 month and 1 week.
-horizons_days: [182, 91, 30, 7]
+# Replay dates, in days before round 1, as the spec asks: monthly from 11 months out (the first
+# month of the poll window has too few polls to fit), then weekly over the last 13 weeks.
+horizons_days: [334, 304, 273, 243, 212, 182, 152, 122, 91, 84, 77, 70, 63, 56, 49, 42, 35, 28, 21, 14, 7]
 # A replay sees the polls published by its date whose fieldwork started at most this many days
 # before round 1. One year matches the live forecast, whose first 2027 polls are from April 2026.
 poll_window_days: 365
@@ -68,3 +69,18 @@ grid:
   candidate_sd: [0.03, 0.05, 0.07, 0.10, 0.13, 0.16, 0.20, 0.25, 0.30, 0.40]
   round2_error_sd: [0.02, 0.03, 0.05, 0.08, 0.10, 0.12, 0.15, 0.18, 0.22, 0.27, 0.33, 0.40]
   round2_horizon_error_sd: [0.0, 0.02, 0.04, 0.07, 0.10, 0.14, 0.20]
+
+# The signal layers (model/src/signals.rs), each scored against the polls only: every replay is
+# fitted again with spikes allowed to add variance, shock_sd chosen by marginal likelihood from
+# shock_sd_grid. Each variant replaces these fields of config/model.yaml's `signals`.
+signals_ablation:
+  shock_sd_grid: [0.0, 0.1, 0.2, 0.3, 0.5]
+  variants:
+    - { name: "page views and news", sources: [attention, news] }
+    - { name: "page views", sources: [attention] }
+    - { name: "news", sources: [news] }
+    - { name: "both, spike at 2×", sources: [attention, news], spike_ratio: 2 }
+    - { name: "both, spike at 5×", sources: [attention, news], spike_ratio: 5 }
+    - { name: "both, half-life 5 days", sources: [attention, news], half_life_days: 5 }
+    - { name: "both, half-life 20 days", sources: [attention, news], half_life_days: 20 }
+    - { name: "both, higher floors", sources: [attention, news], attention_floor: 1000, news_floor: 20 }

@@ -117,7 +117,20 @@ pub fn prepare(election: &Election, model: &ModelParams, config: &BacktestConfig
         ));
     }
     let params = replay_params(model, config, election);
-    let fit = fit(&election.field, &selection.polls, &params, as_of)?;
+    let fit = fit(
+        &election.field,
+        &selection.polls,
+        &election.signals.to_model(),
+        &params,
+        as_of,
+    )?;
+    // The same check for the signals: event detection reads only days before the replay date.
+    if let Some(late) = fit.round1.spikes.iter().find(|s| s.date >= as_of) {
+        return Err(Error::invalid(
+            format!("data/backtest/{}", election.year),
+            format!("a spike on {} reached the replay of {as_of}", late.date),
+        ));
+    }
     let contenders = contenders(election, &fit, config.contender_share);
     Ok(Replay {
         year: election.year,

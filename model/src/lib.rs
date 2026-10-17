@@ -8,6 +8,7 @@
 //! - [`round1`]: the poll aggregation, a linear-Gaussian state-space model of bloc strengths and
 //!   within-bloc candidate support on the log-ratio scale, with pollster house effects.
 //! - [`round2`]: head-to-head poll aggregation and the bloc-transfer fallback.
+//! - [`signals`]: news and attention spikes, which widen a candidate's uncertainty.
 //! - [`simulate`]: the two-round Monte Carlo that turns both into probabilities.
 
 pub mod field;
@@ -15,6 +16,7 @@ pub mod kalman;
 pub mod rng;
 pub mod round1;
 pub mod round2;
+pub mod signals;
 pub mod simulate;
 
 use std::collections::BTreeMap;
@@ -23,6 +25,7 @@ use jiff::civil::Date;
 use serde::{Deserialize, Serialize};
 
 pub use field::{Candidate, Field, Slot, SlotOption};
+pub use signals::{SignalParams, SignalSource, Signals};
 pub use simulate::{Draw, Fit, Forecast, Simulation, fit, run_forecast, simulate};
 
 #[derive(Debug, thiserror::Error)]
@@ -86,6 +89,8 @@ pub struct ModelParams {
     pub aggregation: AggregationParams,
     pub round1_error: ErrorParams,
     pub round2: Round2Params,
+    /// Event detection from news and attention spikes.
+    pub signals: SignalParams,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
