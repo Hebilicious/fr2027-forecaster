@@ -1,5 +1,5 @@
-// Extracts the 2017 and 2022 poll tables of the English Wikipedia ("Opinion polling for the
-// <year> French presidential election", one pinned revision each) into
+// Extracts the 2002, 2007, 2012, 2017 and 2022 poll tables of the English Wikipedia ("Opinion
+// polling for the <year> French presidential election", one pinned revision each) into
 // data/backtest/<year>/polls.csv, in the columns of data/clean/polls.csv.
 //
 // Wikipedia is used as an index only: every row says so (`entry: index`), keeps the pollster
@@ -9,6 +9,9 @@
 // Run from the repository root with Node 24 (type stripping, no dependencies):
 //   node data/backtest/extract-wikipedia-polls.mts            fetch the pinned revisions
 //   node data/backtest/extract-wikipedia-polls.mts <dir>      read <dir>/en-<oldid>.wikitext instead
+//   node data/backtest/extract-wikipedia-polls.mts <dir> 2002 2007    only these years
+// RETRIEVED_AT=<UTC minute> sets retrieved_at when reading local files (2017 and 2022 were
+// retrieved at 2026-10-16T13:57Z, 2002–2012 at 2026-10-17T00:43Z).
 //
 // Rules applied, all visible in the output:
 // - One poll is one firm cell (with its rowspan); each of its rows is a scenario.
@@ -17,6 +20,14 @@
 // - published_at is not in the tables: it is set to the day after fieldwork ends.
 // - Polls without a sample size, rows that sum outside 85–103 (round 1) or 98–102 (round 2),
 //   and cells naming no known candidate are left out and counted in the summary.
+// - Sections "By region", "By department", "By commune", "By constituency" and "By first round
+//   vote" are sub-national or vote-transfer tables and are skipped.
+// - Firms are named as they are today: Sofres and TNS Sofres are kantar, Louis Harris and its
+//   successor LH2 are lh2 (not Harris Interactive, a different firm).
+// - 2012: a column headed "(nominee)" with the NPA's link (polls before the party chose its
+//   candidate) is read as Poutou, who ran (NOMINEES).
+// - 2007: the TNS Sofres poll of 20–21 April, which the page says was an internal survey not
+//   published before the vote, is left out (UNPUBLISHED).
 
 import { createHash } from "node:crypto"
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs"
@@ -31,6 +42,27 @@ interface Page {
 }
 
 const PAGES: Page[] = [
+  {
+    year: 2002,
+    title: "Opinion_polling_for_the_2002_French_presidential_election",
+    oldid: 1329460026,
+    round1Date: "2002-04-21",
+    round2Date: "2002-05-05",
+  },
+  {
+    year: 2007,
+    title: "Opinion_polling_for_the_2007_French_presidential_election",
+    oldid: 1341388824,
+    round1Date: "2007-04-22",
+    round2Date: "2007-05-06",
+  },
+  {
+    year: 2012,
+    title: "Opinion_polling_for_the_2012_French_presidential_election",
+    oldid: 1279812574,
+    round1Date: "2012-04-22",
+    round2Date: "2012-05-06",
+  },
   {
     year: 2017,
     title: "Opinion_polling_for_the_2017_French_presidential_election",
@@ -129,11 +161,57 @@ const CANDIDATES: Record<string, string> = {
   "Martine Aubry": "aubry",
   "Philippe de Villiers": "de_villiers",
   "Bruno Retailleau": "retailleau",
+  // 2002–2012
+  "Arlette Laguiller": "laguiller",
+  "Daniel Gluckstein": "gluckstein",
+  "Gérard Schivardi": "schivardi",
+  "Robert Hue": "hue",
+  "Marie-George Buffet": "buffet",
+  "Clémentine Autain": "autain",
+  "Patrick Braouezec": "braouezec",
+  "José Bové": "bove",
+  "Lionel Jospin": "jospin",
+  "Laurent Fabius": "fabius",
+  "Dominique Strauss-Kahn": "strauss_kahn",
+  "Jack Lang (French politician)": "lang",
+  "Henri Emmanuelli": "emmanuelli",
+  "Bertrand Delanoë": "delanoe",
+  "Noël Mamère": "mamere",
+  "Alain Lipietz": "lipietz",
+  "Dominique Voynet": "voynet",
+  "Brice Lalonde": "lalonde",
+  "Jean Saint-Josse": "saint_josse",
+  "Frédéric Nihous": "nihous",
+  "Jacques Chirac": "chirac",
+  "Alain Madelin": "madelin",
+  "Philippe Séguin": "seguin",
+  "François Léotard": "leotard",
+  "Édouard Balladur": "balladur",
+  "Charles Pasqua": "pasqua",
+  "Dominique de Villepin": "villepin",
+  "Jean-Louis Borloo": "borloo",
+  "Nicolas Miguet": "miguet",
+  "Bernard Tapie": "tapie",
+  "Dieudonné (comedian)": "dieudonne",
+  "Dieudonné M'bala M'bala": "dieudonne",
+  "Myriam Martin": "martin",
+  "Bruno Mégret": "megret",
+  "Jean-Marie Le Pen": "jm_le_pen",
 }
+
+// A column for a party's candidate before the party named one (header "(nominee)" and the party's
+// link), read as the candidate the party ran, by year.
+const NOMINEES: Record<number, Record<string, string>> = {
+  2012: { "New Anticapitalist Party": "poutou" },
+}
+
+// Polls the page itself says were not published before the vote (firm, fieldwork start and end).
+const UNPUBLISHED = new Set(["kantar|2007-04-20|2007-04-21"])
 
 const FIRMS: [RegExp, string][] = [
   [/ifop/i, "ifop"],
   [/elabe/i, "elabe"],
+  [/lh2|louis harris/i, "lh2"],
   [/odoxa/i, "odoxa"],
   [/opinion\s*way/i, "opinionway"],
   [/ipsos/i, "ipsos"],
@@ -352,6 +430,12 @@ function candidateOf(header: string): string | null {
   return null
 }
 
+function nomineeOf(year: number, header: string): string | null {
+  if (!/\(nominee\)/.test(header)) return null
+  const party = linkTargets(header).find((target) => NOMINEES[year]?.[target])
+  return party ? NOMINEES[year][party] : null
+}
+
 function parseShare(text: string): number | null | "absent" {
   const clean = stripMarkup(text)
     .replace(/\{\{[^{}]*\|([^{}|]*)\}\}/g, "$1")
@@ -435,7 +519,7 @@ function sections(wikitext: string): Section[] {
       round = /^first round$/i.test(heading) ? 1 : /^second round$/i.test(heading) ? 2 : null
     }
     // Sub-national tables and vote-transfer tables are not national voting intentions.
-    skipping = /by (region|constituency|first round vote)/i.test(heading)
+    skipping = /by (region|department|commune|constituency|first round vote)/i.test(heading)
   }
   push()
   return out
@@ -480,7 +564,7 @@ function extract(page: Page, wikitext: string, retrievedAt: string, summary: Sum
       const columns: { kind: string; candidate?: string }[] = []
       for (let column = 0; column < width; column++) {
         const text = headerRows.map((r) => r[column]?.cell.text ?? "").join(" ")
-        const candidate = candidateOf(text)
+        const candidate = candidateOf(text) ?? nomineeOf(page.year, text)
         const plain = stripMarkup(text).toLowerCase()
         if (candidate) columns.push({ kind: "candidate", candidate })
         else if (/polling|firm|sondeur/.test(plain)) columns.push({ kind: "firm" })
@@ -522,6 +606,10 @@ function extract(page: Page, wikitext: string, retrievedAt: string, summary: Sum
         const dates = parseDates(first[dateColumn].cell.text)
         if (!dates) {
           skip(summary, "unparsed fieldwork date")
+          continue
+        }
+        if (UNPUBLISHED.has(`${firm.firm}|${dates[0]}|${dates[1]}`)) {
+          skip(summary, "not published before the vote (the page says so)")
           continue
         }
         const sample = sampleColumn >= 0 ? parseSample(first[sampleColumn].cell.text) : null
@@ -717,8 +805,8 @@ function applyChecks(year: number, rows: Row[]): Row[] {
   return rows.filter((r) => !Number.isNaN(r.share))
 }
 
-const localDir = process.argv[2]
-for (const page of PAGES) {
+const [localDir, ...years] = process.argv.slice(2)
+for (const page of PAGES.filter((p) => years.length === 0 || years.includes(String(p.year)))) {
   const { text, retrievedAt } = await wikitextOf(page, localDir)
   const summary: Summary = { tables: 0, polls: 0, scenarios: 0, skipped: {}, unknownHeaders: new Set(), firms: new Map() }
   const rows = applyChecks(page.year, extract(page, text, retrievedAt, summary))

@@ -1,0 +1,71 @@
+# The 2002 field for the backtest (fr2027 backtest). Same schema and blocs as config/candidates.yaml.
+# Every person tested in a 2002 poll is listed so each poll resolves; the replays condition on the
+# field that actually ran (the "ran" slot options, p = 1), and everyone else has p = 0. Blocs are
+# judgement calls made for the backtest, recorded in research/LOG.md.
+schema_version: "1.0"
+as_of: 2002-04-21
+blocs: [far_left, left, centre, right, far_right, other]
+candidates:
+  - { id: laguiller, name: "Arlette Laguiller", party: "LO", bloc: far_left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: besancenot, name: "Olivier Besancenot", party: "LCR", bloc: far_left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: gluckstein, name: "Daniel Gluckstein", party: "PT", bloc: far_left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: bove, name: "José Bové", party: "SE", bloc: far_left, status: withdrawn, sources: [] }
+  - { id: hue, name: "Robert Hue", party: "PCF", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: jospin, name: "Lionel Jospin", party: "PS", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: chevenement, name: "Jean-Pierre Chevènement", party: "MDC", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: mamere, name: "Noël Mamère", party: "Verts", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: taubira, name: "Christiane Taubira", party: "PRG", bloc: left, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: voynet, name: "Dominique Voynet", party: "Verts", bloc: left, status: withdrawn, sources: [] }
+  - { id: lipietz, name: "Alain Lipietz", party: "Verts", bloc: left, status: withdrawn, sources: [] }
+  - { id: larrouturou, name: "Pierre Larrouturou", party: "DVG", bloc: left, status: withdrawn, sources: [] }
+  - { id: aubry, name: "Martine Aubry", party: "PS", bloc: left, status: withdrawn, sources: [] }
+  - { id: bayrou, name: "François Bayrou", party: "UDF", bloc: centre, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: lepage, name: "Corinne Lepage", party: "Cap21", bloc: centre, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: leotard, name: "François Léotard", party: "UDF", bloc: centre, status: withdrawn, sources: [] }
+  - { id: chirac, name: "Jacques Chirac", party: "RPR", bloc: right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: madelin, name: "Alain Madelin", party: "DL", bloc: right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: boutin, name: "Christine Boutin", party: "FRS", bloc: right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: seguin, name: "Philippe Séguin", party: "RPR", bloc: right, status: withdrawn, sources: [] }
+  - { id: balladur, name: "Édouard Balladur", party: "RPR", bloc: right, status: withdrawn, sources: [] }
+  - { id: jm_le_pen, name: "Jean-Marie Le Pen", party: "FN", bloc: far_right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: megret, name: "Bruno Mégret", party: "MNR", bloc: far_right, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: saint_josse, name: "Jean Saint-Josse", party: "CPNT", bloc: other, status: declared, sources: [{ url: "https://www.conseil-constitutionnel.fr/decision/2002/2002109PDR.htm", note: "Official round 1 result." }] }
+  - { id: pasqua, name: "Charles Pasqua", party: "RPF", bloc: other, status: withdrawn, sources: [] }
+  - { id: de_villiers, name: "Philippe de Villiers", party: "MPF", bloc: other, status: withdrawn, sources: [] }
+  - { id: waechter, name: "Antoine Waechter", party: "MEI", bloc: other, status: withdrawn, sources: [] }
+  - { id: lalonde, name: "Brice Lalonde", party: "GE", bloc: other, status: withdrawn, sources: [] }
+  - { id: dieudonne, name: "Dieudonné M'bala M'bala", party: "Les Utopistes", bloc: other, status: withdrawn, sources: [] }
+  - { id: miguet, name: "Nicolas Miguet", party: "RCF", bloc: other, status: withdrawn, sources: [] }
+  - { id: cheminade, name: "Jacques Cheminade", party: "SP", bloc: other, status: withdrawn, sources: [] }
+slots:
+  - { id: laguiller, options: [{ run: [laguiller], p: 1 }] }
+  - { id: besancenot, options: [{ run: [besancenot], p: 1 }] }
+  - { id: gluckstein, options: [{ run: [gluckstein], p: 1 }] }
+  - { id: bove, options: [{ run: [bove], p: 0 }] }
+  - { id: hue, options: [{ run: [hue], p: 1 }] }
+  - { id: jospin, options: [{ run: [jospin], p: 1 }] }
+  - { id: chevenement, options: [{ run: [chevenement], p: 1 }] }
+  - { id: mamere, options: [{ run: [mamere], p: 1 }] }
+  - { id: taubira, options: [{ run: [taubira], p: 1 }] }
+  - { id: voynet, options: [{ run: [voynet], p: 0 }] }
+  - { id: lipietz, options: [{ run: [lipietz], p: 0 }] }
+  - { id: larrouturou, options: [{ run: [larrouturou], p: 0 }] }
+  - { id: aubry, options: [{ run: [aubry], p: 0 }] }
+  - { id: bayrou, options: [{ run: [bayrou], p: 1 }] }
+  - { id: lepage, options: [{ run: [lepage], p: 1 }] }
+  - { id: leotard, options: [{ run: [leotard], p: 0 }] }
+  - { id: chirac, options: [{ run: [chirac], p: 1 }] }
+  - { id: madelin, options: [{ run: [madelin], p: 1 }] }
+  - { id: boutin, options: [{ run: [boutin], p: 1 }] }
+  - { id: seguin, options: [{ run: [seguin], p: 0 }] }
+  - { id: balladur, options: [{ run: [balladur], p: 0 }] }
+  - { id: jm_le_pen, options: [{ run: [jm_le_pen], p: 1 }] }
+  - { id: megret, options: [{ run: [megret], p: 1 }] }
+  - { id: saint_josse, options: [{ run: [saint_josse], p: 1 }] }
+  - { id: pasqua, options: [{ run: [pasqua], p: 0 }] }
+  - { id: de_villiers, options: [{ run: [de_villiers], p: 0 }] }
+  - { id: waechter, options: [{ run: [waechter], p: 0 }] }
+  - { id: lalonde, options: [{ run: [lalonde], p: 0 }] }
+  - { id: dieudonne, options: [{ run: [dieudonne], p: 0 }] }
+  - { id: miguet, options: [{ run: [miguet], p: 0 }] }
+  - { id: cheminade, options: [{ run: [cheminade], p: 0 }] }

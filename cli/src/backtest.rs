@@ -1,4 +1,4 @@
-//! `fr2027 backtest`: replay the model on 2017 and 2022, score it, fit the election-day error
+//! `fr2027 backtest`: replay the model on 2002–2022, score it, fit the election-day error
 //! settings, and write `research/backtest/results.json` and `report.md`.
 
 use std::path::PathBuf;
