@@ -39,7 +39,7 @@ The binary also runs on its own: `target/release/fr2027 forecast --as-of 2026-09
 | `model/`          | Rust            | The model, pure computation: field draws, bloc-nested Kalman poll aggregation, round 2, two-round Monte Carlo                       |
 | `collectors/`     | Rust            | Validates raw files against `schemas/`, writes `data/clean/`, quarantines rejects                                                   |
 | `fetch/`          | Rust            | Network readers: Polymarket, Kalshi, RSS feeds, Wikipedia page views, the Grok Bot inbox                                            |
-| `backtest/`       | Rust            | Replays 2002–2022 with the polls of each date, scores them, fits the election-day error settings                                    |
+| `backtest/`       | Rust            | Replays 2002–2022 with the polls of each date, scores them, fits the error settings, election-day and horizon                       |
 | `cli/`            | Rust            | The `fr2027` binary: `validate`, `ingest`, `forecast`, `backtest`, `collect`, `inbox`, `export`, `serve`                            |
 | `app/web/`        | TypeScript, Vue | The UI: Overview, Candidates, Round 1, Round 2, Signals, Sources and health; in French and thirteen other languages (see AGENTS.md) |
 | `app/worker/`     | TypeScript      | The Cloudflare Worker: serves the public site and the Grok Bot inbox                                                                |

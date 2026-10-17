@@ -3,7 +3,7 @@ layer: "library"
 
 project:
   title: "Backtest"
-  description: "Replays the model on 2002–2022, scores it against the results and a latest-poll baseline, and fits the election-day error settings."
+  description: "Replays the model on 2002–2022, scores it against the results and a latest-poll baseline, and fits the election-day and horizon error settings."
 
 dependsOn: ["model", "collectors"]
 

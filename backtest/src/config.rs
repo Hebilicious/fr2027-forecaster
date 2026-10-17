@@ -8,7 +8,7 @@ use fr2027_collectors::Repo;
 use jiff::civil::Date;
 use serde::{Deserialize, Serialize};
 
-use crate::{Error, Result};
+use crate::{Error, Result, report::Param};
 
 pub const CONFIG_FILE: &str = "backtest.yaml";
 
@@ -26,6 +26,8 @@ pub struct BacktestConfig {
     pub contender_share: f64,
     /// Probabilities are clipped to `[floor, 1 - floor]` before taking logs.
     pub probability_floor: f64,
+    /// The fit repeats its stages until a pass changes nothing, at most this many times.
+    pub max_passes: usize,
     pub elections: Vec<ElectionEntry>,
     /// Official results (`research/sources/results-2002-2022.csv`).
     pub results_file: PathBuf,
@@ -58,7 +60,26 @@ pub struct FinalPollsConfig {
 pub struct Grid {
     pub bloc_sd: Vec<f64>,
     pub candidate_sd: Vec<f64>,
+    pub horizon_bloc_sd: Vec<f64>,
+    pub horizon_candidate_sd: Vec<f64>,
+    pub student_t_df: Vec<f64>,
     pub round2_error_sd: Vec<f64>,
+    pub round2_horizon_error_sd: Vec<f64>,
+}
+
+impl Grid {
+    /// The values the fit tries for `param`.
+    pub fn values(&self, param: Param) -> &[f64] {
+        match param {
+            Param::BlocSd => &self.bloc_sd,
+            Param::CandidateSd => &self.candidate_sd,
+            Param::HorizonBlocSd => &self.horizon_bloc_sd,
+            Param::HorizonCandidateSd => &self.horizon_candidate_sd,
+            Param::StudentTDf => &self.student_t_df,
+            Param::Round2ErrorSd => &self.round2_error_sd,
+            Param::Round2HorizonErrorSd => &self.round2_horizon_error_sd,
+        }
+    }
 }
 
 impl BacktestConfig {
@@ -71,8 +92,8 @@ impl BacktestConfig {
     }
 
     fn check(&self) -> Result<(), String> {
-        if self.simulations == 0 {
-            return Err("simulations must be positive".into());
+        if self.simulations == 0 || self.max_passes == 0 {
+            return Err("simulations and max_passes must be positive".into());
         }
         if self.horizons_days.is_empty() || self.elections.is_empty() {
             return Err("needs at least one election and one horizon".into());
@@ -89,6 +110,18 @@ impl BacktestConfig {
             if values.is_empty() || values.iter().any(|v| !(v.is_finite() && *v > 0.0)) {
                 return Err(format!("grid.{name} must be a non-empty list of positive numbers"));
             }
+        }
+        for (name, values) in [
+            ("horizon_bloc_sd", &grid.horizon_bloc_sd),
+            ("horizon_candidate_sd", &grid.horizon_candidate_sd),
+            ("round2_horizon_error_sd", &grid.round2_horizon_error_sd),
+        ] {
+            if values.is_empty() || values.iter().any(|v| !(v.is_finite() && *v >= 0.0)) {
+                return Err(format!("grid.{name} must be a non-empty list of non-negative numbers"));
+            }
+        }
+        if grid.student_t_df.is_empty() || grid.student_t_df.iter().any(|v| !(v.is_finite() && *v > 2.0)) {
+            return Err("grid.student_t_df must be a non-empty list of numbers above 2".into());
         }
         Ok(())
     }

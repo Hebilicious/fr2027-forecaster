@@ -33,6 +33,7 @@ horizons_days: [60, 7]
 poll_window_days: 365
 contender_share: 0.10
 probability_floor: 0.001
+max_passes: 3
 elections:
   - { year: 2001, dir: data/backtest/2001, round1: 2001-04-22, round2: 2001-05-06 }
   - { year: 2006, dir: data/backtest/2006, round1: 2006-04-23, round2: 2006-05-07 }
@@ -45,7 +46,11 @@ final_polls:
 grid:
   bloc_sd: [0.06, 0.12, 0.2]
   candidate_sd: [0.05, 0.1]
+  horizon_bloc_sd: [0.0, 0.05]
+  horizon_candidate_sd: [0.0, 0.05]
+  student_t_df: [5]
   round2_error_sd: [0.04, 0.08, 0.16]
+  round2_horizon_error_sd: [0.0, 0.04]
 "#
     .to_string()
 }
@@ -164,12 +169,24 @@ fn runs_deterministically_and_fits_on_the_grid() {
         grid.round2_error_sd.contains(&first.fitted.round2_error_sd)
             || first.fitted.round2_error_sd == first.current.round2_error_sd
     );
-    // The chosen point never scores worse than the current setting on any source.
-    if let Some(point) = first.round1_grid.iter().find(|p| p.chosen) {
-        assert!(point.beats_current);
-        assert!(point.evidence.total(None) >= first.round1_reference.total(None));
+    // Each stage starts where the previous one ended, and its chosen point never scores worse
+    // than its start on any source.
+    assert!((1..=3).contains(&first.passes));
+    assert_eq!(first.stages.len(), 3 * first.passes);
+    assert_eq!(first.stages[0].start, first.current);
+    for pair in first.stages.windows(2) {
+        assert_eq!(pair[1].start, pair[0].chosen);
     }
-    assert!(first.round1_grid.iter().filter(|p| p.chosen).count() <= 1);
+    assert_eq!(first.stages.last().unwrap().chosen, first.fitted);
+    for stage in &first.stages {
+        if let Some(point) = stage.grid.iter().find(|p| p.chosen) {
+            assert!(point.beats_start);
+            assert!(point.evidence.total(None) >= stage.reference.total(None));
+            assert_eq!(point.setting, stage.chosen);
+        }
+        assert!(stage.grid.iter().filter(|p| p.chosen).count() <= 1);
+    }
+    assert_eq!(first.stages[0].grid.len(), 4);
     assert_eq!(first.leave_one_out.len(), 2);
 
     let report = first.markdown();

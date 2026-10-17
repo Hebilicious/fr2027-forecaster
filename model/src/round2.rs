@@ -237,6 +237,8 @@ mod tests {
             design_effect: 1.5,
             prior_sd: 1.5,
             error_sd: 0.08,
+            horizon_error_sd: 0.0,
+            student_t_df: 5.0,
             transfer_sd: 0.35,
             loyalty: 1.0,
             transfers: BTreeMap::from([

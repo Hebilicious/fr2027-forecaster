@@ -122,6 +122,23 @@ pub struct ErrorParams {
     pub bloc_sd: f64,
     /// Election-day polling error of a candidate within their bloc.
     pub candidate_sd: f64,
+    /// Further error of a bloc's log strength per square root of 30 days before round 1: what
+    /// the campaign still to come can change beyond the polls' own drift.
+    pub horizon_bloc_sd: f64,
+    /// The same for a candidate within their bloc.
+    pub horizon_candidate_sd: f64,
+}
+
+impl ErrorParams {
+    /// The standard deviations of the bloc and candidate errors for a forecast made `days`
+    /// before round 1: the election-day error and the horizon error, added in variance.
+    pub fn at_horizon(&self, days: f64) -> (f64, f64) {
+        let months = days.max(0.0) / 30.0;
+        (
+            (self.bloc_sd.powi(2) + self.horizon_bloc_sd.powi(2) * months).sqrt(),
+            (self.candidate_sd.powi(2) + self.horizon_candidate_sd.powi(2) * months).sqrt(),
+        )
+    }
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
@@ -132,6 +149,10 @@ pub struct Round2Params {
     pub prior_sd: f64,
     /// Election-day polling error on the logit of a finalist's share.
     pub error_sd: f64,
+    /// Further error on that logit per square root of 30 days before round 2.
+    pub horizon_error_sd: f64,
+    /// Degrees of freedom of the Student-t round 2 error, kept apart from round 1's.
+    pub student_t_df: f64,
     /// Uncertainty of a transfer-based estimate, on the logit scale.
     pub transfer_sd: f64,
     /// Share of a finalist's own first-round voters who vote for them again.
@@ -139,6 +160,13 @@ pub struct Round2Params {
     /// Relative propensity of each voter bloc to vote for a finalist of each bloc, or to abstain
     /// (key `abstain`).
     pub transfers: BTreeMap<String, BTreeMap<String, f64>>,
+}
+
+impl Round2Params {
+    /// The standard deviation of the round 2 error for a forecast made `days` before round 2.
+    pub fn error_at_horizon(&self, days: f64) -> f64 {
+        (self.error_sd.powi(2) + self.horizon_error_sd.powi(2) * days.max(0.0) / 30.0).sqrt()
+    }
 }
 
 /// Days since 1970-01-01.

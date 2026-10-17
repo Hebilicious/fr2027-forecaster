@@ -148,7 +148,7 @@ pub fn evaluate(election: &Election, replay: &Replay, params: &ModelParams) -> R
     let n = election.field.len();
     let (first, second) = election.finalists;
     let realised_logit = logit(election.round2_share);
-    let df = params.round1_error.student_t_df;
+    let df = params.round2.student_t_df;
     let mut log_shares: Vec<Vec<f64>> = vec![Vec::new(); n];
     let mut matchup_density = 0.0;
     let mut matchup_draws = 0u32;
