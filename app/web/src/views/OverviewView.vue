@@ -249,7 +249,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
       <p v-else class="secondary">{{ content.noPrevious }}</p>
     </section>
 
-    <MethodSection :forecast="forecast" />
+    <MethodSection :blend="blend" :forecast="forecast" />
   </div>
 </template>
 

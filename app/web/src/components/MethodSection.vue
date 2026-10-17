@@ -1,22 +1,22 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
-import type { Forecast } from "../api/schemas"
+import type { Blend, Forecast } from "../api/schemas"
 import { FAMILIES } from "../candidates"
-import { count, dateTime, daysUntil, decimal, list, longDate, probability, safeUrl } from "../format"
+import { count, dateTime, daysUntil, decimal, list, longDate, percent, probability, safeUrl } from "../format"
 import { labelOf } from "../labels"
 
 // How the model works, told with the numbers of the forecast on screen: every figure is read from that run and its
 // recorded settings (`forecast.parameters`), so the section cannot describe a model other than the one shown.
 // method.test.ts checks that every setting the forecast schema lists has a label here.
 
-const props = defineProps<{ forecast: Forecast }>()
+const props = defineProps<{ forecast: Forecast; blend?: Blend | null }>()
 const content = useIntlayer("method-section")
 const common = useIntlayer("common")
 const { locale } = useLocale()
 
 const LOG_URL = "https://github.com/Hebilicious/fr2027-forecaster/blob/main/research/LOG.md"
-const numerals = ["I", "II", "III", "IV", "V"]
+const numerals = ["I", "II", "III", "IV", "V", "VI"]
 
 const f = computed(() => props.forecast)
 const parameters = computed(() => f.value.parameters)
@@ -60,6 +60,28 @@ const runoffs = computed(() => {
   const anchored = pairs.filter((p) => !p.polled && p.anchor).length
   return { polled, anchored, transfers: pairs.length - polled - anchored }
 })
+
+// The news, social and market weights the run used, from its `signals` and `ballot` records and the published
+// blend; forecasts from before model 0.5.0 have none, and the step is left out.
+const signals = computed(() => f.value.signals)
+type SignalSetting = "shockSd" | "halfLife" | "momentum" | "xMomentum" | "ballot" | "blend"
+const signalSettings = computed(() => {
+  const s = signals.value
+  if (!s) return []
+  const rows: { key: SignalSetting; value: string }[] = [
+    { key: "shockSd", value: decimal(s.shock_sd, 2, locale.value) },
+    { key: "halfLife", value: decimal(s.half_life_days, 0, locale.value) },
+    { key: "momentum", value: decimal(s.momentum_weight, 2, locale.value) },
+  ]
+  if (s.x_momentum_weight !== undefined) {
+    rows.push({ key: "xMomentum", value: decimal(s.x_momentum_weight, 2, locale.value) })
+  }
+  if (f.value.ballot) rows.push({ key: "ballot", value: percent(1 - f.value.ballot.hand_weight, 0, locale.value) })
+  if (props.blend) rows.push({ key: "blend", value: percent(1 - props.blend.model_weight, 0, locale.value) })
+  return rows
+})
+// The steps after round 1 move down one when the signals step is shown.
+const later = computed(() => (signals.value ? 1 : 0))
 
 type Group = "round1_error" | "round2"
 const settings = (group: Group): { key: string; value: string }[] => {
@@ -170,8 +192,23 @@ const columnLabel = (key: string) => (key === "abstain" ? content.abstain.value 
         </div>
       </li>
 
-      <li class="step">
+      <li v-if="signals" class="step">
         <span aria-hidden="true" class="numeral">{{ numerals[3] }}</span>
+        <div class="body">
+          <h3>{{ content.signals.title }}</h3>
+          <p class="figure">{{ content.signals.figure({ count: count(signals.spikes.length, locale) }) }}</p>
+          <p class="secondary">{{ content.signals.text }}</p>
+          <dl class="settings small">
+            <template v-for="s in signalSettings" :key="s.key">
+              <dt>{{ content.signals.settings[s.key] }}</dt>
+              <dd class="num">{{ s.value }}</dd>
+            </template>
+          </dl>
+        </div>
+      </li>
+
+      <li class="step">
+        <span aria-hidden="true" class="numeral">{{ numerals[3 + later] }}</span>
         <div class="body">
           <h3>{{ content.round2.title }}</h3>
           <p class="figure">
@@ -220,7 +257,7 @@ const columnLabel = (key: string) => (key === "abstain" ? content.abstain.value 
       </li>
 
       <li class="step">
-        <span aria-hidden="true" class="numeral">{{ numerals[4] }}</span>
+        <span aria-hidden="true" class="numeral">{{ numerals[4 + later] }}</span>
         <div class="body">
           <h3>{{ content.simulation.title }}</h3>
           <p class="figure">{{ content.simulation.figure({ sims: count(f.simulations, locale) }) }}</p>
