@@ -84,7 +84,18 @@ const ForecastSignals = Schema.Struct({
   shock_sd: Schema.Finite,
   half_life_days: Schema.Finite,
   momentum_weight: Schema.Finite,
+  x_momentum_weight: Schema.optionalKey(Schema.Finite),
   spikes: Schema.Array(Spike),
+  momentum: Schema.optionalKey(Schema.Array(Schema.Struct({ candidate_id: Schema.String, tilt: Schema.Finite }))),
+})
+
+/** Who runs: the hand-set chances and the ballot prices they were pooled with. */
+const Ballot = Schema.Struct({
+  hand_weight: Schema.Finite,
+  market_fetched_at: Schema.NullOr(Schema.String),
+  candidates: Schema.Array(
+    Schema.Struct({ candidate_id: Schema.String, p_run_hand: Schema.Finite, p_market: Schema.Finite }),
+  ),
 })
 
 export const Forecast = Schema.Struct({
@@ -112,6 +123,7 @@ export const Forecast = Schema.Struct({
   }),
   parameters: Schema.optional(Parameters),
   signals: Schema.optionalKey(ForecastSignals),
+  ballot: Schema.optionalKey(Ballot),
   changes: Schema.Struct({
     previous: Schema.NullOr(Schema.String),
     new_polls: Schema.Array(Schema.String),
@@ -429,11 +441,15 @@ const BlendCandidate = Schema.Struct({
 /** `api/blend.json`: the latest forecast pooled with the newest market snapshot (model/src/blend.rs). */
 export const Blend = Schema.Struct({
   forecast: Schema.NullOr(Schema.String),
-  /** The weight on the model; 1 is the model alone. */
+  /** The published weight on the model; 1 is the model alone. */
   model_weight: Schema.Finite,
+  /** Probabilities are clipped to [floor, 1 − floor] before taking logs. */
+  probability_floor: Schema.Finite,
   market_fetched_at: Schema.NullOr(Schema.String),
   /** False when the newest snapshot is too old to blend. */
   market_used: Schema.Boolean,
+  /** The markets' share, for who wins, on people outside the field. */
+  market_others_win: Schema.Finite,
   candidates: Schema.Array(BlendCandidate),
 })
 export type Blend = typeof Blend.Type

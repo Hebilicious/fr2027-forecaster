@@ -188,6 +188,7 @@ fn prepare_all(elections: &[Election], model: &ModelParams, config: &BacktestCon
 pub fn run(
     elections: &[Election],
     polls_only: &[Replay],
+    published: &[Replay],
     model: &ModelParams,
     config: &BacktestConfig,
     ablation: &AblationConfig,
@@ -200,7 +201,41 @@ pub fn run(
         .collect();
     let mut reference = polls_only.to_vec();
     let reference_scores = scores(&evaluate(elections, &mut reference, &contenders)?, floor);
-    let mut variants = Vec::new();
+    // The published settings first: the replays the rest of the backtest scored, with
+    // config/model.yaml's signal layers.
+    let mut published_replays = published.to_vec();
+    let published_scores = scores(&evaluate(elections, &mut published_replays, &contenders)?, floor);
+    progress(&format!(
+        "signals ablation, published settings: share log score {:.1} (polls only {:.1})",
+        published_scores.overall.share_log_score, reference_scores.overall.share_log_score
+    ));
+    let mut variants = vec![VariantResult {
+        variant: Variant {
+            name: "published settings (config/model.yaml)".into(),
+            sources: model.signals.sources.clone(),
+            spike_ratio: None,
+            half_life_days: None,
+            attention_floor: None,
+            news_floor: None,
+            momentum_weight: None,
+            widening: None,
+        },
+        signals: published
+            .first()
+            .map_or_else(|| model.signals.clone(), |r| r.params.signals.clone()),
+        replays: published_replays
+            .iter()
+            .map(|r| VariantReplay {
+                year: r.year,
+                horizon_days: r.horizon_days,
+                spikes: r.fit.round1.spikes.len(),
+                shock_sd: r.fit.round1.noise.shock_sd,
+            })
+            .collect(),
+        has_effect: true,
+        adoptable: at_least(&published_scores, &reference_scores),
+        scores: published_scores,
+    }];
     for variant in &ablation.variants {
         let mut params = model.clone();
         params.signals = variant.params(&model.signals, &ablation.shock_sd_grid);
@@ -216,7 +251,7 @@ pub fn run(
             replay_scores.overall.share_log_score,
             reference_scores.overall.share_log_score,
             if adoptable {
-                ", adoptable"
+                ", no worse"
             } else if has_effect {
                 ""
             } else {

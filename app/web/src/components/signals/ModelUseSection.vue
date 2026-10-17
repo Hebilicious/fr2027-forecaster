@@ -17,6 +17,7 @@ const { locale } = useLocale()
 
 const signals = computed(() => props.forecast.signals)
 const marketWeight = computed(() => (props.blend ? 1 - props.blend.model_weight : 0))
+const ballotWeight = computed(() => (props.forecast.ballot ? 1 - props.forecast.ballot.hand_weight : 0))
 const summary = computed(() => props.forward.summary)
 
 // A spike's size as how far the day stood above its baseline; an X shift in points of support.
@@ -51,6 +52,16 @@ function size(flag: ForwardFlag): string {
             <td class="num">
               {{ signals && signals.momentum_weight !== 0 ? decimal(signals.momentum_weight, 2, locale) : content.off }}
             </td>
+          </tr>
+          <tr>
+            <th scope="row">{{ content.xMomentum }}</th>
+            <td class="num">
+              {{ signals?.x_momentum_weight ? decimal(signals.x_momentum_weight, 2, locale) : content.off }}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">{{ content.ballot }}</th>
+            <td class="num">{{ ballotWeight > 0 ? percent(ballotWeight, 0, locale) : content.off }}</td>
           </tr>
           <tr>
             <th scope="row">{{ content.blend }}</th>

@@ -632,11 +632,13 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
     let signals_ablation = match &config.signals_ablation {
         None => None,
         Some(ablation_config) => {
-            // The reference is the polls only. The replays above are, unless config/model.yaml
-            // already lets spikes add variance.
+            // The reference is the polls only: no spike variance, no momentum. The replays above
+            // are that only when config/model.yaml turns every signal layer off.
             let mut polls_only_model = model.clone();
             polls_only_model.signals.shock_sd_grid = vec![0.0];
-            let polls_only = if model.signals.shock_sd_grid.iter().all(|v| *v == 0.0) {
+            polls_only_model.signals.momentum_weight = 0.0;
+            polls_only_model.signals.x_momentum_weight = 0.0;
+            let polls_only = if model.signals == polls_only_model.signals {
                 replays.clone()
             } else {
                 let mut fitted = Vec::new();
@@ -650,6 +652,7 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
             Some(ablation::run(
                 &elections,
                 &polls_only,
+                &replays,
                 &polls_only_model,
                 &config,
                 ablation_config,
@@ -1124,14 +1127,14 @@ fn year_list(years: &[i16]) -> String {
 fn ablation_markdown(out: &mut String, ablation: &Ablation) {
     let _ = writeln!(
         out,
-        "\n## Signal layers\n\nEvery replay fitted again with news and attention spikes allowed to add variance (model/src/signals.rs), `shock_sd` chosen by marginal likelihood from {:?}, and simulated at the current election-day errors. Contenders are those of the polls-only replays. A variant is adoptable when it changes something (the polls chose a `shock_sd` above zero, or the momentum tilted a vote, in at least one replay) and it scores at least as well as the polls only on both elections, on the share log score, the runoff log score and the qualification and win log-loss.\n",
+        "\n## Signal layers\n\nEvery replay fitted again with news and attention spikes allowed to add variance (model/src/signals.rs), `shock_sd` chosen by marginal likelihood from {:?}, and simulated at the current election-day errors. Contenders are those of the polls-only replays. The first row is the published settings, the signal weights in config/model.yaml, which the owner sets; the others are alternatives. \"No worse\" marks a row that changes something (a `shock_sd` above zero, or a momentum tilt, in at least one replay) and scores at least as well as the polls only on both elections, on the share log score, the runoff log score and the qualification and win log-loss.\n",
         ablation.shock_sd_grid
     );
     let _ = writeln!(out, "{SUMMARY_HEADER}");
     let _ = writeln!(out, "{}", summary_row("Polls only", &ablation.polls_only.overall));
     for v in &ablation.variants {
         let mark = if v.adoptable {
-            " (adoptable)"
+            " (no worse)"
         } else if !v.has_effect {
             " (no effect)"
         } else {
@@ -1196,7 +1199,7 @@ fn blend_markdown(out: &mut String, fit: Option<&crate::blend::BlendFit>, config
         .collect();
     let _ = writeln!(
         out,
-        "The model at the current settings pooled with the last market prices published by each replay's date (model/src/blend.rs), at each weight on the model; mean log-loss of who qualifies and who wins. Elections with market history: {}. The rule: among the weights at least as good as the model alone on every such election, the lowest total. Fitted weight on the model: **{}**.\n",
+        "The model at the current settings pooled with the last market prices published by each replay's date (model/src/blend.rs), at each weight on the model; mean log-loss of who qualifies and who wins. Like the model, the markets are conditioned on the field that ran: each venue's prices on the runners are scaled to sum to 1. Elections with market history: {}. The best weight by the backtest's rule (among the weights at least as good as the model alone on every such election, the lowest total): **{}**. The published weight is config/model.yaml's `market_blend.model_weight`, set by the owner.\n",
         years.join(", "),
         fit.fitted
     );

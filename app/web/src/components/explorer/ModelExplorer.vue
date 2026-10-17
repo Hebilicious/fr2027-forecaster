@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, useId } from "vue"
-import { useIntlayer } from "vue-intlayer"
-import type { Forecast, HistoryRun, TrackRecord as TrackRecordData } from "../../api/schemas"
+import { useIntlayer, useLocale } from "vue-intlayer"
+import type { Blend, Forecast, HistoryRun, TrackRecord as TrackRecordData } from "../../api/schemas"
+import { percent } from "../../format"
 import ChancesOverTime from "./ChancesOverTime.vue"
 import PathsToVictory from "./PathsToVictory.vue"
 import PollsterLeans from "./PollsterLeans.vue"
@@ -11,8 +12,10 @@ const props = defineProps<{
   forecast: Forecast
   history: readonly HistoryRun[]
   trackRecord: TrackRecordData | null
+  blend?: Blend | null
 }>()
 const content = useIntlayer("model-explorer")
+const { locale } = useLocale()
 
 const tabs = ["paths", "time", "pollsters", "record"] as const
 type Tab = (typeof tabs)[number]
@@ -50,6 +53,10 @@ const hasRecord = computed(() => (props.trackRecord?.by_horizon.length ?? 0) > 0
       <p class="eyebrow"><span class="tricolore-rule" />{{ content.eyebrow }}</p>
       <h2 id="explorer-title">{{ content.title }}</h2>
       <p class="secondary">{{ content.help }}</p>
+      <!-- The headline chances mix in the markets and follow the reader's settings; these are the model's. -->
+      <p v-if="blend" class="small muted model-only">
+        {{ content.modelOnly({ weight: percent(1 - blend.model_weight, 0, locale) }) }}
+      </p>
     </header>
 
     <div class="tablist" role="tablist" :aria-label="content.tabsLabel.value" :style="{ '--active': activeIndex }">
@@ -97,6 +104,11 @@ const hasRecord = computed(() => (props.trackRecord?.by_horizon.length ?? 0) > 0
 </template>
 
 <style scoped>
+.model-only {
+  margin-top: 8px;
+  max-width: 70ch;
+}
+
 .explorer h2 {
   font-size: clamp(1.5rem, 2.4vw, 2rem);
 }
