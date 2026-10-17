@@ -1,6 +1,7 @@
 //! News volume from GDELT: `data/raw/gdelt/YYYY-MM-DD.json` → `data/clean/gdelt.csv`, one row
-//! per candidate per day: how many articles from French outlets, in French, named the candidate.
-//! When two fetches cover the same day, the later one wins.
+//! per candidate per day: how many French-language articles GDELT read named the candidate, in a
+//! one-in-four sample of its raw files (`fetch/src/gdelt.rs`). When two fetches cover the same day,
+//! the later one wins.
 //!
 //! The RSS headlines in `news.csv` are what the Signals view lists; this is the daily count the
 //! model's event detection reads, because GDELT also has it for 2017 and 2022, so the backtest
@@ -18,9 +19,6 @@ use crate::{
 pub const CLEAN_FILE: &str = "gdelt.csv";
 const HEADER: &str = "date,candidate_id,query,articles,total_articles,source_file";
 
-/// The filter every query carries: outlets based in France, writing in French.
-pub const SOURCE_FILTER: &str = "sourcecountry:FR sourcelang:french";
-
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Fetch {
     pub schema_version: String,
@@ -33,6 +31,7 @@ pub struct Fetch {
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CandidateCounts {
     pub candidate_id: String,
+    /// How the candidate was matched.
     pub query: String,
     pub status: String,
     pub error: Option<String>,
@@ -42,9 +41,9 @@ pub struct CandidateCounts {
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct DayCount {
     pub date: String,
-    /// Articles matching the query.
+    /// French articles naming the candidate, in the day's sample.
     pub articles: u64,
-    /// Every article GDELT monitored that day (its `norm`), for scale.
+    /// Every French article in the day's sample, for scale.
     pub total_articles: u64,
 }
 
@@ -64,18 +63,6 @@ pub struct GdeltIngest {
     pub accepted: usize,
     pub rejections: Vec<Rejection>,
     pub latest_fetch: Option<String>,
-}
-
-/// The GDELT query for a candidate: any of the names a headline uses, as exact phrases, in French
-/// outlets based in France.
-pub fn query(names: &[String]) -> String {
-    let phrases: Vec<String> = names.iter().map(|n| format!("\"{n}\"")).collect();
-    let terms = if phrases.len() == 1 {
-        phrases[0].clone()
-    } else {
-        format!("({})", phrases.join(" OR "))
-    };
-    format!("{terms} {SOURCE_FILTER}")
 }
 
 pub fn check(stem: Option<&str>, fetch: &Fetch, config: &CandidatesConfig) -> Vec<String> {
@@ -173,17 +160,6 @@ pub fn read_clean_rows(repo: &Repo) -> Result<Vec<GdeltRow>> {
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    #[test]
-    fn queries_quote_every_name() {
-        let one = query(&["Édouard Philippe".into()]);
-        assert_eq!(one, "\"Édouard Philippe\" sourcecountry:FR sourcelang:french");
-        let two = query(&["Marine Le Pen".into(), "Le Pen".into()]);
-        assert_eq!(
-            two,
-            "(\"Marine Le Pen\" OR \"Le Pen\") sourcecountry:FR sourcelang:french"
-        );
-    }
 
     #[test]
     fn later_fetch_wins() {

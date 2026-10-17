@@ -20,14 +20,15 @@ pub enum Source {
     /// Daily Wikipedia page views per candidate → data/raw/attention/<date>.json. Skips when
     /// today's file exists.
     Attention(AttentionArgs),
-    /// Daily counts of French articles naming each candidate (GDELT) → data/raw/gdelt/<date>.json.
-    /// Skips when today's file exists.
+    /// Daily counts of French-language articles naming each candidate, from GDELT's raw files →
+    /// data/raw/gdelt/<date>.json. Skips when today's file exists.
     Gdelt(GdeltArgs),
 }
 
 #[derive(clap::Args)]
 pub struct GdeltArgs {
-    /// First day (default: thirteen days before --end).
+    /// First day (default: two days before --end, so a day GDELT was still filling is counted
+    /// again).
     #[arg(long)]
     start: Option<Date>,
     /// Last day (default: yesterday, UTC).
@@ -251,35 +252,31 @@ fn collect_gdelt(repo: &Repo, inputs: &Inputs, client: &Client, now: Timestamp, 
         println!("{} already exists; nothing to do today", repo.relative(&path));
         return Ok(());
     }
-    // Two weeks, so a day GDELT was still indexing is counted again the next days.
     let end = args.end.unwrap_or(today.yesterday()?);
-    let start = args.start.unwrap_or(end.checked_sub(13.days())?);
+    let start = args.start.unwrap_or(end.checked_sub(2.days())?);
     if start > end {
         bail!("--start {start} is after --end {end}");
     }
-    let mut reader = gdelt_api::Reader::new(client);
-    let mut candidates = Vec::new();
-    for (candidate_id, entry) in &inputs.sources.candidates {
-        let query = gdelt::query(&entry.names);
-        let (status, error, days) = match reader.fetch(&query, start, end) {
-            Ok(days) => ("ok", None, days),
-            Err(error) => {
-                eprintln!("warning: {candidate_id}: {error}");
-                ("error", Some(error.to_string()), Vec::new())
-            }
-        };
-        candidates.push(gdelt::CandidateCounts {
-            candidate_id: candidate_id.clone(),
-            query,
-            status: status.into(),
-            error,
+    let matcher = gdelt_api::Matcher::new(&inputs.sources.candidates);
+    let counts = gdelt_api::count_days(client, &matcher, start, end, gdelt_api::WORKERS, &|line| {
+        println!("GDELT: {line}")
+    })?;
+    let candidates: Vec<gdelt::CandidateCounts> = matcher
+        .people()
+        .iter()
+        .zip(counts)
+        .map(|(person, (candidate_id, days))| gdelt::CandidateCounts {
+            query: person.description(&inputs.sources.candidates[&candidate_id].names),
+            candidate_id,
+            status: "ok".into(),
+            error: None,
             days,
-        });
-    }
+        })
+        .collect();
     let ok = candidates.iter().filter(|c| c.status == "ok").count();
     println!("{ok} of {} candidates counted, {start} to {end}", candidates.len());
-    if ok == 0 {
-        bail!("GDELT answered for no candidate; nothing written");
+    if candidates.iter().all(|c| c.days.is_empty()) {
+        bail!("no GDELT file for {start} to {end}; nothing written");
     }
     let fetch = gdelt::Fetch {
         schema_version: "1.0".into(),

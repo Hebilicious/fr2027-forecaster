@@ -2,8 +2,8 @@ name: Backtest signals
 
 # Fetches a past election's page views or news volume (`fr2027 backtest-signals`) on a GitHub
 # runner and uploads the files as an artifact, to be committed by hand into data/backtest/<year>/.
-# GDELT allows one request every 5 seconds per address, and a home connection behind a carrier's
-# shared address can stay refused for hours; a runner has its own address.
+# The news volume reads about 9,000 of GDELT's raw files a year (some 60 GB); a runner's network
+# does it faster than a home connection.
 #
 # Run it from the Actions tab, or push a branch named backtest-signals/<anything> to fetch every
 # election's news volume.
@@ -57,8 +57,7 @@ jobs:
     name: fetch ${{ matrix.year }}
     needs: plan
     runs-on: ubuntu-24.04
-    # GDELT is read 92 days at a time, 8 seconds apart, with minutes of back-off when refused.
-    timeout-minutes: 340
+    timeout-minutes: 240
     strategy:
       fail-fast: false
       matrix:
@@ -86,8 +85,6 @@ jobs:
       - name: Fetch
         env:
           YEAR: ${{ matrix.year }}
-          # Runners share their addresses; GDELT refused a second request 8 seconds after the first.
-          FR2027_GDELT_SPACING_SECS: "45"
           SOURCE: ${{ inputs.source || 'news' }}
         run: |
           [[ "$YEAR" =~ ^[0-9]{4}$ ]] || { echo "::error::year must be YYYY"; exit 1; }

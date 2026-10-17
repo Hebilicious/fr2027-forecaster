@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "gdelt.schema.json",
   "title": "GDELT news volume",
-  "description": "data/raw/gdelt/YYYY-MM-DD.json (UTC day of the fetch), and data/backtest/<year>/gdelt.json: per candidate and day, how many articles from outlets based in France, in French, matched the candidate's query in the GDELT DOC 2.0 API (mode timelinevolraw), and how many articles GDELT monitored that day. A later fetch of the same day replaces an earlier one in data/clean/gdelt.csv.",
+  "description": "data/raw/gdelt/YYYY-MM-DD.json (UTC day of the fetch): per candidate and day, how many French-language articles in GDELT's raw Global Knowledge Graph files (translation stream, the file at minute 00 of each hour) named the candidate in their title or their list of people, and how many French-language articles that sample held. A later fetch of the same day replaces an earlier one in data/clean/gdelt.csv.",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "fetched_at", "start", "end", "candidates"],

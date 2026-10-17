@@ -8,7 +8,7 @@ use fr2027_backtest::{
     config::BacktestConfig,
     signals::{self, AttentionRow, NewsRow, SignalSources},
 };
-use fr2027_collectors::{Repo, csv_bytes, gdelt, write};
+use fr2027_collectors::{Repo, csv_bytes, write};
 use fr2027_fetch::{Client, gdelt as gdelt_api, timestamp, wikipedia};
 use jiff::Timestamp;
 
@@ -130,14 +130,20 @@ fn fetch_attention(client: &Client, project: &str, sources: &SignalSources) -> R
 }
 
 fn fetch_news(client: &Client, sources: &SignalSources) -> Result<Vec<NewsRow>> {
-    let mut reader = gdelt_api::Reader::new(client);
+    let matcher = gdelt_api::Matcher::new(&sources.candidates);
+    let counts = gdelt_api::count_days(
+        client,
+        &matcher,
+        sources.start,
+        sources.end,
+        gdelt_api::WORKERS,
+        &|line| eprintln!("GDELT: {line}"),
+    )
+    .context("GDELT")?;
+    let retrieved_at = timestamp(Timestamp::now());
     let mut rows = Vec::new();
-    for (candidate_id, entry) in &sources.candidates {
-        let query = gdelt::query(&entry.names);
-        let days = reader
-            .fetch(&query, sources.start, sources.end)
-            .with_context(|| format!("{candidate_id}: GDELT"))?;
-        let retrieved_at = timestamp(Timestamp::now());
+    for (person, (candidate_id, days)) in matcher.people().iter().zip(counts) {
+        let query = person.description(&sources.candidates[&candidate_id].names);
         for day in days {
             rows.push(NewsRow {
                 date: day.date.parse().context("GDELT date")?,
@@ -148,7 +154,6 @@ fn fetch_news(client: &Client, sources: &SignalSources) -> Result<Vec<NewsRow>> 
                 retrieved_at: retrieved_at.clone(),
             });
         }
-        eprintln!("{candidate_id}: news volume fetched");
     }
     rows.sort_by(|a, b| (a.date, &a.candidate_id).cmp(&(b.date, &b.candidate_id)));
     Ok(rows)
