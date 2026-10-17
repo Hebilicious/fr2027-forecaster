@@ -14,6 +14,8 @@ export default {
       ko: "가능한 모든 대결",
       "zh-Hans": "所有可能的对决",
       th: "คู่ชิงที่เป็นไปได้ทั้งหมด",
+      pl: "Wszystkie możliwe pojedynki",
+      ru: "Все возможные дуэли",
     }),
     matchupCell: insert(
       t({
@@ -27,6 +29,8 @@ export default {
         ko: "확률 {{p}} · 행 후보 승률 {{w}}",
         "zh-Hans": "概率 {{p}} · 行候选人胜率 {{w}}",
         th: "โอกาส {{p}} · ผู้สมัครในแถวชนะ {{w}}",
+        pl: "{{p}} szans · kandydat z wiersza wygrywa {{w}}",
+        ru: "{{p}} шансов · кандидат из строки побеждает {{w}}",
       }),
     ),
     matrixScale: t({
@@ -40,6 +44,8 @@ export default {
       ko: "대결 성사 확률",
       "zh-Hans": "对决出现的概率",
       th: "โอกาสที่คู่ชิงนี้จะเกิดขึ้น",
+      pl: "Prawdopodobieństwo, że pojedynek się odbędzie",
+      ru: "Вероятность, что дуэль состоится",
     }),
     matrixFigures: t({
       fr: "Dans chaque case, le grand chiffre est la probabilité que le duel ait lieu ; le petit, la fréquence à laquelle le candidat de la ligne l'emporte.",
@@ -55,6 +61,8 @@ export default {
       ko: "각 칸의 큰 숫자는 대결이 성사될 확률, 작은 숫자는 행 후보가 이기는 빈도입니다.",
       "zh-Hans": "每个格子中，大数字是该组对决出现的概率；小数字是行候选人在其中胜出的频率。",
       th: "ในแต่ละช่อง ตัวเลขใหญ่คือโอกาสที่คู่ชิงนี้จะเกิดขึ้น ตัวเลขเล็กคือความถี่ที่ผู้สมัครในแถวเป็นฝ่ายชนะ",
+      pl: "W każdej komórce duża liczba to prawdopodobieństwo, że pojedynek się odbędzie, a mała to częstotliwość, z jaką wygrywa kandydat z wiersza.",
+      ru: "В каждой ячейке большое число — вероятность, что дуэль состоится, а маленькое — частота, с которой побеждает кандидат из строки.",
     }),
     topMatchups: t({
       fr: "Duels les plus probables",
@@ -67,6 +75,8 @@ export default {
       ko: "가장 유력한 대결",
       "zh-Hans": "最可能的对决",
       th: "คู่ชิงที่น่าจะเกิดขึ้นมากที่สุด",
+      pl: "Najbardziej prawdopodobne pojedynki",
+      ru: "Самые вероятные дуэли",
     }),
     pairing: t({
       fr: "Duel",
@@ -79,6 +89,8 @@ export default {
       ko: "대결",
       "zh-Hans": "对决",
       th: "คู่ชิง",
+      pl: "Pojedynek",
+      ru: "Дуэль",
     }),
     happens: t({
       fr: "Probabilité",
@@ -91,6 +103,8 @@ export default {
       ko: "성사 확률",
       "zh-Hans": "出现概率",
       th: "โอกาสเกิดขึ้น",
+      pl: "Prawdopodobieństwo",
+      ru: "Вероятность",
     }),
     winner: t({
       fr: "Qui l'emporte",
@@ -103,6 +117,8 @@ export default {
       ko: "승자",
       "zh-Hans": "胜者",
       th: "ผู้ชนะ",
+      pl: "Kto wygrywa",
+      ru: "Кто побеждает",
     }),
     polledBadge: t({
       fr: "sondé en duel",
@@ -115,6 +131,8 @@ export default {
       ko: "양자 대결 조사",
       "zh-Hans": "有一对一民调",
       th: "มีโพลแบบตัวต่อตัว",
+      pl: "badanie w pojedynku",
+      ru: "очный опрос",
     }),
     modelledBadge: t({
       fr: "par reports de voix",
@@ -127,6 +145,8 @@ export default {
       ko: "표 이동으로 추정",
       "zh-Hans": "按选票转移推算",
       th: "คำนวณจากการโอนคะแนนเสียง",
+      pl: "przez transfer głosów",
+      ru: "по переходам голосов",
     }),
   },
 } satisfies Dictionary

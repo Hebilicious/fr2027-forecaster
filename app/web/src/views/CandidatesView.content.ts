@@ -15,6 +15,8 @@ export default {
         ko: "극좌",
         "zh-Hans": "极左翼",
         th: "ซ้ายจัด",
+        pl: "Skrajna lewica",
+        ru: "Крайне левые",
       }),
       left: t({
         fr: "Gauche",
@@ -27,6 +29,8 @@ export default {
         ko: "좌파",
         "zh-Hans": "左翼",
         th: "ฝ่ายซ้าย",
+        pl: "Lewica",
+        ru: "Левые",
       }),
       centre: t({
         fr: "Centre",
@@ -39,6 +43,8 @@ export default {
         ko: "중도",
         "zh-Hans": "中间派",
         th: "สายกลาง",
+        pl: "Centrum",
+        ru: "Центр",
       }),
       right: t({
         fr: "Droite",
@@ -51,6 +57,8 @@ export default {
         ko: "우파",
         "zh-Hans": "右翼",
         th: "ฝ่ายขวา",
+        pl: "Prawica",
+        ru: "Правые",
       }),
       far_right: t({
         fr: "Extrême droite",
@@ -63,6 +71,8 @@ export default {
         ko: "극우",
         "zh-Hans": "极右翼",
         th: "ขวาจัด",
+        pl: "Skrajna prawica",
+        ru: "Крайне правые",
       }),
       other: t({
         fr: "Autres",
@@ -75,6 +85,8 @@ export default {
         ko: "기타",
         "zh-Hans": "其他",
         th: "อื่น ๆ",
+        pl: "Inni",
+        ru: "Другие",
       }),
     },
     statuses: {
@@ -89,6 +101,8 @@ export default {
         ko: "출마 선언",
         "zh-Hans": "已宣布参选",
         th: "ประกาศลงสมัครแล้ว",
+        pl: "Kandydatura ogłoszona",
+        ru: "Заявленная кандидатура",
       }),
       likely: t({
         fr: "Candidature probable",
@@ -101,6 +115,8 @@ export default {
         ko: "출마 유력",
         "zh-Hans": "可能参选",
         th: "มีแนวโน้มลงสมัคร",
+        pl: "Kandydatura prawdopodobna",
+        ru: "Вероятная кандидатура",
       }),
       possible: t({
         fr: "Candidature possible",
@@ -113,6 +129,8 @@ export default {
         ko: "출마 가능성",
         "zh-Hans": "或将参选",
         th: "อาจลงสมัคร",
+        pl: "Kandydatura możliwa",
+        ru: "Возможная кандидатура",
       }),
     },
     round2: t({
@@ -126,6 +144,8 @@ export default {
       ko: "결선 투표",
       "zh-Hans": "第二轮投票",
       th: "รอบสอง",
+      pl: "Druga tura",
+      ru: "Второй тур",
     }),
     wikipedia: t({
       fr: "Wikipédia",
@@ -138,6 +158,8 @@ export default {
       ko: "위키백과",
       "zh-Hans": "维基百科",
       th: "วิกิพีเดีย",
+      pl: "Wikipedia",
+      ru: "Википедия",
     }),
     wikipediaInFrench: t({
       fr: "Wikipédia (en français)",
@@ -150,6 +172,8 @@ export default {
       ko: "위키백과(프랑스어)",
       "zh-Hans": "维基百科（法语）",
       th: "วิกิพีเดีย (ภาษาฝรั่งเศส)",
+      pl: "Wikipedia (po francusku)",
+      ru: "Википедия (на французском)",
     }),
     partySite: t({
       fr: "Site du parti",
@@ -162,6 +186,8 @@ export default {
       ko: "정당 웹사이트",
       "zh-Hans": "政党官网",
       th: "เว็บไซต์พรรค",
+      pl: "Strona partii",
+      ru: "Сайт партии",
     }),
     programme: t({
       fr: "Programme",
@@ -174,6 +200,8 @@ export default {
       ko: "공약",
       "zh-Hans": "竞选纲领",
       th: "นโยบายหาเสียง",
+      pl: "Program",
+      ru: "Программа",
     }),
     programmeNone: t({
       fr: "Programme pas encore publié",
@@ -186,6 +214,8 @@ export default {
       ko: "공약 미발표",
       "zh-Hans": "竞选纲领尚未发布",
       th: "ยังไม่เผยแพร่นโยบายหาเสียง",
+      pl: "Programu jeszcze nie opublikowano",
+      ru: "Программа ещё не опубликована",
     }),
     photoCredits: t({
       fr: "Crédits photographiques",
@@ -198,6 +228,8 @@ export default {
       ko: "사진 출처",
       "zh-Hans": "图片来源",
       th: "เครดิตภาพ",
+      pl: "Autorzy zdjęć",
+      ru: "Авторы фотографий",
     }),
     photoCreditsNote: t({
       fr: "Chaque portrait est l'image principale de l'article Wikipédia en français du candidat, retenue seulement sous licence libre, recadrée sur le visage selon la même règle pour tous et montrée en noir et blanc.",
@@ -214,6 +246,8 @@ export default {
       "zh-Hans":
         "每张肖像均取自候选人法语维基百科条目的主图，仅采用自由许可的图片，按统一规则以面部为中心裁切，并以黑白显示。",
       th: "ภาพบุคคลแต่ละภาพเป็นภาพหลักของบทความวิกิพีเดียภาษาฝรั่งเศสของผู้สมัคร ใช้เฉพาะภาพที่มีสัญญาอนุญาตเสรี ครอบตัดที่ใบหน้าตามเกณฑ์เดียวกันสำหรับทุกคน และแสดงเป็นขาวดำ",
+      pl: "Każdy portret to główne zdjęcie artykułu o kandydacie w francuskiej Wikipedii, wykorzystane wyłącznie na wolnej licencji, przycięte do twarzy według tej samej zasady dla wszystkich i pokazane w czerni i bieli.",
+      ru: "Каждый портрет — главное изображение статьи кандидата во французской Википедии, взятое только по свободной лицензии, обрезанное по лицу по единому для всех правилу и показанное в чёрно-белом виде.",
     }),
     commons: t({
       fr: "Wikimedia Commons",
@@ -226,6 +260,8 @@ export default {
       ko: "위키미디어 공용",
       "zh-Hans": "维基共享资源",
       th: "วิกิมีเดียคอมมอนส์",
+      pl: "Wikimedia Commons",
+      ru: "Викисклад",
     }),
     photoCreditsNone: insert(
       t({
@@ -239,6 +275,8 @@ export default {
         ko: "자유 라이선스 사진 없음: {{names}}",
         "zh-Hans": "无自由许可照片：{{names}}。",
         th: "ไม่มีภาพถ่ายที่มีสัญญาอนุญาตเสรี: {{names}}",
+        pl: "Brak zdjęcia na wolnej licencji: {{names}}.",
+        ru: "Нет фотографии под свободной лицензией: {{names}}.",
       }),
     ),
   },

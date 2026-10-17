@@ -14,6 +14,8 @@ export default {
       ko: "X (Grok Bot)",
       "zh-Hans": "X（Grok Bot）",
       th: "X (Grok Bot)",
+      pl: "X (Grok Bot)",
+      ru: "X (Grok Bot)",
     }),
     window: insert(
       t({
@@ -27,6 +29,8 @@ export default {
         ko: "{{start}} ~ {{end}}",
         "zh-Hans": "{{start}} 至 {{end}}",
         th: "{{start}} ถึง {{end}}",
+        pl: "{{start}} – {{end}}",
+        ru: "{{start}} – {{end}}",
       }),
     ),
     empty: t({
@@ -40,6 +44,8 @@ export default {
       ko: "Grok Bot은 12시간마다 X 측정값을 보내지만 아직 도착한 것이 없습니다.",
       "zh-Hans": "Grok Bot 每十二小时发送一次 X 测量数据；目前尚未收到。",
       th: "Grok Bot ส่งค่าวัดจาก X ทุกสิบสองชั่วโมง แต่ยังไม่มีข้อมูลเข้ามา",
+      pl: "Grok Bot wysyła pomiary z X co dwanaście godzin; żadne jeszcze nie dotarły.",
+      ru: "Grok Bot присылает измерения X каждые двенадцать часов; ни одного пока не поступило.",
     }),
     mentions: t({
       fr: "Mentions",
@@ -52,6 +58,8 @@ export default {
       ko: "언급 수",
       "zh-Hans": "提及次数",
       th: "การกล่าวถึง",
+      pl: "Wzmianki",
+      ru: "Упоминания",
     }),
     methods: {
       x_counts_endpoint: t({
@@ -65,6 +73,8 @@ export default {
         ko: "X 집계 API",
         "zh-Hans": "X 计数接口",
         th: "API นับจำนวนของ X",
+        pl: "API zliczania X",
+        ru: "API подсчёта X",
       }),
       native_count: t({
         fr: "comptage Grok Bot",
@@ -77,6 +87,8 @@ export default {
         ko: "Grok Bot 집계",
         "zh-Hans": "Grok Bot 计数",
         th: "การนับของ Grok Bot",
+        pl: "zliczanie Grok Bot",
+        ru: "подсчёт Grok Bot",
       }),
       sample_estimate: t({
         fr: "estimation sur échantillon",
@@ -89,6 +101,8 @@ export default {
         ko: "표본 기반 추정",
         "zh-Hans": "基于样本估算",
         th: "ประมาณจากกลุ่มตัวอย่าง",
+        pl: "szacunek na podstawie próby",
+        ru: "оценка по выборке",
       }),
     },
     sentiment: t({
@@ -102,6 +116,8 @@ export default {
       ko: "논조",
       "zh-Hans": "情绪倾向",
       th: "ทัศนคติ",
+      pl: "Wydźwięk",
+      ru: "Тональность",
     }),
     positive: t({
       fr: "positive",
@@ -114,6 +130,8 @@ export default {
       ko: "긍정",
       "zh-Hans": "正面",
       th: "เชิงบวก",
+      pl: "pozytywny",
+      ru: "положительная",
     }),
     neutral: t({
       fr: "neutre",
@@ -126,6 +144,8 @@ export default {
       ko: "중립",
       "zh-Hans": "中性",
       th: "เป็นกลาง",
+      pl: "neutralny",
+      ru: "нейтральная",
     }),
     negative: t({
       fr: "négative",
@@ -138,6 +158,8 @@ export default {
       ko: "부정",
       "zh-Hans": "负面",
       th: "เชิงลบ",
+      pl: "negatywny",
+      ru: "отрицательная",
     }),
     sentimentLabel: insert(
       t({
@@ -151,6 +173,8 @@ export default {
         ko: "긍정 {{pos}}, 중립 {{neu}}, 부정 {{neg}}",
         "zh-Hans": "正面 {{pos}}，中性 {{neu}}，负面 {{neg}}",
         th: "เชิงบวก {{pos}} เป็นกลาง {{neu}} เชิงลบ {{neg}}",
+        pl: "{{pos}} pozytywnych, {{neu}} neutralnych, {{neg}} negatywnych",
+        ru: "{{pos}} положительных, {{neu}} нейтральных, {{neg}} отрицательных",
       }),
     ),
     postsRead: insert(
@@ -165,6 +189,8 @@ export default {
         ko: "게시물 {{n}}건 분석",
         "zh-Hans": "已读取 {{n}} 条帖子",
         th: "อ่านแล้ว {{n}} โพสต์",
+        pl: "{{n}} przeczytanych postów",
+        ru: "{{n}} прочитанных постов",
       }),
     ),
     botShare: t({
@@ -178,6 +204,8 @@ export default {
       ko: "봇 비율",
       "zh-Hans": "机器人账号占比",
       th: "สัดส่วนบอต",
+      pl: "Udział botów",
+      ru: "Доля ботов",
     }),
   },
 } satisfies Dictionary

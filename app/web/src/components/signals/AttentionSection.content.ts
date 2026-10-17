@@ -14,6 +14,8 @@ export default {
       ko: "관심도 (위키백과 조회수)",
       "zh-Hans": "关注度（维基百科浏览量）",
       th: "ความสนใจ (ยอดเข้าชมวิกิพีเดีย)",
+      pl: "Zainteresowanie (odsłony Wikipedii)",
+      ru: "Внимание (просмотры Википедии)",
     }),
     help: t({
       fr: "Consultations quotidiennes de l'article Wikipédia en français de chaque candidat, hors robots connus.",
@@ -28,6 +30,8 @@ export default {
       ko: "각 후보의 프랑스어 위키백과 문서 일일 조회수(알려진 봇 제외).",
       "zh-Hans": "各候选人法语维基百科条目的每日浏览量，已剔除已知的机器人流量。",
       th: "ยอดเข้าชมรายวันของบทความวิกิพีเดียภาษาฝรั่งเศสของผู้สมัครแต่ละคน ไม่รวมบอตที่ทราบ",
+      pl: "Codzienne odsłony artykułu każdego kandydata w francuskojęzycznej Wikipedii, bez znanych botów.",
+      ru: "Ежедневные просмотры статьи каждого кандидата во французской Википедии, без известных ботов.",
     }),
     empty: t({
       fr: "Aucune consultation enregistrée pour l'instant.",
@@ -40,6 +44,8 @@ export default {
       ko: "아직 기록된 조회수가 없습니다.",
       "zh-Hans": "暂无浏览量记录。",
       th: "ยังไม่มียอดเข้าชมที่บันทึกไว้",
+      pl: "Nie zapisano jeszcze żadnej odsłony.",
+      ru: "Пока не зафиксировано ни одного просмотра.",
     }),
     last7Days: t({
       fr: "7 derniers jours",
@@ -52,6 +58,8 @@ export default {
       ko: "최근 7일",
       "zh-Hans": "最近 7 天",
       th: "7 วันล่าสุด",
+      pl: "Ostatnie 7 dni",
+      ru: "Последние 7 дней",
     }),
     vsPrevious7: t({
       fr: "vs 7 jours précédents",
@@ -64,6 +72,8 @@ export default {
       ko: "직전 7일 대비",
       "zh-Hans": "较前 7 天",
       th: "เทียบกับ 7 วันก่อนหน้า",
+      pl: "wobec poprzednich 7 dni",
+      ru: "к предыдущим 7 дням",
     }),
     last90Days: t({
       fr: "90 jours",
@@ -76,6 +86,8 @@ export default {
       ko: "90일",
       "zh-Hans": "90 天",
       th: "90 วัน",
+      pl: "90 dni",
+      ru: "90 дней",
     }),
     dataTo: insert(
       t({
@@ -89,6 +101,8 @@ export default {
         ko: "{{date}}까지의 데이터.",
         "zh-Hans": "数据截至{{date}}。",
         th: "ข้อมูลถึง {{date}}",
+        pl: "Dane do {{date}}.",
+        ru: "Данные по {{date}}.",
       }),
     ),
     trend: insert(
@@ -103,6 +117,8 @@ export default {
         ko: "일일 조회수, 최근 {{days}}일: {{from}}에서 {{to}}로",
         "zh-Hans": "每日浏览量，最近 {{days}} 天：从 {{from}} 到 {{to}}",
         th: "ยอดเข้าชมรายวัน {{days}} วันล่าสุด: จาก {{from}} เป็น {{to}}",
+        pl: "Codzienne odsłony, ostatnie {{days}} dni: od {{from}} do {{to}}",
+        ru: "Ежедневные просмотры, последние {{days}} дней: с {{from}} по {{to}}",
       }),
     ),
   },

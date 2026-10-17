@@ -14,6 +14,8 @@ export default {
       ko: "모델과 시장",
       "zh-Hans": "模型与市场对比",
       th: "แบบจำลองเทียบกับตลาด",
+      pl: "Model i rynki",
+      ru: "Модель и рынки",
     }),
     question: t({
       fr: "Question du marché",
@@ -26,6 +28,8 @@ export default {
       ko: "시장 질문",
       "zh-Hans": "市场问题",
       th: "คำถามของตลาด",
+      pl: "Pytanie rynku",
+      ru: "Вопрос рынка",
     }),
     questions: {
       win: t({
@@ -39,6 +43,8 @@ export default {
         ko: "당선",
         "zh-Hans": "胜选",
         th: "ชนะ",
+        pl: "Wygrywa",
+        ru: "Побеждает",
       }),
       qualify: t({
         fr: "Accède au second tour",
@@ -51,6 +57,8 @@ export default {
         ko: "결선 진출",
         "zh-Hans": "进入第二轮投票",
         th: "ผ่านเข้ารอบสอง",
+        pl: "Wchodzi do drugiej tury",
+        ru: "Выходит во второй тур",
       }),
       on_ballot: t({
         fr: "Sur le bulletin",
@@ -63,6 +71,8 @@ export default {
         ko: "후보 등록",
         "zh-Hans": "列入选票",
         th: "มีชื่อในบัตรเลือกตั้ง",
+        pl: "Na karcie do głosowania",
+        ru: "В бюллетене",
       }),
     },
     model: t({
@@ -76,6 +86,8 @@ export default {
       ko: "모델",
       "zh-Hans": "模型",
       th: "แบบจำลอง",
+      pl: "Model",
+      ru: "Модель",
     }),
     empty: t({
       fr: "Aucun prix de marché pour l'instant.",
@@ -88,6 +100,8 @@ export default {
       ko: "아직 시장 가격이 없습니다.",
       "zh-Hans": "暂无市场价格。",
       th: "ยังไม่มีราคาจากตลาด",
+      pl: "Na razie brak cen rynkowych.",
+      ru: "Пока нет рыночных цен.",
     }),
     unmatchedTitle: t({
       fr: "Cotés par les marchés, hors de notre liste",
@@ -100,6 +114,8 @@ export default {
       ko: "시장에서 거래되지만 우리 후보 목록에 없는 인물",
       "zh-Hans": "市场有定价、但不在我们名单中的人选",
       th: "ตลาดให้ราคา แต่ไม่อยู่ในรายชื่อของเรา",
+      pl: "Notowani na rynkach, ale poza naszą listą",
+      ru: "Котируются на рынках, но не в нашем списке",
     }),
     failed: insert(
       t({
@@ -113,6 +129,8 @@ export default {
         ko: "{{venue}}, {{question}}: {{error}}",
         "zh-Hans": "{{venue}}，{{question}}：{{error}}",
         th: "{{venue}}, {{question}}: {{error}}",
+        pl: "{{venue}}, {{question}}: {{error}}",
+        ru: "{{venue}}, {{question}}: {{error}}",
       }),
     ),
     note: t({
@@ -128,6 +146,8 @@ export default {
       ko: "시장 가격에는 수수료가 포함되며 약체 후보를 과대평가하는 경향이 있습니다. 모델은 시장 가격을 읽지 않습니다.",
       "zh-Hans": "市场价格包含手续费，且会高估冷门人选。模型不读取这些价格。",
       th: "ราคาในตลาดรวมค่าธรรมเนียม และมักให้ราคาม้านอกสายตาสูงเกินจริง แบบจำลองไม่ได้อ่านราคาเหล่านี้",
+      pl: "Ceny rynkowe obejmują opłaty i zawyżają notowania outsiderów. Model ich nie odczytuje.",
+      ru: "Рыночные цены включают комиссии и завышают котировки аутсайдеров. Модель их не считывает.",
     }),
     fetchedAt: insert(
       t({
@@ -141,6 +161,8 @@ export default {
         ko: "가격 수집 시각: {{when}}.",
         "zh-Hans": "价格获取于{{when}}。",
         th: "ดึงราคาเมื่อ {{when}}",
+        pl: "Ceny odnotowane {{when}}.",
+        ru: "Цены получены {{when}}.",
       }),
     ),
     priceTrend: insert(
@@ -155,6 +177,8 @@ export default {
         ko: "{{venue}}, 최근 {{days}}일: {{from}}에서 {{to}}로",
         "zh-Hans": "{{venue}}，最近 {{days}} 天：从 {{from}} 到 {{to}}",
         th: "{{venue}} {{days}} วันล่าสุด: จาก {{from}} เป็น {{to}}",
+        pl: "{{venue}}, ostatnie {{days}} dni: od {{from}} do {{to}}",
+        ru: "{{venue}}, последние {{days}} дней: с {{from}} по {{to}}",
       }),
     ),
   },

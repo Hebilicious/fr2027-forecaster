@@ -14,6 +14,8 @@ export default {
       ko: "그 밖의 후보 전체",
       "zh-Hans": "其他所有人",
       th: "ผู้สมัครอื่นทั้งหมด",
+      pl: "Wszyscy inni",
+      ru: "Все остальные",
     }),
     othersCount: insert(
       t({
@@ -27,6 +29,8 @@ export default {
         ko: "후보 {{n}}명",
         "zh-Hans": "{{n}} 名候选人",
         th: "ผู้สมัคร {{n}} คน",
+        pl: "{{n}} kandydatów",
+        ru: "{{n}} кандидатов",
       }),
     ),
     group: insert(
@@ -41,6 +45,8 @@ export default {
         ko: "{{name}}: 승리 확률 {{p}}",
         "zh-Hans": "{{name}}：胜选概率 {{p}}",
         th: "{{name}}: โอกาสชนะ {{p}}",
+        pl: "{{name}} ma {{p}} szans na zwycięstwo",
+        ru: "{{name}} имеет {{p}} шансов на победу",
       }),
     ),
     othersGroup: insert(
@@ -55,6 +61,8 @@ export default {
         ko: "그 밖의 후보 {{m}}명 합계: 승리 확률 {{p}}",
         "zh-Hans": "其他 {{m}} 名候选人合计：胜选概率 {{p}}",
         th: "ผู้สมัครอื่นอีก {{m}} คนรวมกัน: โอกาสชนะ {{p}}",
+        pl: "{{m}} innych kandydatów ma łącznie {{p}} szans na zwycięstwo",
+        ru: "{{m}} других кандидатов вместе имеют {{p}} шансов на победу",
       }),
     ),
   },

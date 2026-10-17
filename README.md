@@ -34,24 +34,24 @@ The binary also runs on its own: `target/release/fr2027 forecast --as-of 2026-09
 
 ## How it is built
 
-| Path              | Language        | Role                                                                                                                            |
-| ----------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `model/`          | Rust            | The model, pure computation: field draws, bloc-nested Kalman poll aggregation, round 2, two-round Monte Carlo                   |
-| `collectors/`     | Rust            | Validates raw files against `schemas/`, writes `data/clean/`, quarantines rejects                                               |
-| `fetch/`          | Rust            | Network readers: Polymarket, Kalshi, RSS feeds, Wikipedia page views, the Grok Bot inbox                                        |
-| `backtest/`       | Rust            | Replays 2017 and 2022 with the polls of each date, scores them, fits the election-day error settings                            |
-| `cli/`            | Rust            | The `fr2027` binary: `validate`, `ingest`, `forecast`, `backtest`, `collect`, `inbox`, `export`, `serve`                        |
-| `app/web/`        | TypeScript, Vue | The UI: Overview, Candidates, Round 1, Round 2, Signals, Sources and health; in French and nine other languages (see AGENTS.md) |
-| `app/worker/`     | TypeScript      | The Cloudflare Worker: serves the public site and the Grok Bot inbox                                                            |
-| `config/`         | YAML            | `candidates.yaml` (canonical ids, blocs, who runs), `model.yaml` (parameters), `sources.yaml` (live sources), `backtest.yaml`   |
-| `.github/`        | YAML            | `ci.yml` (checks) and `live.yml` (the hourly pipeline, started by the Worker's cron)                                            |
-| `docs/`           |                 | Operations and the Grok Bot routines                                                                                            |
-| `schemas/`        | JSON Schema     | Contracts for every file sources write and the model outputs                                                                    |
-| `data/raw/`       |                 | Source files, never edited: `polls/`, `markets/`, `news/`, `attention/`, `grok/`, `events/`                                     |
-| `data/clean/`     | CSV             | Rebuilt from raw on every ingest                                                                                                |
-| `data/backtest/`  | CSV, YAML       | The 2017 and 2022 polls and fields the backtest replays, and the script that extracted the polls                                |
-| `data/forecasts/` | JSON            | One file per run, plus `series.json` (latent share history)                                                                     |
-| `research/`       |                 | `LOG.md`, the sourced reference data in `sources/`, and the backtest report in `backtest/`                                      |
+| Path              | Language        | Role                                                                                                                              |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `model/`          | Rust            | The model, pure computation: field draws, bloc-nested Kalman poll aggregation, round 2, two-round Monte Carlo                     |
+| `collectors/`     | Rust            | Validates raw files against `schemas/`, writes `data/clean/`, quarantines rejects                                                 |
+| `fetch/`          | Rust            | Network readers: Polymarket, Kalshi, RSS feeds, Wikipedia page views, the Grok Bot inbox                                          |
+| `backtest/`       | Rust            | Replays 2017 and 2022 with the polls of each date, scores them, fits the election-day error settings                              |
+| `cli/`            | Rust            | The `fr2027` binary: `validate`, `ingest`, `forecast`, `backtest`, `collect`, `inbox`, `export`, `serve`                          |
+| `app/web/`        | TypeScript, Vue | The UI: Overview, Candidates, Round 1, Round 2, Signals, Sources and health; in French and eleven other languages (see AGENTS.md) |
+| `app/worker/`     | TypeScript      | The Cloudflare Worker: serves the public site and the Grok Bot inbox                                                              |
+| `config/`         | YAML            | `candidates.yaml` (canonical ids, blocs, who runs), `model.yaml` (parameters), `sources.yaml` (live sources), `backtest.yaml`     |
+| `.github/`        | YAML            | `ci.yml` (checks) and `live.yml` (the hourly pipeline, started by the Worker's cron)                                              |
+| `docs/`           |                 | Operations and the Grok Bot routines                                                                                              |
+| `schemas/`        | JSON Schema     | Contracts for every file sources write and the model outputs                                                                      |
+| `data/raw/`       |                 | Source files, never edited: `polls/`, `markets/`, `news/`, `attention/`, `grok/`, `events/`                                       |
+| `data/clean/`     | CSV             | Rebuilt from raw on every ingest                                                                                                  |
+| `data/backtest/`  | CSV, YAML       | The 2017 and 2022 polls and fields the backtest replays, and the script that extracted the polls                                  |
+| `data/forecasts/` | JSON            | One file per run, plus `series.json` (latent share history)                                                                       |
+| `research/`       |                 | `LOG.md`, the sourced reference data in `sources/`, and the backtest report in `backtest/`                                        |
 
 Why Rust and TypeScript rather than Python: see [research/LOG.md](research/LOG.md), entry "Implementation language".
 

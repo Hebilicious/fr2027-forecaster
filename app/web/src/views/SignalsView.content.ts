@@ -14,6 +14,8 @@ export default {
       ko: "신호를 불러오지 못했습니다.",
       "zh-Hans": "信号未能加载。",
       th: "โหลดสัญญาณไม่สำเร็จ",
+      pl: "Nie udało się wczytać sygnałów.",
+      ru: "Не удалось загрузить сигналы.",
     }),
   },
 } satisfies Dictionary

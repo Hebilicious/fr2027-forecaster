@@ -66,6 +66,8 @@ describe("articleFor", () => {
       it: "it",
       "es-ES": "es",
       "pt-PT": "pt",
+      pl: "pl",
+      ru: "ru",
       ja: "ja",
       ko: "ko",
       th: "th",

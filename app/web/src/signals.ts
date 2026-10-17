@@ -347,6 +347,8 @@ const SUMMARY_LANGUAGE: Readonly<Record<Locale, "fr" | "en">> = {
   it: "en",
   "es-ES": "en",
   "pt-PT": "en",
+  pl: "en",
+  ru: "en",
   ja: "en",
   ko: "en",
   "zh-Hans": "en",

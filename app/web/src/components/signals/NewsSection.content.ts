@@ -14,6 +14,8 @@ export default {
       ko: "언론",
       "zh-Hans": "新闻",
       th: "ข่าว",
+      pl: "Prasa",
+      ru: "Пресса",
     }),
     empty: t({
       fr: "Aucun titre enregistré pour l'instant.",
@@ -26,6 +28,8 @@ export default {
       ko: "아직 기록된 기사 제목이 없습니다.",
       "zh-Hans": "暂无标题记录。",
       th: "ยังไม่มีพาดหัวข่าวที่บันทึกไว้",
+      pl: "Nie zapisano jeszcze żadnego nagłówka.",
+      ru: "Пока не зафиксировано ни одного заголовка.",
     }),
     counts: t({
       fr: "Titres par candidat, 7 derniers jours",
@@ -38,6 +42,8 @@ export default {
       ko: "후보별 기사 제목 수, 최근 7일",
       "zh-Hans": "各候选人新闻标题数，最近 7 天",
       th: "จำนวนพาดหัวข่าวต่อผู้สมัคร 7 วันล่าสุด",
+      pl: "Nagłówki według kandydatów, ostatnie 7 dni",
+      ru: "Заголовки по кандидатам, последние 7 дней",
     }),
     latestHeadlines: t({
       fr: "Derniers titres",
@@ -50,6 +56,8 @@ export default {
       ko: "최신 기사 제목",
       "zh-Hans": "最新标题",
       th: "พาดหัวข่าวล่าสุด",
+      pl: "Najnowsze nagłówki",
+      ru: "Последние заголовки",
     }),
     filter: t({
       fr: "Titres sur",
@@ -62,6 +70,8 @@ export default {
       ko: "기사 제목 대상",
       "zh-Hans": "显示标题涉及",
       th: "แสดงพาดหัวข่าวเกี่ยวกับ",
+      pl: "Nagłówki o",
+      ru: "Заголовки о",
     }),
     allCandidates: t({
       fr: "Tout le monde",
@@ -74,6 +84,8 @@ export default {
       ko: "전체",
       "zh-Hans": "所有人",
       th: "ทุกคน",
+      pl: "Wszyscy",
+      ru: "Все",
     }),
     noHeadlines: insert(
       t({
@@ -87,6 +99,8 @@ export default {
         ko: "최근 {{name}}을(를) 언급한 기사 제목이 없습니다.",
         "zh-Hans": "近期没有提及 {{name}} 的标题。",
         th: "ไม่มีพาดหัวข่าวล่าสุดที่กล่าวถึง {{name}}",
+        pl: "Żaden niedawny nagłówek nie wymienia {{name}}.",
+        ru: "Ни один недавний заголовок не упоминает {{name}}.",
       }),
     ),
     feedStatus: insert(
@@ -101,6 +115,8 @@ export default {
         ko: "피드 {{n}}개, 실패 {{m}}개, {{when}} 업데이트.",
         "zh-Hans": "{{n}} 个信息源，{{m}} 个失败，更新于{{when}}。",
         th: "ฟีด {{n}} รายการ ล้มเหลว {{m}} รายการ อัปเดต {{when}}",
+        pl: "{{n}} kanałów, {{m}} z błędami, zaktualizowano {{when}}.",
+        ru: "{{n}} каналов, {{m}} с ошибками, обновлено {{when}}.",
       }),
     ),
   },

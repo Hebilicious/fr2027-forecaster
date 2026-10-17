@@ -14,6 +14,8 @@ export default {
       ko: "후보 필터",
       "zh-Hans": "筛选候选人",
       th: "กรองผู้สมัคร",
+      pl: "Filtruj kandydatów",
+      ru: "Фильтр кандидатов",
     }),
     search: t({
       fr: "Rechercher un candidat",
@@ -26,6 +28,8 @@ export default {
       ko: "후보 검색",
       "zh-Hans": "搜索候选人",
       th: "ค้นหาผู้สมัคร",
+      pl: "Szukaj kandydata",
+      ru: "Поиск кандидата",
     }),
     placeholder: t({
       fr: "Nom ou parti",
@@ -38,6 +42,8 @@ export default {
       ko: "이름 또는 정당",
       "zh-Hans": "姓名或政党",
       th: "ชื่อหรือพรรค",
+      pl: "Nazwisko lub partia",
+      ru: "Фамилия или партия",
     }),
     clear: t({
       fr: "Effacer la recherche",
@@ -50,6 +56,8 @@ export default {
       ko: "검색어 지우기",
       "zh-Hans": "清除搜索",
       th: "ล้างคำค้นหา",
+      pl: "Wyczyść wyszukiwanie",
+      ru: "Очистить поиск",
     }),
     showAll: t({
       fr: "Remplaçants et éliminés",
@@ -62,6 +70,8 @@ export default {
       ko: "대체 후보·탈락자",
       "zh-Hans": "替补与出局者",
       th: "ตัวสำรองและผู้ตกรอบ",
+      pl: "Rezerwowi i wyeliminowani",
+      ru: "Запасные и выбывшие",
     }),
     shown: insert(
       t({
@@ -75,6 +85,8 @@ export default {
         ko: "{{total}}명 중 {{shown}}명",
         "zh-Hans": "{{total}} 人中的 {{shown}} 人",
         th: "{{shown}} จาก {{total}} คน",
+        pl: "{{shown}} z {{total}}",
+        ru: "{{shown}} из {{total}}",
       }),
     ),
     noMatch: t({
@@ -88,6 +100,8 @@ export default {
       ko: "검색 결과와 일치하는 후보가 없습니다.",
       "zh-Hans": "没有符合此搜索的候选人。",
       th: "ไม่มีผู้สมัครที่ตรงกับการค้นหานี้",
+      pl: "Żaden kandydat nie odpowiada temu wyszukiwaniu.",
+      ru: "Ни один кандидат не соответствует этому поиску.",
     }),
     standings: {
       standIn: t({
@@ -101,6 +115,8 @@ export default {
         ko: "대체 후보",
         "zh-Hans": "替补人选",
         th: "ตัวสำรอง",
+        pl: "Rezerwowy",
+        ru: "Запасной",
       }),
       out: t({
         fr: "Éliminé",
@@ -113,6 +129,8 @@ export default {
         ko: "탈락",
         "zh-Hans": "已出局",
         th: "ตกรอบ",
+        pl: "Wyeliminowany",
+        ru: "Выбывший",
       }),
     },
   },

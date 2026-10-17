@@ -14,6 +14,8 @@ export default {
       ko: "경고가 없습니다.",
       "zh-Hans": "无警告。",
       th: "ไม่มีคำเตือน",
+      pl: "Brak ostrzeżeń.",
+      ru: "Предупреждений нет.",
     }),
     latestRun: t({
       fr: "Dernier calcul",
@@ -26,6 +28,8 @@ export default {
       ko: "최근 계산",
       "zh-Hans": "最近一次计算",
       th: "การคำนวณล่าสุด",
+      pl: "Ostatnie obliczenie",
+      ru: "Последний расчёт",
     }),
     file: t({
       fr: "Fichier",
@@ -38,6 +42,8 @@ export default {
       ko: "파일",
       "zh-Hans": "文件",
       th: "ไฟล์",
+      pl: "Plik",
+      ru: "Файл",
     }),
     generatedAt: t({
       fr: "Généré",
@@ -50,6 +56,8 @@ export default {
       ko: "생성 시각",
       "zh-Hans": "生成时间",
       th: "สร้างเมื่อ",
+      pl: "Wygenerowano",
+      ru: "Создано",
     }),
     lastFieldwork: t({
       fr: "Dernier terrain",
@@ -62,6 +70,8 @@ export default {
       ko: "최근 조사 기간",
       "zh-Hans": "最近调查时间",
       th: "การสำรวจล่าสุด",
+      pl: "Ostatnie badanie",
+      ru: "Последние полевые работы",
     }),
     collectorsTitle: t({
       fr: "Collecteurs",
@@ -74,6 +84,8 @@ export default {
       ko: "수집기",
       "zh-Hans": "采集器",
       th: "ตัวเก็บข้อมูล",
+      pl: "Kolektory danych",
+      ru: "Сборщики данных",
     }),
     cadence: t({
       fr: "Fréquence",
@@ -86,6 +98,8 @@ export default {
       ko: "주기",
       "zh-Hans": "频率",
       th: "ความถี่",
+      pl: "Częstotliwość",
+      ru: "Частота",
     }),
     lastUpdate: t({
       fr: "Dernière mise à jour",
@@ -98,6 +112,8 @@ export default {
       ko: "마지막 업데이트",
       "zh-Hans": "最近更新",
       th: "อัปเดตล่าสุด",
+      pl: "Ostatnia aktualizacja",
+      ru: "Последнее обновление",
     }),
     never: t({
       fr: "jamais",
@@ -110,6 +126,8 @@ export default {
       ko: "없음",
       "zh-Hans": "从未",
       th: "ไม่เคย",
+      pl: "nigdy",
+      ru: "никогда",
     }),
     stale: t({
       fr: "en retard",
@@ -122,6 +140,8 @@ export default {
       ko: "지연",
       "zh-Hans": "已逾期",
       th: "ล่าช้า",
+      pl: "opóźnione",
+      ru: "с опозданием",
     }),
     collectors: {
       polls: t({
@@ -135,6 +155,8 @@ export default {
         ko: "여론조사",
         "zh-Hans": "民调",
         th: "โพล",
+        pl: "Sondaże",
+        ru: "Опросы",
       }),
       markets: t({
         fr: "Marchés",
@@ -147,6 +169,8 @@ export default {
         ko: "시장",
         "zh-Hans": "市场",
         th: "ตลาด",
+        pl: "Rynki",
+        ru: "Рынки",
       }),
       news: t({
         fr: "Presse",
@@ -159,6 +183,8 @@ export default {
         ko: "언론",
         "zh-Hans": "新闻",
         th: "ข่าว",
+        pl: "Prasa",
+        ru: "Пресса",
       }),
       attention: t({
         fr: "Consultations Wikipédia",
@@ -171,6 +197,8 @@ export default {
         ko: "위키백과 조회수",
         "zh-Hans": "维基百科浏览量",
         th: "ยอดเข้าชมวิกิพีเดีย",
+        pl: "Odsłony Wikipedii",
+        ru: "Просмотры Википедии",
       }),
       x: t({
         fr: "X (Grok Bot)",
@@ -183,6 +211,8 @@ export default {
         ko: "X (Grok Bot)",
         "zh-Hans": "X（Grok Bot）",
         th: "X (Grok Bot)",
+        pl: "X (Grok Bot)",
+        ru: "X (Grok Bot)",
       }),
       events: t({
         fr: "Événements (Grok Bot)",
@@ -195,6 +225,8 @@ export default {
         ko: "사건 (Grok Bot)",
         "zh-Hans": "事件（Grok Bot）",
         th: "เหตุการณ์ (Grok Bot)",
+        pl: "Wydarzenia (Grok Bot)",
+        ru: "События (Grok Bot)",
       }),
     },
     cadences: {
@@ -209,6 +241,8 @@ export default {
         ko: "여론조사 발표 시마다",
         "zh-Hans": "每有民调发布时",
         th: "ทุกครั้งที่มีโพลเผยแพร่",
+        pl: "przy każdym opublikowanym sondażu",
+        ru: "при каждом опубликованном опросе",
       }),
       hourly: t({
         fr: "toutes les heures",
@@ -221,6 +255,8 @@ export default {
         ko: "1시간마다",
         "zh-Hans": "每小时",
         th: "ทุกชั่วโมง",
+        pl: "co godzinę",
+        ru: "каждый час",
       }),
       "12h": t({
         fr: "toutes les 12 heures",
@@ -233,6 +269,8 @@ export default {
         ko: "12시간마다",
         "zh-Hans": "每 12 小时",
         th: "ทุก 12 ชั่วโมง",
+        pl: "co 12 godzin",
+        ru: "каждые 12 часов",
       }),
       daily: t({
         fr: "chaque jour",
@@ -245,6 +283,8 @@ export default {
         ko: "매일",
         "zh-Hans": "每天",
         th: "ทุกวัน",
+        pl: "codziennie",
+        ru: "каждый день",
       }),
     },
     quarantine: t({
@@ -258,6 +298,8 @@ export default {
       ko: "격리된 파일",
       "zh-Hans": "已隔离的文件",
       th: "ไฟล์ที่ถูกกักไว้",
+      pl: "Pliki w kwarantannie",
+      ru: "Файлы в карантине",
     }),
     pollsTitle: t({
       fr: "Sondages utilisés",
@@ -270,6 +312,8 @@ export default {
       ko: "모델에 사용된 여론조사",
       "zh-Hans": "模型采用的民调",
       th: "โพลที่ใช้ในแบบจำลอง",
+      pl: "Wykorzystane sondaże",
+      ru: "Использованные опросы",
     }),
     published: t({
       fr: "Publié",
@@ -282,6 +326,8 @@ export default {
       ko: "발표일",
       "zh-Hans": "发布",
       th: "เผยแพร่",
+      pl: "Opublikowano",
+      ru: "Опубликовано",
     }),
     sponsor: t({
       fr: "Commanditaire",
@@ -294,6 +340,8 @@ export default {
       ko: "의뢰처",
       "zh-Hans": "委托方",
       th: "ผู้ว่าจ้าง",
+      pl: "Zleceniodawca",
+      ru: "Заказчик",
     }),
     fieldwork: t({
       fr: "Terrain",
@@ -306,6 +354,8 @@ export default {
       ko: "조사 기간",
       "zh-Hans": "调查时间",
       th: "ระยะเวลาการสำรวจ",
+      pl: "Badanie",
+      ru: "Даты опроса",
     }),
     ballots: t({
       fr: "Hypothèses",
@@ -318,6 +368,8 @@ export default {
       ko: "시나리오",
       "zh-Hans": "情境",
       th: "ฉากทัศน์",
+      pl: "Scenariusze",
+      ru: "Сценарии",
     }),
     entry: t({
       fr: "Saisie",
@@ -330,6 +382,8 @@ export default {
       ko: "입력",
       "zh-Hans": "录入",
       th: "การบันทึก",
+      pl: "Pozyskanie danych",
+      ru: "Получение данных",
     }),
     entryPrimary: t({
       fr: "vérifiée auprès de l'institut",
@@ -342,6 +396,8 @@ export default {
       ko: "조사 기관 자료로 확인",
       "zh-Hans": "已与民调机构核对",
       th: "ตรวจสอบกับสำนักโพลแล้ว",
+      pl: "zweryfikowane w pracowni",
+      ru: "подтверждено институтом",
     }),
     entryIndex: t({
       fr: "depuis un index de sondages",
@@ -354,6 +410,8 @@ export default {
       ko: "여론조사 목록에서",
       "zh-Hans": "取自民调汇总索引",
       th: "จากดัชนีรวมโพล",
+      pl: "z indeksu sondaży",
+      ru: "из индекса опросов",
     }),
   },
 } satisfies Dictionary

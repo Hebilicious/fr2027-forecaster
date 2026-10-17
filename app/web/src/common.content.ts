@@ -15,6 +15,8 @@ export default {
       ko: "후보",
       "zh-Hans": "候选人",
       th: "ผู้สมัคร",
+      pl: "Kandydat",
+      ru: "Кандидат",
     }),
     runs: t({
       fr: "Se présente",
@@ -27,6 +29,8 @@ export default {
       ko: "출마",
       "zh-Hans": "参选",
       th: "ลงสมัคร",
+      pl: "Kandyduje",
+      ru: "Баллотируется",
     }),
     qualifies: t({
       fr: "Accède au second tour",
@@ -39,6 +43,8 @@ export default {
       ko: "결선 진출",
       "zh-Hans": "进入第二轮投票",
       th: "ผ่านเข้ารอบสอง",
+      pl: "Przechodzi do drugiej tury",
+      ru: "Проходит во второй тур",
     }),
     wins: t({
       fr: "Gagne",
@@ -51,6 +57,8 @@ export default {
       ko: "당선",
       "zh-Hans": "胜选",
       th: "ชนะ",
+      pl: "Wygrywa",
+      ru: "Побеждает",
     }),
     r1Share: t({
       fr: "Score au premier tour s'il se présente",
@@ -63,6 +71,8 @@ export default {
       ko: "출마 시 1차 투표 득표율",
       "zh-Hans": "若参选，第一轮投票得票率",
       th: "คะแนนรอบแรกหากลงสมัคร",
+      pl: "Wynik w pierwszej turze, jeśli kandyduje",
+      ru: "Результат в первом туре, если баллотируется",
     }),
     notPolled: t({
       fr: "pas encore testé par un sondage",
@@ -75,6 +85,8 @@ export default {
       ko: "아직 여론조사 대상이 된 적 없음",
       "zh-Hans": "尚无民调涉及",
       th: "ยังไม่มีโพลใดสำรวจ",
+      pl: "jeszcze nie badany w sondażu",
+      ru: "ещё не тестировался в опросах",
     }),
     firm: t({
       fr: "Institut",
@@ -87,6 +99,8 @@ export default {
       ko: "조사 기관",
       "zh-Hans": "民调机构",
       th: "สำนักโพล",
+      pl: "Pracownia",
+      ru: "Институт",
     }),
     sample: t({
       fr: "Échantillon",
@@ -99,6 +113,8 @@ export default {
       ko: "표본",
       "zh-Hans": "样本",
       th: "กลุ่มตัวอย่าง",
+      pl: "Próba",
+      ru: "Выборка",
     }),
     source: t({
       fr: "Source",
@@ -111,6 +127,8 @@ export default {
       ko: "출처",
       "zh-Hans": "来源",
       th: "แหล่งที่มา",
+      pl: "Źródło",
+      ru: "Источник",
     }),
     notice: t({
       fr: "Notice",
@@ -123,6 +141,8 @@ export default {
       ko: "조사 개요",
       "zh-Hans": "调查说明",
       th: "ระเบียบวิธี",
+      pl: "Nota metodologiczna",
+      ru: "Методология",
     }),
     none: t({
       fr: "Aucun",
@@ -135,6 +155,8 @@ export default {
       ko: "없음",
       "zh-Hans": "无",
       th: "ไม่มี",
+      pl: "Brak",
+      ru: "Нет",
     }),
   },
 } satisfies Dictionary

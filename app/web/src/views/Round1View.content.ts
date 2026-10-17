@@ -14,6 +14,8 @@ export default {
       ko: "조사 기관 강조",
       "zh-Hans": "突出显示某家民调机构",
       th: "เน้นสำนักโพล",
+      pl: "Wyróżnij pracownię sondażową",
+      ru: "Выделить институт опросов",
     }),
     allFirms: t({
       fr: "Aucun",
@@ -26,6 +28,8 @@ export default {
       ko: "없음",
       "zh-Hans": "无",
       th: "ไม่มี",
+      pl: "Żadna",
+      ru: "Нет",
     }),
     legend: {
       average: t({
@@ -39,6 +43,8 @@ export default {
         ko: "여론조사 평균",
         "zh-Hans": "民调平均值",
         th: "ค่าเฉลี่ยโพล",
+        pl: "Średnia sondaży",
+        ru: "Среднее по опросам",
       }),
       band: t({
         fr: "Bande à 80 %",
@@ -51,6 +57,8 @@ export default {
         ko: "80% 구간",
         "zh-Hans": "80% 区间带",
         th: "แถบช่วง 80%",
+        pl: "Przedział 80%",
+        ru: "Интервал 80 %",
       }),
       polls: t({
         fr: "Sondages",
@@ -63,6 +71,8 @@ export default {
         ko: "여론조사",
         "zh-Hans": "民调",
         th: "โพล",
+        pl: "Sondaże",
+        ru: "Опросы",
       }),
     },
   },

@@ -11,6 +11,8 @@ const config: IntlayerConfig = {
       Locales.ITALIAN,
       Locales.SPANISH_SPAIN,
       Locales.PORTUGUESE_PORTUGAL,
+      Locales.POLISH,
+      Locales.RUSSIAN,
       Locales.JAPANESE,
       Locales.KOREAN,
       Locales.CHINESE_SIMPLIFIED,

@@ -18,6 +18,8 @@ const WIKIS = {
   it: { wiki: "it", path: "wiki" },
   "es-ES": { wiki: "es", path: "wiki" },
   "pt-PT": { wiki: "pt", path: "wiki" },
+  pl: { wiki: "pl", path: "wiki" },
+  ru: { wiki: "ru", path: "wiki" },
   ja: { wiki: "ja", path: "wiki" },
   ko: { wiki: "ko", path: "wiki" },
   // The Chinese Wikipedia is one wiki in several scripts; this path shows it in simplified characters.

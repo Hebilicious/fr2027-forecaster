@@ -104,6 +104,10 @@ onBeforeUnmount(() => {
   top: calc(100% + 8px);
   z-index: 30;
   min-width: 12rem;
+  /* The list is long enough to pass the bottom of a short window: scroll it rather than clip it. */
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   margin: 0;
   padding: 6px;
   list-style: none;

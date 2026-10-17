@@ -15,6 +15,8 @@ export default {
         ko: "{{name}}: {{latest}}",
         "zh-Hans": "{{name}}：{{latest}}",
         th: "{{name}}: {{latest}}",
+        pl: "{{name}} ma najnowszy wynik {{latest}}",
+        ru: "{{name}} показывает последний результат {{latest}}",
       }),
     ),
     poll: insert(
@@ -29,6 +31,8 @@ export default {
         ko: "{{firm}}, {{date}}: {{share}} (시나리오 {{scenario}})",
         "zh-Hans": "{{firm}}，{{date}}：{{share}}（情境 {{scenario}}）",
         th: "{{firm}}, {{date}}: {{share}} (ฉากทัศน์ {{scenario}})",
+        pl: "{{firm}}, {{date}}: {{share}} (scenariusz {{scenario}})",
+        ru: "{{firm}}, {{date}}: {{share}} (сценарий {{scenario}})",
       }),
     ),
   },

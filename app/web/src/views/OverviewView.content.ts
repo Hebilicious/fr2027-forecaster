@@ -14,6 +14,8 @@ export default {
       ko: "승리 확률",
       "zh-Hans": "胜选概率",
       th: "โอกาสชนะ",
+      pl: "Szanse na zwycięstwo",
+      ru: "Шансы на победу",
     }),
     outcomesTitle: t({
       fr: "Un point, une chance sur cent",
@@ -26,6 +28,8 @@ export default {
       ko: "점 하나가 1%의 확률",
       "zh-Hans": "一个点，代表百分之一的机会",
       th: "หนึ่งจุด เท่ากับโอกาสหนึ่งในร้อย",
+      pl: "Jedna kropka, jedna szansa na sto",
+      ru: "Одна точка, один шанс из ста",
     }),
     outcomesHelp: insert(
       t({
@@ -42,6 +46,8 @@ export default {
         ko: "{{sims}}회의 선거 시뮬레이션에 따른 각 후보의 대통령 당선 확률입니다. 1%포인트마다 점 하나로 나타냅니다.",
         "zh-Hans": "基于 {{sims}} 次模拟选举得出的各候选人赢得总统职位的概率：每个百分点对应一个点。",
         th: "โอกาสที่ผู้สมัครแต่ละคนจะได้เป็นประธานาธิบดี จากการจำลองการเลือกตั้ง {{sims}} ครั้ง: หนึ่งจุดต่อหนึ่งจุดเปอร์เซ็นต์",
+        pl: "Prawdopodobieństwo, że każdy kandydat zdobędzie prezydenturę, na podstawie {{sims}} symulowanych wyborów: jedna kropka na każdy punkt procentowy.",
+        ru: "Вероятность для каждого кандидата занять президентский пост по данным {{sims}} смоделированных выборов: одна точка на каждый процентный пункт.",
       }),
     ),
     uncertainty: t({
@@ -58,6 +64,8 @@ export default {
       ko: "이 수치는 예언이 아니라 확률입니다. 승리 확률 70%인 유력 후보도 10번 중 약 3번은 패배합니다. 구간은 시뮬레이션 결과의 80%를 포함합니다.",
       "zh-Hans": "这些是概率，而非预言：胜率 70% 的热门人选，仍有约十分之三的机会落败。区间涵盖 80% 的模拟结果。",
       th: "ตัวเลขเหล่านี้คือความน่าจะเป็น ไม่ใช่คำทำนาย ตัวเต็งที่มีโอกาสชนะ 70% ยังแพ้ได้ราว 3 ใน 10 ครั้ง ช่วงที่แสดงครอบคลุม 80% ของผลลัพธ์จากการจำลอง",
+      pl: "To prawdopodobieństwa, a nie przewidywania: faworyt z 70% szans wciąż przegrywa około 3 razy na 10. Przedziały obejmują 80% symulowanych wyników.",
+      ru: "Это вероятности, а не предсказания: фаворит с 70 % шансов всё равно проигрывает примерно 3 раза из 10. Интервалы охватывают 80 % смоделированных исходов.",
     }),
     fieldEyebrow: t({
       fr: "Candidats",
@@ -70,6 +78,8 @@ export default {
       ko: "후보",
       "zh-Hans": "候选人",
       th: "ผู้สมัคร",
+      pl: "Kandydaci",
+      ru: "Кандидаты",
     }),
     fieldTitle: t({
       fr: "Tous les candidats, par chances de victoire",
@@ -82,6 +92,8 @@ export default {
       ko: "전체 후보, 승리 확률 순",
       "zh-Hans": "全部候选人，按胜选概率排列",
       th: "ผู้สมัครทุกคน เรียงตามโอกาสชนะ",
+      pl: "Wszyscy kandydaci według szans na zwycięstwo",
+      ru: "Все кандидаты по шансам на победу",
     }),
     whatMoved: t({
       fr: "Ce qui a bougé depuis le calcul précédent",
@@ -94,6 +106,8 @@ export default {
       ko: "직전 계산 대비 변화",
       "zh-Hans": "与上次计算相比的变化",
       th: "สิ่งที่เปลี่ยนไปนับจากการคำนวณครั้งก่อน",
+      pl: "Co się zmieniło od poprzedniego obliczenia",
+      ru: "Что изменилось с прошлого расчёта",
     }),
     noChange: t({
       fr: "Aucun candidat n'a bougé de plus de 0,5 point.",
@@ -106,6 +120,8 @@ export default {
       ko: "0.5%포인트 넘게 변한 후보가 없습니다.",
       "zh-Hans": "没有候选人的变动超过 0.5 个百分点。",
       th: "ไม่มีผู้สมัครคนใดเปลี่ยนแปลงเกิน 0.5 จุด",
+      pl: "Żaden kandydat nie przesunął się o więcej niż 0,5 punktu.",
+      ru: "Ни один кандидат не сдвинулся больше чем на 0,5 пункта.",
     }),
     newPolls: insert(
       t({
@@ -119,6 +135,8 @@ export default {
         ko: "새 여론조사: {{list}}",
         "zh-Hans": "新增民调：{{list}}",
         th: "โพลใหม่: {{list}}",
+        pl: "Nowe sondaże: {{list}}",
+        ru: "Новые опросы: {{list}}",
       }),
     ),
     noNewPolls: t({
@@ -132,6 +150,8 @@ export default {
       ko: "새 여론조사가 없습니다.",
       "zh-Hans": "没有新民调。",
       th: "ไม่มีโพลใหม่",
+      pl: "Brak nowych sondaży.",
+      ru: "Новых опросов нет.",
     }),
     noPrevious: t({
       fr: "C'est le premier calcul.",
@@ -144,6 +164,8 @@ export default {
       ko: "첫 번째 계산입니다.",
       "zh-Hans": "这是首次计算。",
       th: "นี่คือการคำนวณครั้งแรก",
+      pl: "To pierwsze obliczenie.",
+      ru: "Это первый расчёт.",
     }),
     modelTitle: t({
       fr: "Le modèle",
@@ -156,6 +178,8 @@ export default {
       ko: "모델",
       "zh-Hans": "模型说明",
       th: "แบบจำลอง",
+      pl: "Model",
+      ru: "Модель",
     }),
     modelNote: insert(
       t({
@@ -173,6 +197,8 @@ export default {
         "zh-Hans":
           "模型 {{version}}，仅以民调拟合：{{polls}} 项民调（测试了 {{scenarios}} 种情境），{{sims}} 次模拟选举。每个人参选的概率由人工在 config/candidates.yaml 中设定，部分参考了预测市场“列入选票”的价格。市场、新闻和 X 的信号展示在“信号”页面，但模型并不采用。",
         th: 'แบบจำลอง {{version}} ปรับจากโพลเพียงอย่างเดียว: โพล {{polls}} ชิ้น (ทดสอบ {{scenarios}} ฉากทัศน์) จำลองการเลือกตั้ง {{sims}} ครั้ง โอกาสที่แต่ละคนจะลงสมัครกำหนดด้วยมือใน config/candidates.yaml โดยส่วนหนึ่งอิงจากราคา "มีชื่อในบัตรเลือกตั้ง" ของตลาดคาดการณ์ สัญญาณจากตลาด สื่อข่าว และ X แสดงไว้ในหน้าสัญญาณ แต่แบบจำลองไม่ได้นำมาใช้',
+        pl: "Model {{version}}, dopasowany wyłącznie do sondaży: {{polls}} sondaży ({{scenarios}} przetestowanych scenariuszy), {{sims}} symulowanych wyborów. Prawdopodobieństwo, że każda osoba kandyduje, jest ustalane ręcznie w config/candidates.yaml, częściowo na podstawie cen „obecności na karcie wyborczej” na rynkach predykcyjnych. Sygnały z rynków, prasy i X figurują w sekcji Sygnały, ale model ich nie używa.",
+        ru: "Модель {{version}}, построенная только на опросах: {{polls}} опросов ({{scenarios}} проверенных сценариев), {{sims}} смоделированных выборов. Вероятность того, что каждый человек баллотируется, задаётся вручную в config/candidates.yaml, отчасти по ценам «попадания в бюллетень» на рынках прогнозов. Сигналы рынков, прессы и X показаны в разделе «Сигналы», но модель их не использует.",
       }),
     ),
     warnings: t({
@@ -186,6 +212,8 @@ export default {
       ko: "경고",
       "zh-Hans": "警告",
       th: "คำเตือน",
+      pl: "Ostrzeżenia",
+      ru: "Предупреждения",
     }),
   },
 } satisfies Dictionary

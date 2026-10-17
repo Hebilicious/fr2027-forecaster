@@ -14,6 +14,8 @@ export default {
       ko: "사건",
       "zh-Hans": "事件",
       th: "เหตุการณ์",
+      pl: "Wydarzenia",
+      ru: "События",
     }),
     reported: t({
       fr: "Signalés par Grok Bot, non vérifiés à la main.",
@@ -26,6 +28,8 @@ export default {
       ko: "Grok Bot이 보고한 것으로, 사람이 직접 확인하지 않았습니다.",
       "zh-Hans": "由 Grok Bot 报告，未经人工核实。",
       th: "รายงานโดย Grok Bot ยังไม่ได้ตรวจสอบด้วยคน",
+      pl: "Zgłoszone przez Grok Bot, niezweryfikowane ręcznie.",
+      ru: "Сообщено Grok Bot, не проверено вручную.",
     }),
     empty: t({
       fr: "Aucun événement signalé pour l'instant.",
@@ -38,6 +42,8 @@ export default {
       ko: "아직 보고된 사건이 없습니다.",
       "zh-Hans": "暂无事件报告。",
       th: "ยังไม่มีเหตุการณ์ที่รายงาน",
+      pl: "Na razie nie zgłoszono żadnego wydarzenia.",
+      ru: "Пока не сообщено ни об одном событии.",
     }),
     summaryInEnglish: t({
       fr: "Résumé en anglais.",
@@ -50,6 +56,8 @@ export default {
       ko: "요약은 영어로 제공됩니다.",
       "zh-Hans": "摘要为英文。",
       th: "สรุปเป็นภาษาอังกฤษ",
+      pl: "Streszczenie po angielsku.",
+      ru: "Резюме на английском.",
     }),
     kinds: {
       declaration: t({
@@ -63,6 +71,8 @@ export default {
         ko: "출마 선언",
         "zh-Hans": "宣布参选",
         th: "ประกาศลงสมัคร",
+        pl: "kandydatura",
+        ru: "выдвижение",
       }),
       withdrawal: t({
         fr: "retrait",
@@ -75,6 +85,8 @@ export default {
         ko: "사퇴",
         "zh-Hans": "退选",
         th: "ถอนตัว",
+        pl: "wycofanie się",
+        ru: "снятие кандидатуры",
       }),
       endorsement: t({
         fr: "soutien",
@@ -87,6 +99,8 @@ export default {
         ko: "지지 선언",
         "zh-Hans": "表态支持",
         th: "ประกาศสนับสนุน",
+        pl: "poparcie",
+        ru: "поддержка",
       }),
       primary_result: t({
         fr: "résultat de primaire",
@@ -99,6 +113,8 @@ export default {
         ko: "경선 결과",
         "zh-Hans": "初选结果",
         th: "ผลการเลือกตั้งขั้นต้น",
+        pl: "wynik prawyborów",
+        ru: "результат праймериз",
       }),
       sponsorships: t({
         fr: "parrainages",
@@ -111,6 +127,8 @@ export default {
         ko: "추천인 서명",
         "zh-Hans": "联署推荐",
         th: "รายชื่อผู้รับรอง",
+        pl: "podpisy samorządowców",
+        ru: "подписи выборных лиц",
       }),
       legal: t({
         fr: "justice",
@@ -123,6 +141,8 @@ export default {
         ko: "사법",
         "zh-Hans": "司法",
         th: "คดีความ",
+        pl: "sądownictwo",
+        ru: "правосудие",
       }),
       poll_published: t({
         fr: "sondage publié",
@@ -135,6 +155,8 @@ export default {
         ko: "여론조사 발표",
         "zh-Hans": "民调发布",
         th: "เผยแพร่โพล",
+        pl: "opublikowany sondaż",
+        ru: "опубликованный опрос",
       }),
       other: t({
         fr: "autre",
@@ -147,6 +169,8 @@ export default {
         ko: "기타",
         "zh-Hans": "其他",
         th: "อื่น ๆ",
+        pl: "inny",
+        ru: "другое",
       }),
     },
   },
