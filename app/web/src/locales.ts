@@ -6,8 +6,12 @@ import gb from "flag-icons/flags/4x3/gb.svg"
 import it from "flag-icons/flags/4x3/it.svg"
 import jp from "flag-icons/flags/4x3/jp.svg"
 import kr from "flag-icons/flags/4x3/kr.svg"
+import nl from "flag-icons/flags/4x3/nl.svg"
+import pl from "flag-icons/flags/4x3/pl.svg"
 import pt from "flag-icons/flags/4x3/pt.svg"
+import ru from "flag-icons/flags/4x3/ru.svg"
 import th from "flag-icons/flags/4x3/th.svg"
+import ua from "flag-icons/flags/4x3/ua.svg"
 import { getLocaleFromStorageClient, isDeclaredLocale, localeResolver, type DeclaredLocales } from "intlayer"
 
 /** A locale the site is written in, as listed in intlayer.config.ts. */
@@ -24,6 +28,10 @@ export const LANGUAGES: Readonly<Record<Locale, { name: string; flag: string }>>
   it: { name: "Italiano", flag: it },
   "es-ES": { name: "Español", flag: es },
   "pt-PT": { name: "Português", flag: pt },
+  nl: { name: "Nederlands", flag: nl },
+  pl: { name: "Polski", flag: pl },
+  ru: { name: "Русский", flag: ru },
+  uk: { name: "Українська", flag: ua },
   ja: { name: "日本語", flag: jp },
   ko: { name: "한국어", flag: kr },
   "zh-Hans": { name: "简体中文", flag: cn },

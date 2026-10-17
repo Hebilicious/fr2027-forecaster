@@ -37,10 +37,10 @@ Install the git hooks once per clone with `moon run repo:hooks-install`.
 
 ## UI languages
 
-The web UI (`app/web`) is written in ten languages with [Intlayer](https://intlayer.org): French, the reference, then
-English (UK), German, Italian, Spanish (Spain), Portuguese (Portugal), Japanese, Korean, Chinese (simplified) and Thai.
-`app/web/intlayer.config.ts` lists them. Every screen exists in all ten; a change that adds or rewords UI text is not done
-until it does.
+The web UI (`app/web`) is written in fourteen languages with [Intlayer](https://intlayer.org): French, the reference,
+then English (UK), German, Italian, Spanish (Spain), Portuguese (Portugal), Dutch, Polish, Russian, Ukrainian,
+Japanese, Korean, Chinese (simplified) and Thai. `app/web/intlayer.config.ts` lists them. Every screen exists in all
+fourteen; a change that adds or rewords UI text is not done until it does.
 
 - Every word a visitor reads or hears comes from a dictionary: text, `aria-label`, `title`, `alt` and the page title.
   `Foo.vue` keeps its words in `Foo.content.ts` beside it and reads them with `useIntlayer("<key>")`; words several
