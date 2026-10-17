@@ -492,24 +492,24 @@ export default {
         }),
       ),
       text: t({
-        fr: "Chaque simulation tire qui se présente, le vote du premier tour avec son erreur, les deux qualifiés, puis le vainqueur du second tour. Les chances affichées sont la part des simulations où chaque issue se produit.",
+        fr: "Chaque simulation tire qui se présente, le vote du premier tour avec son erreur, les deux qualifiés, puis le vainqueur du second tour. Les chances du modèle sont la part des simulations où chaque issue se produit ; les chances publiées les mêlent ensuite aux marchés.",
         "en-GB":
-          "Each simulation draws who runs, the round 1 vote with its error, the two qualifiers, then the runoff winner. The chances shown are the share of simulations in which each outcome happens.",
-        de: "Jede Simulation zieht, wer antritt, das Ergebnis des ersten Wahlgangs mit seinem Fehler, die beiden Qualifizierten und dann den Sieger der Stichwahl. Die angezeigten Chancen sind der Anteil der Simulationen, in denen ein Ausgang eintritt.",
-        it: "Ogni simulazione estrae chi si candida, il voto del primo turno con il suo errore, i due qualificati e poi il vincitore del ballottaggio. Le probabilità mostrate sono la quota di simulazioni in cui ogni esito si verifica.",
+          "Each simulation draws who runs, the round 1 vote with its error, the two qualifiers, then the runoff winner. The model's chances are the share of simulations in which each outcome happens; the published chances then mix them with the markets.",
+        de: "Jede Simulation zieht, wer antritt, das Ergebnis des ersten Wahlgangs mit seinem Fehler, die beiden Qualifizierten und dann den Sieger der Stichwahl. Die Chancen des Modells sind der Anteil der Simulationen, in denen ein Ausgang eintritt; die veröffentlichten Chancen mischen sie dann mit den Märkten.",
+        it: "Ogni simulazione estrae chi si candida, il voto del primo turno con il suo errore, i due qualificati e poi il vincitore del ballottaggio. Le probabilità del modello sono la quota di simulazioni in cui ogni esito si verifica; le probabilità pubblicate le combinano poi con i mercati.",
         "es-ES":
-          "Cada simulación sortea quién se presenta, el voto de la primera vuelta con su error, los dos clasificados y luego el ganador de la segunda vuelta. Las probabilidades mostradas son la proporción de simulaciones en las que ocurre cada resultado.",
+          "Cada simulación sortea quién se presenta, el voto de la primera vuelta con su error, los dos clasificados y luego el ganador de la segunda vuelta. Las probabilidades del modelo son la proporción de simulaciones en las que ocurre cada resultado; las probabilidades publicadas las combinan después con los mercados.",
         "pt-PT":
-          "Cada simulação sorteia quem se candidata, o voto da primeira volta com o seu erro, os dois apurados e depois o vencedor da segunda volta. As probabilidades mostradas são a parte das simulações em que cada resultado acontece.",
-        nl: "Elke simulatie trekt wie meedoet, de stemming in de eerste ronde met haar fout, de twee finalisten en dan de winnaar van de tweede ronde. De getoonde kansen zijn het aandeel simulaties waarin elke uitkomst voorkomt.",
-        pl: "Każda symulacja losuje, kto startuje, wynik pierwszej tury z jego błędem, dwóch finalistów, a potem zwycięzcę drugiej tury. Pokazane szanse to odsetek symulacji, w których dany wynik się zdarza.",
-        ru: "Каждая симуляция разыгрывает, кто баллотируется, итоги первого тура с их ошибкой, двух финалистов, а затем победителя второго тура. Показанные шансы — доля симуляций, в которых случается каждый исход.",
-        uk: "Кожна симуляція розігрує, хто балотується, підсумки першого туру з їхньою похибкою, двох фіналістів, а потім переможця другого туру. Показані шанси — частка симуляцій, у яких трапляється кожен результат.",
-        ja: "各シミュレーションは、誰が立候補するか、誤差を含む第1回投票の結果、上位2人、そして決選投票の勝者を順に抽選します。表示している確率は、それぞれの結果が起きたシミュレーションの割合です。",
-        ko: "각 시뮬레이션은 누가 출마하는지, 오차를 포함한 1차 투표 결과, 결선 진출자 두 명, 그리고 결선 승자를 차례로 뽑습니다. 표시된 확률은 각 결과가 나온 시뮬레이션의 비율입니다.",
+          "Cada simulação sorteia quem se candidata, o voto da primeira volta com o seu erro, os dois apurados e depois o vencedor da segunda volta. As probabilidades do modelo são a parte das simulações em que cada resultado acontece; as probabilidades publicadas combinam-nas depois com os mercados.",
+        nl: "Elke simulatie trekt wie meedoet, de stemming in de eerste ronde met haar fout, de twee finalisten en dan de winnaar van de tweede ronde. De kansen van het model zijn het aandeel simulaties waarin elke uitkomst voorkomt; de gepubliceerde kansen mengen ze daarna met de markten.",
+        pl: "Każda symulacja losuje, kto startuje, wynik pierwszej tury z jego błędem, dwóch finalistów, a potem zwycięzcę drugiej tury. Szanse modelu to odsetek symulacji, w których dany wynik się zdarza; publikowane szanse łączą je następnie z rynkami.",
+        ru: "Каждая симуляция разыгрывает, кто баллотируется, итоги первого тура с их ошибкой, двух финалистов, а затем победителя второго тура. Шансы модели — доля симуляций, в которых случается каждый исход; публикуемые шансы затем смешивают их с рынками.",
+        uk: "Кожна симуляція розігрує, хто балотується, підсумки першого туру з їхньою похибкою, двох фіналістів, а потім переможця другого туру. Шанси моделі — частка симуляцій, у яких трапляється кожен результат; опубліковані шанси потім поєднують їх із ринками.",
+        ja: "各シミュレーションは、誰が立候補するか、誤差を含む第1回投票の結果、上位2人、そして決選投票の勝者を順に抽選します。モデルの確率は、それぞれの結果が起きたシミュレーションの割合です。公表する確率は、これを市場と混ぜたものです。",
+        ko: "각 시뮬레이션은 누가 출마하는지, 오차를 포함한 1차 투표 결과, 결선 진출자 두 명, 그리고 결선 승자를 차례로 뽑습니다. 모델의 확률은 각 결과가 나온 시뮬레이션의 비율이며, 공표 확률은 이를 시장과 섞은 것입니다.",
         "zh-Hans":
-          "每次模拟依次抽取谁参选、含误差的第一轮结果、两名晋级者，以及第二轮的胜者。显示的概率是各结果出现的模拟所占的比例。",
-        th: "ทุกการจำลองจะสุ่มว่าใครลงสมัคร ผลรอบแรกพร้อมความคลาดเคลื่อน ผู้เข้ารอบสองคน แล้วจึงผู้ชนะรอบสอง โอกาสที่แสดงคือสัดส่วนของการจำลองที่ผลแต่ละแบบเกิดขึ้น",
+          "每次模拟依次抽取谁参选、含误差的第一轮结果、两名晋级者，以及第二轮的胜者。模型的概率是各结果出现的模拟所占的比例；公布的概率再把它们与市场混合。",
+        th: "ทุกการจำลองจะสุ่มว่าใครลงสมัคร ผลรอบแรกพร้อมความคลาดเคลื่อน ผู้เข้ารอบสองคน แล้วจึงผู้ชนะรอบสอง โอกาสของแบบจำลองคือสัดส่วนของการจำลองที่ผลแต่ละแบบเกิดขึ้น ส่วนโอกาสที่เผยแพร่จะนำไปผสมกับตลาดอีกที",
       }),
     },
     noSettings: t({
