@@ -48,8 +48,17 @@ struct ForecastFile {
     candidates: Vec<CandidateOut>,
     pairs: Vec<PairOut>,
     aggregation: AggregationOut,
+    /// The settings of config/model.yaml this run simulated with, so the page explains the model
+    /// that produced the numbers it shows.
+    parameters: Parameters,
     changes: Changes,
     warnings: Vec<String>,
+}
+
+#[derive(Serialize)]
+struct Parameters {
+    round1_error: fr2027_model::ErrorParams,
+    round2: fr2027_model::Round2Params,
 }
 
 #[derive(Serialize)]
@@ -435,6 +444,10 @@ fn build(
         },
         candidates,
         pairs,
+        parameters: Parameters {
+            round1_error: params.round1_error.clone(),
+            round2: params.round2.clone(),
+        },
         aggregation: AggregationOut {
             random_walk_sd: forecast.round1.noise.random_walk_sd,
             design_effect: forecast.round1.noise.design_effect,

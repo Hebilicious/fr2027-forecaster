@@ -17,11 +17,12 @@ use crate::data::Inputs;
 use crate::forecast::SERIES_FILE;
 
 /// Every document the UI reads, as `api/<name>.json`.
-pub const NAMES: [&str; 7] = [
+pub const NAMES: [&str; 8] = [
     "forecast",
     "series",
     "polls",
     "history",
+    "track-record",
     "signals",
     "health",
     "candidates",
@@ -38,6 +39,14 @@ pub fn document(repo: &Repo, name: &str, now: Timestamp) -> Result<Option<Value>
         "series" => read_json(&repo.forecasts_dir().join(SERIES_FILE))?,
         "polls" => polls_document(&polls::read_clean_rows(repo)?)?,
         "history" => history(repo)?,
+        "track-record" => {
+            let path = repo.root().join(TRACK_RECORD_FILE);
+            if path.exists() {
+                track_record(&read_json(&path)?)?
+            } else {
+                json!({ "model_version": null, "elections": [], "by_horizon": [], "reliability": [] })
+            }
+        }
         "signals" => signals(repo, now)?,
         "health" => health(repo, now)?,
         "candidates" => {
@@ -184,6 +193,41 @@ fn history(repo: &Repo) -> Result<Value> {
         }));
     }
     Ok(json!({ "runs": runs }))
+}
+
+/// The backtest's report, from which `track-record` keeps what the UI shows.
+pub const TRACK_RECORD_FILE: &str = "research/backtest/results.json";
+
+/// How the model in config/model.yaml did when replayed on past elections: whether its 80% ranges
+/// held the result as often as they claim, by how long before round 1, and whether its
+/// probabilities came true as often as they said (`research/backtest/results.json`).
+fn track_record(results: &Value) -> Result<Value> {
+    let scores = &results["current_scores"];
+    let by_horizon: Vec<Value> = scores["by_horizon"]
+        .as_object()
+        .context("backtest results: no current_scores.by_horizon")?
+        .iter()
+        .map(|(days, summary)| {
+            Ok(json!({
+                "days": days.parse::<u32>().with_context(|| format!("backtest results: horizon `{days}`"))?,
+                "replays": summary["replays"],
+                "coverage80": summary["coverage80"],
+                "share_mae_points": summary["share_mae_points"],
+            }))
+        })
+        .collect::<Result<_>>()?;
+    let elections: Vec<Value> = results["elections"]
+        .as_array()
+        .context("backtest results: no elections")?
+        .iter()
+        .map(|e| e["year"].clone())
+        .collect();
+    Ok(json!({
+        "model_version": results["model_version"],
+        "elections": elections,
+        "by_horizon": by_horizon,
+        "reliability": scores["reliability"],
+    }))
 }
 
 /// The newest raw file in `dir`, parsed.
@@ -502,8 +546,9 @@ fn events_signal(repo: &Repo) -> Result<Value> {
 
 #[cfg(test)]
 mod tests {
-    use super::{is_forecast_name, polls_document};
+    use super::{is_forecast_name, polls_document, track_record};
     use fr2027_collectors::polls::PollRow;
+    use serde_json::json;
 
     #[test]
     fn forecast_names_are_strict() {
@@ -512,6 +557,30 @@ mod tests {
         assert!(!is_forecast_name("../etc/passwd"));
         assert!(!is_forecast_name("2026-10-09T14.json.bak"));
         assert!(!is_forecast_name("2026-10-0xT14.json"));
+    }
+
+    #[test]
+    fn track_record_keeps_coverage_and_reliability() {
+        let results = json!({
+            "model_version": "0.3.0",
+            "elections": [{ "year": 2017 }, { "year": 2022 }],
+            "current_scores": {
+                "by_horizon": {
+                    "182": { "replays": 2, "coverage80": 0.7, "share_mae_points": 3.1, "win_brier": 0.05 },
+                    "7": { "replays": 2, "coverage80": 0.8, "share_mae_points": 1.2 }
+                },
+                "reliability": [{ "lo": 0.0, "hi": 0.1, "events": 9, "mean_forecast": 0.01, "observed": 0.0 }]
+            }
+        });
+        let record = track_record(&results).unwrap();
+        assert_eq!(record["elections"], json!([2017, 2022]));
+        assert_eq!(
+            record["by_horizon"][0],
+            json!({ "days": 182, "replays": 2, "coverage80": 0.7, "share_mae_points": 3.1 })
+        );
+        assert_eq!(record["by_horizon"][1]["days"], 7);
+        assert_eq!(record["reliability"][0]["events"], 9);
+        assert!(track_record(&json!({})).is_err());
     }
 
     #[test]

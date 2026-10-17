@@ -40,6 +40,32 @@ const HouseEffect = Schema.Struct({
   sd: Schema.Finite,
 })
 
+// The settings the run simulated with (forecast files from before model 0.4.0 lack them).
+const ErrorSettings = Schema.Struct({
+  student_t_df: Schema.Finite,
+  bloc_sd: Schema.Finite,
+  candidate_sd: Schema.Finite,
+  horizon_bloc_sd: Schema.Finite,
+  horizon_candidate_sd: Schema.Finite,
+})
+
+const Round2Settings = Schema.Struct({
+  random_walk_sd: Schema.Finite,
+  design_effect: Schema.Finite,
+  prior_sd: Schema.Finite,
+  error_sd: Schema.Finite,
+  horizon_error_sd: Schema.Finite,
+  student_t_df: Schema.Finite,
+  transfer_sd: Schema.Finite,
+  anchor_gap_mean: Schema.Finite,
+  anchor_gap_sd: Schema.Finite,
+  loyalty: Schema.Finite,
+  transfers: Schema.Record(Schema.String, Schema.Record(Schema.String, Schema.Finite)),
+})
+
+const Parameters = Schema.Struct({ round1_error: ErrorSettings, round2: Round2Settings })
+export type Parameters = typeof Parameters.Type
+
 export const Forecast = Schema.Struct({
   schema_version: Schema.Literal("1.0"),
   model_version: Schema.String,
@@ -63,6 +89,7 @@ export const Forecast = Schema.Struct({
     poll_ids: Schema.Array(Schema.String),
     house_effects: Schema.Array(HouseEffect),
   }),
+  parameters: Schema.optional(Parameters),
   changes: Schema.Struct({
     previous: Schema.NullOr(Schema.String),
     new_polls: Schema.Array(Schema.String),
@@ -285,3 +312,47 @@ export type NewsDay = typeof NewsDay.Type
 export type Headline = typeof Headline.Type
 export type XRow = typeof XRow.Type
 export type CampaignEvent = typeof CampaignEvent.Type
+
+// Every forecast run's chances, oldest first (`/api/history.json`).
+const HistoryRun = Schema.Struct({
+  file: Schema.String,
+  as_of: Schema.String,
+  generated_at: Schema.String,
+  candidates: Schema.Array(
+    Schema.Struct({
+      candidate_id: Schema.String,
+      p_win: Schema.NullOr(Schema.Finite),
+      p_qualify_r1: Schema.NullOr(Schema.Finite),
+    }),
+  ),
+})
+
+export const History = Schema.Struct({ runs: Schema.Array(HistoryRun) })
+export type History = typeof History.Type
+export type HistoryRun = typeof HistoryRun.Type
+
+// How the model did when replayed on past elections (`/api/track-record.json`, from the backtest).
+const HorizonRecord = Schema.Struct({
+  days: Schema.Finite,
+  replays: Schema.Finite,
+  /** Share of results that fell inside the model's 80% range. */
+  coverage80: Schema.Finite,
+  share_mae_points: Schema.Finite,
+})
+
+const ReliabilityBin = Schema.Struct({
+  lo: Schema.Finite,
+  hi: Schema.Finite,
+  events: Schema.Finite,
+  mean_forecast: Schema.NullOr(Schema.Finite),
+  observed: Schema.NullOr(Schema.Finite),
+})
+
+export const TrackRecord = Schema.Struct({
+  model_version: Schema.NullOr(Schema.String),
+  elections: Schema.Array(Schema.Finite),
+  by_horizon: Schema.Array(HorizonRecord),
+  reliability: Schema.Array(ReliabilityBin),
+})
+export type TrackRecord = typeof TrackRecord.Type
+export type ReliabilityBin = typeof ReliabilityBin.Type

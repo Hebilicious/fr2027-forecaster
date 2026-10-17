@@ -1,14 +1,20 @@
 <script setup lang="ts">
 import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
-import type { Forecast } from "../api/schemas"
+import type { Forecast, HistoryRun, TrackRecord } from "../api/schemas"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
+import ModelExplorer from "../components/explorer/ModelExplorer.vue"
+import MethodSection from "../components/MethodSection.vue"
 import FieldFilter from "../components/FieldFilter.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
 import { count, daysUntil, list, points, probability, shareWithInterval } from "../format"
 import { useFieldFilter } from "../useFieldFilter"
 
-const props = defineProps<{ forecast: Forecast }>()
+const props = defineProps<{
+  forecast: Forecast
+  history: readonly HistoryRun[]
+  trackRecord: TrackRecord | null
+}>()
 const content = useIntlayer("overview-view")
 const common = useIntlayer("common")
 const { locale } = useLocale()
@@ -47,7 +53,9 @@ const at = (share: number) => (share / maxShare.value) * 100
       </p>
     </section>
 
-    <section aria-labelledby="field-title" class="card rise" :style="{ '--i': 1 }">
+    <ModelExplorer :forecast="forecast" :history="history" :track-record="trackRecord" />
+
+    <section aria-labelledby="field-title" class="card rise" :style="{ '--i': 2 }">
       <header class="card-head">
         <p class="eyebrow">{{ content.fieldEyebrow }}</p>
         <h2 id="field-title">{{ content.fieldTitle }}</h2>
@@ -120,61 +128,36 @@ const at = (share: number) => (share / maxShare.value) * 100
       </div>
     </section>
 
-    <div class="grid-2">
-      <section aria-labelledby="moved-title" class="card rise" :style="{ '--i': 2 }">
-        <header class="card-head">
-          <h2 id="moved-title">{{ content.whatMoved }}</h2>
-        </header>
-        <template v-if="forecast.changes.previous">
-          <ul v-if="movers.length" class="movers">
-            <li v-for="d in movers" :key="d.candidate_id">
-              <span class="who">
-                <CandidateAvatar :id="d.candidate_id" :name="names.get(d.candidate_id) ?? d.candidate_id" :size="24" />
-                {{ names.get(d.candidate_id) ?? d.candidate_id }}
-              </span>
-              <span class="delta num">
-                <span aria-hidden="true" class="arrow">{{ d.delta > 0 ? "▲" : "▼" }}</span>
-                {{ points(d.delta, locale) }}
-              </span>
-            </li>
-          </ul>
-          <p v-else class="secondary">{{ content.noChange }}</p>
-          <p class="small muted polls">
-            {{
-              forecast.changes.new_polls.length
-                ? content.newPolls({ list: list(forecast.changes.new_polls, locale) })
-                : content.noNewPolls
-            }}
-          </p>
-        </template>
-        <p v-else class="secondary">{{ content.noPrevious }}</p>
-      </section>
-
-      <section aria-labelledby="model-title" class="card rise" :style="{ '--i': 3 }">
-        <header class="card-head">
-          <h2 id="model-title">{{ content.modelTitle }}</h2>
-        </header>
-        <p class="secondary model-note">
+    <section aria-labelledby="moved-title" class="card rise" :style="{ '--i': 2 }">
+      <header class="card-head">
+        <h2 id="moved-title">{{ content.whatMoved }}</h2>
+      </header>
+      <template v-if="forecast.changes.previous">
+        <ul v-if="movers.length" class="movers">
+          <li v-for="d in movers" :key="d.candidate_id">
+            <span class="who">
+              <CandidateAvatar :id="d.candidate_id" :name="names.get(d.candidate_id) ?? d.candidate_id" :size="24" />
+              {{ names.get(d.candidate_id) ?? d.candidate_id }}
+            </span>
+            <span class="delta num">
+              <span aria-hidden="true" class="arrow">{{ d.delta > 0 ? "▲" : "▼" }}</span>
+              {{ points(d.delta, locale) }}
+            </span>
+          </li>
+        </ul>
+        <p v-else class="secondary">{{ content.noChange }}</p>
+        <p class="small muted polls">
           {{
-            content.modelNote({
-              version: forecast.model_version,
-              polls: forecast.aggregation.polls_used,
-              scenarios: forecast.aggregation.scenarios_used,
-              sims: count(forecast.simulations, locale),
-            })
+            forecast.changes.new_polls.length
+              ? content.newPolls({ list: list(forecast.changes.new_polls, locale) })
+              : content.noNewPolls
           }}
         </p>
-        <template v-if="forecast.warnings.length">
-          <h3 class="warnings-title">{{ content.warnings }}</h3>
-          <ul class="warnings">
-            <li v-for="w in forecast.warnings" :key="w" class="notice">
-              <span aria-hidden="true" class="icon">!</span>
-              <span>{{ w }}</span>
-            </li>
-          </ul>
-        </template>
-      </section>
-    </div>
+      </template>
+      <p v-else class="secondary">{{ content.noPrevious }}</p>
+    </section>
+
+    <MethodSection :forecast="forecast" />
   </div>
 </template>
 
@@ -328,26 +311,6 @@ const at = (share: number) => (share / maxShare.value) * 100
 
 .polls {
   overflow-wrap: anywhere;
-}
-
-.model-note {
-  line-height: 1.65;
-}
-
-.warnings-title {
-  margin: 20px 0 10px;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.warnings {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
 }
 
 @media (max-width: 760px) {

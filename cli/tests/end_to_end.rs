@@ -274,6 +274,7 @@ fn export_writes_the_site_and_respects_the_blackout() {
         "series",
         "polls",
         "history",
+        "track-record",
         "signals",
         "health",
         "candidates",

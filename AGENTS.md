@@ -61,6 +61,15 @@ fourteen; a change that adds or rewords UI text is not done until it does.
   placeholder in some locale.
 - To add or drop a language, change `intlayer.config.ts`, its name and flag in `src/locales.ts`, and every dictionary.
 
+## Explaining the model
+
+The overview's method section (`app/web/src/components/MethodSection.vue`) explains the model with the numbers of the
+forecast on screen, read from the forecast file and the settings it records (`parameters`), never typed into the text.
+A change to the method (`model/src`, the settings in `config/model.yaml`, which inputs the model uses) updates that
+section's wording in the same pull request. The chain that catches a forgotten setting: `config/model.yaml` is read with
+`deny_unknown_fields`, every forecast is validated against `schemas/forecast.schema.json`, which lists the settings
+exactly, and `MethodSection.test.ts` requires a label for each of them.
+
 ## Automation
 
 Automation, such as the Live workflow's hourly data commits, lands on `main` by itself. It needs no review or

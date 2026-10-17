@@ -62,7 +62,7 @@ const uncredited = computed(() =>
       :style="{ '--i': i }"
     >
       <header class="group-head">
-        <h2 :id="`family-${group.family}`">{{ labelOf(content.families, group.family) }}</h2>
+        <h2 :id="`family-${group.family}`">{{ labelOf(common.families, group.family) }}</h2>
         <span class="count num">{{ group.candidates.length }}</span>
       </header>
       <ul class="cards">
