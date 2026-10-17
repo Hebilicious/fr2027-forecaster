@@ -69,6 +69,10 @@ impl Repo {
     pub fn quarantine_dir(&self) -> PathBuf {
         self.root.join("data/quarantine")
     }
+    /// Signal flags, logged when first seen ([`crate::forward`]).
+    pub fn forward_dir(&self) -> PathBuf {
+        self.root.join("data/forward")
+    }
     pub fn forecasts_dir(&self) -> PathBuf {
         self.root.join("data/forecasts")
     }

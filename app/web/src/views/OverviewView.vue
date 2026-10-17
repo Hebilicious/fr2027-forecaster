@@ -30,6 +30,9 @@ const movers = computed(() =>
 )
 const daysLeft = computed(() => daysUntil(props.forecast.election.round1, new Date()))
 const horizon = computed(() => content.horizon({ days: count(daysLeft.value, locale.value) }))
+const newSpikes = computed(() => [
+  ...new Set((props.forecast.changes.new_spikes ?? []).map((s) => names.value.get(s.candidate_id) ?? s.candidate_id)),
+])
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const at = (share: number) => (share / maxShare.value) * 100
 // Everyone the model or the markets give at least half a point to win, in the forecast's order,
@@ -212,6 +215,9 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               ? content.newPolls({ list: list(forecast.changes.new_polls, locale) })
               : content.noNewPolls
           }}
+        </p>
+        <p v-if="newSpikes.length" class="small muted polls">
+          {{ content.newSpikes({ list: list(newSpikes, locale) }) }}
         </p>
       </template>
       <p v-else class="secondary">{{ content.noPrevious }}</p>

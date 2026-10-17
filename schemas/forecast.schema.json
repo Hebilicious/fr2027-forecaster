@@ -375,11 +375,12 @@
       "description": "Event detection (model/src/signals.rs): the news and attention spikes of the 60 days before as_of, and the extra variance each spike adds at the shock_sd chosen by marginal likelihood (0: the spikes are shown but change nothing).",
       "type": "object",
       "additionalProperties": false,
-      "required": ["sources", "shock_sd", "half_life_days", "spikes"],
+      "required": ["sources", "shock_sd", "half_life_days", "momentum_weight", "spikes"],
       "properties": {
         "sources": { "type": "array", "items": { "enum": ["attention", "news"] } },
         "shock_sd": { "type": "number", "minimum": 0 },
         "half_life_days": { "type": "number", "exclusiveMinimum": 0 },
+        "momentum_weight": { "type": "number" },
         "spikes": {
           "type": "array",
           "items": {
@@ -407,7 +408,7 @@
       "description": "What moved since the previous forecast file.",
       "type": "object",
       "additionalProperties": false,
-      "required": ["previous", "new_polls", "p_win_delta"],
+      "required": ["previous", "new_polls", "new_spikes", "p_win_delta"],
       "properties": {
         "previous": {
           "type": ["string", "null"]
@@ -416,6 +417,16 @@
           "type": "array",
           "items": {
             "type": "string"
+          }
+        },
+        "new_spikes": {
+          "description": "News and attention spikes this run found that the previous forecast had not.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["candidate_id", "date"],
+            "properties": { "candidate_id": { "type": "string" }, "date": { "$ref": "#/$defs/date" } }
           }
         },
         "p_win_delta": {

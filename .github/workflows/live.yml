@@ -170,6 +170,7 @@ jobs:
       - name: Ingest, refit, validate
         run: |
           $FR2027 ingest
+          $FR2027 forward || echo "::warning title=forward::the forward log failed, see the log"
           $FR2027 forecast --if-changed
           $FR2027 validate
 
@@ -190,7 +191,7 @@ jobs:
           git add -A -- data
           if [ -n "$changes" ]; then git add -- "${field_files[@]}"; fi
           if git diff --cached --quiet; then echo "No new data."; exit 0; fi
-          areas=$(git diff --cached --name-only | awk -F/ '$2 == "raw" { print $3 } $2 == "forecasts" { print "forecast" }' | sort -u | paste -sd, -)
+          areas=$(git diff --cached --name-only | awk -F/ '$2 == "raw" { print $3 } $2 == "forecasts" { print "forecast" } $2 == "forward" { print "forward" }' | sort -u | paste -sd, -)
           message="chore(data): ${areas:-clean files} $(date -u +%Y-%m-%dT%H)Z"
           if [ -n "$changes" ]; then message="$message; field: $changes (Grok Bot field_change)"; fi
           git commit -q -m "$message"

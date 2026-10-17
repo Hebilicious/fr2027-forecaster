@@ -177,7 +177,7 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
         <CandidatesView v-else-if="view === 'candidates'" :forecast="forecast" />
         <Round1View v-else-if="view === 'round1'" :forecast="forecast" :series="series" :polls="polls" />
         <Round2View v-else-if="view === 'round2'" :forecast="forecast" />
-        <SignalsView v-else-if="view === 'signals'" :forecast="forecast" :signals="signals" />
+        <SignalsView v-else-if="view === 'signals'" :forecast="forecast" :signals="signals" :blend="blend" />
         <SourcesView v-else :forecast="forecast" :polls="polls" :health="health" />
       </template>
     </div>
