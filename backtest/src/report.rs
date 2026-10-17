@@ -42,6 +42,8 @@ pub struct Report {
     pub final_polls_round2: Vec<Round2Election>,
     /// The signal layers against the polls-only model, when configured.
     pub signals_ablation: Option<Ablation>,
+    /// The market blend's weight, when an election has market history.
+    pub market_blend: Option<crate::blend::BlendFit>,
 }
 
 #[derive(Clone, Debug, Serialize)]
@@ -656,6 +658,17 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
         }
     };
 
+    let market_blend = if config.market_blend_weights.is_empty() {
+        None
+    } else {
+        crate::blend::fit(
+            &elections,
+            &current_scores.replays,
+            &config.market_blend_weights,
+            config.probability_floor,
+        )
+    };
+
     let election_info = elections
         .iter()
         .map(|e| ElectionInfo {
@@ -714,6 +727,7 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
         leave_one_out,
         final_polls_round2,
         signals_ablation,
+        market_blend,
     })
 }
 
@@ -973,6 +987,11 @@ impl Report {
         if let Some(ablation) = &self.signals_ablation {
             ablation_markdown(&mut out, ablation);
         }
+        blend_markdown(
+            &mut out,
+            self.market_blend.as_ref(),
+            !self.config.market_blend_weights.is_empty(),
+        );
         out
     }
 }
@@ -1155,5 +1174,49 @@ fn ablation_markdown(out: &mut String, ablation: &Ablation) {
             }
             let _ = writeln!(out, "{row}");
         }
+    }
+}
+
+fn blend_markdown(out: &mut String, fit: Option<&crate::blend::BlendFit>, configured: bool) {
+    if !configured {
+        return;
+    }
+    let _ = writeln!(out, "\n## Market blend\n");
+    let Some(fit) = fit else {
+        let _ = writeln!(
+            out,
+            "No election has market history (`data/backtest/<year>/markets.csv`), so the blend's weight cannot be fitted and stays at 1, the model alone."
+        );
+        return;
+    };
+    let years: Vec<String> = fit
+        .replays_by_year
+        .iter()
+        .map(|(y, n)| format!("{y} ({n} replays)"))
+        .collect();
+    let _ = writeln!(
+        out,
+        "The model at the current settings pooled with the last market prices published by each replay's date (model/src/blend.rs), at each weight on the model; mean log-loss of who qualifies and who wins. Elections with market history: {}. The rule: among the weights at least as good as the model alone on every such election, the lowest total. Fitted weight on the model: **{}**.\n",
+        years.join(", "),
+        fit.fitted
+    );
+    let mut header = String::from("| Weight on the model |");
+    let mut rule = String::from("|---|");
+    for y in fit.replays_by_year.keys() {
+        let _ = write!(header, " {y} qualify | {y} win |");
+        rule.push_str("---|---|");
+    }
+    let _ = writeln!(out, "{header} Total |\n{rule}---|");
+    for g in &fit.grid {
+        let mut row = format!("| {} |", g.model_weight);
+        for y in fit.replays_by_year.keys() {
+            let _ = write!(
+                row,
+                " {} | {} |",
+                num(g.qualify_log_loss[y], 3),
+                num(g.win_log_loss[y], 3)
+            );
+        }
+        let _ = writeln!(out, "{row} {} |", num(g.total, 3));
     }
 }

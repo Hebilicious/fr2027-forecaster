@@ -51,6 +51,7 @@ grid:
   student_t_df: [5]
   round2_error_sd: [0.04, 0.08, 0.16]
   round2_horizon_error_sd: [0.0, 0.04]
+market_blend_weights: [0.0, 0.5, 1.0]
 "#
     .to_string()
 }
@@ -110,6 +111,20 @@ fn scratch_repo() -> tempfile::TempDir {
         fs::write(dir.join("candidates.yaml"), CANDIDATES.replace("2001-04-22", round1)).unwrap();
         fs::write(dir.join("polls.csv"), polls_csv(year)).unwrap();
     }
+    // Market history for 2001 only, the winner priced as the favourite.
+    let mut markets = "date,venue,question,candidate_id,label,price,source_url\n".to_string();
+    for date in ["2001-02-15", "2001-04-10"] {
+        for (question, id, price) in [
+            ("win", "bruno", 0.7),
+            ("win", "david", 0.2),
+            ("win", "", 0.1),
+            ("qualify", "bruno", 0.9),
+            ("qualify", "david", 0.8),
+        ] {
+            let _ = writeln!(markets, "{date},venue,{question},{id},{id},{price},https://example.org");
+        }
+    }
+    fs::write(root.join("data/backtest/2001/markets.csv"), markets).unwrap();
     let sources = root.join("research/sources");
     fs::create_dir_all(&sources).unwrap();
     let mut results = "year,round,candidate_name,party,share_expressed,source_url,notes\n".to_string();
@@ -189,8 +204,14 @@ fn runs_deterministically_and_fits_on_the_grid() {
     assert_eq!(first.stages[0].grid.len(), 4);
     assert_eq!(first.leave_one_out.len(), 2);
 
+    let blend = first.market_blend.as_ref().expect("2001 has market history");
+    assert_eq!(blend.replays_by_year.keys().copied().collect::<Vec<_>>(), [2001]);
+    let total_at = |w: f64| blend.grid.iter().find(|g| g.model_weight == w).unwrap().total;
+    assert!(total_at(blend.fitted) <= total_at(1.0));
+
     let report = first.markdown();
     for heading in [
+        "## Market blend",
         "## Scores",
         "## Reliability",
         "## Fit",

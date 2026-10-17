@@ -65,3 +65,16 @@ Every national voting-intention poll for 2002, 2007, 2012, 2017 and 2022 listed 
   - Louis Harris 4–5 January 2002 and Ifop 26 February 2007 were checked against the recall columns of the firms' later reports, which do not give the sample size.
 - **Corrections.** `corrections.csv` holds the 36 share corrections (33 for 2017–2022, 3 for 2002–2012); the extractor applies them and refuses to run if a correction's index value is not the one it extracted. The 278 checked polls that now match their source (134 of 2017–2022, 144 of 2002–2012) are written `entry: primary`, with the document read as `source_url`; the rest stay `entry: index`.
 - **Fields.** `data/backtest/<year>/candidates.yaml` lists everyone tested in a poll, with blocs on the scale of `config/candidates.yaml` (judgement calls, `research/LOG.md`), and gives the candidates who ran p = 1, everyone else p = 0.
+
+## Backtest market prices: `data/backtest/<year>/markets.csv`
+
+One row per contract per day: the last price seen that day (UTC), dated before round 1, as an implied probability (overround not removed). `question` is `win` or `qualify` (reaches round 2); `candidate_id` is empty for people outside that election's field. Every row carries its `source_url`. Gathered on 2026-10-16 from public pages and data, mostly through the Wayback Machine:
+
+- **2022, `ebo`** (electionbettingodds.com, an average of Betfair, Smarkets, PredictIt, Polymarket and FTX bid–ask midpoints), 2021-05-02 to 2022-04-09, 332 days, from the series embedded in one Wayback capture (2022-04-10 00:14 UTC). The site's timestamps are US Eastern, converted to UTC dates. It tracks 8 candidates; Zemmour starts on 2021-10-26 and Pécresse on 2022-01-03, so earlier rows lack them. No data for 2021-10-12 to 10-22.
+- **2022, `polymarket`**, 2022-01-12 to 2022-04-09, daily, Macron, Le Pen, Pécresse and Zemmour: rebuilt from the 4,671 trades of those markets on the Polygon blockchain (Polymarket's own history endpoints return nothing for them). Each market's traded volume matches Polymarket's reported volume; trade times are interpolated between sampled block times (up to about 27 minutes off).
+- **2022, `predictit`** (market 7360), 2021-06-29 to 2022-04-05, 41 dates: last-trade prices from archived copies of PredictIt's public data feed.
+- **2017, `predictit`** (market 2449), 2016-09-05 to 2017-04-17, 36 dates: weekly archived contract pages and one feed snapshot (2016-12-24). Macron is priced only from 2017-01-30.
+- **2017, `oddschecker_median`**: the median of 1/odds over up to 24 bookmakers (Betfair among them), 30 dates for `win` from 2016-09-15 and two for `qualify` (2017-02-15, 2017-04-21), from archived oddschecker pages.
+- **2017, `ebo`**: one date, 2017-03-27.
+
+The Iowa Electronic Markets' 2022 French markets (17 trades, about $80) and Manifold (play money) are left out.

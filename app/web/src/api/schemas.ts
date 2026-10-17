@@ -356,3 +356,31 @@ export const TrackRecord = Schema.Struct({
 })
 export type TrackRecord = typeof TrackRecord.Type
 export type ReliabilityBin = typeof ReliabilityBin.Type
+
+const Questions = Schema.Struct({ win: Schema.Finite, qualify: Schema.Finite, run: Schema.Finite })
+const MarketQuestions = Schema.Struct({
+  win: Schema.NullOr(Schema.Finite),
+  qualify: Schema.NullOr(Schema.Finite),
+  run: Schema.NullOr(Schema.Finite),
+})
+
+const BlendCandidate = Schema.Struct({
+  candidate_id: Schema.String,
+  model: Questions,
+  /** Venue-averaged prices; for `win`, each venue's prices scaled to sum to 1 first. */
+  market: MarketQuestions,
+  blend: Questions,
+})
+
+/** `api/blend.json`: the latest forecast pooled with the newest market snapshot (model/src/blend.rs). */
+export const Blend = Schema.Struct({
+  forecast: Schema.NullOr(Schema.String),
+  /** The weight on the model; 1 is the model alone. */
+  model_weight: Schema.Finite,
+  market_fetched_at: Schema.NullOr(Schema.String),
+  /** False when the newest snapshot is too old to blend. */
+  market_used: Schema.Boolean,
+  candidates: Schema.Array(BlendCandidate),
+})
+export type Blend = typeof Blend.Type
+export type BlendCandidate = typeof BlendCandidate.Type

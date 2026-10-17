@@ -56,4 +56,29 @@ describe("api", () => {
     respond(JSON.stringify(empty), 200, "application/json")
     expect(await api.signals()).toEqual({ _tag: "Loaded", value: empty })
   })
+
+  it("decodes a blend document, with candidates no market prices", async () => {
+    const blend = {
+      forecast: "2026-10-16T16.json",
+      model_weight: 1,
+      market_fetched_at: "2026-10-16T16:18:30Z",
+      market_used: true,
+      candidates: [
+        {
+          candidate_id: "le_pen",
+          model: { win: 0.8155, qualify: 0.8886, run: 0.91 },
+          market: { win: 0.4414, qualify: 0.855, run: 0.9375 },
+          blend: { win: 0.8155, qualify: 0.8886, run: 0.91 },
+        },
+        {
+          candidate_id: "kazib",
+          model: { win: 0, qualify: 0, run: 0.2 },
+          market: { win: null, qualify: null, run: null },
+          blend: { win: 0, qualify: 0, run: 0.2 },
+        },
+      ],
+    }
+    respond(JSON.stringify(blend), 200, "application/json")
+    expect(await api.blend()).toEqual({ _tag: "Loaded", value: blend })
+  })
 })

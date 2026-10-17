@@ -1,0 +1,793 @@
+date,venue,question,candidate_id,label,price,source_url
+2016-09-05,predictit,win,juppe,Alain Juppé,0.3200,https://web.archive.org/web/20160905234725/https://www.predictit.org/Contract/3570/
+2016-09-05,predictit,win,sarkozy,Nicolas Sarkozy,0.2500,https://web.archive.org/web/20160905234730/https://www.predictit.org/Contract/3567/
+2016-09-13,predictit,win,juppe,Alain Juppé,0.4000,https://web.archive.org/web/20160913024632/https://www.predictit.org/Contract/3570/
+2016-09-13,predictit,win,le_pen,Marine Le Pen,0.2600,https://web.archive.org/web/20160913024644/https://www.predictit.org/Contract/3568/
+2016-09-15,oddschecker_median,win,juppe,Alain Juppe,0.4203,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0476,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,le_maire,Bruno Le Maire,0.0294,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,macron,Emmanuel Macron,0.1333,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,bayrou,Francois Bayrou,0.0323,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,fillon,Francois Fillon,0.0323,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,hollande,Francois Hollande,0.1111,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,cope,Jean-Francois Cope,0.0149,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0294,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,valls,Manuel Valls,0.0623,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,le_pen,Marine Le Pen,0.2222,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,aubry,Martine Aubry,0.0196,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.2667,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-15,oddschecker_median,win,,Segolene Royal,0.0050,https://web.archive.org/web/20160915165420/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-09-19,predictit,win,juppe,Alain Juppé,0.4600,https://web.archive.org/web/20160919235413/https://www.predictit.org/Contract/3570/
+2016-09-19,predictit,win,le_pen,Marine Le Pen,0.1800,https://web.archive.org/web/20160919235417/https://www.predictit.org/Contract/3568/
+2016-09-27,predictit,win,juppe,Alain Juppé,0.4400,https://web.archive.org/web/20160927013833/https://www.predictit.org/Contract/3570/
+2016-09-27,predictit,win,le_pen,Marine Le Pen,0.2700,https://web.archive.org/web/20160927013843/https://www.predictit.org/Contract/3568/
+2016-10-02,oddschecker_median,win,juppe,Alain Juppe,0.4000,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0476,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,le_maire,Bruno Le Maire,0.0269,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,macron,Emmanuel Macron,0.1333,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,bayrou,Francois Bayrou,0.0294,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,fillon,Francois Fillon,0.0323,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,hollande,Francois Hollande,0.0909,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,cope,Jean-Francois Cope,0.0149,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0294,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,valls,Manuel Valls,0.0476,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,le_pen,Marine Le Pen,0.2222,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,aubry,Martine Aubry,0.0196,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.2667,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-02,oddschecker_median,win,,Segolene Royal,0.0050,https://web.archive.org/web/20161002061335/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-04,predictit,win,juppe,Alain Juppé,0.3900,https://web.archive.org/web/20161004022332/https://www.predictit.org/Contract/3570/
+2016-10-04,predictit,win,le_pen,Marine Le Pen,0.2400,https://web.archive.org/web/20161004022341/https://www.predictit.org/Contract/3568/
+2016-10-10,predictit,win,juppe,Alain Juppé,0.6200,https://web.archive.org/web/20161010233531/https://www.predictit.org/Contract/3570/
+2016-10-10,predictit,win,le_pen,Marine Le Pen,0.2200,https://web.archive.org/web/20161010233536/https://www.predictit.org/Contract/3568/
+2016-10-18,oddschecker_median,win,juppe,Alain Juppe,0.5935,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0323,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,le_maire,Bruno Le Maire,0.0245,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,macron,Emmanuel Macron,0.0909,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,bayrou,Francois Bayrou,0.0245,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,fillon,Francois Fillon,0.0196,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,hollande,Francois Hollande,0.0769,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,cope,Jean-Francois Cope,0.0066,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0294,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,valls,Manuel Valls,0.0359,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,le_pen,Marine Le Pen,0.1530,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,aubry,Martine Aubry,0.0123,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.1833,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,oddschecker_median,win,,Segolene Royal,0.0050,https://web.archive.org/web/20161018161156/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-10-18,predictit,win,juppe,Alain Juppé,0.6400,https://web.archive.org/web/20161018003717/https://www.predictit.org/Contract/3570/
+2016-10-18,predictit,win,le_pen,Marine Le Pen,0.1600,https://web.archive.org/web/20161018003723/https://www.predictit.org/Contract/3568/
+2016-10-24,predictit,win,juppe,Alain Juppé,0.6000,https://web.archive.org/web/20161024233437/https://www.predictit.org/Contract/3570/
+2016-10-24,predictit,win,le_pen,Marine Le Pen,0.2400,https://web.archive.org/web/20161024233442/https://www.predictit.org/Contract/3568/
+2016-10-31,predictit,win,juppe,Alain Juppé,0.7000,https://web.archive.org/web/20161031234841/https://www.predictit.org/Contract/3570/
+2016-10-31,predictit,win,le_pen,Marine Le Pen,0.2000,https://web.archive.org/web/20161031234848/https://www.predictit.org/Contract/3568/
+2016-11-02,oddschecker_median,win,juppe,Alain Juppe,0.6410,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0323,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,le_maire,Bruno Le Maire,0.0245,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,macron,Emmanuel Macron,0.0909,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,bayrou,Francois Bayrou,0.0220,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,fillon,Francois Fillon,0.0196,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,hollande,Francois Hollande,0.0588,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,cope,Jean-Francois Cope,0.0066,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0294,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,valls,Manuel Valls,0.0410,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,le_pen,Marine Le Pen,0.1667,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,aubry,Martine Aubry,0.0123,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.1548,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-02,oddschecker_median,win,,Segolene Royal,0.0050,https://web.archive.org/web/20161102212029/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-08,predictit,win,juppe,Alain Juppé,0.6500,https://web.archive.org/web/20161108000136/https://www.predictit.org/Contract/3570/
+2016-11-08,predictit,win,le_pen,Marine Le Pen,0.1600,https://web.archive.org/web/20161108000140/https://www.predictit.org/Contract/3568/
+2016-11-14,predictit,win,juppe,Alain Juppé,0.4700,https://web.archive.org/web/20161114232257/https://www.predictit.org/Contract/3570/
+2016-11-14,predictit,win,le_pen,Marine Le Pen,0.4400,https://web.archive.org/web/20161114232302/https://www.predictit.org/Contract/3568/
+2016-11-15,oddschecker_median,win,juppe,Alain Juppe,0.5556,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,le_maire,Bruno Le Maire,0.0148,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,macron,Emmanuel Macron,0.0667,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,bayrou,Francois Bayrou,0.0123,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,fillon,Francois Fillon,0.0358,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,hollande,Francois Hollande,0.0385,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,cope,Jean-Francois Cope,0.0066,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0149,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,valls,Manuel Valls,0.0294,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,le_pen,Marine Le Pen,0.4000,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,aubry,Martine Aubry,0.0099,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-15,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.1250,https://web.archive.org/web/20161115030310/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,juppe,Alain Juppe,0.4167,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0104,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,le_maire,Bruno Le Maire,0.0099,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,macron,Emmanuel Macron,0.0909,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,bayrou,Francois Bayrou,0.0099,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,fillon,Francois Fillon,0.2222,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,hollande,Francois Hollande,0.0244,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,cope,Jean-Francois Cope,0.0066,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0099,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,valls,Manuel Valls,0.0269,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,le_pen,Marine Le Pen,0.3636,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,aubry,Martine Aubry,0.0074,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-18,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.1111,https://web.archive.org/web/20161118141634/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,juppe,Alain Juppe,0.1111,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0099,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,macron,Emmanuel Macron,0.0769,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,bayrou,Francois Bayrou,0.0099,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,fillon,Francois Fillon,0.5988,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0099,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,valls,Manuel Valls,0.0244,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,le_pen,Marine Le Pen,0.3077,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,aubry,Martine Aubry,0.0074,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.1000,https://web.archive.org/web/20161121235536/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-21,predictit,win,fillon,François Fillon,0.5000,https://web.archive.org/web/20161121231335/https://www.predictit.org/Contract/3569/
+2016-11-21,predictit,win,le_pen,Marine Le Pen,0.4100,https://web.archive.org/web/20161121231342/https://www.predictit.org/Contract/3568/
+2016-11-22,oddschecker_median,win,juppe,Alain Juppe,0.1111,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0099,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,macron,Emmanuel Macron,0.0769,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,bayrou,Francois Bayrou,0.0099,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,fillon,Francois Fillon,0.5988,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0099,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,valls,Manuel Valls,0.0244,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,le_pen,Marine Le Pen,0.3077,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,aubry,Martine Aubry,0.0074,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-22,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.1000,https://web.archive.org/web/20161122050215/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-11-28,predictit,win,fillon,François Fillon,0.6400,https://web.archive.org/web/20161128231406/https://www.predictit.org/Contract/3569/
+2016-11-28,predictit,win,le_pen,Marine Le Pen,0.3600,https://web.archive.org/web/20161128231410/https://www.predictit.org/Contract/3568/
+2016-12-05,predictit,win,fillon,François Fillon,0.5600,https://web.archive.org/web/20161205232009/https://www.predictit.org/Contract/3569/
+2016-12-05,predictit,win,le_pen,Marine Le Pen,0.3600,https://web.archive.org/web/20161205232014/https://www.predictit.org/Contract/3568/
+2016-12-07,oddschecker_median,win,juppe,Alain Juppe,0.0909,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0244,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,macron,Emmanuel Macron,0.1250,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,bayrou,Francois Bayrou,0.0099,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,fillon,Francois Fillon,0.6061,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0196,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,valls,Manuel Valls,0.0909,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,le_pen,Marine Le Pen,0.2857,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,aubry,Martine Aubry,0.0099,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-07,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.1000,https://web.archive.org/web/20161207034233/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2016-12-12,predictit,win,fillon,François Fillon,0.5900,https://web.archive.org/web/20161212232417/https://www.predictit.org/Contract/3569/
+2016-12-12,predictit,win,le_pen,Marine Le Pen,0.3500,https://web.archive.org/web/20161212232422/https://www.predictit.org/Contract/3568/
+2016-12-19,predictit,win,fillon,François Fillon,0.5700,https://web.archive.org/web/20161219232906/https://www.predictit.org/Contract/3569/
+2016-12-19,predictit,win,le_pen,Marine Le Pen,0.3400,https://web.archive.org/web/20161219232913/https://www.predictit.org/Contract/3568/
+2016-12-24,predictit,win,juppe,Alain Juppé,0.0100,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,montebourg,Arnaud Montebourg,0.0100,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,le_maire,Bruno Le Maire,0.0100,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,macron,Emmanuel Macron,0.1000,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,bayrou,François Bayrou,0.0100,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,fillon,François Fillon,0.5800,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,hollande,François Hollande,0.0100,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,melenchon,Jean-Luc Mélenchon,0.0100,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,valls,Manuel Valls,0.0400,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,le_pen,Marine Le Pen,0.3500,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-24,predictit,win,sarkozy,Nicolas Sarkozy,0.0100,https://web.archive.org/web/20161224195423/https://www.predictit.org/api/marketdata/all/
+2016-12-26,predictit,win,fillon,François Fillon,0.5700,https://web.archive.org/web/20161226232713/https://www.predictit.org/Contract/3569/
+2016-12-26,predictit,win,le_pen,Marine Le Pen,0.3400,https://web.archive.org/web/20161226232719/https://www.predictit.org/Contract/3568/
+2017-01-02,oddschecker_median,win,juppe,Alain Juppe,0.0909,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,,Any other not listed,0.5143,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0294,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,hamon,Benoit Hamon,0.0057,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,macron,Emmanuel Macron,0.1538,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,bayrou,Francois Bayrou,0.0066,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,fillon,Francois Fillon,0.6061,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0179,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,valls,Manuel Valls,0.0476,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,le_pen,Marine Le Pen,0.2857,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,aubry,Martine Aubry,0.0089,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0024,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.1000,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,oddschecker_median,win,peillon,Vincent Peillon,0.0042,https://web.archive.org/web/20170102233837/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-02,predictit,win,fillon,François Fillon,0.5900,https://web.archive.org/web/20170102232302/https://www.predictit.org/Contract/3569/
+2017-01-02,predictit,win,le_pen,Marine Le Pen,0.3400,https://web.archive.org/web/20170102232307/https://www.predictit.org/Contract/3568/
+2017-01-09,predictit,win,fillon,François Fillon,0.5900,https://web.archive.org/web/20170109232618/https://www.predictit.org/Contract/3569/
+2017-01-09,predictit,win,le_pen,Marine Le Pen,0.3300,https://web.archive.org/web/20170109232623/https://www.predictit.org/Contract/3568/
+2017-01-10,oddschecker_median,win,juppe,Alain Juppe,0.0909,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,,Any other not listed,0.5143,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0294,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,hamon,Benoit Hamon,0.0083,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,macron,Emmanuel Macron,0.1538,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,bayrou,Francois Bayrou,0.0066,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,fillon,Francois Fillon,0.6173,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0149,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,valls,Manuel Valls,0.0435,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,le_pen,Marine Le Pen,0.2857,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,aubry,Martine Aubry,0.0089,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0035,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0909,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-10,oddschecker_median,win,peillon,Vincent Peillon,0.0029,https://web.archive.org/web/20170110001217/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-16,predictit,win,fillon,François Fillon,0.5500,https://web.archive.org/web/20170116232808/https://www.predictit.org/Contract/3569/
+2017-01-16,predictit,win,le_pen,Marine Le Pen,0.3600,https://web.archive.org/web/20170116232815/https://www.predictit.org/Contract/3568/
+2017-01-18,oddschecker_median,win,juppe,Alain Juppe,0.0909,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,,Any other not listed,0.5143,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,hamon,Benoit Hamon,0.0149,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,macron,Emmanuel Macron,0.2309,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,bayrou,Francois Bayrou,0.0050,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,fillon,Francois Fillon,0.5988,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0123,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,valls,Manuel Valls,0.0244,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,le_pen,Marine Le Pen,0.2500,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0013,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0909,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-18,oddschecker_median,win,peillon,Vincent Peillon,0.0010,https://web.archive.org/web/20170118132128/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,juppe,Alain Juppe,0.0909,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,,Any other not listed,0.5143,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,hamon,Benoit Hamon,0.0244,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,macron,Emmanuel Macron,0.2309,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,bayrou,Francois Bayrou,0.0050,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,fillon,Francois Fillon,0.5988,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0123,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,valls,Manuel Valls,0.0149,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,le_pen,Marine Le Pen,0.2500,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0909,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170124010729/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-24,predictit,win,fillon,François Fillon,0.4800,https://web.archive.org/web/20170124003044/https://www.predictit.org/Contract/3569/
+2017-01-24,predictit,win,le_pen,Marine Le Pen,0.3300,https://web.archive.org/web/20170124003049/https://www.predictit.org/Contract/3568/
+2017-01-28,oddschecker_median,win,juppe,Alain Juppe,0.0909,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,,Any other not listed,0.5308,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,hamon,Benoit Hamon,0.0196,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,macron,Emmanuel Macron,0.3472,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,asselineau,Francois Asselineau,0.0010,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,bayrou,Francois Bayrou,0.0050,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,fillon,Francois Fillon,0.4762,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0123,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,valls,Manuel Valls,0.0123,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,le_pen,Marine Le Pen,0.2500,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0010,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0909,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-28,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170128104220/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,juppe,Alain Juppe,0.0623,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,,Any other not listed,0.5308,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,hamon,Benoit Hamon,0.0244,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,macron,Emmanuel Macron,0.3636,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,asselineau,Francois Asselineau,0.0010,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,bayrou,Francois Bayrou,0.0050,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,fillon,Francois Fillon,0.4444,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0123,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,valls,Manuel Valls,0.0123,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,le_pen,Marine Le Pen,0.2500,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0010,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0149,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-29,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170129035635/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-01-30,predictit,win,macron,Emmanuel Macron,0.4000,https://web.archive.org/web/20170130233116/https://www.predictit.org/Contract/3572/
+2017-01-30,predictit,win,le_pen,Marine Le Pen,0.3000,https://web.archive.org/web/20170130233122/https://www.predictit.org/Contract/3568/
+2017-01-31,predictit,win,fillon,François Fillon,0.3000,https://web.archive.org/web/20170131001102/https://www.predictit.org/Contract/3569/
+2017-02-06,predictit,win,macron,Emmanuel Macron,0.4500,https://web.archive.org/web/20170206232911/https://www.predictit.org/Contract/3572/
+2017-02-06,predictit,win,le_pen,Marine Le Pen,0.3400,https://web.archive.org/web/20170206232916/https://www.predictit.org/Contract/3568/
+2017-02-07,oddschecker_median,win,juppe,Alain Juppe,0.0667,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Any other not listed,0.5405,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,hamon,Benoit Hamon,0.0588,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Dominique Strauss-Kahn,0.0010,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,macron,Emmanuel Macron,0.4348,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Francois Baroin,0.0196,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,bayrou,Francois Bayrou,0.0099,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,fillon,Francois Fillon,0.2222,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Gerard Larcher,0.0079,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,cope,Jean-Francois Cope,0.0038,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Jean-Louis Borloo,0.0010,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0099,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Jean-Pierre Raffarin,0.0030,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,valls,Manuel Valls,0.0123,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,le_pen,Marine Le Pen,0.2967,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0345,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-07,oddschecker_median,win,,Xavier Bertrand,0.0099,https://web.archive.org/web/20170207022138/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,juppe,Alain Juppe,0.0476,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Any other not listed,0.5284,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,hamon,Benoit Hamon,0.0588,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Dominique Strauss-Kahn,0.0010,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,macron,Emmanuel Macron,0.4284,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,asselineau,Francois Asselineau,0.0010,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Francois Baroin,0.0149,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,fillon,Francois Fillon,0.2312,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,hollande,Francois Hollande,0.0196,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Gerard Larcher,0.0079,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,cope,Jean-Francois Cope,0.0038,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Jean-Louis Borloo,0.0010,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0123,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Jean-Pierre Raffarin,0.0030,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,valls,Manuel Valls,0.0111,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,le_pen,Marine Le Pen,0.3077,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0123,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-11,oddschecker_median,win,,Xavier Bertrand,0.0099,https://web.archive.org/web/20170211153833/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,juppe,Alain Juppe,0.0556,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Any other not listed,0.5284,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,hamon,Benoit Hamon,0.0588,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Dominique Strauss-Kahn,0.0010,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,macron,Emmanuel Macron,0.4444,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,asselineau,Francois Asselineau,0.0010,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Francois Baroin,0.0294,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,fillon,Francois Fillon,0.1751,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Gerard Larcher,0.0066,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,cope,Jean-Francois Cope,0.0038,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Jean-Louis Borloo,0.0010,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0123,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Jean-Pierre Raffarin,0.0030,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,valls,Manuel Valls,0.0111,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,le_pen,Marine Le Pen,0.3333,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0123,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,oddschecker_median,win,,Xavier Bertrand,0.0073,https://web.archive.org/web/20170214234004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-14,predictit,win,macron,Emmanuel Macron,0.4300,https://web.archive.org/web/20170214024141/https://www.predictit.org/Contract/3572/
+2017-02-14,predictit,win,le_pen,Marine Le Pen,0.3900,https://web.archive.org/web/20170214024147/https://www.predictit.org/Contract/3568/
+2017-02-15,oddschecker_median,qualify,juppe,Alain Juppe,0.0877,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,montebourg,Arnaud Montebourg,0.3448,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,hamon,Benoit Hamon,0.1899,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,,Christiane Taubira,0.3448,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,macron,Emmanuel Macron,0.6712,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,,Francois Baroin,0.1492,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,bayrou,Francois Bayrou,0.1307,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,fillon,Francois Fillon,0.2359,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,hollande,Francois Hollande,0.3448,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,,Gerard Larcher,0.1739,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,guaino,Henri Guaino,0.1739,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,melenchon,Jean-Luc Melenchon,0.0909,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,,Laurent Wauquiez,0.5128,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,valls,Manuel Valls,0.5128,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,le_pen,Marine Le Pen,0.8659,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,aubry,Martine Aubry,0.3448,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,alliot_marie,Michele Alliot-Marie,0.1739,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,dupont_aignan,Nicolas Dupont-Aignan,0.3448,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,sarkozy,Nicolas Sarkozy,0.0877,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,peillon,Vincent Peillon,0.3448,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-15,oddschecker_median,qualify,,Xavier Bertrand,0.1739,https://web.archive.org/web/20170215003938/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-02-18,oddschecker_median,win,juppe,Alain Juppe,0.0385,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Any other not listed,0.5284,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,hamon,Benoit Hamon,0.0588,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Dominique Strauss-Kahn,0.0010,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,macron,Emmanuel Macron,0.4396,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,asselineau,Francois Asselineau,0.0011,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Francois Baroin,0.0385,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,fillon,Francois Fillon,0.2000,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Gerard Larcher,0.0066,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,cope,Jean-Francois Cope,0.0038,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Jean-Louis Borloo,0.0010,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0149,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Jean-Pierre Raffarin,0.0030,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,valls,Manuel Valls,0.0111,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,le_pen,Marine Le Pen,0.3333,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0123,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-18,oddschecker_median,win,,Xavier Bertrand,0.0066,https://web.archive.org/web/20170218065740/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,juppe,Alain Juppe,0.0294,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Any other not listed,0.5189,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,hamon,Benoit Hamon,0.0588,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Christiane Taubira,0.0038,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Dominique Strauss-Kahn,0.0010,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,macron,Emmanuel Macron,0.3831,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,asselineau,Francois Asselineau,0.0010,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Francois Baroin,0.0269,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,fillon,Francois Fillon,0.2857,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Gerard Larcher,0.0066,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,cope,Jean-Francois Cope,0.0038,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Jean-Louis Borloo,0.0010,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0149,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Jean-Pierre Raffarin,0.0030,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,valls,Manuel Valls,0.0111,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,le_pen,Marine Le Pen,0.3333,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,aubry,Martine Aubry,0.0083,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0010,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0099,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-19,oddschecker_median,win,,Xavier Bertrand,0.0066,https://web.archive.org/web/20170219192242/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-20,predictit,win,macron,Emmanuel Macron,0.3700,https://web.archive.org/web/20170220233322/https://www.predictit.org/Contract/3572/
+2017-02-20,predictit,win,le_pen,Marine Le Pen,0.3900,https://web.archive.org/web/20170220233316/https://www.predictit.org/Contract/3568/
+2017-02-21,predictit,win,macron,Emmanuel Macron,0.3500,https://web.archive.org/web/20170221011722/https://www.predictit.org/Contract/3572/
+2017-02-22,oddschecker_median,win,juppe,Alain Juppe,0.0244,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Any other not listed,0.5189,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,hamon,Benoit Hamon,0.0588,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,macron,Emmanuel Macron,0.3554,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,asselineau,Francois Asselineau,0.0022,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Francois Baroin,0.0196,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,fillon,Francois Fillon,0.3125,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Gerard Larcher,0.0050,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0149,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Jean-Pierre Raffarin,0.0037,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,valls,Manuel Valls,0.0111,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,le_pen,Marine Le Pen,0.3333,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,aubry,Martine Aubry,0.0066,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0010,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0021,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0099,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,peillon,Vincent Peillon,0.0079,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-22,oddschecker_median,win,,Xavier Bertrand,0.0050,https://web.archive.org/web/20170222003518/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-02-27,predictit,win,macron,Emmanuel Macron,0.4900,https://web.archive.org/web/20170227234319/https://www.predictit.org/Contract/3572/
+2017-02-27,predictit,win,le_pen,Marine Le Pen,0.3600,https://web.archive.org/web/20170227234326/https://www.predictit.org/Contract/3568/
+2017-03-01,oddschecker_median,win,juppe,Alain Juppe,0.0099,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Any other not listed,0.5098,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,hamon,Benoit Hamon,0.0385,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,macron,Emmanuel Macron,0.4808,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,asselineau,Francois Asselineau,0.0015,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Francois Baroin,0.0123,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,fillon,Francois Fillon,0.2309,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Gerard Larcher,0.0030,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0123,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Jean-Pierre Raffarin,0.0050,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,valls,Manuel Valls,0.0111,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,le_pen,Marine Le Pen,0.3333,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,aubry,Martine Aubry,0.0066,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0010,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0026,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0066,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,peillon,Vincent Peillon,0.0079,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-01,oddschecker_median,win,,Xavier Bertrand,0.0015,https://web.archive.org/web/20170301004822/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-06,predictit,win,macron,Emmanuel Macron,0.5600,https://web.archive.org/web/20170306233112/https://www.predictit.org/Contract/3572/
+2017-03-06,predictit,win,le_pen,Marine Le Pen,0.3400,https://web.archive.org/web/20170306233118/https://www.predictit.org/Contract/3568/
+2017-03-08,oddschecker_median,win,juppe,Alain Juppe,0.0244,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Any other not listed,0.5189,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,hamon,Benoit Hamon,0.0294,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,macron,Emmanuel Macron,0.5464,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,asselineau,Francois Asselineau,0.0033,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Francois Baroin,0.0385,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,fillon,Francois Fillon,0.1818,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Gerard Larcher,0.0030,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,guaino,Henri Guaino,0.0015,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0099,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Jean-Pierre Raffarin,0.0050,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,valls,Manuel Valls,0.0111,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,le_pen,Marine Le Pen,0.3077,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,aubry,Martine Aubry,0.0066,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0015,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0031,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0079,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,peillon,Vincent Peillon,0.0079,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-08,oddschecker_median,win,,Xavier Bertrand,0.0020,https://web.archive.org/web/20170308012309/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,juppe,Alain Juppe,0.0196,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Any other not listed,0.5189,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,hamon,Benoit Hamon,0.0294,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,macron,Emmanuel Macron,0.5464,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,asselineau,Francois Asselineau,0.0123,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Francois Baroin,0.0319,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,fillon,Francois Fillon,0.2000,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Gerard Larcher,0.0030,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,guaino,Henri Guaino,0.0015,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0099,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Jean-Pierre Raffarin,0.0050,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,valls,Manuel Valls,0.0111,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,le_pen,Marine Le Pen,0.3077,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,aubry,Martine Aubry,0.0066,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0015,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0033,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0079,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,peillon,Vincent Peillon,0.0079,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-10,oddschecker_median,win,,Xavier Bertrand,0.0020,https://web.archive.org/web/20170310065459/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-13,predictit,win,macron,Emmanuel Macron,0.6300,https://web.archive.org/web/20170313224617/https://www.predictit.org/Contract/3572/
+2017-03-13,predictit,win,le_pen,Marine Le Pen,0.3400,https://web.archive.org/web/20170313224622/https://www.predictit.org/Contract/3568/
+2017-03-20,predictit,win,macron,Emmanuel Macron,0.6800,https://web.archive.org/web/20170320224649/https://www.predictit.org/Contract/3572/
+2017-03-20,predictit,win,le_pen,Marine Le Pen,0.2900,https://web.archive.org/web/20170320224654/https://www.predictit.org/Contract/3568/
+2017-03-22,oddschecker_median,win,juppe,Alain Juppe,0.0149,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Any other not listed,0.5143,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0149,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,hamon,Benoit Hamon,0.0196,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Christine Lagarde,0.0050,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,macron,Emmanuel Macron,0.6536,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,asselineau,Francois Asselineau,0.0083,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Francois Baroin,0.0149,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,fillon,Francois Fillon,0.1667,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,hollande,Francois Hollande,0.0081,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Gerard Larcher,0.0010,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,guaino,Henri Guaino,0.0010,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,cheminade,Jacques Cheminade,0.0010,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,lassalle,Jean Lassalle,0.0020,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0099,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Jean-Pierre Raffarin,0.0050,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,valls,Manuel Valls,0.0099,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,le_pen,Marine Le Pen,0.2583,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,aubry,Martine Aubry,0.0067,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0010,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,arthaud,Nathalie Arthaud,0.0020,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0040,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0056,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,poutou,Philippe Poutou,0.0010,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,yade,Rama Yade,0.0010,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,peillon,Vincent Peillon,0.0099,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-22,oddschecker_median,win,,Xavier Bertrand,0.0020,https://web.archive.org/web/20170322014519/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-27,ebo,win,,Baroin,0.0010,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,ebo,win,fillon,Fillon,0.1270,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,ebo,win,hamon,Hamon,0.0050,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,ebo,win,hollande,Hollande,0.0010,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,ebo,win,juppe,Juppe,0.0020,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,ebo,win,le_pen,LePen,0.1870,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,ebo,win,macron,Macron,0.6690,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,ebo,win,sarkozy,Sarkozy,0.0010,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,ebo,win,valls,Valls,0.0010,https://web.archive.org/web/20170327031525/https://electionbettingodds.com/France.html
+2017-03-27,predictit,win,macron,Emmanuel Macron,0.6700,https://web.archive.org/web/20170327224702/https://www.predictit.org/Contract/3572/
+2017-03-27,predictit,win,le_pen,Marine Le Pen,0.2500,https://web.archive.org/web/20170327224707/https://www.predictit.org/Contract/3568/
+2017-03-29,oddschecker_median,win,juppe,Alain Juppe,0.0130,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Any other not listed,0.5245,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,hamon,Benoit Hamon,0.0099,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Christine Lagarde,0.0030,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,macron,Emmanuel Macron,0.6944,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,asselineau,Francois Asselineau,0.0066,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Francois Baroin,0.0157,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,fillon,Francois Fillon,0.1538,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Gerard Larcher,0.0050,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,guaino,Henri Guaino,0.0020,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,cheminade,Jacques Cheminade,0.0010,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,lassalle,Jean Lassalle,0.0015,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0149,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Jean-Pierre Raffarin,0.0050,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,valls,Manuel Valls,0.0123,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,le_pen,Marine Le Pen,0.2500,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,aubry,Martine Aubry,0.0058,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,arthaud,Nathalie Arthaud,0.0013,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0050,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0065,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,poutou,Philippe Poutou,0.0010,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,yade,Rama Yade,0.0028,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,peillon,Vincent Peillon,0.0035,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-03-29,oddschecker_median,win,,Xavier Bertrand,0.0020,https://web.archive.org/web/20170329020004/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-03,predictit,win,macron,Emmanuel Macron,0.6500,https://web.archive.org/web/20170403224658/https://www.predictit.org/Contract/3572/
+2017-04-03,predictit,win,le_pen,Marine Le Pen,0.2900,https://web.archive.org/web/20170403224702/https://www.predictit.org/Contract/3568/
+2017-04-05,oddschecker_median,win,juppe,Alain Juppe,0.0130,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Any other not listed,0.5098,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,hamon,Benoit Hamon,0.0079,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Christine Lagarde,0.0030,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,macron,Emmanuel Macron,0.6173,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,asselineau,Francois Asselineau,0.0066,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Francois Baroin,0.0157,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,fillon,Francois Fillon,0.2000,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Gerard Larcher,0.0050,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,guaino,Henri Guaino,0.0020,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,cheminade,Jacques Cheminade,0.0010,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,lassalle,Jean Lassalle,0.0015,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0345,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Jean-Pierre Raffarin,0.0050,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,valls,Manuel Valls,0.0123,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,le_pen,Marine Le Pen,0.2500,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,aubry,Martine Aubry,0.0058,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,arthaud,Nathalie Arthaud,0.0010,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0050,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0065,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,poutou,Philippe Poutou,0.0010,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,yade,Rama Yade,0.0028,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,peillon,Vincent Peillon,0.0035,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-05,oddschecker_median,win,,Xavier Bertrand,0.0020,https://web.archive.org/web/20170405021017/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,juppe,Alain Juppe,0.0130,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Any other not listed,0.5098,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,hamon,Benoit Hamon,0.0066,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Christine Lagarde,0.0030,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,macron,Emmanuel Macron,0.6173,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,asselineau,Francois Asselineau,0.0066,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Francois Baroin,0.0157,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,fillon,Francois Fillon,0.1868,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Gerard Larcher,0.0050,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,guaino,Henri Guaino,0.0020,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,cheminade,Jacques Cheminade,0.0010,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,lassalle,Jean Lassalle,0.0015,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0385,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Jean-Pierre Raffarin,0.0050,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,valls,Manuel Valls,0.0123,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,le_pen,Marine Le Pen,0.2566,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,aubry,Martine Aubry,0.0058,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,arthaud,Nathalie Arthaud,0.0010,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0050,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0065,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,poutou,Philippe Poutou,0.0010,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,yade,Rama Yade,0.0028,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,peillon,Vincent Peillon,0.0035,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-06,oddschecker_median,win,,Xavier Bertrand,0.0020,https://web.archive.org/web/20170406091901/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-10,predictit,win,macron,Emmanuel Macron,0.6100,https://web.archive.org/web/20170410224754/https://www.predictit.org/Contract/3572/
+2017-04-10,predictit,win,le_pen,Marine Le Pen,0.2900,https://web.archive.org/web/20170410224759/https://www.predictit.org/Contract/3568/
+2017-04-12,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0196,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,hamon,Benoit Hamon,0.0050,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,,Christiane Taubira,0.0066,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,,Christine Lagarde,0.0030,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,,Dominique Strauss-Kahn,0.0030,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,macron,Emmanuel Macron,0.5747,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,asselineau,Francois Asselineau,0.0050,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,,Francois Baroin,0.0164,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,fillon,Francois Fillon,0.1818,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,,Gerard Larcher,0.0050,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,guaino,Henri Guaino,0.0020,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,cheminade,Jacques Cheminade,0.0010,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,lassalle,Jean Lassalle,0.0010,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,cope,Jean-Francois Cope,0.0050,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,,Jean-Louis Borloo,0.0028,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0909,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,,Jean-Pierre Raffarin,0.0050,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,valls,Manuel Valls,0.0123,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,le_pen,Marine Le Pen,0.2667,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,aubry,Martine Aubry,0.0050,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,arthaud,Nathalie Arthaud,0.0010,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0033,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0063,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,poutou,Philippe Poutou,0.0010,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,yade,Rama Yade,0.0028,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,peillon,Vincent Peillon,0.0035,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-12,oddschecker_median,win,,Xavier Bertrand,0.0020,https://web.archive.org/web/20170412024438/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-17,predictit,win,macron,Emmanuel Macron,0.5300,https://web.archive.org/web/20170417224810/https://www.predictit.org/Contract/3572/
+2017-04-17,predictit,win,le_pen,Marine Le Pen,0.2900,https://web.archive.org/web/20170417224815/https://www.predictit.org/Contract/3568/
+2017-04-21,oddschecker_median,qualify,juppe,Alain Juppe,0.0010,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,montebourg,Arnaud Montebourg,0.0010,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,hamon,Benoit Hamon,0.0099,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,,Christiane Taubira,0.0400,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,macron,Emmanuel Macron,0.7519,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,,Francois Baroin,0.0417,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,bayrou,Francois Bayrou,0.0088,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,fillon,Francois Fillon,0.3546,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,hollande,Francois Hollande,0.0088,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,,Gerard Larcher,0.0105,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,guaino,Henri Guaino,0.0294,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,melenchon,Jean-Luc Melenchon,0.1429,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,,Laurent Wauquiez,0.0278,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,valls,Manuel Valls,0.0385,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,le_pen,Marine Le Pen,0.8197,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,aubry,Martine Aubry,0.0400,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,alliot_marie,Michele Alliot-Marie,0.0312,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,dupont_aignan,Nicolas Dupont-Aignan,0.0038,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,sarkozy,Nicolas Sarkozy,0.0294,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,peillon,Vincent Peillon,0.0010,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,qualify,,Xavier Bertrand,0.0088,https://web.archive.org/web/20170421150104/https://www.oddschecker.com/politics/european-politics/french-election/to-finish-in-the-final-2
+2017-04-21,oddschecker_median,win,montebourg,Arnaud Montebourg,0.0173,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,hamon,Benoit Hamon,0.0033,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,,Christiane Taubira,0.0020,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,,Christine Lagarde,0.0015,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,,Dominique Strauss-Kahn,0.0015,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,macron,Emmanuel Macron,0.5780,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,asselineau,Francois Asselineau,0.0066,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,,Francois Baroin,0.0124,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,bayrou,Francois Bayrou,0.0196,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,fillon,Francois Fillon,0.2075,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,hollande,Francois Hollande,0.0099,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,,Gerard Larcher,0.0035,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,guaino,Henri Guaino,0.0020,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,cheminade,Jacques Cheminade,0.0010,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,lassalle,Jean Lassalle,0.0015,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,cope,Jean-Francois Cope,0.0020,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,,Jean-Louis Borloo,0.0015,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,melenchon,Jean-Luc Melenchon,0.0667,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,,Jean-Pierre Raffarin,0.0020,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,valls,Manuel Valls,0.0123,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,le_pen,Marine Le Pen,0.2500,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,aubry,Martine Aubry,0.0050,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,alliot_marie,Michele Alliot-Marie,0.0020,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,arthaud,Nathalie Arthaud,0.0010,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,dupont_aignan,Nicolas Dupont-Aignan,0.0020,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,sarkozy,Nicolas Sarkozy,0.0050,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,poutou,Philippe Poutou,0.0010,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,yade,Rama Yade,0.0015,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,peillon,Vincent Peillon,0.0015,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president
+2017-04-21,oddschecker_median,win,,Xavier Bertrand,0.0020,https://web.archive.org/web/20170421150008/https://www.oddschecker.com/politics/european-politics/french-election/next-president

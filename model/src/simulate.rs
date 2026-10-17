@@ -131,6 +131,7 @@ pub fn fit(
         return Err(ModelError::InvalidParameters("round 2 must follow round 1".into()));
     }
     params.signals.check()?;
+    params.market_blend.check()?;
     let spikes = crate::signals::detect(signals, field, &params.signals, as_of);
     let round1 = fit_round1(
         field,
@@ -446,6 +447,11 @@ mod tests {
                 ]),
             },
             signals: crate::SignalParams::off(),
+            market_blend: crate::blend::BlendParams {
+                model_weight: 1.0,
+                probability_floor: 0.001,
+                max_age_hours: 6.0,
+            },
         }
     }
 
