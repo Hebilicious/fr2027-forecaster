@@ -1,0 +1,95 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-17T19:18:44Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-17T19:15:05Z",
+      "title": "\"Monsieur Lecornu, vous avez joué avec le feu. En comptant sur le pourrissement, vous n'avez réussi qu'à solidariser toute la jeunesse et les syndicats de salariés\": la réponse de Jean-Luc Mélenchon à Sébastien Lecornu après les mobilisations",
+      "url": "https://www.bfmtv.com/politique/video-monsieur-lecornu-vous-avez-joue-avec-le-feu-en-comptant-sur-le-pourrissement-vous-n-avez-reussi-qu-a-solidariser-toute-la-jeunesse-et-les-syndicats-de-salaries-la-reponse-de-jean-luc-melenchon-a-sebastien-lecornu-apres-les-mobilisations_VN-202610170339.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
