@@ -3,7 +3,7 @@ import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Blend, Forecast, HistoryRun, TrackRecord } from "../api/schemas"
 import { blendAt, type Blended } from "../blend"
-import { outcomeFrame } from "../charts"
+import { outcomeGroups } from "../charts"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import ModelExplorer from "../components/explorer/ModelExplorer.vue"
 import MethodSection from "../components/MethodSection.vue"
@@ -55,22 +55,15 @@ const withChances = (chances: Chances | undefined | null) =>
     return x ? { ...c, p_win: x.win, p_qualify_r1: x.qualify } : c
   })
 
-// Every setting the reader can reach, the published one first: its order is the order shown, so
-// moving the settings changes figures, never places.
-const MARKET_STEPS = Array.from({ length: 21 }, (_, i) => i / 20)
-const reachable = computed(() => {
-  const published = withChances(chancesAt(1, publishedWeight.value))
-  const levels = scales.value.length > 0 ? scales.value : [1]
-  const weights = props.blend ? MARKET_STEPS : [0]
-  return [published, ...levels.flatMap((s) => weights.map((w) => withChances(chancesAt(s, w))))]
-})
+// The published setting fixes the order shown and the dots chart's rows, so moving the settings
+// changes figures, never places.
+const published = computed(() => withChances(chancesAt(1, publishedWeight.value)))
 const rank = computed(
   () =>
     new Map(
-      reachable.value[0]!.toSorted((a, b) => b.p_win - a.p_win || b.p_qualify_r1 - a.p_qualify_r1).map((c, i) => [
-        c.candidate_id,
-        i,
-      ]),
+      published.value
+        .toSorted((a, b) => b.p_win - a.p_win || b.p_qualify_r1 - a.p_qualify_r1)
+        .map((c, i) => [c.candidate_id, i]),
     ),
 )
 // The forecast as shown: chances of winning and of reaching round 2 at the reader's settings, in
@@ -82,16 +75,9 @@ const shown = computed<Forecast>(() => ({
   ),
 }))
 const { query, showAll, field } = useFieldFilter(toRef(() => shown.value.candidates))
-// The dots chart's groups and room, fixed across every reachable setting.
-const frame = computed(() =>
-  outcomeFrame(
-    reachable.value.map((state) =>
-      state.toSorted((a, b) => (rank.value.get(a.candidate_id) ?? 0) - (rank.value.get(b.candidate_id) ?? 0)),
-    ),
-    field.value.setAside,
-  ),
-)
-const inFrame = computed(() => new Set(frame.value.ids))
+// The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside.
+const dotRows = computed(() => outcomeGroups(published.value, field.value.setAside))
+const ownRow = computed(() => new Set(dotRows.value.flatMap((g) => (g.candidateId === null ? [] : [g.candidateId]))))
 
 const maxShare = computed(() => Math.max(0.05, ...props.forecast.candidates.map((c) => c.r1_share?.hi80 ?? 0)))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
@@ -107,8 +93,7 @@ const newSpikes = computed(() => [
 ])
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const at = (share: number) => (share / maxShare.value) * 100
-// Everyone the dots chart gives a group (half a point to win at some setting), in the published
-// order, leaving out those the field filter sets aside.
+// Everyone with a row of their own in the dots chart, in the published order.
 const blendRows = computed(() => {
   const rows = new Map((props.blend?.candidates ?? []).map((c) => [c.candidate_id, c]))
   return shown.value.candidates.flatMap((c) => {
@@ -116,7 +101,7 @@ const blendRows = computed(() => {
     const blendedRow = blended.value?.get(c.candidate_id)
     const model = levelModel.value?.get(c.candidate_id)
     const shownRow = row && model ? { ...row, model: { ...row.model, win: model.win, qualify: model.qualify } } : row
-    return shownRow && blendedRow && inFrame.value.has(c.candidate_id)
+    return shownRow && blendedRow && ownRow.value.has(c.candidate_id)
       ? [{ ...shownRow, blended: blendedRow, name: c.name }]
       : []
   })
@@ -140,8 +125,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
         :blend="blend"
         :published="publishedWeight"
       />
-      <!-- The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside. -->
-      <OutcomeDots :forecast="shown" :pool="field.setAside" :frame="frame" />
+      <OutcomeDots :forecast="shown" :rows="dotRows" />
       <p class="notice note" role="note">
         <span aria-hidden="true" class="icon" translate="no">i</span>
         <span>{{ content.uncertainty }}</span>
