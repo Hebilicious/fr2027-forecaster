@@ -53,6 +53,9 @@ impl Repo {
     pub fn raw_attention_dir(&self) -> PathBuf {
         self.root.join("data/raw/attention")
     }
+    pub fn raw_gdelt_dir(&self) -> PathBuf {
+        self.root.join("data/raw/gdelt")
+    }
     pub fn raw_events_dir(&self) -> PathBuf {
         self.root.join("data/raw/events")
     }

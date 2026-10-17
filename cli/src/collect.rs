@@ -4,9 +4,9 @@
 
 use anyhow::{Result, bail};
 use fr2027_collectors::{
-    Repo, SchemaKind, attention, markets, names::LabelMatcher, names::NameMatcher, news, pretty_json, write_new,
+    Repo, SchemaKind, attention, gdelt, markets, names::LabelMatcher, names::NameMatcher, news, pretty_json, write_new,
 };
-use fr2027_fetch::{Client, kalshi, polymarket, rss, timestamp, wikipedia};
+use fr2027_fetch::{Client, gdelt as gdelt_api, kalshi, polymarket, rss, timestamp, wikipedia};
 use jiff::{Timestamp, ToSpan, civil::Date, tz::TimeZone};
 
 use crate::data::Inputs;
@@ -20,6 +20,20 @@ pub enum Source {
     /// Daily Wikipedia page views per candidate → data/raw/attention/<date>.json. Skips when
     /// today's file exists.
     Attention(AttentionArgs),
+    /// Daily counts of French-language articles naming each candidate, from GDELT's raw files →
+    /// data/raw/gdelt/<date>.json. Skips when today's file exists.
+    Gdelt(GdeltArgs),
+}
+
+#[derive(clap::Args)]
+pub struct GdeltArgs {
+    /// First day (default: two days before --end, so a day GDELT was still filling is counted
+    /// again).
+    #[arg(long)]
+    start: Option<Date>,
+    /// Last day (default: yesterday, UTC).
+    #[arg(long)]
+    end: Option<Date>,
 }
 
 #[derive(clap::Args)]
@@ -40,6 +54,10 @@ pub fn run(repo: &Repo, source: &Source) -> Result<()> {
         Source::Markets => collect_markets(repo, &inputs, &client, now),
         Source::News => collect_news(repo, &inputs, &client, now),
         Source::Attention(args) => collect_attention(repo, &inputs, &client, now, args),
+        Source::Gdelt(args) => {
+            let client = Client::with_timeout(&inputs.sources.user_agent, gdelt_api::TIMEOUT)?;
+            collect_gdelt(repo, &inputs, &client, now, args)
+        }
     }
 }
 
@@ -222,4 +240,51 @@ fn collect_attention(
     };
     let errors = attention::check(None, &fetch, &inputs.config);
     write_document(repo, inputs, &path, SchemaKind::Attention, &fetch, errors)
+}
+
+fn collect_gdelt(repo: &Repo, inputs: &Inputs, client: &Client, now: Timestamp, args: &GdeltArgs) -> Result<()> {
+    let fetched_at = timestamp(now);
+    let today = now.to_zoned(TimeZone::UTC).date();
+    let path = repo
+        .raw_gdelt_dir()
+        .join(format!("{}.json", today.strftime("%Y-%m-%d")));
+    if path.exists() {
+        println!("{} already exists; nothing to do today", repo.relative(&path));
+        return Ok(());
+    }
+    let end = args.end.unwrap_or(today.yesterday()?);
+    let start = args.start.unwrap_or(end.checked_sub(2.days())?);
+    if start > end {
+        bail!("--start {start} is after --end {end}");
+    }
+    let matcher = gdelt_api::Matcher::new(&inputs.sources.candidates);
+    let counts = gdelt_api::count_days(client, &matcher, start, end, gdelt_api::WORKERS, &|line| {
+        println!("GDELT: {line}")
+    })?;
+    let candidates: Vec<gdelt::CandidateCounts> = matcher
+        .people()
+        .iter()
+        .zip(counts)
+        .map(|(person, (candidate_id, days))| gdelt::CandidateCounts {
+            query: person.description(&inputs.sources.candidates[&candidate_id].names),
+            candidate_id,
+            status: "ok".into(),
+            error: None,
+            days,
+        })
+        .collect();
+    let ok = candidates.iter().filter(|c| c.status == "ok").count();
+    println!("{ok} of {} candidates counted, {start} to {end}", candidates.len());
+    if candidates.iter().all(|c| c.days.is_empty()) {
+        bail!("no GDELT file for {start} to {end}; nothing written");
+    }
+    let fetch = gdelt::Fetch {
+        schema_version: "1.0".into(),
+        fetched_at,
+        start: start.to_string(),
+        end: end.to_string(),
+        candidates,
+    };
+    let errors = gdelt::check(None, &fetch, &inputs.config);
+    write_document(repo, inputs, &path, SchemaKind::Gdelt, &fetch, errors)
 }

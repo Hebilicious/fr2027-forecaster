@@ -1,6 +1,7 @@
 //! Everything that reads the network. Each source has a pure `parse` function, tested on saved
 //! responses in `tests/`, and a `fetch` function that does the HTTP request and calls it.
 
+pub mod gdelt;
 pub mod http;
 pub mod inbox;
 pub mod kalshi;

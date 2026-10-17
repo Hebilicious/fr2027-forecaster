@@ -122,6 +122,14 @@ jobs:
             $FR2027 collect attention || echo "::warning title=attention::collector failed, see the log"
           fi
 
+      # Once a day, like the page views. GDELT allows one request every 5 seconds, so a fetch
+      # takes about three minutes.
+      - name: Collect news volume (GDELT)
+        run: |
+          if [ "$(date -u +%H)" -ge 6 ]; then
+            $FR2027 collect gdelt || echo "::warning title=gdelt::collector failed, see the log"
+          fi
+
       # The open proposals the inbox's poll checks are compared with: each inbox/polls-* pull
       # request's poll files and their sidecars (the inbox item that sent each poll), in
       # .inbox/open/<number>/.

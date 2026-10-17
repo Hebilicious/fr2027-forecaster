@@ -48,6 +48,9 @@ enum Command {
     /// Replay the model on 2002–2022, score it, fit the election-day errors, and write
     /// research/backtest/.
     Backtest(backtest::Args),
+    /// Fetch a past election's page views and news volume for the backtest:
+    /// data/backtest/<year>/attention.csv and gdelt.csv, from the list in signals.yaml.
+    BacktestSignals(backtest::SignalsArgs),
     /// Write the public site: the built UI plus api/*.json.
     Export(export::Args),
     /// Serve the UI and its JSON documents locally.
@@ -77,6 +80,7 @@ fn run(cli: Cli) -> Result<ExitCode> {
         Command::Collect(source) => collect::run(&repo, &source).map(|()| ExitCode::SUCCESS),
         Command::Inbox(command) => inbox::run(&repo, &command).map(|()| ExitCode::SUCCESS),
         Command::Backtest(args) => backtest::run(&repo, &args).map(|()| ExitCode::SUCCESS),
+        Command::BacktestSignals(args) => backtest::fetch_signals(&repo, &args).map(|()| ExitCode::SUCCESS),
         Command::Export(args) => export::run(&repo, &args),
         Command::Serve(args) => serve::run(repo, args).map(|()| ExitCode::SUCCESS),
     }

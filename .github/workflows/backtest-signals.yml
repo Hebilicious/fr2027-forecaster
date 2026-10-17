@@ -1,0 +1,121 @@
+name: Backtest signals
+
+# Fetches a past election's page views or news volume (`fr2027 backtest-signals`) on a GitHub
+# runner and uploads the files as an artifact, to be committed by hand into data/backtest/<year>/.
+# The news volume reads about 9,000 of GDELT's raw files a year (some 60 GB); a runner's network
+# does it faster than a home connection.
+#
+# Run it from the Actions tab, or push a branch named backtest-signals/<anything> to fetch every
+# election's news volume.
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Election year, as in config/backtest.yaml"
+        required: true
+        type: string
+      source:
+        description: "attention, news, or both"
+        required: true
+        default: news
+        type: choice
+        options: [news, attention, both]
+  push:
+    branches: ["backtest-signals/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  # The elections to fetch: the one given by hand; on a push, the year a branch named
+  # backtest-signals/<year> ends with, or every election in config/backtest.yaml.
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      chunks: ${{ steps.chunks.outputs.chunks }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      # Each election's window (data/backtest/<year>/signals.yaml) cut into 8 runs of days, one
+      # runner each: a year of GDELT files is about 60 GB.
+      - id: chunks
+        env:
+          INPUT_YEAR: ${{ inputs.year }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          if [ -n "$INPUT_YEAR" ]; then
+            years="$INPUT_YEAR"
+          elif [[ "$BRANCH" =~ /([0-9]{4})$ ]]; then
+            years="${BASH_REMATCH[1]}"
+          else
+            years=$(sed -n 's/^  - { year: \([0-9]\{4\}\),.*/\1/p' config/backtest.yaml | paste -sd' ' -)
+          fi
+          chunks="[]"
+          for y in $years; do
+            [[ "$y" =~ ^[0-9]{4}$ ]] || { echo "::error::bad year $y"; exit 1; }
+            file="data/backtest/$y/signals.yaml"
+            start=$(sed -n 's/^start: //p' "$file"); end=$(sed -n 's/^end: //p' "$file")
+            days=$(( ($(date -ud "$end" +%s) - $(date -ud "$start" +%s)) / 86400 + 1 ))
+            size=$(( (days + 7) / 8 ))
+            for i in $(seq 0 7); do
+              from=$(date -ud "$start + $((i * size)) days" +%F)
+              to=$(date -ud "$start + $((i * size + size - 1)) days" +%F)
+              [[ "$from" > "$end" ]] && break
+              [[ "$to" > "$end" ]] && to=$end
+              chunks=$(jq -c --arg y "$y" --arg f "$from" --arg t "$to" '. + [{year: $y, start: $f, end: $t}]' <<<"$chunks")
+            done
+          done
+          echo "chunks=$chunks" >> "$GITHUB_OUTPUT"
+
+  fetch:
+    name: fetch ${{ matrix.year }} ${{ matrix.start }}
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.chunks) }}
+    steps:
+      # Actions are pinned to full commit SHAs; the tag is in the comment.
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
+        with:
+          auto-install: true
+      # The runner image's rustup may hold the pinned channel without cargo; reinstall it then.
+      - name: Check the Rust toolchain
+        run: |
+          channel=$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)
+          complete() { rustup run "$channel" rustc --version && rustup run "$channel" cargo --version; }
+          if ! complete; then
+            rustup toolchain uninstall "$channel" || true
+            rustup toolchain install "$channel" --profile minimal --no-self-update
+            complete
+          fi
+      - name: Build
+        run: moon run cli:build
+      - name: Fetch
+        env:
+          YEAR: ${{ matrix.year }}
+          START: ${{ matrix.start }}
+          END: ${{ matrix.end }}
+          SOURCE: ${{ inputs.source || 'news' }}
+        run: |
+          [[ "$YEAR" =~ ^[0-9]{4}$ ]] || { echo "::error::year must be YYYY"; exit 1; }
+          case "$SOURCE" in
+            news | attention) only=(--only "$SOURCE") ;;
+            both) only=() ;;
+            *) echo "::error::unknown source $SOURCE"; exit 1 ;;
+          esac
+          target/release/fr2027 backtest-signals "$YEAR" "${only[@]}" --start "$START" --end "$END"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: backtest-signals-${{ matrix.year }}-${{ matrix.start }}
+          path: |
+            data/backtest/${{ matrix.year }}/gdelt.csv
+            data/backtest/${{ matrix.year }}/attention.csv
+          if-no-files-found: error
