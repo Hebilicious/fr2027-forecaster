@@ -7,8 +7,7 @@ import CandidateAvatar from "../components/CandidateAvatar.vue"
 import ModelExplorer from "../components/explorer/ModelExplorer.vue"
 import MethodSection from "../components/MethodSection.vue"
 import FieldFilter from "../components/FieldFilter.vue"
-import MarketWeight from "../components/MarketWeight.vue"
-import SignalWeight from "../components/SignalWeight.vue"
+import ForecastControls from "../components/ForecastControls.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
 import { count, daysUntil, list, percent, points, probability, shareWithInterval } from "../format"
 import { useFieldFilter } from "../useFieldFilter"
@@ -100,8 +99,14 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
         <h2 id="outcomes-title">{{ content.outcomesTitle }}</h2>
         <p class="secondary">{{ content.outcomesHelp({ sims: count(forecast.simulations, locale) }) }}</p>
       </header>
-      <SignalWeight v-if="scales.length > 1" v-model="signalScale" :scales="scales" />
-      <MarketWeight v-if="blend" v-model="marketWeight" :blend="blend" :published="publishedWeight" />
+      <ForecastControls
+        v-if="blend || scales.length > 1"
+        v-model:scale="signalScale"
+        v-model:market-weight="marketWeight"
+        :scales="scales"
+        :blend="blend"
+        :published="publishedWeight"
+      />
       <!-- The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside. -->
       <OutcomeDots :forecast="shown" :pool="field.setAside" />
       <p class="notice note" role="note">
