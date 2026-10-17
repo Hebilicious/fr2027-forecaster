@@ -30,6 +30,7 @@ const PairForecast = Schema.Struct({
   p_matchup: Schema.Finite,
   p_win_given_matchup: Schema.Record(Schema.String, Schema.Finite),
   polled: Schema.Boolean,
+  anchor: Schema.optional(Schema.Struct({ a: Schema.String, b: Schema.String })),
 })
 
 const HouseEffect = Schema.Struct({

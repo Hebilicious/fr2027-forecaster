@@ -2,7 +2,7 @@
 # research/LOG.md; values marked "provisional" are placeholders until the backtests in
 # milestone 3 fit them.
 
-model_version: "0.3.0"
+model_version: "0.4.0"
 seed: 20270418
 simulations: 50000
 round1_date: 2027-04-18
@@ -49,6 +49,14 @@ round2:
   # Not fitted: 5 is round 1's value before 0.3.0.
   student_t_df: 5
   transfer_sd: 0.35
+  # A matchup no poll has tested is anchored on a tested one with a candidate of the same bloc
+  # in place of one finalist, shifted by the gap between the two. Where no poll measured that
+  # gap, the candidate tested in more runoff polls is taken to be stronger by 0.11 on the logit
+  # scale (about 3 points at 50/50), with a standard deviation of 0.23 (about 6 points): the
+  # mean and spread over 46 same-bloc pairs tested against a common opponent in one poll,
+  # 2002–2022 (research/LOG.md, 2026-10-17).
+  anchor_gap_mean: 0.11
+  anchor_gap_sd: 0.23
   loyalty: 0.95
   # Relative propensity of each round 1 bloc's voters to vote for a finalist of each bloc or
   # to abstain / vote blank. For a centre-versus-far-right runoff the rows reproduce the 2022

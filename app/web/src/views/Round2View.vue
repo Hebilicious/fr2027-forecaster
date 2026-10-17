@@ -156,7 +156,16 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
                 </div>
               </td>
               <td>
-                <span class="badge">{{ pair.polled ? content.polledBadge : content.modelledBadge }}</span>
+                <span class="badge">
+                  <template v-if="pair.polled">{{ content.polledBadge }}</template>
+                  <template v-else-if="pair.anchor">{{
+                      content.anchoredBadge({
+                        a: names.get(pair.anchor.a) ?? pair.anchor.a,
+                        b: names.get(pair.anchor.b) ?? pair.anchor.b,
+                      })
+                    }}</template>
+                  <template v-else>{{ content.modelledBadge }}</template>
+                </span>
               </td>
             </tr>
           </tbody>
