@@ -124,6 +124,17 @@ export const Forecast = Schema.Struct({
   parameters: Schema.optional(Parameters),
   signals: Schema.optionalKey(ForecastSignals),
   ballot: Schema.optionalKey(Ballot),
+  /** The chances at several strengths of the news and social signals (0: polls alone, 1: published). */
+  signal_levels: Schema.optionalKey(
+    Schema.Array(
+      Schema.Struct({
+        scale: Schema.Finite,
+        candidates: Schema.Array(
+          Schema.Struct({ candidate_id: Schema.String, p_qualify_r1: Schema.Finite, p_win: Schema.Finite }),
+        ),
+      }),
+    ),
+  ),
   changes: Schema.Struct({
     previous: Schema.NullOr(Schema.String),
     new_polls: Schema.Array(Schema.String),

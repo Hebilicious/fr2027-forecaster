@@ -4,6 +4,13 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-17
 
+### A slider for the news and social signals, and a slower momentum fade (owner's choices)
+
+- **Slider.** The forecast is also run with every news and social weight (spike widening, attention and X momentum) at 0, ½, 1½ and 2 times its published value (`signal_levels` in the forecast file, about 2.5 seconds for all five). The Overview has a slider for it beside the markets slider, which pools on top of whichever level is chosen. Polls stay the baseline: they are the only source that forecasts vote shares on its own, and the markets slider already sets the polls' weight against the markets.
+- **Momentum fades with a 90-day half-life** to election day (`signals.momentum_half_life_days`), instead of sharing the spikes' 10 days, which left it with no effect months out. Six months before the vote it now has a quarter of its weight, a month before four fifths.
+- **Effect on the forecast of 17 October.** From no signals to twice the published weights, Glucksmann's chance of reaching round 2 goes from 20% to 30%, and Le Pen's chance of winning from 83% to 80% (the forecast of 11:00 UTC, on main's model 0.4.0).
+- **Backtest**, on main's model 0.4.0 with its horizon error. Momentum 0.15, against the polls only: 2017 share log score +1.17, runoff +0.02, qualify/win log-loss −0.002/−0.003; 2022 share −0.01, runoff −0.07. Before the horizon error, 2022 gained +1.11: the wider uncertainty months out now absorbs what momentum adds there. The published settings: 2017 share −1.98, runoff −0.69, log-loss +0.010/+0.010; 2022 share −4.29, runoff −0.01, log-loss −0.005/−0.003; the 2022 cost still comes from the fixed spike widening.
+
 ### Model 0.5.0: the signals carry weight (owner's weights), and the backtest reports their effect
 
 The owner's direction: the model must take the signals into account. The SPEC's rule that a layer ships only if it improves out-of-sample log-loss is replaced: the owner sets each layer's weight, and the backtest reports what it does (SPEC.md, Modeling 6–7 and Backtesting). The first version of this work kept every weight at zero because of that rule; AGENTS.md now says to stop and report when a rule would leave a requested feature with no effect.

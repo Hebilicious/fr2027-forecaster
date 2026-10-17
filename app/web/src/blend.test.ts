@@ -44,4 +44,39 @@ describe("blend", () => {
     }
     expect(blendAt(blend, 0)).toEqual(new Map([["a", { win: 0.7, qualify: 0.9 }]]))
   })
+
+  it("pools another strength of the signals with the markets", () => {
+    const blend: Blend = {
+      forecast: "2026-10-17T08.json",
+      model_weight: 0.75,
+      probability_floor: 0.001,
+      market_fetched_at: "2026-10-17T08:00:00Z",
+      market_used: true,
+      market_others_win: 0,
+      candidates: [
+        {
+          candidate_id: "a",
+          model: { win: 0.8, qualify: 0.9, run: 1 },
+          market: { win: 0.5, qualify: null, run: null },
+          blend: { win: 0.73, qualify: 0.9, run: 1 },
+        },
+        {
+          candidate_id: "b",
+          model: { win: 0.2, qualify: 0.6, run: 1 },
+          market: { win: 0.5, qualify: null, run: null },
+          blend: { win: 0.27, qualify: 0.6, run: 1 },
+        },
+      ],
+    }
+    const level = new Map([
+      ["a", { win: 0.6, qualify: 0.8 }],
+      ["b", { win: 0.4, qualify: 0.7 }],
+    ])
+    // At weight 1 the chances are the level's own; the market changes nothing.
+    expect(blendAt(blend, 1, level).get("a")).toEqual({ win: 0.6, qualify: 0.8 })
+    // Pooled with the markets, the level's chances are the model side.
+    const halfway = blendAt(blend, 0.5, level).get("a")?.win ?? 0
+    const [x, y] = [Math.sqrt(0.6 * 0.5), Math.sqrt(0.4 * 0.5)]
+    expect(halfway).toBeCloseTo(x / (x + y), 3)
+  })
 })
