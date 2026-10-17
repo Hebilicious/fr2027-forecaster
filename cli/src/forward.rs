@@ -56,6 +56,7 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
                     let name = match source {
                         SignalSource::Attention => "page views",
                         SignalSource::News => "articles",
+                        SignalSource::XSupport => "X support",
                     };
                     format!("{name} {ratio:.1}× their baseline")
                 })

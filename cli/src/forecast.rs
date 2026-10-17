@@ -6,7 +6,7 @@ use std::path::PathBuf;
 
 use anyhow::{Context, Result, bail};
 use fr2027_collectors::{
-    Repo, SchemaKind, Schemas, config::CandidatesConfig, config::load_model_params, content_hash, polls,
+    Repo, SchemaKind, Schemas, config::CandidatesConfig, config::load_model_params, content_hash, markets, polls,
 };
 use fr2027_model::{Forecast, ModelParams, SignalSource, run_forecast, signals::detect};
 use jiff::{Timestamp, civil::Date, tz::TimeZone};
@@ -52,6 +52,7 @@ struct ForecastFile {
     /// that produced the numbers it shows.
     parameters: Parameters,
     signals: SignalsOut,
+    ballot: BallotOut,
     changes: Changes,
     warnings: Vec<String>,
 }
@@ -130,7 +131,31 @@ struct SignalsOut {
     shock_sd: f64,
     half_life_days: f64,
     momentum_weight: f64,
+    x_momentum_weight: f64,
     spikes: Vec<SpikeOut>,
+    /// Candidates whose round 1 vote the momentum tilts, and by how much (log scale).
+    momentum: Vec<TiltOut>,
+}
+
+#[derive(Serialize)]
+struct TiltOut {
+    candidate_id: String,
+    tilt: f64,
+}
+
+/// Who runs: the hand-set chances and the "on the ballot" prices they were pooled with.
+#[derive(Serialize)]
+struct BallotOut {
+    hand_weight: f64,
+    market_fetched_at: Option<String>,
+    candidates: Vec<BallotCandidate>,
+}
+
+#[derive(Serialize)]
+struct BallotCandidate {
+    candidate_id: String,
+    p_run_hand: f64,
+    p_market: f64,
 }
 
 #[derive(Serialize)]
@@ -208,16 +233,36 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
     let now = args.now.unwrap_or_else(Timestamp::now);
     let as_of = args.as_of.unwrap_or_else(|| now.to_zoned(TimeZone::UTC).date());
     let out_dir = args.out_dir.clone().unwrap_or_else(|| repo.forecasts_dir());
-    let field = config.field()?;
+    // Who runs: the hand-set chances pooled with the newest "on the ballot" prices, when fresh.
+    let hand_field = config.field()?;
+    let ids: Vec<&str> = config.candidates.iter().map(|c| c.id.as_str()).collect();
+    let snapshot = markets::fresh_snapshot(repo, now, params.market_blend.max_age_hours)?;
+    let ballot_prices = match &snapshot {
+        Some(s) => markets::venue_average(s, "on_ballot", &ids).0,
+        None => vec![None; ids.len()],
+    };
+    let hand_p_run = hand_field.p_run();
+    let targets = fr2027_model::blend::run_targets(&hand_p_run, &ballot_prices, &params.market_blend);
+    let field = hand_field.with_run_targets(&targets);
     let signals = fr2027_collectors::signals::read_clean(repo)?;
-    // The spikes, not the raw signal files, go into the hash: a day of page views that changes no
-    // spike changes nothing the model computes.
+    // What the signals change goes into the hash, not the raw files: the spikes, the momentum and
+    // the market-moved chances of running, rounded, so a day of page views or an hour of prices
+    // that moves nothing the model computes does not refit it.
     let spikes = detect(&signals, &field, &params.signals, as_of);
-    let spike_key: Vec<String> = spikes
+    let momentum = fr2027_model::signals::momentum(&signals, &field, &params.signals, as_of, params.round1_date);
+    let mut signal_key: Vec<String> = spikes
         .iter()
-        .map(|s| format!("{}@{}", config.candidates[s.candidate].id, s.date))
+        .map(|s| format!("{}@{}", ids[s.candidate], s.date))
         .collect();
-    let inputs_hash = inputs_hash(repo, &params, as_of, &spike_key)?;
+    signal_key.extend(
+        momentum
+            .iter()
+            .zip(&ids)
+            .filter(|(m, _)| m.abs() >= 0.005)
+            .map(|(m, id)| format!("{id}~{:.2}", m)),
+    );
+    signal_key.extend(field.p_run().iter().zip(&ids).map(|(p, id)| format!("{id}:{:.2}", p)));
+    let inputs_hash = inputs_hash(repo, &params, as_of, &signal_key)?;
     if args.if_changed
         && let Some((name, latest)) = previous_forecast(&out_dir, "")?
         && latest["inputs_hash"].as_str() == Some(inputs_hash.as_str())
@@ -238,6 +283,22 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
         ids.sort();
         ids
     };
+    let ballot = BallotOut {
+        hand_weight: params.market_blend.ballot_hand_weight,
+        market_fetched_at: snapshot.as_ref().map(|s| s.fetched_at.clone()),
+        candidates: ids
+            .iter()
+            .zip(&hand_p_run)
+            .zip(&ballot_prices)
+            .filter_map(|((id, hand), market)| {
+                market.map(|m| BallotCandidate {
+                    candidate_id: id.to_string(),
+                    p_run_hand: round4(*hand),
+                    p_market: round4(m),
+                })
+            })
+            .collect(),
+    };
     let output = build(
         &config,
         &params,
@@ -247,6 +308,7 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
         inputs_hash,
         poll_ids,
         previous,
+        ballot,
     );
     let value = serde_json::to_value(&output)?;
     let violations = schemas.violations(SchemaKind::Forecast, &value);
@@ -335,9 +397,9 @@ fn previous_forecast(dir: &std::path::Path, current: &str) -> Result<Option<(Str
 
 /// Bumped whenever the forecast file gains, loses or changes a field, so that the next run refits rather than
 /// keep a file the UI can no longer read in full.
-const OUTPUT_VERSION: u32 = 3;
+const OUTPUT_VERSION: u32 = 4;
 
-fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date, spikes: &[String]) -> Result<String> {
+fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date, signals: &[String]) -> Result<String> {
     let mut bytes = Vec::new();
     for path in [
         repo.clean_dir().join(polls::CLEAN_FILE),
@@ -354,8 +416,8 @@ fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date, spikes: &[String]
         )
         .bytes(),
     );
-    if !spikes.is_empty() {
-        bytes.extend(format!(";spikes={}", spikes.join(",")).bytes());
+    if !signals.is_empty() {
+        bytes.extend(format!(";signals={}", signals.join(",")).bytes());
     }
     Ok(content_hash(&bytes))
 }
@@ -377,6 +439,17 @@ fn signals_out(params: &ModelParams, forecast: &Forecast, id: &dyn Fn(usize) -> 
         shock_sd: forecast.round1.noise.shock_sd,
         half_life_days: params.signals.half_life_days,
         momentum_weight: params.signals.momentum_weight,
+        x_momentum_weight: params.signals.x_momentum_weight,
+        momentum: forecast
+            .momentum
+            .iter()
+            .enumerate()
+            .filter(|(_, m)| m.abs() >= 0.0005)
+            .map(|(c, m)| TiltOut {
+                candidate_id: id(c),
+                tilt: round4(*m),
+            })
+            .collect(),
         spikes: forecast
             .round1
             .spikes
@@ -402,6 +475,7 @@ fn build(
     inputs_hash: String,
     poll_ids: Vec<String>,
     previous: Option<(String, Value)>,
+    ballot: BallotOut,
 ) -> ForecastFile {
     let id = |c: usize| config.candidates[c].id.clone();
     let mut candidates: Vec<CandidateOut> = forecast
@@ -543,6 +617,7 @@ fn build(
             house_effects,
         },
         signals: spikes,
+        ballot,
         changes: Changes {
             previous: previous_name,
             new_polls,

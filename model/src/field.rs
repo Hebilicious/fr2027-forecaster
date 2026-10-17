@@ -194,6 +194,40 @@ impl Field {
     pub fn slot_id(&self, candidate: usize) -> &str {
         &self.slots[self.slot_of[candidate]].id
     }
+
+    /// The field with each candidate's chance of running moved to `targets[c]` where given.
+    /// Each option's probability is scaled by the geometric mean of its runners' factors
+    /// (`target / p_run`), so an option with one runner lands exactly on the target; a slot whose
+    /// options then sum above 1 is scaled back to 1. A slot whose options sum to 1 by hand always
+    /// fields someone (the RN, Bardella if Le Pen cannot), so it is scaled back to 1 either way:
+    /// the markets move the split between its options, not whether it fields a candidate. A
+    /// candidate the field gives no chance keeps none: a hand-set 0 is a fact (a lost primary),
+    /// not an estimate.
+    pub fn with_run_targets(&self, targets: &[Option<f64>]) -> Field {
+        let p_run = self.p_run();
+        let factor = |c: usize| match targets.get(c).copied().flatten() {
+            Some(t) if p_run[c] > 0.0 => t.clamp(0.0, 1.0) / p_run[c],
+            _ => 1.0,
+        };
+        let mut field = self.clone();
+        for slot in &mut field.slots {
+            let always_fields = (slot.probabilities.iter().sum::<f64>() - 1.0).abs() < 1e-9;
+            for (probability, runners) in slot.probabilities.iter_mut().zip(&slot.runners) {
+                if runners.is_empty() {
+                    continue;
+                }
+                let log_mean = runners.iter().map(|c| factor(*c).ln()).sum::<f64>() / runners.len() as f64;
+                *probability *= log_mean.exp();
+            }
+            let total: f64 = slot.probabilities.iter().sum();
+            if total > 1.0 || (always_fields && total > 0.0) {
+                for probability in &mut slot.probabilities {
+                    *probability /= total;
+                }
+            }
+        }
+        field
+    }
 }
 
 fn modal_option(slot: &ResolvedSlot) -> Option<usize> {
@@ -208,6 +242,52 @@ fn modal_option(slot: &ResolvedSlot) -> Option<usize> {
 
 #[cfg(test)]
 pub(crate) mod tests {
+    #[test]
+    fn run_targets_move_single_runner_options_exactly() {
+        let field = super::Field::new(
+            vec!["left".into(), "right".into()],
+            vec![candidate("a", "left"), candidate("b", "left"), candidate("c", "right")],
+            &[
+                slot(
+                    "ab",
+                    vec![option(&["a"], 0.6), option(&["b"], 0.2), option(&["a", "b"], 0.1)],
+                ),
+                slot("c", vec![option(&["c"], 0.0)]),
+            ],
+        )
+        .unwrap();
+        // a runs 0.7 by hand, b 0.3; c is ruled out.
+        let moved = field.with_run_targets(&[Some(0.35), Some(0.6), Some(0.9)]);
+        let p = moved.p_run();
+        // a's own option halves, b's doubles, the joint option by their geometric mean (1 here),
+        // so a candidate in a joint option lands near its target, not on it.
+        let joint = 0.1 * (0.5f64 * 2.0).sqrt();
+        assert!((p[0] - (0.3 + joint)).abs() < 1e-12, "{p:?}");
+        assert!((p[1] - (0.4 + joint)).abs() < 1e-12, "{p:?}");
+        assert_eq!(p[2], 0.0, "a hand-set 0 stays");
+        // Over 1: scaled back.
+        let over = field.with_run_targets(&[Some(0.9), Some(0.9), None]);
+        let total: f64 = over.slots[0].probabilities.iter().sum();
+        assert!((total - 1.0).abs() < 1e-12);
+    }
+
+    #[test]
+    fn run_targets_keep_a_slot_that_always_fields_someone_full() {
+        // The RN's slot: Le Pen 0.93 or Bardella 0.07, never nobody.
+        let field = super::Field::new(
+            vec!["far_right".into()],
+            vec![candidate("le_pen", "far_right"), candidate("bardella", "far_right")],
+            &[slot("rn", vec![option(&["le_pen"], 0.93), option(&["bardella"], 0.07)])],
+        )
+        .unwrap();
+        // Markets that leave room for neither would otherwise empty the slot 3% of the time.
+        let moved = field.with_run_targets(&[Some(0.91), Some(0.06)]);
+        let p = moved.p_run();
+        assert!((p[0] + p[1] - 1.0).abs() < 1e-12, "{p:?}");
+        // The split follows the markets: Bardella's share falls from 7%.
+        assert!(p[1] < 0.07, "{p:?}");
+    }
+
     use super::*;
 
     pub(crate) fn candidate(id: &str, bloc: &str) -> Candidate {

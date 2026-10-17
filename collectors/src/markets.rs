@@ -55,6 +55,68 @@ pub fn implied_price(bid: Option<f64>, ask: Option<f64>, last: Option<f64>) -> O
     }
 }
 
+/// One question's prices in a snapshot, by candidate (`ids` order), averaged over the venues that
+/// list each candidate. For `win`, each venue's prices are first scaled to sum to 1 together
+/// with the contracts on people outside the field, whose averaged share is returned beside.
+pub fn venue_average(snapshot: &Snapshot, question: &str, ids: &[&str]) -> (Vec<Option<f64>>, f64) {
+    let mut sums = vec![(0.0, 0usize); ids.len()];
+    let (mut others, mut venues) = (0.0, 0usize);
+    for market in snapshot
+        .markets
+        .iter()
+        .filter(|m| m.question == question && m.status == "ok")
+    {
+        let listed: Vec<(Option<usize>, f64)> = market
+            .contracts
+            .iter()
+            .filter_map(|c| {
+                let price = c.price?;
+                Some((
+                    c.candidate_id
+                        .as_deref()
+                        .and_then(|id| ids.iter().position(|i| *i == id)),
+                    price,
+                ))
+            })
+            .collect();
+        let scale = if question == "win" {
+            listed.iter().map(|(_, p)| p).sum::<f64>()
+        } else {
+            1.0
+        };
+        if listed.is_empty() || scale <= 0.0 {
+            continue;
+        }
+        venues += 1;
+        for (c, price) in listed {
+            match c {
+                Some(c) => {
+                    sums[c].0 += price / scale;
+                    sums[c].1 += 1;
+                }
+                None => others += price / scale,
+            }
+        }
+    }
+    let prices = sums.iter().map(|(sum, n)| (*n > 0).then(|| sum / *n as f64)).collect();
+    (prices, if venues > 0 { others / venues as f64 } else { 0.0 })
+}
+
+/// The newest snapshot in `data/raw/markets/` if it was fetched at most `max_age_hours` before
+/// `now`.
+pub fn fresh_snapshot(repo: &Repo, now: Timestamp, max_age_hours: f64) -> Result<Option<Snapshot>> {
+    let Some(path) = crate::list_files(&repo.raw_markets_dir(), "json")?.pop() else {
+        return Ok(None);
+    };
+    let snapshot: Snapshot =
+        serde_json::from_slice(&crate::read(&path)?).map_err(|e| crate::Error::invalid(&path, e.to_string()))?;
+    let fresh = snapshot
+        .fetched_at
+        .parse::<Timestamp>()
+        .is_ok_and(|t| now.duration_since(t).as_secs_f64() / 3600.0 <= max_age_hours);
+    Ok(fresh.then_some(snapshot))
+}
+
 /// `2026-10-09T20:17:03Z` → `2026-10-09T20`, the file stem of a snapshot.
 pub fn file_stem(fetched_at: &str) -> String {
     fetched_at.get(..13).unwrap_or(fetched_at).to_string()

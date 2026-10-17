@@ -25,6 +25,17 @@ const slot = computed(() => (cw - cm.left - cm.right) / Math.max(1, view.value.h
 const barX = (i: number) => cm.left + i * slot.value + slot.value * 0.22
 const barW = computed(() => slot.value * 0.56)
 const coverageTicks = [0, 0.2, 0.4, 0.6, 0.8, 1]
+// Replays monthly, then weekly, give some twenty bars, too narrow for a value and a label each: then
+// only the furthest, the middle and the nearest are labelled, and a bar's value shows when pointed at.
+const crowded = computed(() => slot.value < 30)
+const labelAt = (i: number) => {
+  const last = view.value.horizons.length - 1
+  if (!crowded.value) return { x: barX(i) + barW.value / 2, anchor: "middle" }
+  if (i === 0) return { x: cm.left, anchor: "start" }
+  if (i === last) return { x: cw - cm.right, anchor: "end" }
+  if (i === Math.floor(last / 2)) return { x: barX(i) + barW.value / 2, anchor: "middle" }
+  return null
+}
 
 // Calibration: announced probability against how often it happened, dot area by number of forecasts.
 const sw = 360
@@ -97,6 +108,7 @@ const miss = (value: number) =>
               class="fill"
             />
             <text
+              v-if="!crowded"
               :x="barX(i) + barW / 2"
               :y="h.coverage80 > 0.12 ? coverageY(h.coverage80) + 20 : coverageY(h.coverage80) - 7"
               text-anchor="middle"
@@ -104,7 +116,7 @@ const miss = (value: number) =>
             >
               {{ percent(h.coverage80, 0, locale) }}
             </text>
-            <text :x="barX(i) + barW / 2" :y="ch - 12" class="bar-label" text-anchor="middle">
+            <text v-if="labelAt(i)" :x="labelAt(i)!.x" :y="ch - 12" class="bar-label" :text-anchor="labelAt(i)!.anchor">
               {{ content.daysOut({ days: count(h.days, locale) }) }}
             </text>
           </g>

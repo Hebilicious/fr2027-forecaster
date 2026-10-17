@@ -1,4 +1,4 @@
-import { t, type Dictionary } from "intlayer"
+import { insert, t, type Dictionary } from "intlayer"
 
 export default {
   key: "model-explorer",
@@ -54,6 +54,28 @@ export default {
       "zh-Hans": "模型如何得出这些数字：通往胜利的路径、胜率的变化、各民调机构的差异，以及它在以往选举中的表现。",
       th: "แบบจำลองได้ตัวเลขมาอย่างไร: เส้นทางสู่ชัยชนะ ความเปลี่ยนแปลงของโอกาส ความแตกต่างระหว่างสำนักโพล และผลงานในการเลือกตั้งที่ผ่านมา",
     }),
+    modelOnly: insert(
+      t({
+        fr: "Ce sont les chances du modèle seul, aux poids publiés de la presse et des réseaux. Les chances en haut de page y mêlent {{weight}} de marchés de prédiction et suivent vos réglages.",
+        "en-GB":
+          "These are the model's own chances, at the published news and social weights. The chances at the top of the page mix in {{weight}} prediction markets and follow your settings.",
+        de: "Dies sind die Chancen des Modells allein, bei den veröffentlichten Gewichten von Presse und sozialen Netzwerken. Die Chancen oben auf der Seite mischen {{weight}} Prognosemärkte bei und folgen Ihren Einstellungen.",
+        it: "Queste sono le probabilità del solo modello, ai pesi pubblicati di stampa e social. Le probabilità in cima alla pagina vi mescolano il {{weight}} di mercati di previsione e seguono le vostre impostazioni.",
+        "es-ES":
+          "Estas son las probabilidades del modelo solo, con los pesos publicados de prensa y redes. Las probabilidades de la parte superior de la página mezclan un {{weight}} de mercados de predicción y siguen tus ajustes.",
+        "pt-PT":
+          "Estas são as probabilidades do modelo sozinho, com os pesos publicados da imprensa e das redes. As probabilidades no topo da página misturam {{weight}} de mercados de previsão e seguem as suas definições.",
+        nl: "Dit zijn de kansen van het model alleen, bij de gepubliceerde gewichten van pers en sociale media. De kansen bovenaan de pagina mengen er {{weight}} voorspellingsmarkten bij en volgen je instellingen.",
+        pl: "To szanse samego modelu, przy opublikowanych wagach prasy i mediów społecznościowych. Szanse u góry strony domieszują rynki predykcyjne w proporcji {{weight}} i zmieniają się wraz z Twoimi ustawieniami.",
+        ru: "Это шансы одной модели при опубликованных весах прессы и соцсетей. Шансы вверху страницы подмешивают рынки прогнозов с долей {{weight}} и следуют вашим настройкам.",
+        uk: "Це шанси самої моделі за опублікованих ваг преси й соцмереж. Шанси вгорі сторінки додають ринки прогнозів із часткою {{weight}} і змінюються за вашими налаштуваннями.",
+        ja: "これはモデル単体の確率で、報道・SNSの重みは公表値です。ページ上部の確率は予測市場を{{weight}}混ぜ、あなたの設定に従います。",
+        ko: "이것은 공표된 언론·소셜 미디어 가중치에서의 모델 단독 확률입니다. 페이지 위쪽의 확률은 예측 시장을 {{weight}} 섞으며 설정에 따라 바뀝니다.",
+        "zh-Hans":
+          "这些是模型单独给出的概率，新闻与社交媒体采用公布的权重。页面顶部的概率混入了 {{weight}} 的预测市场，并随你的设置变化。",
+        th: "นี่คือโอกาสของแบบจำลองเพียงอย่างเดียว ที่น้ำหนักข่าวและโซเชียลมีเดียตามที่เผยแพร่ ส่วนโอกาสด้านบนของหน้าผสมตลาดการทำนาย {{weight}} และเปลี่ยนตามการตั้งค่าของคุณ",
+      }),
+    ),
     tabsLabel: t({
       fr: "Vues du modèle",
       "en-GB": "Model views",

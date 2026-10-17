@@ -28,13 +28,16 @@ pub struct BlendParams {
     pub probability_floor: f64,
     /// A market snapshot older than this, against the time the blend is computed, is not used.
     pub max_age_hours: f64,
+    /// For who runs: the weight of the hand-set chance in `config/candidates.yaml` against the
+    /// "on the ballot" markets, pooled the same way before the simulation draws the field.
+    pub ballot_hand_weight: f64,
 }
 
 impl BlendParams {
     pub fn check(&self) -> Result<(), ModelError> {
-        if !(0.0..=1.0).contains(&self.model_weight) {
+        if !(0.0..=1.0).contains(&self.model_weight) || !(0.0..=1.0).contains(&self.ballot_hand_weight) {
             return Err(ModelError::InvalidParameters(
-                "market_blend.model_weight must be in [0, 1]".into(),
+                "market_blend.model_weight and ballot_hand_weight must be in [0, 1]".into(),
             ));
         }
         if !(self.probability_floor > 0.0 && self.probability_floor < 0.5) {
@@ -76,6 +79,20 @@ impl WinPrices {
 
 fn clip(p: f64, floor: f64) -> f64 {
     p.clamp(floor, 1.0 - floor)
+}
+
+/// Each candidate's chance of running pooled with the "on the ballot" markets at
+/// `ballot_hand_weight`, for [`crate::Field::with_run_targets`]; none where no market prices them.
+pub fn run_targets(p_run: &[f64], ballot_prices: &[Option<f64>], params: &BlendParams) -> Vec<Option<f64>> {
+    let ballot = BlendParams {
+        model_weight: params.ballot_hand_weight,
+        ..params.clone()
+    };
+    p_run
+        .iter()
+        .zip(ballot_prices)
+        .map(|(p, m)| m.map(|m| pool_binary(*p, Some(m), &ballot)))
+        .collect()
 }
 
 /// Pools one yes/no probability: `logit p = w logit p_model + (1 − w) logit p_market`.
@@ -132,6 +149,7 @@ mod tests {
             model_weight,
             probability_floor: 0.001,
             max_age_hours: 6.0,
+            ballot_hand_weight: 0.5,
         }
     }
 

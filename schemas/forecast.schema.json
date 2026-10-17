@@ -18,6 +18,7 @@
     "pairs",
     "aggregation",
     "signals",
+    "ballot",
     "changes",
     "warnings"
   ],
@@ -375,12 +376,31 @@
       "description": "Event detection (model/src/signals.rs): the news and attention spikes of the 60 days before as_of, and the extra variance each spike adds at the shock_sd chosen by marginal likelihood (0: the spikes are shown but change nothing).",
       "type": "object",
       "additionalProperties": false,
-      "required": ["sources", "shock_sd", "half_life_days", "momentum_weight", "spikes"],
+      "required": [
+        "sources",
+        "shock_sd",
+        "half_life_days",
+        "momentum_weight",
+        "x_momentum_weight",
+        "spikes",
+        "momentum"
+      ],
       "properties": {
         "sources": { "type": "array", "items": { "enum": ["attention", "news"] } },
         "shock_sd": { "type": "number", "minimum": 0 },
         "half_life_days": { "type": "number", "exclusiveMinimum": 0 },
         "momentum_weight": { "type": "number" },
+        "x_momentum_weight": { "type": "number" },
+        "momentum": {
+          "description": "Candidates whose simulated round 1 vote the momentum tilts, by the log factor applied.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["candidate_id", "tilt"],
+            "properties": { "candidate_id": { "type": "string" }, "tilt": { "type": "number" } }
+          }
+        },
         "spikes": {
           "type": "array",
           "items": {
@@ -399,6 +419,29 @@
                 "additionalProperties": false,
                 "properties": { "attention": { "type": "number" }, "news": { "type": "number" } }
               }
+            }
+          }
+        }
+      }
+    },
+    "ballot": {
+      "description": "Who runs: each candidate's hand-set chance in config/candidates.yaml and the averaged \"on the ballot\" market price it was pooled with (hand_weight on the hand-set chance, log scale). The candidates' p_run is the pooled chance.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hand_weight", "market_fetched_at", "candidates"],
+      "properties": {
+        "hand_weight": { "type": "number", "minimum": 0, "maximum": 1 },
+        "market_fetched_at": { "type": ["string", "null"] },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["candidate_id", "p_run_hand", "p_market"],
+            "properties": {
+              "candidate_id": { "type": "string" },
+              "p_run_hand": { "type": "number", "minimum": 0, "maximum": 1 },
+              "p_market": { "type": "number", "minimum": 0, "maximum": 1 }
             }
           }
         }

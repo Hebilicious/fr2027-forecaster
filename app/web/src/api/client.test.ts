@@ -72,9 +72,11 @@ describe("api", () => {
   it("decodes a blend document, with candidates no market prices", async () => {
     const blend = {
       forecast: "2026-10-16T16.json",
-      model_weight: 1,
+      model_weight: 0.75,
+      probability_floor: 0.001,
       market_fetched_at: "2026-10-16T16:18:30Z",
       market_used: true,
+      market_others_win: 0.08,
       candidates: [
         {
           candidate_id: "le_pen",

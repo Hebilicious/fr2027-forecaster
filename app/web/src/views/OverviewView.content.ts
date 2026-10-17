@@ -329,43 +329,5 @@ export default {
         th: "ค่าผสมรวมแบบจำลองซึ่งให้น้ำหนัก {{weight}} เข้ากับตลาด (ค่าเฉลี่ยของ Polymarket และ Kalshi) บนสเกลลอการิทึม ราคาของผู้สมัครที่มีโอกาสน้อยมักสูงเกินโอกาสจริง และยังไม่ได้หักค่าธรรมเนียมของตลาด",
       }),
     ),
-    blendModelOnly: t({
-      fr: "Les rétro-tests n'ont pas encore justifié de poids pour les marchés : le mélange est donc le modèle seul.",
-      "en-GB": "The backtests have not yet justified any weight for the markets, so the blend is the model alone.",
-      de: "Die Rückrechnungen haben noch kein Gewicht für die Märkte gerechtfertigt; die Mischung ist daher das Modell allein.",
-      it: "I backtest non hanno ancora giustificato alcun peso per i mercati: la combinazione coincide quindi con il modello.",
-      "es-ES":
-        "Las pruebas retrospectivas aún no han justificado ningún peso para los mercados, así que la combinación es el modelo por sí solo.",
-      "pt-PT":
-        "Os testes retrospetivos ainda não justificaram qualquer peso para os mercados, por isso a combinação é apenas o modelo.",
-      nl: "De backtests rechtvaardigen nog geen gewicht voor de markten, dus de mix is het model alleen.",
-      pl: "Testy wsteczne nie uzasadniły jeszcze żadnej wagi dla rynków, więc mieszanka to sam model.",
-      ru: "Ретроспективные проверки пока не оправдали никакого веса для рынков, поэтому смесь — это одна модель.",
-      uk: "Ретроспективні перевірки поки не виправдали жодної ваги для ринків, тож суміш — це лише модель.",
-      ja: "バックテストではまだ市場に重みを与える根拠が得られていないため、ブレンドはモデルのみと同じです。",
-      ko: "백테스트에서 아직 시장에 가중치를 줄 근거가 확인되지 않아, 혼합값은 모델 값과 같습니다.",
-      "zh-Hans": "回测尚未证明市场应占任何权重，因此加权组合目前就是模型本身。",
-      th: "การทดสอบย้อนหลังยังไม่พบเหตุผลที่จะให้น้ำหนักแก่ตลาด ค่าผสมจึงเท่ากับแบบจำลองเพียงอย่างเดียว",
-    }),
-    blendStale: insert(
-      t({
-        fr: "Le dernier relevé des marchés ({{when}}) est trop ancien pour être mélangé : seul le modèle compte.",
-        "en-GB": "The latest market snapshot ({{when}}) is too old to blend: only the model counts.",
-        de: "Die letzte Marktabfrage ({{when}}) ist zu alt für die Mischung: Es zählt nur das Modell.",
-        it: "L'ultima rilevazione dei mercati ({{when}}) è troppo vecchia per la combinazione: conta solo il modello.",
-        "es-ES":
-          "La última captura de los mercados ({{when}}) es demasiado antigua para combinarla: solo cuenta el modelo.",
-        "pt-PT":
-          "O último registo dos mercados ({{when}}) é demasiado antigo para a combinação: conta apenas o modelo.",
-        nl: "De laatste momentopname van de markten ({{when}}) is te oud om te mengen: alleen het model telt.",
-        pl: "Ostatni odczyt rynków ({{when}}) jest zbyt stary, by go uwzględnić: liczy się tylko model.",
-        ru: "Последний срез рынков ({{when}}) слишком старый для смешения: учитывается только модель.",
-        uk: "Останній зріз ринків ({{when}}) застарий для поєднання: враховується лише модель.",
-        ja: "最新の市場データ（{{when}}）は古すぎるためブレンドに使っていません。モデルのみを反映しています。",
-        ko: "최근 시장 자료({{when}})가 너무 오래되어 혼합에 쓰지 않았습니다. 모델 값만 반영합니다.",
-        "zh-Hans": "最新的市场数据（{{when}}）过旧，未纳入加权组合：仅采用模型。",
-        th: "ข้อมูลตลาดล่าสุด ({{when}}) เก่าเกินกว่าจะนำมาผสม จึงใช้เฉพาะแบบจำลอง",
-      }),
-    ),
   },
 } satisfies Dictionary
