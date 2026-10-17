@@ -1,0 +1,116 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-17T21:00:58Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-17T20:00:00Z",
+      "title": "SONDAGE BFMTV. Présidentielle 2027: Édouard Philippe, Raphaël Glucksmann et Jean-Luc Mélenchon donnés au coude-à-coude derrière Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/sondage-bfmtv-presidentielle-2027-edouard-philippe-raphael-glucksmann-et-jean-luc-melenchon-donnes-au-coude-a-coude-derriere-marine-le-pen_AN-202610170298.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-17T19:58:41Z",
+      "title": "Mobilisation du 17 octobre: \"Ce qui est grave aujourd'hui, c'est que les émeutiers s'en prennent à des symboles de l'autorité publique\", dénonce Ségolène Royal, ancienne ministre",
+      "url": "https://www.bfmtv.com/politique/video-mobilisation-du-17-octobre-ce-qui-est-grave-aujourd-hui-c-est-que-les-emeutiers-s-en-prennent-a-des-symboles-de-l-autorite-publique-denonce-segolene-royal-ancienne-ministre_VN-202610170353.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« C’est VOTRE responsabilité politique » : Sébastien Lecornu et Jean-Luc Mélenchon s’écharpent sur X, après les violences en marge des manifestations",
+      "url": "https://www.leparisien.fr/societe/cest-votre-responsabilite-politique-sebastien-lecornu-et-jean-luc-melenchon-secharpent-sur-x-apres-les-violences-en-marge-des-manifestations-17-10-2026-MUAM5ALKUFF2RNRYHY46JQDG2I.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
