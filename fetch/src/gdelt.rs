@@ -16,8 +16,16 @@ use serde::Deserialize;
 use crate::{Client, Error, Result};
 
 const API: &str = "https://api.gdeltproject.org/api/v2/doc/doc";
-/// GDELT's limit is one request every 5 seconds; keep a margin.
+/// GDELT's limit is one request every 5 seconds; keep a margin. A shared address (a carrier's NAT,
+/// a CI runner) can need much more: `FR2027_GDELT_SPACING_SECS` overrides it.
 const SPACING: Duration = Duration::from_secs(8);
+
+fn spacing() -> Duration {
+    std::env::var("FR2027_GDELT_SPACING_SECS")
+        .ok()
+        .and_then(|s| s.parse().ok())
+        .map_or(SPACING, Duration::from_secs)
+}
 /// The first day the DOC API covers: earlier start dates are refused ("Invalid query start date").
 pub const FIRST_DAY: Date = jiff::civil::date(2017, 1, 1);
 
@@ -124,7 +132,7 @@ impl<'a> Reader<'a> {
         );
         let mut last_error = None;
         for wait in BACK_OFF.iter().map(Some).chain([None]) {
-            self.pause(SPACING);
+            self.pause(spacing());
             let response = self.client.get_once(&url);
             self.last_request = Some(Instant::now());
             match response {

@@ -58,7 +58,7 @@ jobs:
     needs: plan
     runs-on: ubuntu-24.04
     # GDELT is read 92 days at a time, 8 seconds apart, with minutes of back-off when refused.
-    timeout-minutes: 300
+    timeout-minutes: 340
     strategy:
       fail-fast: false
       matrix:
@@ -86,6 +86,8 @@ jobs:
       - name: Fetch
         env:
           YEAR: ${{ matrix.year }}
+          # Runners share their addresses; GDELT refused a second request 8 seconds after the first.
+          FR2027_GDELT_SPACING_SECS: "45"
           SOURCE: ${{ inputs.source || 'news' }}
         run: |
           [[ "$YEAR" =~ ^[0-9]{4}$ ]] || { echo "::error::year must be YYYY"; exit 1; }
