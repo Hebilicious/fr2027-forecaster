@@ -198,8 +198,11 @@ impl Field {
     /// The field with each candidate's chance of running moved to `targets[c]` where given.
     /// Each option's probability is scaled by the geometric mean of its runners' factors
     /// (`target / p_run`), so an option with one runner lands exactly on the target; a slot whose
-    /// options then sum above 1 is scaled back to 1. A candidate the field gives no chance keeps
-    /// none: a hand-set 0 is a fact (a lost primary), not an estimate.
+    /// options then sum above 1 is scaled back to 1. A slot whose options sum to 1 by hand always
+    /// fields someone (the RN, Bardella if Le Pen cannot), so it is scaled back to 1 either way:
+    /// the markets move the split between its options, not whether it fields a candidate. A
+    /// candidate the field gives no chance keeps none: a hand-set 0 is a fact (a lost primary),
+    /// not an estimate.
     pub fn with_run_targets(&self, targets: &[Option<f64>]) -> Field {
         let p_run = self.p_run();
         let factor = |c: usize| match targets.get(c).copied().flatten() {
@@ -208,6 +211,7 @@ impl Field {
         };
         let mut field = self.clone();
         for slot in &mut field.slots {
+            let always_fields = (slot.probabilities.iter().sum::<f64>() - 1.0).abs() < 1e-9;
             for (probability, runners) in slot.probabilities.iter_mut().zip(&slot.runners) {
                 if runners.is_empty() {
                     continue;
@@ -216,7 +220,7 @@ impl Field {
                 *probability *= log_mean.exp();
             }
             let total: f64 = slot.probabilities.iter().sum();
-            if total > 1.0 {
+            if total > 1.0 || (always_fields && total > 0.0) {
                 for probability in &mut slot.probabilities {
                     *probability /= total;
                 }
@@ -265,6 +269,23 @@ pub(crate) mod tests {
         let over = field.with_run_targets(&[Some(0.9), Some(0.9), None]);
         let total: f64 = over.slots[0].probabilities.iter().sum();
         assert!((total - 1.0).abs() < 1e-12);
+    }
+
+    #[test]
+    fn run_targets_keep_a_slot_that_always_fields_someone_full() {
+        // The RN's slot: Le Pen 0.93 or Bardella 0.07, never nobody.
+        let field = super::Field::new(
+            vec!["far_right".into()],
+            vec![candidate("le_pen", "far_right"), candidate("bardella", "far_right")],
+            &[slot("rn", vec![option(&["le_pen"], 0.93), option(&["bardella"], 0.07)])],
+        )
+        .unwrap();
+        // Markets that leave room for neither would otherwise empty the slot 3% of the time.
+        let moved = field.with_run_targets(&[Some(0.91), Some(0.06)]);
+        let p = moved.p_run();
+        assert!((p[0] + p[1] - 1.0).abs() < 1e-12, "{p:?}");
+        // The split follows the markets: Bardella's share falls from 7%.
+        assert!(p[1] < 0.07, "{p:?}");
     }
 
     use super::*;
