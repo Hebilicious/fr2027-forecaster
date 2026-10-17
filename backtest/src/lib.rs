@@ -1,8 +1,8 @@
 //! The backtest (milestone 3): replays the model on past elections as of several dates before
 //! each one, with only the polls published by then; scores the replays against the results and
-//! against a latest-poll-average baseline; and fits the election-day error settings
-//! (`round1_error` and `round2.error_sd` in `config/model.yaml`) by grid search on the log score
-//! of the realised result.
+//! against a latest-poll-average baseline; and fits the error settings (`round1_error` and the
+//! round 2 errors in `config/model.yaml`, election-day and horizon) by repeated grid searches on
+//! the log score of the realised result.
 //!
 //! - [`config`]: the settings in `config/backtest.yaml`.
 //! - [`election`]: one past election: its field, polls and result.
@@ -10,7 +10,7 @@
 //! - [`score`]: Brier score, log-loss, log scores of realised shares, reliability.
 //! - [`baseline`]: the latest-poll average.
 //! - [`final_polls`]: final-week poll errors of earlier elections, as extra evidence.
-//! - [`report`]: the whole run: scores before and after the fit, the grids, the cross-checks.
+//! - [`report`]: the whole run: scores before and after the fit, its stages, the cross-checks.
 
 pub mod baseline;
 pub mod config;

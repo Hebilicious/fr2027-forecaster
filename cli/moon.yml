@@ -83,7 +83,7 @@ tasks:
       runInCI: false
 
   backtest:
-    description: "Replay the model on 2002–2022, fit the election-day error settings, and write research/backtest/ (a few minutes)."
+    description: "Replay the model on 2002–2022, fit the election-day and horizon error settings, and write research/backtest/ (a few minutes)."
     command: "$workspaceRoot/target/release/fr2027"
     args: ["backtest"]
     deps: ["build"]

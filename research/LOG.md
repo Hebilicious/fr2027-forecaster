@@ -4,6 +4,45 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-17
 
+### Model 0.3.0: an error that grows with the horizon
+
+Six months out, the backtest's 80% intervals held the result far less often than 80% (59% at 182 days with 2017 and 2022), because the round 1 error was the same at any distance from the vote. SPEC.md (model step 4) asks for an error that shrinks as election day approaches; this adds it and fits it on the five elections now replayed.
+
+**Model.** `round1_error` gains `horizon_bloc_sd` and `horizon_candidate_sd`, and `round2` gains `horizon_error_sd`: further error per square root of 30 days before the round, added in variance to the election-day error, drawn with the same Student-t. It sits on top of the aggregation's random walk, whose scale is fitted to poll-to-poll movement and so misses what the campaign itself still changes (2022: Zemmour from 19% in November to 7.1%; 2017: Fillon from 29% in December to 20.0%). Round 2 gets its own `student_t_df` (5, not fitted), so that fitting round 1's tails no longer moves round 2: in a first run with a shared value, round 1 chose 3 and the runoff score fell (1.54 → 1.15 on 2017–2022).
+
+**Fit.** Three stages, each a grid over a few parameters with the rest held: round 1's horizon errors and tails (`horizon_bloc_sd` × `horizon_candidate_sd` × `student_t_df`), round 1's election-day errors, then round 2's two errors. The rule of 2026-10-16 is kept in each stage (adopt the best total among points that score at least as well as the stage's start on every election), and the stages repeat until a pass changes nothing, so the result scores at least as well as 0.2.0 on every election. Leave-one-out now reruns the whole fit without each election. The final-week averages no longer enter (see the entry below).
+
+**Parameter changes** (`config/model.yaml`):
+
+| Parameter                           | Was           | Now        |
+| ----------------------------------- | ------------- | ---------- |
+| `round1_error.horizon_candidate_sd` | – (0)         | 0.20       |
+| `round1_error.student_t_df`         | 5             | 3          |
+| `round1_error.horizon_bloc_sd`      | – (0)         | 0 (fitted) |
+| `round2.horizon_error_sd`           | – (0)         | 0 (fitted) |
+| `round2.student_t_df`               | – (shared, 5) | 5          |
+| `model_version`                     | 0.2.0         | 0.3.0      |
+
+Six months out, a candidate's within-bloc error goes from 0.20 to 0.53 on the log scale; a week out, from 0.20 to 0.21. Starting from 0.2.0 the fit converged in two passes (`research/backtest/fit-0.2.0-to-0.3.0.md`, the report of that run); rerun from 0.3.0 it keeps every value (`research/backtest/report.md`), so 0.3.0 is a fixed point.
+
+**Scores, 20 replays (2002–2022 × 182, 91, 30, 7 days)**, 0.2.0 → 0.3.0:
+
+|                                            | 0.2.0                       | 0.3.0                       |
+| ------------------------------------------ | --------------------------- | --------------------------- |
+| 80% coverage, all / 182 / 91 / 30 / 7 days | 67% / 64% / 70% / 61% / 74% | 69% / 73% / 73% / 62% / 67% |
+| Share log score (contenders)               | −8.1                        | −7.0                        |
+| Qualification log-loss                     | 0.173                       | 0.165                       |
+| Win log-loss                               | 0.073                       | 0.073                       |
+| Runoff log score                           | −8.06                       | −7.74                       |
+
+**What the fit would not adopt, and why.** The best totals on the grid are wider still (`horizon_bloc_sd` 0.07, `horizon_candidate_sd` 0.33–0.40, `student_t_df` 2.5, total −5.5 against −7.0 chosen), but each scores slightly worse on at least one quiet election (2002, 2007 or 2012, by 0.03 to 1.1). Under the rule, a value one election disfavours is not adopted, so coverage at six months stays below 80% (73%). Heavier tails also narrow the middle of the distribution, which is why one-week coverage falls (74% → 67%) while the log score there improves (7.83 → 7.87). The 182-day log score alone is slightly worse (−2.26 → −2.39); the gain is at 91 and 30 days. Relaxing the rule to plain maximum likelihood would take these wider values; that is a decision for review, not made here.
+
+**Leave one election out** (in the run from 0.2.0). Without 2007, 2017 or 2022 the fit picks exactly 0.3.0; without 2002 it picks `horizon_bloc_sd` 0.07, `horizon_candidate_sd` 0.33, `student_t_df` 2.5, and without 2012 `horizon_bloc_sd` 0.02, `horizon_candidate_sd` 0.33. The held-out election's round 1 score improves over 0.2.0 for 2007, 2017 and 2022 and worsens slightly for 2002 (−1.81 vs −1.61) and 2012 (4.72 vs 5.27).
+
+**Effect on the 2027 forecast** (polls to 16 October, 50,000 simulations, 0.2.0 → 0.3.0): Le Pen wins 81.5% → 80.2%, Philippe 6.7% → 6.6%, Glucksmann 2.6% → 3.2%, Zemmour 1.0% → 1.6%. Qualification: Glucksmann 16.9% → 20.8%, Mélenchon 43.8% → 40.9%, Philippe 35.2% → 32.7%, Zemmour 2.1% → 3.7%. A Le Pen–Zemmour runoff goes from 0.4% to 1.4% likely, and Zemmour wins it 3% → 18%: the horizon error moves candidates within a bloc, which is where 2022's swing happened.
+
+**Known gaps.** The 2002 runoff (Chirac–Le Pen, never polled before round 1) is scored on the transfer table alone and is the worst runoff evidence by far (−13); no round 2 error setting fixes it. The error is still constant on the log scale whatever a candidate's size.
+
 ### Data: 2002, 2007 and 2012 polls for the backtest
 
 The backtest's 80% intervals six months out covered the result only 59% of the time with two elections; a model error that grows with the horizon needs more elections to be fitted on. `data/backtest/2002`, `2007` and `2012` now hold every national poll of those campaigns, to the standard of 2017 and 2022, and `config/backtest.yaml` replays all five elections at 182, 91, 30 and 7 days. Model parameters and the grid are unchanged here.
