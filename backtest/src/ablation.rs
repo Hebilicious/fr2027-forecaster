@@ -5,7 +5,7 @@
 //! A variant may be adopted only if it scores at least as well as the polls-only model on every
 //! election, on each of: the contenders' round 1 share log score, the runoff log score, and the
 //! log-loss of who qualifies and who wins; and if it changes something (the polls chose a
-//! `shock_sd` above zero in at least one replay). That is the backtest's rule for the error
+//! `shock_sd` above zero, or the momentum tilted a vote, in at least one replay). That is the backtest's rule for the error
 //! settings (each body of evidence must agree), with the spec's log-loss added.
 
 use std::collections::BTreeMap;
@@ -40,6 +40,10 @@ pub struct Variant {
     pub half_life_days: Option<f64>,
     pub attention_floor: Option<f64>,
     pub news_floor: Option<f64>,
+    /// The momentum weight (default: none).
+    pub momentum_weight: Option<f64>,
+    /// Whether spikes may add variance (default: yes); off to score momentum alone.
+    pub widening: Option<bool>,
 }
 
 impl Variant {
@@ -50,7 +54,12 @@ impl Variant {
             half_life_days: self.half_life_days.unwrap_or(base.half_life_days),
             attention_floor: self.attention_floor.unwrap_or(base.attention_floor),
             news_floor: self.news_floor.unwrap_or(base.news_floor),
-            shock_sd_grid: shock_sd_grid.to_vec(),
+            shock_sd_grid: if self.widening.unwrap_or(true) {
+                shock_sd_grid.to_vec()
+            } else {
+                vec![0.0]
+            },
+            momentum_weight: self.momentum_weight.unwrap_or(0.0),
             ..base.clone()
         }
     }
@@ -77,7 +86,8 @@ pub struct VariantResult {
     pub scores: Scores,
     /// Per replay: spikes detected by its date, and the `shock_sd` its polls chose.
     pub replays: Vec<VariantReplay>,
-    /// The polls chose a `shock_sd` above zero in at least one replay.
+    /// The polls chose a `shock_sd` above zero, or the momentum tilted a vote, in at least one
+    /// replay.
     pub has_effect: bool,
     /// Has an effect, and is at least as good as the polls-only model on every election and
     /// every score.
@@ -196,7 +206,9 @@ pub fn run(
         params.signals = variant.params(&model.signals, &ablation.shock_sd_grid);
         let mut replays = prepare_all(elections, &params, config)?;
         let replay_scores = scores(&evaluate(elections, &mut replays, &contenders)?, floor);
-        let has_effect = replays.iter().any(|r| r.fit.round1.noise.shock_sd > 0.0);
+        let has_effect = replays
+            .iter()
+            .any(|r| r.fit.round1.noise.shock_sd > 0.0 || r.fit.momentum.iter().any(|m| *m != 0.0));
         let adoptable = has_effect && at_least(&replay_scores, &reference_scores);
         progress(&format!(
             "signals ablation, {}: share log score {:.1} (polls only {:.1}){}",

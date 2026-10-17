@@ -1124,7 +1124,7 @@ fn year_list(years: &[i16]) -> String {
 fn ablation_markdown(out: &mut String, ablation: &Ablation) {
     let _ = writeln!(
         out,
-        "\n## Signal layers\n\nEvery replay fitted again with news and attention spikes allowed to add variance (model/src/signals.rs), `shock_sd` chosen by marginal likelihood from {:?}, and simulated at the current election-day errors. Contenders are those of the polls-only replays. A variant is adoptable when the polls chose a `shock_sd` above zero in at least one replay and it scores at least as well as the polls only on both elections, on the share log score, the runoff log score and the qualification and win log-loss.\n",
+        "\n## Signal layers\n\nEvery replay fitted again with news and attention spikes allowed to add variance (model/src/signals.rs), `shock_sd` chosen by marginal likelihood from {:?}, and simulated at the current election-day errors. Contenders are those of the polls-only replays. A variant is adoptable when it changes something (the polls chose a `shock_sd` above zero, or the momentum tilted a vote, in at least one replay) and it scores at least as well as the polls only on both elections, on the share log score, the runoff log score and the qualification and win log-loss.\n",
         ablation.shock_sd_grid
     );
     let _ = writeln!(out, "{SUMMARY_HEADER}");
