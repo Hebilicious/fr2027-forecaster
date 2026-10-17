@@ -18,18 +18,24 @@ contender_share: 0.10
 probability_floor: 0.001
 
 elections:
+  - { year: 2002, dir: data/backtest/2002, round1: 2002-04-21, round2: 2002-05-05 }
+  - { year: 2007, dir: data/backtest/2007, round1: 2007-04-22, round2: 2007-05-06 }
+  - { year: 2012, dir: data/backtest/2012, round1: 2012-04-22, round2: 2012-05-06 }
   - { year: 2017, dir: data/backtest/2017, round1: 2017-04-23, round2: 2017-05-07 }
   - { year: 2022, dir: data/backtest/2022, round1: 2022-04-10, round2: 2022-04-24 }
 # Official results, checked against the Conseil constitutionnel decisions.
-results_file: research/sources/results-2017-2022.csv
+results_file: research/sources/results-2002-2022.csv
 
-# Final-week poll averages of earlier elections: extra evidence for the election-day error. 2017 and
-# 2022 are left out here because the replays already score them.
+# Final-week poll averages of earlier elections: extra evidence for the election-day error, for
+# elections that are not replayed. Every election in the files (2002–2022) is now replayed, and its
+# 7-day replay scores the same election-day miss, so none is used: counting it twice would give
+# those elections double weight in the fit.
 final_polls:
   round1_file: research/sources/round1-final-poll-errors-2002-2022.csv
   round2_file: research/sources/round2-final-poll-errors-2002-2022.csv
-  years: [2002, 2007, 2012]
-  # Blocs of the 2002–2012 candidates in that file, on the scale of config/candidates.yaml.
+  years: []
+  # Blocs of the 2002–2012 candidates in that file, on the scale of config/candidates.yaml (used
+  # when one of those years is listed above).
   blocs:
     "Jacques Chirac": right
     "Jean-Marie Le Pen": far_right

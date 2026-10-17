@@ -1,8 +1,9 @@
-//! Final-week poll averages of earlier elections (2002–2012), as evidence for the election-day
-//! error beyond the two replayed elections. Each average is treated as the model's election-day
-//! state with no uncertainty left but the election-day error itself, which is drawn exactly as
-//! the simulation draws it (Student-t on each bloc's log strength and on each candidate's
-//! within-bloc support); the realised result is then scored like a replay's.
+//! Final-week poll averages of elections that are not replayed (`final_polls.years`), as
+//! evidence for the election-day error beyond the replays; none is used while every election in
+//! the files is replayed. Each average is treated as the model's election-day state with no
+//! uncertainty left but the election-day error itself, which is drawn exactly as the simulation
+//! draws it (Student-t on each bloc's log strength and on each candidate's within-bloc support);
+//! the realised result is then scored like a replay's.
 
 use std::collections::BTreeMap;
 use std::path::Path;

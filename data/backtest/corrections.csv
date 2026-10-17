@@ -32,3 +32,6 @@ year,poll_id,round,scenario_id,candidate_id,index_share,primary_share,primary_ur
 2017,ifop-2017-04-08,1,S1,asselineau,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3724-1-study_file.pdf,
 2017,ifop-2017-04-08,1,S1,cheminade,0.5,,https://www.ifop.com/wp-content/uploads/2018/03/3724-1-study_file.pdf,
 2017,ifop-2017-04-15,1,S1,cheminade,0.5,,https://web.archive.org/web/20170702172854/https://www.fiducial.fr/telechargement/36468/472670/barometre-election-presidentielle-4.pdf,
+2007,kantar-2007-04-19,2,H2,bayrou,53,54,https://web.archive.org/web/20070915001738/http://www.tns-sofres.com/2007/etude.php?id=374,TNS Sofres page gives Bayrou-Sarkozy 54/46 for 18-19 Apr (+2 vs 4-5 Apr 52/48); index has 53/47
+2007,kantar-2007-04-19,2,H2,sarkozy,47,46,https://web.archive.org/web/20070915001738/http://www.tns-sofres.com/2007/etude.php?id=374,
+2012,ifop-2011-06-23,1,S1,dupont_aignan,0.5,,https://web.archive.org/web/20220114111335/https://www.ifop.com/wp-content/uploads/2018/03/1553-1-study_file.pdf,"source shows '-' for Dupont-Aignan in the Hulot hypothesis; index rows sum to 100.5, the source's to 100"

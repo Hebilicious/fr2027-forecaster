@@ -45,7 +45,7 @@ enum Command {
     /// Bring in what Grok Bot posted to the inbox Worker.
     #[command(subcommand)]
     Inbox(inbox::Command),
-    /// Replay the model on 2017 and 2022, score it, fit the election-day errors, and write
+    /// Replay the model on 2002–2022, score it, fit the election-day errors, and write
     /// research/backtest/.
     Backtest(backtest::Args),
     /// Write the public site: the built UI plus api/*.json.

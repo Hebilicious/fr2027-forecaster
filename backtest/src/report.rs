@@ -81,7 +81,7 @@ pub struct SettingScores {
     pub overall: Summary,
     pub by_year: BTreeMap<i16, Summary>,
     pub by_horizon: BTreeMap<u32, Summary>,
-    /// Log scores of the 2002–2012 final-week poll errors (none for the baseline).
+    /// Log scores of the final-week poll errors of `final_polls.years` (none for the baseline).
     pub final_polls_round1: Option<f64>,
     pub final_polls_round2: Option<f64>,
     pub reliability: Vec<ReliabilityBin>,
@@ -89,12 +89,12 @@ pub struct SettingScores {
 }
 
 /// The log scores a setting earns from each independent body of evidence: each election's
-/// replays, and the 2002–2012 final-week polls.
+/// replays, and the final-week polls of the elections in `final_polls.years`.
 #[derive(Clone, Debug, Serialize)]
 pub struct Evidence {
     /// Summed over each election's replays.
     pub by_year: BTreeMap<i16, f64>,
-    /// Summed over both elections, by horizon (shown, not used by the fit).
+    /// Summed over every election, by horizon (shown, not used by the fit).
     pub by_horizon: BTreeMap<u32, f64>,
     pub final_polls: f64,
 }
@@ -575,6 +575,16 @@ fn num(x: f64, digits: usize) -> String {
     }
 }
 
+/// "2002, 2007 and 2012".
+fn year_list(years: &[i16]) -> String {
+    let names: Vec<String> = years.iter().map(i16::to_string).collect();
+    match names.split_last() {
+        None => "none".into(),
+        Some((last, [])) => last.clone(),
+        Some((last, rest)) => format!("{} and {last}", rest.join(", ")),
+    }
+}
+
 fn summary_row(label: &str, s: &Summary) -> String {
     format!(
         "| {label} | {} | {} | {} | {} | {} | {} | {} | {} | {} |",
@@ -597,7 +607,9 @@ impl Report {
     pub fn markdown(&self) -> String {
         let mut out = String::new();
         let c = &self.config;
-        let _ = writeln!(out, "# Backtest: 2017 and 2022 replays\n");
+        let replayed = year_list(&self.elections.iter().map(|e| e.year).collect::<Vec<_>>());
+        let final_years = year_list(&c.final_polls.years);
+        let _ = writeln!(out, "# Backtest: {replayed} replays\n");
         let _ = writeln!(
             out,
             "Written by `fr2027 backtest` (moon task `cli:backtest`) from `config/backtest.yaml`, `config/model.yaml` (model {}) and `data/backtest/`; `results.json` beside this file has every number. Seed {}, {} simulations per replay and setting. How to read it and what was decided: `research/LOG.md`.\n",
@@ -625,19 +637,21 @@ impl Report {
             );
         }
 
-        let _ = writeln!(out, "\n## Scores\n\nAll replays (both elections, every horizon):\n");
+        let _ = writeln!(out, "\n## Scores\n\nAll replays (every election, every horizon):\n");
         let _ = writeln!(out, "{SUMMARY_HEADER}");
         let _ = writeln!(out, "{}", summary_row("Latest-poll average", &self.baseline.overall));
         let _ = writeln!(out, "{}", summary_row("Model, current", &self.current_scores.overall));
         let _ = writeln!(out, "{}", summary_row("Model, fitted", &self.fitted_scores.overall));
-        let _ = writeln!(
-            out,
-            "\nFinal-week poll errors 2002–2012 (log score, round 1 / round 2): current {} / {}, fitted {} / {}.",
-            num(self.current_scores.final_polls_round1.unwrap_or(f64::NAN), 1),
-            num(self.current_scores.final_polls_round2.unwrap_or(f64::NAN), 2),
-            num(self.fitted_scores.final_polls_round1.unwrap_or(f64::NAN), 1),
-            num(self.fitted_scores.final_polls_round2.unwrap_or(f64::NAN), 2),
-        );
+        if !c.final_polls.years.is_empty() {
+            let _ = writeln!(
+                out,
+                "\nFinal-week poll errors {final_years} (log score, round 1 / round 2): current {} / {}, fitted {} / {}.",
+                num(self.current_scores.final_polls_round1.unwrap_or(f64::NAN), 1),
+                num(self.current_scores.final_polls_round2.unwrap_or(f64::NAN), 2),
+                num(self.fitted_scores.final_polls_round1.unwrap_or(f64::NAN), 1),
+                num(self.fitted_scores.final_polls_round2.unwrap_or(f64::NAN), 2),
+            );
+        }
         for (title, pick) in [("By election", true), ("By horizon (days before round 1)", false)] {
             let _ = writeln!(out, "\n{title}:\n\n{SUMMARY_HEADER}");
             let rows = |scores: &SettingScores| -> Vec<(String, Summary)> {
@@ -694,7 +708,7 @@ impl Report {
 
         let _ = writeln!(
             out,
-            "\n## Fit\n\nThe rule: among the grid points that score at least as well as the current setting on every source of evidence (each election's replays, and the final-week polls of 2002–2012), take the one with the highest total log score; if none does, keep the current value. Round 1 first, with round 2 at its current error; then round 2, with round 1 at its fitted values.\n"
+            "\n## Fit\n\nThe rule: among the grid points that score at least as well as the current setting on every source of evidence (each election's replays, and the final-week polls of other elections: {final_years}), take the one with the highest total log score; if none does, keep the current value. Round 1 first, with round 2 at its current error; then round 2, with round 1 at its fitted values.\n"
         );
         let _ = writeln!(
             out,
@@ -712,12 +726,12 @@ impl Report {
         for h in &c.horizons_days {
             let h = *h;
             sources.push((
-                format!("{h}-day replays, both elections (not used)"),
+                format!("{h}-day replays, every election (not used)"),
                 Box::new(move |v: &Evidence| v.by_horizon[&h]),
             ));
         }
         sources.push((
-            "Final-week polls 2002–2012".into(),
+            format!("Final-week polls ({final_years})"),
             Box::new(|v: &Evidence| v.final_polls),
         ));
         sources.push(("Total".into(), Box::new(|v: &Evidence| v.total(None))));
@@ -768,7 +782,10 @@ impl Report {
         for e in &self.elections {
             let _ = write!(out, " {} replays |", e.year);
         }
-        let _ = writeln!(out, " Final-week polls 2002–2012 | Total | P(winner \\| matchup) |");
+        let _ = writeln!(
+            out,
+            " Final-week polls ({final_years}) | Total | P(winner \\| matchup) |"
+        );
         let _ = writeln!(out, "|---|{}---|---|---|", "---|".repeat(self.elections.len()));
         for point in &self.round2_grid {
             let mark = if point.chosen {
@@ -790,10 +807,12 @@ impl Report {
                 pct(point.p_winner_given_matchup)
             );
         }
-        let _ = writeln!(
-            out,
-            "\nFinal-week runoff polls used:\n\n| Year | Winner | Final-week average | Result (share of the two) |\n|---|---|---|---|"
-        );
+        if !self.final_polls_round2.is_empty() {
+            let _ = writeln!(
+                out,
+                "\nFinal-week runoff polls used:\n\n| Year | Winner | Final-week average | Result (share of the two) |\n|---|---|---|---|"
+            );
+        }
         for e in &self.final_polls_round2 {
             let _ = writeln!(
                 out,

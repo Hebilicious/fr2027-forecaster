@@ -27,31 +27,38 @@ fn elections(repo: &Repo) -> (BacktestConfig, Vec<Election>) {
     (config, elections)
 }
 
+/// Each replayed election: its two finalists, the winner, at least this many polls, and the
+/// number of candidates on the round 1 ballot.
+const EXPECTED: [(i16, [&str; 2], &str, usize, usize); 5] = [
+    (2002, ["chirac", "jm_le_pen"], "chirac", 200, 16),
+    (2007, ["sarkozy", "royal"], "sarkozy", 200, 12),
+    (2012, ["hollande", "sarkozy"], "hollande", 250, 10),
+    (2017, ["macron", "le_pen"], "macron", 300, 11),
+    (2022, ["macron", "le_pen"], "macron", 300, 12),
+];
+
 #[test]
 fn elections_load_with_their_results() {
     let repo = repo();
     let (_, elections) = elections(&repo);
-    assert_eq!(elections.len(), 2);
-    for election in &elections {
+    assert_eq!(
+        elections.iter().map(|e| e.year).collect::<Vec<_>>(),
+        EXPECTED.iter().map(|e| e.0).collect::<Vec<_>>()
+    );
+    for (election, (year, finalists, winner, min_polls, runners)) in elections.iter().zip(EXPECTED) {
         let (a, b) = election.finalists;
-        assert_eq!(
-            [election.id(a), election.id(b)]
-                .iter()
-                .filter(|id| ["macron", "le_pen"].contains(id))
-                .count(),
-            2,
-            "{}",
-            election.year
-        );
-        assert_eq!(election.id(election.winner()), "macron");
+        let mut found = [election.id(a), election.id(b)];
+        let mut expected = finalists;
+        found.sort_unstable();
+        expected.sort_unstable();
+        assert_eq!(found, expected, "{year}");
+        assert_eq!(election.id(election.winner()), winner, "{year}");
         assert!(
-            election.polls.len() > 300,
-            "{}: {} polls",
-            election.year,
+            election.polls.len() >= min_polls,
+            "{year}: {} polls",
             election.polls.len()
         );
-        let runners = election.ran.iter().filter(|r| **r).count();
-        assert!(runners >= 11, "{}: {runners} runners", election.year);
+        assert_eq!(election.ran.iter().filter(|r| **r).count(), runners, "{year}");
     }
 }
 

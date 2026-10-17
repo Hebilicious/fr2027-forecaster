@@ -43,7 +43,7 @@ impl Election {
     }
 }
 
-/// A row of `research/sources/results-2017-2022.csv`.
+/// A row of `research/sources/results-2002-2022.csv`.
 #[derive(Debug, Deserialize)]
 struct ResultRow {
     year: i16,

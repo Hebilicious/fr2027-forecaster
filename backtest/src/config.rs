@@ -27,7 +27,7 @@ pub struct BacktestConfig {
     /// Probabilities are clipped to `[floor, 1 - floor]` before taking logs.
     pub probability_floor: f64,
     pub elections: Vec<ElectionEntry>,
-    /// Official results (`research/sources/results-2017-2022.csv`).
+    /// Official results (`research/sources/results-2002-2022.csv`).
     pub results_file: PathBuf,
     pub final_polls: FinalPollsConfig,
     pub grid: Grid,

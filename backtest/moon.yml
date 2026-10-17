@@ -3,13 +3,13 @@ layer: "library"
 
 project:
   title: "Backtest"
-  description: "Replays the model on 2017 and 2022, scores it against the results and a latest-poll baseline, and fits the election-day error settings."
+  description: "Replays the model on 2002–2022, scores it against the results and a latest-poll baseline, and fits the election-day error settings."
 
 dependsOn: ["model", "collectors"]
 
 tasks:
   test:
-    description: "Run the backtest's tests, including the checks on the real 2017 and 2022 data."
+    description: "Run the backtest's tests, including the checks on the real 2002–2022 data."
     command: "cargo"
     args: ["test", "--locked", "-p", "fr2027-backtest"]
     inputs:
