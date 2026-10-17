@@ -4,7 +4,7 @@
 //! and the round 2 result.
 
 use crate::{
-    ModelError, ModelParams, Poll, day_number,
+    ModelError, ModelParams, Poll, Signals, day_number,
     field::Field,
     quantile,
     rng::Rng,
@@ -95,14 +95,16 @@ pub struct Draw<'a> {
     pub first_wins: bool,
 }
 
-/// Fits both rounds to the polls published by `as_of` and simulates the election.
+/// Fits both rounds to the polls published by `as_of` and the signals recorded before it, and
+/// simulates the election.
 pub fn run_forecast(
     field: &Field,
     polls: &[Poll],
+    signals: &Signals,
     params: &ModelParams,
     as_of: jiff::civil::Date,
 ) -> Result<Forecast, ModelError> {
-    let fit = fit(field, polls, params, as_of)?;
+    let fit = fit(field, polls, signals, params, as_of)?;
     let simulation = simulate(field, &fit, params, &mut |_| {})?;
     Ok(Forecast {
         as_of,
@@ -116,12 +118,29 @@ pub fn run_forecast(
     })
 }
 
-/// Fits the round 1 and round 2 aggregations to the polls published by `as_of`.
-pub fn fit(field: &Field, polls: &[Poll], params: &ModelParams, as_of: jiff::civil::Date) -> Result<Fit, ModelError> {
+/// Fits the round 1 and round 2 aggregations to the polls published by `as_of`, with the news
+/// and attention spikes detected in `signals` before it.
+pub fn fit(
+    field: &Field,
+    polls: &[Poll],
+    signals: &Signals,
+    params: &ModelParams,
+    as_of: jiff::civil::Date,
+) -> Result<Fit, ModelError> {
     if day_number(params.round2_date) <= day_number(params.round1_date) {
         return Err(ModelError::InvalidParameters("round 2 must follow round 1".into()));
     }
-    let round1 = fit_round1(field, polls, &params.aggregation, as_of, params.seed)?;
+    params.signals.check()?;
+    let spikes = crate::signals::detect(signals, field, &params.signals, as_of);
+    let round1 = fit_round1(
+        field,
+        polls,
+        &params.aggregation,
+        &params.signals,
+        &spikes,
+        as_of,
+        params.seed,
+    )?;
     let round2 = fit_round2(
         field,
         polls,
@@ -426,6 +445,7 @@ mod tests {
                     ("right".to_string(), row(0.1, 0.5, 1.0, 0.4)),
                 ]),
             },
+            signals: crate::SignalParams::off(),
         }
     }
 
@@ -460,7 +480,7 @@ mod tests {
 
     #[test]
     fn probabilities_are_coherent() {
-        let forecast = run_forecast(&field(), &polls(), &params(4000, 7), date(2026, 7, 1)).unwrap();
+        let forecast = run_forecast(&field(), &polls(), &Signals::new(), &params(4000, 7), date(2026, 7, 1)).unwrap();
         let p_win: f64 = forecast.candidates.iter().map(|c| c.p_win).sum();
         let p_qualify: f64 = forecast.candidates.iter().map(|c| c.p_qualify_r1).sum();
         let p_matchup: f64 = forecast.pairs.iter().map(|p| p.p_matchup).sum();
@@ -485,7 +505,7 @@ mod tests {
 
     #[test]
     fn horizon_error_widens_intervals_further_out() {
-        let fit = fit(&field(), &polls(), &params(4000, 3), date(2026, 7, 1)).unwrap();
+        let fit = fit(&field(), &polls(), &Signals::new(), &params(4000, 3), date(2026, 7, 1)).unwrap();
         let width = |horizon_sd: f64| {
             let mut params = params(4000, 3);
             params.round1_error.horizon_bloc_sd = horizon_sd;
@@ -510,9 +530,9 @@ mod tests {
 
     #[test]
     fn deterministic_with_seed() {
-        let a = run_forecast(&field(), &polls(), &params(2000, 11), date(2026, 7, 1)).unwrap();
-        let b = run_forecast(&field(), &polls(), &params(2000, 11), date(2026, 7, 1)).unwrap();
-        let c = run_forecast(&field(), &polls(), &params(2000, 12), date(2026, 7, 1)).unwrap();
+        let a = run_forecast(&field(), &polls(), &Signals::new(), &params(2000, 11), date(2026, 7, 1)).unwrap();
+        let b = run_forecast(&field(), &polls(), &Signals::new(), &params(2000, 11), date(2026, 7, 1)).unwrap();
+        let c = run_forecast(&field(), &polls(), &Signals::new(), &params(2000, 12), date(2026, 7, 1)).unwrap();
         let wins = |f: &Forecast| f.candidates.iter().map(|c| c.p_win).collect::<Vec<_>>();
         assert_eq!(wins(&a), wins(&b));
         assert_ne!(wins(&a), wins(&c));

@@ -4,6 +4,7 @@
 //! round 2 errors in `config/model.yaml`, election-day and horizon) by repeated grid searches on
 //! the log score of the realised result.
 //!
+//! - [`ablation`]: the signal layers, each scored against the polls-only model.
 //! - [`config`]: the settings in `config/backtest.yaml`.
 //! - [`election`]: one past election: its field, polls and result.
 //! - [`replay`]: the polls a replay may see, and the model fitted to them.
@@ -13,6 +14,7 @@
 //! - [`signals`]: page views and news volume of each past election.
 //! - [`report`]: the whole run: scores before and after the fit, its stages, the cross-checks.
 
+pub mod ablation;
 pub mod baseline;
 pub mod config;
 pub mod election;

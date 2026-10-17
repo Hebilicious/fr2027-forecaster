@@ -19,6 +19,7 @@ pub mod poll_check;
 pub mod polls;
 pub mod repo;
 pub mod schema;
+pub mod signals;
 pub mod sources;
 pub mod yaml_text;
 

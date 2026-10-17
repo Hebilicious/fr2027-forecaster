@@ -9,7 +9,9 @@ use fr2027_model::{ErrorParams, ModelParams};
 use serde::Serialize;
 
 use crate::{
-    Result, baseline,
+    Result,
+    ablation::{self, Ablation},
+    baseline,
     config::BacktestConfig,
     election::{self, Election},
     final_polls::{self, Round1Election, Round2Election},
@@ -38,6 +40,8 @@ pub struct Report {
     pub passes: usize,
     pub leave_one_out: Vec<LeaveOneOut>,
     pub final_polls_round2: Vec<Round2Election>,
+    /// The signal layers against the polls-only model, when configured.
+    pub signals_ablation: Option<Ablation>,
 }
 
 #[derive(Clone, Debug, Serialize)]
@@ -623,6 +627,35 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
         });
     }
 
+    let signals_ablation = match &config.signals_ablation {
+        None => None,
+        Some(ablation_config) => {
+            // The reference is the polls only. The replays above are, unless config/model.yaml
+            // already lets spikes add variance.
+            let mut polls_only_model = model.clone();
+            polls_only_model.signals.shock_sd_grid = vec![0.0];
+            let polls_only = if model.signals.shock_sd_grid.iter().all(|v| *v == 0.0) {
+                replays.clone()
+            } else {
+                let mut fitted = Vec::new();
+                for election in &elections {
+                    for &horizon in &config.horizons_days {
+                        fitted.push(replay::prepare(election, &polls_only_model, &config, horizon)?);
+                    }
+                }
+                fitted
+            };
+            Some(ablation::run(
+                &elections,
+                &polls_only,
+                &polls_only_model,
+                &config,
+                ablation_config,
+                progress,
+            )?)
+        }
+    };
+
     let election_info = elections
         .iter()
         .map(|e| ElectionInfo {
@@ -680,6 +713,7 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
         passes,
         leave_one_out,
         final_polls_round2,
+        signals_ablation,
     })
 }
 
@@ -936,6 +970,9 @@ impl Report {
                 );
             }
         }
+        if let Some(ablation) = &self.signals_ablation {
+            ablation_markdown(&mut out, ablation);
+        }
         out
     }
 }
@@ -1062,5 +1099,61 @@ fn year_list(years: &[i16]) -> String {
         None => "none".into(),
         Some((last, [])) => last.clone(),
         Some((last, rest)) => format!("{} and {last}", rest.join(", ")),
+    }
+}
+
+fn ablation_markdown(out: &mut String, ablation: &Ablation) {
+    let _ = writeln!(
+        out,
+        "\n## Signal layers\n\nEvery replay fitted again with news and attention spikes allowed to add variance (model/src/signals.rs), `shock_sd` chosen by marginal likelihood from {:?}, and simulated at the current election-day errors. Contenders are those of the polls-only replays. A variant is adoptable when the polls chose a `shock_sd` above zero in at least one replay and it scores at least as well as the polls only on both elections, on the share log score, the runoff log score and the qualification and win log-loss.\n",
+        ablation.shock_sd_grid
+    );
+    let _ = writeln!(out, "{SUMMARY_HEADER}");
+    let _ = writeln!(out, "{}", summary_row("Polls only", &ablation.polls_only.overall));
+    for v in &ablation.variants {
+        let mark = if v.adoptable {
+            " (adoptable)"
+        } else if !v.has_effect {
+            " (no effect)"
+        } else {
+            ""
+        };
+        let _ = writeln!(
+            out,
+            "{}",
+            summary_row(&format!("{}{mark}", v.variant.name), &v.scores.overall)
+        );
+    }
+    let _ = writeln!(out, "\nBy election:\n\n{SUMMARY_HEADER}");
+    for (year, s) in &ablation.polls_only.by_year {
+        let _ = writeln!(out, "{}", summary_row(&format!("{year}, polls only"), s));
+        for v in &ablation.variants {
+            let _ = writeln!(
+                out,
+                "{}",
+                summary_row(&format!("{year}, {}", v.variant.name), &v.scores.by_year[year])
+            );
+        }
+    }
+    let _ = writeln!(
+        out,
+        "\nSpikes detected and `shock_sd` chosen, per replay (year, days before round 1):\n"
+    );
+    let mut header = String::from("| Replay |");
+    let mut rule = String::from("|---|");
+    for v in &ablation.variants {
+        let _ = write!(header, " {} |", v.variant.name);
+        rule.push_str("---|");
+    }
+    let _ = writeln!(out, "{header}\n{rule}");
+    if let Some(first) = ablation.variants.first() {
+        for (i, r) in first.replays.iter().enumerate() {
+            let mut row = format!("| {} {} |", r.year, r.horizon_days);
+            for v in &ablation.variants {
+                let x = &v.replays[i];
+                let _ = write!(row, " {} spikes, {} |", x.spikes, x.shock_sd);
+            }
+            let _ = writeln!(out, "{row}");
+        }
     }
 }

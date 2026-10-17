@@ -7,6 +7,7 @@ use std::collections::BTreeMap;
 use std::path::Path;
 
 use fr2027_collectors::{read_csv, sources::CandidateSources};
+use fr2027_model::{SignalSource, Signals};
 use jiff::civil::Date;
 use serde::{Deserialize, Serialize};
 
@@ -55,6 +56,20 @@ pub const NEWS_HEADER: &str = "date,candidate_id,query,articles,total_articles,r
 pub struct ElectionSignals {
     pub attention: Vec<AttentionRow>,
     pub news: Vec<NewsRow>,
+}
+
+impl ElectionSignals {
+    /// The rows as the model reads them: page views and article counts by candidate and day.
+    pub fn to_model(&self) -> Signals {
+        let mut signals = Signals::new();
+        for row in &self.attention {
+            signals.add(&row.candidate_id, SignalSource::Attention, row.date, row.views as f64);
+        }
+        for row in &self.news {
+            signals.add(&row.candidate_id, SignalSource::News, row.date, row.articles as f64);
+        }
+        signals
+    }
 }
 
 impl SignalSources {

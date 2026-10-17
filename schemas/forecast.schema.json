@@ -17,6 +17,7 @@
     "candidates",
     "pairs",
     "aggregation",
+    "signals",
     "changes",
     "warnings"
   ],
@@ -364,6 +365,38 @@
                   "type": "number",
                   "minimum": 0
                 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "signals": {
+      "description": "Event detection (model/src/signals.rs): the news and attention spikes of the 60 days before as_of, and the extra variance each spike adds at the shock_sd chosen by marginal likelihood (0: the spikes are shown but change nothing).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sources", "shock_sd", "half_life_days", "spikes"],
+      "properties": {
+        "sources": { "type": "array", "items": { "enum": ["attention", "news"] } },
+        "shock_sd": { "type": "number", "minimum": 0 },
+        "half_life_days": { "type": "number", "exclusiveMinimum": 0 },
+        "spikes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["candidate_id", "date", "score", "ratios"],
+            "properties": {
+              "candidate_id": { "type": "string" },
+              "date": { "$ref": "#/$defs/date" },
+              "score": {
+                "type": "number",
+                "description": "Mean over the sources of the log of the day's value over its baseline."
+              },
+              "ratios": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": { "attention": { "type": "number" }, "news": { "type": "number" } }
               }
             }
           }

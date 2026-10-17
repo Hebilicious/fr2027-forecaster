@@ -72,3 +72,21 @@ round2:
     right: { far_left: 0.05, left: 0.20, centre: 0.52, right: 0.95, far_right: 0.19, other: 0.20, abstain: 0.29 }
     far_right: { far_left: 0.08, left: 0.05, centre: 0.10, right: 0.35, far_right: 0.77, other: 0.40, abstain: 0.13 }
     other: { far_left: 0.20, left: 0.20, centre: 0.25, right: 0.35, far_right: 0.40, other: 0.90, abstain: 0.35 }
+
+signals:
+  # Event detection (model/src/signals.rs): a day when a candidate's Wikipedia page views and
+  # GDELT article count, averaged on the log scale, reach spike_ratio times the median of the
+  # baseline_days before it is a spike, and lets that candidate's support and their bloc's strength
+  # move by up to shock_sd more (log scale), spread over the following days with half_life_days.
+  # shock_sd is picked with the other noise settings by marginal likelihood on the polls; the
+  # backtest decides which values the grid may hold (research/LOG.md). [0.0] keeps the spikes
+  # detected and shown but adds nothing: the polls-only model.
+  sources: [attention, news]
+  baseline_days: 28
+  min_baseline_days: 21
+  spike_ratio: 3.0
+  attention_floor: 100
+  news_floor: 5
+  refractory_days: 14
+  half_life_days: 10
+  shock_sd_grid: [0.0]
