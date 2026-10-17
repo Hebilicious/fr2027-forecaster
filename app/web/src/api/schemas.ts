@@ -40,6 +40,32 @@ const HouseEffect = Schema.Struct({
   sd: Schema.Finite,
 })
 
+// The settings the run simulated with (forecast files from before model 0.4.0 lack them).
+const ErrorSettings = Schema.Struct({
+  student_t_df: Schema.Finite,
+  bloc_sd: Schema.Finite,
+  candidate_sd: Schema.Finite,
+  horizon_bloc_sd: Schema.Finite,
+  horizon_candidate_sd: Schema.Finite,
+})
+
+const Round2Settings = Schema.Struct({
+  random_walk_sd: Schema.Finite,
+  design_effect: Schema.Finite,
+  prior_sd: Schema.Finite,
+  error_sd: Schema.Finite,
+  horizon_error_sd: Schema.Finite,
+  student_t_df: Schema.Finite,
+  transfer_sd: Schema.Finite,
+  anchor_gap_mean: Schema.Finite,
+  anchor_gap_sd: Schema.Finite,
+  loyalty: Schema.Finite,
+  transfers: Schema.Record(Schema.String, Schema.Record(Schema.String, Schema.Finite)),
+})
+
+const Parameters = Schema.Struct({ round1_error: ErrorSettings, round2: Round2Settings })
+export type Parameters = typeof Parameters.Type
+
 export const Forecast = Schema.Struct({
   schema_version: Schema.Literal("1.0"),
   model_version: Schema.String,
@@ -63,6 +89,7 @@ export const Forecast = Schema.Struct({
     poll_ids: Schema.Array(Schema.String),
     house_effects: Schema.Array(HouseEffect),
   }),
+  parameters: Schema.optional(Parameters),
   changes: Schema.Struct({
     previous: Schema.NullOr(Schema.String),
     new_polls: Schema.Array(Schema.String),

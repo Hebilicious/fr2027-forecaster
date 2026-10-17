@@ -44,6 +44,11 @@ export function relativeChange(ratio: number, locale: Locale): string {
 }
 
 /** A whole count with the locale's digit grouping. */
+/** A number with `digits` decimals, in the locale's own notation. */
+export function decimal(value: number, digits: number, locale: Locale): string {
+  return value.toLocaleString(locale, { minimumFractionDigits: digits, maximumFractionDigits: digits })
+}
+
 export function count(n: number, locale: Locale): string {
   return Math.round(n).toLocaleString(locale)
 }
