@@ -48,9 +48,19 @@ export interface Blended {
   readonly qualify: number
 }
 
-/** Each candidate's chance of winning and of reaching round 2 with the model weighted at `modelWeight`. */
-export function blendAt(blend: Blend, modelWeight: number): ReadonlyMap<string, Blended> {
-  const rows = blend.candidates
+/**
+ * Each candidate's chance of winning and of reaching round 2 with the model weighted at `modelWeight`.
+ * `model` replaces the published model's chances (another strength of the news and social signals).
+ */
+export function blendAt(
+  blend: Blend,
+  modelWeight: number,
+  model?: ReadonlyMap<string, Blended>,
+): ReadonlyMap<string, Blended> {
+  const rows = blend.candidates.map((r) => {
+    const own = model?.get(r.candidate_id)
+    return own ? { ...r, model: { ...r.model, win: own.win, qualify: own.qualify } } : r
+  })
   if (!blend.market_used)
     return new Map(rows.map((r) => [r.candidate_id, { win: r.model.win, qualify: r.model.qualify }]))
   const win = poolWin(

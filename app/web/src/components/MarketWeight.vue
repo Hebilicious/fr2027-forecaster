@@ -62,9 +62,10 @@ const percentValue = computed({
   gap: 8px 16px;
 }
 
+/* Both sliders' labels share one width, so their tracks line up. */
 .label {
   font-weight: 600;
-  min-width: 18rem;
+  flex: 0 0 min(100%, 23rem);
 }
 
 input[type="range"] {

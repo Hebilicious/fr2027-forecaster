@@ -8,10 +8,12 @@ import ModelExplorer from "../components/explorer/ModelExplorer.vue"
 import MethodSection from "../components/MethodSection.vue"
 import FieldFilter from "../components/FieldFilter.vue"
 import MarketWeight from "../components/MarketWeight.vue"
+import SignalWeight from "../components/SignalWeight.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
 import { count, daysUntil, list, percent, points, probability, shareWithInterval } from "../format"
 import { useFieldFilter } from "../useFieldFilter"
 import { useMarketWeight } from "../useMarketWeight"
+import { useSignalScale } from "../useSignalScale"
 
 const props = defineProps<{
   forecast: Forecast
@@ -32,7 +34,18 @@ const marketWeight = computed({
     chosenWeight.value = w
   },
 })
-const blended = computed(() => (props.blend ? blendAt(props.blend, 1 - marketWeight.value) : null))
+// The news and social signals' strength: the forecast was run at each of these.
+const signalScale = useSignalScale()
+const scales = computed(() => (props.forecast.signal_levels ?? []).map((l) => l.scale))
+const levelModel = computed(() => {
+  const level = props.forecast.signal_levels?.find((l) => l.scale === signalScale.value)
+  return level
+    ? new Map(level.candidates.map((c) => [c.candidate_id, { win: c.p_win, qualify: c.p_qualify_r1 }]))
+    : undefined
+})
+const blended = computed(() =>
+  props.blend ? blendAt(props.blend, 1 - marketWeight.value, levelModel.value) : (levelModel.value ?? null),
+)
 // The forecast as shown: chances of winning and of reaching round 2 blended at the slider's
 // weight, candidates in that order.
 const shown = computed<Forecast>(() => {
@@ -69,8 +82,10 @@ const blendRows = computed(() => {
   return shown.value.candidates.flatMap((c) => {
     const row = field.value.setAside.has(c.candidate_id) ? undefined : rows.get(c.candidate_id)
     const blendedRow = blended.value?.get(c.candidate_id)
-    return row && blendedRow && Math.max(row.market.win ?? 0, row.model.win) >= 0.005
-      ? [{ ...row, blended: blendedRow, name: c.name }]
+    const model = levelModel.value?.get(c.candidate_id)
+    const shownRow = row && model ? { ...row, model: { ...row.model, win: model.win, qualify: model.qualify } } : row
+    return shownRow && blendedRow && Math.max(shownRow.market.win ?? 0, shownRow.model.win) >= 0.005
+      ? [{ ...shownRow, blended: blendedRow, name: c.name }]
       : []
   })
 })
@@ -85,6 +100,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
         <h2 id="outcomes-title">{{ content.outcomesTitle }}</h2>
         <p class="secondary">{{ content.outcomesHelp({ sims: count(forecast.simulations, locale) }) }}</p>
       </header>
+      <SignalWeight v-if="scales.length > 1" v-model="signalScale" :scales="scales" />
       <MarketWeight v-if="blend" v-model="marketWeight" :blend="blend" :published="publishedWeight" />
       <!-- The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside. -->
       <OutcomeDots :forecast="shown" :pool="field.setAside" />

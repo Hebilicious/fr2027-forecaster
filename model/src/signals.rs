@@ -30,7 +30,7 @@
 //! decayed with the half-life over the days left to the election:
 //!
 //! ```text
-//! p_c ∝ p_c · exp(momentum_weight · m_c · 2^(−days_to_election / half_life_days))
+//! p_c ∝ p_c · exp(momentum_weight · m_c · 2^(−days_to_election / momentum_half_life_days))
 //! ```
 //!
 //! Attention says nothing about its sign (a scandal draws readers too), so the weight may be
@@ -84,6 +84,9 @@ pub struct SignalParams {
     pub momentum_days: u32,
     /// Weight of X momentum: the change in the X support share over the same windows.
     pub x_momentum_weight: f64,
+    /// How fast a momentum tilt fades over the days left to the election: it halves every this
+    /// many days, so far from the vote it counts for little.
+    pub momentum_half_life_days: f64,
 }
 
 impl SignalParams {
@@ -102,6 +105,7 @@ impl SignalParams {
             momentum_weight: 0.0,
             momentum_days: 7,
             x_momentum_weight: 0.0,
+            momentum_half_life_days: 10.0,
         }
     }
 
@@ -113,8 +117,10 @@ impl SignalParams {
         if !(self.spike_ratio.is_finite() && self.spike_ratio > 1.0) {
             return invalid("spike_ratio must be above 1");
         }
-        if !(self.half_life_days.is_finite() && self.half_life_days > 0.0) {
-            return invalid("half_life_days must be positive");
+        if !(self.half_life_days.is_finite() && self.half_life_days > 0.0)
+            || !(self.momentum_half_life_days.is_finite() && self.momentum_half_life_days > 0.0)
+        {
+            return invalid("half_life_days and momentum_half_life_days must be positive");
         }
         if self.min_baseline_days == 0 || self.min_baseline_days > self.baseline_days {
             return invalid("min_baseline_days must be between 1 and baseline_days");
@@ -231,8 +237,8 @@ pub fn detect(signals: &Signals, field: &Field, params: &SignalParams, as_of: Da
 
 /// Each candidate's momentum tilt on the log scale (see the module notes), from values dated
 /// before `as_of`: `momentum_weight` times the log change of their share of attention, plus
-/// `x_momentum_weight` times the change in their X support share, decayed with the half-life over
-/// the days left to `election`. 0 for a candidate without data.
+/// `x_momentum_weight` times the change in their X support share, decayed with
+/// `momentum_half_life_days` over the days left to `election`. 0 for a candidate without data.
 pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: Date, election: Date) -> Vec<f64> {
     let n = field.len();
     let last = day_number(as_of) - 1;
@@ -286,7 +292,7 @@ pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: 
     };
 
     let days = f64::from((day_number(election) - day_number(as_of)).max(0));
-    let decay = (-std::f64::consts::LN_2 * days / params.half_life_days).exp();
+    let decay = (-std::f64::consts::LN_2 * days / params.momentum_half_life_days).exp();
     (0..n)
         .map(|c| {
             let attention = if counts[c] == 0 {
