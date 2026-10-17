@@ -94,6 +94,30 @@ export function dateTime(isoTimestamp: string, locale: Locale): string {
 }
 
 /** A timestamp in local time, or a bare calendar date (YYYY-MM-DD) as that date. */
+/**
+ * How long ago `isoTimestamp` was, from the reader's clock (`now`, in milliseconds): "il y a 3 heures",
+ * "3 hours ago", "gestern". The absolute time, in the reader's own time zone, is `dateTime`.
+ */
+export function relativeTime(isoTimestamp: string, now: number, locale: Locale): string {
+  const seconds = (new Date(isoTimestamp).getTime() - now) / 1000
+  const format = new Intl.RelativeTimeFormat(locale, { numeric: "auto" })
+  const steps: readonly [Intl.RelativeTimeFormatUnit, number][] = [
+    ["second", 60],
+    ["minute", 60],
+    ["hour", 24],
+    ["day", 7],
+    ["week", 4.35],
+    ["month", 12],
+  ]
+  let value = seconds
+  for (const [unit, size] of steps) {
+    if (Math.abs(value) < size)
+      return unit === "second" ? format.format(0, "second") : format.format(Math.round(value), unit)
+    value /= size
+  }
+  return format.format(Math.round(value), "year")
+}
+
 export function dateOrTime(value: string, locale: Locale): string {
   return /^\d{4}-\d{2}-\d{2}$/.test(value) ? shortDate(value, locale) : dateTime(value, locale)
 }

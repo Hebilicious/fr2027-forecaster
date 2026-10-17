@@ -2,13 +2,17 @@
 import { computed } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast, Health, Poll } from "../api/schemas"
-import { count, dateOrTime, dateTime, longDate, safeUrl, shortDate } from "../format"
+import { count, dateTime, longDate, relativeTime, safeUrl, shortDate } from "../format"
 import { labelOf } from "../labels"
+import { useNow } from "../useNow"
 
 const props = defineProps<{ forecast: Forecast; polls: readonly Poll[]; health: Health | null }>()
 const content = useIntlayer("sources-view")
 const common = useIntlayer("common")
 const { locale } = useLocale()
+const now = useNow()
+// A source dated by publication (polls) has a day, not a time.
+const isDay = (value: string) => /^\d{4}-\d{2}-\d{2}$/.test(value)
 
 interface PollSummary {
   id: string
@@ -49,17 +53,6 @@ const quarantined = computed(() =>
 
 <template>
   <div class="sources">
-    <div v-if="health?.warnings.length" class="stack rise">
-      <p v-for="w in health.warnings" :key="w" class="notice" role="status">
-        <span aria-hidden="true" class="icon">!</span>
-        <span>{{ w }}</span>
-      </p>
-    </div>
-    <p v-else-if="health" class="healthy rise">
-      <span aria-hidden="true" class="tick">✓</span>
-      {{ content.healthy }}
-    </p>
-
     <div class="grid-2">
       <section aria-labelledby="run-title" class="card rise" :style="{ '--i': 1 }">
         <header class="card-head">
@@ -69,7 +62,7 @@ const quarantined = computed(() =>
           <dt>{{ content.file }}</dt>
           <dd class="mono" translate="no">data/forecasts/{{ health?.latest_forecast?.file ?? "—" }}</dd>
           <dt>{{ content.generatedAt }}</dt>
-          <dd>{{ dateTime(forecast.generated_at, locale) }}</dd>
+          <dd :title="dateTime(forecast.generated_at, locale)">{{ relativeTime(forecast.generated_at, now, locale) }}</dd>
           <dt>{{ content.lastFieldwork }}</dt>
           <dd>{{ forecast.aggregation.last_field_end ? longDate(forecast.aggregation.last_field_end, locale) : "—" }}</dd>
           <dt translate="no">inputs_hash</dt>
@@ -95,8 +88,9 @@ const quarantined = computed(() =>
                 <th scope="row">{{ labelOf(content.collectors, c.name) }}</th>
                 <td class="secondary">{{ content.cadences[c.cadence] }}</td>
                 <td>
-                  <span class="when" :class="{ muted: !c.updated }">{{ c.updated ? dateOrTime(c.updated, locale) : content.never }}</span>
-                  <span v-if="c.stale" class="badge stale"><span aria-hidden="true" class="dot" />{{ content.stale }}</span>
+                  <span v-if="!c.updated" class="when muted">{{ content.never }}</span>
+                  <span v-else-if="isDay(c.updated)" class="when">{{ shortDate(c.updated, locale) }}</span>
+                  <span v-else class="when" :title="dateTime(c.updated, locale)">{{ relativeTime(c.updated, now, locale) }}</span>
                 </td>
               </tr>
             </tbody>
@@ -161,31 +155,6 @@ const quarantined = computed(() =>
   gap: clamp(20px, 2.4vw, 28px);
 }
 
-.healthy {
-  justify-self: start;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 18px 10px 12px;
-  border-radius: 999px;
-  background: rgba(12, 163, 12, 0.08);
-  box-shadow: inset 0 0 0 1px rgba(12, 163, 12, 0.3);
-  color: var(--ink);
-  font-size: 0.9rem;
-}
-
-.tick {
-  display: grid;
-  place-items: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #0ca30c;
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-
 .facts {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -222,17 +191,6 @@ const quarantined = computed(() =>
 
 .when {
   white-space: nowrap;
-}
-
-.stale {
-  margin-left: 8px;
-}
-
-.stale .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--warning);
 }
 
 .sub {

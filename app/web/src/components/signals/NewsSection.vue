@@ -2,13 +2,15 @@
 import { computed, shallowRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { News } from "../../api/schemas"
-import { count, dateTime, safeUrl } from "../../format"
+import { count, dateTime, relativeTime, safeUrl } from "../../format"
+import { useNow } from "../../useNow"
 import { latestHeadlines, nameOf, newsCounts } from "../../signals"
 import CandidateAvatar from "../CandidateAvatar.vue"
 
 const props = defineProps<{ news: News; names: ReadonlyMap<string, string> }>()
 const content = useIntlayer("news-section")
 const { locale } = useLocale()
+const now = useNow()
 
 const counts = computed(() => newsCounts(props.news.daily, props.names))
 const maxCount = computed(() => Math.max(1, ...counts.value.map((c) => c.items)))
@@ -69,7 +71,7 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
       </div>
     </div>
     <p v-if="news.fetched_at" class="muted small foot">
-      {{ content.feedStatus({ n: news.feeds.length, m: failing, when: dateTime(news.fetched_at, locale) }) }}
+      {{ content.feedStatus({ n: news.feeds.length, m: failing, when: relativeTime(news.fetched_at, now, locale) }) }}
     </p>
   </section>
 </template>

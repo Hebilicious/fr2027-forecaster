@@ -39,24 +39,24 @@ export default {
     }),
     help: insert(
       t({
-        fr: "0 % : le modèle seul ; 100 % : les marchés seuls. Le site publie {{default}}. Les chances de victoire et de qualification ci-dessous suivent le curseur.",
+        fr: "Le modèle compte déjà les sondages, les pics de presse et d'attention, et l'élan de l'attention et du soutien sur X. Ce curseur y mêle les marchés de prédiction : 0 % le modèle seul, 100 % les marchés seuls. Le site publie {{default}} ; les chances ci-dessous suivent le curseur.",
         "en-GB":
-          "0%: the model alone; 100%: the markets alone. The site publishes {{default}}. The chances of winning and of reaching round 2 below follow the slider.",
-        de: "0 %: nur das Modell; 100 %: nur die Märkte. Die Seite veröffentlicht {{default}}. Die Sieg- und Stichwahlchancen unten folgen dem Regler.",
-        it: "0 %: solo il modello; 100 %: solo i mercati. Il sito pubblica {{default}}. Le probabilità di vittoria e di accesso al secondo turno qui sotto seguono il cursore.",
+          "The model already counts the polls, news and attention spikes, and momentum in attention and in X support. This slider mixes in the prediction markets: 0% the model alone, 100% the markets alone. The site publishes {{default}}; the chances below follow the slider.",
+        de: "Das Modell berücksichtigt bereits die Umfragen, Spitzen in Presse und Aufmerksamkeit sowie die Dynamik der Aufmerksamkeit und der Unterstützung auf X. Dieser Regler mischt die Prognosemärkte hinzu: 0 % nur das Modell, 100 % nur die Märkte. Die Seite veröffentlicht {{default}}; die Chancen unten folgen dem Regler.",
+        it: "Il modello tiene già conto dei sondaggi, dei picchi di stampa e di attenzione e dello slancio dell'attenzione e del sostegno su X. Questo cursore vi mescola i mercati di previsione: 0 % solo il modello, 100 % solo i mercati. Il sito pubblica {{default}}; le probabilità qui sotto seguono il cursore.",
         "es-ES":
-          "0 %: solo el modelo; 100 %: solo los mercados. El sitio publica {{default}}. Las probabilidades de ganar y de pasar a la segunda vuelta que aparecen abajo siguen el control deslizante.",
+          "El modelo ya tiene en cuenta las encuestas, los picos de prensa y de atención y el impulso de la atención y del apoyo en X. Este control añade los mercados de predicción: 0 %, solo el modelo; 100 %, solo los mercados. El sitio publica {{default}}; las probabilidades de abajo siguen el control.",
         "pt-PT":
-          "0 %: apenas o modelo; 100 %: apenas os mercados. O site publica {{default}}. As probabilidades de vitória e de passagem à segunda volta abaixo seguem o cursor.",
-        nl: "0%: alleen het model; 100%: alleen de markten. De site publiceert {{default}}. De kansen op winst en op de tweede ronde hieronder volgen de schuifregelaar.",
-        pl: "0%: sam model; 100%: same rynki. Serwis publikuje {{default}}. Szanse na zwycięstwo i na awans do drugiej tury poniżej zmieniają się wraz z suwakiem.",
-        ru: "0 %: только модель; 100 %: только рынки. Сайт публикует {{default}}. Шансы на победу и на выход во второй тур ниже следуют за ползунком.",
-        uk: "0%: лише модель; 100%: лише ринки. Сайт публікує {{default}}. Шанси на перемогу та на вихід у другий тур нижче змінюються за повзунком.",
-        ja: "0%：モデルのみ、100%：市場のみ。サイトの公表値は{{default}}です。下の勝利確率と決選投票進出確率はスライダーに連動します。",
-        ko: "0%: 모델만, 100%: 시장만. 사이트의 공표 기준은 {{default}}입니다. 아래의 승리 확률과 결선 진출 확률은 슬라이더에 따라 바뀝니다.",
+          "O modelo já tem em conta as sondagens, os picos de imprensa e de atenção e o impulso da atenção e do apoio no X. Este cursor junta-lhe os mercados de previsão: 0 %, apenas o modelo; 100 %, apenas os mercados. O site publica {{default}}; as probabilidades abaixo seguem o cursor.",
+        nl: "Het model telt al de peilingen, de pieken in pers en aandacht, en de dynamiek in aandacht en in steun op X. Deze schuifregelaar mengt er de voorspellingsmarkten bij: 0% alleen het model, 100% alleen de markten. De site publiceert {{default}}; de kansen hieronder volgen de schuifregelaar.",
+        pl: "Model uwzględnia już sondaże, skoki doniesień i zainteresowania oraz impet zainteresowania i poparcia na X. Ten suwak dodaje do tego rynki predykcyjne: 0% to sam model, 100% same rynki. Serwis publikuje {{default}}; szanse poniżej zmieniają się wraz z suwakiem.",
+        ru: "Модель уже учитывает опросы, всплески публикаций и интереса, а также динамику интереса и поддержки в X. Этот ползунок подмешивает рынки прогнозов: 0 % — только модель, 100 % — только рынки. Сайт публикует {{default}}; шансы ниже следуют за ползунком.",
+        uk: "Модель уже враховує опитування, сплески публікацій та інтересу, а також динаміку інтересу й підтримки в X. Цей повзунок додає ринки прогнозів: 0% — лише модель, 100% — лише ринки. Сайт публікує {{default}}; шанси нижче змінюються за повзунком.",
+        ja: "モデルはすでに世論調査、報道と関心の急増、関心とXでの支持の勢いを反映しています。このスライダーは予測市場を混ぜます。0%はモデルのみ、100%は市場のみです。サイトの公表値は{{default}}で、下の確率はスライダーに連動します。",
+        ko: "모델에는 이미 여론조사, 보도·관심 급증, 관심과 X 지지의 추세가 반영되어 있습니다. 이 슬라이더는 여기에 예측시장을 섞습니다. 0%는 모델만, 100%는 시장만입니다. 사이트의 공표 기준은 {{default}}이며, 아래 확률은 슬라이더에 따라 바뀝니다.",
         "zh-Hans":
-          "0%：仅采用模型；100%：仅采用市场。本站公布值采用 {{default}}。下方的胜选概率和进入第二轮的概率随滑块变化。",
-        th: "0%: ใช้แบบจำลองล้วน 100%: ใช้ตลาดล้วน เว็บไซต์เผยแพร่ที่ {{default}} โอกาสชนะและโอกาสเข้ารอบสองด้านล่างจะเปลี่ยนตามแถบเลื่อน",
+          "模型已纳入民调、新闻与关注度激增，以及关注度和 X 上支持度的势头。此滑块再混入预测市场：0% 为仅用模型，100% 为仅用市场。本站公布值采用 {{default}}，下方概率随滑块变化。",
+        th: "แบบจำลองนับรวมโพล การพุ่งขึ้นของข่าวและความสนใจ และแรงส่งของความสนใจและแรงสนับสนุนบน X อยู่แล้ว แถบเลื่อนนี้ผสมตลาดคาดการณ์เข้าไป: 0% ใช้แบบจำลองล้วน 100% ใช้ตลาดล้วน เว็บไซต์เผยแพร่ที่ {{default}} และโอกาสด้านล่างจะเปลี่ยนตามแถบเลื่อน",
       }),
     ),
     reset: insert(
