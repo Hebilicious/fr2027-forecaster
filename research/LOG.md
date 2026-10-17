@@ -4,6 +4,12 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-17
 
+### Field: the RN slot always fields a candidate
+
+The `rn` slot gave Le Pen 0.91 and Bardella 0.07, copied from Polymarket's ballot markets, which left 0.02 of simulated elections without any RN candidate. Nobody chose that: the RN fields a candidate in every election, Bardella if Le Pen cannot. Those 2% were worth two-thirds of Zemmour's chance of winning, because he took the whole far-right vote in them (1.01 of his 1.54 points). The missing 0.02 now goes to Le Pen (0.93, Bardella 0.07).
+
+Effect (model 0.3.0, polls to 17 October): Le Pen wins 80.2% → 82.1% and qualifies 88.2% → 90.2%; Zemmour wins 1.54% → 0.52% and qualifies 3.7% → 2.1%; Mélenchon wins 1.18% → 0.82%. Other slots still leave room for no candidate, as judgement calls: the centre slot reads 0.028 for "neither Philippe nor Attal" from its Polymarket market, and Mélenchon (0.95) and the PS primary (0.95) leave 0.05 each to a candidate the config does not list.
+
 ### Model 0.3.0: an error that grows with the horizon
 
 Six months out, the backtest's 80% intervals held the result far less often than 80% (59% at 182 days with 2017 and 2022), because the round 1 error was the same at any distance from the vote. SPEC.md (model step 4) asks for an error that shrinks as election day approaches; this adds it and fits it on the five elections now replayed.
