@@ -66,6 +66,27 @@ const Round2Settings = Schema.Struct({
 const Parameters = Schema.Struct({ round1_error: ErrorSettings, round2: Round2Settings })
 export type Parameters = typeof Parameters.Type
 
+const SignalSource = Schema.Literals(["attention", "news"])
+
+const Spike = Schema.Struct({
+  candidate_id: Schema.String,
+  date: Schema.String,
+  score: Schema.Finite,
+  ratios: Schema.Struct({
+    attention: Schema.optionalKey(Schema.Finite),
+    news: Schema.optionalKey(Schema.Finite),
+  }),
+})
+
+/** Event detection and momentum (model/src/signals.rs). Forecasts written before it lack it. */
+const ForecastSignals = Schema.Struct({
+  sources: Schema.Array(SignalSource),
+  shock_sd: Schema.Finite,
+  half_life_days: Schema.Finite,
+  momentum_weight: Schema.Finite,
+  spikes: Schema.Array(Spike),
+})
+
 export const Forecast = Schema.Struct({
   schema_version: Schema.Literal("1.0"),
   model_version: Schema.String,
@@ -90,9 +111,12 @@ export const Forecast = Schema.Struct({
     house_effects: Schema.Array(HouseEffect),
   }),
   parameters: Schema.optional(Parameters),
+  signals: Schema.optionalKey(ForecastSignals),
   changes: Schema.Struct({
     previous: Schema.NullOr(Schema.String),
     new_polls: Schema.Array(Schema.String),
+    /** Forecasts written before event detection lack it. */
+    new_spikes: Schema.optionalKey(Schema.Array(Schema.Struct({ candidate_id: Schema.String, date: Schema.String }))),
     p_win_delta: Schema.Array(Schema.Struct({ candidate_id: Schema.String, delta: Schema.Finite })),
   }),
   warnings: Schema.Array(Schema.String),
@@ -292,6 +316,32 @@ const News = Schema.Struct({
   headlines: Schema.Array(Headline),
 })
 
+const ForwardFlag = Schema.Struct({
+  detected_at: Schema.String,
+  kind: Schema.Literals(["spike", "x_shift"]),
+  candidate_id: Schema.String,
+  date: Schema.String,
+  /** Spike: mean log ratio to the baseline. X shift: change in the support share. */
+  score: Schema.Finite,
+  detail: Schema.String,
+  /** The candidate's latent share move over the next `horizon_days`; null while pending. */
+  change: Schema.NullOr(Schema.Finite),
+})
+
+/** The forward log of signal flags, scored against the latent share history. */
+const Forward = Schema.Struct({
+  horizon_days: Schema.Finite,
+  flags: Schema.Array(ForwardFlag),
+  summary: Schema.Struct({
+    logged: Schema.Finite,
+    spikes_scored: Schema.Finite,
+    spike_mean_move: Schema.NullOr(Schema.Finite),
+    typical_mean_move: Schema.NullOr(Schema.Finite),
+    x_shifts_scored: Schema.Finite,
+    x_shifts_agreeing: Schema.Finite,
+  }),
+})
+
 export const Signals = Schema.Struct({
   generated_at: Schema.String,
   markets: Markets,
@@ -299,8 +349,12 @@ export const Signals = Schema.Struct({
   news: News,
   x: Schema.Struct({ rows: Schema.Array(XRow) }),
   events: Schema.Array(CampaignEvent),
+  forward: Forward,
 })
 export type Signals = typeof Signals.Type
+export type Forward = typeof Forward.Type
+export type ForwardFlag = typeof ForwardFlag.Type
+export type ForecastSignals = typeof ForecastSignals.Type
 export type Venue = typeof Venue.Type
 export type Question = typeof Question.Type
 export type Markets = typeof Markets.Type

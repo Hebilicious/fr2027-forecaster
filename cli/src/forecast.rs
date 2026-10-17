@@ -129,6 +129,7 @@ struct SignalsOut {
     sources: Vec<SignalSource>,
     shock_sd: f64,
     half_life_days: f64,
+    momentum_weight: f64,
     spikes: Vec<SpikeOut>,
 }
 
@@ -156,7 +157,15 @@ struct HouseOut {
 struct Changes {
     previous: Option<String>,
     new_polls: Vec<String>,
+    /// Spikes this run detected that the previous forecast had not.
+    new_spikes: Vec<NewSpike>,
     p_win_delta: Vec<Delta>,
+}
+
+#[derive(Serialize)]
+struct NewSpike {
+    candidate_id: String,
+    date: Date,
 }
 
 #[derive(Serialize)]
@@ -361,6 +370,28 @@ fn slot_of(config: &CandidatesConfig, candidate: &str) -> String {
         .unwrap_or_default()
 }
 
+/// The forecast's spikes of the last [`SPIKE_DAYS`] days and the settings they were found with.
+fn signals_out(params: &ModelParams, forecast: &Forecast, id: &dyn Fn(usize) -> String) -> SignalsOut {
+    SignalsOut {
+        sources: params.signals.sources.clone(),
+        shock_sd: forecast.round1.noise.shock_sd,
+        half_life_days: params.signals.half_life_days,
+        momentum_weight: params.signals.momentum_weight,
+        spikes: forecast
+            .round1
+            .spikes
+            .iter()
+            .filter(|s| fr2027_model::day_number(forecast.as_of) - fr2027_model::day_number(s.date) <= SPIKE_DAYS)
+            .map(|s| SpikeOut {
+                candidate_id: id(s.candidate),
+                date: s.date,
+                score: round4(s.score),
+                ratios: s.ratios.iter().map(|(source, r)| (*source, round4(*r))).collect(),
+            })
+            .collect(),
+    }
+}
+
 #[allow(clippy::too_many_arguments)]
 fn build(
     config: &CandidatesConfig,
@@ -435,9 +466,27 @@ fn build(
         .map(|p| p.field_end)
         .max();
 
-    let (previous_name, new_polls, p_win_delta) = match previous {
-        None => (None, poll_ids.clone(), Vec::new()),
+    let spikes = signals_out(params, forecast, &id);
+    let (previous_name, new_polls, new_spikes, p_win_delta) = match previous {
+        None => (None, poll_ids.clone(), Vec::new(), Vec::new()),
         Some((name, value)) => {
+            // A previous forecast written before event detection has no spikes to compare with.
+            let new_spikes = match value["signals"]["spikes"].as_array() {
+                None => Vec::new(),
+                Some(before) => spikes
+                    .spikes
+                    .iter()
+                    .filter(|s| {
+                        !before.iter().any(|b| {
+                            b["candidate_id"] == s.candidate_id.as_str() && b["date"] == s.date.to_string().as_str()
+                        })
+                    })
+                    .map(|s| NewSpike {
+                        candidate_id: s.candidate_id.clone(),
+                        date: s.date,
+                    })
+                    .collect(),
+            };
             let before: BTreeSet<String> = value["aggregation"]["poll_ids"]
                 .as_array()
                 .map(|ids| ids.iter().filter_map(|i| i.as_str().map(String::from)).collect())
@@ -459,7 +508,7 @@ fn build(
                 .filter(|d| d.delta != 0.0)
                 .collect();
             deltas.sort_by(|a, b| b.delta.abs().total_cmp(&a.delta.abs()));
-            (Some(name), new_polls, deltas)
+            (Some(name), new_polls, new_spikes, deltas)
         }
     };
 
@@ -493,26 +542,11 @@ fn build(
             poll_ids,
             house_effects,
         },
-        signals: SignalsOut {
-            sources: params.signals.sources.clone(),
-            shock_sd: forecast.round1.noise.shock_sd,
-            half_life_days: params.signals.half_life_days,
-            spikes: forecast
-                .round1
-                .spikes
-                .iter()
-                .filter(|s| fr2027_model::day_number(forecast.as_of) - fr2027_model::day_number(s.date) <= SPIKE_DAYS)
-                .map(|s| SpikeOut {
-                    candidate_id: id(s.candidate),
-                    date: s.date,
-                    score: round4(s.score),
-                    ratios: s.ratios.iter().map(|(source, r)| (*source, round4(*r))).collect(),
-                })
-                .collect(),
-        },
+        signals: spikes,
         changes: Changes {
             previous: previous_name,
             new_polls,
+            new_spikes,
             p_win_delta,
         },
         warnings: forecast.warnings.clone(),

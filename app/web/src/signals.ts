@@ -60,6 +60,7 @@ export function filterSignals(signals: Signals, hidden: ReadonlySet<string>): Si
       headlines: signals.news.headlines.filter((h) => anyShown(h.candidate_ids)),
     },
     events: signals.events.filter((e) => anyShown(e.candidate_ids)),
+    forward: { ...signals.forward, flags: signals.forward.flags.filter(shown) },
   }
 }
 

@@ -19,10 +19,11 @@ pub enum SchemaKind {
     Event,
     PollCheck,
     FieldChange,
+    ForwardFlags,
 }
 
 impl SchemaKind {
-    pub const ALL: [SchemaKind; 13] = [
+    pub const ALL: [SchemaKind; 14] = [
         SchemaKind::Candidates,
         SchemaKind::Poll,
         SchemaKind::GrokDrop,
@@ -36,6 +37,7 @@ impl SchemaKind {
         SchemaKind::Event,
         SchemaKind::PollCheck,
         SchemaKind::FieldChange,
+        SchemaKind::ForwardFlags,
     ];
 
     pub fn file_name(self) -> &'static str {
@@ -53,6 +55,7 @@ impl SchemaKind {
             SchemaKind::Event => "event.schema.json",
             SchemaKind::PollCheck => "poll_check.schema.json",
             SchemaKind::FieldChange => "field_change.schema.json",
+            SchemaKind::ForwardFlags => "forward_flags.schema.json",
         }
     }
 }

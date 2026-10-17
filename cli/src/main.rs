@@ -8,6 +8,7 @@ mod collect;
 mod data;
 mod export;
 mod forecast;
+mod forward;
 mod inbox;
 mod serve;
 
@@ -39,6 +40,8 @@ enum Command {
     Ingest,
     /// Fit the model to data/clean/ and write data/forecasts/<YYYY-MM-DDTHH>.json.
     Forecast(forecast::Args),
+    /// Log the news, attention and X flags seen for the first time into data/forward/<hour>.json.
+    Forward(forward::Args),
     /// Read one live source and write a new file under data/raw/.
     #[command(subcommand)]
     Collect(collect::Source),
@@ -77,6 +80,7 @@ fn run(cli: Cli) -> Result<ExitCode> {
         Command::Validate => validate(&repo),
         Command::Ingest => ingest(&repo).map(|()| ExitCode::SUCCESS),
         Command::Forecast(args) => forecast::run(&repo, &args).map(|()| ExitCode::SUCCESS),
+        Command::Forward(args) => forward::run(&repo, &args).map(|()| ExitCode::SUCCESS),
         Command::Collect(source) => collect::run(&repo, &source).map(|()| ExitCode::SUCCESS),
         Command::Inbox(command) => inbox::run(&repo, &command).map(|()| ExitCode::SUCCESS),
         Command::Backtest(args) => backtest::run(&repo, &args).map(|()| ExitCode::SUCCESS),
@@ -104,6 +108,14 @@ fn validate(repo: &Repo) -> Result<ExitCode> {
     }
     let mut failed = false;
     for rejection in ingested.rejections() {
+        failed = true;
+        eprintln!("rejected {}:", repo.relative(&rejection.path));
+        for error in &rejection.errors {
+            eprintln!("  - {error}");
+        }
+    }
+    let (_, forward_rejections) = fr2027_collectors::forward::read(repo, &inputs.schemas)?;
+    for rejection in &forward_rejections {
         failed = true;
         eprintln!("rejected {}:", repo.relative(&rejection.path));
         for error in &rejection.errors {

@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import { computed, toRef } from "vue"
 import { useIntlayer } from "vue-intlayer"
-import type { Forecast, Signals } from "../api/schemas"
+import type { Blend, Forecast, Signals } from "../api/schemas"
 import FieldFilter from "../components/FieldFilter.vue"
 import AttentionSection from "../components/signals/AttentionSection.vue"
 import EventsSection from "../components/signals/EventsSection.vue"
 import MarketsSection from "../components/signals/MarketsSection.vue"
+import ModelUseSection from "../components/signals/ModelUseSection.vue"
 import NewsSection from "../components/signals/NewsSection.vue"
 import XSection from "../components/signals/XSection.vue"
 import { candidateNames, filterSignals } from "../signals"
 import { useFieldFilter } from "../useFieldFilter"
 
-const props = defineProps<{ forecast: Forecast; signals: Signals | null }>()
+const props = defineProps<{ forecast: Forecast; signals: Signals | null; blend: Blend | null }>()
 const content = useIntlayer("signals-view")
 
 const names = computed(() => candidateNames(props.forecast))
@@ -42,6 +43,14 @@ const visibleForecast = computed(() => ({ ...props.forecast, candidates: field.v
       </div>
       <NewsSection class="rise" :style="{ '--i': 3 }" :news="shown.news" :names="names" />
       <EventsSection class="rise" :style="{ '--i': 4 }" :events="shown.events" :names="names" />
+      <ModelUseSection
+        class="rise"
+        :style="{ '--i': 5 }"
+        :forecast="forecast"
+        :blend="blend"
+        :forward="shown.forward"
+        :names="names"
+      />
     </template>
   </div>
 </template>
