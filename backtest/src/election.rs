@@ -21,6 +21,8 @@ pub struct Election {
     pub field: Field,
     pub polls: Vec<Poll>,
     pub signals: ElectionSignals,
+    /// Prediction-market prices (`<dir>/markets.csv`), when the election has any.
+    pub markets: Vec<crate::blend::MarketRow>,
     /// Who was on the round 1 ballot, by candidate index.
     pub ran: Vec<bool>,
     /// Round 1 result as fractions of expressed votes, by candidate index (0 for non-runners).
@@ -80,6 +82,7 @@ pub fn load(repo: &Repo, schemas: &Schemas, entry: &ElectionEntry, results_file:
     }
 
     let signals = crate::signals::load(&dir, &|id| known.contains(id))?;
+    let markets = crate::blend::load(&dir, &|id| known.contains(id))?;
 
     let results_path = repo.root().join(results_file);
     let bytes = std::fs::read(&results_path).map_err(|e| Error::invalid(&results_path, e.to_string()))?;
@@ -151,6 +154,7 @@ pub fn load(repo: &Repo, schemas: &Schemas, entry: &ElectionEntry, results_file:
         field,
         polls,
         signals,
+        markets,
         ran,
         round1_result,
         finalists: (i.min(j), i.max(j)),

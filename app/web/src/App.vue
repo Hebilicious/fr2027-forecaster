@@ -32,7 +32,7 @@ const views: readonly ViewEntry[] = [
 
 const content = useIntlayer("app")
 const { locale } = useLocale()
-const { forecast, series, polls, health, signals, history, trackRecord, loading, error, missing } = useLiveData()
+const { forecast, series, polls, health, signals, blend, history, trackRecord, loading, error, missing } = useLiveData()
 
 function viewFromHash(): View {
   const id = location.hash.replace(/^#\/?/, "")
@@ -167,7 +167,13 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
         <span>{{ missing ? content.noForecast : error }}</span>
       </div>
       <template v-else-if="forecast">
-        <OverviewView v-if="view === 'overview'" :forecast="forecast" :history="history" :track-record="trackRecord" />
+        <OverviewView
+          v-if="view === 'overview'"
+          :forecast="forecast"
+          :blend="blend"
+          :history="history"
+          :track-record="trackRecord"
+        />
         <CandidatesView v-else-if="view === 'candidates'" :forecast="forecast" />
         <Round1View v-else-if="view === 'round1'" :forecast="forecast" :series="series" :polls="polls" />
         <Round2View v-else-if="view === 'round2'" :forecast="forecast" />

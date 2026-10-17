@@ -84,3 +84,7 @@ signals_ablation:
     - { name: "both, half-life 5 days", sources: [attention, news], half_life_days: 5 }
     - { name: "both, half-life 20 days", sources: [attention, news], half_life_days: 20 }
     - { name: "both, higher floors", sources: [attention, news], attention_floor: 1000, news_floor: 20 }
+
+# Weights on the model the market blend's fit tries (model/src/blend.rs), on the elections whose
+# directory holds markets.csv. 1 is the model alone, 0 the markets alone.
+market_blend_weights: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]

@@ -4,6 +4,7 @@
 //! the forecast. Nothing here reads files, the clock or the network, so a run is a function of
 //! its inputs and its seed.
 //!
+//! - [`blend`]: the model pooled with the prediction markets.
 //! - [`field`]: who runs (slots of mutually exclusive outcomes).
 //! - [`round1`]: the poll aggregation, a linear-Gaussian state-space model of bloc strengths and
 //!   within-bloc candidate support on the log-ratio scale, with pollster house effects.
@@ -11,6 +12,7 @@
 //! - [`signals`]: news and attention spikes, which widen a candidate's uncertainty.
 //! - [`simulate`]: the two-round Monte Carlo that turns both into probabilities.
 
+pub mod blend;
 pub mod field;
 pub mod kalman;
 pub mod rng;
@@ -91,6 +93,8 @@ pub struct ModelParams {
     pub round2: Round2Params,
     /// Event detection from news and attention spikes.
     pub signals: SignalParams,
+    /// The weight of the model against the prediction markets.
+    pub market_blend: blend::BlendParams,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]

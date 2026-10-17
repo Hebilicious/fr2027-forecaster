@@ -36,6 +36,9 @@ pub struct BacktestConfig {
     /// The signal layers to score against the polls-only model; none skips the ablation.
     #[serde(default)]
     pub signals_ablation: Option<AblationConfig>,
+    /// Weights on the model tried by the market blend's fit, where market history exists.
+    #[serde(default)]
+    pub market_blend_weights: Vec<f64>,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
