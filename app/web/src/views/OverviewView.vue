@@ -5,7 +5,7 @@ import type { Forecast } from "../api/schemas"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import FieldFilter from "../components/FieldFilter.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
-import { count, list, points, probability, shareWithInterval } from "../format"
+import { count, daysUntil, list, points, probability, shareWithInterval } from "../format"
 import { useFieldFilter } from "../useFieldFilter"
 
 const props = defineProps<{ forecast: Forecast }>()
@@ -21,6 +21,8 @@ const movers = computed(() =>
     .filter((d) => Math.abs(d.delta) >= 0.005 && !field.value.setAside.has(d.candidate_id))
     .slice(0, 6),
 )
+const daysLeft = computed(() => daysUntil(props.forecast.election.round1, new Date()))
+const horizon = computed(() => content.horizon({ days: count(daysLeft.value, locale.value) }))
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const at = (share: number) => (share / maxShare.value) * 100
 </script>
@@ -38,6 +40,10 @@ const at = (share: number) => (share / maxShare.value) * 100
       <p class="notice note" role="note">
         <span aria-hidden="true" class="icon" translate="no">i</span>
         <span>{{ content.uncertainty }}</span>
+      </p>
+      <p v-if="daysLeft > 0" class="notice note" role="note">
+        <span aria-hidden="true" class="icon" translate="no">i</span>
+        <span>{{ horizon.value }}</span>
       </p>
     </section>
 
@@ -185,6 +191,10 @@ const at = (share: number) => (share / maxShare.value) * 100
 
 .filter {
   margin-bottom: 18px;
+}
+
+.note + .note {
+  margin-top: 10px;
 }
 
 .field th[scope="row"] {

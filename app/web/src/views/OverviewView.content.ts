@@ -75,6 +75,26 @@ export default {
       "zh-Hans": "这些是概率，而非预言：胜率 70% 的热门人选，仍有约十分之三的机会落败。区间涵盖 80% 的模拟结果。",
       th: "ตัวเลขเหล่านี้คือความน่าจะเป็น ไม่ใช่คำทำนาย ตัวเต็งที่มีโอกาสชนะ 70% ยังแพ้ได้ราว 3 ใน 10 ครั้ง ช่วงที่แสดงครอบคลุม 80% ของผลลัพธ์จากการจำลอง",
     }),
+    horizon: insert(
+      t({
+        fr: "Le premier tour a lieu dans {{days}} jours ; plus il est loin, plus les marges d'erreur du modèle sont larges.",
+        "en-GB": "Round 1 is {{days}} days away; the further off it is, the wider the model's margins of error.",
+        de: "Bis zum ersten Wahlgang sind es noch {{days}} Tage; je weiter er entfernt ist, desto breiter die Fehlermargen des Modells.",
+        it: "Mancano {{days}} giorni al primo turno: più è lontano, più ampi sono i margini di errore del modello.",
+        "es-ES":
+          "Quedan {{days}} días para la primera vuelta: cuanto más lejos está, más amplios son los márgenes de error del modelo.",
+        "pt-PT":
+          "Faltam {{days}} dias para a primeira volta: quanto mais distante, mais largas são as margens de erro do modelo.",
+        nl: "De eerste ronde is over {{days}} dagen; hoe verder weg, hoe ruimer de foutmarges van het model.",
+        pl: "Dni do pierwszej tury: {{days}}. Im dalej do wyborów, tym szersze marginesy błędu modelu.",
+        ru: "Дней до первого тура: {{days}}. Чем дальше выборы, тем шире погрешность модели.",
+        uk: "Днів до першого туру: {{days}}. Що далі вибори, то ширша похибка моделі.",
+        ja: "第1回投票まであと{{days}}日です。投票日が先であるほど、モデルの誤差幅は広くなります。",
+        ko: "1차 투표까지 {{days}}일 남았습니다. 투표일이 멀수록 모델의 오차 범위는 넓어집니다.",
+        "zh-Hans": "距第一轮投票还有 {{days}} 天；投票日越远，模型的误差范围越宽。",
+        th: "อีก {{days}} วันจะถึงการเลือกตั้งรอบแรก ยิ่งวันเลือกตั้งอยู่ไกล ช่วงความคลาดเคลื่อนของแบบจำลองก็ยิ่งกว้าง",
+      }),
+    ),
     fieldEyebrow: t({
       fr: "Candidats",
       "en-GB": "Candidates",
