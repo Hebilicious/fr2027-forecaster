@@ -37,12 +37,12 @@ const visibleForecast = computed(() => ({ ...props.forecast, candidates: field.v
         :total="forecast.candidates.length"
       />
       <MarketsSection class="rise" :forecast="visibleForecast" :markets="shown.markets" />
+      <XSection class="rise" :style="{ '--i': 1 }" :rows="shown.x.rows" :names="names" />
+      <NewsSection class="rise" :style="{ '--i': 2 }" :news="shown.news" :names="names" />
       <div class="pair">
-        <AttentionSection class="rise" :style="{ '--i': 1 }" :attention="shown.attention" :names="names" />
-        <XSection class="rise" :style="{ '--i': 2 }" :rows="shown.x.rows" :names="names" />
+        <AttentionSection class="rise" :style="{ '--i': 3 }" :attention="shown.attention" :names="names" />
+        <EventsSection class="rise" :style="{ '--i': 4 }" :events="shown.events" :names="names" />
       </div>
-      <NewsSection class="rise" :style="{ '--i': 3 }" :news="shown.news" :names="names" />
-      <EventsSection class="rise" :style="{ '--i': 4 }" :events="shown.events" :names="names" />
       <ModelUseSection
         class="rise"
         :style="{ '--i': 5 }"

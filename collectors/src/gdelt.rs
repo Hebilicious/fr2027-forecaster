@@ -69,7 +69,8 @@ pub fn check(stem: Option<&str>, fetch: &Fetch, config: &CandidatesConfig) -> Ve
     let mut errors = Vec::new();
     if let Some(stem) = stem {
         let expected = fetch.fetched_at.get(..10).unwrap_or_default();
-        if stem != expected {
+        // `<date>-backfill` holds an earlier stretch fetched that day (`fr2027 collect ... --backfill`).
+        if stem != expected && stem != format!("{expected}-backfill") {
             errors.push(format!("file name `{stem}` must be the fetch date `{expected}`"));
         }
     }
