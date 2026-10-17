@@ -4,9 +4,10 @@ import { useIntlayer, useLocale } from "vue-intlayer"
 import Cocarde from "./components/Cocarde.vue"
 import LocaleSwitcher from "./components/LocaleSwitcher.vue"
 import Masthead from "./components/Masthead.vue"
-import { daysUntil, dateTime, longDate } from "./format"
+import { daysUntil, dateTime, longDate, relativeTime } from "./format"
 import { FRAMINGS, type View } from "./painting"
 import { useLiveData } from "./useLiveData"
+import { useNow } from "./useNow"
 import CandidatesView from "./views/CandidatesView.vue"
 import OverviewView from "./views/OverviewView.vue"
 import Round1View from "./views/Round1View.vue"
@@ -14,29 +15,43 @@ import Round2View from "./views/Round2View.vue"
 import SignalsView from "./views/SignalsView.vue"
 import SourcesView from "./views/SourcesView.vue"
 
-interface ViewEntry {
-  id: View
+interface NavEntry {
+  id: "overview" | "candidates" | "polls" | "signals" | "sources"
   /** The plate number, as in a salon catalogue. */
   numeral: string
-  /** Whether the masthead shows the view's own heading and lede; the overview has its own hero instead. */
-  plate: boolean
+  /** The views under this entry: the polls hold the first and the second round. */
+  views: readonly View[]
 }
-const views: readonly ViewEntry[] = [
-  { id: "overview", numeral: "I", plate: false },
-  { id: "candidates", numeral: "II", plate: true },
-  { id: "round1", numeral: "III", plate: true },
-  { id: "round2", numeral: "IV", plate: true },
-  { id: "signals", numeral: "V", plate: true },
-  { id: "sources", numeral: "VI", plate: true },
+const nav: readonly NavEntry[] = [
+  { id: "overview", numeral: "I", views: ["overview"] },
+  { id: "candidates", numeral: "II", views: ["candidates"] },
+  { id: "polls", numeral: "III", views: ["round1", "round2"] },
+  { id: "signals", numeral: "IV", views: ["signals"] },
+  { id: "sources", numeral: "V", views: ["sources"] },
 ]
+// Each view's address: the rounds live under the polls.
+const HASHES: Readonly<Record<View, string>> = {
+  overview: "overview",
+  candidates: "candidates",
+  round1: "polls/round-1",
+  round2: "polls/round-2",
+  signals: "signals",
+  sources: "sources",
+}
 
 const content = useIntlayer("app")
 const { locale } = useLocale()
+const now = useNow()
 const { forecast, series, polls, health, signals, blend, history, trackRecord, loading, error, missing } = useLiveData()
 
 function viewFromHash(): View {
-  const id = location.hash.replace(/^#\/?/, "")
-  return views.find((v) => v.id === id)?.id ?? "overview"
+  const hash = location.hash.replace(/^#\/?/, "")
+  const found = (Object.keys(HASHES) as View[]).find((v) => HASHES[v] === hash)
+  if (found) return found
+  // The polls' own address opens the first round; the rounds' former addresses still work.
+  if (hash === "polls" || hash === "round1") return "round1"
+  if (hash === "round2") return "round2"
+  return "overview"
 }
 const view = ref<View>(viewFromHash())
 const onHash = () => {
@@ -68,7 +83,7 @@ onBeforeUnmount(() => {
   titleObserver.disconnect()
 })
 
-const current = computed(() => views.find((v) => v.id === view.value) ?? views[0]!)
+const current = computed(() => nav.find((entry) => entry.views.includes(view.value)) ?? nav[0]!)
 const plate = computed(() => (view.value === "overview" ? null : content.plates[view.value]))
 // The views live in the hash, so the skip link moves focus itself rather than following "#main".
 const main = ref<HTMLElement | null>(null)
@@ -103,9 +118,14 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
         <span class="brand-name">{{ content.brand }}</span>
       </a>
       <nav :aria-label="content.navLabel.value" class="nav">
-        <a v-for="v in views" :key="v.id" :href="`#/${v.id}`" :aria-current="view === v.id ? 'page' : undefined">
-          <span aria-hidden="true" class="numeral">{{ v.numeral }}</span>
-          <span>{{ content.nav[v.id] }}</span>
+        <a
+          v-for="entry in nav"
+          :key="entry.id"
+          :href="`#/${HASHES[entry.views[0]!]}`"
+          :aria-current="current.id === entry.id ? 'page' : undefined"
+        >
+          <span aria-hidden="true" class="numeral">{{ entry.numeral }}</span>
+          <span>{{ content.nav[entry.id] }}</span>
         </a>
       </nav>
       <LocaleSwitcher />
@@ -143,14 +163,14 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
           <p class="eyebrow">
             <span class="numeral">{{ current.numeral }}</span>
             <span class="tricolore-rule" />
-            {{ content.nav[view] }}
+            {{ content.nav[current.id] }}
           </p>
           <h1>{{ plate.title }}</h1>
           <p class="lede">{{ plate.lede }}</p>
         </template>
         <!-- Only the overview says how fresh the forecast is; Sources and health has the details. -->
-        <p v-if="forecast && !plate" class="updated">
-          {{ content.updated({ when: dateTime(forecast.generated_at, locale) }) }} ·
+        <p v-if="forecast && !plate" class="updated" :title="dateTime(forecast.generated_at, locale)">
+          {{ content.updated({ when: relativeTime(forecast.generated_at, now, locale) }) }} ·
           {{ content.asOf({ date: longDate(forecast.as_of, locale) }) }}
         </p>
         <p v-if="error && forecast" class="notice" role="status">
@@ -175,8 +195,20 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
           :track-record="trackRecord"
         />
         <CandidatesView v-else-if="view === 'candidates'" :forecast="forecast" />
-        <Round1View v-else-if="view === 'round1'" :forecast="forecast" :series="series" :polls="polls" />
-        <Round2View v-else-if="view === 'round2'" :forecast="forecast" />
+        <template v-else-if="current.id === 'polls'">
+          <nav :aria-label="content.pollRounds.value" class="rounds-tabs">
+            <a
+              v-for="round in current.views"
+              :key="round"
+              :href="`#/${HASHES[round]}`"
+              :aria-current="view === round ? 'page' : undefined"
+            >
+              {{ content.nav[round] }}
+            </a>
+          </nav>
+          <Round1View v-if="view === 'round1'" :forecast="forecast" :series="series" :polls="polls" />
+          <Round2View v-else :forecast="forecast" />
+        </template>
         <SignalsView v-else-if="view === 'signals'" :forecast="forecast" :signals="signals" :blend="blend" />
         <SourcesView v-else :forecast="forecast" :polls="polls" :health="health" />
       </template>
@@ -201,6 +233,40 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
 </template>
 
 <style scoped>
+/* The polls' two rounds, as a pill switch above the round's view. */
+.rounds-tabs {
+  display: inline-flex;
+  justify-self: start;
+  width: max-content;
+  margin-bottom: clamp(16px, 2vw, 22px);
+  padding: 4px;
+  gap: 2px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.rounds-tabs a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 999px;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.rounds-tabs a:hover {
+  color: var(--ink);
+}
+
+.rounds-tabs a[aria-current="page"] {
+  background: var(--ink);
+  color: var(--page);
+}
+
 .skip-link {
   position: absolute;
   left: 16px;

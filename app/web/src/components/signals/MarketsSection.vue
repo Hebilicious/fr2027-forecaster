@@ -2,7 +2,8 @@
 import { computed, shallowRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast, Markets, Question, Venue } from "../../api/schemas"
-import { dateTime, probability } from "../../format"
+import { dateTime, probability, relativeTime } from "../../format"
+import { useNow } from "../../useNow"
 import { marketRows, unmatchedRows, VENUES, type Point } from "../../signals"
 import CandidateAvatar from "../CandidateAvatar.vue"
 import Sparkline from "../Sparkline.vue"
@@ -11,6 +12,7 @@ const props = defineProps<{ forecast: Forecast; markets: Markets }>()
 const content = useIntlayer("markets-section")
 const common = useIntlayer("common")
 const { locale } = useLocale()
+const now = useNow()
 
 const questions: readonly Question[] = ["win", "qualify", "on_ballot"]
 const question = shallowRef<Question>("win")
@@ -102,7 +104,9 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
             }}</span>
         </p>
         <p class="secondary">{{ content.note }}</p>
-        <p class="muted">{{ content.fetchedAt({ when: dateTime(markets.fetched_at, locale) }) }}</p>
+        <p class="muted" :title="dateTime(markets.fetched_at, locale)">
+          {{ content.fetchedAt({ when: relativeTime(markets.fetched_at, now, locale) }) }}
+        </p>
       </footer>
     </template>
   </section>

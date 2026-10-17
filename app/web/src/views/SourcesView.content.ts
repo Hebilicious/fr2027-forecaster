@@ -3,22 +3,6 @@ import { t, type Dictionary } from "intlayer"
 export default {
   key: "sources-view",
   content: {
-    healthy: t({
-      fr: "Aucun avertissement.",
-      "en-GB": "No warnings.",
-      de: "Keine Warnungen.",
-      it: "Nessun avviso.",
-      "es-ES": "Sin advertencias.",
-      "pt-PT": "Sem avisos.",
-      nl: "Geen waarschuwingen.",
-      pl: "Brak ostrzeżeń.",
-      ru: "Предупреждений нет.",
-      uk: "Попереджень немає.",
-      ja: "警告はありません。",
-      ko: "경고가 없습니다.",
-      "zh-Hans": "无警告。",
-      th: "ไม่มีคำเตือน",
-    }),
     latestRun: t({
       fr: "Dernier calcul",
       "en-GB": "Latest run",
@@ -146,22 +130,6 @@ export default {
       ko: "없음",
       "zh-Hans": "从未",
       th: "ไม่เคย",
-    }),
-    stale: t({
-      fr: "en retard",
-      "en-GB": "stale",
-      de: "veraltet",
-      it: "in ritardo",
-      "es-ES": "desactualizado",
-      "pt-PT": "desatualizado",
-      nl: "achterstallig",
-      pl: "opóźnione",
-      ru: "с опозданием",
-      uk: "із запізненням",
-      ja: "遅延",
-      ko: "지연",
-      "zh-Hans": "已逾期",
-      th: "ล่าช้า",
     }),
     collectors: {
       polls: t({

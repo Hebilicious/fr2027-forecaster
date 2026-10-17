@@ -34,6 +34,9 @@ pub struct GdeltArgs {
     /// Last day (default: yesterday, UTC).
     #[arg(long)]
     end: Option<Date>,
+    /// Write <date>-backfill.json, beside the day's regular file, for an earlier stretch.
+    #[arg(long)]
+    backfill: bool,
 }
 
 #[derive(clap::Args)]
@@ -44,6 +47,9 @@ pub struct AttentionArgs {
     /// Last day (default: yesterday, UTC).
     #[arg(long)]
     end: Option<Date>,
+    /// Write <date>-backfill.json, beside the day's regular file, for an earlier stretch.
+    #[arg(long)]
+    backfill: bool,
 }
 
 pub fn run(repo: &Repo, source: &Source) -> Result<()> {
@@ -191,9 +197,10 @@ fn collect_attention(
 ) -> Result<()> {
     let fetched_at = timestamp(now);
     let today = now.to_zoned(TimeZone::UTC).date();
+    let suffix = if args.backfill { "-backfill" } else { "" };
     let path = repo
         .raw_attention_dir()
-        .join(format!("{}.json", today.strftime("%Y-%m-%d")));
+        .join(format!("{}{suffix}.json", today.strftime("%Y-%m-%d")));
     if path.exists() {
         println!("{} already exists; nothing to do today", repo.relative(&path));
         return Ok(());
@@ -245,9 +252,10 @@ fn collect_attention(
 fn collect_gdelt(repo: &Repo, inputs: &Inputs, client: &Client, now: Timestamp, args: &GdeltArgs) -> Result<()> {
     let fetched_at = timestamp(now);
     let today = now.to_zoned(TimeZone::UTC).date();
+    let suffix = if args.backfill { "-backfill" } else { "" };
     let path = repo
         .raw_gdelt_dir()
-        .join(format!("{}.json", today.strftime("%Y-%m-%d")));
+        .join(format!("{}{suffix}.json", today.strftime("%Y-%m-%d")));
     if path.exists() {
         println!("{} already exists; nothing to do today", repo.relative(&path));
         return Ok(());

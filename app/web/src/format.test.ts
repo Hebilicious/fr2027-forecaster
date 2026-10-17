@@ -7,6 +7,7 @@ import {
   points,
   probability,
   relativeChange,
+  relativeTime,
   safeUrl,
   shareWithInterval,
 } from "./format"
@@ -77,5 +78,16 @@ describe("safeUrl", () => {
     expect(safeUrl("javascript:alert(1)")).toBeUndefined()
     expect(safeUrl("not a url")).toBeUndefined()
     expect(safeUrl(null)).toBeUndefined()
+  })
+})
+
+describe("relativeTime", () => {
+  const now = Date.parse("2026-10-17T12:00:00Z")
+  it("counts back from the reader's clock", () => {
+    expect(relativeTime("2026-10-17T11:59:30Z", now, "en-GB")).toBe("now")
+    expect(relativeTime("2026-10-17T11:40:00Z", now, "en-GB")).toBe("20 minutes ago")
+    expect(relativeTime("2026-10-17T09:00:00Z", now, "en-GB")).toBe("3 hours ago")
+    expect(relativeTime("2026-10-16T09:00:00Z", now, "en-GB")).toBe("yesterday")
+    expect(relativeTime("2026-10-17T09:00:00Z", now, "fr")).toBe("il y a 3 heures")
   })
 })

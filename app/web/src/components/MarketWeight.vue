@@ -2,7 +2,8 @@
 import { computed } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Blend } from "../api/schemas"
-import { dateOrTime, percent } from "../format"
+import { percent, relativeTime } from "../format"
+import { useNow } from "../useNow"
 
 // The slider that sets how much the prediction markets weigh in the forecast the reader sees, from
 // 0 (the model alone) to 1 (the markets alone). `published` is the site's own weight.
@@ -10,6 +11,7 @@ const props = defineProps<{ blend: Blend; published: number }>()
 const weight = defineModel<number>({ required: true })
 const content = useIntlayer("market-weight")
 const { locale } = useLocale()
+const now = useNow()
 
 const percentValue = computed({
   get: () => Math.round(weight.value * 100),
@@ -41,7 +43,7 @@ const percentValue = computed({
     </p>
     <p v-if="!props.blend.market_used && props.blend.market_fetched_at" class="notice small" role="status">
       <span aria-hidden="true" class="icon">!</span>
-      <span>{{ content.stale({ when: dateOrTime(props.blend.market_fetched_at, locale) }) }}</span>
+      <span>{{ content.stale({ when: relativeTime(props.blend.market_fetched_at, now, locale) }) }}</span>
     </p>
   </div>
 </template>
