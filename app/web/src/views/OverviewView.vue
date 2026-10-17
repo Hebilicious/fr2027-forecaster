@@ -98,7 +98,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
       </p>
     </section>
 
-    <ModelExplorer :forecast="forecast" :history="history" :track-record="trackRecord" />
+    <ModelExplorer :blend="blend" :forecast="forecast" :history="history" :track-record="trackRecord" />
 
     <section aria-labelledby="field-title" class="card rise" :style="{ '--i': 2 }">
       <header class="card-head">
