@@ -35,6 +35,10 @@ and when.
 
 Install the git hooks once per clone with `moon run repo:hooks-install`.
 
+Run project tools through their moon tasks (`moon run web:dev`, `moon run cli:serve`, `moon run cli:backtest`, …); call
+`vite`, `cargo` or the `fr2027` binary directly only for something no task covers, such as a flag a task does not pass.
+`moon tasks` lists them.
+
 ## UI languages
 
 The web UI (`app/web`) is written in fourteen languages with [Intlayer](https://intlayer.org): French, the reference,
