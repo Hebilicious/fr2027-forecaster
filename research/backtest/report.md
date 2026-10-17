@@ -24,8 +24,8 @@ All replays (every election, every horizon):
 | | Qualify Brier | Qualify log-loss | Win Brier | Win log-loss | Share MAE (pts) | 80% coverage | Share log score | Round 2 log score | P(winner \| matchup) |
 |---|---|---|---|---|---|---|---|---|---|
 | Latest-poll average | 0.048 | 0.335 | 0.034 | 0.238 | 2.47 | – | – | – | 91.9% |
-| Model, current | 0.049 | 0.180 | 0.023 | 0.080 | 2.31 | 66.7% | -117.6 | -44.61 | 84.2% |
-| Model, fitted | 0.049 | 0.180 | 0.023 | 0.080 | 2.31 | 66.7% | -117.6 | -44.61 | 84.2% |
+| Model, current | 0.048 | 0.179 | 0.023 | 0.079 | 2.31 | 67.1% | -116.4 | -44.61 | 84.2% |
+| Model, fitted | 0.048 | 0.179 | 0.023 | 0.079 | 2.31 | 67.1% | -116.4 | -44.61 | 84.2% |
 
 By election:
 
@@ -39,13 +39,13 @@ By election:
 | 2002, current | 0.112 | 0.422 | 0.027 | 0.080 | 2.47 | 62.3% | -24.1 | -65.44 | 81.6% |
 | 2007, current | 0.003 | 0.018 | 0.025 | 0.083 | 1.62 | 77.5% | 35.5 | 18.76 | 66.5% |
 | 2012, current | 0.017 | 0.074 | 0.003 | 0.028 | 1.75 | 71.2% | 28.0 | -1.76 | 94.9% |
-| 2017, current | 0.062 | 0.191 | 0.057 | 0.182 | 2.18 | 67.6% | -19.8 | -10.40 | 85.2% |
-| 2022, current | 0.025 | 0.094 | 0.003 | 0.025 | 3.32 | 57.4% | -137.2 | 14.24 | 92.9% |
+| 2017, current | 0.061 | 0.188 | 0.056 | 0.178 | 2.18 | 67.6% | -19.1 | -10.34 | 85.3% |
+| 2022, current | 0.025 | 0.094 | 0.003 | 0.026 | 3.34 | 59.4% | -136.7 | 14.17 | 92.8% |
 | 2002, fitted | 0.112 | 0.422 | 0.027 | 0.080 | 2.47 | 62.3% | -24.1 | -65.44 | 81.6% |
 | 2007, fitted | 0.003 | 0.018 | 0.025 | 0.083 | 1.62 | 77.5% | 35.5 | 18.76 | 66.5% |
 | 2012, fitted | 0.017 | 0.074 | 0.003 | 0.028 | 1.75 | 71.2% | 28.0 | -1.76 | 94.9% |
-| 2017, fitted | 0.062 | 0.191 | 0.057 | 0.182 | 2.18 | 67.6% | -19.8 | -10.40 | 85.2% |
-| 2022, fitted | 0.025 | 0.094 | 0.003 | 0.025 | 3.32 | 57.4% | -137.2 | 14.24 | 92.9% |
+| 2017, fitted | 0.061 | 0.188 | 0.056 | 0.178 | 2.18 | 67.6% | -19.1 | -10.34 | 85.3% |
+| 2022, fitted | 0.025 | 0.094 | 0.003 | 0.026 | 3.34 | 59.4% | -136.7 | 14.17 | 92.8% |
 
 By horizon (days before round 1):
 
@@ -72,48 +72,48 @@ By horizon (days before round 1):
 | 21, baseline | 0.033 | 0.227 | 0.033 | 0.227 | 1.69 | – | – | – | 100.0% |
 | 14, baseline | 0.033 | 0.227 | 0.033 | 0.227 | 1.48 | – | – | – | 100.0% |
 | 7, baseline | 0.033 | 0.227 | 0.000 | 0.001 | 1.18 | – | – | – | 100.0% |
-| 334, current | 0.040 | 0.185 | 0.027 | 0.090 | 2.80 | 68.8% | -3.3 | -2.65 | 73.4% |
-| 304, current | 0.055 | 0.216 | 0.040 | 0.125 | 2.64 | 69.2% | 0.3 | -3.64 | 69.7% |
-| 273, current | 0.051 | 0.211 | 0.035 | 0.111 | 2.65 | 68.5% | -0.1 | -2.99 | 73.0% |
-| 243, current | 0.052 | 0.215 | 0.033 | 0.108 | 2.59 | 66.7% | -0.1 | -2.92 | 73.1% |
-| 212, current | 0.051 | 0.198 | 0.034 | 0.113 | 2.60 | 69.1% | -4.3 | -3.57 | 74.2% |
-| 182, current | 0.059 | 0.202 | 0.035 | 0.118 | 2.74 | 72.7% | -2.7 | -3.90 | 76.8% |
-| 152, current | 0.060 | 0.199 | 0.034 | 0.119 | 2.82 | 69.1% | -4.0 | -3.95 | 74.2% |
-| 122, current | 0.067 | 0.221 | 0.041 | 0.127 | 2.87 | 70.2% | -6.0 | -2.22 | 83.9% |
-| 91, current | 0.061 | 0.198 | 0.026 | 0.082 | 2.56 | 67.8% | -8.4 | -0.81 | 86.8% |
-| 84, current | 0.060 | 0.196 | 0.022 | 0.073 | 2.53 | 69.5% | -9.0 | -0.74 | 89.0% |
-| 77, current | 0.053 | 0.182 | 0.019 | 0.069 | 2.51 | 66.1% | -14.1 | -1.07 | 90.1% |
-| 70, current | 0.051 | 0.179 | 0.016 | 0.061 | 2.44 | 68.3% | -13.1 | -1.36 | 90.4% |
-| 63, current | 0.050 | 0.175 | 0.014 | 0.056 | 2.34 | 65.6% | -12.8 | -1.33 | 92.2% |
-| 56, current | 0.046 | 0.171 | 0.013 | 0.051 | 2.20 | 67.2% | -10.5 | -2.11 | 90.1% |
-| 49, current | 0.041 | 0.161 | 0.012 | 0.048 | 2.22 | 63.9% | -10.4 | -2.51 | 90.7% |
-| 42, current | 0.042 | 0.167 | 0.015 | 0.054 | 2.07 | 63.9% | -7.7 | -1.91 | 90.4% |
-| 35, current | 0.041 | 0.164 | 0.018 | 0.059 | 2.02 | 59.0% | -7.3 | -1.38 | 90.6% |
-| 28, current | 0.036 | 0.154 | 0.016 | 0.055 | 1.87 | 62.3% | -7.4 | -0.61 | 89.6% |
-| 21, current | 0.034 | 0.134 | 0.015 | 0.052 | 1.71 | 62.3% | -4.2 | -1.11 | 89.6% |
-| 14, current | 0.034 | 0.123 | 0.014 | 0.052 | 1.49 | 65.6% | 0.0 | -1.23 | 90.2% |
-| 7, current | 0.036 | 0.120 | 0.012 | 0.049 | 1.21 | 67.2% | 7.5 | -2.60 | 90.1% |
-| 334, fitted | 0.040 | 0.185 | 0.027 | 0.090 | 2.80 | 68.8% | -3.3 | -2.65 | 73.4% |
-| 304, fitted | 0.055 | 0.216 | 0.040 | 0.125 | 2.64 | 69.2% | 0.3 | -3.64 | 69.7% |
-| 273, fitted | 0.051 | 0.211 | 0.035 | 0.111 | 2.65 | 68.5% | -0.1 | -2.99 | 73.0% |
-| 243, fitted | 0.052 | 0.215 | 0.033 | 0.108 | 2.59 | 66.7% | -0.1 | -2.92 | 73.1% |
-| 212, fitted | 0.051 | 0.198 | 0.034 | 0.113 | 2.60 | 69.1% | -4.3 | -3.57 | 74.2% |
-| 182, fitted | 0.059 | 0.202 | 0.035 | 0.118 | 2.74 | 72.7% | -2.7 | -3.90 | 76.8% |
-| 152, fitted | 0.060 | 0.199 | 0.034 | 0.119 | 2.82 | 69.1% | -4.0 | -3.95 | 74.2% |
-| 122, fitted | 0.067 | 0.221 | 0.041 | 0.127 | 2.87 | 70.2% | -6.0 | -2.22 | 83.9% |
-| 91, fitted | 0.061 | 0.198 | 0.026 | 0.082 | 2.56 | 67.8% | -8.4 | -0.81 | 86.8% |
-| 84, fitted | 0.060 | 0.196 | 0.022 | 0.073 | 2.53 | 69.5% | -9.0 | -0.74 | 89.0% |
-| 77, fitted | 0.053 | 0.182 | 0.019 | 0.069 | 2.51 | 66.1% | -14.1 | -1.07 | 90.1% |
-| 70, fitted | 0.051 | 0.179 | 0.016 | 0.061 | 2.44 | 68.3% | -13.1 | -1.36 | 90.4% |
-| 63, fitted | 0.050 | 0.175 | 0.014 | 0.056 | 2.34 | 65.6% | -12.8 | -1.33 | 92.2% |
-| 56, fitted | 0.046 | 0.171 | 0.013 | 0.051 | 2.20 | 67.2% | -10.5 | -2.11 | 90.1% |
-| 49, fitted | 0.041 | 0.161 | 0.012 | 0.048 | 2.22 | 63.9% | -10.4 | -2.51 | 90.7% |
-| 42, fitted | 0.042 | 0.167 | 0.015 | 0.054 | 2.07 | 63.9% | -7.7 | -1.91 | 90.4% |
-| 35, fitted | 0.041 | 0.164 | 0.018 | 0.059 | 2.02 | 59.0% | -7.3 | -1.38 | 90.6% |
-| 28, fitted | 0.036 | 0.154 | 0.016 | 0.055 | 1.87 | 62.3% | -7.4 | -0.61 | 89.6% |
-| 21, fitted | 0.034 | 0.134 | 0.015 | 0.052 | 1.71 | 62.3% | -4.2 | -1.11 | 89.6% |
-| 14, fitted | 0.034 | 0.123 | 0.014 | 0.052 | 1.49 | 65.6% | 0.0 | -1.23 | 90.2% |
-| 7, fitted | 0.036 | 0.120 | 0.012 | 0.049 | 1.21 | 67.2% | 7.5 | -2.60 | 90.1% |
+| 334, current | 0.040 | 0.185 | 0.027 | 0.090 | 2.80 | 68.8% | -3.3 | -2.67 | 73.4% |
+| 304, current | 0.055 | 0.217 | 0.041 | 0.126 | 2.64 | 69.2% | 0.2 | -3.66 | 69.7% |
+| 273, current | 0.052 | 0.212 | 0.036 | 0.112 | 2.67 | 66.7% | -0.2 | -3.02 | 72.9% |
+| 243, current | 0.051 | 0.213 | 0.033 | 0.106 | 2.58 | 68.5% | 0.2 | -2.88 | 73.3% |
+| 212, current | 0.052 | 0.201 | 0.035 | 0.117 | 2.63 | 69.1% | -4.8 | -3.65 | 73.8% |
+| 182, current | 0.059 | 0.202 | 0.035 | 0.118 | 2.73 | 72.7% | -2.5 | -3.84 | 77.2% |
+| 152, current | 0.059 | 0.194 | 0.034 | 0.115 | 2.79 | 69.1% | -3.5 | -3.82 | 74.7% |
+| 122, current | 0.069 | 0.221 | 0.040 | 0.122 | 2.88 | 70.2% | -6.8 | -2.24 | 83.8% |
+| 91, current | 0.059 | 0.190 | 0.025 | 0.079 | 2.53 | 71.2% | -8.1 | -0.82 | 86.8% |
+| 84, current | 0.063 | 0.203 | 0.023 | 0.077 | 2.57 | 67.8% | -9.6 | -0.73 | 89.0% |
+| 77, current | 0.052 | 0.182 | 0.019 | 0.069 | 2.51 | 67.8% | -13.7 | -1.07 | 90.1% |
+| 70, current | 0.048 | 0.171 | 0.015 | 0.058 | 2.46 | 68.3% | -12.5 | -1.39 | 90.4% |
+| 63, current | 0.047 | 0.168 | 0.014 | 0.055 | 2.31 | 67.2% | -12.1 | -1.35 | 92.1% |
+| 56, current | 0.042 | 0.162 | 0.011 | 0.047 | 2.18 | 68.9% | -9.9 | -2.13 | 90.1% |
+| 49, current | 0.043 | 0.165 | 0.012 | 0.047 | 2.28 | 63.9% | -11.0 | -2.51 | 90.7% |
+| 42, current | 0.046 | 0.175 | 0.016 | 0.055 | 2.06 | 62.3% | -7.2 | -1.89 | 90.4% |
+| 35, current | 0.040 | 0.161 | 0.017 | 0.058 | 2.04 | 60.7% | -7.2 | -1.36 | 90.6% |
+| 28, current | 0.038 | 0.158 | 0.016 | 0.056 | 1.86 | 60.7% | -7.8 | -0.61 | 89.6% |
+| 21, current | 0.033 | 0.132 | 0.015 | 0.052 | 1.72 | 65.6% | -4.2 | -1.12 | 89.6% |
+| 14, current | 0.034 | 0.123 | 0.014 | 0.052 | 1.51 | 65.6% | 0.1 | -1.24 | 90.2% |
+| 7, current | 0.037 | 0.123 | 0.012 | 0.050 | 1.21 | 67.2% | 7.5 | -2.60 | 90.0% |
+| 334, fitted | 0.040 | 0.185 | 0.027 | 0.090 | 2.80 | 68.8% | -3.3 | -2.67 | 73.4% |
+| 304, fitted | 0.055 | 0.217 | 0.041 | 0.126 | 2.64 | 69.2% | 0.2 | -3.66 | 69.7% |
+| 273, fitted | 0.052 | 0.212 | 0.036 | 0.112 | 2.67 | 66.7% | -0.2 | -3.02 | 72.9% |
+| 243, fitted | 0.051 | 0.213 | 0.033 | 0.106 | 2.58 | 68.5% | 0.2 | -2.88 | 73.3% |
+| 212, fitted | 0.052 | 0.201 | 0.035 | 0.117 | 2.63 | 69.1% | -4.8 | -3.65 | 73.8% |
+| 182, fitted | 0.059 | 0.202 | 0.035 | 0.118 | 2.73 | 72.7% | -2.5 | -3.84 | 77.2% |
+| 152, fitted | 0.059 | 0.194 | 0.034 | 0.115 | 2.79 | 69.1% | -3.5 | -3.82 | 74.7% |
+| 122, fitted | 0.069 | 0.221 | 0.040 | 0.122 | 2.88 | 70.2% | -6.8 | -2.24 | 83.8% |
+| 91, fitted | 0.059 | 0.190 | 0.025 | 0.079 | 2.53 | 71.2% | -8.1 | -0.82 | 86.8% |
+| 84, fitted | 0.063 | 0.203 | 0.023 | 0.077 | 2.57 | 67.8% | -9.6 | -0.73 | 89.0% |
+| 77, fitted | 0.052 | 0.182 | 0.019 | 0.069 | 2.51 | 67.8% | -13.7 | -1.07 | 90.1% |
+| 70, fitted | 0.048 | 0.171 | 0.015 | 0.058 | 2.46 | 68.3% | -12.5 | -1.39 | 90.4% |
+| 63, fitted | 0.047 | 0.168 | 0.014 | 0.055 | 2.31 | 67.2% | -12.1 | -1.35 | 92.1% |
+| 56, fitted | 0.042 | 0.162 | 0.011 | 0.047 | 2.18 | 68.9% | -9.9 | -2.13 | 90.1% |
+| 49, fitted | 0.043 | 0.165 | 0.012 | 0.047 | 2.28 | 63.9% | -11.0 | -2.51 | 90.7% |
+| 42, fitted | 0.046 | 0.175 | 0.016 | 0.055 | 2.06 | 62.3% | -7.2 | -1.89 | 90.4% |
+| 35, fitted | 0.040 | 0.161 | 0.017 | 0.058 | 2.04 | 60.7% | -7.2 | -1.36 | 90.6% |
+| 28, fitted | 0.038 | 0.158 | 0.016 | 0.056 | 1.86 | 60.7% | -7.8 | -0.61 | 89.6% |
+| 21, fitted | 0.033 | 0.132 | 0.015 | 0.052 | 1.72 | 65.6% | -4.2 | -1.12 | 89.6% |
+| 14, fitted | 0.034 | 0.123 | 0.014 | 0.052 | 1.51 | 65.6% | 0.1 | -1.24 | 90.2% |
+| 7, fitted | 0.037 | 0.123 | 0.012 | 0.050 | 1.21 | 67.2% | 7.5 | -2.60 | 90.0% |
 
 ## Reliability
 
@@ -121,16 +121,16 @@ Qualification and win events pooled over every replay.
 
 | Forecast | Events (current) | Mean forecast | Observed | Events (fitted) | Mean forecast | Observed |
 |---|---|---|---|---|---|---|
-| 0–10% | 2046 | 0.6% | 1.4% | 2046 | 0.6% | 1.4% |
-| 10–20% | 93 | 13.9% | 5.4% | 93 | 13.9% | 5.4% |
-| 20–30% | 39 | 24.7% | 10.3% | 39 | 24.7% | 10.3% |
-| 30–40% | 40 | 34.6% | 25.0% | 40 | 34.6% | 25.0% |
-| 40–50% | 52 | 44.4% | 40.4% | 52 | 44.4% | 40.4% |
-| 50–60% | 39 | 54.8% | 51.3% | 39 | 54.8% | 51.3% |
-| 60–70% | 21 | 65.8% | 90.5% | 21 | 65.8% | 90.5% |
-| 70–80% | 35 | 76.1% | 97.1% | 35 | 76.1% | 97.1% |
-| 80–90% | 67 | 85.3% | 85.1% | 67 | 85.3% | 85.1% |
-| 90–100% | 130 | 95.3% | 90.0% | 130 | 95.3% | 90.0% |
+| 0–10% | 2047 | 0.6% | 1.3% | 2047 | 0.6% | 1.3% |
+| 10–20% | 92 | 13.8% | 7.6% | 92 | 13.8% | 7.6% |
+| 20–30% | 44 | 24.9% | 11.4% | 44 | 24.9% | 11.4% |
+| 30–40% | 35 | 34.5% | 25.7% | 35 | 34.5% | 25.7% |
+| 40–50% | 46 | 44.7% | 43.5% | 46 | 44.7% | 43.5% |
+| 50–60% | 43 | 54.5% | 46.5% | 43 | 54.5% | 46.5% |
+| 60–70% | 23 | 65.1% | 91.3% | 23 | 65.1% | 91.3% |
+| 70–80% | 30 | 74.8% | 86.7% | 30 | 74.8% | 86.7% |
+| 80–90% | 75 | 85.2% | 89.3% | 75 | 85.2% | 89.3% |
+| 90–100% | 127 | 95.4% | 89.8% | 127 | 95.4% | 89.8% |
 
 ## Fit
 
@@ -146,30 +146,30 @@ Evidence: share log score of the contenders. Starts from horizon_bloc_sd 0, hori
 | 2002 replays | -24.07 | -24.07 | -16.96 (horizon_bloc_sd 0.1, horizon_candidate_sd 0.2, student_t_df 10) |
 | 2007 replays | 35.47 | 35.47 | 37.98 (horizon_bloc_sd 0, horizon_candidate_sd 0.02, student_t_df 2.5) |
 | 2012 replays | 28.03 | 28.03 | 33.64 (horizon_bloc_sd 0, horizon_candidate_sd 0, student_t_df 2.5) |
-| 2017 replays | -19.84 | -19.84 | -11.39 (horizon_bloc_sd 0.04, horizon_candidate_sd 0.4, student_t_df 10) |
-| 2022 replays | -137.19 | -137.19 | -90.63 (horizon_bloc_sd 0.27, horizon_candidate_sd 0.27, student_t_df 10) |
-| 334-day replays, every election (not used) | -3.31 | -3.31 | -2.41 (horizon_bloc_sd 0, horizon_candidate_sd 0.2, student_t_df 10) |
-| 304-day replays, every election (not used) | 0.26 | 0.26 | 0.66 (horizon_bloc_sd 0, horizon_candidate_sd 0.2, student_t_df 10) |
-| 273-day replays, every election (not used) | -0.12 | -0.12 | 0.00 (horizon_bloc_sd 0, horizon_candidate_sd 0.14, student_t_df 10) |
-| 243-day replays, every election (not used) | -0.14 | -0.14 | 0.09 (horizon_bloc_sd 0, horizon_candidate_sd 0.2, student_t_df 10) |
-| 212-day replays, every election (not used) | -4.30 | -4.30 | -3.50 (horizon_bloc_sd 0.07, horizon_candidate_sd 0.33, student_t_df 2.5) |
-| 182-day replays, every election (not used) | -2.72 | -2.72 | -2.31 (horizon_bloc_sd 0.04, horizon_candidate_sd 0.14, student_t_df 10) |
-| 152-day replays, every election (not used) | -4.02 | -4.02 | -3.71 (horizon_bloc_sd 0, horizon_candidate_sd 0.2, student_t_df 10) |
-| 122-day replays, every election (not used) | -5.98 | -5.98 | -5.59 (horizon_bloc_sd 0.07, horizon_candidate_sd 0.33, student_t_df 2.5) |
-| 91-day replays, every election (not used) | -8.40 | -8.40 | -7.33 (horizon_bloc_sd 0.2, horizon_candidate_sd 0.4, student_t_df 2.5) |
-| 84-day replays, every election (not used) | -9.00 | -9.00 | -7.98 (horizon_bloc_sd 0.07, horizon_candidate_sd 0.4, student_t_df 2.5) |
-| 77-day replays, every election (not used) | -14.13 | -14.13 | -11.14 (horizon_bloc_sd 0.2, horizon_candidate_sd 0.4, student_t_df 3) |
-| 70-day replays, every election (not used) | -13.05 | -13.05 | -10.61 (horizon_bloc_sd 0.14, horizon_candidate_sd 0.4, student_t_df 3) |
-| 63-day replays, every election (not used) | -12.79 | -12.79 | -10.14 (horizon_bloc_sd 0.14, horizon_candidate_sd 0.4, student_t_df 3) |
-| 56-day replays, every election (not used) | -10.49 | -10.49 | -8.18 (horizon_bloc_sd 0.04, horizon_candidate_sd 0.4, student_t_df 3) |
-| 49-day replays, every election (not used) | -10.39 | -10.39 | -8.11 (horizon_bloc_sd 0.04, horizon_candidate_sd 0.4, student_t_df 4) |
-| 42-day replays, every election (not used) | -7.69 | -7.69 | -5.79 (horizon_bloc_sd 0.04, horizon_candidate_sd 0.4, student_t_df 3) |
-| 35-day replays, every election (not used) | -7.28 | -7.28 | -5.44 (horizon_bloc_sd 0.14, horizon_candidate_sd 0.4, student_t_df 4) |
-| 28-day replays, every election (not used) | -7.42 | -7.42 | -5.40 (horizon_bloc_sd 0.2, horizon_candidate_sd 0.33, student_t_df 5) |
-| 21-day replays, every election (not used) | -4.17 | -4.17 | -2.57 (horizon_bloc_sd 0.2, horizon_candidate_sd 0.33, student_t_df 5) |
-| 14-day replays, every election (not used) | 0.02 | 0.02 | 0.81 (horizon_bloc_sd 0.27, horizon_candidate_sd 0.4, student_t_df 2.5) |
-| 7-day replays, every election (not used) | 7.53 | 7.53 | 7.82 (horizon_bloc_sd 0, horizon_candidate_sd 0.4, student_t_df 2.5) |
-| Total | -117.59 | -117.59 | -103.79 (horizon_bloc_sd 0.07, horizon_candidate_sd 0.4, student_t_df 3) |
+| 2017 replays | -19.13 | -19.13 | -11.18 (horizon_bloc_sd 0.04, horizon_candidate_sd 0.4, student_t_df 10) |
+| 2022 replays | -136.68 | -136.68 | -89.81 (horizon_bloc_sd 0.27, horizon_candidate_sd 0.27, student_t_df 10) |
+| 334-day replays, every election (not used) | -3.29 | -3.29 | -2.38 (horizon_bloc_sd 0, horizon_candidate_sd 0.2, student_t_df 10) |
+| 304-day replays, every election (not used) | 0.24 | 0.24 | 0.63 (horizon_bloc_sd 0, horizon_candidate_sd 0.2, student_t_df 10) |
+| 273-day replays, every election (not used) | -0.21 | -0.21 | -0.02 (horizon_bloc_sd 0, horizon_candidate_sd 0.14, student_t_df 10) |
+| 243-day replays, every election (not used) | 0.17 | 0.17 | 0.37 (horizon_bloc_sd 0, horizon_candidate_sd 0.2, student_t_df 10) |
+| 212-day replays, every election (not used) | -4.83 | -4.83 | -3.86 (horizon_bloc_sd 0.1, horizon_candidate_sd 0.27, student_t_df 2.5) |
+| 182-day replays, every election (not used) | -2.54 | -2.54 | -2.11 (horizon_bloc_sd 0.02, horizon_candidate_sd 0.14, student_t_df 10) |
+| 152-day replays, every election (not used) | -3.50 | -3.50 | -3.17 (horizon_bloc_sd 0, horizon_candidate_sd 0.2, student_t_df 5) |
+| 122-day replays, every election (not used) | -6.84 | -6.84 | -6.02 (horizon_bloc_sd 0.1, horizon_candidate_sd 0.33, student_t_df 2.5) |
+| 91-day replays, every election (not used) | -8.08 | -8.08 | -7.00 (horizon_bloc_sd 0.1, horizon_candidate_sd 0.4, student_t_df 2.5) |
+| 84-day replays, every election (not used) | -9.59 | -9.59 | -8.30 (horizon_bloc_sd 0.14, horizon_candidate_sd 0.33, student_t_df 3) |
+| 77-day replays, every election (not used) | -13.65 | -13.65 | -10.91 (horizon_bloc_sd 0.2, horizon_candidate_sd 0.4, student_t_df 3) |
+| 70-day replays, every election (not used) | -12.53 | -12.53 | -10.30 (horizon_bloc_sd 0.2, horizon_candidate_sd 0.33, student_t_df 4) |
+| 63-day replays, every election (not used) | -12.12 | -12.12 | -9.52 (horizon_bloc_sd 0.14, horizon_candidate_sd 0.4, student_t_df 3) |
+| 56-day replays, every election (not used) | -9.90 | -9.90 | -7.83 (horizon_bloc_sd 0.07, horizon_candidate_sd 0.4, student_t_df 3) |
+| 49-day replays, every election (not used) | -10.96 | -10.96 | -8.64 (horizon_bloc_sd 0.14, horizon_candidate_sd 0.4, student_t_df 3) |
+| 42-day replays, every election (not used) | -7.21 | -7.21 | -5.44 (horizon_bloc_sd 0.14, horizon_candidate_sd 0.4, student_t_df 5) |
+| 35-day replays, every election (not used) | -7.18 | -7.18 | -5.36 (horizon_bloc_sd 0.2, horizon_candidate_sd 0.4, student_t_df 3) |
+| 28-day replays, every election (not used) | -7.77 | -7.77 | -5.42 (horizon_bloc_sd 0.27, horizon_candidate_sd 0.4, student_t_df 3) |
+| 21-day replays, every election (not used) | -4.19 | -4.19 | -2.39 (horizon_bloc_sd 0.2, horizon_candidate_sd 0.33, student_t_df 5) |
+| 14-day replays, every election (not used) | 0.07 | 0.07 | 0.76 (horizon_bloc_sd 0.14, horizon_candidate_sd 0.2, student_t_df 5) |
+| 7-day replays, every election (not used) | 7.54 | 7.54 | 7.86 (horizon_bloc_sd 0, horizon_candidate_sd 0.4, student_t_df 2.5) |
+| Total | -116.37 | -116.37 | -103.32 (horizon_bloc_sd 0.04, horizon_candidate_sd 0.4, student_t_df 3) |
 
 Total log score by `horizon_bloc_sd` (rows) and `horizon_candidate_sd` (columns). `*` marks the points that score at least as well as the start on every source; bold is the chosen one.
 
@@ -177,66 +177,66 @@ student_t_df = 2.5:
 
 | horizon_bloc_sd \ horizon_candidate_sd | 0 | 0.02 | 0.04 | 0.07 | 0.1 | 0.14 | 0.2 | 0.27 | 0.33 | 0.4 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 0 | -162.8 | -161.8 | -160.1 | -155.2 | -148.2 | -140.6 | -130.4 | -120.5 | -114.9 | -109.9 |
-| 0.02 | -160.7 | -159.8 | -158.0 | -153.4 | -146.8 | -139.3 | -129.3 | -119.5 | -114.0 | -109.1 |
-| 0.04 | -156.3 | -155.8 | -154.1 | -149.8 | -143.7 | -136.6 | -127.2 | -117.9 | -112.6 | -107.8 |
-| 0.07 | -147.5 | -146.9 | -145.6 | -142.0 | -137.0 | -131.0 | -122.3 | -113.9 | -109.1 | -104.6 |
-| 0.1 | -142.2 | -141.8 | -140.9 | -138.1 | -133.8 | -128.5 | -120.6 | -113.2 | -108.9 | -104.8 |
-| 0.14 | -139.5 | -139.3 | -138.6 | -136.5 | -133.5 | -129.5 | -123.1 | -116.9 | -113.5 | -110.0 |
-| 0.2 | -141.0 | -140.8 | -140.4 | -138.8 | -136.7 | -133.8 | -129.3 | -124.9 | -122.5 | -120.6 |
-| 0.27 | -146.9 | -146.8 | -146.6 | -145.7 | -144.6 | -142.8 | -139.6 | -137.0 | -135.7 | -135.1 |
+| 0 | -159.2 | -158.1 | -156.5 | -151.6 | -145.0 | -137.5 | -127.2 | -117.7 | -112.4 | -107.7 |
+| 0.02 | -157.5 | -156.6 | -154.8 | -150.1 | -143.9 | -136.5 | -126.4 | -117.1 | -111.9 | -107.3 |
+| 0.04 | -154.6 | -154.0 | -152.3 | -148.1 | -142.2 | -135.2 | -125.6 | -116.8 | -111.7 | -107.3 |
+| 0.07 | -145.8 | -145.2 | -143.8 | -140.3 | -135.4 | -129.3 | -120.4 | -112.5 | -107.9 | -103.8 |
+| 0.1 | -140.5 | -140.1 | -139.1 | -136.3 | -132.1 | -126.9 | -118.8 | -112.0 | -108.1 | -104.4 |
+| 0.14 | -138.1 | -137.8 | -137.0 | -134.8 | -131.9 | -127.9 | -121.6 | -116.1 | -112.9 | -109.8 |
+| 0.2 | -138.3 | -138.1 | -137.6 | -136.1 | -134.1 | -131.1 | -126.9 | -122.9 | -120.6 | -118.9 |
+| 0.27 | -145.5 | -145.4 | -145.2 | -144.3 | -143.3 | -141.5 | -138.4 | -135.8 | -134.7 | -134.2 |
 
 student_t_df = 3:
 
 | horizon_bloc_sd \ horizon_candidate_sd | 0 | 0.02 | 0.04 | 0.07 | 0.1 | 0.14 | 0.2 | 0.27 | 0.33 | 0.4 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 0 | -149.3 | -148.3 | -146.1 | -141.1 | -135.2 | -127.3 | **-117.6*** | -110.0 | -106.6 | -104.5 |
-| 0.02 | -148.7 | -147.8 | -145.5 | -140.6 | -134.9 | -127.2 | -117.7 | -110.2 | -106.9 | -104.8 |
-| 0.04 | -146.0 | -145.2 | -143.2 | -138.5 | -133.0 | -125.7 | -116.9 | -109.6 | -106.6 | -104.6 |
-| 0.07 | -139.2 | -138.6 | -137.1 | -133.4 | -128.5 | -122.4 | -114.6 | -108.1 | -105.5 | -103.8 |
-| 0.1 | -137.3 | -136.9 | -135.6 | -132.4 | -128.5 | -123.5 | -116.6 | -111.1 | -109.0 | -107.6 |
-| 0.14 | -136.4 | -136.1 | -135.1 | -132.8 | -130.0 | -126.1 | -121.0 | -116.6 | -115.1 | -114.2 |
-| 0.2 | -142.0 | -141.8 | -141.3 | -140.0 | -138.2 | -135.8 | -132.9 | -130.3 | -129.3 | -129.4 |
-| 0.27 | -156.5 | -156.4 | -156.0 | -155.3 | -154.2 | -153.0 | -151.7 | -150.6 | -150.5 | -151.6 |
+| 0 | -147.1 | -146.1 | -144.0 | -139.3 | -133.7 | -126.0 | **-116.4*** | -108.9 | -105.7 | -103.8 |
+| 0.02 | -146.4 | -145.5 | -143.3 | -138.8 | -133.3 | -125.8 | -116.4 | -109.0 | -105.9 | -104.0 |
+| 0.04 | -143.2 | -142.4 | -140.5 | -136.1 | -130.9 | -123.8 | -115.0 | -108.0 | -105.1 | -103.3 |
+| 0.07 | -137.5 | -136.9 | -135.5 | -132.2 | -127.4 | -121.4 | -113.9 | -107.7 | -105.2 | -103.6 |
+| 0.1 | -135.0 | -134.6 | -133.4 | -130.5 | -126.7 | -121.7 | -115.0 | -109.9 | -107.9 | -106.5 |
+| 0.14 | -134.1 | -133.8 | -132.9 | -130.8 | -128.0 | -124.1 | -119.2 | -115.2 | -113.7 | -112.9 |
+| 0.2 | -139.7 | -139.5 | -139.0 | -137.7 | -135.9 | -133.6 | -130.8 | -128.5 | -127.8 | -127.9 |
+| 0.27 | -154.9 | -154.7 | -154.4 | -153.7 | -152.6 | -151.5 | -150.2 | -149.2 | -149.2 | -150.4 |
 
 student_t_df = 4:
 
 | horizon_bloc_sd \ horizon_candidate_sd | 0 | 0.02 | 0.04 | 0.07 | 0.1 | 0.14 | 0.2 | 0.27 | 0.33 | 0.4 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 0 | -142.5 | -141.6 | -139.8 | -134.6 | -129.1 | -121.4 | -112.8 | -106.8 | -105.0 | -105.5 |
-| 0.02 | -142.2 | -141.4 | -139.8 | -134.7 | -129.4 | -121.8 | -113.2 | -107.4 | -105.6 | -106.2 |
-| 0.04 | -140.6 | -140.1 | -138.5 | -134.2 | -129.4 | -122.5 | -114.2 | -108.6 | -106.9 | -107.6 |
-| 0.07 | -139.1 | -138.6 | -137.3 | -133.9 | -129.9 | -123.7 | -116.3 | -111.6 | -110.3 | -111.1 |
-| 0.1 | -137.1 | -136.7 | -135.6 | -133.1 | -129.6 | -124.3 | -118.6 | -114.7 | -113.8 | -114.9 |
-| 0.14 | -136.6 | -136.4 | -135.7 | -133.9 | -131.5 | -127.8 | -123.9 | -121.3 | -121.1 | -122.4 |
-| 0.2 | -145.7 | -145.6 | -145.2 | -144.1 | -142.7 | -140.7 | -138.4 | -137.3 | -138.4 | -140.5 |
-| 0.27 | -168.5 | -168.4 | -168.2 | -167.6 | -166.9 | -165.8 | -164.7 | -165.0 | -166.9 | -169.6 |
+| 0 | -141.1 | -140.2 | -138.4 | -133.4 | -127.9 | -120.4 | -111.9 | -106.6 | -105.0 | -105.9 |
+| 0.02 | -141.0 | -140.2 | -138.6 | -133.6 | -128.2 | -120.9 | -112.5 | -107.2 | -105.7 | -106.6 |
+| 0.04 | -139.5 | -139.0 | -137.4 | -133.2 | -128.4 | -121.7 | -113.6 | -108.6 | -107.2 | -108.2 |
+| 0.07 | -136.6 | -136.1 | -134.8 | -131.6 | -127.6 | -121.5 | -114.5 | -110.3 | -109.2 | -110.4 |
+| 0.1 | -134.6 | -134.2 | -133.2 | -130.7 | -127.2 | -122.1 | -116.7 | -113.3 | -112.7 | -113.9 |
+| 0.14 | -134.8 | -134.5 | -133.8 | -132.1 | -129.7 | -126.4 | -122.8 | -120.6 | -120.5 | -122.1 |
+| 0.2 | -144.2 | -144.1 | -143.7 | -142.7 | -141.3 | -139.5 | -137.4 | -136.5 | -137.7 | -140.0 |
+| 0.27 | -167.0 | -166.9 | -166.7 | -166.2 | -165.5 | -164.5 | -163.6 | -164.1 | -166.2 | -169.0 |
 
 student_t_df = 5:
 
 | horizon_bloc_sd \ horizon_candidate_sd | 0 | 0.02 | 0.04 | 0.07 | 0.1 | 0.14 | 0.2 | 0.27 | 0.33 | 0.4 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 0 | -145.4 | -144.6 | -141.8 | -136.3 | -129.7 | -122.1 | -113.7 | -109.7 | -109.2 | -111.3 |
-| 0.02 | -143.7 | -142.8 | -140.3 | -135.1 | -128.6 | -121.2 | -113.0 | -109.1 | -108.6 | -110.8 |
-| 0.04 | -141.1 | -140.3 | -138.0 | -133.1 | -127.4 | -120.5 | -112.9 | -109.3 | -108.9 | -111.2 |
-| 0.07 | -136.6 | -136.1 | -134.4 | -131.0 | -126.4 | -120.3 | -114.1 | -111.1 | -110.9 | -113.4 |
-| 0.1 | -133.3 | -132.9 | -131.6 | -128.9 | -125.2 | -120.7 | -115.7 | -113.1 | -113.3 | -116.0 |
-| 0.14 | -136.0 | -135.7 | -134.8 | -132.9 | -130.3 | -127.0 | -123.5 | -121.9 | -122.8 | -125.8 |
-| 0.2 | -148.1 | -147.9 | -147.4 | -146.3 | -144.8 | -143.0 | -141.4 | -141.5 | -143.2 | -146.5 |
-| 0.27 | -171.7 | -171.6 | -171.3 | -170.7 | -170.0 | -169.3 | -169.3 | -170.8 | -173.4 | -177.1 |
+| 0 | -143.7 | -142.9 | -140.1 | -134.5 | -127.9 | -120.8 | -113.0 | -109.1 | -108.7 | -110.9 |
+| 0.02 | -142.4 | -141.6 | -139.1 | -133.6 | -127.3 | -120.3 | -112.8 | -108.9 | -108.6 | -110.8 |
+| 0.04 | -140.4 | -139.6 | -137.3 | -132.2 | -126.8 | -120.2 | -113.2 | -109.7 | -109.4 | -111.8 |
+| 0.07 | -134.9 | -134.3 | -132.6 | -129.1 | -124.9 | -119.1 | -113.3 | -110.4 | -110.4 | -113.0 |
+| 0.1 | -131.2 | -130.8 | -129.6 | -126.9 | -123.5 | -119.1 | -114.5 | -112.0 | -112.4 | -115.2 |
+| 0.14 | -133.8 | -133.6 | -132.8 | -130.9 | -128.5 | -125.3 | -122.0 | -120.6 | -121.6 | -124.7 |
+| 0.2 | -146.0 | -145.8 | -145.4 | -144.2 | -142.8 | -141.0 | -139.6 | -140.0 | -141.8 | -145.2 |
+| 0.27 | -170.6 | -170.5 | -170.3 | -169.7 | -169.0 | -168.2 | -168.5 | -170.2 | -173.0 | -176.9 |
 
 student_t_df = 10:
 
 | horizon_bloc_sd \ horizon_candidate_sd | 0 | 0.02 | 0.04 | 0.07 | 0.1 | 0.14 | 0.2 | 0.27 | 0.33 | 0.4 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 0 | -159.5 | -158.4 | -155.9 | -149.8 | -142.8 | -134.9 | -126.9 | -123.4 | -123.3 | -125.6 |
-| 0.02 | -155.6 | -154.7 | -152.4 | -146.5 | -139.7 | -131.9 | -124.2 | -120.7 | -120.6 | -123.0 |
-| 0.04 | -147.9 | -147.2 | -145.2 | -139.8 | -133.8 | -126.5 | -119.3 | -116.0 | -116.0 | -118.4 |
-| 0.07 | -139.3 | -138.7 | -137.1 | -133.0 | -128.4 | -122.3 | -115.9 | -113.3 | -113.5 | -116.2 |
-| 0.1 | -138.5 | -138.1 | -137.0 | -134.0 | -130.3 | -125.2 | -120.1 | -118.4 | -118.9 | -121.9 |
-| 0.14 | -138.9 | -138.7 | -137.9 | -136.0 | -133.4 | -129.8 | -126.6 | -126.1 | -127.1 | -130.5 |
-| 0.2 | -153.5 | -153.4 | -152.9 | -151.9 | -150.6 | -148.8 | -147.4 | -147.8 | -149.7 | -153.5 |
-| 0.27 | -179.2 | -179.1 | -178.9 | -178.4 | -177.8 | -177.2 | -177.2 | -178.8 | -181.6 | -185.8 |
+| 0 | -154.8 | -153.8 | -151.2 | -145.4 | -138.6 | -131.2 | -123.5 | -120.3 | -120.5 | -123.1 |
+| 0.02 | -151.6 | -150.7 | -148.4 | -142.8 | -136.2 | -128.9 | -121.4 | -118.3 | -118.5 | -121.1 |
+| 0.04 | -145.4 | -144.8 | -142.8 | -137.6 | -131.8 | -125.0 | -117.9 | -115.1 | -115.3 | -118.0 |
+| 0.07 | -137.2 | -136.6 | -135.1 | -131.2 | -126.8 | -121.0 | -114.8 | -112.6 | -113.0 | -116.0 |
+| 0.1 | -136.3 | -135.9 | -134.9 | -132.0 | -128.5 | -123.6 | -118.5 | -117.2 | -117.9 | -121.1 |
+| 0.14 | -137.7 | -137.5 | -136.8 | -134.9 | -132.5 | -129.0 | -125.9 | -125.6 | -126.9 | -130.4 |
+| 0.2 | -151.8 | -151.6 | -151.2 | -150.3 | -149.0 | -147.2 | -146.0 | -146.7 | -148.7 | -152.7 |
+| 0.27 | -177.8 | -177.7 | -177.5 | -177.1 | -176.5 | -175.9 | -175.9 | -177.6 | -180.6 | -184.9 |
 
 ### Pass 1: Round 1 election-day error
 
@@ -247,46 +247,46 @@ Evidence: share log score of the contenders. Starts from bloc_sd 0.18, candidate
 | 2002 replays | -24.07 | -24.07 | -19.68 (bloc_sd 0.33, candidate_sd 0.4) |
 | 2007 replays | 35.47 | 35.47 | 38.46 (bloc_sd 0.1, candidate_sd 0.03) |
 | 2012 replays | 28.03 | 28.03 | 33.43 (bloc_sd 0.08, candidate_sd 0.03) |
-| 2017 replays | -19.84 | -19.84 | -16.66 (bloc_sd 0.18, candidate_sd 0.4) |
-| 2022 replays | -137.19 | -137.19 | -91.78 (bloc_sd 0.4, candidate_sd 0.4) |
-| 334-day replays, every election (not used) | -3.31 | -3.31 | -3.08 (bloc_sd 0.22, candidate_sd 0.4) |
-| 304-day replays, every election (not used) | 0.26 | 0.26 | 0.41 (bloc_sd 0.15, candidate_sd 0.4) |
-| 273-day replays, every election (not used) | -0.12 | -0.12 | -0.11 (bloc_sd 0.18, candidate_sd 0.16) |
-| 243-day replays, every election (not used) | -0.14 | -0.14 | -0.08 (bloc_sd 0.15, candidate_sd 0.3) |
-| 212-day replays, every election (not used) | -4.30 | -4.30 | -3.70 (bloc_sd 0.27, candidate_sd 0.4) |
-| 182-day replays, every election (not used) | -2.72 | -2.72 | -2.72 (bloc_sd 0.18, candidate_sd 0.16) |
-| 152-day replays, every election (not used) | -4.02 | -4.02 | -3.89 (bloc_sd 0.18, candidate_sd 0.4) |
-| 122-day replays, every election (not used) | -5.98 | -5.98 | -5.63 (bloc_sd 0.22, candidate_sd 0.4) |
-| 91-day replays, every election (not used) | -8.40 | -8.40 | -7.40 (bloc_sd 0.27, candidate_sd 0.4) |
-| 84-day replays, every election (not used) | -9.00 | -9.00 | -7.96 (bloc_sd 0.27, candidate_sd 0.4) |
-| 77-day replays, every election (not used) | -14.13 | -14.13 | -11.35 (bloc_sd 0.4, candidate_sd 0.4) |
-| 70-day replays, every election (not used) | -13.05 | -13.05 | -10.77 (bloc_sd 0.4, candidate_sd 0.4) |
-| 63-day replays, every election (not used) | -12.79 | -12.79 | -10.40 (bloc_sd 0.4, candidate_sd 0.4) |
-| 56-day replays, every election (not used) | -10.49 | -10.49 | -9.01 (bloc_sd 0.22, candidate_sd 0.4) |
-| 49-day replays, every election (not used) | -10.39 | -10.39 | -8.56 (bloc_sd 0.33, candidate_sd 0.4) |
-| 42-day replays, every election (not used) | -7.69 | -7.69 | -6.20 (bloc_sd 0.27, candidate_sd 0.4) |
-| 35-day replays, every election (not used) | -7.28 | -7.28 | -5.58 (bloc_sd 0.27, candidate_sd 0.4) |
-| 28-day replays, every election (not used) | -7.42 | -7.42 | -5.38 (bloc_sd 0.33, candidate_sd 0.4) |
-| 21-day replays, every election (not used) | -4.17 | -4.17 | -2.63 (bloc_sd 0.27, candidate_sd 0.4) |
-| 14-day replays, every election (not used) | 0.02 | 0.02 | 0.57 (bloc_sd 0.18, candidate_sd 0.4) |
-| 7-day replays, every election (not used) | 7.53 | 7.53 | 8.06 (bloc_sd 0.1, candidate_sd 0.4) |
-| Total | -117.59 | -117.59 | -101.33 (bloc_sd 0.27, candidate_sd 0.4) |
+| 2017 replays | -19.13 | -19.13 | -16.14 (bloc_sd 0.18, candidate_sd 0.4) |
+| 2022 replays | -136.68 | -136.68 | -91.73 (bloc_sd 0.4, candidate_sd 0.4) |
+| 334-day replays, every election (not used) | -3.29 | -3.29 | -3.06 (bloc_sd 0.22, candidate_sd 0.4) |
+| 304-day replays, every election (not used) | 0.24 | 0.24 | 0.37 (bloc_sd 0.15, candidate_sd 0.4) |
+| 273-day replays, every election (not used) | -0.21 | -0.21 | -0.20 (bloc_sd 0.18, candidate_sd 0.16) |
+| 243-day replays, every election (not used) | 0.17 | 0.17 | 0.30 (bloc_sd 0.15, candidate_sd 0.3) |
+| 212-day replays, every election (not used) | -4.83 | -4.83 | -4.04 (bloc_sd 0.27, candidate_sd 0.4) |
+| 182-day replays, every election (not used) | -2.54 | -2.54 | -2.54 (bloc_sd 0.18, candidate_sd 0.16) |
+| 152-day replays, every election (not used) | -3.50 | -3.50 | -3.36 (bloc_sd 0.15, candidate_sd 0.4) |
+| 122-day replays, every election (not used) | -6.84 | -6.84 | -6.28 (bloc_sd 0.27, candidate_sd 0.3) |
+| 91-day replays, every election (not used) | -8.08 | -8.08 | -7.10 (bloc_sd 0.27, candidate_sd 0.4) |
+| 84-day replays, every election (not used) | -9.59 | -9.59 | -8.32 (bloc_sd 0.27, candidate_sd 0.4) |
+| 77-day replays, every election (not used) | -13.65 | -13.65 | -11.08 (bloc_sd 0.4, candidate_sd 0.4) |
+| 70-day replays, every election (not used) | -12.53 | -12.53 | -10.52 (bloc_sd 0.4, candidate_sd 0.4) |
+| 63-day replays, every election (not used) | -12.12 | -12.12 | -9.90 (bloc_sd 0.27, candidate_sd 0.4) |
+| 56-day replays, every election (not used) | -9.90 | -9.90 | -8.57 (bloc_sd 0.27, candidate_sd 0.4) |
+| 49-day replays, every election (not used) | -10.96 | -10.96 | -9.23 (bloc_sd 0.27, candidate_sd 0.4) |
+| 42-day replays, every election (not used) | -7.21 | -7.21 | -5.95 (bloc_sd 0.18, candidate_sd 0.4) |
+| 35-day replays, every election (not used) | -7.18 | -7.18 | -5.36 (bloc_sd 0.27, candidate_sd 0.4) |
+| 28-day replays, every election (not used) | -7.77 | -7.77 | -5.38 (bloc_sd 0.33, candidate_sd 0.4) |
+| 21-day replays, every election (not used) | -4.19 | -4.19 | -2.53 (bloc_sd 0.27, candidate_sd 0.4) |
+| 14-day replays, every election (not used) | 0.07 | 0.07 | 0.59 (bloc_sd 0.27, candidate_sd 0.25) |
+| 7-day replays, every election (not used) | 7.54 | 7.54 | 7.99 (bloc_sd 0.1, candidate_sd 0.4) |
+| Total | -116.37 | -116.37 | -99.70 (bloc_sd 0.27, candidate_sd 0.4) |
 
 Total log score by `bloc_sd` (rows) and `candidate_sd` (columns). `*` marks the points that score at least as well as the start on every source; bold is the chosen one.
 
 | bloc_sd \ candidate_sd | 0.03 | 0.05 | 0.07 | 0.1 | 0.13 | 0.16 | 0.2 | 0.25 | 0.3 | 0.4 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 0.04 | -716.9 | -715.0 | -712.9 | -708.7 | -703.9 | -698.9 | -692.4 | -684.4 | -677.5 | -667.8 |
-| 0.06 | -617.4 | -615.7 | -613.7 | -609.5 | -604.8 | -600.4 | -595.0 | -588.2 | -581.7 | -571.9 |
-| 0.08 | -413.5 | -412.2 | -410.3 | -406.7 | -402.9 | -399.3 | -394.5 | -388.4 | -382.6 | -373.8 |
-| 0.1 | -181.7 | -180.6 | -179.1 | -176.1 | -172.6 | -169.2 | -164.6 | -158.9 | -153.5 | -145.5 |
-| 0.12 | -172.6 | -171.7 | -170.4 | -167.6 | -164.5 | -161.5 | -157.6 | -152.5 | -147.9 | -140.5 |
-| 0.15 | -142.9 | -142.2 | -141.1 | -139.0 | -136.4 | -133.8 | -130.3 | -125.8 | -121.8 | -115.1 |
-| 0.18 | -128.1 | -127.5 | -126.7 | -124.8 | -122.6 | -120.4 | **-117.6*** | -113.9 | -110.5 | -104.8 |
-| 0.22 | -120.7 | -120.2 | -119.6 | -118.2 | -116.6 | -114.9 | -112.5 | -109.4 | -106.5 | -102.0 |
-| 0.27 | -114.7 | -114.4 | -113.9 | -113.0 | -111.8 | -110.7 | -109.0 | -106.5 | -104.3 | -101.3 |
-| 0.33 | -116.6 | -116.4 | -116.1 | -115.4 | -114.6 | -113.9 | -112.7 | -111.1 | -109.8 | -108.2 |
-| 0.4 | -122.8 | -122.7 | -122.5 | -122.1 | -121.8 | -121.4 | -120.8 | -120.1 | -119.5 | -119.1 |
+| 0.04 | -670.6 | -668.1 | -665.9 | -662.0 | -657.8 | -652.6 | -646.2 | -638.9 | -632.1 | -622.6 |
+| 0.06 | -581.9 | -580.3 | -578.7 | -575.1 | -570.9 | -566.0 | -560.5 | -554.1 | -547.9 | -538.3 |
+| 0.08 | -394.0 | -392.6 | -390.8 | -387.4 | -383.6 | -379.8 | -375.2 | -369.8 | -364.2 | -355.9 |
+| 0.1 | -179.9 | -178.8 | -177.3 | -174.3 | -171.1 | -167.9 | -163.6 | -158.0 | -152.7 | -144.7 |
+| 0.12 | -169.5 | -168.6 | -167.2 | -164.4 | -161.5 | -158.8 | -154.9 | -149.7 | -145.0 | -137.8 |
+| 0.15 | -141.9 | -141.2 | -140.1 | -137.9 | -135.5 | -133.1 | -129.5 | -124.7 | -120.8 | -114.4 |
+| 0.18 | -126.6 | -126.1 | -125.2 | -123.4 | -121.3 | -119.3 | **-116.4*** | -112.6 | -109.4 | -104.1 |
+| 0.22 | -119.2 | -118.7 | -118.1 | -116.8 | -115.1 | -113.5 | -111.2 | -108.2 | -105.6 | -101.4 |
+| 0.27 | -112.6 | -112.3 | -111.9 | -111.0 | -109.9 | -108.8 | -107.0 | -104.6 | -102.6 | -99.7 |
+| 0.33 | -115.2 | -115.0 | -114.7 | -114.0 | -113.4 | -112.7 | -111.4 | -109.9 | -108.8 | -107.4 |
+| 0.4 | -121.7 | -121.5 | -121.4 | -121.0 | -120.7 | -120.4 | -119.8 | -119.2 | -118.7 | -118.4 |
 
 ### Pass 1: Round 2 errors
 
@@ -297,47 +297,47 @@ Evidence: log score of the realised runoff share. Starts from error_sd 0.12, hor
 | 2002 replays | -65.44 | -65.44 | -43.92 (error_sd 0.4, horizon_error_sd 0.2) |
 | 2007 replays | 18.76 | 18.76 | 25.09 (error_sd 0.02, horizon_error_sd 0) |
 | 2012 replays | -1.76 | -1.76 | 2.18 (error_sd 0.12, horizon_error_sd 0.1) |
-| 2017 replays | -10.40 | -10.40 | -5.90 (error_sd 0.15, horizon_error_sd 0.14) |
-| 2022 replays | 14.24 | 14.24 | 14.76 (error_sd 0.08, horizon_error_sd 0) |
-| 334-day replays, every election (not used) | -2.65 | -2.65 | -2.60 (error_sd 0.18, horizon_error_sd 0.02) |
-| 304-day replays, every election (not used) | -3.64 | -3.64 | -3.24 (error_sd 0.27, horizon_error_sd 0.04) |
-| 273-day replays, every election (not used) | -2.99 | -2.99 | -2.86 (error_sd 0.05, horizon_error_sd 0.07) |
-| 243-day replays, every election (not used) | -2.92 | -2.92 | -2.83 (error_sd 0.02, horizon_error_sd 0.07) |
-| 212-day replays, every election (not used) | -3.57 | -3.57 | -3.29 (error_sd 0.27, horizon_error_sd 0) |
-| 182-day replays, every election (not used) | -3.90 | -3.90 | -3.23 (error_sd 0.18, horizon_error_sd 0.1) |
-| 152-day replays, every election (not used) | -3.95 | -3.95 | -3.39 (error_sd 0.18, horizon_error_sd 0.1) |
-| 122-day replays, every election (not used) | -2.22 | -2.22 | -1.77 (error_sd 0.08, horizon_error_sd 0.1) |
-| 91-day replays, every election (not used) | -0.81 | -0.81 | -0.78 (error_sd 0.12, horizon_error_sd 0.04) |
-| 84-day replays, every election (not used) | -0.74 | -0.74 | -0.73 (error_sd 0.05, horizon_error_sd 0.07) |
+| 2017 replays | -10.34 | -10.34 | -5.84 (error_sd 0.15, horizon_error_sd 0.14) |
+| 2022 replays | 14.17 | 14.17 | 14.68 (error_sd 0.08, horizon_error_sd 0) |
+| 334-day replays, every election (not used) | -2.67 | -2.67 | -2.62 (error_sd 0.18, horizon_error_sd 0.02) |
+| 304-day replays, every election (not used) | -3.66 | -3.66 | -3.26 (error_sd 0.27, horizon_error_sd 0.04) |
+| 273-day replays, every election (not used) | -3.02 | -3.02 | -2.88 (error_sd 0.05, horizon_error_sd 0.07) |
+| 243-day replays, every election (not used) | -2.88 | -2.88 | -2.80 (error_sd 0.02, horizon_error_sd 0.07) |
+| 212-day replays, every election (not used) | -3.65 | -3.65 | -3.35 (error_sd 0.02, horizon_error_sd 0.1) |
+| 182-day replays, every election (not used) | -3.84 | -3.84 | -3.19 (error_sd 0.18, horizon_error_sd 0.1) |
+| 152-day replays, every election (not used) | -3.82 | -3.82 | -3.28 (error_sd 0.27, horizon_error_sd 0.04) |
+| 122-day replays, every election (not used) | -2.24 | -2.24 | -1.78 (error_sd 0.08, horizon_error_sd 0.1) |
+| 91-day replays, every election (not used) | -0.82 | -0.82 | -0.79 (error_sd 0.12, horizon_error_sd 0.04) |
+| 84-day replays, every election (not used) | -0.73 | -0.73 | -0.72 (error_sd 0.05, horizon_error_sd 0.07) |
 | 77-day replays, every election (not used) | -1.07 | -1.07 | -1.04 (error_sd 0.08, horizon_error_sd 0.07) |
-| 70-day replays, every election (not used) | -1.36 | -1.36 | -1.31 (error_sd 0.15, horizon_error_sd 0) |
-| 63-day replays, every election (not used) | -1.33 | -1.33 | -1.23 (error_sd 0.02, horizon_error_sd 0.1) |
-| 56-day replays, every election (not used) | -2.11 | -2.11 | -1.75 (error_sd 0.12, horizon_error_sd 0.1) |
+| 70-day replays, every election (not used) | -1.39 | -1.39 | -1.34 (error_sd 0.15, horizon_error_sd 0.02) |
+| 63-day replays, every election (not used) | -1.35 | -1.35 | -1.24 (error_sd 0.02, horizon_error_sd 0.1) |
+| 56-day replays, every election (not used) | -2.13 | -2.13 | -1.76 (error_sd 0.12, horizon_error_sd 0.1) |
 | 49-day replays, every election (not used) | -2.51 | -2.51 | -2.01 (error_sd 0.08, horizon_error_sd 0.14) |
-| 42-day replays, every election (not used) | -1.91 | -1.91 | -1.67 (error_sd 0.18, horizon_error_sd 0) |
-| 35-day replays, every election (not used) | -1.38 | -1.38 | -1.29 (error_sd 0.15, horizon_error_sd 0.04) |
+| 42-day replays, every election (not used) | -1.89 | -1.89 | -1.66 (error_sd 0.18, horizon_error_sd 0) |
+| 35-day replays, every election (not used) | -1.36 | -1.36 | -1.28 (error_sd 0.15, horizon_error_sd 0.02) |
 | 28-day replays, every election (not used) | -0.61 | -0.61 | -0.60 (error_sd 0.1, horizon_error_sd 0.04) |
-| 21-day replays, every election (not used) | -1.11 | -1.11 | -1.10 (error_sd 0.12, horizon_error_sd 0.04) |
-| 14-day replays, every election (not used) | -1.23 | -1.23 | -1.21 (error_sd 0.02, horizon_error_sd 0.14) |
+| 21-day replays, every election (not used) | -1.12 | -1.12 | -1.11 (error_sd 0.12, horizon_error_sd 0.04) |
+| 14-day replays, every election (not used) | -1.24 | -1.24 | -1.22 (error_sd 0.02, horizon_error_sd 0.14) |
 | 7-day replays, every election (not used) | -2.60 | -2.60 | -2.07 (error_sd 0.18, horizon_error_sd 0.1) |
-| Total | -44.61 | -44.61 | -41.24 (error_sd 0.12, horizon_error_sd 0.07) |
+| Total | -44.61 | -44.61 | -41.21 (error_sd 0.12, horizon_error_sd 0.07) |
 
 Total log score by `error_sd` (rows) and `horizon_error_sd` (columns). `*` marks the points that score at least as well as the start on every source; bold is the chosen one.
 
 | error_sd \ horizon_error_sd | 0 | 0.02 | 0.04 | 0.07 | 0.1 | 0.14 | 0.2 |
 |---|---|---|---|---|---|---|---|
-| 0.02 | -70.1 | -65.9 | -57.1 | -46.7 | -42.8 | -43.9 | -51.2 |
-| 0.03 | -67.4 | -63.6 | -55.7 | -46.1 | -42.6 | -44.0 | -51.3 |
-| 0.05 | -60.9 | -58.1 | -52.1 | -44.8 | -42.2 | -44.0 | -51.5 |
-| 0.08 | -51.9 | -50.3 | -46.9 | -42.7 | -41.7 | -44.3 | -51.9 |
-| 0.1 | -47.6 | -46.5 | -44.3 | -41.7 | -41.7 | -44.6 | -52.3 |
-| 0.12 | **-44.6*** | -44.0 | -42.6 | -41.2 | -41.8 | -45.1 | -52.9 |
-| 0.15 | -42.3 | -42.0 | -41.4 | -41.3 | -42.5 | -46.1 | -53.8 |
-| 0.18 | -41.7 | -41.6 | -41.5 | -42.0 | -43.7 | -47.4 | -54.9 |
-| 0.22 | -42.7 | -42.7 | -42.9 | -43.9 | -45.7 | -49.5 | -56.7 |
-| 0.27 | -45.3 | -45.4 | -45.8 | -47.0 | -48.8 | -52.4 | -59.2 |
-| 0.33 | -49.5 | -49.6 | -50.0 | -51.2 | -53.0 | -56.2 | -62.5 |
-| 0.4 | -54.8 | -54.9 | -55.3 | -56.4 | -58.0 | -61.0 | -66.7 |
+| 0.02 | -70.1 | -65.9 | -57.1 | -46.7 | -42.7 | -43.9 | -51.2 |
+| 0.03 | -67.5 | -63.7 | -55.7 | -46.1 | -42.6 | -43.9 | -51.2 |
+| 0.05 | -61.0 | -58.1 | -52.1 | -44.7 | -42.2 | -44.0 | -51.4 |
+| 0.08 | -52.0 | -50.3 | -46.9 | -42.7 | -41.7 | -44.3 | -51.9 |
+| 0.1 | -47.6 | -46.5 | -44.3 | -41.7 | -41.6 | -44.6 | -52.3 |
+| 0.12 | **-44.6*** | -44.0 | -42.6 | -41.2 | -41.8 | -45.1 | -52.8 |
+| 0.15 | -42.2 | -42.0 | -41.4 | -41.2 | -42.5 | -46.1 | -53.8 |
+| 0.18 | -41.7 | -41.6 | -41.5 | -42.0 | -43.6 | -47.4 | -54.9 |
+| 0.22 | -42.6 | -42.7 | -42.9 | -43.8 | -45.7 | -49.4 | -56.7 |
+| 0.27 | -45.3 | -45.4 | -45.8 | -46.9 | -48.8 | -52.3 | -59.2 |
+| 0.33 | -49.4 | -49.5 | -50.0 | -51.1 | -52.9 | -56.2 | -62.5 |
+| 0.4 | -54.7 | -54.8 | -55.2 | -56.3 | -58.0 | -60.9 | -66.6 |
 
 ## Leave one election out
 
@@ -345,11 +345,11 @@ The whole fit rerun without one election's replays, then that election's replays
 
 | Held out | Passes | bloc_sd | candidate_sd | horizon_bloc_sd | horizon_candidate_sd | student_t_df | error_sd | horizon_error_sd | Round 1 log score (chosen without / current) | Round 2 log score (chosen without / current) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 2002 | 2 | 0.15 | 0.3 | 0.02 | 0.33 | 2.5 | 0.12 | 0 | -25.08 / -24.07 | -67.67 / -65.44 |
+| 2002 | 2 | 0.18 | 0.2 | 0.02 | 0.33 | 2.5 | 0.12 | 0 | -24.47 / -24.07 | -66.72 / -65.44 |
 | 2007 | 1 | 0.18 | 0.2 | 0 | 0.2 | 3 | 0.12 | 0 | 35.47 / 35.47 | 18.76 / 18.76 |
 | 2012 | 1 | 0.18 | 0.2 | 0 | 0.2 | 3 | 0.12 | 0 | 28.03 / 28.03 | -1.76 / -1.76 |
-| 2017 | 1 | 0.18 | 0.2 | 0 | 0.2 | 3 | 0.12 | 0 | -19.84 / -19.84 | -10.40 / -10.40 |
-| 2022 | 1 | 0.18 | 0.2 | 0 | 0.2 | 3 | 0.12 | 0 | -137.19 / -137.19 | 14.24 / 14.24 |
+| 2017 | 1 | 0.18 | 0.2 | 0 | 0.2 | 3 | 0.12 | 0 | -19.13 / -19.13 | -10.34 / -10.34 |
+| 2022 | 1 | 0.18 | 0.2 | 0 | 0.2 | 3 | 0.12 | 0 | -136.68 / -136.68 | 14.17 / 14.17 |
 
 ## Replays
 
@@ -1702,34 +1702,34 @@ Actual matchup: current 91.9% (winner given matchup 94.1%), fitted 91.9% (winner
 
 ### 2017, 334 days out (2016-05-24)
 
-Actual matchup: current 65.6% (winner given matchup 71.1%), fitted 65.6% (winner given matchup 71.1%).
+Actual matchup: current 65.1% (winner given matchup 70.8%), fitted 65.1% (winner given matchup 70.8%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 24.7% (19.4%–30.2%) | 72.5% / 72.5% ✓ | 50.7% / 50.7% ✓ |
-| le_pen | 21.3% | 28.5% (23.2%–33.8%) | 92.4% / 92.4% ✓ | 23.8% / 23.8% |
-| fillon | 20.0% | 19.4% (15.2%–23.8%) | 15.4% / 15.4% | 13.7% / 13.7% |
-| melenchon | 19.6% | 17.8% (10.8%–25.8%) | 19.5% / 19.5% | 11.7% / 11.7% |
+| macron | 24.0% | 24.7% (19.4%–30.1%) | 71.8% / 71.8% ✓ | 50.0% / 50.0% ✓ |
+| le_pen | 21.3% | 28.6% (23.3%–33.9%) | 92.7% / 92.7% ✓ | 24.0% / 24.0% |
+| fillon | 20.0% | 19.5% (15.2%–23.8%) | 15.8% / 15.8% | 14.2% / 14.2% |
+| melenchon | 19.6% | 17.8% (10.8%–25.7%) | 19.6% / 19.6% | 11.7% / 11.7% |
 | hamon | 6.4% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 4.7% | 5.9% (4.3%–7.4%) | 0.1% / 0.1% | 0.1% / 0.1% |
+| dupont_aignan | 4.7% | 5.8% (4.3%–7.4%) | 0.1% / 0.1% | 0.1% / 0.1% |
 | lassalle | 1.2% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 1.5% (0.7%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 1.4% (0.7%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.7% (0.2%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.7% (0.2%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 304 days out (2016-06-23)
 
-Actual matchup: current 15.6% (winner given matchup 57.7%), fitted 15.6% (winner given matchup 57.7%).
+Actual matchup: current 15.2% (winner given matchup 57.1%), fitted 15.2% (winner given matchup 57.1%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 17.9% (13.5%–22.5%) | 17.3% / 17.3% ✓ | 9.8% / 9.8% ✓ |
-| le_pen | 21.3% | 30.5% (24.4%–37.0%) | 95.9% / 95.9% ✓ | 21.5% / 21.5% |
-| fillon | 20.0% | 22.2% (16.4%–28.4%) | 58.7% / 58.7% | 56.1% / 56.1% |
-| melenchon | 19.6% | 19.2% (14.1%–24.6%) | 28.1% / 28.1% | 12.6% / 12.6% |
+| macron | 24.0% | 17.8% (13.4%–22.4%) | 16.9% / 16.9% ✓ | 9.5% / 9.5% ✓ |
+| le_pen | 21.3% | 30.7% (24.5%–37.2%) | 96.1% / 96.1% ✓ | 21.4% / 21.4% |
+| fillon | 20.0% | 22.2% (16.4%–28.4%) | 59.5% / 59.5% | 56.9% / 56.9% |
+| melenchon | 19.6% | 19.0% (14.0%–24.4%) | 27.5% / 27.5% | 12.2% / 12.2% |
 | hamon | 6.4% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 4.7% | 4.9% (2.8%–7.0%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 4.7% | 4.9% (2.8%–7.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | lassalle | 1.2% | 0.8% (0.2%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 1.5% (0.7%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 1.0% (0.3%–2.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
@@ -1738,14 +1738,14 @@ Actual matchup: current 15.6% (winner given matchup 57.7%), fitted 15.6% (winner
 
 ### 2017, 273 days out (2016-07-24)
 
-Actual matchup: current 21.9% (winner given matchup 56.4%), fitted 21.9% (winner given matchup 56.4%).
+Actual matchup: current 21.1% (winner given matchup 55.9%), fitted 21.1% (winner given matchup 55.9%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 18.4% (13.6%–23.6%) | 23.7% / 23.7% ✓ | 13.2% / 13.2% ✓ |
-| le_pen | 21.3% | 31.3% (24.9%–37.9%) | 96.5% / 96.5% ✓ | 23.7% / 23.7% |
-| fillon | 20.0% | 21.6% (15.7%–27.8%) | 54.0% / 54.0% | 51.5% / 51.5% |
-| melenchon | 19.6% | 18.4% (13.0%–24.3%) | 25.7% / 25.7% | 11.5% / 11.5% |
+| macron | 24.0% | 18.3% (13.5%–23.4%) | 22.8% / 22.8% ✓ | 12.6% / 12.6% ✓ |
+| le_pen | 21.3% | 31.4% (25.0%–38.1%) | 96.7% / 96.7% ✓ | 23.6% / 23.6% |
+| fillon | 20.0% | 21.7% (15.8%–27.9%) | 55.1% / 55.1% | 52.6% / 52.6% |
+| melenchon | 19.6% | 18.4% (12.9%–24.3%) | 25.3% / 25.3% | 11.2% / 11.2% |
 | hamon | 6.4% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
 | dupont_aignan | 4.7% | 4.9% (2.8%–7.2%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | lassalle | 1.2% | 0.8% (0.2%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
@@ -1756,723 +1756,723 @@ Actual matchup: current 21.9% (winner given matchup 56.4%), fitted 21.9% (winner
 
 ### 2017, 243 days out (2016-08-23)
 
-Actual matchup: current 21.4% (winner given matchup 55.0%), fitted 21.4% (winner given matchup 55.0%).
+Actual matchup: current 22.6% (winner given matchup 56.2%), fitted 22.6% (winner given matchup 56.2%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 18.4% (13.4%–23.7%) | 23.3% / 23.3% ✓ | 12.7% / 12.7% ✓ |
-| le_pen | 21.3% | 31.2% (24.6%–38.0%) | 95.9% / 95.9% ✓ | 24.0% / 24.0% |
-| fillon | 20.0% | 21.6% (15.3%–28.3%) | 52.0% / 52.0% | 49.5% / 49.5% |
-| melenchon | 19.6% | 18.6% (12.1%–25.9%) | 28.7% / 28.7% | 13.8% / 13.8% |
+| macron | 24.0% | 18.6% (13.6%–24.0%) | 24.8% / 24.8% ✓ | 13.8% / 13.8% ✓ |
+| le_pen | 21.3% | 30.9% (24.3%–37.7%) | 95.5% / 95.5% ✓ | 23.5% / 23.5% |
+| fillon | 20.0% | 21.6% (15.3%–28.4%) | 51.4% / 51.4% | 48.8% / 48.8% |
+| melenchon | 19.6% | 18.6% (12.1%–25.9%) | 28.3% / 28.3% | 13.8% / 13.8% |
 | hamon | 6.4% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 4.7% | 5.0% (2.8%–7.3%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 4.7% | 5.0% (2.8%–7.4%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | lassalle | 1.2% | 0.8% (0.2%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 1.5% (0.7%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 1.5% (0.8%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 1.0% (0.3%–2.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 1.4% (0.7%–2.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | cheminade | 0.2% | 0.6% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 212 days out (2016-09-23)
 
-Actual matchup: current 16.0% (winner given matchup 48.9%), fitted 16.0% (winner given matchup 48.9%).
+Actual matchup: current 13.6% (winner given matchup 47.3%), fitted 13.6% (winner given matchup 47.3%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 17.5% (13.4%–21.8%) | 16.8% / 16.8% ✓ | 8.3% / 8.3% ✓ |
-| le_pen | 21.3% | 32.7% (26.3%–39.4%) | 97.8% / 97.8% ✓ | 39.2% / 39.2% |
-| fillon | 20.0% | 18.7% (13.6%–24.0%) | 29.0% / 29.0% | 27.6% / 27.6% |
-| melenchon | 19.6% | 21.3% (15.9%–27.1%) | 56.3% / 56.3% | 24.9% / 24.9% |
+| macron | 24.0% | 17.0% (13.0%–21.2%) | 14.3% / 14.3% ✓ | 6.8% / 6.8% ✓ |
+| le_pen | 21.3% | 33.1% (26.6%–39.8%) | 98.2% / 98.2% ✓ | 40.0% / 40.0% |
+| fillon | 20.0% | 18.7% (13.6%–24.0%) | 29.8% / 29.8% | 28.4% / 28.4% |
+| melenchon | 19.6% | 21.3% (15.9%–27.1%) | 57.8% / 57.8% | 24.7% / 24.7% |
 | hamon | 6.4% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 4.7% | 4.5% (2.7%–6.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 4.7% | 4.6% (2.8%–6.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | lassalle | 1.2% | 0.8% (0.2%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 1.6% (0.8%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 1.0% (0.3%–1.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 1.5% (0.8%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.5% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.5% (0.2%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 182 days out (2016-10-23)
 
-Actual matchup: current 8.1% (winner given matchup 57.0%), fitted 8.1% (winner given matchup 57.0%).
+Actual matchup: current 7.6% (winner given matchup 58.8%), fitted 7.6% (winner given matchup 58.8%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 17.0% (13.0%–21.1%) | 9.3% / 9.3% ✓ | 5.3% / 5.3% ✓ |
-| le_pen | 21.3% | 29.7% (23.5%–36.2%) | 93.5% / 93.5% ✓ | 31.4% / 31.4% |
-| fillon | 20.0% | 21.7% (15.7%–28.1%) | 48.5% / 48.5% | 46.2% / 46.2% |
-| melenchon | 19.6% | 21.8% (15.5%–28.5%) | 48.6% / 48.6% | 17.1% / 17.1% |
+| macron | 24.0% | 17.0% (13.0%–21.1%) | 9.0% / 9.0% ✓ | 5.3% / 5.3% ✓ |
+| le_pen | 21.3% | 29.2% (23.1%–35.6%) | 92.4% / 92.4% ✓ | 31.2% / 31.2% |
+| fillon | 20.0% | 21.7% (15.7%–28.2%) | 47.7% / 47.7% | 45.2% / 45.2% |
+| melenchon | 19.6% | 22.1% (15.8%–29.0%) | 50.9% / 50.9% | 18.3% / 18.3% |
 | hamon | 6.4% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 4.7% | 4.7% (2.9%–6.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 4.7% | 4.8% (2.9%–6.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | lassalle | 1.2% | 0.8% (0.2%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 1.5% (0.9%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 1.0% (0.3%–1.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 1.4% (0.7%–2.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.5% (0.2%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.6% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 152 days out (2016-11-22)
 
-Actual matchup: current 8.4% (winner given matchup 49.2%), fitted 8.4% (winner given matchup 49.2%).
+Actual matchup: current 10.2% (winner given matchup 52.0%), fitted 10.2% (winner given matchup 52.0%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 15.6% (10.9%–20.7%) | 9.1% / 9.1% ✓ | 4.5% / 4.5% ✓ |
-| le_pen | 21.3% | 32.6% (25.2%–40.4%) | 95.8% / 95.8% ✓ | 36.1% / 36.1% |
-| fillon | 20.0% | 21.2% (14.0%–29.2%) | 45.7% / 45.7% | 43.6% / 43.6% |
-| melenchon | 19.6% | 21.7% (15.0%–28.9%) | 49.4% / 49.4% | 15.8% / 15.8% |
+| macron | 24.0% | 16.3% (11.5%–21.7%) | 11.5% / 11.5% ✓ | 5.9% / 5.9% ✓ |
+| le_pen | 21.3% | 31.7% (24.4%–39.3%) | 94.8% / 94.8% ✓ | 29.4% / 29.4% |
+| fillon | 20.0% | 22.6% (15.0%–30.9%) | 54.0% / 54.0% | 51.7% / 51.7% |
+| melenchon | 19.6% | 20.7% (14.2%–27.6%) | 39.7% / 39.7% | 13.0% / 13.0% |
 | hamon | 6.4% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 4.7% | 3.8% (2.2%–5.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.7% (0.2%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 1.6% (0.9%–2.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| asselineau | 0.9% | 0.9% (0.3%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 1.5% (0.8%–2.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 4.7% | 3.8% (2.2%–5.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 0.7% (0.2%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 1.5% (0.8%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| asselineau | 0.9% | 0.8% (0.3%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 1.4% (0.8%–2.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | cheminade | 0.2% | 0.5% (0.2%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 122 days out (2016-12-22)
 
-Actual matchup: current 5.6% (winner given matchup 98.8%), fitted 5.6% (winner given matchup 98.8%).
+Actual matchup: current 7.8% (winner given matchup 98.5%), fitted 7.8% (winner given matchup 98.5%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 16.5% (10.7%–22.8%) | 14.5% / 14.5% ✓ | 7.9% / 7.9% ✓ |
-| le_pen | 21.3% | 26.0% (17.8%–34.9%) | 79.1% / 79.1% ✓ | 3.9% / 3.9% |
-| fillon | 20.0% | 30.0% (19.9%–40.8%) | 86.2% / 86.2% | 81.5% / 81.5% |
-| melenchon | 19.6% | 16.1% (8.5%–24.7%) | 19.6% / 19.6% | 6.6% / 6.6% |
-| hamon | 6.4% | 5.7% (2.0%–10.3%) | 0.6% / 0.6% | 0.2% / 0.2% |
-| dupont_aignan | 4.7% | 2.2% (1.1%–3.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.5% (0.1%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 16.7% (10.8%–23.1%) | 15.7% / 15.7% ✓ | 10.2% / 10.2% ✓ |
+| le_pen | 21.3% | 26.8% (18.5%–35.8%) | 81.0% / 81.0% ✓ | 5.9% / 5.9% |
+| fillon | 20.0% | 27.7% (18.0%–38.0%) | 79.8% / 79.8% | 75.2% / 75.2% |
+| melenchon | 19.6% | 16.7% (9.0%–25.6%) | 22.6% / 22.6% | 8.3% / 8.3% |
+| hamon | 6.4% | 6.1% (2.2%–11.1%) | 0.9% / 0.9% | 0.3% / 0.3% |
+| dupont_aignan | 4.7% | 2.3% (1.2%–3.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 0.5% (0.1%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 1.1% (0.5%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| asselineau | 0.9% | 0.6% (0.2%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| asselineau | 0.9% | 0.6% (0.2%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 1.0% (0.5%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.4% (0.2%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.4% (0.1%–0.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 91 days out (2017-01-22)
 
-Actual matchup: current 15.8% (winner given matchup 99.5%), fitted 15.8% (winner given matchup 99.5%).
+Actual matchup: current 19.6% (winner given matchup 99.5%), fitted 19.6% (winner given matchup 99.5%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 19.8% (14.1%–26.0%) | 31.4% / 31.4% ✓ | 26.9% / 26.9% ✓ |
-| le_pen | 21.3% | 25.9% (18.9%–33.4%) | 78.5% / 78.5% ✓ | 3.4% / 3.4% |
-| fillon | 20.0% | 25.6% (18.3%–33.2%) | 76.0% / 76.0% | 64.1% / 64.1% |
-| melenchon | 19.6% | 15.1% (8.9%–22.1%) | 13.1% / 13.1% | 5.2% / 5.2% |
-| hamon | 6.4% | 8.2% (4.0%–13.3%) | 1.1% / 1.1% | 0.4% / 0.4% |
-| dupont_aignan | 4.7% | 2.0% (1.0%–3.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.4% (0.1%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 1.0% (0.6%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 20.1% (14.3%–26.4%) | 34.1% / 34.1% ✓ | 30.0% / 30.0% ✓ |
+| le_pen | 21.3% | 26.4% (19.3%–34.0%) | 80.5% / 80.5% ✓ | 3.7% / 3.7% |
+| fillon | 20.0% | 24.7% (17.6%–32.2%) | 71.4% / 71.4% | 60.5% / 60.5% |
+| melenchon | 19.6% | 14.9% (8.8%–21.8%) | 12.5% / 12.5% | 5.2% / 5.2% |
+| hamon | 6.4% | 8.5% (4.1%–13.8%) | 1.4% / 1.4% | 0.6% / 0.6% |
+| dupont_aignan | 4.7% | 1.9% (1.0%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 0.5% (0.1%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 1.1% (0.6%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 0.5% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 1.0% (0.5%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | cheminade | 0.2% | 0.4% (0.2%–0.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 84 days out (2017-01-29)
 
-Actual matchup: current 17.9% (winner given matchup 99.6%), fitted 17.9% (winner given matchup 99.6%).
+Actual matchup: current 12.6% (winner given matchup 99.6%), fitted 12.6% (winner given matchup 99.6%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 19.1% (13.5%–25.0%) | 31.4% / 31.4% ✓ | 28.5% / 28.5% ✓ |
-| le_pen | 21.3% | 25.2% (18.4%–32.6%) | 79.1% / 79.1% ✓ | 5.3% / 5.3% |
-| fillon | 20.0% | 23.7% (16.6%–31.2%) | 68.8% / 68.8% | 57.4% / 57.4% |
-| melenchon | 19.6% | 15.2% (8.9%–22.1%) | 15.6% / 15.6% | 6.8% / 6.8% |
-| hamon | 6.4% | 11.4% (6.1%–17.5%) | 5.1% / 5.1% | 2.1% / 2.1% |
-| dupont_aignan | 4.7% | 2.0% (1.1%–3.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 18.7% (13.2%–24.5%) | 28.7% / 28.7% ✓ | 25.1% / 25.1% ✓ |
+| le_pen | 21.3% | 23.9% (17.4%–31.0%) | 73.6% / 73.6% ✓ | 4.1% / 4.1% |
+| fillon | 20.0% | 24.9% (17.6%–32.7%) | 76.1% / 76.1% | 61.9% / 61.9% |
+| melenchon | 19.6% | 14.8% (8.6%–21.4%) | 13.7% / 13.7% | 5.7% / 5.7% |
+| hamon | 6.4% | 12.5% (6.7%–19.1%) | 8.0% / 8.0% | 3.1% / 3.1% |
+| dupont_aignan | 4.7% | 1.9% (1.1%–3.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | lassalle | 1.2% | 0.5% (0.1%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 1.0% (0.5%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| asselineau | 0.9% | 0.6% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| asselineau | 0.9% | 0.5% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.9% (0.5%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | cheminade | 0.2% | 0.4% (0.2%–0.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 77 days out (2017-02-05)
 
-Actual matchup: current 22.7% (winner given matchup 99.5%), fitted 22.7% (winner given matchup 99.5%).
+Actual matchup: current 22.6% (winner given matchup 99.5%), fitted 22.6% (winner given matchup 99.5%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 19.0% (12.1%–26.6%) | 36.9% / 36.9% ✓ | 32.9% / 32.9% ✓ |
-| le_pen | 21.3% | 25.6% (17.0%–35.1%) | 75.2% / 75.2% ✓ | 11.6% / 11.6% |
-| fillon | 20.0% | 20.2% (12.5%–28.7%) | 45.4% / 45.4% | 35.8% / 35.8% |
-| melenchon | 19.6% | 12.7% (6.1%–20.3%) | 11.4% / 11.4% | 5.1% / 5.1% |
-| hamon | 6.4% | 17.5% (9.5%–26.6%) | 31.2% / 31.2% | 14.7% / 14.7% |
-| dupont_aignan | 4.7% | 1.9% (0.9%–3.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.4% (0.1%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 0.9% (0.4%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 19.3% (12.3%–26.9%) | 38.3% / 38.3% ✓ | 34.1% / 34.1% ✓ |
+| le_pen | 21.3% | 25.2% (16.7%–34.6%) | 73.4% / 73.4% ✓ | 10.3% / 10.3% |
+| fillon | 20.0% | 20.7% (12.9%–29.3%) | 48.1% / 48.1% | 37.2% / 37.2% |
+| melenchon | 19.6% | 12.8% (6.2%–20.5%) | 11.6% / 11.6% | 5.2% / 5.2% |
+| hamon | 6.4% | 17.1% (9.2%–26.0%) | 28.6% / 28.6% | 13.2% / 13.2% |
+| dupont_aignan | 4.7% | 2.0% (0.9%–3.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 0.4% (0.1%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 0.8% (0.4%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 0.5% (0.1%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.8% (0.4%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | cheminade | 0.2% | 0.4% (0.1%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 70 days out (2017-02-12)
 
-Actual matchup: current 28.0% (winner given matchup 99.7%), fitted 28.0% (winner given matchup 99.7%).
+Actual matchup: current 35.5% (winner given matchup 99.7%), fitted 35.5% (winner given matchup 99.7%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 19.8% (12.7%–27.5%) | 42.9% / 42.9% ✓ | 38.9% / 38.9% ✓ |
-| le_pen | 21.3% | 25.6% (17.3%–34.6%) | 76.4% / 76.4% ✓ | 11.2% / 11.2% |
-| fillon | 20.0% | 19.5% (12.3%–27.5%) | 41.5% / 41.5% | 32.0% / 32.0% |
-| melenchon | 19.6% | 13.5% (7.0%–21.0%) | 13.1% / 13.1% | 6.0% / 6.0% |
-| hamon | 6.4% | 16.6% (9.1%–24.9%) | 26.1% / 26.1% | 12.0% / 12.0% |
+| macron | 24.0% | 20.0% (12.9%–27.8%) | 45.8% / 45.8% ✓ | 43.0% / 43.0% ✓ |
+| le_pen | 21.3% | 27.8% (19.0%–37.3%) | 84.7% / 84.7% ✓ | 11.9% / 11.9% |
+| fillon | 20.0% | 18.7% (11.7%–26.4%) | 36.7% / 36.7% | 30.3% / 30.3% |
+| melenchon | 19.6% | 13.6% (7.0%–21.1%) | 13.6% / 13.6% | 6.2% / 6.2% |
+| hamon | 6.4% | 15.0% (8.2%–22.8%) | 19.1% / 19.1% | 8.6% / 8.6% |
 | dupont_aignan | 4.7% | 2.0% (1.0%–3.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.5% (0.1%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 0.8% (0.4%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 0.4% (0.1%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 0.8% (0.4%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 0.6% (0.2%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.7% (0.3%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.5% (0.2%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.4% (0.2%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 63 days out (2017-02-19)
 
-Actual matchup: current 25.8% (winner given matchup 99.5%), fitted 25.8% (winner given matchup 99.5%).
+Actual matchup: current 28.1% (winner given matchup 99.6%), fitted 28.1% (winner given matchup 99.6%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 19.1% (12.5%–26.3%) | 38.6% / 38.6% ✓ | 35.0% / 35.0% ✓ |
-| le_pen | 21.3% | 25.7% (17.7%–34.5%) | 78.6% / 78.6% ✓ | 12.7% / 12.7% |
-| fillon | 20.0% | 19.4% (12.5%–26.9%) | 41.6% / 41.6% | 33.3% / 33.3% |
-| melenchon | 19.6% | 13.8% (7.4%–21.0%) | 13.4% / 13.4% | 6.2% / 6.2% |
-| hamon | 6.4% | 16.9% (9.6%–25.0%) | 27.8% / 27.8% | 12.9% / 12.9% |
-| dupont_aignan | 4.7% | 2.3% (1.1%–3.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.5% (0.1%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 19.2% (12.6%–26.4%) | 39.8% / 39.8% ✓ | 36.7% / 36.7% ✓ |
+| le_pen | 21.3% | 26.3% (18.2%–35.2%) | 81.1% / 81.1% ✓ | 12.1% / 12.1% |
+| fillon | 20.0% | 19.5% (12.6%–27.1%) | 43.1% / 43.1% | 35.1% / 35.1% |
+| melenchon | 19.6% | 14.0% (7.4%–21.3%) | 14.3% / 14.3% | 6.5% / 6.5% |
+| hamon | 6.4% | 15.7% (8.9%–23.3%) | 21.7% / 21.7% | 9.7% / 9.7% |
+| dupont_aignan | 4.7% | 2.5% (1.2%–4.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 0.5% (0.1%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 0.6% (0.3%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| asselineau | 0.9% | 0.6% (0.2%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.5% (0.2%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| asselineau | 0.9% | 0.7% (0.2%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.5% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.4% (0.2%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 56 days out (2017-02-26)
 
-Actual matchup: current 43.0% (winner given matchup 99.3%), fitted 43.0% (winner given matchup 99.3%).
+Actual matchup: current 55.4% (winner given matchup 99.3%), fitted 55.4% (winner given matchup 99.3%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 22.5% (15.3%–30.4%) | 60.3% / 60.3% ✓ | 56.6% / 56.6% ✓ |
-| le_pen | 21.3% | 26.1% (18.4%–34.3%) | 80.0% / 80.0% ✓ | 5.5% / 5.5% |
-| fillon | 20.0% | 20.3% (13.7%–27.5%) | 44.3% / 44.3% | 31.7% / 31.7% |
-| melenchon | 19.6% | 11.8% (6.5%–17.6%) | 5.2% / 5.2% | 2.2% / 2.2% |
-| hamon | 6.4% | 13.7% (8.0%–20.0%) | 10.1% / 10.1% | 4.0% / 4.0% |
-| dupont_aignan | 4.7% | 2.4% (1.2%–3.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.5% (0.1%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 23.1% (15.7%–31.1%) | 67.4% / 67.4% ✓ | 64.5% / 64.5% ✓ |
+| le_pen | 21.3% | 27.4% (19.5%–35.9%) | 86.5% / 86.5% ✓ | 5.7% / 5.7% |
+| fillon | 20.0% | 18.6% (12.4%–25.3%) | 32.3% / 32.3% | 24.1% / 24.1% |
+| melenchon | 19.6% | 12.5% (6.9%–18.6%) | 7.1% / 7.1% | 3.0% / 3.0% |
+| hamon | 6.4% | 12.5% (7.2%–18.3%) | 6.6% / 6.6% | 2.7% / 2.7% |
+| dupont_aignan | 4.7% | 2.7% (1.3%–4.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 0.6% (0.1%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 0.8% (0.4%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| asselineau | 0.9% | 0.7% (0.2%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| asselineau | 0.9% | 0.7% (0.2%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.7% (0.4%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.5% (0.2%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.6% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 49 days out (2017-03-05)
 
-Actual matchup: current 65.6% (winner given matchup 99.5%), fitted 65.6% (winner given matchup 99.5%).
+Actual matchup: current 69.9% (winner given matchup 99.5%), fitted 69.9% (winner given matchup 99.5%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 24.4% (17.2%–32.1%) | 77.2% / 77.2% ✓ | 74.4% / 74.4% ✓ |
-| le_pen | 21.3% | 27.1% (19.6%–35.1%) | 87.4% / 87.4% ✓ | 5.2% / 5.2% |
-| fillon | 20.0% | 16.8% (10.9%–23.4%) | 20.8% / 20.8% | 14.4% / 14.4% |
-| melenchon | 19.6% | 11.7% (6.8%–17.2%) | 4.3% / 4.3% | 1.8% / 1.8% |
-| hamon | 6.4% | 14.2% (8.7%–20.3%) | 10.3% / 10.3% | 4.2% / 4.2% |
-| dupont_aignan | 4.7% | 2.5% (1.3%–3.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 24.9% (17.6%–32.7%) | 80.1% / 80.1% ✓ | 77.7% / 77.7% ✓ |
+| le_pen | 21.3% | 27.5% (19.9%–35.6%) | 89.0% / 89.0% ✓ | 4.4% / 4.4% |
+| fillon | 20.0% | 16.6% (10.7%–23.1%) | 19.2% / 19.2% | 13.3% / 13.3% |
+| melenchon | 19.6% | 11.3% (6.5%–16.6%) | 3.5% / 3.5% | 1.4% / 1.4% |
+| hamon | 6.4% | 13.6% (8.3%–19.5%) | 8.2% / 8.2% | 3.2% / 3.2% |
+| dupont_aignan | 4.7% | 2.4% (1.2%–3.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | lassalle | 1.2% | 0.6% (0.1%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 0.8% (0.5%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 1.0% (0.5%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 0.7% (0.2%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.7% (0.4%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.5% (0.2%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.8% (0.4%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.6% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 42 days out (2017-03-12)
 
-Actual matchup: current 56.4% (winner given matchup 99.6%), fitted 56.4% (winner given matchup 99.6%).
+Actual matchup: current 43.6% (winner given matchup 99.6%), fitted 43.6% (winner given matchup 99.6%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 25.4% (18.3%–33.0%) | 77.8% / 77.8% ✓ | 76.7% / 76.7% ✓ |
-| le_pen | 21.3% | 25.2% (18.3%–32.7%) | 77.6% / 77.6% ✓ | 2.4% / 2.4% |
-| fillon | 20.0% | 19.9% (13.3%–27.0%) | 36.5% / 36.5% | 17.9% / 17.9% |
-| melenchon | 19.6% | 11.1% (6.6%–16.1%) | 2.6% / 2.6% | 0.9% / 0.9% |
-| hamon | 6.4% | 13.1% (8.1%–18.6%) | 5.6% / 5.6% | 2.1% / 2.1% |
-| dupont_aignan | 4.7% | 2.2% (1.2%–3.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 24.9% (17.9%–32.4%) | 73.5% / 73.5% ✓ | 72.5% / 72.5% ✓ |
+| le_pen | 21.3% | 24.0% (17.4%–31.2%) | 68.5% / 68.5% ✓ | 2.0% / 2.0% |
+| fillon | 20.0% | 21.9% (14.8%–29.5%) | 50.5% / 50.5% | 22.8% / 22.8% |
+| melenchon | 19.6% | 10.4% (6.1%–15.1%) | 1.6% / 1.6% | 0.5% / 0.5% |
+| hamon | 6.4% | 13.2% (8.2%–18.7%) | 5.8% / 5.8% | 2.1% / 2.1% |
+| dupont_aignan | 4.7% | 2.3% (1.2%–3.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | lassalle | 1.2% | 0.5% (0.1%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 0.7% (0.4%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| asselineau | 0.9% | 0.6% (0.2%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.8% (0.4%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.4% (0.2%–0.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 0.8% (0.4%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| asselineau | 0.9% | 0.7% (0.2%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.9% (0.5%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.5% (0.2%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 35 days out (2017-03-19)
 
-Actual matchup: current 68.2% (winner given matchup 99.6%), fitted 68.2% (winner given matchup 99.6%).
+Actual matchup: current 71.0% (winner given matchup 99.5%), fitted 71.0% (winner given matchup 99.5%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 25.3% (18.7%–32.4%) | 82.0% / 82.0% ✓ | 81.0% / 81.0% ✓ |
-| le_pen | 21.3% | 26.2% (19.5%–33.3%) | 85.6% / 85.6% ✓ | 2.6% / 2.6% |
-| fillon | 20.0% | 18.4% (12.7%–24.5%) | 25.5% / 25.5% | 13.7% / 13.7% |
-| melenchon | 19.6% | 11.3% (6.9%–16.1%) | 2.5% / 2.5% | 0.9% / 0.9% |
-| hamon | 6.4% | 12.6% (7.9%–17.8%) | 4.3% / 4.3% | 1.8% / 1.8% |
-| dupont_aignan | 4.7% | 2.9% (1.7%–4.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.5% (0.2%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 0.7% (0.4%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 25.6% (18.9%–32.7%) | 84.7% / 84.7% ✓ | 83.5% / 83.5% ✓ |
+| le_pen | 21.3% | 25.8% (19.2%–32.9%) | 85.7% / 85.7% ✓ | 2.6% / 2.6% |
+| fillon | 20.0% | 17.7% (12.2%–23.6%) | 21.8% / 21.8% | 10.9% / 10.9% |
+| melenchon | 19.6% | 11.5% (7.0%–16.4%) | 2.9% / 2.9% | 1.1% / 1.1% |
+| hamon | 6.4% | 12.7% (8.0%–17.9%) | 4.8% / 4.8% | 1.9% / 1.9% |
+| dupont_aignan | 4.7% | 3.1% (1.8%–4.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 0.6% (0.2%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 0.8% (0.4%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 0.6% (0.3%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.9% (0.5%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.5% (0.2%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 1.0% (0.6%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.6% (0.2%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 28 days out (2017-03-26)
 
-Actual matchup: current 69.7% (winner given matchup 99.7%), fitted 69.7% (winner given matchup 99.7%).
+Actual matchup: current 66.7% (winner given matchup 99.7%), fitted 66.7% (winner given matchup 99.7%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 25.2% (18.9%–31.8%) | 85.2% / 85.2% ✓ | 83.8% / 83.8% ✓ |
-| le_pen | 21.3% | 24.8% (18.6%–31.3%) | 83.7% / 83.7% ✓ | 2.4% / 2.4% |
-| fillon | 20.0% | 17.7% (12.6%–23.2%) | 22.0% / 22.0% | 10.2% / 10.2% |
-| melenchon | 19.6% | 13.1% (8.3%–18.3%) | 5.9% / 5.9% | 2.4% / 2.4% |
-| hamon | 6.4% | 11.6% (7.1%–16.5%) | 3.1% / 3.1% | 1.2% / 1.2% |
-| dupont_aignan | 4.7% | 4.0% (2.5%–5.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 1.0% (0.5%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 0.6% (0.4%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| asselineau | 0.9% | 0.6% (0.3%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.8% (0.4%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 24.6% (18.3%–31.1%) | 83.2% / 83.2% ✓ | 81.4% / 81.4% ✓ |
+| le_pen | 21.3% | 24.4% (18.3%–30.8%) | 82.4% / 82.4% ✓ | 3.2% / 3.2% |
+| fillon | 20.0% | 17.4% (12.4%–22.8%) | 21.4% / 21.4% | 10.2% / 10.2% |
+| melenchon | 19.6% | 14.1% (9.0%–19.7%) | 9.6% / 9.6% | 3.9% / 3.9% |
+| hamon | 6.4% | 11.7% (7.2%–16.7%) | 3.5% / 3.5% | 1.4% / 1.4% |
+| dupont_aignan | 4.7% | 4.2% (2.6%–6.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 1.1% (0.5%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 0.7% (0.4%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| asselineau | 0.9% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.7% (0.4%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.6% (0.3%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 21 days out (2017-04-02)
 
-Actual matchup: current 76.1% (winner given matchup 99.6%), fitted 76.1% (winner given matchup 99.6%).
+Actual matchup: current 78.6% (winner given matchup 99.6%), fitted 78.6% (winner given matchup 99.6%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 24.7% (19.7%–29.9%) | 88.0% / 88.0% ✓ | 86.8% / 86.8% ✓ |
-| le_pen | 21.3% | 24.5% (19.6%–29.6%) | 87.5% / 87.5% ✓ | 2.0% / 2.0% |
-| fillon | 20.0% | 17.7% (13.5%–22.1%) | 15.9% / 15.9% | 7.2% / 7.2% |
-| melenchon | 19.6% | 14.8% (10.4%–19.5%) | 7.5% / 7.5% | 3.6% / 3.6% |
-| hamon | 6.4% | 10.7% (7.1%–14.8%) | 1.0% / 1.0% | 0.4% / 0.4% |
-| dupont_aignan | 4.7% | 3.9% (2.7%–5.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 0.9% (0.5%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 24.5% (19.5%–29.7%) | 88.4% / 88.4% ✓ | 87.0% / 87.0% ✓ |
+| le_pen | 21.3% | 24.8% (19.8%–30.0%) | 89.7% / 89.7% ✓ | 2.4% / 2.4% |
+| fillon | 20.0% | 17.0% (13.0%–21.2%) | 11.8% / 11.8% | 5.8% / 5.8% |
+| melenchon | 19.6% | 15.2% (10.7%–20.0%) | 9.0% / 9.0% | 4.4% / 4.4% |
+| hamon | 6.4% | 10.8% (7.1%–14.9%) | 1.1% / 1.1% | 0.4% / 0.4% |
+| dupont_aignan | 4.7% | 3.9% (2.7%–5.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 1.0% (0.6%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 0.8% (0.5%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.8% (0.5%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.6% (0.3%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 14 days out (2017-04-09)
 
-Actual matchup: current 60.6% (winner given matchup 99.7%), fitted 60.6% (winner given matchup 99.7%).
+Actual matchup: current 63.7% (winner given matchup 99.7%), fitted 63.7% (winner given matchup 99.7%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 23.3% (18.3%–28.6%) | 78.6% / 78.6% ✓ | 75.7% / 75.7% ✓ |
-| le_pen | 21.3% | 23.6% (18.6%–28.9%) | 80.5% / 80.5% ✓ | 1.1% / 1.1% |
-| fillon | 20.0% | 17.6% (13.4%–22.0%) | 18.4% / 18.4% | 8.5% / 8.5% |
-| melenchon | 19.6% | 17.6% (12.9%–22.5%) | 21.9% / 21.9% | 14.5% / 14.5% |
-| hamon | 6.4% | 9.1% (5.9%–12.7%) | 0.5% / 0.5% | 0.2% / 0.2% |
-| dupont_aignan | 4.7% | 3.9% (2.6%–5.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 1.2% | 1.0% (0.6%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 1.1% | 1.5% (0.9%–2.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 24.0% | 23.3% (18.3%–28.6%) | 80.2% / 80.2% ✓ | 76.7% / 76.7% ✓ |
+| le_pen | 21.3% | 23.7% (18.7%–29.0%) | 82.5% / 82.5% ✓ | 1.0% / 1.0% |
+| fillon | 20.0% | 16.5% (12.5%–20.7%) | 11.9% / 11.9% | 5.4% / 5.4% |
+| melenchon | 19.6% | 17.9% (13.1%–22.9%) | 25.0% / 25.0% | 16.7% / 16.7% |
+| hamon | 6.4% | 9.0% (5.9%–12.5%) | 0.4% / 0.4% | 0.2% / 0.2% |
+| dupont_aignan | 4.7% | 4.1% (2.7%–5.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 1.2% | 1.2% (0.7%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 1.1% | 1.7% (1.1%–2.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 0.7% (0.4%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 1.1% (0.6%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| cheminade | 0.2% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 1.2% (0.7%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| cheminade | 0.2% | 0.7% (0.3%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2017, 7 days out (2017-04-16)
 
-Actual matchup: current 37.2% (winner given matchup 99.7%), fitted 37.2% (winner given matchup 99.7%).
+Actual matchup: current 33.6% (winner given matchup 99.6%), fitted 33.6% (winner given matchup 99.6%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 24.0% | 22.4% (17.9%–26.9%) | 68.3% / 68.3% ✓ | 67.5% / 67.5% ✓ |
-| le_pen | 21.3% | 21.9% (17.6%–26.3%) | 63.6% / 63.6% ✓ | 0.7% / 0.7% |
-| fillon | 20.0% | 19.0% (15.0%–23.2%) | 29.0% / 29.0% | 10.5% / 10.5% |
-| melenchon | 19.6% | 19.7% (15.3%–24.4%) | 38.8% / 38.8% | 21.2% / 21.2% |
-| hamon | 6.4% | 8.2% (5.6%–11.1%) | 0.2% / 0.2% | 0.0% / 0.0% |
+| macron | 24.0% | 22.1% (17.7%–26.6%) | 65.2% / 65.2% ✓ | 64.4% / 64.4% ✓ |
+| le_pen | 21.3% | 21.8% (17.5%–26.2%) | 62.1% / 62.1% ✓ | 0.7% / 0.7% |
+| fillon | 20.0% | 19.0% (15.0%–23.2%) | 28.8% / 28.8% | 10.3% / 10.3% |
+| melenchon | 19.6% | 20.2% (15.7%–24.9%) | 43.7% / 43.7% | 24.5% / 24.5% |
+| hamon | 6.4% | 8.2% (5.5%–11.0%) | 0.2% / 0.2% | 0.0% / 0.0% |
 | dupont_aignan | 4.7% | 3.6% (2.5%–4.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | lassalle | 1.2% | 1.1% (0.7%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 1.1% | 1.7% (1.2%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | asselineau | 0.9% | 0.9% (0.5%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.8% (0.5%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.9% (0.5%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | cheminade | 0.2% | 0.6% (0.3%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 334 days out (2021-05-11)
 
-Actual matchup: current 88.1% (winner given matchup 88.1%), fitted 88.1% (winner given matchup 88.1%).
+Actual matchup: current 88.4% (winner given matchup 88.0%), fitted 88.4% (winner given matchup 88.0%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 27.9% (18.3%–38.3%) | 91.9% / 91.9% ✓ | 80.2% / 80.2% ✓ |
-| le_pen | 23.1% | 26.5% (19.9%–33.4%) | 96.1% / 96.1% ✓ | 12.8% / 12.8% |
-| melenchon | 21.9% | 10.7% (5.0%–17.3%) | 5.3% / 5.3% | 2.9% / 2.9% |
+| macron | 27.9% | 27.9% (18.3%–38.3%) | 92.0% / 92.0% ✓ | 80.3% / 80.3% ✓ |
+| le_pen | 23.1% | 26.7% (20.1%–33.6%) | 96.4% / 96.4% ✓ | 13.0% / 13.0% |
+| melenchon | 21.9% | 10.8% (5.0%–17.3%) | 5.3% / 5.3% | 2.9% / 2.9% |
 | zemmour | 7.1% | not polled | 0.0% / 0.0% | 0.0% / 0.0% |
-| pecresse | 4.8% | 11.1% (6.3%–16.8%) | 4.7% / 4.7% | 3.0% / 3.0% |
-| jadot | 4.6% | 6.0% (2.2%–10.6%) | 1.0% / 1.0% | 0.5% / 0.5% |
+| pecresse | 4.8% | 11.0% (6.2%–16.6%) | 4.3% / 4.3% | 2.8% / 2.8% |
+| jadot | 4.6% | 6.0% (2.2%–10.5%) | 0.9% / 0.9% | 0.5% / 0.5% |
 | lassalle | 3.1% | 2.5% (0.8%–4.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 1.2% (0.3%–2.3%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 5.9% (3.0%–9.3%) | 0.2% / 0.2% | 0.1% / 0.1% |
-| hidalgo | 1.8% | 5.7% (2.0%–10.1%) | 0.8% / 0.8% | 0.4% / 0.4% |
+| dupont_aignan | 2.1% | 6.0% (3.0%–9.3%) | 0.2% / 0.2% | 0.1% / 0.1% |
+| hidalgo | 1.8% | 5.6% (2.0%–10.0%) | 0.7% / 0.7% | 0.4% / 0.4% |
 | poutou | 0.8% | 1.6% (0.8%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.8% (0.3%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 304 days out (2021-06-10)
 
-Actual matchup: current 83.5% (winner given matchup 77.3%), fitted 83.5% (winner given matchup 77.3%).
+Actual matchup: current 83.1% (winner given matchup 77.5%), fitted 83.1% (winner given matchup 77.5%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 26.0% (15.7%–37.4%) | 90.4% / 90.4% ✓ | 70.0% / 70.0% ✓ |
-| le_pen | 23.1% | 27.2% (17.4%–37.4%) | 92.9% / 92.9% ✓ | 24.1% / 24.1% |
-| melenchon | 21.9% | 10.1% (4.5%–16.6%) | 7.1% / 7.1% | 2.7% / 2.7% |
-| zemmour | 7.1% | 6.7% (2.0%–13.0%) | 4.9% / 4.9% | 1.1% / 1.1% |
+| macron | 27.9% | 26.1% (15.8%–37.5%) | 90.3% / 90.3% ✓ | 70.1% / 70.1% ✓ |
+| le_pen | 23.1% | 27.1% (17.3%–37.2%) | 92.6% / 92.6% ✓ | 23.9% / 23.9% |
+| melenchon | 21.9% | 10.3% (4.5%–16.8%) | 7.4% / 7.4% | 2.8% / 2.8% |
+| zemmour | 7.1% | 6.8% (2.0%–13.2%) | 5.0% / 5.0% | 1.2% / 1.2% |
 | pecresse | 4.8% | 9.1% (5.7%–13.0%) | 1.9% / 1.9% | 1.0% / 1.0% |
-| jadot | 4.6% | 5.7% (2.0%–10.1%) | 1.2% / 1.2% | 0.5% / 0.5% |
+| jadot | 4.6% | 5.6% (2.0%–10.0%) | 1.2% / 1.2% | 0.5% / 0.5% |
 | lassalle | 3.1% | 1.5% (0.5%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 1.5% (0.4%–2.8%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | dupont_aignan | 2.1% | 4.3% (2.4%–6.6%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | hidalgo | 1.8% | 5.9% (2.1%–10.5%) | 1.4% / 1.4% | 0.5% / 0.5% |
-| poutou | 0.8% | 1.1% (0.5%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.0% (0.5%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.8% (0.3%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 273 days out (2021-07-11)
 
-Actual matchup: current 79.4% (winner given matchup 87.8%), fitted 79.4% (winner given matchup 87.8%).
+Actual matchup: current 80.4% (winner given matchup 87.6%), fitted 80.4% (winner given matchup 87.6%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 25.0% (17.6%–32.7%) | 92.7% / 92.7% ✓ | 79.2% / 79.2% ✓ |
-| le_pen | 23.1% | 23.7% (15.4%–32.4%) | 86.2% / 86.2% ✓ | 11.7% / 11.7% |
-| melenchon | 21.9% | 9.1% (4.0%–15.0%) | 4.8% / 4.8% | 2.1% / 2.1% |
-| zemmour | 7.1% | 6.2% (2.0%–11.7%) | 3.5% / 3.5% | 0.6% / 0.6% |
-| pecresse | 4.8% | 11.9% (7.1%–17.5%) | 8.7% / 8.7% | 4.6% / 4.6% |
-| jadot | 4.6% | 7.0% (2.7%–12.0%) | 2.1% / 2.1% | 1.0% / 1.0% |
+| macron | 27.9% | 24.9% (17.6%–32.7%) | 92.8% / 92.8% ✓ | 79.3% / 79.3% ✓ |
+| le_pen | 23.1% | 24.0% (15.6%–32.7%) | 87.1% / 87.1% ✓ | 12.0% / 12.0% |
+| melenchon | 21.9% | 8.9% (3.8%–14.7%) | 4.3% / 4.3% | 1.9% / 1.9% |
+| zemmour | 7.1% | 6.3% (2.0%–11.8%) | 3.5% / 3.5% | 0.6% / 0.6% |
+| pecresse | 4.8% | 11.8% (7.0%–17.4%) | 8.2% / 8.2% | 4.4% / 4.4% |
+| jadot | 4.6% | 6.9% (2.7%–11.8%) | 1.9% / 1.9% | 0.9% / 0.9% |
 | lassalle | 3.1% | 1.7% (0.6%–3.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 2.2% (0.7%–4.0%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | dupont_aignan | 2.1% | 4.6% (2.6%–6.8%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 6.5% (2.5%–11.3%) | 1.8% / 1.8% | 0.7% / 0.7% |
+| hidalgo | 1.8% | 6.6% (2.5%–11.5%) | 1.9% / 1.9% | 0.8% / 0.8% |
 | poutou | 0.8% | 1.2% (0.6%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.9% (0.4%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 1.0% (0.4%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 243 days out (2021-08-10)
 
-Actual matchup: current 77.6% (winner given matchup 87.6%), fitted 77.6% (winner given matchup 87.6%).
+Actual matchup: current 78.5% (winner given matchup 87.5%), fitted 78.5% (winner given matchup 87.5%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 24.9% (17.2%–33.2%) | 91.1% / 91.1% ✓ | 77.4% / 77.4% ✓ |
-| le_pen | 23.1% | 23.6% (15.4%–32.4%) | 86.0% / 86.0% ✓ | 12.0% / 12.0% |
-| melenchon | 21.9% | 9.1% (4.0%–15.0%) | 4.9% / 4.9% | 2.1% / 2.1% |
-| zemmour | 7.1% | 6.1% (2.0%–11.4%) | 3.1% / 3.1% | 0.5% / 0.5% |
-| pecresse | 4.8% | 12.0% (6.7%–18.4%) | 10.9% / 10.9% | 6.1% / 6.1% |
-| jadot | 4.6% | 7.0% (2.8%–11.9%) | 2.1% / 2.1% | 1.0% / 1.0% |
+| macron | 27.9% | 25.0% (17.2%–33.2%) | 91.4% / 91.4% ✓ | 77.8% / 77.8% ✓ |
+| le_pen | 23.1% | 23.9% (15.5%–32.6%) | 86.6% / 86.6% ✓ | 12.1% / 12.1% |
+| melenchon | 21.9% | 9.2% (4.1%–15.1%) | 5.0% / 5.0% | 2.2% / 2.2% |
+| zemmour | 7.1% | 6.1% (2.0%–11.2%) | 3.0% / 3.0% | 0.5% / 0.5% |
+| pecresse | 4.8% | 11.8% (6.5%–18.1%) | 10.0% / 10.0% | 5.6% / 5.6% |
+| jadot | 4.6% | 6.8% (2.7%–11.7%) | 1.9% / 1.9% | 0.9% / 0.9% |
 | lassalle | 3.1% | 1.7% (0.6%–3.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 2.2% (0.7%–4.0%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | dupont_aignan | 2.1% | 4.6% (2.5%–7.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 6.5% (2.5%–11.3%) | 1.8% / 1.8% | 0.8% / 0.8% |
-| poutou | 0.8% | 1.2% (0.6%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 6.6% (2.6%–11.5%) | 1.9% / 1.9% | 0.8% / 0.8% |
+| poutou | 0.8% | 1.2% (0.6%–1.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.9% (0.4%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 212 days out (2021-09-10)
 
-Actual matchup: current 79.4% (winner given matchup 88.5%), fitted 79.4% (winner given matchup 88.5%).
+Actual matchup: current 79.5% (winner given matchup 88.2%), fitted 79.5% (winner given matchup 88.2%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 24.7% (19.4%–30.1%) | 96.2% / 96.2% ✓ | 81.6% / 81.6% ✓ |
-| le_pen | 23.1% | 21.0% (14.6%–27.5%) | 82.8% / 82.8% ✓ | 9.9% / 9.9% |
-| melenchon | 21.9% | 9.9% (4.9%–15.5%) | 5.7% / 5.7% | 2.2% / 2.2% |
-| zemmour | 7.1% | 7.1% (3.0%–12.0%) | 3.6% / 3.6% | 0.4% / 0.4% |
-| pecresse | 4.8% | 12.3% (8.0%–17.2%) | 7.7% / 7.7% | 4.2% / 4.2% |
-| jadot | 4.6% | 7.1% (3.2%–11.5%) | 1.8% / 1.8% | 0.8% / 0.8% |
-| lassalle | 3.1% | 1.6% (0.7%–2.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 27.9% | 24.3% (19.1%–29.7%) | 95.8% / 95.8% ✓ | 81.2% / 81.2% ✓ |
+| le_pen | 23.1% | 21.2% (14.7%–27.7%) | 83.4% / 83.4% ✓ | 10.3% / 10.3% |
+| melenchon | 21.9% | 9.8% (4.9%–15.4%) | 5.4% / 5.4% | 2.2% / 2.2% |
+| zemmour | 7.1% | 7.3% (3.1%–12.3%) | 3.9% / 3.9% | 0.5% / 0.5% |
+| pecresse | 4.8% | 12.2% (8.0%–17.0%) | 7.3% / 7.3% | 4.0% / 4.0% |
+| jadot | 4.6% | 7.2% (3.2%–11.8%) | 1.9% / 1.9% | 0.8% / 0.8% |
+| lassalle | 3.1% | 1.6% (0.7%–2.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 2.3% (0.9%–3.9%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 4.6% (3.0%–6.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 4.6% (3.0%–6.3%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | hidalgo | 1.8% | 7.4% (3.4%–12.1%) | 2.1% / 2.1% | 0.9% / 0.9% |
 | poutou | 0.8% | 1.1% (0.6%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.9% (0.4%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 182 days out (2021-10-10)
 
-Actual matchup: current 44.5% (winner given matchup 91.1%), fitted 44.5% (winner given matchup 91.1%).
+Actual matchup: current 45.7% (winner given matchup 91.1%), fitted 45.7% (winner given matchup 91.1%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 25.8% (17.0%–35.1%) | 89.5% / 89.5% ✓ | 83.3% / 83.3% ✓ |
-| le_pen | 23.1% | 17.5% (9.0%–26.8%) | 52.9% / 52.9% ✓ | 7.7% / 7.7% |
-| melenchon | 21.9% | 8.1% (3.5%–13.6%) | 5.2% / 5.2% | 0.9% / 0.9% |
-| zemmour | 7.1% | 14.9% (6.9%–23.9%) | 35.0% / 35.0% | 4.2% / 4.2% |
-| pecresse | 4.8% | 11.6% (7.0%–16.9%) | 11.3% / 11.3% | 2.9% / 2.9% |
-| jadot | 4.6% | 7.8% (3.3%–13.1%) | 4.3% / 4.3% | 0.8% / 0.8% |
+| macron | 27.9% | 26.0% (17.2%–35.4%) | 90.0% / 90.0% ✓ | 83.7% / 83.7% ✓ |
+| le_pen | 23.1% | 17.6% (9.1%–27.1%) | 53.8% / 53.8% ✓ | 7.6% / 7.6% |
+| melenchon | 21.9% | 8.0% (3.4%–13.4%) | 4.8% / 4.8% | 0.8% / 0.8% |
+| zemmour | 7.1% | 14.9% (6.9%–24.0%) | 34.8% / 34.8% | 4.1% / 4.1% |
+| pecresse | 4.8% | 11.6% (7.0%–16.8%) | 11.1% / 11.1% | 2.8% / 2.8% |
+| jadot | 4.6% | 7.5% (3.2%–12.8%) | 3.9% / 3.9% | 0.7% / 0.7% |
 | lassalle | 3.1% | 1.3% (0.4%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 2.2% (0.8%–4.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 3.4% (1.8%–5.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 5.5% (2.1%–9.7%) | 1.5% / 1.5% | 0.3% / 0.3% |
-| poutou | 0.8% | 1.0% (0.5%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.9% (0.4%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 2.3% (0.8%–4.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 3.5% (1.8%–5.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 5.4% (2.1%–9.5%) | 1.4% / 1.4% | 0.2% / 0.2% |
+| poutou | 0.8% | 1.1% (0.5%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 1.0% (0.4%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 152 days out (2021-11-09)
 
-Actual matchup: current 37.6% (winner given matchup 90.5%), fitted 37.6% (winner given matchup 90.5%).
+Actual matchup: current 39.1% (winner given matchup 90.4%), fitted 39.1% (winner given matchup 90.4%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 24.9% (16.8%–33.4%) | 88.8% / 88.8% ✓ | 83.4% / 83.4% ✓ |
-| le_pen | 23.1% | 16.6% (8.7%–25.4%) | 46.2% / 46.2% ✓ | 7.2% / 7.2% |
-| melenchon | 21.9% | 9.3% (4.4%–14.9%) | 7.1% / 7.1% | 1.1% / 1.1% |
-| zemmour | 7.1% | 16.2% (8.3%–25.2%) | 43.0% / 43.0% | 5.2% / 5.2% |
-| pecresse | 4.8% | 10.7% (6.0%–16.3%) | 9.6% / 9.6% | 2.2% / 2.2% |
-| jadot | 4.6% | 8.0% (3.6%–13.1%) | 4.1% / 4.1% | 0.7% / 0.7% |
-| lassalle | 3.1% | 1.3% (0.5%–2.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 27.9% | 24.7% (16.8%–33.3%) | 88.4% / 88.4% ✓ | 82.9% / 82.9% ✓ |
+| le_pen | 23.1% | 16.9% (8.9%–25.9%) | 48.1% / 48.1% ✓ | 7.6% / 7.6% |
+| melenchon | 21.9% | 9.2% (4.4%–14.8%) | 6.8% / 6.8% | 1.0% / 1.0% |
+| zemmour | 7.1% | 16.0% (8.2%–24.8%) | 41.1% / 41.1% | 5.1% / 5.1% |
+| pecresse | 4.8% | 11.0% (6.2%–16.7%) | 10.6% / 10.6% | 2.5% / 2.5% |
+| jadot | 4.6% | 7.9% (3.6%–12.9%) | 3.8% / 3.8% | 0.7% / 0.7% |
+| lassalle | 3.1% | 1.2% (0.5%–2.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 2.2% (0.8%–3.8%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 3.4% (1.9%–5.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 3.4% (1.9%–5.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | hidalgo | 1.8% | 5.2% (2.1%–8.9%) | 1.0% / 1.0% | 0.2% / 0.2% |
-| poutou | 0.8% | 1.2% (0.6%–2.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 1.0% (0.4%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.2% (0.6%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 1.0% (0.4%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 122 days out (2021-12-09)
 
-Actual matchup: current 30.8% (winner given matchup 90.7%), fitted 30.8% (winner given matchup 90.7%).
+Actual matchup: current 22.1% (winner given matchup 90.4%), fitted 22.1% (winner given matchup 90.4%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 23.7% (16.4%–31.6%) | 85.5% / 85.5% ✓ | 75.3% / 75.3% ✓ |
-| le_pen | 23.1% | 16.4% (9.3%–24.1%) | 40.7% / 40.7% ✓ | 5.4% / 5.4% |
-| melenchon | 21.9% | 9.5% (4.8%–14.8%) | 6.2% / 6.2% | 0.9% / 0.9% |
-| zemmour | 7.1% | 13.9% (7.3%–21.4%) | 24.7% / 24.7% | 3.1% / 3.1% |
-| pecresse | 4.8% | 16.6% (10.4%–23.7%) | 40.5% / 40.5% | 14.8% / 14.8% |
-| jadot | 4.6% | 7.0% (3.3%–11.3%) | 1.8% / 1.8% | 0.4% / 0.4% |
-| lassalle | 3.1% | 1.2% (0.5%–2.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 2.1% (0.9%–3.6%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.8% (1.6%–4.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 4.7% (2.0%–8.0%) | 0.4% / 0.4% | 0.1% / 0.1% |
+| macron | 27.9% | 22.8% (15.7%–30.3%) | 80.9% / 80.9% ✓ | 68.9% / 68.9% ✓ |
+| le_pen | 23.1% | 15.7% (8.9%–23.2%) | 33.8% / 33.8% ✓ | 4.5% / 4.5% |
+| melenchon | 21.9% | 9.5% (4.8%–14.8%) | 5.6% / 5.6% | 0.9% / 0.9% |
+| zemmour | 7.1% | 13.8% (7.3%–21.3%) | 22.8% / 22.8% | 3.4% / 3.4% |
+| pecresse | 4.8% | 18.9% (12.0%–26.7%) | 54.9% / 54.9% | 21.8% / 21.8% |
+| jadot | 4.6% | 6.8% (3.2%–11.1%) | 1.6% / 1.6% | 0.3% / 0.3% |
+| lassalle | 3.1% | 1.1% (0.5%–2.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 2.0% (0.8%–3.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.8% (1.5%–4.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 4.6% (1.9%–7.7%) | 0.4% / 0.4% | 0.1% / 0.1% |
 | poutou | 0.8% | 1.2% (0.6%–1.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.9% (0.4%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.9% (0.4%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 91 days out (2022-01-09)
 
-Actual matchup: current 35.6% (winner given matchup 95.5%), fitted 35.6% (winner given matchup 95.5%).
+Actual matchup: current 39.8% (winner given matchup 95.7%), fitted 39.8% (winner given matchup 95.7%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 25.4% (18.1%–33.1%) | 91.9% / 91.9% ✓ | 84.3% / 84.3% ✓ |
-| le_pen | 23.1% | 16.1% (9.9%–22.8%) | 41.4% / 41.4% ✓ | 3.1% / 3.1% |
-| melenchon | 21.9% | 10.5% (6.1%–15.5%) | 7.3% / 7.3% | 0.7% / 0.7% |
-| zemmour | 7.1% | 13.4% (7.6%–19.8%) | 21.3% / 21.3% | 1.6% / 1.6% |
-| pecresse | 4.8% | 15.9% (11.1%–21.2%) | 36.6% / 36.6% | 10.1% / 10.1% |
-| jadot | 4.6% | 6.9% (3.6%–10.7%) | 1.2% / 1.2% | 0.1% / 0.1% |
+| macron | 27.9% | 25.8% (18.4%–33.6%) | 92.7% / 92.7% ✓ | 85.1% / 85.1% ✓ |
+| le_pen | 23.1% | 16.5% (10.2%–23.3%) | 45.4% / 45.4% ✓ | 3.1% / 3.1% |
+| melenchon | 21.9% | 10.6% (6.1%–15.5%) | 7.3% / 7.3% | 0.7% / 0.7% |
+| zemmour | 7.1% | 12.8% (7.3%–19.0%) | 17.7% / 17.7% | 1.3% / 1.3% |
+| pecresse | 4.8% | 15.8% (11.1%–21.1%) | 35.6% / 35.6% | 9.6% / 9.6% |
+| jadot | 4.6% | 6.8% (3.5%–10.6%) | 1.1% / 1.1% | 0.1% / 0.1% |
 | lassalle | 3.1% | 1.2% (0.5%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 2.4% (1.1%–3.9%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.4% (1.4%–3.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 3.8% (1.8%–6.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| poutou | 0.8% | 1.2% (0.7%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.8% (0.4%–1.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.5% (1.4%–3.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 3.6% (1.7%–5.7%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.1% (0.7%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.8% (0.4%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 84 days out (2022-01-16)
 
-Actual matchup: current 34.5% (winner given matchup 95.1%), fitted 34.5% (winner given matchup 95.1%).
+Actual matchup: current 33.5% (winner given matchup 95.1%), fitted 33.5% (winner given matchup 95.1%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 24.6% (17.7%–31.9%) | 90.7% / 90.7% ✓ | 82.9% / 82.9% ✓ |
-| le_pen | 23.1% | 16.2% (10.0%–22.7%) | 40.9% / 40.9% ✓ | 3.3% / 3.3% |
-| melenchon | 21.9% | 11.0% (6.4%–16.2%) | 9.1% / 9.1% | 1.0% / 1.0% |
-| zemmour | 7.1% | 13.6% (7.9%–19.9%) | 21.6% / 21.6% | 1.8% / 1.8% |
-| pecresse | 4.8% | 15.9% (10.8%–21.6%) | 36.4% / 36.4% | 10.8% / 10.8% |
-| jadot | 4.6% | 6.7% (3.5%–10.4%) | 1.1% / 1.1% | 0.1% / 0.1% |
-| lassalle | 3.1% | 1.4% (0.7%–2.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 2.4% (1.1%–3.9%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.5% (1.4%–3.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 3.8% (1.8%–6.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| macron | 27.9% | 24.0% (17.2%–31.2%) | 89.1% / 89.1% ✓ | 81.7% / 81.7% ✓ |
+| le_pen | 23.1% | 16.2% (10.0%–22.8%) | 41.0% / 41.0% ✓ | 3.6% / 3.6% |
+| melenchon | 21.9% | 11.2% (6.6%–16.5%) | 10.0% / 10.0% | 1.3% / 1.3% |
+| zemmour | 7.1% | 13.9% (8.1%–20.3%) | 23.2% / 23.2% | 2.2% / 2.2% |
+| pecresse | 4.8% | 15.9% (10.8%–21.5%) | 35.4% / 35.4% | 11.0% / 11.0% |
+| jadot | 4.6% | 6.7% (3.4%–10.4%) | 1.0% / 1.0% | 0.2% / 0.2% |
+| lassalle | 3.1% | 1.5% (0.7%–2.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 2.5% (1.2%–4.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.5% (1.4%–3.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 3.7% (1.8%–6.0%) | 0.2% / 0.2% | 0.0% / 0.0% |
 | poutou | 0.8% | 1.2% (0.7%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.7% (0.4%–1.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 77 days out (2022-01-23)
 
-Actual matchup: current 33.3% (winner given matchup 95.3%), fitted 33.3% (winner given matchup 95.3%).
+Actual matchup: current 34.2% (winner given matchup 95.5%), fitted 34.2% (winner given matchup 95.5%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 24.7% (17.9%–31.9%) | 91.1% / 91.1% ✓ | 84.6% / 84.6% ✓ |
-| le_pen | 23.1% | 16.2% (10.1%–22.6%) | 39.3% / 39.3% ✓ | 3.0% / 3.0% |
-| melenchon | 21.9% | 11.4% (6.5%–16.9%) | 11.1% / 11.1% | 1.2% / 1.2% |
-| zemmour | 7.1% | 13.4% (7.9%–19.6%) | 19.3% / 19.3% | 1.5% / 1.5% |
-| pecresse | 4.8% | 16.2% (10.8%–22.3%) | 37.6% / 37.6% | 9.5% / 9.5% |
-| jadot | 4.6% | 7.0% (3.6%–10.9%) | 1.3% / 1.3% | 0.2% / 0.2% |
+| macron | 27.9% | 23.9% (17.2%–30.9%) | 88.7% / 88.7% ✓ | 82.4% / 82.4% ✓ |
+| le_pen | 23.1% | 16.6% (10.4%–23.2%) | 42.1% / 42.1% ✓ | 3.5% / 3.5% |
+| melenchon | 21.9% | 11.7% (6.7%–17.4%) | 12.4% / 12.4% | 1.6% / 1.6% |
+| zemmour | 7.1% | 13.4% (7.9%–19.5%) | 18.3% / 18.3% | 1.7% / 1.7% |
+| pecresse | 4.8% | 16.3% (10.8%–22.4%) | 36.9% / 36.9% | 10.4% / 10.4% |
+| jadot | 4.6% | 7.1% (3.7%–11.1%) | 1.5% / 1.5% | 0.3% / 0.3% |
 | lassalle | 3.1% | 1.2% (0.6%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 2.5% (1.2%–4.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.0% (1.2%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 3.6% (1.7%–5.8%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| poutou | 0.8% | 1.2% (0.7%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 2.7% (1.3%–4.4%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 1.9% (1.1%–2.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 3.5% (1.6%–5.7%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.1% (0.7%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.6% (0.3%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 70 days out (2022-01-30)
 
-Actual matchup: current 36.1% (winner given matchup 95.0%), fitted 36.1% (winner given matchup 95.0%).
+Actual matchup: current 40.4% (winner given matchup 95.0%), fitted 40.4% (winner given matchup 95.0%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 24.2% (17.8%–31.0%) | 90.3% / 90.3% ✓ | 83.7% / 83.7% ✓ |
-| le_pen | 23.1% | 16.7% (10.6%–23.3%) | 43.3% / 43.3% ✓ | 3.6% / 3.6% |
-| melenchon | 21.9% | 11.4% (6.8%–16.5%) | 9.4% / 9.4% | 1.0% / 1.0% |
-| zemmour | 7.1% | 13.4% (7.9%–19.6%) | 18.8% / 18.8% | 1.8% / 1.8% |
-| pecresse | 4.8% | 16.3% (11.2%–21.9%) | 37.2% / 37.2% | 9.6% / 9.6% |
-| jadot | 4.6% | 6.5% (3.5%–10.1%) | 0.8% / 0.8% | 0.1% / 0.1% |
-| lassalle | 3.1% | 1.3% (0.7%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 27.9% | 23.7% (17.3%–30.4%) | 88.9% / 88.9% ✓ | 82.8% / 82.8% ✓ |
+| le_pen | 23.1% | 17.4% (11.0%–24.2%) | 48.9% / 48.9% ✓ | 4.3% / 4.3% |
+| melenchon | 21.9% | 11.6% (6.9%–16.7%) | 10.1% / 10.1% | 1.3% / 1.3% |
+| zemmour | 7.1% | 13.3% (7.8%–19.4%) | 17.8% / 17.8% | 1.9% / 1.9% |
+| pecresse | 4.8% | 15.9% (10.9%–21.4%) | 33.1% / 33.1% | 9.5% / 9.5% |
+| jadot | 4.6% | 6.7% (3.6%–10.3%) | 0.9% / 0.9% | 0.2% / 0.2% |
+| lassalle | 3.1% | 1.2% (0.6%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 2.9% (1.4%–4.7%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | dupont_aignan | 2.1% | 2.0% (1.2%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 3.6% (1.8%–5.7%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| poutou | 0.8% | 1.1% (0.7%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 3.7% (1.8%–5.8%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.0% (0.6%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.6% (0.3%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 63 days out (2022-02-06)
 
-Actual matchup: current 36.0% (winner given matchup 95.0%), fitted 36.0% (winner given matchup 95.0%).
+Actual matchup: current 43.9% (winner given matchup 94.8%), fitted 43.9% (winner given matchup 94.8%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 24.7% (18.3%–31.3%) | 92.0% / 92.0% ✓ | 86.4% / 86.4% ✓ |
-| le_pen | 23.1% | 16.5% (10.6%–22.9%) | 41.9% / 41.9% ✓ | 3.5% / 3.5% |
-| melenchon | 21.9% | 11.4% (6.8%–16.5%) | 9.7% / 9.7% | 0.9% / 0.9% |
-| zemmour | 7.1% | 14.4% (8.8%–20.6%) | 24.4% / 24.4% | 1.9% / 1.9% |
-| pecresse | 4.8% | 15.7% (11.1%–20.8%) | 31.3% / 31.3% | 7.1% / 7.1% |
-| jadot | 4.6% | 6.1% (3.2%–9.4%) | 0.6% / 0.6% | 0.1% / 0.1% |
-| lassalle | 3.1% | 1.2% (0.6%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 3.3% (1.7%–5.2%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.0% (1.2%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 3.1% (1.5%–4.9%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| poutou | 0.8% | 1.0% (0.6%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-
-### 2022, 56 days out (2022-02-13)
-
-Actual matchup: current 37.7% (winner given matchup 95.5%), fitted 37.7% (winner given matchup 95.5%).
-
-| Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
-|---|---|---|---|---|
-| macron | 27.9% | 24.9% (18.7%–31.5%) | 92.8% / 92.8% ✓ | 88.1% / 88.1% ✓ |
-| le_pen | 23.1% | 16.8% (10.9%–23.0%) | 43.0% / 43.0% ✓ | 3.3% / 3.3% |
-| melenchon | 21.9% | 10.7% (6.4%–15.6%) | 7.4% / 7.4% | 0.7% / 0.7% |
-| zemmour | 7.1% | 14.8% (9.3%–20.9%) | 26.4% / 26.4% | 1.8% / 1.8% |
-| pecresse | 4.8% | 15.6% (11.0%–20.8%) | 29.8% / 29.8% | 5.9% / 5.9% |
-| jadot | 4.6% | 5.9% (3.2%–9.1%) | 0.5% / 0.5% | 0.1% / 0.1% |
-| lassalle | 3.1% | 1.2% (0.7%–1.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 4.0% (2.0%–6.2%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 1.7% (1.0%–2.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 2.8% (1.4%–4.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 27.9% | 24.2% (17.9%–30.8%) | 91.0% / 91.0% ✓ | 85.9% / 85.9% ✓ |
+| le_pen | 23.1% | 17.6% (11.3%–24.3%) | 51.1% / 51.1% ✓ | 4.6% / 4.6% |
+| melenchon | 21.9% | 11.2% (6.7%–16.2%) | 8.7% / 8.7% | 1.1% / 1.1% |
+| zemmour | 7.1% | 14.4% (8.8%–20.6%) | 23.6% / 23.6% | 2.1% / 2.1% |
+| pecresse | 4.8% | 15.1% (10.6%–20.0%) | 24.7% / 24.7% | 6.2% / 6.2% |
+| jadot | 4.6% | 6.2% (3.3%–9.6%) | 0.7% / 0.7% | 0.1% / 0.1% |
+| lassalle | 3.1% | 1.2% (0.7%–1.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 3.4% (1.7%–5.3%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.0% (1.2%–2.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 3.1% (1.5%–5.0%) | 0.1% / 0.1% | 0.0% / 0.0% |
 | poutou | 0.8% | 1.0% (0.6%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.5% (0.3%–0.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
-### 2022, 49 days out (2022-02-20)
+### 2022, 56 days out (2022-02-13)
 
-Actual matchup: current 38.9% (winner given matchup 95.3%), fitted 38.9% (winner given matchup 95.3%).
+Actual matchup: current 41.9% (winner given matchup 95.4%), fitted 41.9% (winner given matchup 95.4%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 24.5% (18.5%–30.9%) | 93.6% / 93.6% ✓ | 90.4% / 90.4% ✓ |
-| le_pen | 23.1% | 16.4% (10.9%–22.4%) | 43.7% / 43.7% ✓ | 3.4% / 3.4% |
-| melenchon | 21.9% | 11.6% (7.1%–16.7%) | 11.3% / 11.3% | 1.0% / 1.0% |
-| zemmour | 7.1% | 14.9% (9.6%–20.7%) | 28.7% / 28.7% | 1.8% / 1.8% |
-| pecresse | 4.8% | 14.4% (10.1%–19.2%) | 21.9% / 21.9% | 3.4% / 3.4% |
-| jadot | 4.6% | 5.8% (3.1%–8.9%) | 0.5% / 0.5% | 0.1% / 0.1% |
-| lassalle | 3.1% | 1.4% (0.8%–2.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 4.7% (2.5%–7.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 1.9% (1.2%–2.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 2.8% (1.4%–4.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 27.9% | 25.4% (19.0%–32.0%) | 93.6% / 93.6% ✓ | 88.8% / 88.8% ✓ |
+| le_pen | 23.1% | 17.1% (11.1%–23.4%) | 46.9% / 46.9% ✓ | 3.4% / 3.4% |
+| melenchon | 21.9% | 10.6% (6.3%–15.4%) | 6.9% / 6.9% | 0.6% / 0.6% |
+| zemmour | 7.1% | 14.4% (9.0%–20.3%) | 23.3% / 23.3% | 1.5% / 1.5% |
+| pecresse | 4.8% | 15.5% (10.9%–20.6%) | 28.8% / 28.8% | 5.6% / 5.6% |
+| jadot | 4.6% | 5.7% (3.1%–8.8%) | 0.4% / 0.4% | 0.1% / 0.1% |
+| lassalle | 3.1% | 1.2% (0.7%–1.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 4.1% (2.1%–6.5%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 1.7% (1.0%–2.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 2.7% (1.4%–4.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 0.8% | 1.0% (0.6%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
-### 2022, 42 days out (2022-02-27)
+### 2022, 49 days out (2022-02-20)
 
-Actual matchup: current 43.5% (winner given matchup 95.1%), fitted 43.5% (winner given matchup 95.1%).
+Actual matchup: current 30.6% (winner given matchup 95.1%), fitted 30.6% (winner given matchup 95.1%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 25.3% (19.3%–31.4%) | 95.0% / 95.0% ✓ | 92.0% / 92.0% ✓ |
-| le_pen | 23.1% | 16.9% (11.4%–22.7%) | 47.5% / 47.5% ✓ | 3.7% / 3.7% |
-| melenchon | 21.9% | 12.1% (7.7%–17.0%) | 11.8% / 11.8% | 0.8% / 0.8% |
-| zemmour | 7.1% | 15.3% (10.1%–21.0%) | 30.9% / 30.9% | 1.6% / 1.6% |
-| pecresse | 4.8% | 13.5% (9.5%–18.0%) | 14.5% / 14.5% | 1.8% / 1.8% |
+| macron | 27.9% | 24.0% (18.1%–30.2%) | 92.3% / 92.3% ✓ | 88.9% / 88.9% ✓ |
+| le_pen | 23.1% | 15.7% (10.3%–21.4%) | 35.6% / 35.6% ✓ | 3.0% / 3.0% |
+| melenchon | 21.9% | 11.7% (7.1%–16.8%) | 11.8% / 11.8% | 1.1% / 1.1% |
+| zemmour | 7.1% | 15.0% (9.7%–20.9%) | 29.8% / 29.8% | 2.0% / 2.0% |
+| pecresse | 4.8% | 15.3% (10.8%–20.3%) | 29.8% / 29.8% | 4.9% / 4.9% |
+| jadot | 4.6% | 5.9% (3.2%–9.1%) | 0.5% / 0.5% | 0.1% / 0.1% |
+| lassalle | 3.1% | 1.5% (0.8%–2.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 4.7% (2.5%–7.1%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 1.9% (1.2%–2.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 2.7% (1.4%–4.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.0% (0.6%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.6% (0.3%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+
+### 2022, 42 days out (2022-02-27)
+
+Actual matchup: current 43.2% (winner given matchup 95.1%), fitted 43.2% (winner given matchup 95.1%).
+
+| Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
+|---|---|---|---|---|
+| macron | 27.9% | 25.9% (19.9%–32.2%) | 96.1% / 96.1% ✓ | 93.2% / 93.2% ✓ |
+| le_pen | 23.1% | 16.5% (11.2%–22.2%) | 46.3% / 46.3% ✓ | 3.3% / 3.3% |
+| melenchon | 21.9% | 12.4% (7.9%–17.3%) | 13.9% / 13.9% | 0.8% / 0.8% |
+| zemmour | 7.1% | 15.1% (9.9%–20.6%) | 30.8% / 30.8% | 1.3% / 1.3% |
+| pecresse | 4.8% | 13.0% (9.1%–17.2%) | 12.5% / 12.5% | 1.3% / 1.3% |
 | jadot | 4.6% | 5.2% (2.9%–7.9%) | 0.2% / 0.2% | 0.0% / 0.0% |
 | lassalle | 3.1% | 1.4% (0.8%–2.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 4.3% (2.3%–6.5%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 1.9% (1.2%–2.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 4.5% (2.5%–6.9%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.0% (1.2%–2.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | hidalgo | 1.8% | 2.4% (1.3%–3.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 0.8% | 0.9% (0.6%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.6% (0.4%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.0% (0.6%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.7% (0.4%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 35 days out (2022-03-06)
 
-Actual matchup: current 53.2% (winner given matchup 97.8%), fitted 53.2% (winner given matchup 97.8%).
+Actual matchup: current 57.3% (winner given matchup 97.8%), fitted 57.3% (winner given matchup 97.8%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 28.7% (22.6%–34.9%) | 98.7% / 98.7% ✓ | 97.3% / 97.3% ✓ |
-| le_pen | 23.1% | 16.3% (11.3%–21.4%) | 54.3% / 54.3% ✓ | 1.7% / 1.7% |
-| melenchon | 21.9% | 11.4% (7.6%–15.6%) | 10.4% / 10.4% | 0.2% / 0.2% |
-| zemmour | 7.1% | 13.8% (9.3%–18.8%) | 24.5% / 24.5% | 0.4% / 0.4% |
-| pecresse | 4.8% | 12.4% (9.0%–16.2%) | 11.5% / 11.5% | 0.3% / 0.3% |
-| jadot | 4.6% | 6.1% (3.6%–8.8%) | 0.4% / 0.4% | 0.0% / 0.0% |
-| lassalle | 3.1% | 1.6% (1.0%–2.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 3.9% (2.2%–5.8%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.0% (1.3%–2.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 2.3% (1.3%–3.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 0.8% | 0.9% (0.6%–1.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.6% (0.3%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 27.9% | 30.3% (24.0%–36.7%) | 99.2% / 99.2% ✓ | 97.7% / 97.7% ✓ |
+| le_pen | 23.1% | 16.2% (11.3%–21.3%) | 58.0% / 58.0% ✓ | 1.6% / 1.6% |
+| melenchon | 21.9% | 10.9% (7.2%–15.0%) | 9.1% / 9.1% | 0.1% / 0.1% |
+| zemmour | 7.1% | 13.5% (9.0%–18.4%) | 23.9% / 23.9% | 0.3% / 0.3% |
+| pecresse | 4.8% | 11.8% (8.5%–15.4%) | 9.4% / 9.4% | 0.2% / 0.2% |
+| jadot | 4.6% | 6.1% (3.6%–8.9%) | 0.4% / 0.4% | 0.0% / 0.0% |
+| lassalle | 3.1% | 1.6% (1.0%–2.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 3.6% (2.0%–5.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.1% (1.3%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 2.2% (1.3%–3.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.0% (0.7%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.6% (0.4%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 28 days out (2022-03-13)
 
-Actual matchup: current 68.1% (winner given matchup 98.6%), fitted 68.1% (winner given matchup 98.6%).
+Actual matchup: current 62.3% (winner given matchup 98.6%), fitted 62.3% (winner given matchup 98.6%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 30.2% (24.3%–36.3%) | 99.3% / 99.3% ✓ | 98.3% / 98.3% ✓ |
-| le_pen | 23.1% | 16.9% (12.2%–21.8%) | 68.7% / 68.7% ✓ | 1.3% / 1.3% |
-| melenchon | 21.9% | 11.5% (8.0%–15.3%) | 9.5% / 9.5% | 0.1% / 0.1% |
-| zemmour | 7.1% | 12.6% (8.5%–17.1%) | 14.5% / 14.5% | 0.2% / 0.2% |
-| pecresse | 4.8% | 11.7% (8.5%–15.1%) | 7.8% / 7.8% | 0.2% / 0.2% |
-| jadot | 4.6% | 5.5% (3.4%–7.8%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| lassalle | 3.1% | 2.0% (1.3%–2.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 3.6% (2.2%–5.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.0% (1.3%–2.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 2.2% (1.3%–3.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 0.8% | 1.1% (0.7%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 27.9% | 30.6% (24.6%–36.7%) | 99.4% / 99.4% ✓ | 98.4% / 98.4% ✓ |
+| le_pen | 23.1% | 16.2% (11.7%–20.9%) | 62.8% / 62.8% ✓ | 1.1% / 1.1% |
+| melenchon | 21.9% | 11.6% (8.0%–15.4%) | 11.3% / 11.3% | 0.1% / 0.1% |
+| zemmour | 7.1% | 12.6% (8.5%–17.1%) | 16.7% / 16.7% | 0.2% / 0.2% |
+| pecresse | 4.8% | 11.8% (8.6%–15.3%) | 9.6% / 9.6% | 0.1% / 0.1% |
+| jadot | 4.6% | 5.4% (3.3%–7.6%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| lassalle | 3.1% | 2.1% (1.4%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 3.5% (2.1%–5.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.1% (1.4%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 2.1% (1.3%–3.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.3% (0.8%–1.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.7% (0.4%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 21 days out (2022-03-20)
 
-Actual matchup: current 75.0% (winner given matchup 99.1%), fitted 75.0% (winner given matchup 99.1%).
+Actual matchup: current 77.6% (winner given matchup 99.1%), fitted 77.6% (winner given matchup 99.1%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 29.9% (24.3%–35.6%) | 99.4% / 99.4% ✓ | 98.7% / 98.7% ✓ |
-| le_pen | 23.1% | 17.4% (12.9%–22.1%) | 75.5% / 75.5% ✓ | 1.0% / 1.0% |
-| melenchon | 21.9% | 12.5% (9.0%–16.2%) | 12.9% / 12.9% | 0.1% / 0.1% |
-| zemmour | 7.1% | 11.8% (8.1%–15.8%) | 9.0% / 9.0% | 0.2% / 0.2% |
-| pecresse | 4.8% | 10.6% (7.9%–13.5%) | 3.0% / 3.0% | 0.1% / 0.1% |
-| jadot | 4.6% | 5.5% (3.5%–7.7%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| lassalle | 3.1% | 2.3% (1.5%–3.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 3.8% (2.4%–5.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.1% (1.4%–2.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 2.4% (1.5%–3.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| macron | 27.9% | 30.1% (24.5%–35.9%) | 99.4% / 99.4% ✓ | 98.7% / 98.7% ✓ |
+| le_pen | 23.1% | 17.6% (13.0%–22.3%) | 78.1% / 78.1% ✓ | 1.0% / 1.0% |
+| melenchon | 21.9% | 12.3% (8.8%–16.0%) | 11.7% / 11.7% | 0.1% / 0.1% |
+| zemmour | 7.1% | 11.6% (8.0%–15.6%) | 8.3% / 8.3% | 0.1% / 0.1% |
+| pecresse | 4.8% | 10.2% (7.6%–13.0%) | 2.2% / 2.2% | 0.1% / 0.1% |
+| jadot | 4.6% | 5.6% (3.6%–7.8%) | 0.1% / 0.1% | 0.0% / 0.0% |
+| lassalle | 3.1% | 2.4% (1.6%–3.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 3.7% (2.3%–5.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.2% (1.5%–3.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 2.6% (1.6%–3.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 0.8% | 1.0% (0.7%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.6% (0.4%–0.9%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 14 days out (2022-03-27)
 
-Actual matchup: current 78.0% (winner given matchup 97.9%), fitted 78.0% (winner given matchup 97.9%).
+Actual matchup: current 74.9% (winner given matchup 97.9%), fitted 74.9% (winner given matchup 97.9%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 27.7% (22.6%–33.0%) | 98.9% / 98.9% ✓ | 97.2% / 97.2% ✓ |
-| le_pen | 23.1% | 18.6% (14.2%–23.2%) | 79.0% / 79.0% ✓ | 2.2% / 2.2% |
-| melenchon | 21.9% | 13.9% (10.4%–17.6%) | 15.0% / 15.0% | 0.4% / 0.4% |
-| zemmour | 7.1% | 11.4% (8.0%–15.1%) | 4.5% / 4.5% | 0.1% / 0.1% |
-| pecresse | 4.8% | 10.9% (8.1%–14.0%) | 2.4% / 2.4% | 0.1% / 0.1% |
+| macron | 27.9% | 27.0% (22.0%–32.2%) | 98.6% / 98.6% ✓ | 96.9% / 96.9% ✓ |
+| le_pen | 23.1% | 18.7% (14.3%–23.2%) | 76.2% / 76.2% ✓ | 2.2% / 2.2% |
+| melenchon | 21.9% | 14.5% (10.8%–18.3%) | 18.4% / 18.4% | 0.5% / 0.5% |
+| zemmour | 7.1% | 11.3% (7.9%–14.9%) | 4.0% / 4.0% | 0.1% / 0.1% |
+| pecresse | 4.8% | 11.1% (8.2%–14.2%) | 2.6% / 2.6% | 0.1% / 0.1% |
 | jadot | 4.6% | 5.3% (3.5%–7.2%) | 0.1% / 0.1% | 0.0% / 0.0% |
-| lassalle | 3.1% | 2.4% (1.7%–3.2%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 3.1% | 2.5% (1.7%–3.3%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | roussel | 2.3% | 3.6% (2.4%–5.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.1% (1.4%–2.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| hidalgo | 1.8% | 2.2% (1.4%–3.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| poutou | 0.8% | 1.1% (0.8%–1.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| arthaud | 0.6% | 0.7% (0.4%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.0% (1.4%–2.7%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| hidalgo | 1.8% | 2.2% (1.4%–3.1%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| poutou | 0.8% | 1.1% (0.8%–1.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| arthaud | 0.6% | 0.7% (0.5%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 
 ### 2022, 7 days out (2022-04-03)
 
-Actual matchup: current 87.5% (winner given matchup 93.7%), fitted 87.5% (winner given matchup 93.7%).
+Actual matchup: current 87.7% (winner given matchup 93.7%), fitted 87.7% (winner given matchup 93.7%).
 
 | Candidate | Result | Fitted share (80%) | Qualify: current / fitted | Win: current / fitted |
 |---|---|---|---|---|
-| macron | 27.9% | 26.5% (21.9%–31.3%) | 98.4% / 98.4% ✓ | 92.8% / 92.8% ✓ |
-| le_pen | 23.1% | 21.3% (16.9%–25.7%) | 89.1% / 89.1% ✓ | 6.3% / 6.3% |
-| melenchon | 21.9% | 14.9% (11.6%–18.4%) | 10.4% / 10.4% | 0.7% / 0.7% |
-| zemmour | 7.1% | 11.0% (7.9%–14.2%) | 1.9% / 1.9% | 0.1% / 0.1% |
-| pecresse | 4.8% | 9.0% (6.9%–11.3%) | 0.2% / 0.2% | 0.0% / 0.0% |
+| macron | 27.9% | 26.1% (21.5%–30.8%) | 98.1% / 98.1% ✓ | 92.5% / 92.5% ✓ |
+| le_pen | 23.1% | 21.5% (17.1%–26.1%) | 89.5% / 89.5% ✓ | 6.5% / 6.5% |
+| melenchon | 21.9% | 15.0% (11.6%–18.5%) | 10.3% / 10.3% | 0.9% / 0.9% |
+| zemmour | 7.1% | 10.9% (7.9%–14.2%) | 1.8% / 1.8% | 0.1% / 0.1% |
+| pecresse | 4.8% | 8.9% (6.8%–11.1%) | 0.2% / 0.2% | 0.0% / 0.0% |
 | jadot | 4.6% | 5.1% (3.5%–6.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| lassalle | 3.1% | 2.6% (1.8%–3.4%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| roussel | 2.3% | 3.4% (2.3%–4.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
-| dupont_aignan | 2.1% | 2.2% (1.5%–3.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| lassalle | 3.1% | 2.7% (1.9%–3.5%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| roussel | 2.3% | 3.5% (2.3%–4.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
+| dupont_aignan | 2.1% | 2.3% (1.6%–3.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | hidalgo | 1.8% | 2.1% (1.4%–2.8%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | poutou | 0.8% | 1.2% (0.9%–1.6%) | 0.0% / 0.0% | 0.0% / 0.0% |
 | arthaud | 0.6% | 0.7% (0.5%–1.0%) | 0.0% / 0.0% | 0.0% / 0.0% |
@@ -2484,7 +2484,7 @@ Every replay fitted again with news and attention spikes allowed to add variance
 | | Qualify Brier | Qualify log-loss | Win Brier | Win log-loss | Share MAE (pts) | 80% coverage | Share log score | Round 2 log score | P(winner \| matchup) |
 |---|---|---|---|---|---|---|---|---|---|
 | Polls only | 0.048 | 0.178 | 0.023 | 0.078 | 2.30 | 68.3% | -110.1 | -43.91 | 84.3% |
-| published settings (config/model.yaml) | 0.049 | 0.180 | 0.023 | 0.080 | 2.31 | 66.7% | -117.6 | -44.61 | 84.2% |
+| published settings (config/model.yaml) | 0.048 | 0.179 | 0.023 | 0.079 | 2.31 | 67.1% | -116.4 | -44.61 | 84.2% |
 | page views and news | 0.048 | 0.179 | 0.023 | 0.079 | 2.30 | 68.5% | -110.2 | -43.92 | 84.3% |
 | page views | 0.048 | 0.179 | 0.023 | 0.079 | 2.30 | 68.3% | -109.1 | -43.91 | 84.3% |
 | news | 0.048 | 0.178 | 0.023 | 0.078 | 2.30 | 67.8% | -113.7 | -44.04 | 84.3% |
@@ -2493,10 +2493,10 @@ Every replay fitted again with news and attention spikes allowed to add variance
 | both, half-life 5 days | 0.048 | 0.179 | 0.023 | 0.079 | 2.30 | 68.3% | -111.3 | -43.91 | 84.3% |
 | both, half-life 20 days | 0.048 | 0.179 | 0.023 | 0.079 | 2.30 | 68.5% | -108.8 | -43.94 | 84.3% |
 | both, higher floors | 0.048 | 0.177 | 0.023 | 0.077 | 2.30 | 66.9% | -117.4 | -43.86 | 84.3% |
-| momentum +0.05 | 0.048 | 0.178 | 0.023 | 0.078 | 2.30 | 68.3% | -109.9 | -43.92 | 84.3% |
-| momentum +0.15 | 0.048 | 0.178 | 0.023 | 0.078 | 2.30 | 68.3% | -109.8 | -43.93 | 84.3% |
-| momentum −0.05 | 0.048 | 0.178 | 0.023 | 0.078 | 2.30 | 68.4% | -110.3 | -43.91 | 84.3% |
-| momentum −0.15 | 0.048 | 0.178 | 0.023 | 0.078 | 2.30 | 68.4% | -110.9 | -43.90 | 84.3% |
+| momentum +0.05 | 0.048 | 0.178 | 0.023 | 0.078 | 2.30 | 68.2% | -109.8 | -43.93 | 84.3% |
+| momentum +0.15 | 0.048 | 0.178 | 0.023 | 0.077 | 2.30 | 68.4% | -108.9 | -43.96 | 84.3% |
+| momentum −0.05 | 0.048 | 0.178 | 0.023 | 0.078 | 2.31 | 68.3% | -110.9 | -43.91 | 84.3% |
+| momentum −0.15 | 0.049 | 0.180 | 0.023 | 0.079 | 2.31 | 68.0% | -114.8 | -43.93 | 84.3% |
 
 By election:
 
@@ -2545,7 +2545,7 @@ By election:
 | 2012, momentum −0.05 | 0.017 | 0.074 | 0.003 | 0.028 | 1.75 | 71.2% | 28.0 | -1.76 | 94.9% |
 | 2012, momentum −0.15 | 0.017 | 0.074 | 0.003 | 0.028 | 1.75 | 71.2% | 28.0 | -1.76 | 94.9% |
 | 2017, polls only | 0.057 | 0.178 | 0.053 | 0.168 | 2.17 | 68.9% | -17.1 | -9.65 | 85.8% |
-| 2017, published settings (config/model.yaml) | 0.062 | 0.191 | 0.057 | 0.182 | 2.18 | 67.6% | -19.8 | -10.40 | 85.2% |
+| 2017, published settings (config/model.yaml) | 0.061 | 0.188 | 0.056 | 0.178 | 2.18 | 67.6% | -19.1 | -10.34 | 85.3% |
 | 2017, page views and news | 0.059 | 0.184 | 0.055 | 0.174 | 2.16 | 70.3% | -16.3 | -9.65 | 85.8% |
 | 2017, page views | 0.059 | 0.183 | 0.055 | 0.175 | 2.15 | 68.9% | -16.2 | -9.65 | 85.8% |
 | 2017, news | 0.058 | 0.182 | 0.054 | 0.172 | 2.16 | 69.8% | -17.3 | -9.79 | 85.6% |
@@ -2554,12 +2554,12 @@ By election:
 | 2017, both, half-life 5 days | 0.058 | 0.180 | 0.055 | 0.173 | 2.17 | 68.9% | -17.0 | -9.64 | 85.8% |
 | 2017, both, half-life 20 days | 0.059 | 0.184 | 0.055 | 0.174 | 2.15 | 69.8% | -15.9 | -9.67 | 85.8% |
 | 2017, both, higher floors | 0.057 | 0.177 | 0.054 | 0.171 | 2.15 | 68.5% | -17.9 | -9.61 | 85.8% |
-| 2017, momentum +0.05 | 0.057 | 0.178 | 0.053 | 0.168 | 2.17 | 68.5% | -17.1 | -9.65 | 85.8% |
-| 2017, momentum +0.15 | 0.057 | 0.178 | 0.053 | 0.168 | 2.17 | 68.0% | -17.2 | -9.66 | 85.8% |
-| 2017, momentum −0.05 | 0.057 | 0.178 | 0.053 | 0.168 | 2.17 | 69.4% | -17.2 | -9.65 | 85.8% |
-| 2017, momentum −0.15 | 0.057 | 0.178 | 0.053 | 0.168 | 2.17 | 69.4% | -17.4 | -9.65 | 85.8% |
+| 2017, momentum +0.05 | 0.056 | 0.176 | 0.053 | 0.167 | 2.16 | 68.9% | -16.5 | -9.64 | 85.8% |
+| 2017, momentum +0.15 | 0.057 | 0.175 | 0.052 | 0.165 | 2.17 | 70.3% | -16.0 | -9.63 | 85.9% |
+| 2017, momentum −0.05 | 0.057 | 0.179 | 0.053 | 0.169 | 2.18 | 68.9% | -18.1 | -9.67 | 85.8% |
+| 2017, momentum −0.15 | 0.059 | 0.185 | 0.055 | 0.173 | 2.22 | 68.9% | -20.8 | -9.74 | 85.6% |
 | 2022, polls only | 0.026 | 0.099 | 0.004 | 0.029 | 3.30 | 64.1% | -132.4 | 14.18 | 92.8% |
-| 2022, published settings (config/model.yaml) | 0.025 | 0.094 | 0.003 | 0.025 | 3.32 | 57.4% | -137.2 | 14.24 | 92.9% |
+| 2022, published settings (config/model.yaml) | 0.025 | 0.094 | 0.003 | 0.026 | 3.34 | 59.4% | -136.7 | 14.17 | 92.8% |
 | 2022, page views and news | 0.026 | 0.099 | 0.004 | 0.029 | 3.31 | 63.7% | -133.3 | 14.17 | 92.8% |
 | 2022, page views | 0.026 | 0.099 | 0.004 | 0.029 | 3.30 | 64.1% | -132.4 | 14.18 | 92.8% |
 | 2022, news | 0.025 | 0.097 | 0.003 | 0.027 | 3.31 | 60.6% | -135.8 | 14.19 | 92.8% |
@@ -2568,10 +2568,10 @@ By election:
 | 2022, both, half-life 5 days | 0.026 | 0.099 | 0.004 | 0.029 | 3.31 | 63.7% | -133.8 | 14.17 | 92.8% |
 | 2022, both, half-life 20 days | 0.026 | 0.099 | 0.004 | 0.029 | 3.30 | 64.1% | -132.4 | 14.18 | 92.8% |
 | 2022, both, higher floors | 0.025 | 0.092 | 0.003 | 0.024 | 3.32 | 57.8% | -138.9 | 14.19 | 92.9% |
-| 2022, momentum +0.05 | 0.026 | 0.099 | 0.004 | 0.029 | 3.30 | 64.5% | -132.2 | 14.18 | 92.8% |
-| 2022, momentum +0.15 | 0.026 | 0.099 | 0.004 | 0.029 | 3.30 | 64.5% | -132.0 | 14.17 | 92.8% |
-| 2022, momentum −0.05 | 0.026 | 0.099 | 0.004 | 0.029 | 3.31 | 64.1% | -132.6 | 14.18 | 92.8% |
-| 2022, momentum −0.15 | 0.026 | 0.099 | 0.004 | 0.029 | 3.31 | 64.1% | -133.0 | 14.19 | 92.8% |
+| 2022, momentum +0.05 | 0.026 | 0.099 | 0.004 | 0.029 | 3.31 | 63.3% | -132.7 | 14.15 | 92.8% |
+| 2022, momentum +0.15 | 0.026 | 0.099 | 0.004 | 0.030 | 3.31 | 63.3% | -132.4 | 14.11 | 92.8% |
+| 2022, momentum −0.05 | 0.026 | 0.100 | 0.004 | 0.029 | 3.31 | 64.1% | -132.2 | 14.20 | 92.9% |
+| 2022, momentum −0.15 | 0.027 | 0.101 | 0.004 | 0.028 | 3.32 | 62.5% | -133.4 | 14.25 | 92.9% |
 
 Spikes detected and `shock_sd` chosen, per replay (year, days before round 1):
 
@@ -2689,14 +2689,14 @@ The model at the current settings pooled with the last market prices published b
 
 | Weight on the model | 2017 qualify | 2017 win | 2022 qualify | 2022 win | Total |
 |---|---|---|---|---|---|
-| 0 | 0.185 | 0.257 | 0.094 | 0.057 | 0.593 |
-| 0.1 | 0.184 | 0.247 | 0.094 | 0.052 | 0.578 |
-| 0.2 | 0.184 | 0.236 | 0.094 | 0.048 | 0.562 |
-| 0.3 | 0.184 | 0.226 | 0.094 | 0.044 | 0.548 |
-| 0.4 | 0.184 | 0.213 | 0.094 | 0.040 | 0.532 |
-| 0.5 | 0.185 | 0.202 | 0.094 | 0.037 | 0.519 |
-| 0.6 | 0.185 | 0.192 | 0.094 | 0.034 | 0.506 |
-| 0.7 | 0.186 | 0.183 | 0.094 | 0.032 | 0.495 |
-| 0.8 | 0.187 | 0.175 | 0.094 | 0.029 | 0.486 |
-| 0.9 | 0.187 | 0.169 | 0.094 | 0.027 | 0.479 |
-| 1 | 0.188 | 0.165 | 0.094 | 0.025 | 0.473 |
+| 0 | 0.181 | 0.257 | 0.094 | 0.057 | 0.589 |
+| 0.1 | 0.181 | 0.247 | 0.094 | 0.052 | 0.574 |
+| 0.2 | 0.180 | 0.235 | 0.094 | 0.048 | 0.558 |
+| 0.3 | 0.181 | 0.225 | 0.094 | 0.044 | 0.543 |
+| 0.4 | 0.181 | 0.212 | 0.094 | 0.040 | 0.527 |
+| 0.5 | 0.181 | 0.200 | 0.094 | 0.037 | 0.513 |
+| 0.6 | 0.182 | 0.189 | 0.094 | 0.035 | 0.500 |
+| 0.7 | 0.182 | 0.179 | 0.094 | 0.032 | 0.488 |
+| 0.8 | 0.183 | 0.171 | 0.094 | 0.030 | 0.479 |
+| 0.9 | 0.183 | 0.165 | 0.094 | 0.028 | 0.471 |
+| 1 | 0.184 | 0.160 | 0.094 | 0.026 | 0.465 |

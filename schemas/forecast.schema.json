@@ -19,6 +19,7 @@
     "aggregation",
     "signals",
     "ballot",
+    "signal_levels",
     "changes",
     "warnings"
   ],
@@ -418,6 +419,31 @@
                 "type": "object",
                 "additionalProperties": false,
                 "properties": { "attention": { "type": "number" }, "news": { "type": "number" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "signal_levels": {
+      "description": "The chances of reaching round 2 and of winning with every news and social signal weight (spike widening, attention and X momentum) multiplied by scale: 0 is the polls alone, 1 the published weights. The UI's slider steps through them.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["scale", "candidates"],
+        "properties": {
+          "scale": { "type": "number", "minimum": 0 },
+          "candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["candidate_id", "p_qualify_r1", "p_win"],
+              "properties": {
+                "candidate_id": { "type": "string" },
+                "p_qualify_r1": { "type": "number", "minimum": 0, "maximum": 1 },
+                "p_win": { "type": "number", "minimum": 0, "maximum": 1 }
               }
             }
           }

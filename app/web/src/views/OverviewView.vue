@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import { computed, toRef } from "vue"
+import { computed, ref, toRef, watch } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Blend, Forecast, HistoryRun, TrackRecord } from "../api/schemas"
-import { blendAt } from "../blend"
+import { blendAt, type Blended } from "../blend"
+import { outcomeGroups } from "../charts"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import ModelExplorer from "../components/explorer/ModelExplorer.vue"
 import MethodSection from "../components/MethodSection.vue"
 import FieldFilter from "../components/FieldFilter.vue"
-import MarketWeight from "../components/MarketWeight.vue"
+import ForecastControls from "../components/ForecastControls.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
 import { count, daysUntil, list, percent, points, probability, shareWithInterval } from "../format"
 import { useFieldFilter } from "../useFieldFilter"
 import { useMarketWeight } from "../useMarketWeight"
+import { useSignalScale } from "../useSignalScale"
 
 const props = defineProps<{
   forecast: Forecast
@@ -32,21 +34,43 @@ const marketWeight = computed({
     chosenWeight.value = w
   },
 })
-const blended = computed(() => (props.blend ? blendAt(props.blend, 1 - marketWeight.value) : null))
-// The forecast as shown: chances of winning and of reaching round 2 blended at the slider's
-// weight, candidates in that order.
-const shown = computed<Forecast>(() => {
-  const b = blended.value
-  if (!b) return props.forecast
-  const candidates = props.forecast.candidates
-    .map((c) => {
-      const x = b.get(c.candidate_id)
-      return x ? { ...c, p_win: x.win, p_qualify_r1: x.qualify } : c
-    })
-    .toSorted((a, c) => c.p_win - a.p_win || c.p_qualify_r1 - a.p_qualify_r1)
-  return { ...props.forecast, candidates }
-})
+// The news and social signals' strength: the forecast was run at each of these.
+const signalScale = useSignalScale()
+const scales = computed(() => (props.forecast.signal_levels ?? []).map((l) => l.scale))
+type Chances = ReadonlyMap<string, Blended>
+const levelChances = (scale: number): Chances | undefined => {
+  const level = props.forecast.signal_levels?.find((l) => l.scale === scale)
+  return level
+    ? new Map(level.candidates.map((c) => [c.candidate_id, { win: c.p_win, qualify: c.p_qualify_r1 }]))
+    : undefined
+}
+// Each candidate's chances at a setting: a strength of the signals and a weight of the markets.
+const chancesAt = (scale: number, weight: number): Chances | undefined =>
+  props.blend ? blendAt(props.blend, 1 - weight, levelChances(scale)) : levelChances(scale)
+const levelModel = computed(() => levelChances(signalScale.value))
+const blended = computed(() => chancesAt(signalScale.value, marketWeight.value) ?? null)
+const withChances = (chances: Chances | undefined | null) =>
+  props.forecast.candidates.map((c) => {
+    const x = chances?.get(c.candidate_id)
+    return x ? { ...c, p_win: x.win, p_qualify_r1: x.qualify } : c
+  })
+
+// The forecast as shown: chances of winning and of reaching round 2 at the reader's settings,
+// largest first.
+const shown = computed<Forecast>(() => ({
+  ...props.forecast,
+  candidates: withChances(blended.value).toSorted((a, b) => b.p_win - a.p_win || b.p_qualify_r1 - a.p_qualify_r1),
+}))
 const { query, showAll, field } = useFieldFilter(toRef(() => shown.value.candidates))
+// The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside.
+const groups = computed(() => outcomeGroups(shown.value.candidates, field.value.setAside))
+const ownRow = computed(() => new Set(groups.value.flatMap((g) => (g.candidateId === null ? [] : [g.candidateId]))))
+// Set once the reader moves a setting: rows that change places then skip their entrance animation,
+// which moving an element in the page would otherwise play again.
+const settled = ref(false)
+watch([signalScale, marketWeight], () => {
+  settled.value = true
+})
 
 const maxShare = computed(() => Math.max(0.05, ...props.forecast.candidates.map((c) => c.r1_share?.hi80 ?? 0)))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
@@ -62,15 +86,16 @@ const newSpikes = computed(() => [
 ])
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const at = (share: number) => (share / maxShare.value) * 100
-// Everyone the model or the markets give at least half a point to win, in the forecast's order,
-// leaving out those the field filter sets aside.
+// Everyone with a row of their own in the dots chart, largest first.
 const blendRows = computed(() => {
   const rows = new Map((props.blend?.candidates ?? []).map((c) => [c.candidate_id, c]))
   return shown.value.candidates.flatMap((c) => {
     const row = field.value.setAside.has(c.candidate_id) ? undefined : rows.get(c.candidate_id)
     const blendedRow = blended.value?.get(c.candidate_id)
-    return row && blendedRow && Math.max(row.market.win ?? 0, row.model.win) >= 0.005
-      ? [{ ...row, blended: blendedRow, name: c.name }]
+    const model = levelModel.value?.get(c.candidate_id)
+    const shownRow = row && model ? { ...row, model: { ...row.model, win: model.win, qualify: model.qualify } } : row
+    return shownRow && blendedRow && ownRow.value.has(c.candidate_id)
+      ? [{ ...shownRow, blended: blendedRow, name: c.name }]
       : []
   })
 })
@@ -78,16 +103,22 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
 </script>
 
 <template>
-  <div class="overview">
+  <div class="overview" :class="{ settled }">
     <section aria-labelledby="outcomes-title" class="card over-painting outcomes-card rise">
       <header class="card-head">
         <p class="eyebrow"><span class="tricolore-rule" />{{ content.outcomesEyebrow }}</p>
         <h2 id="outcomes-title">{{ content.outcomesTitle }}</h2>
         <p class="secondary">{{ content.outcomesHelp({ sims: count(forecast.simulations, locale) }) }}</p>
       </header>
-      <MarketWeight v-if="blend" v-model="marketWeight" :blend="blend" :published="publishedWeight" />
-      <!-- The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside. -->
-      <OutcomeDots :forecast="shown" :pool="field.setAside" />
+      <ForecastControls
+        v-if="blend || scales.length > 1"
+        v-model:scale="signalScale"
+        v-model:market-weight="marketWeight"
+        :scales="scales"
+        :blend="blend"
+        :published="publishedWeight"
+      />
+      <OutcomeDots :class="{ settled }" :groups="groups" />
       <p class="notice note" role="note">
         <span aria-hidden="true" class="icon" translate="no">i</span>
         <span>{{ content.uncertainty }}</span>
@@ -123,7 +154,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               <th scope="col">{{ common.r1Share }}</th>
             </tr>
           </thead>
-          <tbody>
+          <TransitionGroup name="reorder" tag="tbody">
             <tr v-for="(c, i) in field.visible" :key="c.candidate_id" :style="{ '--i': i }">
               <th scope="row">
                 <span class="who">
@@ -168,7 +199,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
                 <span v-else class="muted small">{{ c.simulated ? "—" : common.notPolled }}</span>
               </td>
             </tr>
-          </tbody>
+          </TransitionGroup>
         </table>
       </div>
     </section>
@@ -194,7 +225,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               </template>
             </tr>
           </thead>
-          <tbody>
+          <TransitionGroup name="reorder" tag="tbody">
             <tr v-for="row in blendRows" :key="row.candidate_id">
               <th scope="row">
                 <span class="who">
@@ -209,7 +240,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               <td class="num secondary">{{ maybe(row.market.qualify) }}</td>
               <td class="num strong">{{ probability(row.blended.qualify, locale) }}</td>
             </tr>
-          </tbody>
+          </TransitionGroup>
         </table>
       </div>
       <p class="secondary small blend-note">
@@ -304,8 +335,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
   color: var(--muted);
 }
 
-.bar-cell,
-.range-cell {
+.bar-cell, .range-cell {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -320,6 +350,11 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
   border-radius: 0 3px 3px 0;
 }
 
+/* Rows glide to their new place when the reader's settings reorder them. */
+.reorder-move {
+  transition: transform 0.45s var(--ease-out);
+}
+
 .bar {
   display: block;
   height: 100%;
@@ -330,6 +365,10 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
   transform-origin: left;
   animation: grow 1.1s var(--ease-out) both;
   animation-delay: calc(var(--i, 0) * 22ms + 250ms);
+}
+
+.settled .bar {
+  animation: none;
 }
 
 .value {

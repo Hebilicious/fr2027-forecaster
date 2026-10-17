@@ -53,6 +53,8 @@ struct ForecastFile {
     parameters: Parameters,
     signals: SignalsOut,
     ballot: BallotOut,
+    /// The chances at several strengths of the news and social signals, for the UI's slider.
+    signal_levels: Vec<LevelOut>,
     changes: Changes,
     warnings: Vec<String>,
 }
@@ -141,6 +143,35 @@ struct SignalsOut {
 struct TiltOut {
     candidate_id: String,
     tilt: f64,
+}
+
+/// The forecast with every news and social signal weight (spike widening, attention and X
+/// momentum) multiplied by `scale`: 0 is the polls alone, 1 the published weights.
+#[derive(Serialize)]
+struct LevelOut {
+    scale: f64,
+    candidates: Vec<LevelCandidate>,
+}
+
+#[derive(Serialize)]
+struct LevelCandidate {
+    candidate_id: String,
+    p_qualify_r1: f64,
+    p_win: f64,
+}
+
+/// The strengths of the news and social signals the forecast is also run at, as multiples of the
+/// published weights.
+const SIGNAL_LEVELS: [f64; 5] = [0.0, 0.5, 1.0, 1.5, 2.0];
+
+/// The signal weights multiplied by `scale`.
+fn scaled_signals(signals: &fr2027_model::SignalParams, scale: f64) -> fr2027_model::SignalParams {
+    fr2027_model::SignalParams {
+        shock_sd_grid: signals.shock_sd_grid.iter().map(|s| s * scale).collect(),
+        momentum_weight: signals.momentum_weight * scale,
+        x_momentum_weight: signals.x_momentum_weight * scale,
+        ..signals.clone()
+    }
 }
 
 /// Who runs: the hand-set chances and the "on the ballot" prices they were pooled with.
@@ -271,6 +302,43 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
         return Ok(());
     }
     let forecast = run_forecast(&field, &all_polls, &signals, &params, as_of)?;
+    // The other strengths, one thread each; the published one is the forecast itself.
+    let others: Vec<Result<(f64, Forecast)>> = std::thread::scope(|scope| {
+        let handles: Vec<_> = SIGNAL_LEVELS
+            .iter()
+            .filter(|s| **s != 1.0)
+            .map(|&scale| {
+                let mut level = params.clone();
+                level.signals = scaled_signals(&params.signals, scale);
+                let (field, all_polls, signals) = (&field, &all_polls, &signals);
+                scope.spawn(move || {
+                    run_forecast(field, all_polls, signals, &level, as_of)
+                        .map(|f| (scale, f))
+                        .map_err(anyhow::Error::from)
+                })
+            })
+            .collect();
+        handles.into_iter().map(|h| h.join().expect("level thread")).collect()
+    });
+    let mut levels: Vec<(f64, &Forecast)> = vec![(1.0, &forecast)];
+    let others: Vec<(f64, Forecast)> = others.into_iter().collect::<Result<_>>()?;
+    levels.extend(others.iter().map(|(s, f)| (*s, f)));
+    levels.sort_by(|a, b| a.0.total_cmp(&b.0));
+    let signal_levels: Vec<LevelOut> = levels
+        .iter()
+        .map(|(scale, f)| LevelOut {
+            scale: *scale,
+            candidates: f
+                .candidates
+                .iter()
+                .map(|c| LevelCandidate {
+                    candidate_id: config.candidates[c.candidate].id.clone(),
+                    p_qualify_r1: round4(c.p_qualify_r1),
+                    p_win: round4(c.p_win),
+                })
+                .collect(),
+        })
+        .collect();
 
     let file_name = format!("{}.json", now.strftime("%Y-%m-%dT%H"));
     let previous = previous_forecast(&out_dir, &file_name)?;
@@ -299,7 +367,7 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
             })
             .collect(),
     };
-    let output = build(
+    let mut output = build(
         &config,
         &params,
         &forecast,
@@ -310,6 +378,7 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
         previous,
         ballot,
     );
+    output.signal_levels = signal_levels;
     let value = serde_json::to_value(&output)?;
     let violations = schemas.violations(SchemaKind::Forecast, &value);
     if !violations.is_empty() {
@@ -397,7 +466,7 @@ fn previous_forecast(dir: &std::path::Path, current: &str) -> Result<Option<(Str
 
 /// Bumped whenever the forecast file gains, loses or changes a field, so that the next run refits rather than
 /// keep a file the UI can no longer read in full.
-const OUTPUT_VERSION: u32 = 4;
+const OUTPUT_VERSION: u32 = 5;
 
 fn inputs_hash(repo: &Repo, params: &ModelParams, as_of: Date, signals: &[String]) -> Result<String> {
     let mut bytes = Vec::new();
@@ -618,6 +687,7 @@ fn build(
         },
         signals: spikes,
         ballot,
+        signal_levels: Vec::new(),
         changes: Changes {
             previous: previous_name,
             new_polls,

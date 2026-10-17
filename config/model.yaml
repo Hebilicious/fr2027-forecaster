@@ -93,11 +93,14 @@ signals:
   half_life_days: 10
   shock_sd_grid: [0.1]
   # Momentum (model/src/signals.rs): each simulated round 1 vote tilted by
-  # exp(momentum_weight · m · 2^(−days to the election / half_life_days)), m the log change of the
-  # candidate's share of page views and articles over the last momentum_days against the
-  # baseline_days before. 0.15 scored best of the four weights the backtest tried.
+  # exp(momentum_weight · m · 2^(−days to the election / momentum_half_life_days)), m the log
+  # change of the candidate's share of page views and articles over the last momentum_days against
+  # the baseline_days before. 0.15 scored best of the four weights the backtest tried. A 90-day
+  # half-life (the owner's choice, research/LOG.md 2026-10-17) lets momentum count from months out:
+  # a quarter of its full weight six months before the vote, four fifths a month before.
   momentum_weight: 0.15
   momentum_days: 7
+  momentum_half_life_days: 90
   # X momentum: the same tilt from the change in the share of sampled X posts supporting the
   # candidate (Grok Bot drops whose double-labelling kappa is at least 0.4), last momentum_days
   # against the baseline_days before, times x_momentum_weight. X has no history to backtest; the
