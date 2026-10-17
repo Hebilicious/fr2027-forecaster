@@ -33,12 +33,14 @@ jobs:
   plan:
     runs-on: ubuntu-24.04
     outputs:
-      years: ${{ steps.years.outputs.years }}
+      chunks: ${{ steps.chunks.outputs.chunks }}
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           persist-credentials: false
-      - id: years
+      # Each election's window (data/backtest/<year>/signals.yaml) cut into 8 runs of days, one
+      # runner each: a year of GDELT files is about 60 GB.
+      - id: chunks
         env:
           INPUT_YEAR: ${{ inputs.year }}
           BRANCH: ${{ github.ref_name }}
@@ -50,18 +52,32 @@ jobs:
           else
             years=$(sed -n 's/^  - { year: \([0-9]\{4\}\),.*/\1/p' config/backtest.yaml | paste -sd' ' -)
           fi
-          for y in $years; do [[ "$y" =~ ^[0-9]{4}$ ]] || { echo "::error::bad year $y"; exit 1; }; done
-          echo "years=$(printf '%s\n' $years | jq -Rsc 'split("\n") | map(select(length > 0))')" >> "$GITHUB_OUTPUT"
+          chunks="[]"
+          for y in $years; do
+            [[ "$y" =~ ^[0-9]{4}$ ]] || { echo "::error::bad year $y"; exit 1; }
+            file="data/backtest/$y/signals.yaml"
+            start=$(sed -n 's/^start: //p' "$file"); end=$(sed -n 's/^end: //p' "$file")
+            days=$(( ($(date -ud "$end" +%s) - $(date -ud "$start" +%s)) / 86400 + 1 ))
+            size=$(( (days + 7) / 8 ))
+            for i in $(seq 0 7); do
+              from=$(date -ud "$start + $((i * size)) days" +%F)
+              to=$(date -ud "$start + $((i * size + size - 1)) days" +%F)
+              [[ "$from" > "$end" ]] && break
+              [[ "$to" > "$end" ]] && to=$end
+              chunks=$(jq -c --arg y "$y" --arg f "$from" --arg t "$to" '. + [{year: $y, start: $f, end: $t}]' <<<"$chunks")
+            done
+          done
+          echo "chunks=$chunks" >> "$GITHUB_OUTPUT"
 
   fetch:
-    name: fetch ${{ matrix.year }}
+    name: fetch ${{ matrix.year }} ${{ matrix.start }}
     needs: plan
     runs-on: ubuntu-24.04
-    timeout-minutes: 240
+    timeout-minutes: 120
     strategy:
       fail-fast: false
       matrix:
-        year: ${{ fromJSON(needs.plan.outputs.years) }}
+        include: ${{ fromJSON(needs.plan.outputs.chunks) }}
     steps:
       # Actions are pinned to full commit SHAs; the tag is in the comment.
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
@@ -85,6 +101,8 @@ jobs:
       - name: Fetch
         env:
           YEAR: ${{ matrix.year }}
+          START: ${{ matrix.start }}
+          END: ${{ matrix.end }}
           SOURCE: ${{ inputs.source || 'news' }}
         run: |
           [[ "$YEAR" =~ ^[0-9]{4}$ ]] || { echo "::error::year must be YYYY"; exit 1; }
@@ -93,10 +111,10 @@ jobs:
             both) only=() ;;
             *) echo "::error::unknown source $SOURCE"; exit 1 ;;
           esac
-          target/release/fr2027 backtest-signals "$YEAR" "${only[@]}"
+          target/release/fr2027 backtest-signals "$YEAR" "${only[@]}" --start "$START" --end "$END"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: backtest-signals-${{ matrix.year }}
+          name: backtest-signals-${{ matrix.year }}-${{ matrix.start }}
           path: |
             data/backtest/${{ matrix.year }}/gdelt.csv
             data/backtest/${{ matrix.year }}/attention.csv

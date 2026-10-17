@@ -63,6 +63,13 @@ pub struct SignalsArgs {
     /// Fetch only this source (default: both).
     #[arg(long, value_enum)]
     only: Option<SignalSource>,
+    /// Fetch only from this day (default: the window's start in signals.yaml), to split a long
+    /// fetch across machines; the pieces are then concatenated.
+    #[arg(long)]
+    start: Option<jiff::civil::Date>,
+    /// Fetch only to this day (default: the window's end).
+    #[arg(long)]
+    end: Option<jiff::civil::Date>,
 }
 
 #[derive(Clone, Copy, PartialEq, clap::ValueEnum)]
@@ -83,7 +90,12 @@ pub fn fetch_signals(repo: &Repo, args: &SignalsArgs) -> Result<()> {
         bail!("{} is not an election in config/backtest.yaml", args.year);
     };
     let dir = repo.root().join(&entry.dir);
-    let sources = SignalSources::load(&dir)?;
+    let mut sources = SignalSources::load(&dir)?;
+    sources.start = args.start.map_or(sources.start, |d| d.max(sources.start));
+    sources.end = args.end.map_or(sources.end, |d| d.min(sources.end));
+    if sources.start > sources.end {
+        bail!("the days asked for are outside {}'s window", args.year);
+    }
     let inputs = Inputs::load(repo)?;
     let client = Client::new(&inputs.sources.user_agent)?;
     let wanted = |source| args.only.is_none_or(|only| only == source);
