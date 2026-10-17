@@ -6,7 +6,6 @@ import {
   midpoint,
   nearest,
   outcomeGroups,
-  regroup,
   panDomain,
   round1Panels,
   round2Matrix,
@@ -180,25 +179,6 @@ describe("outcomeGroups", () => {
 
   it("is empty when nobody can win", () => {
     expect(outcomeGroups([withWin("a", 0)])).toEqual([])
-  })
-})
-
-describe("regroup", () => {
-  it("keeps the published rows at another setting, and pools everyone else", () => {
-    const published = outcomeGroups([
-      withWin("a", 0.77),
-      withWin("b", 0.19),
-      withWin("y", 0.027),
-      withWin("x", 0.004),
-      withWin("z", 0.004),
-    ])
-    const markets = [withWin("a", 0.46), withWin("b", 0.5), withWin("y", 0), withWin("x", 0.04), withWin("z", 0)]
-    expect(regroup(published, markets).map((g) => [g.candidateId, g.dots, g.members])).toEqual([
-      ["a", 46, 1],
-      ["b", 50, 1],
-      ["y", 0, 1],
-      [null, 4, 2],
-    ])
   })
 })
 

@@ -242,18 +242,3 @@ export function outcomeGroups(
   ]
   return groups.map((g) => ({ ...g, dots: dotsFor(g.probability) })).filter((g) => g.dots > 0)
 }
-
-/**
- * The published groups at another setting of the forecast: each keeps its row, and the pool keeps
- * everyone without a row of their own, so moving the settings changes how many dots a row fills,
- * never which rows there are.
- */
-export function regroup(groups: readonly OutcomeGroup[], candidates: readonly CandidateForecast[]): OutcomeGroup[] {
-  const chance = new Map(candidates.map((c) => [c.candidate_id, c.p_win]))
-  const own = new Set(groups.flatMap((g) => (g.candidateId === null ? [] : [g.candidateId])))
-  const pooled = candidates.filter((c) => !own.has(c.candidate_id)).reduce((sum, c) => sum + c.p_win, 0)
-  return groups.map((g) => {
-    const probability = g.candidateId === null ? pooled : (chance.get(g.candidateId) ?? 0)
-    return { ...g, probability, dots: dotsFor(probability) }
-  })
-}

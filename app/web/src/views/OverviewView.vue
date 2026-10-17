@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, toRef } from "vue"
+import { computed, ref, toRef, watch } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Blend, Forecast, HistoryRun, TrackRecord } from "../api/schemas"
 import { blendAt, type Blended } from "../blend"
@@ -55,29 +55,22 @@ const withChances = (chances: Chances | undefined | null) =>
     return x ? { ...c, p_win: x.win, p_qualify_r1: x.qualify } : c
   })
 
-// The published setting fixes the order shown and the dots chart's rows, so moving the settings
-// changes figures, never places.
-const published = computed(() => withChances(chancesAt(1, publishedWeight.value)))
-const rank = computed(
-  () =>
-    new Map(
-      published.value
-        .toSorted((a, b) => b.p_win - a.p_win || b.p_qualify_r1 - a.p_qualify_r1)
-        .map((c, i) => [c.candidate_id, i]),
-    ),
-)
-// The forecast as shown: chances of winning and of reaching round 2 at the reader's settings, in
-// the published order.
+// The forecast as shown: chances of winning and of reaching round 2 at the reader's settings,
+// largest first.
 const shown = computed<Forecast>(() => ({
   ...props.forecast,
-  candidates: withChances(blended.value).toSorted(
-    (a, b) => (rank.value.get(a.candidate_id) ?? 0) - (rank.value.get(b.candidate_id) ?? 0),
-  ),
+  candidates: withChances(blended.value).toSorted((a, b) => b.p_win - a.p_win || b.p_qualify_r1 - a.p_qualify_r1),
 }))
 const { query, showAll, field } = useFieldFilter(toRef(() => shown.value.candidates))
 // The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside.
-const dotRows = computed(() => outcomeGroups(published.value, field.value.setAside))
-const ownRow = computed(() => new Set(dotRows.value.flatMap((g) => (g.candidateId === null ? [] : [g.candidateId]))))
+const groups = computed(() => outcomeGroups(shown.value.candidates, field.value.setAside))
+const ownRow = computed(() => new Set(groups.value.flatMap((g) => (g.candidateId === null ? [] : [g.candidateId]))))
+// Set once the reader moves a setting: rows that change places then skip their entrance animation,
+// which moving an element in the page would otherwise play again.
+const settled = ref(false)
+watch([signalScale, marketWeight], () => {
+  settled.value = true
+})
 
 const maxShare = computed(() => Math.max(0.05, ...props.forecast.candidates.map((c) => c.r1_share?.hi80 ?? 0)))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
@@ -93,7 +86,7 @@ const newSpikes = computed(() => [
 ])
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const at = (share: number) => (share / maxShare.value) * 100
-// Everyone with a row of their own in the dots chart, in the published order.
+// Everyone with a row of their own in the dots chart, largest first.
 const blendRows = computed(() => {
   const rows = new Map((props.blend?.candidates ?? []).map((c) => [c.candidate_id, c]))
   return shown.value.candidates.flatMap((c) => {
@@ -110,7 +103,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
 </script>
 
 <template>
-  <div class="overview">
+  <div class="overview" :class="{ settled }">
     <section aria-labelledby="outcomes-title" class="card over-painting outcomes-card rise">
       <header class="card-head">
         <p class="eyebrow"><span class="tricolore-rule" />{{ content.outcomesEyebrow }}</p>
@@ -125,7 +118,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
         :blend="blend"
         :published="publishedWeight"
       />
-      <OutcomeDots :forecast="shown" :rows="dotRows" />
+      <OutcomeDots :class="{ settled }" :groups="groups" />
       <p class="notice note" role="note">
         <span aria-hidden="true" class="icon" translate="no">i</span>
         <span>{{ content.uncertainty }}</span>
@@ -161,7 +154,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               <th scope="col">{{ common.r1Share }}</th>
             </tr>
           </thead>
-          <tbody>
+          <TransitionGroup name="reorder" tag="tbody">
             <tr v-for="(c, i) in field.visible" :key="c.candidate_id" :style="{ '--i': i }">
               <th scope="row">
                 <span class="who">
@@ -206,7 +199,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
                 <span v-else class="muted small">{{ c.simulated ? "—" : common.notPolled }}</span>
               </td>
             </tr>
-          </tbody>
+          </TransitionGroup>
         </table>
       </div>
     </section>
@@ -232,7 +225,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               </template>
             </tr>
           </thead>
-          <tbody>
+          <TransitionGroup name="reorder" tag="tbody">
             <tr v-for="row in blendRows" :key="row.candidate_id">
               <th scope="row">
                 <span class="who">
@@ -247,7 +240,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
               <td class="num secondary">{{ maybe(row.market.qualify) }}</td>
               <td class="num strong">{{ probability(row.blended.qualify, locale) }}</td>
             </tr>
-          </tbody>
+          </TransitionGroup>
         </table>
       </div>
       <p class="secondary small blend-note">
@@ -342,8 +335,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
   color: var(--muted);
 }
 
-.bar-cell,
-.range-cell {
+.bar-cell, .range-cell {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -358,6 +350,11 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
   border-radius: 0 3px 3px 0;
 }
 
+/* Rows glide to their new place when the reader's settings reorder them. */
+.reorder-move {
+  transition: transform 0.45s var(--ease-out);
+}
+
 .bar {
   display: block;
   height: 100%;
@@ -368,6 +365,10 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
   transform-origin: left;
   animation: grow 1.1s var(--ease-out) both;
   animation-delay: calc(var(--i, 0) * 22ms + 250ms);
+}
+
+.settled .bar {
+  animation: none;
 }
 
 .value {
