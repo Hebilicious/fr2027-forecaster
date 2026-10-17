@@ -107,7 +107,10 @@ export interface Lean {
 
 export interface Leans {
   readonly firms: readonly string[]
-  readonly blocs: readonly string[]
+  /** Blocs on the left–right axis, far left first. */
+  readonly spectrum: readonly string[]
+  /** Blocs outside that axis ("other" and any the page does not place). */
+  readonly outside: readonly string[]
   readonly cells: readonly Lean[]
   /** The largest |relative| shown, for the colour scale. */
   readonly max: number
@@ -115,16 +118,15 @@ export interface Leans {
 
 /**
  * Each pollster's house effect on each bloc, as estimated by the poll aggregation (on the log scale, shown
- * as a relative difference): pollsters in alphabetical order, blocs left to right.
+ * as a relative difference): pollsters in alphabetical order, blocs left to right and then those off that axis.
  */
 export function pollsterLeans(forecast: Forecast): Leans {
   const effects = forecast.aggregation.house_effects
   const firms = [...new Set(effects.map((e) => e.firm))].toSorted()
   const present = new Set(effects.map((e) => e.bloc))
-  const blocs = [
-    ...FAMILIES.filter((b) => present.has(b)),
-    ...[...present].filter((b) => !FAMILIES.includes(b)).toSorted(),
-  ]
+  const axis = FAMILIES.filter((b) => b !== "other")
+  const spectrum = axis.filter((b) => present.has(b))
+  const outside = [...present].filter((b) => !axis.includes(b)).toSorted()
   const cells = effects.map((e) => ({
     firm: e.firm,
     bloc: e.bloc,
@@ -133,7 +135,7 @@ export function pollsterLeans(forecast: Forecast): Leans {
     hi: Math.expm1(e.mean + e.sd),
     clear: Math.abs(e.mean) > e.sd,
   }))
-  return { firms, blocs, cells, max: Math.max(0.01, ...cells.map((c) => Math.abs(c.relative))) }
+  return { firms, spectrum, outside, cells, max: Math.max(0.01, ...cells.map((c) => Math.abs(c.relative))) }
 }
 
 /** The diverging scale's poles and neutral midpoint, for the dark surface. */

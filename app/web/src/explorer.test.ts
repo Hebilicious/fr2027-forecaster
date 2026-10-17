@@ -57,6 +57,7 @@ const forecast: Forecast = {
       { firm: "ifop", bloc: "far_right", mean: 0.04, sd: 0.02 },
       { firm: "elabe", bloc: "left", mean: -0.01, sd: 0.03 },
       { firm: "elabe", bloc: "far_right", mean: -0.08, sd: 0.02 },
+      { firm: "elabe", bloc: "other", mean: 0.01, sd: 0.02 },
     ],
   },
   changes: { previous: null, new_polls: [], p_win_delta: [] },
@@ -102,7 +103,8 @@ describe("pollsterLeans", () => {
   it("lists firms alphabetically and blocs left to right, with relative differences", () => {
     const leans = pollsterLeans(forecast)
     expect(leans.firms).toEqual(["elabe", "ifop"])
-    expect(leans.blocs).toEqual(["left", "far_right"])
+    expect(leans.spectrum).toEqual(["left", "far_right"])
+    expect(leans.outside).toEqual(["other"])
     const ifop = leans.cells.find((c) => c.firm === "ifop")!
     expect(ifop.relative).toBeCloseTo(Math.exp(0.04) - 1)
     expect(ifop.clear).toBe(true)

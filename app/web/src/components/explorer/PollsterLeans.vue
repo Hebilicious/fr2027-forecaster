@@ -12,6 +12,8 @@ const common = useIntlayer("common")
 const { locale } = useLocale()
 
 const leans = computed(() => pollsterLeans(props.forecast))
+// Body columns: the axis, then the blocs outside it.
+const columns = computed(() => [...leans.value.spectrum, ...leans.value.outside])
 const cell = (firm: string, bloc: string) => leans.value.cells.find((c) => c.firm === firm && c.bloc === bloc)
 const family = (bloc: string) => labelOf(common.families, bloc)
 
@@ -46,15 +48,35 @@ const gradient = `linear-gradient(90deg, ${DIVERGING.low}, ${DIVERGING.mid}, ${D
       <div class="table-wrap">
         <table class="heat" :aria-label="content.title.value">
           <thead>
+            <!-- The political families on their left–right axis, then, apart, those outside it. -->
             <tr>
-              <th class="corner" scope="col">{{ content.pollster }}</th>
-              <th v-for="bloc in leans.blocs" :key="bloc" scope="col">{{ family(bloc) }}</th>
+              <th class="corner" rowspan="2" scope="col">{{ content.pollster }}</th>
+              <th class="axis" :colspan="leans.spectrum.length" scope="colgroup">
+                <span>{{ content.axisLeft }}</span>
+                <span aria-hidden="true" class="axis-line" />
+                <span>{{ content.axisRight }}</span>
+              </th>
+              <th v-if="leans.outside.length" class="axis first-outside" :colspan="leans.outside.length" scope="colgroup">
+                {{ content.offAxis }}
+              </th>
+            </tr>
+            <tr>
+              <th v-for="bloc in leans.spectrum" :key="bloc" scope="col">{{ family(bloc) }}</th>
+              <th
+                v-for="(bloc, i) in leans.outside"
+                :key="bloc"
+                class="outside"
+                :class="{ 'first-outside': i === 0 }"
+                scope="col"
+              >
+                {{ family(bloc) }}
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="firm in leans.firms" :key="firm">
               <th class="firm" scope="row">{{ firm }}</th>
-              <td v-for="bloc in leans.blocs" :key="bloc">
+              <td v-for="bloc in columns" :key="bloc" :class="{ 'first-outside': bloc === leans.outside[0] }">
                 <span
                   v-if="cell(firm, bloc)"
                   class="cell num"
@@ -119,7 +141,15 @@ h3 {
   border-collapse: separate;
   border-spacing: 2px;
   width: 100%;
+  /* Equal family columns, so the axis reads symmetric. */
+  table-layout: fixed;
+  min-width: 640px;
 }
+
+.heat .corner {
+  width: 8.5rem;
+}
+
 
 .heat th {
   font-weight: 500;
@@ -144,10 +174,46 @@ h3 {
   padding: 0;
 }
 
+/* The axis over the political families: left on the left, right on the right. */
+.heat th.axis {
+  padding: 0 0 2px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.axis > span {
+  vertical-align: middle;
+}
+
+.axis-line {
+  display: inline-block;
+  width: min(40%, 280px);
+  height: 1px;
+  margin: 0 12px;
+  background: linear-gradient(90deg, var(--axis), var(--grid), var(--axis));
+}
+
+/* Over a single column, the label of the families outside the axis wraps. */
+.heat th.axis.first-outside {
+  white-space: normal;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+}
+
+/* The families outside the axis stand apart, behind a hairline. */
+.heat .first-outside {
+  padding-left: 18px;
+  background: linear-gradient(var(--axis), var(--axis)) 8px 0 / 1px 100% no-repeat;
+}
+
+.heat th.outside {
+  color: var(--muted);
+}
+
 .cell {
   display: grid;
   place-items: center;
-  min-width: 4.5rem;
   height: 36px;
   border-radius: 4px;
   color: var(--ink);
