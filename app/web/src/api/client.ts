@@ -1,5 +1,5 @@
 import { Result, Schema } from "effect"
-import { Forecast, Health, Polls, Series, Signals } from "./schemas"
+import { Forecast, Health, History, Polls, Series, Signals, TrackRecord } from "./schemas"
 
 // `Missing`: the document does not exist yet. `fr2027 serve` and the public site's Worker answer
 // 404 with an error; a single-page fallback that answers index.html with 200 (a static server
@@ -46,4 +46,6 @@ export const api = {
   polls: (fresh = false) => load("/api/polls.json", Schema.decodeUnknownResult(Polls), fresh),
   health: (fresh = false) => load("/api/health.json", Schema.decodeUnknownResult(Health), fresh),
   signals: (fresh = false) => load("/api/signals.json", Schema.decodeUnknownResult(Signals), fresh),
+  history: (fresh = false) => load("/api/history.json", Schema.decodeUnknownResult(History), fresh),
+  trackRecord: (fresh = false) => load("/api/track-record.json", Schema.decodeUnknownResult(TrackRecord), fresh),
 }

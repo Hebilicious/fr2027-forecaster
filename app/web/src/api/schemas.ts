@@ -285,3 +285,47 @@ export type NewsDay = typeof NewsDay.Type
 export type Headline = typeof Headline.Type
 export type XRow = typeof XRow.Type
 export type CampaignEvent = typeof CampaignEvent.Type
+
+// Every forecast run's chances, oldest first (`/api/history.json`).
+const HistoryRun = Schema.Struct({
+  file: Schema.String,
+  as_of: Schema.String,
+  generated_at: Schema.String,
+  candidates: Schema.Array(
+    Schema.Struct({
+      candidate_id: Schema.String,
+      p_win: Schema.NullOr(Schema.Finite),
+      p_qualify_r1: Schema.NullOr(Schema.Finite),
+    }),
+  ),
+})
+
+export const History = Schema.Struct({ runs: Schema.Array(HistoryRun) })
+export type History = typeof History.Type
+export type HistoryRun = typeof HistoryRun.Type
+
+// How the model did when replayed on past elections (`/api/track-record.json`, from the backtest).
+const HorizonRecord = Schema.Struct({
+  days: Schema.Finite,
+  replays: Schema.Finite,
+  /** Share of results that fell inside the model's 80% range. */
+  coverage80: Schema.Finite,
+  share_mae_points: Schema.Finite,
+})
+
+const ReliabilityBin = Schema.Struct({
+  lo: Schema.Finite,
+  hi: Schema.Finite,
+  events: Schema.Finite,
+  mean_forecast: Schema.NullOr(Schema.Finite),
+  observed: Schema.NullOr(Schema.Finite),
+})
+
+export const TrackRecord = Schema.Struct({
+  model_version: Schema.NullOr(Schema.String),
+  elections: Schema.Array(Schema.Finite),
+  by_horizon: Schema.Array(HorizonRecord),
+  reliability: Schema.Array(ReliabilityBin),
+})
+export type TrackRecord = typeof TrackRecord.Type
+export type ReliabilityBin = typeof ReliabilityBin.Type

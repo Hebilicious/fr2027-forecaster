@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
-import type { Forecast } from "../api/schemas"
+import type { Forecast, HistoryRun, TrackRecord } from "../api/schemas"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
+import ModelExplorer from "../components/explorer/ModelExplorer.vue"
 import FieldFilter from "../components/FieldFilter.vue"
 import OutcomeDots from "../components/OutcomeDots.vue"
 import { count, daysUntil, list, points, probability, shareWithInterval } from "../format"
 import { useFieldFilter } from "../useFieldFilter"
 
-const props = defineProps<{ forecast: Forecast }>()
+const props = defineProps<{
+  forecast: Forecast
+  history: readonly HistoryRun[]
+  trackRecord: TrackRecord | null
+}>()
 const content = useIntlayer("overview-view")
 const common = useIntlayer("common")
 const { locale } = useLocale()
@@ -47,7 +52,9 @@ const at = (share: number) => (share / maxShare.value) * 100
       </p>
     </section>
 
-    <section aria-labelledby="field-title" class="card rise" :style="{ '--i': 1 }">
+    <ModelExplorer :forecast="forecast" :history="history" :track-record="trackRecord" />
+
+    <section aria-labelledby="field-title" class="card rise" :style="{ '--i': 2 }">
       <header class="card-head">
         <p class="eyebrow">{{ content.fieldEyebrow }}</p>
         <h2 id="field-title">{{ content.fieldTitle }}</h2>
