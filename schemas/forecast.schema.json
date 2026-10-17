@@ -94,6 +94,13 @@
           "polled": {
             "type": "boolean",
             "description": "Whether head-to-head polls informed this matchup, beyond the transfer model."
+          },
+          "anchor": {
+            "type": "object",
+            "description": "For a matchup no poll tested: the tested matchup it was anchored on, with a candidate of the same bloc in place of a or of b (a then b, in this matchup's order).",
+            "additionalProperties": false,
+            "required": ["a", "b"],
+            "properties": { "a": { "type": "string" }, "b": { "type": "string" } }
           }
         }
       }

@@ -4,6 +4,16 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-17
 
+### Model 0.4.0: untested runoffs anchored on tested ones
+
+A runoff no pollster has tested used to come from the bloc transfer table alone, which treats every finalist of a bloc alike and knows nothing of the polled runoffs around it. Zemmour, never tested in a runoff, got 55% against Mélenchon, while every poll gives Le Pen 64–70% against him.
+
+**Change.** An untested runoff A–B is now anchored on a tested one with a candidate of the same bloc in place of A or of B (A′–B or A–B′), shifted by the gap between the two candidates; the anchor with the smallest variance is kept and combined with the transfer estimate by precision, as polled runoffs already were. The gap is measured where polls tested both candidates against a common opponent; otherwise it comes from history: across 46 same-bloc pairs tested against a common opponent in one poll, 2002–2022, the candidate tested in more runoff polls did better by 0.11 on the logit scale on average (about 3 points at 50/50), with a standard deviation of 0.23 (about 6 points); 2022's Le Pen–Zemmour gap, 0.32 over 143 polls, is within it. These are `round2.anchor_gap_mean` and `anchor_gap_sd`, set from that measurement, not fitted by the backtest. The forecast file names each runoff's anchor (`pairs[].anchor`, optional), and the round 2 page says "from A–B polls" instead of "from vote transfers".
+
+**Evidence.** The backtest cannot judge it: in every replay the runoff that happened was either polled or had no anchor (2002's Chirac–Le Pen), and its scores are unchanged to the last digit. A held-out check can: in every past campaign and replay date, each tested runoff between two runners is hidden and predicted. Over 34 such runoffs the error (root mean square, logit) is 0.357 for the transfer table, 0.291 for the anchor and 0.246 for the two combined, and the anchor's stated uncertainty is about right (mean squared z 1.13). `research/backtest/runoff-anchor-holdout.md` has the method and every runoff. Its misses show the history gap's direction can be wrong (2022: with every Macron–Le Pen poll hidden, Le Pen was anchored on Zemmour and came out 14 points too low).
+
+**Effect on 2027** (model 0.3.0 with the RN slot fix → 0.4.0, polls to 17 October): 10 of 23 reported runoffs are now anchored. Zemmour against Mélenchon goes to 91% for Zemmour (via Le Pen–Mélenchon), against Philippe to 51% (via Le Pen–Philippe); Glucksmann against Bardella to 8% for Glucksmann (via Glucksmann–Le Pen); Lisnard and Villepin against Le Pen to about 10%. Chances of winning: Le Pen 82.1% → 82.9%, Bardella 5.5% → 6.0%, Glucksmann 3.1% → 2.6%, Mélenchon 0.82% → 0.70%, Zemmour 0.52% → 0.65%, Lisnard 0.37% → 0.17%, Villepin 0.30% → 0.13%.
+
 ### Field: the RN slot always fields a candidate
 
 The `rn` slot gave Le Pen 0.91 and Bardella 0.07, copied from Polymarket's ballot markets, which left 0.02 of simulated elections without any RN candidate. Nobody chose that: the RN fields a candidate in every election, Bardella if Le Pen cannot. Those 2% were worth two-thirds of Zemmour's chance of winning, because he took the whole far-right vote in them (1.01 of his 1.54 points). The missing 0.02 now goes to Le Pen (0.93, Bardella 0.07).

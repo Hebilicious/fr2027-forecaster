@@ -9,7 +9,7 @@ use crate::{
     quantile,
     rng::Rng,
     round1::{Errors, Round1Fit, ShareScratch, fit_round1, round1_shares},
-    round2::{Round2Fit, Transfers, fit_round2},
+    round2::{Anchor, Round2Fit, Transfers, fit_round2},
 };
 
 #[derive(Clone, Debug)]
@@ -40,6 +40,9 @@ pub struct PairForecast {
     pub p_a_wins: f64,
     /// Whether direct round 2 polls informed the matchup.
     pub polled: bool,
+    /// For an untested matchup, the tested one it was anchored on (stand-in for `a` or `a`, then
+    /// stand-in for `b` or `b`).
+    pub anchor: Option<(usize, usize)>,
 }
 
 #[derive(Clone, Debug)]
@@ -167,6 +170,15 @@ pub fn simulate(
         ));
     }
 
+    // For each untested matchup (lower index first), its anchor if it has one.
+    let anchors: Vec<Option<Anchor>> = (0..n * n)
+        .map(|i| {
+            let (a, b) = (i / n, i % n);
+            (a < b && round2.lookup(a, b).is_none())
+                .then(|| round2.anchored(field, a, b, &params.round2))
+                .flatten()
+        })
+        .collect();
     let election = round1.vote_state_at(params.round1_date);
     let sampler = election.sampler()?;
     let mut rng_field = Rng::derive(params.seed, "field");
@@ -237,11 +249,14 @@ pub fn simulate(
         let transfer = transfers.share(field, a, b, &shares).clamp(1e-6, 1.0 - 1e-6);
         let transfer_logit = (transfer / (1.0 - transfer)).ln();
         let transfer_var = params.round2.transfer_sd.powi(2);
-        let (mean, var) = match round2.lookup(a, b) {
-            Some((polled, polled_var)) => {
-                let precision = 1.0 / transfer_var + 1.0 / polled_var;
+        let estimate = round2
+            .lookup(a, b)
+            .or_else(|| anchors[a * n + b].map(|anchor| (anchor.mean, anchor.var)));
+        let (mean, var) = match estimate {
+            Some((estimate, estimate_var)) => {
+                let precision = 1.0 / transfer_var + 1.0 / estimate_var;
                 (
-                    (transfer_logit / transfer_var + polled / polled_var) / precision,
+                    (transfer_logit / transfer_var + estimate / estimate_var) / precision,
                     1.0 / precision,
                 )
             }
@@ -294,6 +309,7 @@ pub fn simulate(
             p_matchup: f64::from(matchups[a * n + b]) / total,
             p_a_wins: f64::from(matchup_wins[a * n + b]) / f64::from(matchups[a * n + b]),
             polled: round2.lookup(a, b).is_some(),
+            anchor: anchors[a * n + b].map(|anchor| anchor.via),
         })
         .collect();
     pairs.sort_by(|x, y| y.p_matchup.total_cmp(&x.p_matchup).then((x.a, x.b).cmp(&(y.a, y.b))));
@@ -400,6 +416,8 @@ mod tests {
                 error_sd: 0.08,
                 horizon_error_sd: 0.0,
                 student_t_df: 5.0,
+                anchor_gap_mean: 0.1,
+                anchor_gap_sd: 0.2,
                 transfer_sd: 0.35,
                 loyalty: 0.97,
                 transfers: BTreeMap::from([

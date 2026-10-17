@@ -88,6 +88,15 @@ struct PairOut {
     p_matchup: f64,
     p_win_given_matchup: BTreeMap<String, f64>,
     polled: bool,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    anchor: Option<AnchorOut>,
+}
+
+/// The tested matchup an untested one was anchored on.
+#[derive(Serialize)]
+struct AnchorOut {
+    a: String,
+    b: String,
 }
 
 #[derive(Serialize)]
@@ -363,6 +372,7 @@ fn build(
             p_matchup: round4(p.p_matchup),
             p_win_given_matchup: BTreeMap::from([(id(p.a), round4(p.p_a_wins)), (id(p.b), round4(1.0 - p.p_a_wins))]),
             polled: p.polled,
+            anchor: p.anchor.map(|(a, b)| AnchorOut { a: id(a), b: id(b) }),
         })
         .collect();
     let blocs = &config.blocs;

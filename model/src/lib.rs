@@ -155,6 +155,11 @@ pub struct Round2Params {
     pub student_t_df: f64,
     /// Uncertainty of a transfer-based estimate, on the logit scale.
     pub transfer_sd: f64,
+    /// How much stronger, on the logit scale, the candidate tested in more runoff polls is than
+    /// another of the same bloc against a common opponent, before any poll measures the gap.
+    pub anchor_gap_mean: f64,
+    /// Standard deviation of that gap.
+    pub anchor_gap_sd: f64,
     /// Share of a finalist's own first-round voters who vote for them again.
     pub loyalty: f64,
     /// Relative propensity of each voter bloc to vote for a finalist of each bloc, or to abstain
