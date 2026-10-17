@@ -2,7 +2,8 @@
 import { computed, toRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Blend, Forecast, HistoryRun, TrackRecord } from "../api/schemas"
-import { blendAt } from "../blend"
+import { blendAt, type Blended } from "../blend"
+import { outcomeFrame } from "../charts"
 import CandidateAvatar from "../components/CandidateAvatar.vue"
 import ModelExplorer from "../components/explorer/ModelExplorer.vue"
 import MethodSection from "../components/MethodSection.vue"
@@ -36,29 +37,61 @@ const marketWeight = computed({
 // The news and social signals' strength: the forecast was run at each of these.
 const signalScale = useSignalScale()
 const scales = computed(() => (props.forecast.signal_levels ?? []).map((l) => l.scale))
-const levelModel = computed(() => {
-  const level = props.forecast.signal_levels?.find((l) => l.scale === signalScale.value)
+type Chances = ReadonlyMap<string, Blended>
+const levelChances = (scale: number): Chances | undefined => {
+  const level = props.forecast.signal_levels?.find((l) => l.scale === scale)
   return level
     ? new Map(level.candidates.map((c) => [c.candidate_id, { win: c.p_win, qualify: c.p_qualify_r1 }]))
     : undefined
+}
+// Each candidate's chances at a setting: a strength of the signals and a weight of the markets.
+const chancesAt = (scale: number, weight: number): Chances | undefined =>
+  props.blend ? blendAt(props.blend, 1 - weight, levelChances(scale)) : levelChances(scale)
+const levelModel = computed(() => levelChances(signalScale.value))
+const blended = computed(() => chancesAt(signalScale.value, marketWeight.value) ?? null)
+const withChances = (chances: Chances | undefined | null) =>
+  props.forecast.candidates.map((c) => {
+    const x = chances?.get(c.candidate_id)
+    return x ? { ...c, p_win: x.win, p_qualify_r1: x.qualify } : c
+  })
+
+// Every setting the reader can reach, the published one first: its order is the order shown, so
+// moving the settings changes figures, never places.
+const MARKET_STEPS = Array.from({ length: 21 }, (_, i) => i / 20)
+const reachable = computed(() => {
+  const published = withChances(chancesAt(1, publishedWeight.value))
+  const levels = scales.value.length > 0 ? scales.value : [1]
+  const weights = props.blend ? MARKET_STEPS : [0]
+  return [published, ...levels.flatMap((s) => weights.map((w) => withChances(chancesAt(s, w))))]
 })
-const blended = computed(() =>
-  props.blend ? blendAt(props.blend, 1 - marketWeight.value, levelModel.value) : (levelModel.value ?? null),
+const rank = computed(
+  () =>
+    new Map(
+      reachable.value[0]!.toSorted((a, b) => b.p_win - a.p_win || b.p_qualify_r1 - a.p_qualify_r1).map((c, i) => [
+        c.candidate_id,
+        i,
+      ]),
+    ),
 )
-// The forecast as shown: chances of winning and of reaching round 2 blended at the slider's
-// weight, candidates in that order.
-const shown = computed<Forecast>(() => {
-  const b = blended.value
-  if (!b) return props.forecast
-  const candidates = props.forecast.candidates
-    .map((c) => {
-      const x = b.get(c.candidate_id)
-      return x ? { ...c, p_win: x.win, p_qualify_r1: x.qualify } : c
-    })
-    .toSorted((a, c) => c.p_win - a.p_win || c.p_qualify_r1 - a.p_qualify_r1)
-  return { ...props.forecast, candidates }
-})
+// The forecast as shown: chances of winning and of reaching round 2 at the reader's settings, in
+// the published order.
+const shown = computed<Forecast>(() => ({
+  ...props.forecast,
+  candidates: withChances(blended.value).toSorted(
+    (a, b) => (rank.value.get(a.candidate_id) ?? 0) - (rank.value.get(b.candidate_id) ?? 0),
+  ),
+}))
 const { query, showAll, field } = useFieldFilter(toRef(() => shown.value.candidates))
+// The dots chart's groups and room, fixed across every reachable setting.
+const frame = computed(() =>
+  outcomeFrame(
+    reachable.value.map((state) =>
+      state.toSorted((a, b) => (rank.value.get(a.candidate_id) ?? 0) - (rank.value.get(b.candidate_id) ?? 0)),
+    ),
+    field.value.setAside,
+  ),
+)
+const inFrame = computed(() => new Set(frame.value.ids))
 
 const maxShare = computed(() => Math.max(0.05, ...props.forecast.candidates.map((c) => c.r1_share?.hi80 ?? 0)))
 const names = computed(() => new Map(props.forecast.candidates.map((c) => [c.candidate_id, c.name])))
@@ -74,8 +107,8 @@ const newSpikes = computed(() => [
 ])
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const at = (share: number) => (share / maxShare.value) * 100
-// Everyone the model or the markets give at least half a point to win, in the forecast's order,
-// leaving out those the field filter sets aside.
+// Everyone the dots chart gives a group (half a point to win at some setting), in the published
+// order, leaving out those the field filter sets aside.
 const blendRows = computed(() => {
   const rows = new Map((props.blend?.candidates ?? []).map((c) => [c.candidate_id, c]))
   return shown.value.candidates.flatMap((c) => {
@@ -83,7 +116,7 @@ const blendRows = computed(() => {
     const blendedRow = blended.value?.get(c.candidate_id)
     const model = levelModel.value?.get(c.candidate_id)
     const shownRow = row && model ? { ...row, model: { ...row.model, win: model.win, qualify: model.qualify } } : row
-    return shownRow && blendedRow && Math.max(shownRow.market.win ?? 0, shownRow.model.win) >= 0.005
+    return shownRow && blendedRow && inFrame.value.has(c.candidate_id)
       ? [{ ...shownRow, blended: blendedRow, name: c.name }]
       : []
   })
@@ -108,7 +141,7 @@ const maybe = (p: number | null) => (p === null ? "—" : probability(p, locale.
         :published="publishedWeight"
       />
       <!-- The dots ignore the search, which is for finding a row, but pool whoever the toggle sets aside. -->
-      <OutcomeDots :forecast="shown" :pool="field.setAside" />
+      <OutcomeDots :forecast="shown" :pool="field.setAside" :frame="frame" />
       <p class="notice note" role="note">
         <span aria-hidden="true" class="icon" translate="no">i</span>
         <span>{{ content.uncertainty }}</span>

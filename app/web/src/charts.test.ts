@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest"
 import type { Forecast, Poll, SeriesPoint } from "./api/schemas"
 import {
   fitShares,
+  framedGroups,
+  outcomeFrame,
   invert,
   midpoint,
   nearest,
@@ -235,5 +237,26 @@ describe("zoom", () => {
   it("puts whole-point ticks inside a zoomed share axis", () => {
     expect(shareTicksWithin([0.015, 0.07])).toEqual([0.02, 0.03, 0.04, 0.05, 0.06, 0.07])
     expect(shareTicksWithin([0.03, 0.2])).toEqual([0.05, 0.1, 0.15, 0.2])
+  })
+})
+
+const candidateWith = (id: string, p: number) =>
+  ({ candidate_id: id, name: id.toUpperCase(), p_win: p }) as unknown as Parameters<typeof framedGroups>[0][number]
+
+describe("outcomeFrame", () => {
+  it("keeps every candidate who ever has a group, and the room each ever needs", () => {
+    const published = [candidateWith("a", 0.77), candidateWith("b", 0.2), candidateWith("x", 0.003)]
+    const markets = [candidateWith("a", 0.46), candidateWith("b", 0.5), candidateWith("x", 0.04)]
+    const frame = outcomeFrame([published, markets])
+    expect(frame.ids).toEqual(["a", "b", "x"])
+    expect(frame.capacity.get("a")).toBe(77)
+    expect(frame.capacity.get("x")).toBe(4)
+    // At the published setting, x keeps its place with no dot yet.
+    const groups = framedGroups(published, frame)
+    expect(groups.map((g) => [g.candidateId, g.dots, g.capacity])).toEqual([
+      ["a", 77, 77],
+      ["b", 20, 50],
+      ["x", 0, 4],
+    ])
   })
 })

@@ -7,7 +7,8 @@ import { useNow } from "../useNow"
 
 // The forecast's two settings, side by side: how strongly the news and social signals act (a few
 // strengths the forecast was run at, so a pill switch) and how much the prediction markets weigh
-// (any share, so a slider). Each says what it does in one line; the details are on the Signals page.
+// (any share, so a slider). Both columns share one grid, so their rows line up; each marks its
+// published setting, which is also the way back.
 const props = defineProps<{ scales: readonly number[]; blend: Blend | null; published: number }>()
 const scale = defineModel<number>("scale", { required: true })
 const marketWeight = defineModel<number>("marketWeight", { required: true })
@@ -24,20 +25,16 @@ const marketPercent = computed({
     marketWeight.value = value / 100
   },
 })
-const changed = computed(() => scale.value !== 1 || Math.abs(marketWeight.value - props.published) > 1e-9)
-function reset() {
-  scale.value = 1
-  marketWeight.value = props.published
-}
+const atPublished = computed(() => Math.abs(marketWeight.value - props.published) < 1e-9)
 </script>
 
 <template>
-  <section class="controls" :aria-label="content.label.value">
-    <div v-if="scales.length > 1" class="control">
-      <div class="head">
+  <section class="controls" :class="{ single: !blend || scales.length < 2 }" :aria-label="content.label.value">
+    <template v-if="scales.length > 1">
+      <div class="head s-head">
         <h3 class="title">{{ content.signalsTitle }}</h3>
       </div>
-      <div class="pills" role="radiogroup" :aria-label="content.signalsTitle.value">
+      <div class="pills s-ctrl" role="radiogroup" :aria-label="content.signalsTitle.value">
         <button
           v-for="s in scales"
           :key="s"
@@ -45,21 +42,35 @@ function reset() {
           type="button"
           :aria-checked="scale === s"
           :class="{ published: s === 1 }"
+          :title="s === 1 ? content.backToPublished.value : undefined"
           @click="scale = s"
         >
           <span v-if="s === 0">{{ content.off }}</span>
           <span v-else translate="no">{{ multiple(s) }}</span>
         </button>
       </div>
-      <p class="caption">{{ content.signalsCaption }}</p>
-    </div>
+      <div class="ends s-ends small">
+        <span>{{ content.pollsOnly }}</span>
+        <span>{{ content.twice }}</span>
+      </div>
+      <p class="caption s-cap">{{ content.signalsCaption }}</p>
+    </template>
 
-    <div v-if="blend" class="control">
-      <div class="head">
+    <template v-if="blend">
+      <div class="head m-head">
         <h3 class="title">{{ content.marketsTitle }}</h3>
         <span class="value num">{{ percent(marketWeight, 0, locale) }}</span>
       </div>
-      <div class="slider" :style="{ '--fill': `${marketPercent}%`, '--mark': `${published * 100}%` }">
+      <div class="slider m-ctrl" :style="{ '--fill': `${marketPercent}%`, '--mark': `${published * 100}%` }">
+        <button
+          class="mark-label small"
+          :class="{ away: !atPublished }"
+          type="button"
+          :title="content.backToPublished.value"
+          @click="marketWeight = published"
+        >
+          {{ content.published }}
+        </button>
         <span aria-hidden="true" class="mark" />
         <input
           v-model.number="marketPercent"
@@ -70,49 +81,95 @@ function reset() {
           :aria-label="content.marketsTitle.value"
           :aria-valuetext="percent(marketWeight, 0, locale)"
         />
-        <span class="mark-label small">{{ content.published }}</span>
-        <div class="ends small">
-          <span>{{ content.modelOnly }}</span>
-          <span>{{ content.marketsOnly }}</span>
-        </div>
       </div>
-      <p class="caption">{{ content.marketsCaption }}</p>
-      <p v-if="!blend.market_used && blend.market_fetched_at" class="caption stale" role="status">
+      <div class="ends m-ends small">
+        <span>{{ content.modelOnly }}</span>
+        <span>{{ content.marketsOnly }}</span>
+      </div>
+      <p class="caption m-cap">{{ content.marketsCaption }}</p>
+      <p v-if="!blend.market_used && blend.market_fetched_at" class="caption stale m-stale" role="status">
         {{ content.stale({ when: relativeTime(blend.market_fetched_at, now, locale) }) }}
       </p>
-    </div>
-
-    <button v-if="changed" class="reset" type="button" @click="reset">{{ content.reset }}</button>
+    </template>
   </section>
 </template>
 
 <style scoped>
-/* An inset panel inside the card: two controls in columns, stacked on a phone. */
+/* An inset panel inside the card. One grid for both controls: head, control, end labels, caption,
+   each row shared by the two columns so they line up whatever each holds. */
 .controls {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px clamp(20px, 3vw, 40px);
+  grid-template-areas: "s-head m-head"
+                       "s-ctrl m-ctrl"
+                       "s-ends m-ends"
+                       "s-cap m-cap"
+                       ". m-stale";
+  align-items: center;
+  column-gap: clamp(24px, 4vw, 56px);
+  row-gap: 8px;
   margin: 4px 0 26px;
-  padding: 18px 20px 16px;
+  padding: 16px 20px 18px;
   border-radius: var(--radius-sm);
   background: rgba(0, 0, 0, 0.22);
   box-shadow: inset 0 0 0 1px var(--border);
 }
 
-.control {
-  display: grid;
-  gap: 10px;
-  align-content: start;
+.controls.single {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "s-head"
+                       "s-ctrl"
+                       "s-ends"
+                       "s-cap"
+                       "m-head"
+                       "m-ctrl"
+                       "m-ends"
+                       "m-cap"
+                       "m-stale";
 }
 
-/* Both columns' headings share one height, whether or not they show a value. */
+.s-head {
+  grid-area: s-head;
+}
+
+.s-ctrl {
+  grid-area: s-ctrl;
+}
+
+.s-ends {
+  grid-area: s-ends;
+}
+
+.s-cap {
+  grid-area: s-cap;
+}
+
+.m-head {
+  grid-area: m-head;
+}
+
+.m-ctrl {
+  grid-area: m-ctrl;
+}
+
+.m-ends {
+  grid-area: m-ends;
+}
+
+.m-cap {
+  grid-area: m-cap;
+}
+
+.m-stale {
+  grid-area: m-stale;
+}
+
 .head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  min-height: 32px;
+  min-height: 30px;
 }
 
 .title {
@@ -132,8 +189,16 @@ function reset() {
   color: var(--ink);
 }
 
+.ends {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+}
+
 .caption {
-  margin: 0;
+  align-self: start;
+  margin: 4px 0 0;
   font-size: 0.82rem;
   line-height: 1.45;
   color: var(--muted);
@@ -193,11 +258,13 @@ function reset() {
   box-shadow: 0 4px 14px -4px rgba(243, 239, 230, 0.35);
 }
 
-/* A thin track, filled in bleu up to the thumb, with a tick at the published weight. */
-/* Room above the track for the published weight's label. */
+/* A thin track, filled in bleu up to the thumb, with a tick at the published weight and its label
+   above; the label takes the slider back there. The block is as tall as the pill switch beside it. */
 .slider {
   position: relative;
-  padding-top: 18px;
+  height: 42px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .slider input[type="range"] {
@@ -263,11 +330,11 @@ function reset() {
   outline: none;
 }
 
-/* Under the input, so the thumb covers it when it sits on the published weight. */
+/* The tick sits under the input, so the thumb covers it when it rests on the published weight. */
 .mark {
   position: absolute;
   z-index: 0;
-  top: 23px;
+  bottom: 3px;
   left: calc(9px + (100% - 18px) * var(--mark) / 100%);
   width: 2px;
   height: 16px;
@@ -277,53 +344,42 @@ function reset() {
   pointer-events: none;
 }
 
-.ends {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4px;
-  color: var(--muted);
-}
-
 .mark-label {
   position: absolute;
   top: 0;
   left: calc(9px + (100% - 18px) * var(--mark) / 100%);
   transform: translateX(-50%);
-  line-height: 1;
-  color: var(--muted);
-}
-
-/* Reset closes the panel, on the right, only once something moved. */
-.reset {
-  grid-column: 1 / -1;
-  justify-self: end;
-  margin-top: -8px;
-  font: inherit;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 4px 12px;
+  padding: 0 6px;
   border: none;
   border-radius: 999px;
-  background: rgba(243, 239, 230, 0.08);
-  color: var(--ink-2);
+  background: transparent;
+  font: inherit;
+  line-height: 1.4;
+  color: var(--muted);
   cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.reset:hover {
-  background: rgba(243, 239, 230, 0.14);
+/* Away from the published weight, the label reads as the way back. */
+.mark-label.away {
+  color: var(--ink-2);
+  background: rgba(243, 239, 230, 0.08);
+}
+
+.mark-label:hover {
   color: var(--ink);
+  background: rgba(243, 239, 230, 0.14);
 }
 
 @media (max-width: 720px) {
   .controls {
-    grid-template-columns: 1fr;
-    padding: 16px 14px 14px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "s-head" "s-ctrl" "s-ends" "s-cap" "m-head" "m-ctrl" "m-ends" "m-cap" "m-stale";
+    padding: 14px 14px 16px;
   }
 
-  .reset {
-    justify-self: start;
-    margin-top: 0;
+  .m-head {
+    margin-top: 14px;
   }
 }
 </style>

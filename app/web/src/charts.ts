@@ -242,3 +242,64 @@ export function outcomeGroups(
   ]
   return groups.map((g) => ({ ...g, dots: dotsFor(g.probability) })).filter((g) => g.dots > 0)
 }
+
+/**
+ * The groups the dots chart keeps while the reader moves the forecast's settings, so nothing jumps:
+ * everyone who gets their own group in any of `states` (each a candidate list at one setting), in the
+ * order of the first state, and the most dots each group needs in any state.
+ */
+export interface OutcomeFrame {
+  readonly ids: readonly string[]
+  /** Most dots per group across the states, by candidate id; `null` for the pool. */
+  readonly capacity: ReadonlyMap<string | null, number>
+}
+
+export function outcomeFrame(
+  states: readonly (readonly CandidateForecast[])[],
+  pool: ReadonlySet<string> = new Set(),
+  min = 0.005,
+): OutcomeFrame {
+  const ids: string[] = []
+  for (const state of states) {
+    for (const g of outcomeGroups(state, pool, min)) {
+      if (g.candidateId !== null && !ids.includes(g.candidateId)) ids.push(g.candidateId)
+    }
+  }
+  const capacity = new Map<string | null, number>()
+  for (const state of states) {
+    for (const g of framedGroups(state, { ids, capacity: new Map() }, pool)) {
+      capacity.set(g.candidateId, Math.max(capacity.get(g.candidateId) ?? 0, g.dots))
+    }
+  }
+  return { ids, capacity }
+}
+
+/** The dots of `candidates` in a frame's groups: its candidates in its order, everyone else pooled last. */
+export function framedGroups(
+  candidates: readonly CandidateForecast[],
+  frame: OutcomeFrame,
+  pool: ReadonlySet<string> = new Set(),
+): (OutcomeGroup & { readonly capacity: number })[] {
+  const byId = new Map(candidates.map((c) => [c.candidate_id, c]))
+  const own = frame.ids.filter((id) => !pool.has(id) && byId.has(id))
+  const pooled = candidates.filter((c) => c.p_win > 0 && !own.includes(c.candidate_id))
+  const pooledProbability = pooled.reduce((sum, c) => sum + c.p_win, 0)
+  const groups: OutcomeGroup[] = [
+    ...own.map((id) => {
+      const c = byId.get(id)!
+      return { candidateId: id, name: c.name, probability: c.p_win, members: 1, dots: dotsFor(c.p_win) }
+    }),
+    ...(pooled.length > 0
+      ? [
+          {
+            candidateId: null,
+            name: null,
+            probability: pooledProbability,
+            members: pooled.length,
+            dots: dotsFor(pooledProbability),
+          },
+        ]
+      : []),
+  ]
+  return groups.map((g) => ({ ...g, capacity: Math.max(frame.capacity.get(g.candidateId) ?? 0, g.dots) }))
+}
