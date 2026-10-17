@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-17T18:18:31Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-17T17:36:07Z",
+      "title": "Mobilisations du 17 octobre: \"Faire porter aux chefs de la police la responsabilité des violences, c’est une inversion dangereuse et cynique des responsabilités\", écrit sur X le Premier ministre Sébastien Lecornu, répondant à Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/video-mobilisations-du-17-octobre-faire-porter-aux-chefs-de-la-police-la-responsabilite-des-violences-c-est-une-inversion-dangereuse-et-cynique-des-responsabilites-ecrit-sur-x-le-premier-ministre-sebastien-lecornu-repondant-a-jean-luc-melenchon_VN-202610170308.html"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Olivier Faure : « Les casseurs pourrissent un mouvement aussi puissant que joyeux »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/olivier-faure-les-casseurs-pourrissent-un-mouvement-aussi-puissant-que-joyeux-17-10-2026-MZGYLBUXDNBWRO64UVNIPQVULM.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
