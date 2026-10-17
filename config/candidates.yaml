@@ -359,9 +359,9 @@ candidates:
 slots:
   - id: rn
     label: "Rassemblement national nominee"
-    rationale: "Le Pen is eligible after the 7 July 2026 appeal ruling and declared that evening; Bardella backs her. Residual risk is her own cassation appeal (ruling 'at the latest early April 2027'). Probabilities follow Polymarket's 'who will be on the ballot' market on 2026-10-09 (Le Pen 0.91, Bardella 0.07)."
+    rationale: "Le Pen is eligible after the 7 July 2026 appeal ruling and declared that evening; Bardella backs her. Residual risk is her own cassation appeal (ruling 'at the latest early April 2027'). Probabilities follow Polymarket's 'who will be on the ballot' market on 2026-10-09 (Le Pen 0.91, Bardella 0.07); the 0.02 the market leaves to neither goes to Le Pen, because the RN always fields a candidate (Bardella if she cannot run), so the slot sums to 1."
     options:
-      - { run: [le_pen], p: 0.91 }
+      - { run: [le_pen], p: 0.93 }
       - { run: [bardella], p: 0.07 }
   - id: zemmour
     rationale: "Declared 17 September 2026; on the ballot in 2022."
