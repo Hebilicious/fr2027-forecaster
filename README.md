@@ -2,7 +2,7 @@
 
 Probabilistic forecaster for the 2027 French presidential election (round 1: 18 April 2027, round 2: 2 May 2027).
 
-Polls are the backbone. Prediction markets, X activity (measured by Grok Bot), news, Wikipedia attention and candidate programs are secondary layers that must earn their weight in backtests; for now they are collected and shown, not used by the model. See [SPEC.md](SPEC.md) for the build spec and milestones, and [research/LOG.md](research/LOG.md) for every decision, source and parameter change.
+Polls are the backbone, and the signals move the forecast too, at weights the owner sets: news and Wikipedia attention spikes widen a candidate's uncertainty, momentum in attention and in X support (measured by Grok Bot) tilts the round 1 vote, the "on the ballot" prediction markets inform who runs, and the published chances blend in 25% of the markets, with a slider on the page for any other weight. The backtests on 2017 and 2022 report what each layer does. Candidate programs are not used yet. See [SPEC.md](SPEC.md) for the build spec and milestones, and [research/LOG.md](research/LOG.md) for every decision, source and parameter change.
 
 It runs itself: a GitHub Actions workflow, started hourly by the Cloudflare Worker's cron trigger, collects, refits when polls or config change, commits the data, and publishes a public page on Cloudflare. Grok Bot routines send X measurements, new polls, campaign events, blind checks of the polls and sourced field changes to an inbox the workflow checks: a poll counts once a second routine run, entering it from the notice without seeing the first entry, agrees on every number, and a field change is applied to `config/candidates.yaml` and the research log once it validates. No person is in the loop. Setup and operations: [docs/operations.md](docs/operations.md); the Grok Bot routines: [docs/grok-bot.md](docs/grok-bot.md).
 
@@ -62,12 +62,12 @@ Create `data/raw/polls/<poll_id>.yaml` following `schemas/poll.schema.json` (cop
 
 ## Status
 
-| Milestone                     | State                                                                                                                                                                 |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Skeleton                   | Done: layout, schemas, config, CI, UI                                                                                                                                 |
-| 2. Polls and polls-only model | Done: 33 polls (April–October 2026), 32 checked against their notice or the pollster's report; real forecast in Overview, Round 1 and Round 2                         |
-| 3. Backtest harness           | Done: 2017 and 2022 replays checked against primary sources; error settings fitted ([report](research/backtest/report.md))                                            |
-| 4. Markets                    | Collector and comparison view done; the blend waits for the backtests                                                                                                 |
-| 5. Grok, news, attention      | Inbox, collectors and Signals view done; event detection and ablations wait for the backtests                                                                         |
-| 6. Programs                   | Not started                                                                                                                                                           |
-| 7. Ops hardening              | Hourly schedule, public page and health view done; Grok Bot enters polls, checks them blind and changes the field with no person in the loop; needs 7 unattended days |
+| Milestone                     | State                                                                                                                                                                                                                  |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Skeleton                   | Done: layout, schemas, config, CI, UI                                                                                                                                                                                  |
+| 2. Polls and polls-only model | Done: 33 polls (April–October 2026), 32 checked against their notice or the pollster's report; real forecast in Overview, Round 1 and Round 2                                                                          |
+| 3. Backtest harness           | Done: 2017 and 2022 replays checked against primary sources; error settings fitted ([report](research/backtest/report.md))                                                                                             |
+| 4. Markets                    | Collector, comparison view and blend done; markets set who runs with the hand-set chances and 25% of the published chances (owner's weights), with a slider; backtest scores the blend on 2017 and 2022 market history |
+| 5. Grok, news, attention      | Inbox, collectors (RSS headlines, GDELT news volume, page views) and Signals view done; event detection and momentum in the model at the owner's weights, ablations in the backtest, X scored by a forward log         |
+| 6. Programs                   | Not started                                                                                                                                                                                                            |
+| 7. Ops hardening              | Hourly schedule, public page and health view done; Grok Bot enters polls, checks them blind and changes the field with no person in the loop; needs 7 unattended days                                                  |
