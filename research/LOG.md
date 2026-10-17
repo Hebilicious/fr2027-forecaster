@@ -4,6 +4,47 @@ Dated entries for every assumption, parameter change, source added or dropped, a
 
 ## 2026-10-17
 
+### Model 0.5.0: the signals carry weight (owner's weights), and the backtest reports their effect
+
+The owner's direction: the model must take the signals into account. The SPEC's rule that a layer ships only if it improves out-of-sample log-loss is replaced: the owner sets each layer's weight, and the backtest reports what it does (SPEC.md, Modeling 6–7 and Backtesting). The first version of this work kept every weight at zero because of that rule; AGENTS.md now says to stop and report when a rule would leave a requested feature with no effect.
+
+**Weights** (`config/model.yaml`, the owner's choices, not fitted):
+
+| Layer                                               | Setting                                                                                                                                                                                        |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| News and attention spikes (`signals.shock_sd_grid`) | every spike adds 0.1 of log-scale standard deviation to the candidate's support and their bloc's strength, half of it within 10 days                                                           |
+| Attention momentum (`signals.momentum_weight`)      | 0.15 times the log change of the candidate's share of page views and articles, last 7 days against the 28 before, halving every 10 days to the election                                        |
+| X support momentum (`signals.x_momentum_weight`)    | 0.5 times the change in the share of sampled X posts supporting the candidate (drops whose kappa is at least 0.4), same windows and decay                                                      |
+| Who runs (`market_blend.ballot_hand_weight`)        | each candidate's hand-set chance pooled half and half, on the log-odds scale, with the "on the ballot" prices (Polymarket and Kalshi averaged) before the field is drawn; a hand-set 0 stays 0 |
+| Market blend (`market_blend.model_weight`)          | the published chances of winning and of reaching round 2: 75% model, 25% markets, on the log scale; the Overview has a slider from 0 to 100% markets                                           |
+
+`model_version` 0.2.0 → 0.3.0. The forecast refits when the spikes, the momentum or the market-moved chances of running change, not only polls and config.
+
+**Data.**
+
+- **Wikipedia page views**, 2017 and 2022: daily user views of every candidate's French article from 400 days before round 1, fetched 2026-10-16 (`fr2027 backtest-signals`, `data/backtest/<year>/attention.csv`).
+- **GDELT news volume**: a daily collector for the live forecast (`fr2027 collect gdelt`, in Live after 06:00 UTC) and the same series for the backtest. The DOC API starts on 2017-01-01, so 2017 can have only the last 112 days. GDELT allows one request every 5 seconds per address. This machine reaches it through its ISP's shared IPv4 address (carrier-grade NAT, 27.130.224.26), which other subscribers keep over the limit: every GET has answered 429 since 16 October about 17:00 UTC, while HEAD answers 200. The Backtest signals workflow fetches on GitHub's runners instead; at 8 seconds apart they too were refused after one or two requests, so it now waits 45 seconds between requests. **The 2017 and 2022 news history is not in the backtest yet**; the news variants below have no data and change nothing.
+- **Market history**, found by a research agent, all "who wins" except two oddschecker dates of "reaches round 2" in 2017: for 2022, electionbettingodds.com (an average of Betfair, Smarkets, PredictIt, Polymarket and FTX, near daily from May 2021, from one Wayback capture; Zemmour before 26 October 2021 and Pécresse before 3 January 2022 are missing), Polymarket (January–April 2022, rebuilt from the 4,671 trades on Polygon; volumes match Polymarket's own), PredictIt (weekly Wayback copies); for 2017, oddschecker's median over up to 24 bookmakers (about 30 Wayback snapshots) and PredictIt (36 dates). The files are **not committed**: oddschecker's and electionbettingodds' terms of reuse are unclear and the repository is public. The market blend section of `research/backtest/report.md` comes from them, kept outside the repository.
+
+**Backtest** (`research/backtest/report.md`), now monthly from 11 months out and weekly over the last 13 weeks, 21 replays per election, as the spec asks. The election-day error fit keeps 0.18 / 0.20 / 0.12.
+
+Against the polls only, by election (share and runoff log scores: higher is better; log-loss: lower is better):
+
+| Settings                              | 2017 share | 2017 runoff | 2017 qualify / win log-loss | 2022 share | 2022 runoff | 2022 qualify / win log-loss |
+| ------------------------------------- | ---------- | ----------- | --------------------------- | ---------- | ----------- | --------------------------- |
+| Published (above)                     | −5.29      | −1.27       | +0.017 / +0.020             | −1.46      | +0.04       | −0.003 / −0.003             |
+| Spikes only, size chosen by the polls | +0.91      | +0.01       | +0.005 / +0.006             | 0          | 0           | 0 / 0                       |
+| Momentum 0.15 only                    | +0.19      | −0.01       | +0.001 / 0.000              | +0.59      | 0.00        | 0 / 0                       |
+
+- The published settings do worse than the polls only on 2017 and slightly better on 2022's log-loss. The cost comes from widening every spike by 0.1: with page views alone there are 110 to 240 spikes per replay, most on minor candidates. Left to the polls' marginal likelihood, the widening is chosen only in 2017, 70 to 122 days out (the Fillon affair), and helps 2017's share score.
+- Momentum 0.15 alone improves the share score of both elections and barely moves the rest.
+- X momentum cannot be backtested (no X history); `fr2027 forward` logs every X support shift and spike when first seen, and the Signals page scores them as polls arrive.
+
+**Market blend.** The replays condition the model on the field that ran; the markets' prices on the replay date also bet on who would run (Juppé, Hollande and Bayrou in late 2016). So each venue's prices on the actual runners are scaled to sum to 1, conditioning the markets on the same field. The plan was to rebuild each replay date's field uncertainty instead; there is no record of the 2016 or 2021 field probabilities to rebuild it from, so this conditions the markets rather than unconditioning the model. Win log-loss, model alone against markets alone: 2017 0.166 against 0.257, 2022 0.027 against 0.057; at the published 25% markets, about 0.18 and 0.03. The backtest's rule would pick the model alone. With two elections, sparse 2017 snapshots and almost no "reaches round 2" prices, this is weak evidence either way.
+
+**Who runs.** With the markets of 16 October, pooling moves Lisnard from 40% to 60%, Hollande from 20% to 25% and Glucksmann from 95% to 90%; the replays use the field that ran, so the backtest does not measure this layer.
+
+
 ### Model 0.4.0: untested runoffs anchored on tested ones
 
 A runoff no pollster has tested used to come from the bloc transfer table alone, which treats every finalist of a bloc alike and knows nothing of the polled runoffs around it. Zemmour, never tested in a runoff, got 55% against Mélenchon, while every poll gives Le Pen 64–70% against him.
