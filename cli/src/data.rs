@@ -2,7 +2,7 @@
 
 use anyhow::Result;
 use fr2027_collectors::{
-    Rejection, Repo, Schemas, attention, config::CandidatesConfig, events, grok, markets, news, polls,
+    Rejection, Repo, Schemas, attention, config::CandidatesConfig, events, gdelt, grok, markets, news, polls,
     sources::SourcesConfig,
 };
 
@@ -41,6 +41,7 @@ pub struct Ingested {
     pub markets: markets::MarketsIngest,
     pub news: news::NewsIngest,
     pub attention: attention::AttentionIngest,
+    pub gdelt: gdelt::GdeltIngest,
     pub events: events::EventsIngest,
 }
 
@@ -57,6 +58,7 @@ impl Ingested {
             markets: markets::ingest(repo, schemas, config)?,
             news: news::ingest(repo, schemas, config, sources)?,
             attention: attention::ingest(repo, schemas, config)?,
+            gdelt: gdelt::ingest(repo, schemas, config)?,
             events: events::ingest(repo, schemas, config)?,
         })
     }
@@ -69,6 +71,7 @@ impl Ingested {
             (markets::CLEAN_FILE, markets::clean_bytes(&self.markets)?),
             (news::CLEAN_FILE, news::clean_bytes(&self.news)?),
             (attention::CLEAN_FILE, attention::clean_bytes(&self.attention)?),
+            (gdelt::CLEAN_FILE, gdelt::clean_bytes(&self.gdelt)?),
             (events::CLEAN_FILE, events::clean_bytes(&self.events)?),
         ])
     }
@@ -79,6 +82,7 @@ impl Ingested {
         markets::write_clean(repo, &self.markets)?;
         news::write_clean(repo, &self.news)?;
         attention::write_clean(repo, &self.attention)?;
+        gdelt::write_clean(repo, &self.gdelt)?;
         events::write_clean(repo, &self.events)?;
         Ok(())
     }
@@ -91,6 +95,7 @@ impl Ingested {
             .chain(&self.markets.rejections)
             .chain(&self.news.rejections)
             .chain(&self.attention.rejections)
+            .chain(&self.gdelt.rejections)
             .chain(&self.events.rejections)
     }
 
@@ -126,6 +131,12 @@ impl Ingested {
                 self.attention.accepted,
                 self.attention.rows.len(),
                 self.attention.rejections.len()
+            ),
+            format!(
+                "news volume fetches: {} accepted ({} rows), {} rejected",
+                self.gdelt.accepted,
+                self.gdelt.rows.len(),
+                self.gdelt.rejections.len()
             ),
             format!(
                 "events: {} accepted, {} rejected",

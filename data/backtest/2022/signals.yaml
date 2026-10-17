@@ -1,0 +1,46 @@
+# Where the 2022 replays' page views and news volume come from (`fr2027 backtest-signals 2022`
+# writes attention.csv and gdelt.csv beside this file). Each candidate: the French Wikipedia
+# article, and the names GDELT is queried with, by config/sources.yaml's rule (the surname alone
+# only when it is not a common word or another well-known person's name). Every title was
+# checked on 2026-10-16 to exist without a redirect.
+# The window starts 400 days before round 1: the replays see polls from 365 days out, and event
+# detection needs four weeks of history before that.
+start: 2021-03-06
+end: 2022-04-09
+candidates:
+  arthaud: { wikipedia: Nathalie_Arthaud, names: ["Nathalie Arthaud", "Arthaud"] }
+  poutou: { wikipedia: Philippe_Poutou, names: ["Philippe Poutou", "Poutou"] }
+  melenchon: { wikipedia: Jean-Luc_Mélenchon, names: ["Jean-Luc Mélenchon", "Mélenchon"] }
+  hidalgo: { wikipedia: Anne_Hidalgo, names: ["Anne Hidalgo"] }
+  jadot: { wikipedia: Yannick_Jadot, names: ["Yannick Jadot", "Jadot"] }
+  roussel: { wikipedia: Fabien_Roussel, names: ["Fabien Roussel", "Roussel"] }
+  montebourg: { wikipedia: Arnaud_Montebourg, names: ["Arnaud Montebourg", "Montebourg"] }
+  taubira: { wikipedia: Christiane_Taubira, names: ["Christiane Taubira", "Taubira"] }
+  hamon: { wikipedia: Benoît_Hamon, names: ["Benoît Hamon", "Hamon"] }
+  faure: { wikipedia: Olivier_Faure, names: ["Olivier Faure"] }
+  cazeneuve: { wikipedia: Bernard_Cazeneuve, names: ["Bernard Cazeneuve", "Cazeneuve"] }
+  royal: { wikipedia: Ségolène_Royal, names: ["Ségolène Royal"] }
+  hollande: { wikipedia: François_Hollande, names: ["François Hollande", "Hollande"] }
+  piolle: { wikipedia: Éric_Piolle, names: ["Éric Piolle", "Piolle"] }
+  macron: { wikipedia: Emmanuel_Macron, names: ["Emmanuel Macron", "Macron"] }
+  lagarde: { wikipedia: Jean-Christophe_Lagarde, names: ["Jean-Christophe Lagarde"] }
+  pecresse: { wikipedia: Valérie_Pécresse, names: ["Valérie Pécresse", "Pécresse"] }
+  bertrand: { wikipedia: Xavier_Bertrand, names: ["Xavier Bertrand"] }
+  barnier: { wikipedia: Michel_Barnier, names: ["Michel Barnier", "Barnier"] }
+  ciotti: { wikipedia: Éric_Ciotti, names: ["Éric Ciotti", "Ciotti"] }
+  juvin: { wikipedia: Philippe_Juvin, names: ["Philippe Juvin", "Juvin"] }
+  payre: { wikipedia: Denis_Payre, names: ["Denis Payre", "Payre"] }
+  baroin: { wikipedia: François_Baroin, names: ["François Baroin", "Baroin"] }
+  wauquiez: { wikipedia: Laurent_Wauquiez, names: ["Laurent Wauquiez", "Wauquiez"] }
+  retailleau: { wikipedia: Bruno_Retailleau, names: ["Bruno Retailleau", "Retailleau"] }
+  dati: { wikipedia: Rachida_Dati, names: ["Rachida Dati", "Dati"] }
+  fillon: { wikipedia: François_Fillon, names: ["François Fillon", "Fillon"] }
+  poisson: { wikipedia: Jean-Frédéric_Poisson, names: ["Jean-Frédéric Poisson"] }
+  le_pen: { wikipedia: Marine_Le_Pen, names: ["Marine Le Pen", "Le Pen"] }
+  zemmour: { wikipedia: Éric_Zemmour, names: ["Éric Zemmour", "Zemmour"] }
+  dupont_aignan: { wikipedia: Nicolas_Dupont-Aignan, names: ["Nicolas Dupont-Aignan", "Dupont-Aignan"] }
+  lassalle: { wikipedia: Jean_Lassalle, names: ["Jean Lassalle"] }
+  asselineau: { wikipedia: François_Asselineau, names: ["François Asselineau", "Asselineau"] }
+  cheminade: { wikipedia: Jacques_Cheminade, names: ["Jacques Cheminade", "Cheminade"] }
+  thouy: { wikipedia: Hélène_Thouy, names: ["Hélène Thouy", "Thouy"] }
+  philippot: { wikipedia: Florian_Philippot, names: ["Florian Philippot", "Philippot"] }

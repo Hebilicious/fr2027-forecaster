@@ -1,0 +1,45 @@
+# Where the 2017 replays' page views and news volume come from (`fr2027 backtest-signals 2017`
+# writes attention.csv and gdelt.csv beside this file). Each candidate: the French Wikipedia
+# article, and the names GDELT is queried with, by config/sources.yaml's rule (the surname alone
+# only when it is not a common word or another well-known person's name). Every title was
+# checked on 2026-10-16 to exist without a redirect; Charlotte Marchandise has no article.
+# The window starts 400 days before round 1: the replays see polls from 365 days out, and event
+# detection needs four weeks of history before that. GDELT's DOC API starts on 2017-01-01, so
+# news volume covers only the last 112 days before round 1; page views cover the whole window.
+start: 2016-03-19
+end: 2017-04-22
+candidates:
+  arthaud: { wikipedia: Nathalie_Arthaud, names: ["Nathalie Arthaud", "Arthaud"] }
+  poutou: { wikipedia: Philippe_Poutou, names: ["Philippe Poutou", "Poutou"] }
+  besancenot: { wikipedia: Olivier_Besancenot, names: ["Olivier Besancenot", "Besancenot"] }
+  melenchon: { wikipedia: Jean-Luc_Mélenchon, names: ["Jean-Luc Mélenchon", "Mélenchon"] }
+  hamon: { wikipedia: Benoît_Hamon, names: ["Benoît Hamon", "Hamon"] }
+  hollande: { wikipedia: François_Hollande, names: ["François Hollande", "Hollande"] }
+  valls: { wikipedia: Manuel_Valls, names: ["Manuel Valls", "Valls"] }
+  montebourg: { wikipedia: Arnaud_Montebourg, names: ["Arnaud Montebourg", "Montebourg"] }
+  peillon: { wikipedia: Vincent_Peillon, names: ["Vincent Peillon", "Peillon"] }
+  pinel: { wikipedia: Sylvia_Pinel, names: ["Sylvia Pinel"] }
+  duflot: { wikipedia: Cécile_Duflot, names: ["Cécile Duflot", "Duflot"] }
+  jadot: { wikipedia: Yannick_Jadot, names: ["Yannick Jadot", "Jadot"] }
+  joly: { wikipedia: Eva_Joly, names: ["Eva Joly"] }
+  hulot: { wikipedia: Nicolas_Hulot, names: ["Nicolas Hulot"] }
+  aubry: { wikipedia: Martine_Aubry, names: ["Martine Aubry"] }
+  larrouturou: { wikipedia: Pierre_Larrouturou, names: ["Pierre Larrouturou", "Larrouturou"] }
+  macron: { wikipedia: Emmanuel_Macron, names: ["Emmanuel Macron", "Macron"] }
+  bayrou: { wikipedia: François_Bayrou, names: ["François Bayrou", "Bayrou"] }
+  fillon: { wikipedia: François_Fillon, names: ["François Fillon", "Fillon"] }
+  juppe: { wikipedia: Alain_Juppé, names: ["Alain Juppé", "Juppé"] }
+  sarkozy: { wikipedia: Nicolas_Sarkozy, names: ["Nicolas Sarkozy", "Sarkozy"] }
+  le_maire: { wikipedia: Bruno_Le_Maire, names: ["Bruno Le Maire"] }
+  kosciusko_morizet: { wikipedia: Nathalie_Kosciusko-Morizet, names: ["Nathalie Kosciusko-Morizet", "Kosciusko-Morizet"] }
+  cope: { wikipedia: Jean-François_Copé, names: ["Jean-François Copé", "Copé"] }
+  alliot_marie: { wikipedia: Michèle_Alliot-Marie, names: ["Michèle Alliot-Marie", "Alliot-Marie"] }
+  guaino: { wikipedia: Henri_Guaino, names: ["Henri Guaino", "Guaino"] }
+  yade: { wikipedia: Rama_Yade, names: ["Rama Yade"] }
+  le_pen: { wikipedia: Marine_Le_Pen, names: ["Marine Le Pen", "Le Pen"] }
+  dupont_aignan: { wikipedia: Nicolas_Dupont-Aignan, names: ["Nicolas Dupont-Aignan", "Dupont-Aignan"] }
+  lassalle: { wikipedia: Jean_Lassalle, names: ["Jean Lassalle"] }
+  asselineau: { wikipedia: François_Asselineau, names: ["François Asselineau", "Asselineau"] }
+  cheminade: { wikipedia: Jacques_Cheminade, names: ["Jacques Cheminade", "Cheminade"] }
+  de_villiers: { wikipedia: Philippe_de_Villiers, names: ["Philippe de Villiers"] }
+  marchandise: { wikipedia: null, names: ["Charlotte Marchandise"] }

@@ -16,9 +16,14 @@ const MAX_BODY_IN_ERROR: usize = 300;
 
 impl Client {
     pub fn new(user_agent: &str) -> Result<Self> {
+        Self::with_timeout(user_agent, Duration::from_secs(30))
+    }
+
+    /// A client whose requests may take up to `timeout` (GDELT's long timelines take a minute).
+    pub fn with_timeout(user_agent: &str, timeout: Duration) -> Result<Self> {
         let inner = reqwest::blocking::Client::builder()
             .user_agent(user_agent)
-            .timeout(Duration::from_secs(30))
+            .timeout(timeout)
             .connect_timeout(Duration::from_secs(10))
             .build()
             .map_err(|e| Error::Http {
@@ -26,6 +31,15 @@ impl Client {
                 message: e.to_string(),
             })?;
         Ok(Self { inner })
+    }
+
+    /// GET `url` once, without retrying: for a source with its own pacing rules.
+    pub fn get_once(&self, url: &str) -> Result<Vec<u8>> {
+        let response = self.inner.get(url).send().map_err(|e| Error::Http {
+            url: url.into(),
+            message: e.to_string(),
+        })?;
+        checked(url, response)
     }
 
     /// GET `url` and return the body, retrying twice on 429 and 5xx.
