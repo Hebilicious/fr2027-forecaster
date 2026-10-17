@@ -3,7 +3,7 @@ import { computed } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast } from "../api/schemas"
 import { FAMILIES } from "../candidates"
-import { count, dateTime, daysUntil, decimal, longDate, safeUrl } from "../format"
+import { count, dateTime, daysUntil, decimal, list, longDate, probability, safeUrl } from "../format"
 import { labelOf } from "../labels"
 
 // How the model works, told with the numbers of the forecast on screen: every figure is read from that run and its
@@ -30,6 +30,20 @@ const lede = computed(() =>
 
 const firms = computed(() => new Set(f.value.aggregation.house_effects.map((h) => h.firm)).size)
 const possible = computed(() => f.value.candidates.filter((c) => c.p_run > 0).length)
+
+// Candidates who may run but whom no round 1 poll has tested: the model leaves them out. The forecast's own warning
+// says the same in English (model/src/simulate.rs), so the page writes it from the data in the reader's language and
+// shows only the warnings it does not know as the model wrote them.
+const UNPOLLED_WARNING = "Not yet tested by any round 1 poll"
+const unpolled = computed(() =>
+  list(
+    f.value.candidates
+      .filter((c) => !c.simulated && c.p_run > 0)
+      .map((c) => content.unpolledItem({ name: c.name, chance: probability(c.p_run, locale.value) }).value),
+    locale.value,
+  ),
+)
+const otherWarnings = computed(() => f.value.warnings.filter((w) => !w.startsWith(UNPOLLED_WARNING)))
 
 // How much wider a candidate's round 1 error is today than on the eve of the vote.
 const daysToRound1 = computed(() => Math.max(0, daysUntil(f.value.election.round1, new Date(f.value.generated_at))))
@@ -117,8 +131,12 @@ const columnLabel = (key: string) => (key === "abstain" ? content.abstain.value 
           <h3>{{ content.field.title }}</h3>
           <p class="figure">{{ content.field.figure({ count: count(possible, locale) }) }}</p>
           <p class="secondary">{{ content.field.text }}</p>
-          <ul v-if="f.warnings.length" class="warnings">
-            <li v-for="w in f.warnings" :key="w" class="notice small">
+          <ul v-if="unpolled || otherWarnings.length" class="warnings">
+            <li v-if="unpolled" class="notice small">
+              <span aria-hidden="true" class="icon">!</span>
+              <span>{{ content.unpolled({ list: unpolled }) }}</span>
+            </li>
+            <li v-for="w in otherWarnings" :key="w" class="notice small">
               <span aria-hidden="true" class="icon">!</span>
               <span>{{ w }}</span>
             </li>

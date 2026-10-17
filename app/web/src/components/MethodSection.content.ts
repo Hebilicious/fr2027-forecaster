@@ -741,5 +741,43 @@ export default {
       "zh-Hans": "该派别的选民",
       th: "ผู้มีสิทธิ์เลือกตั้งของกลุ่ม",
     }),
+    unpolled: insert(
+      t({
+        fr: "Pas encore testés par un sondage de premier tour, donc laissés de côté dans chaque simulation : {{list}}.",
+        "en-GB": "Not yet tested by any round 1 poll, so left out of every simulated election: {{list}}.",
+        de: "Noch in keiner Umfrage zum ersten Wahlgang getestet und daher in keiner Simulation berücksichtigt: {{list}}.",
+        it: "Non ancora testati da alcun sondaggio sul primo turno, quindi esclusi da ogni simulazione: {{list}}.",
+        "es-ES":
+          "Aún no probados por ninguna encuesta de primera vuelta, por lo que quedan fuera de cada simulación: {{list}}.",
+        "pt-PT":
+          "Ainda não testados por nenhuma sondagem da primeira volta, por isso ficam de fora de cada simulação: {{list}}.",
+        nl: "Nog in geen enkele peiling voor de eerste ronde getest en dus in geen enkele simulatie meegenomen: {{list}}.",
+        pl: "Jeszcze nie badani w żadnym sondażu pierwszej tury, więc pominięci w każdej symulacji: {{list}}.",
+        ru: "Ещё не проверены ни одним опросом первого тура и поэтому не учитываются ни в одной симуляции: {{list}}.",
+        uk: "Ще не перевірені жодним опитуванням першого туру, тож не враховуються в жодній симуляції: {{list}}.",
+        ja: "第1回投票の世論調査でまだ一度も検証されていないため、どのシミュレーションにも含めていません：{{list}}。",
+        ko: "아직 1차 투표 여론조사에서 한 번도 다뤄지지 않아 모든 시뮬레이션에서 제외됩니다: {{list}}.",
+        "zh-Hans": "尚未被任何第一轮民调测试，因此不计入任何一次模拟：{{list}}。",
+        th: "ยังไม่มีโพลรอบแรกใดทดสอบ จึงไม่ถูกนับรวมในการจำลองใด ๆ: {{list}}",
+      }),
+    ),
+    unpolledItem: insert(
+      t({
+        fr: "{{name}} (candidature à {{chance}})",
+        "en-GB": "{{name}} (runs {{chance}})",
+        de: "{{name}} (tritt mit {{chance}} an)",
+        it: "{{name}} (candidatura al {{chance}})",
+        "es-ES": "{{name}} (se presenta al {{chance}})",
+        "pt-PT": "{{name}} (candidatura a {{chance}})",
+        nl: "{{name}} (doet mee: {{chance}})",
+        pl: "{{name}} (start: {{chance}})",
+        ru: "{{name}} (участие: {{chance}})",
+        uk: "{{name}} (участь: {{chance}})",
+        ja: "{{name}}（立候補 {{chance}}）",
+        ko: "{{name}}(출마 {{chance}})",
+        "zh-Hans": "{{name}}（参选概率 {{chance}}）",
+        th: "{{name}} (ลงสมัคร {{chance}})",
+      }),
+    ),
   },
 } satisfies Dictionary
