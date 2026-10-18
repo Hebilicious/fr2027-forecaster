@@ -41,8 +41,10 @@ jobs:
     timeout-minutes: 30
     steps:
       # Actions are pinned to full commit SHAs; the tag is in the comment.
+      # Full history, as in ci.yml: moon compares the pull request against main.
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
         with:
