@@ -7,7 +7,7 @@ use std::path::Path;
 
 use anyhow::{Context, Result, anyhow};
 use fr2027_collectors::{
-    Repo, attention, events, grok, list_files, markets, news, polls, read, sources::SourcesConfig,
+    Repo, attention, events, gdelt, grok, list_files, markets, news, polls, read, sources::SourcesConfig,
 };
 use jiff::{Timestamp, ToSpan, civil::Date, tz::TimeZone};
 use serde::Serialize;
@@ -437,7 +437,7 @@ fn signals(repo: &Repo, now: Timestamp) -> Result<Value> {
         "generated_at": ts(now),
         "markets": markets_signal(repo, &since(120))?,
         "attention": attention_signal(repo, &since(90))?,
-        "news": news_signal(repo, &inputs.sources, &since(30))?,
+        "news": news_signal(repo, &inputs.sources, &since(30), &since(90))?,
         "x": x_signal(repo)?,
         "events": events_signal(repo)?,
         "forward": forward_signal(repo, &inputs)?,
@@ -596,7 +596,8 @@ fn attention_signal(repo: &Repo, since: &str) -> Result<Value> {
     Ok(json!({ "fetched_at": fetched_at, "rows": rows }))
 }
 
-fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str) -> Result<Value> {
+/// Headlines and their daily counts since `since`, and GDELT's daily news volume since `volume_since`.
+fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str, volume_since: &str) -> Result<Value> {
     let rows = news::read_clean_rows(repo).unwrap_or_default();
     let mut daily: BTreeMap<(String, String), u32> = BTreeMap::new();
     for row in &rows {
@@ -611,7 +612,7 @@ fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str) -> Result<Valu
     let headlines: Vec<Value> = rows
         .iter()
         .rev()
-        .take(120)
+        .filter(|r| &r.published_at[..10] >= since)
         .map(|r| {
             json!({
                 "published_at": r.published_at,
@@ -645,6 +646,17 @@ fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str) -> Result<Valu
             .map(|((date, candidate_id), items)| json!({ "date": date, "candidate_id": candidate_id, "items": items }))
             .collect::<Vec<_>>(),
         "headlines": headlines,
+        "volume": gdelt::read_clean_rows(repo)
+            .unwrap_or_default()
+            .into_iter()
+            .filter(|r| r.date.as_str() >= volume_since)
+            .map(|r| json!({
+                "date": r.date,
+                "candidate_id": r.candidate_id,
+                "articles": r.articles,
+                "total_articles": r.total_articles,
+            }))
+            .collect::<Vec<_>>(),
     }))
 }
 
