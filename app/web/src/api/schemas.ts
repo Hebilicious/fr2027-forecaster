@@ -273,6 +273,14 @@ const Feed = Schema.Struct({
 
 const NewsDay = Schema.Struct({ date: Schema.String, candidate_id: Schema.String, items: Schema.Finite })
 
+/** GDELT's French-language articles naming a candidate on a day, out of the day's sampled total. */
+const NewsVolumeDay = Schema.Struct({
+  date: Schema.String,
+  candidate_id: Schema.String,
+  articles: Schema.Finite,
+  total_articles: Schema.Finite,
+})
+
 const Headline = Schema.Struct({
   published_at: Schema.String,
   outlet: Schema.String,
@@ -344,6 +352,8 @@ const News = Schema.Struct({
   feeds: Schema.Array(Feed),
   daily: Schema.Array(NewsDay),
   headlines: Schema.Array(Headline),
+  // Absent from older API builds.
+  volume: Schema.optionalKey(Schema.Array(NewsVolumeDay)),
 })
 
 const ForwardFlag = Schema.Struct({
@@ -393,6 +403,7 @@ export type Attention = typeof Attention.Type
 export type PageViews = typeof PageViews.Type
 export type News = typeof News.Type
 export type NewsDay = typeof NewsDay.Type
+export type NewsVolumeDay = typeof NewsVolumeDay.Type
 export type Headline = typeof Headline.Type
 export type XRow = typeof XRow.Type
 export type CampaignEvent = typeof CampaignEvent.Type
