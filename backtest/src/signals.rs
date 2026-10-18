@@ -45,11 +45,19 @@ pub struct NewsRow {
     pub query: String,
     pub articles: u64,
     pub total_articles: u64,
+    /// Mean GDELT tone of the articles naming the candidate, and of every French article that day.
+    #[serde(default)]
+    pub tone: Option<f64>,
+    #[serde(default)]
+    pub total_tone: Option<f64>,
+    /// GDELT files read for the day.
+    #[serde(default)]
+    pub files: Option<u32>,
     pub retrieved_at: String,
 }
 
 pub const ATTENTION_HEADER: &str = "date,candidate_id,article,views,retrieved_at";
-pub const NEWS_HEADER: &str = "date,candidate_id,query,articles,total_articles,retrieved_at";
+pub const NEWS_HEADER: &str = "date,candidate_id,query,articles,total_articles,tone,total_tone,files,retrieved_at";
 
 /// The signals of one election, as fetched. Empty when the files are not there yet.
 #[derive(Clone, Debug, Default)]
