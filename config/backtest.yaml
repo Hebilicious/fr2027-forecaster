@@ -72,7 +72,7 @@ grid:
 
 # The signal layers (model/src/signals.rs), each scored against the polls only: every replay is
 # fitted again with spikes allowed to add variance, shock_sd chosen by marginal likelihood from
-# shock_sd_grid (unless `widening: false`), and with the variant's momentum weight. Each variant
+# shock_sd_grid (unless `widening: false`), and with the variant's momentum and tone momentum weights. Each variant
 # replaces these fields of config/model.yaml's `signals`.
 signals_ablation:
   shock_sd_grid: [0.0, 0.1, 0.2, 0.3, 0.5]
@@ -89,6 +89,18 @@ signals_ablation:
     - { name: "momentum +0.15", sources: [attention, news], widening: false, momentum_weight: 0.15 }
     - { name: "momentum −0.05", sources: [attention, news], widening: false, momentum_weight: -0.05 }
     - { name: "momentum −0.15", sources: [attention, news], widening: false, momentum_weight: -0.15 }
+    - { name: "tone +0.02", sources: [attention, news], widening: false, tone_momentum_weight: 0.02 }
+    - { name: "tone +0.05", sources: [attention, news], widening: false, tone_momentum_weight: 0.05 }
+    - { name: "tone +0.10", sources: [attention, news], widening: false, tone_momentum_weight: 0.1 }
+    - { name: "tone +0.20", sources: [attention, news], widening: false, tone_momentum_weight: 0.2 }
+    - { name: "tone −0.05", sources: [attention, news], widening: false, tone_momentum_weight: -0.05 }
+    - {
+        name: "momentum +0.15, tone +0.05",
+        sources: [attention, news],
+        widening: false,
+        momentum_weight: 0.15,
+        tone_momentum_weight: 0.05,
+      }
 
 # Weights on the model the market blend's fit tries (model/src/blend.rs), on the elections whose
 # directory holds markets.csv. 1 is the model alone, 0 the markets alone.
