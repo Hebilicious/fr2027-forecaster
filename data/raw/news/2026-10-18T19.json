@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-18T19:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-18T19:00:44Z",
+      "title": "Après le 17 octobre, Édouard Philippe s’alarme d’un « niveau de violence hallucinant » et charge LFI",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/apres-le-17-octobre-edouard-philippe-s-alarme-d-un-niveau-de-violence-hallucinant-et-charge-lfi-20261018"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T19:11:33Z",
+      "title": "\"Emmanuel Macron est une catastrophe sur beaucoup de sujets\", déclare Éric Zemmour, président du parti Reconquête",
+      "url": "https://www.bfmtv.com/politique/video-emmanuel-macron-est-une-catastrophe-sur-beaucoup-de-sujets-declare-eric-zemmour-president-du-parti-reconquete_VN-202610180354.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T18:29:10Z",
+      "title": "\"La gauche a toujours soutenu la fonction publique\", déclare Marine Tondelier, candidate Les Écologistes à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-la-gauche-a-toujours-soutenu-la-fonction-publique-declare-marine-tondelier-candidate-les-ecologistes-a-la-presidentielle_VN-202610180345.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T18:26:06Z",
+      "title": "Prise de parole d'Emmanuel Macron: \"Il n'a pas eu un mot sur les blessés\" dans les manifestations, dénonce Marine Tondelier, candidate Les Écologistes à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-prise-de-parole-d-emmanuel-macron-il-n-a-pas-eu-un-mot-sur-les-blesses-dans-les-manifestations-denonce-marine-tondelier-candidate-les-ecologistes-a-la-presidentielle_VN-202610180340.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
