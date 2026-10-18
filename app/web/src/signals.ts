@@ -65,6 +65,7 @@ export function filterSignals(signals: Signals, hidden: ReadonlySet<string>): Si
 }
 
 export interface Point {
+  /** An ISO date, or a full timestamp for data finer than a day. */
   readonly date: string
   readonly value: number
 }
@@ -252,26 +253,209 @@ export function latestHeadlines(headlines: readonly Headline[], candidateId: str
     .slice(0, limit)
 }
 
+// Periods
+
+/** How far back the X and press sections look, counted from the newest data each has. */
+export const RANGES = ["1d", "3d", "7d", "14d", "all"] as const
+export type SignalRange = (typeof RANGES)[number]
+
+const RANGE_DAYS: Readonly<Record<SignalRange, number | null>> = { "1d": 1, "3d": 3, "7d": 7, "14d": 14, all: null }
+
+/** The range's length in days, `null` for everything the API sends. */
+export const rangeDays = (range: SignalRange): number | null => RANGE_DAYS[range]
+
+export const isSignalRange = (value: unknown): value is SignalRange => RANGES.includes(value as SignalRange)
+
 // X
 
-export interface XWindow {
+/** One of Grok Bot's measurement windows; `stance` once drops follow the stance rubric. */
+export interface XWindowInfo {
   readonly start: string
   readonly end: string
-  /** Most mentioned first; rows without a count last. */
-  readonly rows: readonly XRow[]
+  readonly stance: boolean
 }
 
-/** Grok Bot's most recent measurement window, or `null` before the first one. */
-export function latestXWindow(rows: readonly XRow[]): XWindow | null {
-  const end = latestDate(rows.map((r) => r.window_end))
-  if (end === null) return null
-  const latest = rows.filter((r) => r.window_end === end)
-  return {
-    start: latestDate(latest.map((r) => r.window_start)) ?? end,
-    end,
-    rows: latest.toSorted(
-      (a, b) => (b.mentions ?? -1) - (a.mentions ?? -1) || a.candidate_id.localeCompare(b.candidate_id),
+const isStanceRow = (row: XRow) => row.support_share !== null
+
+/** Every measurement window in the rows, oldest first. */
+export function xWindows(rows: readonly XRow[]): XWindowInfo[] {
+  const byEnd = new Map<string, { start: string; stance: boolean }>()
+  for (const row of rows) {
+    const entry = byEnd.get(row.window_end) ?? { start: row.window_start, stance: false }
+    if (row.window_start < entry.start) entry.start = row.window_start
+    entry.stance ||= isStanceRow(row)
+    byEnd.set(row.window_end, entry)
+  }
+  return [...byEnd]
+    .map(([end, { start, stance }]) => ({ start, end, stance }))
+    .toSorted((a, b) => a.end.localeCompare(b.end))
+}
+
+/** The windows that start inside the range's last days before the newest window ends. */
+export function windowsInRange(windows: readonly XWindowInfo[], range: SignalRange): XWindowInfo[] {
+  const days = rangeDays(range)
+  const last = windows.at(-1)
+  if (days === null || last === undefined) return [...windows]
+  const from = new Date(Date.parse(last.end) - days * DAY_MS).toISOString()
+  return windows.filter((w) => Date.parse(w.start) >= Date.parse(from))
+}
+
+/** A share and its 95% Wilson score interval. */
+export interface Interval {
+  readonly share: number
+  readonly low: number
+  readonly high: number
+}
+
+const Z95 = 1.959963984540054
+
+/** The 95% Wilson score interval for `k` successes out of `n`, as the collector computes it; `null` when `n` is 0. */
+export function wilson(k: number, n: number): Interval | null {
+  if (n <= 0) return null
+  const p = k / n
+  const z2 = Z95 * Z95
+  const denominator = 1 + z2 / n
+  const centre = (p + z2 / (2 * n)) / denominator
+  const half = (Z95 / denominator) * Math.sqrt((p * (1 - p)) / n + z2 / (4 * n * n))
+  return { share: p, low: Math.max(0, centre - half), high: Math.min(1, centre + half) }
+}
+
+/** Support, oppose and neutral posts in a stance row; older API builds send only the shares, so those are rescaled. */
+export function stanceCounts(row: XRow): { support: number; oppose: number; neutral: number } | null {
+  if (!isStanceRow(row)) return null
+  if (row.stance_support != null && row.stance_oppose != null && row.stance_neutral != null) {
+    return { support: row.stance_support, oppose: row.stance_oppose, neutral: row.stance_neutral }
+  }
+  const relevant = (row.stance_posts_drawn ?? 0) - (row.stance_off_topic ?? 0)
+  const of = (share: number | null) => Math.round((share ?? 0) * relevant)
+  return { support: of(row.support_share), oppose: of(row.oppose_share), neutral: of(row.neutral_share) }
+}
+
+/** Below this many posts about a candidate, a share is shown faded and its change is not given. */
+export const THIN_POSTS = 30
+
+export interface XPooledRow {
+  readonly candidateId: string
+  readonly name: string
+  /** Summed over the windows that count them; `null` when none does. */
+  readonly mentions: number | null
+  /** How the newest counted window got its mentions. */
+  readonly mentionsMethod: XRow["mentions_method"]
+  /** Posts Grok Bot read, summed. */
+  readonly postsRead: number | null
+  /** Posts about the candidate behind the shares: stance posts, or the sentiment sample before the rubric. */
+  readonly relevant: number
+  /** Pooled stance shares with their intervals; `null` without a stance window. */
+  readonly stance: { readonly support: Interval; readonly oppose: Interval; readonly neutral: Interval } | null
+  /** The bar: the stance shares, or the sample-weighted sentiment of the first drops when no stance window is kept. */
+  readonly mood: Sentiment | null
+  /** The bar comes from the sentiment drops read before the stance rubric. */
+  readonly legacy: boolean
+  readonly thin: boolean
+  /** Support share window by window (window ends), oldest first. */
+  readonly trend: readonly Point[]
+  /** Support share in the last window minus the first, when both rest on at least `THIN_POSTS` posts. */
+  readonly change: number | null
+  /** Bot share weighted by posts read. */
+  readonly botShare: number | null
+  /** The newest kept window's topics. */
+  readonly topics: readonly string[]
+}
+
+/**
+ * Grok Bot's measurements pooled over the windows ending at `ends`: counts summed, stance shares and their
+ * intervals recomputed from the summed posts (so a window with more posts weighs more), most mentioned first.
+ */
+export function xPooled(
+  rows: readonly XRow[],
+  ends: readonly string[],
+  names: ReadonlyMap<string, string>,
+): XPooledRow[] {
+  const kept = new Set(ends)
+  const byCandidate = new Map<string, XRow[]>()
+  for (const row of rows) {
+    if (!kept.has(row.window_end)) continue
+    byCandidate.set(row.candidate_id, [...(byCandidate.get(row.candidate_id) ?? []), row])
+  }
+  const pooled = [...byCandidate].map(([id, list]) =>
+    pool(
+      id,
+      nameOf(names, id),
+      list.toSorted((a, b) => a.window_end.localeCompare(b.window_end)),
     ),
+  )
+  return pooled.toSorted(
+    (a, b) => (b.mentions ?? -1) - (a.mentions ?? -1) || a.candidateId.localeCompare(b.candidateId),
+  )
+}
+
+const sumOf = (values: readonly (number | null)[]): number | null => {
+  const present = values.filter((v): v is number => v !== null)
+  return present.length ? present.reduce((a, b) => a + b, 0) : null
+}
+
+function pool(candidateId: string, name: string, rows: readonly XRow[]): XPooledRow {
+  const counted = rows.filter((r) => r.mentions !== null)
+  const tally = { support: 0, oppose: 0, neutral: 0 }
+  const trend: Point[] = []
+  const trendPosts: number[] = []
+  for (const row of rows) {
+    const counts = stanceCounts(row)
+    if (counts === null) continue
+    tally.support += counts.support
+    tally.oppose += counts.oppose
+    tally.neutral += counts.neutral
+    const n = counts.support + counts.oppose + counts.neutral
+    if (n > 0) {
+      trend.push({ date: row.window_end, value: counts.support / n })
+      trendPosts.push(n)
+    }
+  }
+  const n = tally.support + tally.oppose + tally.neutral
+  const support = wilson(tally.support, n)
+  const oppose = wilson(tally.oppose, n)
+  const neutral = wilson(tally.neutral, n)
+  const stance = support && oppose && neutral ? { support, oppose, neutral } : null
+
+  // Before the stance rubric, Grok Bot gave sentiment shares from a small sample: used only when nothing better is kept.
+  let mood: Sentiment | null = stance && { pos: support!.share, neu: neutral!.share, neg: oppose!.share }
+  let relevant = n
+  const legacy = stance === null && rows.some((r) => sentiment(r) !== null)
+  if (legacy) {
+    const weighed = rows.flatMap((r) => {
+      const s = sentiment(r)
+      return s && r.sample_size ? [{ s, w: r.sample_size }] : []
+    })
+    relevant = weighed.reduce((sum, { w }) => sum + w, 0)
+    const avg = (pick: (s: Sentiment) => number) => weighed.reduce((sum, { s, w }) => sum + pick(s) * w, 0) / relevant
+    mood = relevant > 0 ? { pos: avg((s) => s.pos), neu: avg((s) => s.neu), neg: avg((s) => s.neg) } : null
+  }
+
+  const firstPosts = trendPosts[0] ?? 0
+  const lastPosts = trendPosts.at(-1) ?? 0
+  const change =
+    trend.length >= 2 && firstPosts >= THIN_POSTS && lastPosts >= THIN_POSTS
+      ? trend.at(-1)!.value - trend[0]!.value
+      : null
+
+  const botRows = rows.filter((r) => r.bot_share_estimate !== null && (r.sample_size ?? 0) > 0)
+  const botWeight = botRows.reduce((sum, r) => sum + r.sample_size!, 0)
+  return {
+    candidateId,
+    name,
+    mentions: sumOf(rows.map((r) => r.mentions)),
+    mentionsMethod: counted.at(-1)?.mentions_method ?? null,
+    postsRead: sumOf(rows.map((r) => r.sample_size)),
+    relevant,
+    stance,
+    mood,
+    legacy,
+    thin: relevant < THIN_POSTS,
+    trend,
+    change,
+    botShare:
+      botWeight > 0 ? botRows.reduce((sum, r) => sum + r.bot_share_estimate! * r.sample_size!, 0) / botWeight : null,
+    topics: rows.findLast((r) => r.top_topics?.length)?.top_topics ?? [],
   }
 }
 
@@ -313,6 +497,9 @@ export function sparkRange(values: readonly number[], minSpan?: number): readonl
   return [low, low + minSpan]
 }
 
+/** Milliseconds since the epoch for an ISO date (read as midnight UTC) or timestamp. */
+const instant = (value: string): number => Date.parse(value.length === 10 ? `${value}T00:00:00Z` : value)
+
 /**
  * A sparkline through daily values placed on a date window, plus where its last point lands. The y
  * axis runs from 0 to the series' maximum, or over its own range when `minSpan` is given (so a
@@ -325,13 +512,13 @@ export function sparkline(
   minSpan?: number,
 ): { line: string; end: { x: number; y: number } | null } {
   if (points.length < 2) return { line: "", end: null }
-  const domain = [Date.parse(`${window[0]}T00:00:00Z`), Date.parse(`${window[1]}T00:00:00Z`)] as const
+  const domain = [instant(window[0]), instant(window[1])] as const
   const [low, high] = sparkRange(
     points.map((p) => p.value),
     minSpan,
   )
   const at = (p: Point) => ({
-    x: scale(Date.parse(`${p.date}T00:00:00Z`), { domain, range: [pad, width - pad] }),
+    x: scale(instant(p.date), { domain, range: [pad, width - pad] }),
     y: high > low ? scale(p.value, { domain: [low, high], range: [height - pad, pad] }) : height - pad,
   })
   const placed = points.map(at)
