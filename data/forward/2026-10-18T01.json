@@ -1,0 +1,13 @@
+{
+  "detected_at": "2026-10-18T01:18:13Z",
+  "flags": [
+    {
+      "candidate_id": "zemmour",
+      "date": "2026-10-18",
+      "detail": "support 0.23 [0.18, 0.30] in the drop to 2026-10-17T12:00:00Z → 0.52 [0.45, 0.59] in the drop to 2026-10-18T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.285
+    }
+  ],
+  "schema_version": "1.0"
+}
