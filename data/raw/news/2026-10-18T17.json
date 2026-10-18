@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-18T17:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-18T16:36:16Z",
+      "title": "Après les violences du 17 octobre, l’extrême droite cible le gouvernement et Laurent Nuñez en espérant incarner le « parti de l’ordre »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/18/apres-les-violences-du-17-octobre-l-extreme-droite-cible-le-gouvernement-et-laurent-nunez-en-esperant-incarner-le-parti-de-l-ordre_6797125_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T16:27:44Z",
+      "title": "Journée du 17 octobre: \"Notre pays est pris en étau, voire en otage, entre la violence et l'impuissance\", déclare Marine Le Pen, candidate RN à l'élection présidentielle dans un message diffusé sur ses réseaux sociaux",
+      "url": "https://www.bfmtv.com/politique/video-journee-du-17-octobre-notre-pays-est-pris-en-etau-voire-en-otage-entre-la-violence-et-l-impuissance-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle-dans-un-message-diffuse-sur-ses-reseaux-sociaux_VN-202610180289.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T16:16:10Z",
+      "title": "Manifestations du 17 octobre: Jordan Bardella estime que \"l'ordre n'existe plus aujourd'hui en France\"",
+      "url": "https://www.bfmtv.com/politique/front-national/manifestations-du-17-octobre-jordan-bardella-estime-que-l-ordre-n-existe-plus-aujourd-hui-en-france_AD-202610180288.html"
+    }
+  ],
+  "schema_version": "1.0"
+}

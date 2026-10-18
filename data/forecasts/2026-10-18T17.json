@@ -1,0 +1,2726 @@
+{
+  "aggregation": {
+    "design_effect": 2.0,
+    "house_effects": [
+      {
+        "bloc": "far_left",
+        "firm": "toluna-harris",
+        "mean": 0.0528,
+        "sd": 0.066
+      },
+      {
+        "bloc": "left",
+        "firm": "toluna-harris",
+        "mean": 0.0033,
+        "sd": 0.0491
+      },
+      {
+        "bloc": "centre",
+        "firm": "toluna-harris",
+        "mean": -0.0174,
+        "sd": 0.0495
+      },
+      {
+        "bloc": "right",
+        "firm": "toluna-harris",
+        "mean": -0.0016,
+        "sd": 0.0519
+      },
+      {
+        "bloc": "far_right",
+        "firm": "toluna-harris",
+        "mean": 0.0202,
+        "sd": 0.0481
+      },
+      {
+        "bloc": "other",
+        "firm": "toluna-harris",
+        "mean": -0.0573,
+        "sd": 0.0605
+      },
+      {
+        "bloc": "far_left",
+        "firm": "odoxa",
+        "mean": -0.0132,
+        "sd": 0.0723
+      },
+      {
+        "bloc": "left",
+        "firm": "odoxa",
+        "mean": 0.042,
+        "sd": 0.0615
+      },
+      {
+        "bloc": "centre",
+        "firm": "odoxa",
+        "mean": -0.0563,
+        "sd": 0.06
+      },
+      {
+        "bloc": "right",
+        "firm": "odoxa",
+        "mean": -0.0215,
+        "sd": 0.0618
+      },
+      {
+        "bloc": "far_right",
+        "firm": "odoxa",
+        "mean": 0.052,
+        "sd": 0.059
+      },
+      {
+        "bloc": "other",
+        "firm": "odoxa",
+        "mean": -0.003,
+        "sd": 0.0676
+      },
+      {
+        "bloc": "far_left",
+        "firm": "ifop",
+        "mean": -0.0365,
+        "sd": 0.0698
+      },
+      {
+        "bloc": "left",
+        "firm": "ifop",
+        "mean": 0.016,
+        "sd": 0.0499
+      },
+      {
+        "bloc": "centre",
+        "firm": "ifop",
+        "mean": 0.06,
+        "sd": 0.0505
+      },
+      {
+        "bloc": "right",
+        "firm": "ifop",
+        "mean": 0.0021,
+        "sd": 0.0531
+      },
+      {
+        "bloc": "far_right",
+        "firm": "ifop",
+        "mean": -0.0081,
+        "sd": 0.0488
+      },
+      {
+        "bloc": "other",
+        "firm": "ifop",
+        "mean": -0.0334,
+        "sd": 0.0634
+      },
+      {
+        "bloc": "far_left",
+        "firm": "ipsos-bva",
+        "mean": -0.1104,
+        "sd": 0.0695
+      },
+      {
+        "bloc": "left",
+        "firm": "ipsos-bva",
+        "mean": 0.058,
+        "sd": 0.0531
+      },
+      {
+        "bloc": "centre",
+        "firm": "ipsos-bva",
+        "mean": 0.0532,
+        "sd": 0.0529
+      },
+      {
+        "bloc": "right",
+        "firm": "ipsos-bva",
+        "mean": 0.0029,
+        "sd": 0.0565
+      },
+      {
+        "bloc": "far_right",
+        "firm": "ipsos-bva",
+        "mean": 0.0342,
+        "sd": 0.0513
+      },
+      {
+        "bloc": "other",
+        "firm": "ipsos-bva",
+        "mean": -0.0378,
+        "sd": 0.0638
+      },
+      {
+        "bloc": "far_left",
+        "firm": "opinionway",
+        "mean": 0.023,
+        "sd": 0.0721
+      },
+      {
+        "bloc": "left",
+        "firm": "opinionway",
+        "mean": -0.0287,
+        "sd": 0.0531
+      },
+      {
+        "bloc": "centre",
+        "firm": "opinionway",
+        "mean": 0.0204,
+        "sd": 0.0528
+      },
+      {
+        "bloc": "right",
+        "firm": "opinionway",
+        "mean": 0.0085,
+        "sd": 0.0564
+      },
+      {
+        "bloc": "far_right",
+        "firm": "opinionway",
+        "mean": -0.0017,
+        "sd": 0.0509
+      },
+      {
+        "bloc": "other",
+        "firm": "opinionway",
+        "mean": -0.0215,
+        "sd": 0.0703
+      },
+      {
+        "bloc": "far_left",
+        "firm": "verian",
+        "mean": 0.0,
+        "sd": 0.08
+      },
+      {
+        "bloc": "left",
+        "firm": "verian",
+        "mean": -0.0288,
+        "sd": 0.068
+      },
+      {
+        "bloc": "centre",
+        "firm": "verian",
+        "mean": 0.0342,
+        "sd": 0.0679
+      },
+      {
+        "bloc": "right",
+        "firm": "verian",
+        "mean": -0.0393,
+        "sd": 0.0737
+      },
+      {
+        "bloc": "far_right",
+        "firm": "verian",
+        "mean": 0.0339,
+        "sd": 0.066
+      },
+      {
+        "bloc": "other",
+        "firm": "verian",
+        "mean": 0.0,
+        "sd": 0.08
+      },
+      {
+        "bloc": "far_left",
+        "firm": "elabe",
+        "mean": 0.0939,
+        "sd": 0.0714
+      },
+      {
+        "bloc": "left",
+        "firm": "elabe",
+        "mean": -0.0268,
+        "sd": 0.0545
+      },
+      {
+        "bloc": "centre",
+        "firm": "elabe",
+        "mean": -0.059,
+        "sd": 0.0555
+      },
+      {
+        "bloc": "right",
+        "firm": "elabe",
+        "mean": 0.0172,
+        "sd": 0.058
+      },
+      {
+        "bloc": "far_right",
+        "firm": "elabe",
+        "mean": -0.0447,
+        "sd": 0.0528
+      },
+      {
+        "bloc": "other",
+        "firm": "elabe",
+        "mean": 0.0194,
+        "sd": 0.0679
+      },
+      {
+        "bloc": "far_left",
+        "firm": "cluster17",
+        "mean": -0.0264,
+        "sd": 0.0741
+      },
+      {
+        "bloc": "left",
+        "firm": "cluster17",
+        "mean": 0.006,
+        "sd": 0.0566
+      },
+      {
+        "bloc": "centre",
+        "firm": "cluster17",
+        "mean": -0.042,
+        "sd": 0.0573
+      },
+      {
+        "bloc": "right",
+        "firm": "cluster17",
+        "mean": 0.0331,
+        "sd": 0.0598
+      },
+      {
+        "bloc": "far_right",
+        "firm": "cluster17",
+        "mean": -0.1137,
+        "sd": 0.0553
+      },
+      {
+        "bloc": "other",
+        "firm": "cluster17",
+        "mean": 0.1429,
+        "sd": 0.0664
+      },
+      {
+        "bloc": "far_left",
+        "firm": "yougov",
+        "mean": 0.0135,
+        "sd": 0.0776
+      },
+      {
+        "bloc": "left",
+        "firm": "yougov",
+        "mean": -0.0389,
+        "sd": 0.067
+      },
+      {
+        "bloc": "centre",
+        "firm": "yougov",
+        "mean": 0.0076,
+        "sd": 0.0673
+      },
+      {
+        "bloc": "right",
+        "firm": "yougov",
+        "mean": -0.0007,
+        "sd": 0.0703
+      },
+      {
+        "bloc": "far_right",
+        "firm": "yougov",
+        "mean": 0.0302,
+        "sd": 0.0659
+      },
+      {
+        "bloc": "other",
+        "firm": "yougov",
+        "mean": -0.0118,
+        "sd": 0.0758
+      }
+    ],
+    "last_field_end": "2026-10-16",
+    "log_likelihood": 325.03,
+    "poll_ids": [
+      "cluster17-2026-07-24-10246",
+      "cluster17-2026-09-01-10251",
+      "cluster17-2026-09-16-10273",
+      "elabe-2026-07-10-10226",
+      "elabe-2026-08-28-10245",
+      "elabe-2026-10-16-bfmtv",
+      "ifop-2026-05-28-10193",
+      "ifop-2026-06-24-10211",
+      "ifop-2026-07-08-10222",
+      "ifop-2026-08-25-10242",
+      "ifop-2026-09-11-10292",
+      "ifop-2026-09-29-10284",
+      "ifop-2026-10-14-10314",
+      "ipsos-bva-2026-05-28-10195",
+      "ipsos-bva-2026-09-02-10250",
+      "ipsos-bva-2026-09-09-10262",
+      "odoxa-2026-05-21-10189",
+      "odoxa-2026-10-07-10310",
+      "opinionway-2026-07-09-10224",
+      "opinionway-2026-09-03-10252",
+      "opinionway-2026-09-04-10264",
+      "opinionway-2026-09-09-10259",
+      "opinionway-2026-09-10-10260",
+      "opinionway-2026-10-14-10318",
+      "opinionway-2026-10-14-10319",
+      "toluna-harris-2026-04-30-10180",
+      "toluna-harris-2026-05-27-10192",
+      "toluna-harris-2026-07-08-10223",
+      "toluna-harris-2026-08-19-10239",
+      "toluna-harris-2026-09-10-10263",
+      "toluna-harris-2026-09-24-10277",
+      "toluna-harris-2026-10-08-10305",
+      "verian-2026-07-10-10225",
+      "yougov-2026-09-21-10270"
+    ],
+    "polls_used": 34,
+    "random_walk_sd": 0.03,
+    "round2_pairs_polled": 10,
+    "scenario_noise_share": 0.6,
+    "scenarios_used": 150
+  },
+  "as_of": "2026-10-18",
+  "ballot": {
+    "candidates": [
+      {
+        "candidate_id": "arthaud",
+        "p_market": 0.88,
+        "p_run_hand": 0.9
+      },
+      {
+        "candidate_id": "melenchon",
+        "p_market": 0.9535,
+        "p_run_hand": 0.95
+      },
+      {
+        "candidate_id": "glucksmann",
+        "p_market": 0.8125,
+        "p_run_hand": 0.95
+      },
+      {
+        "candidate_id": "faure",
+        "p_market": 0.0603,
+        "p_run_hand": 0.0
+      },
+      {
+        "candidate_id": "royal",
+        "p_market": 0.0295,
+        "p_run_hand": 0.0
+      },
+      {
+        "candidate_id": "guedj",
+        "p_market": 0.0615,
+        "p_run_hand": 0.0
+      },
+      {
+        "candidate_id": "hollande",
+        "p_market": 0.28,
+        "p_run_hand": 0.2
+      },
+      {
+        "candidate_id": "roussel",
+        "p_market": 0.805,
+        "p_run_hand": 0.8
+      },
+      {
+        "candidate_id": "tondelier",
+        "p_market": 0.2825,
+        "p_run_hand": 0.55
+      },
+      {
+        "candidate_id": "ruffin",
+        "p_market": 0.22,
+        "p_run_hand": 0.5
+      },
+      {
+        "candidate_id": "bouamrane",
+        "p_market": 0.0593,
+        "p_run_hand": 0.15
+      },
+      {
+        "candidate_id": "cazeneuve",
+        "p_market": 0.084,
+        "p_run_hand": 0.15
+      },
+      {
+        "candidate_id": "batho",
+        "p_market": 0.097,
+        "p_run_hand": 0.1
+      },
+      {
+        "candidate_id": "philippe",
+        "p_market": 0.87,
+        "p_run_hand": 0.85
+      },
+      {
+        "candidate_id": "attal",
+        "p_market": 0.26,
+        "p_run_hand": 0.2
+      },
+      {
+        "candidate_id": "retailleau",
+        "p_market": 0.56,
+        "p_run_hand": 0.6
+      },
+      {
+        "candidate_id": "lisnard",
+        "p_market": 0.775,
+        "p_run_hand": 0.4
+      },
+      {
+        "candidate_id": "bertrand",
+        "p_market": 0.065,
+        "p_run_hand": 0.35
+      },
+      {
+        "candidate_id": "villepin",
+        "p_market": 0.3075,
+        "p_run_hand": 0.45
+      },
+      {
+        "candidate_id": "le_pen",
+        "p_market": 0.9375,
+        "p_run_hand": 0.93
+      },
+      {
+        "candidate_id": "bardella",
+        "p_market": 0.0708,
+        "p_run_hand": 0.07
+      },
+      {
+        "candidate_id": "zemmour",
+        "p_market": 0.835,
+        "p_run_hand": 0.85
+      },
+      {
+        "candidate_id": "dupont_aignan",
+        "p_market": 0.7375,
+        "p_run_hand": 0.6
+      },
+      {
+        "candidate_id": "asselineau",
+        "p_market": 0.14,
+        "p_run_hand": 0.25
+      }
+    ],
+    "hand_weight": 0.5,
+    "market_fetched_at": "2026-10-18T17:18:19Z"
+  },
+  "candidates": [
+    {
+      "bloc": "far_right",
+      "candidate_id": "le_pen",
+      "name": "Marine Le Pen",
+      "p_qualify_r1": 0.8271,
+      "p_run": 0.9299,
+      "p_win": 0.7372,
+      "party": "Rassemblement national (RN)",
+      "r1_share": {
+        "hi80": 0.4749,
+        "lo80": 0.1804,
+        "mean": 0.3212
+      },
+      "simulated": true,
+      "slot": "rn",
+      "status": "declared"
+    },
+    {
+      "bloc": "centre",
+      "candidate_id": "philippe",
+      "name": "Édouard Philippe",
+      "p_qualify_r1": 0.2852,
+      "p_run": 0.8534,
+      "p_win": 0.0812,
+      "party": "Horizons",
+      "r1_share": {
+        "hi80": 0.2531,
+        "lo80": 0.0699,
+        "mean": 0.1532
+      },
+      "simulated": true,
+      "slot": "centre",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "glucksmann",
+      "name": "Raphaël Glucksmann",
+      "p_qualify_r1": 0.3179,
+      "p_run": 0.9007,
+      "p_win": 0.0708,
+      "party": "Place publique (PP)",
+      "r1_share": {
+        "hi80": 0.275,
+        "lo80": 0.0568,
+        "mean": 0.1543
+      },
+      "simulated": true,
+      "slot": "ps_primary",
+      "status": "declared"
+    },
+    {
+      "bloc": "far_right",
+      "candidate_id": "bardella",
+      "name": "Jordan Bardella",
+      "p_qualify_r1": 0.0637,
+      "p_run": 0.0701,
+      "p_win": 0.0538,
+      "party": "Rassemblement national (RN)",
+      "r1_share": {
+        "hi80": 0.4862,
+        "lo80": 0.1897,
+        "mean": 0.3307
+      },
+      "simulated": true,
+      "slot": "rn",
+      "status": "possible"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "melenchon",
+      "name": "Jean-Luc Mélenchon",
+      "p_qualify_r1": 0.3665,
+      "p_run": 0.9518,
+      "p_win": 0.026,
+      "party": "La France insoumise (LFI)",
+      "r1_share": {
+        "hi80": 0.2839,
+        "lo80": 0.0602,
+        "mean": 0.1611
+      },
+      "simulated": true,
+      "slot": "melenchon",
+      "status": "declared"
+    },
+    {
+      "bloc": "right",
+      "candidate_id": "lisnard",
+      "name": "David Lisnard",
+      "p_qualify_r1": 0.0424,
+      "p_run": 0.6024,
+      "p_win": 0.0106,
+      "party": "Nouvelle Énergie (left LR on 31 Mar 2026)",
+      "r1_share": {
+        "hi80": 0.1513,
+        "lo80": 0.0215,
+        "mean": 0.0769
+      },
+      "simulated": true,
+      "slot": "lisnard",
+      "status": "declared"
+    },
+    {
+      "bloc": "far_right",
+      "candidate_id": "zemmour",
+      "name": "Éric Zemmour",
+      "p_qualify_r1": 0.0231,
+      "p_run": 0.8426,
+      "p_win": 0.0065,
+      "party": "Reconquête",
+      "r1_share": {
+        "hi80": 0.0938,
+        "lo80": 0.0106,
+        "mean": 0.0459
+      },
+      "simulated": true,
+      "slot": "zemmour",
+      "status": "declared"
+    },
+    {
+      "bloc": "centre",
+      "candidate_id": "attal",
+      "name": "Gabriel Attal",
+      "p_qualify_r1": 0.0259,
+      "p_run": 0.2209,
+      "p_win": 0.005,
+      "party": "Renaissance (RE)",
+      "r1_share": {
+        "hi80": 0.1761,
+        "lo80": 0.0269,
+        "mean": 0.0954
+      },
+      "simulated": true,
+      "slot": "centre",
+      "status": "declared"
+    },
+    {
+      "bloc": "right",
+      "candidate_id": "retailleau",
+      "name": "Bruno Retailleau",
+      "p_qualify_r1": 0.0188,
+      "p_run": 0.5801,
+      "p_win": 0.0028,
+      "party": "Les Républicains (LR)",
+      "r1_share": {
+        "hi80": 0.1242,
+        "lo80": 0.026,
+        "mean": 0.0701
+      },
+      "simulated": true,
+      "slot": "retailleau",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "hollande",
+      "name": "François Hollande",
+      "p_qualify_r1": 0.0091,
+      "p_run": 0.2377,
+      "p_win": 0.0024,
+      "party": "Parti socialiste (PS)",
+      "r1_share": {
+        "hi80": 0.118,
+        "lo80": 0.0167,
+        "mean": 0.0605
+      },
+      "simulated": true,
+      "slot": "hollande",
+      "status": "possible"
+    },
+    {
+      "bloc": "right",
+      "candidate_id": "villepin",
+      "name": "Dominique de Villepin",
+      "p_qualify_r1": 0.0079,
+      "p_run": 0.3761,
+      "p_win": 0.0017,
+      "party": "La France humaniste (LFH)",
+      "r1_share": {
+        "hi80": 0.0935,
+        "lo80": 0.0078,
+        "mean": 0.0415
+      },
+      "simulated": true,
+      "slot": "villepin",
+      "status": "likely"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "ruffin",
+      "name": "François Ruffin",
+      "p_qualify_r1": 0.0036,
+      "p_run": 0.3469,
+      "p_win": 0.0006,
+      "party": "Debout !",
+      "r1_share": {
+        "hi80": 0.0701,
+        "lo80": 0.0088,
+        "mean": 0.0353
+      },
+      "simulated": true,
+      "slot": "ruffin",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "roussel",
+      "name": "Fabien Roussel",
+      "p_qualify_r1": 0.004,
+      "p_run": 0.8025,
+      "p_win": 0.0004,
+      "party": "Parti communiste français (PCF)",
+      "r1_share": {
+        "hi80": 0.0498,
+        "lo80": 0.006,
+        "mean": 0.0251
+      },
+      "simulated": true,
+      "slot": "roussel",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "tondelier",
+      "name": "Marine Tondelier",
+      "p_qualify_r1": 0.0029,
+      "p_run": 0.4096,
+      "p_win": 0.0004,
+      "party": "Les Écologistes (LE)",
+      "r1_share": {
+        "hi80": 0.0642,
+        "lo80": 0.0079,
+        "mean": 0.0319
+      },
+      "simulated": true,
+      "slot": "tondelier",
+      "status": "declared"
+    },
+    {
+      "bloc": "right",
+      "candidate_id": "bertrand",
+      "name": "Xavier Bertrand",
+      "p_qualify_r1": 0.0013,
+      "p_run": 0.1621,
+      "p_win": 0.0001,
+      "party": "Nous France / Les Républicains",
+      "r1_share": {
+        "hi80": 0.0615,
+        "lo80": 0.0034,
+        "mean": 0.0254
+      },
+      "simulated": true,
+      "slot": "bertrand",
+      "status": "declared"
+    },
+    {
+      "bloc": "other",
+      "candidate_id": "dupont_aignan",
+      "name": "Nicolas Dupont-Aignan",
+      "p_qualify_r1": 0.0002,
+      "p_run": 0.6724,
+      "p_win": 0.0001,
+      "party": "Debout la France (DLF)",
+      "r1_share": {
+        "hi80": 0.0378,
+        "lo80": 0.009,
+        "mean": 0.0219
+      },
+      "simulated": true,
+      "slot": "dupont_aignan",
+      "status": "declared"
+    },
+    {
+      "bloc": "centre",
+      "candidate_id": "le_maire",
+      "name": "Bruno Le Maire",
+      "p_qualify_r1": 0.0002,
+      "p_run": 0.1,
+      "p_win": 0.0001,
+      "party": "Renaissance (RE)",
+      "r1_share": {
+        "hi80": 0.049,
+        "lo80": 0.0048,
+        "mean": 0.023
+      },
+      "simulated": true,
+      "slot": "le_maire",
+      "status": "possible"
+    },
+    {
+      "bloc": "far_left",
+      "candidate_id": "arthaud",
+      "name": "Nathalie Arthaud",
+      "p_qualify_r1": 0.0001,
+      "p_run": 0.8904,
+      "p_win": 0.0,
+      "party": "Lutte ouvrière (LO)",
+      "r1_share": {
+        "hi80": 0.0144,
+        "lo80": 0.0037,
+        "mean": 0.0085
+      },
+      "simulated": true,
+      "slot": "arthaud",
+      "status": "declared"
+    },
+    {
+      "bloc": "other",
+      "candidate_id": "polony",
+      "name": "Natacha Polony",
+      "p_qualify_r1": 0.0001,
+      "p_run": 0.15,
+      "p_win": 0.0,
+      "party": "Nous sommes la France",
+      "r1_share": {
+        "hi80": 0.0407,
+        "lo80": 0.0044,
+        "mean": 0.0198
+      },
+      "simulated": true,
+      "slot": "polony",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "bouamrane",
+      "name": "Karim Bouamrane",
+      "p_qualify_r1": 0.0001,
+      "p_run": 0.0954,
+      "p_win": 0.0,
+      "party": "Parti socialiste (PS)",
+      "r1_share": {
+        "hi80": 0.0205,
+        "lo80": 0.002,
+        "mean": 0.0102
+      },
+      "simulated": true,
+      "slot": "bouamrane",
+      "status": "declared"
+    },
+    {
+      "bloc": "far_left",
+      "candidate_id": "kazib",
+      "name": "Anasse Kazib",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.2,
+      "p_win": 0.0,
+      "party": "Révolution permanente",
+      "r1_share": null,
+      "simulated": false,
+      "slot": "kazib",
+      "status": "declared"
+    },
+    {
+      "bloc": "other",
+      "candidate_id": "philippot",
+      "name": "Florian Philippot",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.2,
+      "p_win": 0.0,
+      "party": "Les Patriotes",
+      "r1_share": null,
+      "simulated": false,
+      "slot": "philippot",
+      "status": "declared"
+    },
+    {
+      "bloc": "other",
+      "candidate_id": "asselineau",
+      "name": "François Asselineau",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.1889,
+      "p_win": 0.0,
+      "party": "Union populaire républicaine (UPR)",
+      "r1_share": null,
+      "simulated": false,
+      "slot": "asselineau",
+      "status": "declared"
+    },
+    {
+      "bloc": "far_left",
+      "candidate_id": "labib",
+      "name": "Selma Labib",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.15,
+      "p_win": 0.0,
+      "party": "NPA-Révolutionnaires",
+      "r1_share": null,
+      "simulated": false,
+      "slot": "labib",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "cazeneuve",
+      "name": "Bernard Cazeneuve",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.1129,
+      "p_win": 0.0,
+      "party": "La Convention",
+      "r1_share": null,
+      "simulated": false,
+      "slot": "cazeneuve",
+      "status": "declared"
+    },
+    {
+      "bloc": "centre",
+      "candidate_id": "becht",
+      "name": "Olivier Becht",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.1,
+      "p_win": 0.0,
+      "party": "Renaissance (RE)",
+      "r1_share": null,
+      "simulated": false,
+      "slot": "becht",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "batho",
+      "name": "Delphine Batho",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.0985,
+      "p_win": 0.0,
+      "party": "Génération écologie",
+      "r1_share": null,
+      "simulated": false,
+      "slot": "batho",
+      "status": "declared"
+    },
+    {
+      "bloc": "other",
+      "candidate_id": "bonnal",
+      "name": "Sébastien Bonnal",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.02,
+      "p_win": 0.0,
+      "party": "none (self-declared)",
+      "r1_share": {
+        "hi80": 0.0253,
+        "lo80": 0.0007,
+        "mean": 0.011
+      },
+      "simulated": true,
+      "slot": "bonnal",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "faure",
+      "name": "Olivier Faure",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.0,
+      "p_win": 0.0,
+      "party": "Parti socialiste (PS)",
+      "r1_share": null,
+      "simulated": true,
+      "slot": "ps_primary",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "guedj",
+      "name": "Jérôme Guedj",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.0,
+      "p_win": 0.0,
+      "party": "Parti socialiste (PS)",
+      "r1_share": null,
+      "simulated": true,
+      "slot": "ps_primary",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "maurel",
+      "name": "Emmanuel Maurel",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.0,
+      "p_win": 0.0,
+      "party": "Gauche républicaine et socialiste (GRS)",
+      "r1_share": null,
+      "simulated": true,
+      "slot": "ps_primary",
+      "status": "declared"
+    },
+    {
+      "bloc": "left",
+      "candidate_id": "royal",
+      "name": "Ségolène Royal",
+      "p_qualify_r1": 0.0,
+      "p_run": 0.0,
+      "p_win": 0.0,
+      "party": "Parti socialiste (PS)",
+      "r1_share": null,
+      "simulated": true,
+      "slot": "ps_primary",
+      "status": "declared"
+    }
+  ],
+  "changes": {
+    "new_polls": [],
+    "new_spikes": [],
+    "p_win_delta": [
+      {
+        "candidate_id": "le_pen",
+        "delta": -0.0001
+      },
+      {
+        "candidate_id": "melenchon",
+        "delta": 0.0001
+      },
+      {
+        "candidate_id": "bertrand",
+        "delta": -0.0001
+      }
+    ],
+    "previous": "2026-10-18T15.json"
+  },
+  "election": {
+    "round1": "2027-04-18",
+    "round2": "2027-05-02"
+  },
+  "generated_at": "2026-10-18T17:18:29Z",
+  "inputs_hash": "sha256:b8a2b005990c50a537dcf7edb6167e77e3e4d816abcf59bc9a664f3f5ec4318d",
+  "model_version": "0.5.0",
+  "pairs": [
+    {
+      "a": "melenchon",
+      "b": "le_pen",
+      "p_matchup": 0.273,
+      "p_win_given_matchup": {
+        "le_pen": 0.9965,
+        "melenchon": 0.0035
+      },
+      "polled": true
+    },
+    {
+      "a": "glucksmann",
+      "b": "le_pen",
+      "p_matchup": 0.2339,
+      "p_win_given_matchup": {
+        "glucksmann": 0.1537,
+        "le_pen": 0.8463
+      },
+      "polled": true
+    },
+    {
+      "a": "philippe",
+      "b": "le_pen",
+      "p_matchup": 0.2178,
+      "p_win_given_matchup": {
+        "le_pen": 0.8185,
+        "philippe": 0.1815
+      },
+      "polled": true
+    },
+    {
+      "a": "melenchon",
+      "b": "glucksmann",
+      "p_matchup": 0.0371,
+      "p_win_given_matchup": {
+        "glucksmann": 0.5097,
+        "melenchon": 0.4903
+      },
+      "polled": false
+    },
+    {
+      "a": "lisnard",
+      "anchor": {
+        "a": "retailleau",
+        "b": "le_pen"
+      },
+      "b": "le_pen",
+      "p_matchup": 0.0309,
+      "p_win_given_matchup": {
+        "le_pen": 0.8462,
+        "lisnard": 0.1538
+      },
+      "polled": false
+    },
+    {
+      "a": "melenchon",
+      "b": "philippe",
+      "p_matchup": 0.0236,
+      "p_win_given_matchup": {
+        "melenchon": 0.0814,
+        "philippe": 0.9186
+      },
+      "polled": true
+    },
+    {
+      "a": "melenchon",
+      "b": "bardella",
+      "p_matchup": 0.0213,
+      "p_win_given_matchup": {
+        "bardella": 0.9728,
+        "melenchon": 0.0272
+      },
+      "polled": true
+    },
+    {
+      "a": "glucksmann",
+      "anchor": {
+        "a": "melenchon",
+        "b": "philippe"
+      },
+      "b": "philippe",
+      "p_matchup": 0.0209,
+      "p_win_given_matchup": {
+        "glucksmann": 0.4688,
+        "philippe": 0.5312
+      },
+      "polled": false
+    },
+    {
+      "a": "attal",
+      "b": "le_pen",
+      "p_matchup": 0.0205,
+      "p_win_given_matchup": {
+        "attal": 0.1124,
+        "le_pen": 0.8876
+      },
+      "polled": true
+    },
+    {
+      "a": "glucksmann",
+      "anchor": {
+        "a": "glucksmann",
+        "b": "le_pen"
+      },
+      "b": "bardella",
+      "p_matchup": 0.0177,
+      "p_win_given_matchup": {
+        "bardella": 0.8792,
+        "glucksmann": 0.1208
+      },
+      "polled": false
+    },
+    {
+      "a": "philippe",
+      "b": "bardella",
+      "p_matchup": 0.0167,
+      "p_win_given_matchup": {
+        "bardella": 0.6774,
+        "philippe": 0.3226
+      },
+      "polled": true
+    },
+    {
+      "a": "le_pen",
+      "b": "zemmour",
+      "p_matchup": 0.0159,
+      "p_win_given_matchup": {
+        "le_pen": 0.8568,
+        "zemmour": 0.1432
+      },
+      "polled": false
+    },
+    {
+      "a": "retailleau",
+      "b": "le_pen",
+      "p_matchup": 0.0147,
+      "p_win_given_matchup": {
+        "le_pen": 0.9181,
+        "retailleau": 0.0819
+      },
+      "polled": true
+    },
+    {
+      "a": "hollande",
+      "b": "le_pen",
+      "p_matchup": 0.0065,
+      "p_win_given_matchup": {
+        "hollande": 0.2423,
+        "le_pen": 0.7577
+      },
+      "polled": true
+    },
+    {
+      "a": "villepin",
+      "anchor": {
+        "a": "retailleau",
+        "b": "le_pen"
+      },
+      "b": "le_pen",
+      "p_matchup": 0.0056,
+      "p_win_given_matchup": {
+        "le_pen": 0.8648,
+        "villepin": 0.1352
+      },
+      "polled": false
+    },
+    {
+      "a": "melenchon",
+      "b": "lisnard",
+      "p_matchup": 0.0032,
+      "p_win_given_matchup": {
+        "lisnard": 0.5741,
+        "melenchon": 0.4259
+      },
+      "polled": false
+    },
+    {
+      "a": "roussel",
+      "anchor": {
+        "a": "melenchon",
+        "b": "le_pen"
+      },
+      "b": "le_pen",
+      "p_matchup": 0.0027,
+      "p_win_given_matchup": {
+        "le_pen": 0.9624,
+        "roussel": 0.0376
+      },
+      "polled": false
+    },
+    {
+      "a": "glucksmann",
+      "b": "lisnard",
+      "p_matchup": 0.0026,
+      "p_win_given_matchup": {
+        "glucksmann": 0.4031,
+        "lisnard": 0.5969
+      },
+      "polled": false
+    },
+    {
+      "a": "lisnard",
+      "b": "bardella",
+      "p_matchup": 0.0025,
+      "p_win_given_matchup": {
+        "bardella": 0.619,
+        "lisnard": 0.381
+      },
+      "polled": false
+    },
+    {
+      "a": "ruffin",
+      "anchor": {
+        "a": "melenchon",
+        "b": "le_pen"
+      },
+      "b": "le_pen",
+      "p_matchup": 0.0023,
+      "p_win_given_matchup": {
+        "le_pen": 0.9292,
+        "ruffin": 0.0708
+      },
+      "polled": false
+    },
+    {
+      "a": "philippe",
+      "b": "lisnard",
+      "p_matchup": 0.0022,
+      "p_win_given_matchup": {
+        "lisnard": 0.5179,
+        "philippe": 0.4821
+      },
+      "polled": false
+    },
+    {
+      "a": "melenchon",
+      "anchor": {
+        "a": "melenchon",
+        "b": "le_pen"
+      },
+      "b": "zemmour",
+      "p_matchup": 0.0021,
+      "p_win_given_matchup": {
+        "melenchon": 0.1038,
+        "zemmour": 0.8962
+      },
+      "polled": false
+    },
+    {
+      "a": "melenchon",
+      "anchor": {
+        "a": "melenchon",
+        "b": "philippe"
+      },
+      "b": "attal",
+      "p_matchup": 0.0021,
+      "p_win_given_matchup": {
+        "attal": 0.7864,
+        "melenchon": 0.2136
+      },
+      "polled": false
+    },
+    {
+      "a": "tondelier",
+      "anchor": {
+        "a": "melenchon",
+        "b": "le_pen"
+      },
+      "b": "le_pen",
+      "p_matchup": 0.0018,
+      "p_win_given_matchup": {
+        "le_pen": 0.9551,
+        "tondelier": 0.0449
+      },
+      "polled": false
+    },
+    {
+      "a": "bardella",
+      "b": "zemmour",
+      "p_matchup": 0.0015,
+      "p_win_given_matchup": {
+        "bardella": 0.8182,
+        "zemmour": 0.1818
+      },
+      "polled": false
+    },
+    {
+      "a": "philippe",
+      "anchor": {
+        "a": "philippe",
+        "b": "le_pen"
+      },
+      "b": "zemmour",
+      "p_matchup": 0.0015,
+      "p_win_given_matchup": {
+        "philippe": 0.44,
+        "zemmour": 0.56
+      },
+      "polled": false
+    },
+    {
+      "a": "glucksmann",
+      "anchor": {
+        "a": "glucksmann",
+        "b": "le_pen"
+      },
+      "b": "zemmour",
+      "p_matchup": 0.0015,
+      "p_win_given_matchup": {
+        "glucksmann": 0.4324,
+        "zemmour": 0.5676
+      },
+      "polled": false
+    },
+    {
+      "a": "attal",
+      "b": "bardella",
+      "p_matchup": 0.0014,
+      "p_win_given_matchup": {
+        "attal": 0.1143,
+        "bardella": 0.8857
+      },
+      "polled": true
+    },
+    {
+      "a": "glucksmann",
+      "b": "attal",
+      "p_matchup": 0.0012,
+      "p_win_given_matchup": {
+        "attal": 0.4677,
+        "glucksmann": 0.5323
+      },
+      "polled": false
+    },
+    {
+      "a": "melenchon",
+      "b": "retailleau",
+      "p_matchup": 0.0012,
+      "p_win_given_matchup": {
+        "melenchon": 0.3333,
+        "retailleau": 0.6667
+      },
+      "polled": false
+    },
+    {
+      "a": "retailleau",
+      "anchor": {
+        "a": "retailleau",
+        "b": "le_pen"
+      },
+      "b": "bardella",
+      "p_matchup": 0.0011,
+      "p_win_given_matchup": {
+        "bardella": 0.8727,
+        "retailleau": 0.1273
+      },
+      "polled": false
+    },
+    {
+      "a": "bertrand",
+      "anchor": {
+        "a": "retailleau",
+        "b": "le_pen"
+      },
+      "b": "le_pen",
+      "p_matchup": 0.0011,
+      "p_win_given_matchup": {
+        "bertrand": 0.0566,
+        "le_pen": 0.9434
+      },
+      "polled": false
+    }
+  ],
+  "parameters": {
+    "round1_error": {
+      "bloc_sd": 0.18,
+      "candidate_sd": 0.2,
+      "horizon_bloc_sd": 0.0,
+      "horizon_candidate_sd": 0.2,
+      "student_t_df": 3.0
+    },
+    "round2": {
+      "anchor_gap_mean": 0.11,
+      "anchor_gap_sd": 0.23,
+      "design_effect": 1.5,
+      "error_sd": 0.12,
+      "horizon_error_sd": 0.0,
+      "loyalty": 0.95,
+      "prior_sd": 1.5,
+      "random_walk_sd": 0.01,
+      "student_t_df": 5.0,
+      "transfer_sd": 0.35,
+      "transfers": {
+        "centre": {
+          "abstain": 0.35,
+          "centre": 0.97,
+          "far_left": 0.15,
+          "far_right": 0.1,
+          "left": 0.45,
+          "other": 0.2,
+          "right": 0.7
+        },
+        "far_left": {
+          "abstain": 0.58,
+          "centre": 0.3,
+          "far_left": 0.9,
+          "far_right": 0.12,
+          "left": 0.7,
+          "other": 0.2,
+          "right": 0.08
+        },
+        "far_right": {
+          "abstain": 0.13,
+          "centre": 0.1,
+          "far_left": 0.08,
+          "far_right": 0.77,
+          "left": 0.05,
+          "other": 0.4,
+          "right": 0.35
+        },
+        "left": {
+          "abstain": 0.4,
+          "centre": 0.45,
+          "far_left": 0.6,
+          "far_right": 0.15,
+          "left": 0.9,
+          "other": 0.2,
+          "right": 0.15
+        },
+        "other": {
+          "abstain": 0.35,
+          "centre": 0.25,
+          "far_left": 0.2,
+          "far_right": 0.4,
+          "left": 0.2,
+          "other": 0.9,
+          "right": 0.35
+        },
+        "right": {
+          "abstain": 0.29,
+          "centre": 0.52,
+          "far_left": 0.05,
+          "far_right": 0.19,
+          "left": 0.2,
+          "other": 0.2,
+          "right": 0.95
+        }
+      }
+    }
+  },
+  "schema_version": "1.0",
+  "seed": 20270418,
+  "signal_levels": [
+    {
+      "candidates": [
+        {
+          "candidate_id": "arthaud",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "kazib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "labib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "melenchon",
+          "p_qualify_r1": 0.4067,
+          "p_win": 0.0085
+        },
+        {
+          "candidate_id": "glucksmann",
+          "p_qualify_r1": 0.2378,
+          "p_win": 0.0376
+        },
+        {
+          "candidate_id": "faure",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "royal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "guedj",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "maurel",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "hollande",
+          "p_qualify_r1": 0.0073,
+          "p_win": 0.0016
+        },
+        {
+          "candidate_id": "roussel",
+          "p_qualify_r1": 0.0035,
+          "p_win": 0.0002
+        },
+        {
+          "candidate_id": "tondelier",
+          "p_qualify_r1": 0.0025,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "ruffin",
+          "p_qualify_r1": 0.0028,
+          "p_win": 0.0002
+        },
+        {
+          "candidate_id": "bouamrane",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "cazeneuve",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "batho",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "philippe",
+          "p_qualify_r1": 0.2991,
+          "p_win": 0.0665
+        },
+        {
+          "candidate_id": "attal",
+          "p_qualify_r1": 0.0211,
+          "p_win": 0.0026
+        },
+        {
+          "candidate_id": "le_maire",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "becht",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "retailleau",
+          "p_qualify_r1": 0.0069,
+          "p_win": 0.0006
+        },
+        {
+          "candidate_id": "lisnard",
+          "p_qualify_r1": 0.0247,
+          "p_win": 0.0043
+        },
+        {
+          "candidate_id": "bertrand",
+          "p_qualify_r1": 0.0007,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "villepin",
+          "p_qualify_r1": 0.007,
+          "p_win": 0.0012
+        },
+        {
+          "candidate_id": "le_pen",
+          "p_qualify_r1": 0.8951,
+          "p_win": 0.8114
+        },
+        {
+          "candidate_id": "bardella",
+          "p_qualify_r1": 0.0681,
+          "p_win": 0.059
+        },
+        {
+          "candidate_id": "zemmour",
+          "p_qualify_r1": 0.0164,
+          "p_win": 0.0057
+        },
+        {
+          "candidate_id": "dupont_aignan",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "philippot",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "asselineau",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "bonnal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "polony",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        }
+      ],
+      "scale": 0.0
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "arthaud",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "kazib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "labib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "melenchon",
+          "p_qualify_r1": 0.4091,
+          "p_win": 0.01
+        },
+        {
+          "candidate_id": "glucksmann",
+          "p_qualify_r1": 0.2614,
+          "p_win": 0.0439
+        },
+        {
+          "candidate_id": "faure",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "royal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "guedj",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "maurel",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "hollande",
+          "p_qualify_r1": 0.0072,
+          "p_win": 0.0017
+        },
+        {
+          "candidate_id": "roussel",
+          "p_qualify_r1": 0.0035,
+          "p_win": 0.0002
+        },
+        {
+          "candidate_id": "tondelier",
+          "p_qualify_r1": 0.0024,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "ruffin",
+          "p_qualify_r1": 0.0029,
+          "p_win": 0.0003
+        },
+        {
+          "candidate_id": "bouamrane",
+          "p_qualify_r1": 0.0002,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "cazeneuve",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "batho",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "philippe",
+          "p_qualify_r1": 0.279,
+          "p_win": 0.063
+        },
+        {
+          "candidate_id": "attal",
+          "p_qualify_r1": 0.0197,
+          "p_win": 0.0026
+        },
+        {
+          "candidate_id": "le_maire",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "becht",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "retailleau",
+          "p_qualify_r1": 0.0066,
+          "p_win": 0.0006
+        },
+        {
+          "candidate_id": "lisnard",
+          "p_qualify_r1": 0.0266,
+          "p_win": 0.0049
+        },
+        {
+          "candidate_id": "bertrand",
+          "p_qualify_r1": 0.0007,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "villepin",
+          "p_qualify_r1": 0.0061,
+          "p_win": 0.001
+        },
+        {
+          "candidate_id": "le_pen",
+          "p_qualify_r1": 0.8909,
+          "p_win": 0.8069
+        },
+        {
+          "candidate_id": "bardella",
+          "p_qualify_r1": 0.068,
+          "p_win": 0.059
+        },
+        {
+          "candidate_id": "zemmour",
+          "p_qualify_r1": 0.0154,
+          "p_win": 0.0056
+        },
+        {
+          "candidate_id": "dupont_aignan",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "philippot",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "asselineau",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "bonnal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "polony",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        }
+      ],
+      "scale": 0.5
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "arthaud",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "kazib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "labib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "melenchon",
+          "p_qualify_r1": 0.3665,
+          "p_win": 0.026
+        },
+        {
+          "candidate_id": "glucksmann",
+          "p_qualify_r1": 0.3179,
+          "p_win": 0.0708
+        },
+        {
+          "candidate_id": "faure",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "royal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "guedj",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "maurel",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "hollande",
+          "p_qualify_r1": 0.0091,
+          "p_win": 0.0024
+        },
+        {
+          "candidate_id": "roussel",
+          "p_qualify_r1": 0.004,
+          "p_win": 0.0004
+        },
+        {
+          "candidate_id": "tondelier",
+          "p_qualify_r1": 0.0029,
+          "p_win": 0.0004
+        },
+        {
+          "candidate_id": "ruffin",
+          "p_qualify_r1": 0.0036,
+          "p_win": 0.0006
+        },
+        {
+          "candidate_id": "bouamrane",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "cazeneuve",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "batho",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "philippe",
+          "p_qualify_r1": 0.2852,
+          "p_win": 0.0812
+        },
+        {
+          "candidate_id": "attal",
+          "p_qualify_r1": 0.0259,
+          "p_win": 0.005
+        },
+        {
+          "candidate_id": "le_maire",
+          "p_qualify_r1": 0.0002,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "becht",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "retailleau",
+          "p_qualify_r1": 0.0188,
+          "p_win": 0.0028
+        },
+        {
+          "candidate_id": "lisnard",
+          "p_qualify_r1": 0.0424,
+          "p_win": 0.0106
+        },
+        {
+          "candidate_id": "bertrand",
+          "p_qualify_r1": 0.0013,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "villepin",
+          "p_qualify_r1": 0.0079,
+          "p_win": 0.0017
+        },
+        {
+          "candidate_id": "le_pen",
+          "p_qualify_r1": 0.8271,
+          "p_win": 0.7372
+        },
+        {
+          "candidate_id": "bardella",
+          "p_qualify_r1": 0.0637,
+          "p_win": 0.0538
+        },
+        {
+          "candidate_id": "zemmour",
+          "p_qualify_r1": 0.0231,
+          "p_win": 0.0065
+        },
+        {
+          "candidate_id": "dupont_aignan",
+          "p_qualify_r1": 0.0002,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "philippot",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "asselineau",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "bonnal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "polony",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        }
+      ],
+      "scale": 1.0
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "arthaud",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "kazib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "labib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "melenchon",
+          "p_qualify_r1": 0.3803,
+          "p_win": 0.0185
+        },
+        {
+          "candidate_id": "glucksmann",
+          "p_qualify_r1": 0.3323,
+          "p_win": 0.065
+        },
+        {
+          "candidate_id": "faure",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "royal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "guedj",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "maurel",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "hollande",
+          "p_qualify_r1": 0.006,
+          "p_win": 0.0016
+        },
+        {
+          "candidate_id": "roussel",
+          "p_qualify_r1": 0.0031,
+          "p_win": 0.0002
+        },
+        {
+          "candidate_id": "tondelier",
+          "p_qualify_r1": 0.0022,
+          "p_win": 0.0003
+        },
+        {
+          "candidate_id": "ruffin",
+          "p_qualify_r1": 0.0027,
+          "p_win": 0.0004
+        },
+        {
+          "candidate_id": "bouamrane",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "cazeneuve",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "batho",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "philippe",
+          "p_qualify_r1": 0.2586,
+          "p_win": 0.0626
+        },
+        {
+          "candidate_id": "attal",
+          "p_qualify_r1": 0.0197,
+          "p_win": 0.0027
+        },
+        {
+          "candidate_id": "le_maire",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "becht",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "retailleau",
+          "p_qualify_r1": 0.008,
+          "p_win": 0.0007
+        },
+        {
+          "candidate_id": "lisnard",
+          "p_qualify_r1": 0.0334,
+          "p_win": 0.0068
+        },
+        {
+          "candidate_id": "bertrand",
+          "p_qualify_r1": 0.0007,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "villepin",
+          "p_qualify_r1": 0.0046,
+          "p_win": 0.0008
+        },
+        {
+          "candidate_id": "le_pen",
+          "p_qualify_r1": 0.8687,
+          "p_win": 0.779
+        },
+        {
+          "candidate_id": "bardella",
+          "p_qualify_r1": 0.0659,
+          "p_win": 0.0563
+        },
+        {
+          "candidate_id": "zemmour",
+          "p_qualify_r1": 0.0134,
+          "p_win": 0.0048
+        },
+        {
+          "candidate_id": "dupont_aignan",
+          "p_qualify_r1": 0.0002,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "philippot",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "asselineau",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "bonnal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "polony",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        }
+      ],
+      "scale": 1.5
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "arthaud",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "kazib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "labib",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "melenchon",
+          "p_qualify_r1": 0.3677,
+          "p_win": 0.0254
+        },
+        {
+          "candidate_id": "glucksmann",
+          "p_qualify_r1": 0.3569,
+          "p_win": 0.0774
+        },
+        {
+          "candidate_id": "faure",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "royal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "guedj",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "maurel",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "hollande",
+          "p_qualify_r1": 0.0058,
+          "p_win": 0.0017
+        },
+        {
+          "candidate_id": "roussel",
+          "p_qualify_r1": 0.0031,
+          "p_win": 0.0003
+        },
+        {
+          "candidate_id": "tondelier",
+          "p_qualify_r1": 0.0021,
+          "p_win": 0.0003
+        },
+        {
+          "candidate_id": "ruffin",
+          "p_qualify_r1": 0.0028,
+          "p_win": 0.0004
+        },
+        {
+          "candidate_id": "bouamrane",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "cazeneuve",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "batho",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "philippe",
+          "p_qualify_r1": 0.26,
+          "p_win": 0.0649
+        },
+        {
+          "candidate_id": "attal",
+          "p_qualify_r1": 0.0214,
+          "p_win": 0.0029
+        },
+        {
+          "candidate_id": "le_maire",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "becht",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "retailleau",
+          "p_qualify_r1": 0.0097,
+          "p_win": 0.0011
+        },
+        {
+          "candidate_id": "lisnard",
+          "p_qualify_r1": 0.0378,
+          "p_win": 0.0083
+        },
+        {
+          "candidate_id": "bertrand",
+          "p_qualify_r1": 0.0008,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "villepin",
+          "p_qualify_r1": 0.0043,
+          "p_win": 0.0008
+        },
+        {
+          "candidate_id": "le_pen",
+          "p_qualify_r1": 0.8495,
+          "p_win": 0.7574
+        },
+        {
+          "candidate_id": "bardella",
+          "p_qualify_r1": 0.0644,
+          "p_win": 0.0543
+        },
+        {
+          "candidate_id": "zemmour",
+          "p_qualify_r1": 0.0132,
+          "p_win": 0.0046
+        },
+        {
+          "candidate_id": "dupont_aignan",
+          "p_qualify_r1": 0.0002,
+          "p_win": 0.0001
+        },
+        {
+          "candidate_id": "philippot",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "asselineau",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "bonnal",
+          "p_qualify_r1": 0.0,
+          "p_win": 0.0
+        },
+        {
+          "candidate_id": "polony",
+          "p_qualify_r1": 0.0001,
+          "p_win": 0.0
+        }
+      ],
+      "scale": 2.0
+    }
+  ],
+  "signals": {
+    "half_life_days": 10.0,
+    "momentum": [
+      {
+        "candidate_id": "arthaud",
+        "tilt": -0.0279
+      },
+      {
+        "candidate_id": "kazib",
+        "tilt": -0.0097
+      },
+      {
+        "candidate_id": "melenchon",
+        "tilt": 0.0038
+      },
+      {
+        "candidate_id": "glucksmann",
+        "tilt": 0.0505
+      },
+      {
+        "candidate_id": "faure",
+        "tilt": -0.0284
+      },
+      {
+        "candidate_id": "royal",
+        "tilt": -0.0394
+      },
+      {
+        "candidate_id": "guedj",
+        "tilt": -0.0714
+      },
+      {
+        "candidate_id": "maurel",
+        "tilt": -0.0355
+      },
+      {
+        "candidate_id": "hollande",
+        "tilt": -0.026
+      },
+      {
+        "candidate_id": "roussel",
+        "tilt": -0.0328
+      },
+      {
+        "candidate_id": "tondelier",
+        "tilt": -0.0331
+      },
+      {
+        "candidate_id": "ruffin",
+        "tilt": 0.0079
+      },
+      {
+        "candidate_id": "bouamrane",
+        "tilt": -0.0046
+      },
+      {
+        "candidate_id": "cazeneuve",
+        "tilt": -0.0226
+      },
+      {
+        "candidate_id": "batho",
+        "tilt": -0.0154
+      },
+      {
+        "candidate_id": "philippe",
+        "tilt": -0.0244
+      },
+      {
+        "candidate_id": "attal",
+        "tilt": -0.0166
+      },
+      {
+        "candidate_id": "le_maire",
+        "tilt": -0.0596
+      },
+      {
+        "candidate_id": "becht",
+        "tilt": -0.0412
+      },
+      {
+        "candidate_id": "retailleau",
+        "tilt": -0.0036
+      },
+      {
+        "candidate_id": "lisnard",
+        "tilt": 0.0433
+      },
+      {
+        "candidate_id": "bertrand",
+        "tilt": -0.0246
+      },
+      {
+        "candidate_id": "villepin",
+        "tilt": -0.0721
+      },
+      {
+        "candidate_id": "le_pen",
+        "tilt": -0.0171
+      },
+      {
+        "candidate_id": "bardella",
+        "tilt": -0.0524
+      },
+      {
+        "candidate_id": "zemmour",
+        "tilt": -0.0265
+      },
+      {
+        "candidate_id": "dupont_aignan",
+        "tilt": -0.0195
+      },
+      {
+        "candidate_id": "philippot",
+        "tilt": -0.0341
+      },
+      {
+        "candidate_id": "asselineau",
+        "tilt": -0.0213
+      },
+      {
+        "candidate_id": "polony",
+        "tilt": 0.0857
+      }
+    ],
+    "momentum_weight": 0.15,
+    "shock_sd": 0.1,
+    "sources": [
+      "attention",
+      "news"
+    ],
+    "spikes": [
+      {
+        "candidate_id": "melenchon",
+        "date": "2026-08-22",
+        "ratios": {
+          "attention": 2.6463,
+          "news": 3.6667
+        },
+        "score": 1.1362
+      },
+      {
+        "candidate_id": "philippe",
+        "date": "2026-08-22",
+        "ratios": {
+          "attention": 4.2396,
+          "news": 3.0
+        },
+        "score": 1.2715
+      },
+      {
+        "candidate_id": "glucksmann",
+        "date": "2026-08-23",
+        "ratios": {
+          "attention": 26.1751,
+          "news": 2.8333
+        },
+        "score": 2.1531
+      },
+      {
+        "candidate_id": "bouamrane",
+        "date": "2026-08-26",
+        "ratios": {
+          "attention": 7.0557,
+          "news": 1.6
+        },
+        "score": 1.2119
+      },
+      {
+        "candidate_id": "tondelier",
+        "date": "2026-08-27",
+        "ratios": {
+          "attention": 11.3356,
+          "news": 1.1667
+        },
+        "score": 1.291
+      },
+      {
+        "candidate_id": "attal",
+        "date": "2026-08-27",
+        "ratios": {
+          "attention": 6.1629,
+          "news": 1.6667
+        },
+        "score": 1.1647
+      },
+      {
+        "candidate_id": "retailleau",
+        "date": "2026-08-27",
+        "ratios": {
+          "attention": 8.8692,
+          "news": 1.6
+        },
+        "score": 1.3263
+      },
+      {
+        "candidate_id": "bertrand",
+        "date": "2026-08-27",
+        "ratios": {
+          "attention": 20.9467,
+          "news": 3.0
+        },
+        "score": 2.0703
+      },
+      {
+        "candidate_id": "le_pen",
+        "date": "2026-08-27",
+        "ratios": {
+          "attention": 3.8728,
+          "news": 2.5
+        },
+        "score": 1.1351
+      },
+      {
+        "candidate_id": "faure",
+        "date": "2026-08-28",
+        "ratios": {
+          "attention": 8.4563,
+          "news": 1.4
+        },
+        "score": 1.2357
+      },
+      {
+        "candidate_id": "hollande",
+        "date": "2026-08-29",
+        "ratios": {
+          "attention": 3.901,
+          "news": 2.4
+        },
+        "score": 1.1184
+      },
+      {
+        "candidate_id": "bardella",
+        "date": "2026-08-29",
+        "ratios": {
+          "attention": 4.9754,
+          "news": 2.2
+        },
+        "score": 1.1965
+      },
+      {
+        "candidate_id": "polony",
+        "date": "2026-08-29",
+        "ratios": {
+          "attention": 11.6639,
+          "news": 1.0
+        },
+        "score": 1.2282
+      },
+      {
+        "candidate_id": "villepin",
+        "date": "2026-08-30",
+        "ratios": {
+          "attention": 9.7608,
+          "news": 2.0
+        },
+        "score": 1.4858
+      },
+      {
+        "candidate_id": "maurel",
+        "date": "2026-09-04",
+        "ratios": {
+          "attention": 13.0945,
+          "news": 1.0
+        },
+        "score": 1.2861
+      },
+      {
+        "candidate_id": "roussel",
+        "date": "2026-09-06",
+        "ratios": {
+          "attention": 16.3124,
+          "news": 2.6
+        },
+        "score": 1.8737
+      },
+      {
+        "candidate_id": "le_maire",
+        "date": "2026-09-09",
+        "ratios": {
+          "attention": 22.409,
+          "news": 1.8
+        },
+        "score": 1.8486
+      },
+      {
+        "candidate_id": "le_pen",
+        "date": "2026-09-15",
+        "ratios": {
+          "attention": 11.5699,
+          "news": 1.75
+        },
+        "score": 1.504
+      },
+      {
+        "candidate_id": "villepin",
+        "date": "2026-09-17",
+        "ratios": {
+          "attention": 9.2016,
+          "news": 1.0
+        },
+        "score": 1.1097
+      },
+      {
+        "candidate_id": "zemmour",
+        "date": "2026-09-18",
+        "ratios": {
+          "attention": 4.2892,
+          "news": 3.8
+        },
+        "score": 1.3955
+      },
+      {
+        "candidate_id": "royal",
+        "date": "2026-09-21",
+        "ratios": {
+          "attention": 4.835,
+          "news": 2.6
+        },
+        "score": 1.2657
+      },
+      {
+        "candidate_id": "faure",
+        "date": "2026-09-23",
+        "ratios": {
+          "attention": 8.0415,
+          "news": 1.5
+        },
+        "score": 1.245
+      },
+      {
+        "candidate_id": "guedj",
+        "date": "2026-09-23",
+        "ratios": {
+          "attention": 15.7559,
+          "news": 1.4
+        },
+        "score": 1.5468
+      },
+      {
+        "candidate_id": "maurel",
+        "date": "2026-09-23",
+        "ratios": {
+          "attention": 56.2962,
+          "news": 3.0
+        },
+        "score": 2.5646
+      },
+      {
+        "candidate_id": "tondelier",
+        "date": "2026-09-23",
+        "ratios": {
+          "attention": 7.7387,
+          "news": 3.6
+        },
+        "score": 1.6636
+      },
+      {
+        "candidate_id": "becht",
+        "date": "2026-09-24",
+        "ratios": {
+          "attention": 45.0231,
+          "news": 1.4
+        },
+        "score": 2.0718
+      },
+      {
+        "candidate_id": "bardella",
+        "date": "2026-09-28",
+        "ratios": {
+          "attention": 5.1335,
+          "news": 4.1667
+        },
+        "score": 1.5314
+      },
+      {
+        "candidate_id": "philippe",
+        "date": "2026-10-08",
+        "ratios": {
+          "attention": 11.8945,
+          "news": 1.2222
+        },
+        "score": 1.3384
+      },
+      {
+        "candidate_id": "maurel",
+        "date": "2026-10-09",
+        "ratios": {
+          "attention": 2.8793,
+          "news": 3.6
+        },
+        "score": 1.1692
+      },
+      {
+        "candidate_id": "glucksmann",
+        "date": "2026-10-11",
+        "ratios": {
+          "attention": 29.0235,
+          "news": 6.0
+        },
+        "score": 2.5799
+      },
+      {
+        "candidate_id": "polony",
+        "date": "2026-10-14",
+        "ratios": {
+          "attention": 77.6468,
+          "news": 3.2
+        },
+        "score": 2.7577
+      }
+    ],
+    "x_momentum_weight": 0.5
+  },
+  "simulations": 50000,
+  "warnings": [
+    "Not yet tested by any round 1 poll, so left out of every simulated election: Anasse Kazib (runs 20%), Selma Labib (runs 15%), Bernard Cazeneuve (runs 11%), Delphine Batho (runs 10%), Olivier Becht (runs 10%), Florian Philippot (runs 20%), François Asselineau (runs 19%)."
+  ]
+}
