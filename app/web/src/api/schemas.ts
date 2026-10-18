@@ -85,6 +85,7 @@ const ForecastSignals = Schema.Struct({
   half_life_days: Schema.Finite,
   momentum_weight: Schema.Finite,
   x_momentum_weight: Schema.optionalKey(Schema.Finite),
+  tone_momentum_weight: Schema.optionalKey(Schema.Finite),
   spikes: Schema.Array(Spike),
   momentum: Schema.optionalKey(Schema.Array(Schema.Struct({ candidate_id: Schema.String, tilt: Schema.Finite }))),
 })

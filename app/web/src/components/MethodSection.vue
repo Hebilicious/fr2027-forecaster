@@ -64,7 +64,7 @@ const runoffs = computed(() => {
 // The news, social and market weights the run used, from its `signals` and `ballot` records and the published
 // blend; forecasts from before model 0.5.0 have none, and the step is left out.
 const signals = computed(() => f.value.signals)
-type SignalSetting = "shockSd" | "halfLife" | "momentum" | "xMomentum" | "ballot" | "blend"
+type SignalSetting = "shockSd" | "halfLife" | "momentum" | "xMomentum" | "toneMomentum" | "ballot" | "blend"
 const signalSettings = computed(() => {
   const s = signals.value
   if (!s) return []
@@ -75,6 +75,9 @@ const signalSettings = computed(() => {
   ]
   if (s.x_momentum_weight !== undefined) {
     rows.push({ key: "xMomentum", value: decimal(s.x_momentum_weight, 2, locale.value) })
+  }
+  if (s.tone_momentum_weight !== undefined) {
+    rows.push({ key: "toneMomentum", value: decimal(s.tone_momentum_weight, 2, locale.value) })
   }
   if (f.value.ballot) rows.push({ key: "ballot", value: percent(1 - f.value.ballot.hand_weight, 0, locale.value) })
   if (props.blend) rows.push({ key: "blend", value: percent(1 - props.blend.model_weight, 0, locale.value) })

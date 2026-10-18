@@ -134,6 +134,7 @@ struct SignalsOut {
     half_life_days: f64,
     momentum_weight: f64,
     x_momentum_weight: f64,
+    tone_momentum_weight: f64,
     spikes: Vec<SpikeOut>,
     /// Candidates whose round 1 vote the momentum tilts, and by how much (log scale).
     momentum: Vec<TiltOut>,
@@ -145,7 +146,7 @@ struct TiltOut {
     tilt: f64,
 }
 
-/// The forecast with every news and social signal weight (spike widening, attention and X
+/// The forecast with every news and social signal weight (spike widening, attention, X and tone
 /// momentum) multiplied by `scale`: 0 is the polls alone, 1 the published weights.
 #[derive(Serialize)]
 struct LevelOut {
@@ -170,6 +171,7 @@ fn scaled_signals(signals: &fr2027_model::SignalParams, scale: f64) -> fr2027_mo
         shock_sd_grid: signals.shock_sd_grid.iter().map(|s| s * scale).collect(),
         momentum_weight: signals.momentum_weight * scale,
         x_momentum_weight: signals.x_momentum_weight * scale,
+        tone_momentum_weight: signals.tone_momentum_weight * scale,
         ..signals.clone()
     }
 }
@@ -509,6 +511,7 @@ fn signals_out(params: &ModelParams, forecast: &Forecast, id: &dyn Fn(usize) -> 
         half_life_days: params.signals.half_life_days,
         momentum_weight: params.signals.momentum_weight,
         x_momentum_weight: params.signals.x_momentum_weight,
+        tone_momentum_weight: params.signals.tone_momentum_weight,
         momentum: forecast
             .momentum
             .iter()
