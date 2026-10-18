@@ -131,8 +131,10 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
           <tbody>
             <tr v-for="pair in topPairs" :key="`${pair.a}-${pair.b}`">
               <th scope="row">{{ names.get(pair.a) }} – {{ names.get(pair.b) }}</th>
-              <td class="num happens">{{ probability(pair.p_matchup, locale) }}</td>
-              <td>
+              <td class="num happens" :data-label="content.happens.value">
+                {{ probability(pair.p_matchup, locale) }}
+              </td>
+              <td class="duel-cell">
                 <div class="duel">
                   <span class="side">
                     <CandidateAvatar :id="pair.a" :name="names.get(pair.a) ?? pair.a" :size="34" />
@@ -155,7 +157,7 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
                   </span>
                 </div>
               </td>
-              <td>
+              <td class="source">
                 <span class="badge">
                   <template v-if="pair.polled">{{ content.polledBadge }}</template>
                   <template v-else-if="pair.anchor">{{
@@ -402,8 +404,12 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
 }
 
 @media (max-width: 760px) {
+  /* The names wrap, so the sticky column (style.css) leaves room for the pairings. */
   .matrix th[scope="row"] {
     font-size: 0.8rem;
+    white-space: normal;
+    min-width: 7.5rem;
+    max-width: 8.5rem;
   }
 
   .column-head {
@@ -412,6 +418,85 @@ const share = (pair: Forecast["pairs"][number], id: string) => pair.p_win_given_
 
   .cell {
     min-height: 46px;
+  }
+}
+
+/* On a phone each pairing is a block: the pair and its chance, the duel under them, then the source. */
+@media (max-width: 640px) {
+  .duels thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .duels,
+  .duels tbody {
+    display: block;
+  }
+
+  .duels tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 10px 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--grid);
+  }
+
+  .duels tr:last-child {
+    border-bottom: none;
+  }
+
+  .duels th,
+  .duels td {
+    display: block;
+    padding: 0;
+    border: none;
+  }
+
+  /* Not sticky here: the row is not a table row any more. */
+  .duels tr th[scope="row"] {
+    position: static;
+    background: none;
+    white-space: normal;
+  }
+
+  .happens {
+    display: grid !important;
+    justify-items: end;
+    line-height: 1.2;
+  }
+
+  .happens::before {
+    content: attr(data-label);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .duel-cell,
+  .source {
+    grid-column: 1 / -1;
+  }
+
+  .duel {
+    grid-template-columns: minmax(0, 1fr) minmax(44px, 0.7fr) minmax(0, 1fr);
+    gap: 10px;
+    min-width: 0;
+  }
+
+  /* The pairing above names both sides, in the same order. */
+  .side .who {
+    display: none;
+  }
+
+  .source .badge {
+    white-space: normal;
+    border-radius: 10px;
   }
 }
 </style>

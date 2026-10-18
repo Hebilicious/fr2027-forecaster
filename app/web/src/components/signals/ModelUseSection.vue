@@ -98,7 +98,7 @@ function size(flag: ForwardFlag): string {
         }}
       </p>
     </template>
-    <div v-if="forward.flags.length" class="table-wrap">
+    <div v-if="forward.flags.length" class="table-wrap flags-wrap">
       <table class="flags small">
         <thead>
           <tr>
@@ -110,7 +110,7 @@ function size(flag: ForwardFlag): string {
         </thead>
         <tbody>
           <tr v-for="f in forward.flags" :key="`${f.kind}:${f.candidate_id}:${f.date}`">
-            <td class="num">{{ shortDate(f.date, locale) }}</td>
+            <td class="num date">{{ shortDate(f.date, locale) }}</td>
             <th scope="row">
               {{ nameOf(names, f.candidate_id) }}
               <span class="secondary">{{ labelOf(content.kinds, f.kind) }}</span>
@@ -134,6 +134,14 @@ function size(flag: ForwardFlag): string {
 .flags th[scope="row"] .secondary {
   display: block;
   font-size: 0.8rem;
+}
+
+.flags-wrap {
+  margin-top: 12px;
+}
+
+.flags .date {
+  white-space: nowrap;
 }
 
 .sub {

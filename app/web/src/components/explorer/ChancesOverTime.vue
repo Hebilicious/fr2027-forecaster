@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue"
+import { computed, onBeforeUnmount, onMounted, ref } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { Forecast, HistoryRun } from "../../api/schemas"
 import { scale } from "../../charts"
@@ -11,11 +11,21 @@ const content = useIntlayer("chances-over-time")
 const common = useIntlayer("common")
 const { locale } = useLocale()
 
-const width = 760
-const height = 300
-const margin = { top: 14, right: 168, bottom: 30, left: 44 }
-const xRange: [number, number] = [margin.left, width - margin.right]
-const yRange: [number, number] = [height - margin.bottom, margin.top]
+// The chart is drawn at the plot's own width up to 760 units, so its text keeps its size on a phone; wider, it
+// scales up. A narrow chart ends each line with its value alone, and the legend above names the colours.
+const plot = ref<HTMLElement | null>(null)
+const plotWidth = ref(760)
+const resize = new ResizeObserver(([entry]) => {
+  if (entry && entry.contentRect.width > 0) plotWidth.value = entry.contentRect.width
+})
+onMounted(() => plot.value && resize.observe(plot.value))
+onBeforeUnmount(() => resize.disconnect())
+const width = computed(() => Math.round(Math.min(760, plotWidth.value)))
+const narrow = computed(() => width.value < 520)
+const height = computed(() => (narrow.value ? 240 : 300))
+const margin = computed(() => ({ top: 14, right: narrow.value ? 52 : 168, bottom: 30, left: 44 }))
+const xRange = computed<[number, number]>(() => [margin.value.left, width.value - margin.value.right])
+const yRange = computed<[number, number]>(() => [height.value - margin.value.bottom, margin.value.top])
 
 const lines = computed(() => chanceLines(props.history, props.forecast))
 // Zoomed, the leader leaves the chart so the others' movements show at their own scale.
@@ -41,8 +51,8 @@ const yTop = computed(() => {
 const yTicks = computed(() =>
   Array.from({ length: Math.round(yTop.value / yStep.value) + 1 }, (_, i) => i * yStep.value),
 )
-const x = (time: number) => scale(time, { domain: xDomain.value, range: xRange })
-const y = (p: number) => scale(p, { domain: [0, yTop.value], range: yRange })
+const x = (time: number) => scale(time, { domain: xDomain.value, range: xRange.value })
+const y = (p: number) => scale(p, { domain: [0, yTop.value], range: yRange.value })
 
 const path = (line: ChanceLine) =>
   line.points.map((p, i) => `${i === 0 ? "M" : "L"}${x(p.time).toFixed(1)},${y(p.p).toFixed(1)}`).join("")
@@ -51,7 +61,7 @@ const DAY = 86_400_000
 const dateTicks = computed(() => {
   const [start, end] = xDomain.value
   const days = Math.max(1, Math.round((end - start) / DAY))
-  const step = Math.max(1, Math.ceil(days / 6)) * DAY
+  const step = Math.max(1, Math.ceil(days / (narrow.value ? 3 : 6))) * DAY
   const first = Math.ceil(start / DAY) * DAY
   const ticks: number[] = []
   for (let t = first; t <= end; t += step) ticks.push(t)
@@ -70,8 +80,8 @@ const endLabels = computed(() => {
   const gap = 17
   for (let i = 1; i < labels.length; i++) labels[i]!.at = Math.max(labels[i]!.at, labels[i - 1]!.at + gap)
   const last = labels.at(-1)
-  if (last && last.at > yRange[0]) {
-    last.at = yRange[0]
+  if (last && last.at > yRange.value[0]) {
+    last.at = yRange.value[0]
     for (let i = labels.length - 2; i >= 0; i--) labels[i]!.at = Math.min(labels[i]!.at, labels[i + 1]!.at - gap)
   }
   return labels
@@ -82,7 +92,7 @@ const hovered = ref<number | null>(null)
 function onMove(event: PointerEvent) {
   const svg = event.currentTarget as SVGSVGElement
   const box = svg.getBoundingClientRect()
-  const px = ((event.clientX - box.left) / box.width) * width
+  const px = ((event.clientX - box.left) / box.width) * width.value
   let best: number | null = null
   for (const time of times.value) if (best === null || Math.abs(x(time) - px) < Math.abs(x(best) - px)) best = time
   hovered.value = best
@@ -92,7 +102,7 @@ const readout = computed(() => {
   if (time === null) return null
   return {
     time,
-    left: (x(time) / width) * 100,
+    left: (x(time) / width.value) * 100,
     rows: shown.value
       .map((line) => ({ line, point: line.points.find((p) => p.time === time) }))
       .filter((r) => r.point !== undefined)
@@ -146,7 +156,7 @@ const chartLabel = computed(
       <p v-if="zoomed && leader?.points.length" class="small muted off-scale">
         {{ content.offScale({ name: leader.name, value: probability(leader.points.at(-1)!.p, locale) }) }}
       </p>
-      <div class="plot">
+      <div ref="plot" class="plot">
         <svg
           :viewBox="`0 0 ${width} ${height}`"
           role="img"
@@ -176,7 +186,7 @@ const chartLabel = computed(
             <circle :cx="x(label.last.time)" :cy="y(label.last.p)" r="4" :style="{ fill: label.line.colour }" />
             <text :x="xRange[1] + 12" :y="label.at + 4">
               <tspan class="end-value">{{ probability(label.last.p, locale) }}</tspan>
-              <tspan class="end-name" dx="6">{{ label.line.name }}</tspan>
+              <tspan v-if="!narrow" class="end-name" dx="6">{{ label.line.name }}</tspan>
             </text>
           </g>
           <g v-if="readout" class="crosshair" pointer-events="none">
@@ -235,6 +245,8 @@ const chartLabel = computed(
 <style scoped>
 .over-time {
   display: grid;
+  /* One column as wide as the panel: the data table scrolls inside it instead of widening the page. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 

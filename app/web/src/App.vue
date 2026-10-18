@@ -76,7 +76,10 @@ watch(heroTitle, (title, previous) => {
 
 onMounted(() => {
   window.addEventListener("hashchange", onHash)
-  void document.fonts.ready.then(fitTitle)
+  void document.fonts.ready.then(() => {
+    fitTitle()
+    revealCurrent("instant")
+  })
 })
 onBeforeUnmount(() => {
   window.removeEventListener("hashchange", onHash)
@@ -84,6 +87,16 @@ onBeforeUnmount(() => {
 })
 
 const current = computed(() => nav.find((entry) => entry.views.includes(view.value)) ?? nav[0]!)
+// On a phone the views scroll sideways in the bar; the current one is brought into view.
+const navBar = ref<HTMLElement | null>(null)
+function revealCurrent(behavior: ScrollBehavior) {
+  const bar = navBar.value
+  const link = bar?.querySelector<HTMLElement>('[aria-current="page"]')
+  if (!bar || !link || bar.scrollWidth <= bar.clientWidth) return
+  const offset = link.getBoundingClientRect().left - bar.getBoundingClientRect().left + bar.scrollLeft
+  bar.scrollTo({ left: offset - (bar.clientWidth - link.offsetWidth) / 2, behavior })
+}
+watch([current, locale], () => nextTick(() => revealCurrent("smooth")))
 const plate = computed(() => (view.value === "overview" ? null : content.plates[view.value]))
 // The views live in the hash, so the skip link moves focus itself rather than following "#main".
 const main = ref<HTMLElement | null>(null)
@@ -117,7 +130,7 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
         <Cocarde />
         <span class="brand-name">{{ content.brand }}</span>
       </a>
-      <nav :aria-label="content.navLabel.value" class="nav">
+      <nav ref="navBar" :aria-label="content.navLabel.value" class="nav scroll-fade">
         <a
           v-for="entry in nav"
           :key="entry.id"
@@ -644,8 +657,14 @@ const credit = computed(() => content.footerPainting({ title: "\u0000" }).value.
     padding: 4px var(--gutter) 8px;
     overflow-x: auto;
     scrollbar-width: none;
-    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 48px), transparent);
-    mask-image: linear-gradient(90deg, #000 calc(100% - 48px), transparent);
+  }
+
+  /* Where the fade cannot follow the scroll (style.css), the far edge always fades. */
+  @supports not (animation-timeline: scroll()) {
+    .nav {
+      -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 48px), transparent);
+      mask-image: linear-gradient(90deg, #000 calc(100% - 48px), transparent);
+    }
   }
 
   .nav .numeral {
