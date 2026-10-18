@@ -33,4 +33,19 @@
     "GITHUB_REPOSITORY": "Hebilicious/fr2027-forecaster",
     "GITHUB_APP_CLIENT_ID": "Iv23lierXRciGQXCgOuJ",
   },
+  "env": {
+    // A pull request's preview: its own Worker, named fr2027-pr-<number> by `moon run worker:preview-deploy`,
+    // serving the branch's site. It has no cron, so it never starts the Live workflow, and no secrets, so its
+    // inbox answers 503. Wrangler does not inherit bindings or vars into an environment, so they are repeated.
+    "preview": {
+      "triggers": { "crons": [] },
+      "durable_objects": {
+        "bindings": [{ "name": "INBOX", "class_name": "Inbox" }],
+      },
+      "vars": {
+        "GITHUB_REPOSITORY": "Hebilicious/fr2027-forecaster",
+        "GITHUB_APP_CLIENT_ID": "Iv23lierXRciGQXCgOuJ",
+      },
+    },
+  },
 }

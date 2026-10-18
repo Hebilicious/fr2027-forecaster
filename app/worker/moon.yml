@@ -42,6 +42,25 @@ tasks:
       cache: false
       runInCI: false
 
+  # A pull request's preview (the `preview` environment in wrangler.jsonc): `-- --name fr2027-pr-<number>`.
+  # The Preview workflow runs it for every pull request; by hand it needs the same two variables as deploy.
+  preview-deploy:
+    description: "Export the site, then deploy it as the preview Worker named by -- --name (prints its workers.dev URL)."
+    command: "wrangler"
+    args: ["deploy", "--env", "preview"]
+    deps: ["cli:export"]
+    options:
+      cache: false
+      runInCI: false
+
+  preview-delete:
+    description: "Delete the preview Worker named by -- --name, once its pull request is closed."
+    command: "wrangler"
+    args: ["delete", "--env", "preview", "--force"]
+    options:
+      cache: false
+      runInCI: false
+
   dev:
     description: "Run the Worker locally with wrangler dev: serves .site/ and the inbox, reading the tokens from .dev.vars."
     command: "wrangler"

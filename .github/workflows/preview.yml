@@ -1,0 +1,125 @@
+name: Preview
+
+# Every pull request that can change what a visitor sees gets its own Worker, fr2027-pr-<number>, serving the
+# branch's site at its workers.dev address, which this workflow posts on the pull request. The Worker is
+# deleted when the pull request closes. Production (the Worker fr2027) is never touched.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    paths:
+      - "app/web/**"
+      - "app/worker/**"
+      - "cli/**"
+      - "model/**"
+      - "config/**"
+      - "schemas/**"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/preview.yml"
+
+# Reads the code, writes one comment on the pull request.
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  WORKER: fr2027-pr-${{ github.event.pull_request.number }}
+  PR: ${{ github.event.pull_request.number }}
+  GH_TOKEN: ${{ github.token }}
+  GH_REPO: ${{ github.repository }}
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+jobs:
+  deploy:
+    name: Deploy the preview
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      # Actions are pinned to full commit SHAs; the tag is in the comment.
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
+        with:
+          auto-install: true
+      # The same repair as ci.yml: proto's Rust install can leave rustup without rustc or cargo.
+      - name: Check the Rust toolchain
+        run: |
+          channel=$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)
+          complete() { rustup run "$channel" rustc --version && rustup run "$channel" cargo --version; }
+          if ! complete; then
+            rustup toolchain uninstall "$channel" || true
+            rustup toolchain install "$channel" --profile minimal --component clippy,rustfmt --no-self-update
+            complete
+          fi
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            target
+          key: cargo-preview-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-${{ hashFiles('**/*.rs') }}
+          restore-keys: |
+            cargo-preview-${{ hashFiles('Cargo.lock', 'rust-toolchain.toml') }}-
+      - name: Deploy
+        id: deploy
+        run: |
+          set -o pipefail
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID is not set, so there is no preview."
+            exit 1
+          fi
+          # What worker:preview-deploy does, which moon skips in CI (runInCI: false), as live.yml does for production.
+          moon run cli:build web:build
+          # A publication blackout (docs/operations.md) covers previews too: they are public.
+          set +e; target/release/fr2027 export; code=$?; set -e
+          if [ "$code" -eq 3 ]; then
+            echo "::notice::Publication blackout: no preview until it ends."
+            echo "blackout=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$code" -ne 0 ]; then exit "$code"; fi
+          (cd app/worker && pnpm exec wrangler deploy --env preview --name "$WORKER") | tee deploy.log
+          url=$(grep -oE "https://$WORKER\.[a-z0-9.-]+\.workers\.dev" deploy.log | head -1)
+          if [ -z "$url" ]; then echo "::error::The deploy printed no workers.dev URL."; exit 1; fi
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Post the preview's address
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
+          BLACKOUT: ${{ steps.deploy.outputs.blackout }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ "$BLACKOUT" = "true" ]; then
+            body="**Preview:** none during the publication blackout (commit $SHA)."
+          else
+            body="**Preview:** $URL (commit $SHA)"
+          fi
+          gh pr comment "$PR" --edit-last --create-if-none --body "$body"
+
+  delete:
+    name: Delete the preview
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
+        with:
+          auto-install: true
+      - name: Delete
+        run: |
+          pnpm install --frozen-lockfile --filter @fr2027/worker
+          # A pull request closed during a blackout, or before its first deploy, has no Worker to delete.
+          if (cd app/worker && pnpm exec wrangler delete --env preview --name "$WORKER" --force); then
+            gh pr comment "$PR" --edit-last --create-if-none --body "**Preview:** deleted with the pull request."
+          else
+            echo "::notice::No preview Worker $WORKER to delete."
+          fi
