@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-18T11:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-18T11:12:00Z",
+      "title": "Natacha Polony, candidate des médias… et de l’IA, par Daniel Schneidermann",
+      "url": "https://www.liberation.fr/idees-et-debats/opinions/natacha-polony-candidate-des-medias-et-de-lia-par-daniel-schneidermann-20261018_M677SPSKK5CCRJYXAEQ4QYMA4Q/"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "17 octobre : « Les forces de l’ordre ont été débordées », juge François Hollande après les pillages et les violences",
+      "url": "https://www.leparisien.fr/politique/17-octobre-les-forces-de-lordre-ont-ete-debordees-juge-francois-hollande-apres-les-pillages-et-les-violences-18-10-2026-E37ZYGJUDJGEPOTQYKGVWQ54ZY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
