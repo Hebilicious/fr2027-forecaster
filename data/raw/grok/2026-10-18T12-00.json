@@ -1,0 +1,846 @@
+{
+  "agent": {
+    "name": "Grok Bot fr2027",
+    "run_id": "x-activity-2026-10-18T12:37Z",
+    "skill_version": "x-activity-3"
+  },
+  "candidates": [
+    {
+      "bot_share_estimate": 0.0385,
+      "candidate_id": "arthaud",
+      "engagement": null,
+      "mentions": 81,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nathalie Arthaud\" OR \"Arthaud\") lang:fr",
+      "sample_size": 25,
+      "sentiment": null,
+      "stance": {
+        "neutral": 18,
+        "off_topic": 1,
+        "oppose": 3,
+        "posts_drawn": 25,
+        "read_all": true,
+        "support": 3
+      },
+      "top_topics": [
+        "17 October protests",
+        "far-left candidacies",
+        "2027 presidential polls",
+        "Lutte Ouvriere collective struggle message"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "kazib",
+      "engagement": null,
+      "mentions": 11,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Anasse Kazib\" OR \"Kazib\") lang:fr",
+      "sample_size": 9,
+      "sentiment": null,
+      "stance": {
+        "neutral": 3,
+        "off_topic": 2,
+        "oppose": 3,
+        "posts_drawn": 9,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "calls to dissolve Révolution Permanente",
+        "his 2027 candidacy",
+        "17 October protests"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "labib",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Selma Labib\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1023,
+      "candidate_id": "melenchon",
+      "engagement": null,
+      "mentions": 33393,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jean-Luc Mélenchon\" OR \"Mélenchon\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 33,
+        "off_topic": 0,
+        "oppose": 128,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 39
+      },
+      "top_topics": [
+        "17 October protest violence",
+        "responsibility for riots and looting",
+        "LFI dissolution calls",
+        "2027 presidential polls",
+        "Lecornu-Melenchon dispute"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0661,
+      "candidate_id": "glucksmann",
+      "engagement": null,
+      "mentions": 2711,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Raphaël Glucksmann\" OR \"Glucksmann\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 74,
+        "off_topic": 2,
+        "oppose": 105,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 19
+      },
+      "top_topics": [
+        "17 October riots and violence",
+        "rise in the polls",
+        "relations with LFI",
+        "Georgia advisory past",
+        "centre-left positioning"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1064,
+      "candidate_id": "faure",
+      "engagement": null,
+      "mentions": 121,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Olivier Faure\") lang:fr",
+      "sample_size": 42,
+      "sentiment": null,
+      "stance": {
+        "neutral": 9,
+        "off_topic": 0,
+        "oppose": 28,
+        "posts_drawn": 42,
+        "read_all": false,
+        "support": 5
+      },
+      "top_topics": [
+        "response to 17 October riots",
+        "policing doctrine",
+        "alliance with LFI",
+        "clash with RN deputy",
+        "PS primary aftermath"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0741,
+      "candidate_id": "royal",
+      "engagement": null,
+      "mentions": 1001,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Ségolène Royal\") lang:fr",
+      "sample_size": 25,
+      "sentiment": null,
+      "stance": {
+        "neutral": 8,
+        "off_topic": 1,
+        "oppose": 11,
+        "posts_drawn": 25,
+        "read_all": false,
+        "support": 5
+      },
+      "top_topics": [
+        "remarks on police mutilations of protesters",
+        "her Algeria ties",
+        "media treatment on BFMTV",
+        "her past presidential runs"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "guedj",
+      "engagement": null,
+      "mentions": 68,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jérôme Guedj\" OR \"Guedj\") lang:fr",
+      "sample_size": 20,
+      "sentiment": null,
+      "stance": {
+        "neutral": 4,
+        "off_topic": 4,
+        "oppose": 10,
+        "posts_drawn": 20,
+        "read_all": true,
+        "support": 2
+      },
+      "top_topics": [
+        "condemnation of 17 October rioters",
+        "clash with Faure over wording",
+        "police violence criticism",
+        "Gaza genocide wording",
+        "PS internal divisions"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "maurel",
+      "engagement": null,
+      "mentions": 2,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Emmanuel Maurel\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0735,
+      "candidate_id": "hollande",
+      "engagement": null,
+      "mentions": 745,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Hollande\" OR \"Hollande\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 73,
+        "off_topic": 3,
+        "oppose": 116,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 8
+      },
+      "top_topics": [
+        "responses to 17 October riots",
+        "record as former president",
+        "role in Macron rise",
+        "Minsk agreements",
+        "second-round polls"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0492,
+      "candidate_id": "roussel",
+      "engagement": null,
+      "mentions": 242,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Fabien Roussel\" OR \"Roussel\") lang:fr",
+      "sample_size": 58,
+      "sentiment": null,
+      "stance": {
+        "neutral": 33,
+        "off_topic": 5,
+        "oppose": 12,
+        "posts_drawn": 58,
+        "read_all": false,
+        "support": 8
+      },
+      "top_topics": [
+        "17 October protests and violence condemnation",
+        "Roussel call for revolution",
+        "PCF and Israel-Palestine dispute",
+        "left-wing candidacies and 2027 polls",
+        "balanced-budget rule"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0827,
+      "candidate_id": "tondelier",
+      "engagement": null,
+      "mentions": 971,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Tondelier\" OR \"Tondelier\") lang:fr",
+      "sample_size": 185,
+      "sentiment": null,
+      "stance": {
+        "neutral": 40,
+        "off_topic": 1,
+        "oppose": 135,
+        "posts_drawn": 185,
+        "read_all": false,
+        "support": 9
+      },
+      "top_topics": [
+        "street violence after 17 October protests",
+        "call for interior minister resignation",
+        "clash with RN deputy",
+        "ties to LFI",
+        "polls"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0345,
+      "candidate_id": "ruffin",
+      "engagement": null,
+      "mentions": 126,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Ruffin\" OR \"Ruffin\") lang:fr",
+      "sample_size": 50,
+      "sentiment": null,
+      "stance": {
+        "neutral": 14,
+        "off_topic": 12,
+        "oppose": 16,
+        "posts_drawn": 50,
+        "read_all": false,
+        "support": 8
+      },
+      "top_topics": [
+        "break with LFI",
+        "industrial policy",
+        "poll hypotheses",
+        "union of the left",
+        "TV debate exchange"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "bouamrane",
+      "engagement": null,
+      "mentions": 21,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Karim Bouamrane\" OR \"Bouamrane\") lang:fr",
+      "sample_size": 4,
+      "sentiment": null,
+      "stance": {
+        "neutral": 4,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 4,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "absence from polls",
+        "jokes about a fast-food outlet spared in the riots"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0357,
+      "candidate_id": "cazeneuve",
+      "engagement": null,
+      "mentions": 176,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bernard Cazeneuve\" OR \"Cazeneuve\") lang:fr",
+      "sample_size": 27,
+      "sentiment": null,
+      "stance": {
+        "neutral": 3,
+        "off_topic": 10,
+        "oppose": 11,
+        "posts_drawn": 27,
+        "read_all": false,
+        "support": 3
+      },
+      "top_topics": [
+        "record as interior minister",
+        "law and order after 17 October",
+        "centre-left candidacy",
+        "union of the centre"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "batho",
+      "engagement": null,
+      "mentions": 1,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Delphine Batho\") lang:fr",
+      "sample_size": 1,
+      "sentiment": null,
+      "stance": {
+        "neutral": 1,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 1,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "list of declared left candidates"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0484,
+      "candidate_id": "philippe",
+      "engagement": null,
+      "mentions": 1015,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Édouard Philippe\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 63,
+        "off_topic": 0,
+        "oppose": 135,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 2
+      },
+      "top_topics": [
+        "call for firmness after the 17 October riots",
+        "his record as prime minister (yellow vests, 80 km/h)",
+        "Elabe and other second-round polls",
+        "comparison with David Lisnard",
+        "continuity with Macron"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0943,
+      "candidate_id": "attal",
+      "engagement": null,
+      "mentions": 1570,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Gabriel Attal\" OR \"Attal\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 55,
+        "off_topic": 11,
+        "oppose": 129,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 5
+      },
+      "top_topics": [
+        "2024 runoff withdrawals benefiting LFI",
+        "17 October riots and unrest",
+        "Macron record and succession",
+        "polls and centre candidates",
+        "European federalism proposal"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "le_maire",
+      "engagement": null,
+      "mentions": 27,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Le Maire\") lang:fr",
+      "sample_size": 18,
+      "sentiment": null,
+      "stance": {
+        "neutral": 5,
+        "off_topic": 0,
+        "oppose": 13,
+        "posts_drawn": 18,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "call for an exceptional law and state of emergency after the riots",
+        "his record on public debt at Bercy",
+        "Russia sanctions forecasts"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "becht",
+      "engagement": null,
+      "mentions": 1,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Olivier Becht\") lang:fr",
+      "sample_size": 1,
+      "sentiment": null,
+      "stance": {
+        "neutral": 1,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 1,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "list of declared centre candidates"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0618,
+      "candidate_id": "retailleau",
+      "engagement": null,
+      "mentions": 1283,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Retailleau\" OR \"Retailleau\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 84,
+        "off_topic": 2,
+        "oppose": 93,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 21
+      },
+      "top_topics": [
+        "François Fillon endorsement",
+        "rivalry with David Lisnard",
+        "his past as Macron-era interior minister",
+        "17 October riots and calls to dissolve LFI",
+        "Cluster17 and Elabe poll scenarios"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0676,
+      "candidate_id": "lisnard",
+      "engagement": null,
+      "mentions": 3177,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"David Lisnard\" OR \"Lisnard\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 53,
+        "off_topic": 3,
+        "oppose": 61,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 83
+      },
+      "top_topics": [
+        "17 October riots and law and order",
+        "Lisnard poll surge and 2027 polls",
+        "liberal economic program",
+        "immigration stance criticism",
+        "right-wing union and Knafo rapprochement"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "bertrand",
+      "engagement": null,
+      "mentions": 7,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Xavier Bertrand\") lang:fr",
+      "sample_size": 6,
+      "sentiment": null,
+      "stance": {
+        "neutral": 3,
+        "off_topic": 0,
+        "oppose": 3,
+        "posts_drawn": 6,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "right-wing candidacies",
+        "blame for Macron election"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0562,
+      "candidate_id": "villepin",
+      "engagement": null,
+      "mentions": 1181,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Dominique de Villepin\" OR \"Villepin\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 75,
+        "off_topic": 0,
+        "oppose": 115,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 10
+      },
+      "top_topics": [
+        "call for calm amid street violence",
+        "proposed états généraux of the Republic",
+        "his record in government",
+        "Elabe poll scenarios"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0897,
+      "candidate_id": "le_pen",
+      "engagement": null,
+      "mentions": 11203,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Le Pen\" OR \"Le Pen\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 70,
+        "off_topic": 11,
+        "oppose": 63,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 56
+      },
+      "top_topics": [
+        "17 October riots and electoral impact",
+        "Le Pen first-round victory predictions",
+        "embezzlement conviction",
+        "immigration and remigration",
+        "2027 presidential polls"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0705,
+      "candidate_id": "bardella",
+      "engagement": null,
+      "mentions": 1779,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jordan Bardella\" OR \"Bardella\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 43,
+        "off_topic": 1,
+        "oppose": 124,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 32
+      },
+      "top_topics": [
+        "antisemitic writings allegations",
+        "17 October riots and unrest",
+        "work and absenteeism criticism",
+        "2027 presidential bid",
+        "RN leadership"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1533,
+      "candidate_id": "zemmour",
+      "engagement": null,
+      "mentions": 6260,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Éric Zemmour\" OR \"Zemmour\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 66,
+        "off_topic": 4,
+        "oppose": 50,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 80
+      },
+      "top_topics": [
+        "17 October riots and Zemmour predictions",
+        "remigration and immigration",
+        "rivalry with Le Pen and RN",
+        "Knafo and Ukraine aid dispute",
+        "2027 presidential polls"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0984,
+      "candidate_id": "dupont_aignan",
+      "engagement": null,
+      "mentions": 79,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nicolas Dupont-Aignan\" OR \"Dupont-Aignan\") lang:fr",
+      "sample_size": 50,
+      "sentiment": null,
+      "stance": {
+        "neutral": 20,
+        "off_topic": 1,
+        "oppose": 10,
+        "posts_drawn": 50,
+        "read_all": true,
+        "support": 19
+      },
+      "top_topics": [
+        "Frexit position and consistency",
+        "union of the right",
+        "polls",
+        "call for Macron resignation",
+        "overseas prison proposal"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.125,
+      "candidate_id": "philippot",
+      "engagement": null,
+      "mentions": 190,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Florian Philippot\" OR \"Philippot\") lang:fr",
+      "sample_size": 55,
+      "sentiment": null,
+      "stance": {
+        "neutral": 16,
+        "off_topic": 4,
+        "oppose": 26,
+        "posts_drawn": 55,
+        "read_all": false,
+        "support": 9
+      },
+      "top_topics": [
+        "claims about foreign black blocs in the 17 October riots",
+        "Frexit and sovereigntist primary",
+        "calls for Macron to resign",
+        "Ukraine and NATO positions"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1388,
+      "candidate_id": "asselineau",
+      "engagement": null,
+      "mentions": 1523,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Asselineau\" OR \"Asselineau\") lang:fr",
+      "sample_size": 163,
+      "sentiment": null,
+      "stance": {
+        "neutral": 27,
+        "off_topic": 3,
+        "oppose": 15,
+        "posts_drawn": 163,
+        "read_all": false,
+        "support": 118
+      },
+      "top_topics": [
+        "Frexit and leaving the EU",
+        "media exposure and censorship claims",
+        "dispute with Gave and de Villiers",
+        "polls excluding him",
+        "2027 candidacy"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "bonnal",
+      "engagement": null,
+      "mentions": 1,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Sébastien Bonnal\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0926,
+      "candidate_id": "polony",
+      "engagement": null,
+      "mentions": 266,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Natacha Polony\" OR \"Polony\") lang:fr",
+      "sample_size": 48,
+      "sentiment": null,
+      "stance": {
+        "neutral": 26,
+        "off_topic": 1,
+        "oppose": 18,
+        "posts_drawn": 48,
+        "read_all": false,
+        "support": 3
+      },
+      "top_topics": [
+        "entry into the presidential race",
+        "first poll result",
+        "polls testing her before others",
+        "sovereigntist positioning",
+        "response to 17 October mobilisation"
+      ],
+      "unique_authors": null
+    }
+  ],
+  "collected_at": "2026-10-18T13:00:41Z",
+  "double_labels": {
+    "counts": {
+      "neutral": {
+        "neutral": 162,
+        "off_topic": 8,
+        "oppose": 12,
+        "support": 7
+      },
+      "off_topic": {
+        "neutral": 0,
+        "off_topic": 14,
+        "oppose": 1,
+        "support": 1
+      },
+      "oppose": {
+        "neutral": 14,
+        "off_topic": 0,
+        "oppose": 285,
+        "support": 0
+      },
+      "support": {
+        "neutral": 6,
+        "off_topic": 0,
+        "oppose": 0,
+        "support": 93
+      }
+    },
+    "posts": 603
+  },
+  "query_method": "Grok Bot native X search, one query per candidate, lang:fr, routine v3",
+  "rubric_version": "stance-1",
+  "sampling": {
+    "automated_excluded": true,
+    "max_posts_per_author": 2,
+    "method": "random_spread",
+    "posts_per_candidate": 200,
+    "read_all_below": 100,
+    "relabel_share": 0.2,
+    "reposts_excluded": true
+  },
+  "schema_version": "1.0",
+  "window": {
+    "end": "2026-10-18T12:00:00Z",
+    "start": "2026-10-18T00:00:00Z"
+  }
+}
