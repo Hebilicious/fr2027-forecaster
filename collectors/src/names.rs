@@ -83,6 +83,20 @@ impl NameMatcher {
     }
 }
 
+impl NameMatcher {
+    /// The ids of every candidate named in `text` regardless of case, for words written all in
+    /// lowercase (an address's slug): "le-maire-de-rennes" names Bruno Le Maire only with his first
+    /// name, as his `names` are written.
+    pub fn find_any_case(&self, text: &str) -> Vec<String> {
+        let folded = fold(text).to_lowercase();
+        self.patterns
+            .iter()
+            .filter(|(_, names)| names.iter().any(|n| contains_words(&folded, &n.to_lowercase())))
+            .map(|(id, _)| id.clone())
+            .collect()
+    }
+}
+
 /// Matches a market contract label ("Marine Le Pen", "Édouard Philippe") to a candidate id: the
 /// label must equal, ignoring case and accents, the candidate's name in candidates.yaml, one of
 /// their `names`, or one of their `market_names`.

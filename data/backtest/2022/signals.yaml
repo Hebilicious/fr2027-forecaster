@@ -1,8 +1,9 @@
 # Where the 2022 replays' page views and news volume come from (`fr2027 backtest-signals 2022`
 # writes attention.csv and gdelt.csv beside this file). Each candidate: the French Wikipedia
-# article, and the names GDELT is queried with, by config/sources.yaml's rule (the surname alone
-# only when it is not a common word or another well-known person's name). Every title was
-# checked on 2026-10-16 to exist without a redirect.
+# article, and the names a GDELT article's title or address is matched with, by
+# config/sources.yaml's rule (the surname alone only when it is not a common word or another
+# well-known person's name). Every title was checked on
+# 2026-10-16 to exist without a redirect.
 # The window starts 400 days before round 1: the replays see polls from 365 days out, and event
 # detection needs four weeks of history before that.
 start: 2021-03-06
