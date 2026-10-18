@@ -163,6 +163,9 @@ fn fetch_news(client: &Client, sources: &SignalSources) -> Result<Vec<NewsRow>> 
                 query: query.clone(),
                 articles: day.articles,
                 total_articles: day.total_articles,
+                tone: day.tone,
+                total_tone: day.total_tone,
+                files: day.files,
                 retrieved_at: retrieved_at.clone(),
             });
         }

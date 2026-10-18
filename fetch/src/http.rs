@@ -94,7 +94,14 @@ impl Client {
                 attempt += 1;
                 continue;
             }
-            return checked(url, result?);
+            match checked(url, result?) {
+                // The answer was cut off while its body was read: ask again.
+                Err(Error::Http { .. }) if attempt < RETRY_WAITS.len() => {
+                    std::thread::sleep(RETRY_WAITS[attempt]);
+                    attempt += 1;
+                }
+                answer => return answer,
+            }
         }
     }
 }
