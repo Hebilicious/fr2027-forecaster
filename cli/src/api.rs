@@ -649,7 +649,9 @@ fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str) -> Result<Valu
 }
 
 /// The last 28 windows (two weeks at two drops a day) of Grok Bot's X measurements. Stance shares
-/// come with their 95% intervals; `drop_kappa` is the drop's labelling agreement.
+/// come with their 95% intervals and the counts behind them, so the page can pool several windows;
+/// `drop_kappa` is the drop's labelling agreement, and `rubric_version` is empty for the first drops,
+/// read for sentiment before the stance rubric.
 fn x_signal(repo: &Repo) -> Result<Value> {
     let rows = grok::read_clean_rows(repo).unwrap_or_default();
     let windows: BTreeSet<&str> = rows.iter().map(|r| r.window_end.as_str()).collect();
@@ -671,9 +673,13 @@ fn x_signal(repo: &Repo) -> Result<Value> {
                 "sentiment_neg": r.sentiment_neg,
                 "sentiment_neu": r.sentiment_neu,
                 "bot_share_estimate": r.bot_share_estimate,
+                "rubric_version": r.rubric_version,
                 "top_topics": r.top_topics.as_deref().map(|t| t.split(" | ").collect::<Vec<_>>()),
                 "stance_posts_drawn": r.stance_posts_drawn,
                 "stance_off_topic": r.stance_off_topic,
+                "stance_support": r.stance_support,
+                "stance_oppose": r.stance_oppose,
+                "stance_neutral": r.stance_neutral,
                 "support_share": r.support_share,
                 "support_low": r.support_low,
                 "support_high": r.support_high,
