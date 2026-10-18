@@ -430,12 +430,25 @@ h4 {
 
 @media (max-width: 860px) {
   .round2-detail {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .step {
     grid-template-columns: 2.2rem minmax(0, 1fr);
     gap: 12px;
+  }
+}
+
+/* On a narrow phone the numeral heads its step, so the text and its settings take the full width. */
+@media (max-width: 480px) {
+  .step {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+
+  .numeral {
+    font-size: 1.25rem;
+    text-align: left;
   }
 }
 </style>

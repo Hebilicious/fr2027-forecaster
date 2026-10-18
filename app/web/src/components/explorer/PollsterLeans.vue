@@ -39,10 +39,10 @@ const gradient = `linear-gradient(90deg, ${DIVERGING.low}, ${DIVERGING.mid}, ${D
     <p v-if="!leans.cells.length" class="secondary">{{ content.empty }}</p>
     <template v-else>
       <div aria-hidden="true" class="scale small">
-        <span>{{ content.lower }}</span>
+        <span class="lower">{{ content.lower }}</span>
         <span class="bar" :style="{ background: gradient }" />
-        <span>{{ content.higher }}</span>
-        <span class="muted">({{ relativeChange(-leans.max, locale) }} … {{ relativeChange(leans.max, locale) }})</span>
+        <span class="higher">{{ content.higher }}</span>
+        <span class="range muted">({{ relativeChange(-leans.max, locale) }} … {{ relativeChange(leans.max, locale) }})</span>
       </div>
 
       <div class="table-wrap">
@@ -103,6 +103,8 @@ const gradient = `linear-gradient(90deg, ${DIVERGING.low}, ${DIVERGING.mid}, ${D
 <style scoped>
 .leans {
   display: grid;
+  /* One column as wide as the panel: the data table scrolls inside it instead of widening the page. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 
@@ -241,5 +243,28 @@ h3 {
 .readout {
   min-height: 1.3em;
   margin: 0;
+}
+
+/* On a phone the two ends of the scale sit above the ends of a full-width bar. */
+@media (max-width: 480px) {
+  .scale {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 6px 12px;
+  }
+
+  .higher {
+    text-align: right;
+  }
+
+  .bar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: auto;
+  }
+
+  .range {
+    grid-column: 1 / -1;
+  }
 }
 </style>

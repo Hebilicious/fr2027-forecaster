@@ -147,9 +147,7 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
   background: transparent;
   color: var(--ink-2);
   cursor: pointer;
-  transition:
-    background-color 0.2s,
-    color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .segmented button:hover {
@@ -219,6 +217,25 @@ th[scope="row"] {
   display: grid;
   gap: 8px;
   margin-top: 22px;
+}
+
+/* On a phone the three choices share the card's width, and a long one wraps inside its own third. */
+@media (max-width: 640px) {
+  .segmented {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  .segmented button {
+    padding: 8px 4px;
+    font-size: 0.78rem;
+    border-radius: 10px;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
 }
 
 @media (max-width: 760px) {

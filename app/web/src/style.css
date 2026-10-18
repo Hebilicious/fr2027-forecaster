@@ -326,6 +326,69 @@ p {
   scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
 
+/*
+ * A strip that scrolls sideways fades out at an edge with more behind it, so a phone shows that
+ * the table goes on. The fade follows the scroll; a strip that fits, or a browser without
+ * scroll-driven animations, shows no fade.
+ */
+@property --fade-start {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --fade-end {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@keyframes scroll-fade {
+  0% {
+    --fade-start: 0px;
+    --fade-end: 40px;
+  }
+
+  12%,
+  88% {
+    --fade-start: 40px;
+    --fade-end: 40px;
+  }
+
+  100% {
+    --fade-start: 40px;
+    --fade-end: 0px;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-fade,
+  .table-wrap {
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 var(--fade-start),
+      #000 calc(100% - var(--fade-end)),
+      transparent
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 var(--fade-start),
+      #000 calc(100% - var(--fade-end)),
+      transparent
+    );
+    animation: scroll-fade linear both;
+    animation-timeline: scroll(self inline);
+  }
+
+  /* A table keeps its first column in place (below), so only its far edge fades. */
+  .table-wrap {
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - var(--fade-end)), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - var(--fade-end)), transparent);
+  }
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -366,6 +429,27 @@ tbody tr:last-child > * {
 td.num,
 th.num {
   text-align: right;
+}
+
+/* On a phone, cells sit closer, and the row's name stays in view while the figures beside it scroll. */
+@media (max-width: 760px) {
+  th,
+  td {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  /* A long column title wraps rather than widen a table that would otherwise fit. */
+  thead th {
+    white-space: normal;
+  }
+
+  .table-wrap th[scope="row"]:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--surface);
+  }
 }
 
 .badge {

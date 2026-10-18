@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue"
+import { computed, onBeforeUnmount, onMounted, ref } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { TrackRecord } from "../../api/schemas"
 import { scale } from "../../charts"
@@ -16,12 +16,22 @@ const TARGET = 0.8
 
 const help = computed(() => content.help({ elections: list(props.record.elections.map(String), locale.value) }))
 
+// Both charts are drawn at their column's width up to 360 units, so their text keeps its size on a phone.
+const chart = ref<HTMLElement | null>(null)
+const chartWidth = ref(360)
+const resize = new ResizeObserver(([entry]) => {
+  if (entry && entry.contentRect.width > 0) chartWidth.value = entry.contentRect.width
+})
+onMounted(() => chart.value && resize.observe(chart.value))
+onBeforeUnmount(() => resize.disconnect())
+const chartUnits = computed(() => Math.round(Math.min(360, chartWidth.value)))
+
 // Coverage: one bar per horizon, furthest from the vote on the left, against the 80% target.
-const cw = 360
+const cw = chartUnits
 const ch = 250
 const cm = { top: 24, right: 12, bottom: 34, left: 40 }
 const coverageY = (v: number) => scale(v, { domain: [0, 1], range: [ch - cm.bottom, cm.top] })
-const slot = computed(() => (cw - cm.left - cm.right) / Math.max(1, view.value.horizons.length))
+const slot = computed(() => (cw.value - cm.left - cm.right) / Math.max(1, view.value.horizons.length))
 const barX = (i: number) => cm.left + i * slot.value + slot.value * 0.22
 const barW = computed(() => slot.value * 0.56)
 const coverageTicks = [0, 0.2, 0.4, 0.6, 0.8, 1]
@@ -32,16 +42,17 @@ const labelAt = (i: number) => {
   const last = view.value.horizons.length - 1
   if (!crowded.value) return { x: barX(i) + barW.value / 2, anchor: "middle" }
   if (i === 0) return { x: cm.left, anchor: "start" }
-  if (i === last) return { x: cw - cm.right, anchor: "end" }
-  if (i === Math.floor(last / 2)) return { x: barX(i) + barW.value / 2, anchor: "middle" }
+  if (i === last) return { x: cw.value - cm.right, anchor: "end" }
+  // A phone-wide chart has no room for the middle label between the two ends.
+  if (i === Math.floor(last / 2) && cw.value >= 320) return { x: barX(i) + barW.value / 2, anchor: "middle" }
   return null
 }
 
 // Calibration: announced probability against how often it happened, dot area by number of forecasts.
-const sw = 360
+const sw = chartUnits
 const sh = 250
 const sm = { top: 14, right: 14, bottom: 40, left: 60 }
-const sx = (v: number) => scale(v, { domain: [0, 1], range: [sm.left, sw - sm.right] })
+const sx = (v: number) => scale(v, { domain: [0, 1], range: [sm.left, sw.value - sm.right] })
 const sy = (v: number) => scale(v, { domain: [0, 1], range: [sh - sm.bottom, sm.top] })
 const maxEvents = computed(() => Math.max(1, ...view.value.bins.map((b) => b.events)))
 const radius = (events: number) => 4 + 9 * Math.sqrt(events / maxEvents.value)
@@ -78,7 +89,7 @@ const miss = (value: number) =>
     </div>
 
     <div class="charts">
-      <figure class="chart">
+      <figure ref="chart" class="chart">
         <figcaption>
           <h4>{{ content.coverageTitle }}</h4>
           <p class="secondary small">{{ content.coverageHelp }}</p>
@@ -229,6 +240,8 @@ const miss = (value: number) =>
 <style scoped>
 .record {
   display: grid;
+  /* One column as wide as the panel: the data table scrolls inside it instead of widening the page. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
 }
 

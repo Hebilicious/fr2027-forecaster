@@ -65,13 +65,13 @@ const moodLabel = (s: Sentiment) =>
               <td class="bar-col">
                 <div v-if="mood" class="mood" role="img" :aria-label="moodLabel(mood)" :title="moodLabel(mood)">
                   <span v-if="mood.pos > 0" class="pos" :style="{ width: pct(mood.pos) }">
-                    <template v-if="labelled(mood.pos)">{{ share(mood.pos) }}</template>
+                    <span v-if="labelled(mood.pos)" class="share">{{ share(mood.pos) }}</span>
                   </span>
                   <span v-if="mood.neu > 0" class="neu" :style="{ width: pct(mood.neu) }">
-                    <template v-if="labelled(mood.neu)">{{ share(mood.neu) }}</template>
+                    <span v-if="labelled(mood.neu)" class="share">{{ share(mood.neu) }}</span>
                   </span>
                   <span v-if="mood.neg > 0" class="neg" :style="{ width: pct(mood.neg) }">
-                    <template v-if="labelled(mood.neg)">{{ share(mood.neg) }}</template>
+                    <span v-if="labelled(mood.neg)" class="share">{{ share(mood.neg) }}</span>
                   </span>
                 </div>
                 <span v-else class="muted">—</span>
@@ -140,7 +140,8 @@ th[scope="row"] {
   min-width: 160px;
 }
 
-.mood span {
+.mood > span {
+  container-type: inline-size;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,12 +154,19 @@ th[scope="row"] {
   white-space: nowrap;
 }
 
-.mood span:first-child {
+.mood > span:first-child {
   border-radius: 4px 0 0 4px;
 }
 
-.mood span:last-child {
+.mood > span:last-child {
   border-radius: 0 4px 4px 0;
+}
+
+/* A share too wide for its segment is left out; the bar's label still reads it. */
+@container (max-width: 28px) {
+  .share {
+    display: none;
+  }
 }
 
 .pos {
@@ -208,6 +216,11 @@ th[scope="row"] {
 @media (max-width: 760px) {
   .bar-col {
     width: auto;
+  }
+
+  /* The names wrap, so the sentiment bar keeps its room. */
+  .who {
+    white-space: normal;
   }
 
   .mood {

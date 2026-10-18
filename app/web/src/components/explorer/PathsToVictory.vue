@@ -151,6 +151,8 @@ const rowLabel = (path: Path) =>
 <style scoped>
 .paths {
   display: grid;
+  /* One column as wide as the panel: the data table scrolls inside it instead of widening the page. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
 }
 
