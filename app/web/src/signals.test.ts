@@ -8,13 +8,17 @@ import {
   eventsNewestFirst,
   filterSignals,
   latestHeadlines,
-  latestXWindow,
   marketRows,
   newsCounts,
   sentiment,
+  stanceCounts,
   sparkline,
   sparkRange,
   unmatchedRows,
+  wilson,
+  windowsInRange,
+  xPooled,
+  xWindows,
 } from "./signals"
 
 const candidate = (id: string, pRun: number, pQualify: number, pWin: number) => ({
@@ -242,18 +246,105 @@ const xRow = (window_end: string, candidate_id: string, mentions: number | null,
     drop_kappa: null,
   }) satisfies XRow
 
+const stanceRow = (window_end: string, candidate_id: string, counts: [number, number, number], mentions = 100) => {
+  const [support, oppose, neutral] = counts
+  const n = support + oppose + neutral
+  return {
+    ...xRow(window_end, candidate_id, mentions),
+    window_start: new Date(Date.parse(window_end) - 12 * 3_600_000).toISOString().replace(".000", ""),
+    rubric_version: "stance-1",
+    sample_size: n + 5,
+    stance_posts_drawn: n + 5,
+    stance_off_topic: 5,
+    stance_support: support,
+    stance_oppose: oppose,
+    stance_neutral: neutral,
+    support_share: n ? support / n : null,
+    oppose_share: n ? oppose / n : null,
+    neutral_share: n ? neutral / n : null,
+  } satisfies XRow
+}
+
+// 12-hour window ends on a day of October 2026.
+const T = (date: number, hour: number) =>
+  `2026-10-${String(date).padStart(2, "0")}T${String(hour).padStart(2, "0")}:00:00Z`
+
 describe("X", () => {
-  it("keeps the latest window, most mentioned first", () => {
-    const window = latestXWindow([
-      xRow("2026-10-09T06:00:00Z", "a", 9000),
-      xRow("2026-10-09T12:00:00Z", "a", null),
-      xRow("2026-10-09T12:00:00Z", "b", 1200),
-      xRow("2026-10-09T12:00:00Z", "c", 4000),
+  const names = new Map([["a", "A"]])
+
+  it("lists the windows oldest first and keeps those starting inside a range", () => {
+    const rows = [stanceRow(T(10, 0), "a", [1, 1, 1]), xRow(T(9, 12), "a", 5), stanceRow(T(10, 12), "b", [1, 0, 0])]
+    const windows = xWindows(rows)
+    expect(windows.map((w) => [w.end, w.stance])).toEqual([
+      [T(9, 12), false],
+      [T(10, 0), true],
+      [T(10, 12), true],
     ])
-    expect(window?.end).toBe("2026-10-09T12:00:00Z")
-    expect(window?.start).toBe("2026-10-08T12:00:00Z")
-    expect(window?.rows.map((r) => r.candidate_id)).toEqual(["c", "b", "a"])
-    expect(latestXWindow([])).toBeNull()
+    // 24 hours back from the newest end (10 Oct 12:00) is 9 Oct 12:00: the window that starts there stays.
+    expect(windowsInRange(windows, "1d").map((w) => w.end)).toEqual([T(10, 0), T(10, 12)])
+    expect(windowsInRange(windows, "all")).toHaveLength(3)
+    expect(windowsInRange([], "7d")).toEqual([])
+  })
+
+  it("matches the collector's Wilson interval", () => {
+    // 30 of 100: 0.2189 to 0.3958, as `wilson` in collectors/src/grok.rs gives it.
+    const i = wilson(30, 100)!
+    expect(i.share).toBe(0.3)
+    expect(i.low).toBeCloseTo(0.2189, 4)
+    expect(i.high).toBeCloseTo(0.3958, 4)
+    expect(wilson(0, 0)).toBeNull()
+  })
+
+  it("rebuilds counts from the shares when an older API sends only those", () => {
+    const { stance_support: _support, stance_oppose: _oppose, ...row } = stanceRow(T(10, 0), "a", [20, 10, 10])
+    expect(stanceCounts(row)).toEqual({ support: 20, oppose: 10, neutral: 10 })
+    expect(stanceCounts(xRow(T(10, 0), "a", 1, [0.3, 0.5, 0.2]))).toBeNull()
+  })
+
+  it("pools windows by summing posts, so a bigger drop weighs more", () => {
+    const rows = [
+      stanceRow(T(10, 0), "a", [10, 0, 0], 500),
+      stanceRow(T(10, 12), "a", [30, 50, 20], 700),
+      stanceRow(T(10, 12), "b", [1, 1, 1], 900),
+    ]
+    const pooled = xPooled(rows, [T(10, 0), T(10, 12)], names)
+    expect(pooled.map((r) => r.candidateId)).toEqual(["a", "b"])
+    const a = pooled[0]!
+    expect(a.name).toBe("A")
+    expect(a.mentions).toBe(1200)
+    expect(a.relevant).toBe(110)
+    expect(a.stance?.support.share).toBeCloseTo(40 / 110)
+    expect(a.stance?.support.low).toBeCloseTo(wilson(40, 110)!.low)
+    expect(a.mood).toEqual({ pos: 40 / 110, neu: 20 / 110, neg: 50 / 110 })
+    expect(a.trend).toEqual([
+      { date: T(10, 0), value: 1 },
+      { date: T(10, 12), value: 0.3 },
+    ])
+    // The first window rests on 10 posts: too few for a change.
+    expect(a.change).toBeNull()
+    expect(a.thin).toBe(false)
+    expect(pooled[1]!.thin).toBe(true)
+  })
+
+  it("gives the change between the range's first and last windows when both hold enough posts", () => {
+    const rows = [stanceRow(T(10, 0), "a", [20, 10, 10]), stanceRow(T(10, 12), "a", [10, 20, 10])]
+    expect(xPooled(rows, [T(10, 0), T(10, 12)], names)[0]!.change).toBeCloseTo(-0.25)
+  })
+
+  it("shows the sentiment drops read before the stance rubric only when no stance drop is kept", () => {
+    const rows = [
+      { ...xRow(T(9, 12), "a", 50, [0.6, 0.4, 0]), sample_size: 25 },
+      stanceRow(T(10, 0), "a", [10, 20, 10]),
+    ]
+    const alone = xPooled(rows, [T(9, 12)], names)[0]!
+    expect(alone.legacy).toBe(true)
+    expect(alone.stance).toBeNull()
+    expect(alone.mood?.pos).toBeCloseTo(0.6)
+    expect(alone.thin).toBe(true)
+    const both = xPooled(rows, [T(9, 12), T(10, 0)], names)[0]!
+    expect(both.legacy).toBe(false)
+    expect(both.mood?.pos).toBeCloseTo(0.25)
+    expect(both.mentions).toBe(150)
   })
 
   it("rescales sentiment to a whole and needs all three shares", () => {
