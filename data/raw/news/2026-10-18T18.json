@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "france24-france: unable to parse feed: no root element",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-10-18T18:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-18T17:31:05Z",
+      "title": "Le jeu trouble de Jean-Luc Mélenchon dans l’engrenage de la violence",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/le-jeu-trouble-de-jean-luc-melenchon-dans-l-engrenage-de-la-violence-20261018"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T17:59:29Z",
+      "title": "17-octobre: Jordan Bardella interpellé par le député Écologiste et Social Pouria Amirshah",
+      "url": "https://www.bfmtv.com/politique/front-national/video-17-octobre-jordan-bardella-interpelle-par-le-depute-ecologiste-et-social-pouria-amirshah_VN-202610180325.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T17:52:07Z",
+      "title": "Violences du 17 octobre: Marine Le Pen dénonce \"une crise profonde\" qui fait peser une menace sur la démocratie",
+      "url": "https://www.bfmtv.com/politique/extreme-droite/violences-du-17-octobre-marine-le-pen-denonce-une-crise-profonde-qui-fait-peser-une-menace-sur-la-democratie_AN-202610180322.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T17:26:01Z",
+      "title": "\"Est-ce qu'il y a eu ou non une faille?\": Édouard Philippe se \"pose des questions\" sur le niveau du renseignement après les violences du 17 octobre",
+      "url": "https://www.bfmtv.com/politique/horizons/est-ce-qu-il-y-a-eu-ou-non-une-faille-edouard-philippe-se-pose-des-questions-sur-le-niveau-du-renseignement-apres-les-violences-du-17-octobre_AD-202610180312.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "17 octobre : Jean-Luc Mélenchon accuse le gouvernement de jouer la carte du « pourrissement »",
+      "url": "https://www.leparisien.fr/politique/17-octobre-jean-luc-melenchon-accuse-le-gouvernement-de-jouer-la-carte-du-pourrissement-18-10-2026-KF6UWOXJAJBY7I4QIHOTMSSJOU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
