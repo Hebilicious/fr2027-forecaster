@@ -1,0 +1,25 @@
+{
+  "candidate_ids": [
+    "le_pen"
+  ],
+  "date": "2026-10-18",
+  "event_id": "2026-10-18-yougov-huffpost-poll",
+  "kind": "poll_published",
+  "reported_at": "2026-10-18T19:18:41Z",
+  "reported_by": "Grok Bot fr2027",
+  "schema_version": "2.0",
+  "sources": [
+    {
+      "title": "Notre premier sondage pour la présidentielle : loin derrière Le Pen, un match à trois pour le second tour",
+      "url": "https://www.huffingtonpost.fr/politique/article/notre-premier-sondage-pour-la-presidentielle-loin-derriere-le-pen-un-match-a-trois-pour-le-second-tour_341090.html"
+    },
+    {
+      "title": "Intentions de vote à l'élection présidentielle 2027 - Octobre 2026 (YouGov pour le HuffPost)",
+      "url": "https://ygo-assets-websites-editorial-emea.yougov.net/documents/R%C3%A9sultats_YouGov_pour_le_HuffPost_Intentions_de_vote_Octobre_2026_as_sent_16.10.2026.pdf"
+    }
+  ],
+  "summary": {
+    "en": "A YouGov poll for Le HuffPost, conducted online from 12 to 15 October among 1,094 people and published on 18 October, puts Marine Le Pen first in every first-round scenario tested (35 to 37%).",
+    "fr": "Un sondage YouGov pour Le HuffPost, réalisé en ligne du 12 au 15 octobre auprès de 1 094 personnes et publié le 18 octobre, place Marine Le Pen en tête du premier tour dans toutes les hypothèses testées (35 à 37 %)."
+  }
+}

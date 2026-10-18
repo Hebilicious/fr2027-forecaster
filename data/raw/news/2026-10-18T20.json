@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-18T20:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-18T20:05:17Z",
+      "title": "La mobilisation du 17 octobre : une crise politique à 6 mois de la présidentielle",
+      "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/la-mobilisation-du-17-octobre-une-crise-politique-a-6-mois-de-la-presidentielle_8243230.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T19:24:36Z",
+      "title": "Prise de parole d'Emmanuel Macron: \"Les Français se demandent qu'est-ce qu'il se passe dans la tête de Monsieur Macron\", déclare Éric Zemmour, président du parti Reconquête",
+      "url": "https://www.bfmtv.com/politique/video-prise-de-parole-d-emmanuel-macron-les-francais-se-demandent-qu-est-ce-qu-il-se-passe-dans-la-tete-de-monsieur-macron-declare-eric-zemmour-president-du-parti-reconquete_VN-202610180357.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« La responsabilité politique de LFI est considérable » : après les violences, Jean-Luc Mélenchon sous le feu des critiques",
+      "url": "https://www.leparisien.fr/elections/presidentielle/la-responsabilite-politique-de-lfi-est-considerable-apres-les-violences-jean-luc-melenchon-sous-le-feu-des-critiques-18-10-2026-CQTIZKXHYVBNPCFURQR3TETLAE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
