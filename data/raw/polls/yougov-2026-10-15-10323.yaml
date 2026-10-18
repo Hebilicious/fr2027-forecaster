@@ -1,0 +1,139 @@
+schema_version: "1.0"
+poll_id: yougov-2026-10-15-10323
+firm: yougov
+sponsor: Le HuffPost
+field_start: "2026-10-12"
+field_end: "2026-10-15"
+published_at: "2026-10-18"
+sample_size: 1094
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10323-pres-iv-yougov-le-huffpost-18-octobre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10323-pres-iv-yougov-le-huffpost-18-octobre.pdf
+index_url: >-
+  https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027
+retrieved_at: 2026-10-18T19:38Z
+entry: primary
+notes: >-
+  Sample of 1,094 adults including 976 registered voters; voting intentions among
+  decided voters. Round-1 shares from pollster PDF totals (scenario_main / attal /
+  philippe / hollande / full); round-2 from same PDF. Commission notice 10323 used
+  as source_url.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-10-18T19:35Z
+  skill_version: polls-2
+scenarios:
+- label: Glucksmann+Attal+Philippe
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0
+    attal: 6
+    dupont_aignan: 3
+    glucksmann: 12
+    le_pen: 36
+    melenchon: 15
+    philippe: 10
+    retailleau: 6
+    roussel: 3
+    tondelier: 6
+    zemmour: 3
+- label: Glucksmann+Attal
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 0
+    attal: 10
+    dupont_aignan: 3
+    glucksmann: 14
+    le_pen: 37
+    melenchon: 15
+    retailleau: 9
+    roussel: 3
+    tondelier: 6
+    zemmour: 4
+- label: Glucksmann+Philippe
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 0
+    dupont_aignan: 3
+    glucksmann: 13
+    le_pen: 36
+    melenchon: 15
+    philippe: 13
+    retailleau: 7
+    roussel: 3
+    tondelier: 6
+    zemmour: 3
+- label: Hollande+Philippe
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 1
+    dupont_aignan: 3
+    hollande: 9
+    le_pen: 37
+    melenchon: 16
+    philippe: 15
+    retailleau: 7
+    roussel: 3
+    tondelier: 6
+    zemmour: 4
+- label: Glucksmann+Attal+Philippe+Lisnard+Ruffin+Villepin
+  round: 1
+  scenario_id: S5
+  shares:
+    arthaud: 0
+    attal: 6
+    dupont_aignan: 2
+    glucksmann: 12
+    le_pen: 35
+    lisnard: 4
+    melenchon: 13
+    philippe: 8
+    retailleau: 5
+    roussel: 2
+    ruffin: 2
+    tondelier: 5
+    villepin: 1
+    zemmour: 4
+- label: Édouard Philippe v Marine Le Pen
+  round: 2
+  scenario_id: H1
+  shares:
+    le_pen: 52
+    philippe: 48
+- label: Raphaël Glucksmann v Marine Le Pen
+  round: 2
+  scenario_id: H2
+  shares:
+    glucksmann: 45
+    le_pen: 55
+- label: François Hollande v Marine Le Pen
+  round: 2
+  scenario_id: H3
+  shares:
+    hollande: 45
+    le_pen: 55
+- label: Jean-Luc Mélenchon v Marine Le Pen
+  round: 2
+  scenario_id: H4
+  shares:
+    le_pen: 68
+    melenchon: 32
+- label: Gabriel Attal v Marine Le Pen
+  round: 2
+  scenario_id: H5
+  shares:
+    attal: 45
+    le_pen: 55
+- label: Jean-Luc Mélenchon v Édouard Philippe
+  round: 2
+  scenario_id: H6
+  shares:
+    melenchon: 34
+    philippe: 66
