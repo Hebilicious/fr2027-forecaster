@@ -2399,67 +2399,99 @@ date,candidate_id,query,articles,total_articles,source_file
 2026-10-14,tondelier,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Tondelier | Tondelier; persons: marine tondelier",1,2726,data/raw/gdelt/2026-10-17.json
 2026-10-14,villepin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Dominique de Villepin | Villepin; persons: dominique de villepin",0,2726,data/raw/gdelt/2026-10-17.json
 2026-10-14,zemmour,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Éric Zemmour | Zemmour; persons: eric zemmour",0,2726,data/raw/gdelt/2026-10-17.json
-2026-10-15,arthaud,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nathalie Arthaud | Arthaud; persons: nathalie arthaud",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,asselineau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Asselineau | Asselineau; persons: francois asselineau",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,attal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Gabriel Attal | Attal; persons: gabriel attal",3,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,bardella,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jordan Bardella | Bardella; persons: jordan bardella",1,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,batho,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Delphine Batho; persons: delphine batho",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,becht,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Becht; persons: olivier becht",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,bertrand,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Xavier Bertrand; persons: xavier bertrand",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,bonnal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Sébastien Bonnal; persons: sebastien bonnal",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,bouamrane,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Karim Bouamrane | Bouamrane; persons: karim bouamrane",1,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,cazeneuve,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bernard Cazeneuve | Cazeneuve; persons: bernard cazeneuve",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,dupont_aignan,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nicolas Dupont-Aignan | Dupont-Aignan; persons: nicolas dupont aignan",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,faure,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Faure; persons: olivier faure",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,glucksmann,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Raphaël Glucksmann | Glucksmann; persons: raphael glucksmann",5,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,guedj,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jérôme Guedj | Guedj; persons: jerome guedj",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,hollande,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Hollande | Hollande; persons: francois hollande",1,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,kazib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Anasse Kazib | Kazib; persons: anasse kazib",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,labib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Selma Labib; persons: selma labib",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,le_maire,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Le Maire; persons: bruno le maire",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,le_pen,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Le Pen | Le Pen; persons: marine le pen",16,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,lisnard,"GDELT GKG translation stream, srclc:fra, hourly sample; title: David Lisnard | Lisnard; persons: david lisnard",2,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,maurel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Emmanuel Maurel; persons: emmanuel maurel",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,melenchon,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jean-Luc Mélenchon | Mélenchon; persons: jean luc melenchon",7,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,philippe,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Édouard Philippe; persons: edouard philippe",7,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,philippot,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Florian Philippot | Philippot; persons: florian philippot",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,polony,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Natacha Polony | Polony; persons: natacha polony",3,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,retailleau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Retailleau | Retailleau; persons: bruno retailleau",2,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,roussel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Fabien Roussel | Roussel; persons: fabien roussel",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,royal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Ségolène Royal; persons: segolene royal",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,ruffin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Ruffin | Ruffin; persons: francois ruffin",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,tondelier,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Tondelier | Tondelier; persons: marine tondelier",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,villepin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Dominique de Villepin | Villepin; persons: dominique de villepin",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-15,zemmour,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Éric Zemmour | Zemmour; persons: eric zemmour",0,2562,data/raw/gdelt/2026-10-17.json
-2026-10-16,arthaud,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nathalie Arthaud | Arthaud; persons: nathalie arthaud",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,asselineau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Asselineau | Asselineau; persons: francois asselineau",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,attal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Gabriel Attal | Attal; persons: gabriel attal",1,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,bardella,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jordan Bardella | Bardella; persons: jordan bardella",4,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,batho,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Delphine Batho; persons: delphine batho",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,becht,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Becht; persons: olivier becht",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,bertrand,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Xavier Bertrand; persons: xavier bertrand",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,bonnal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Sébastien Bonnal; persons: sebastien bonnal",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,bouamrane,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Karim Bouamrane | Bouamrane; persons: karim bouamrane",1,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,cazeneuve,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bernard Cazeneuve | Cazeneuve; persons: bernard cazeneuve",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,dupont_aignan,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nicolas Dupont-Aignan | Dupont-Aignan; persons: nicolas dupont aignan",2,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,faure,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Faure; persons: olivier faure",1,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,glucksmann,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Raphaël Glucksmann | Glucksmann; persons: raphael glucksmann",9,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,guedj,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jérôme Guedj | Guedj; persons: jerome guedj",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,hollande,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Hollande | Hollande; persons: francois hollande",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,kazib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Anasse Kazib | Kazib; persons: anasse kazib",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,labib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Selma Labib; persons: selma labib",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,le_maire,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Le Maire; persons: bruno le maire",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,le_pen,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Le Pen | Le Pen; persons: marine le pen",9,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,lisnard,"GDELT GKG translation stream, srclc:fra, hourly sample; title: David Lisnard | Lisnard; persons: david lisnard",2,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,maurel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Emmanuel Maurel; persons: emmanuel maurel",1,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,melenchon,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jean-Luc Mélenchon | Mélenchon; persons: jean luc melenchon",5,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,philippe,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Édouard Philippe; persons: edouard philippe",5,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,philippot,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Florian Philippot | Philippot; persons: florian philippot",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,polony,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Natacha Polony | Polony; persons: natacha polony",1,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,retailleau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Retailleau | Retailleau; persons: bruno retailleau",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,roussel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Fabien Roussel | Roussel; persons: fabien roussel",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,royal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Ségolène Royal; persons: segolene royal",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,ruffin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Ruffin | Ruffin; persons: francois ruffin",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,tondelier,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Tondelier | Tondelier; persons: marine tondelier",1,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,villepin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Dominique de Villepin | Villepin; persons: dominique de villepin",0,2707,data/raw/gdelt/2026-10-17.json
-2026-10-16,zemmour,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Éric Zemmour | Zemmour; persons: eric zemmour",1,2707,data/raw/gdelt/2026-10-17.json
+2026-10-15,arthaud,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nathalie Arthaud | Arthaud; persons: nathalie arthaud",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,asselineau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Asselineau | Asselineau; persons: francois asselineau",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,attal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Gabriel Attal | Attal; persons: gabriel attal",3,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,bardella,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jordan Bardella | Bardella; persons: jordan bardella",1,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,batho,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Delphine Batho; persons: delphine batho",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,becht,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Becht; persons: olivier becht",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,bertrand,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Xavier Bertrand; persons: xavier bertrand",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,bonnal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Sébastien Bonnal; persons: sebastien bonnal",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,bouamrane,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Karim Bouamrane | Bouamrane; persons: karim bouamrane",1,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,cazeneuve,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bernard Cazeneuve | Cazeneuve; persons: bernard cazeneuve",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,dupont_aignan,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nicolas Dupont-Aignan | Dupont-Aignan; persons: nicolas dupont aignan",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,faure,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Faure; persons: olivier faure",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,glucksmann,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Raphaël Glucksmann | Glucksmann; persons: raphael glucksmann",5,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,guedj,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jérôme Guedj | Guedj; persons: jerome guedj",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,hollande,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Hollande | Hollande; persons: francois hollande",1,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,kazib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Anasse Kazib | Kazib; persons: anasse kazib",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,labib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Selma Labib; persons: selma labib",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,le_maire,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Le Maire; persons: bruno le maire",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,le_pen,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Le Pen | Le Pen; persons: marine le pen",16,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,lisnard,"GDELT GKG translation stream, srclc:fra, hourly sample; title: David Lisnard | Lisnard; persons: david lisnard",2,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,maurel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Emmanuel Maurel; persons: emmanuel maurel",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,melenchon,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jean-Luc Mélenchon | Mélenchon; persons: jean luc melenchon",7,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,philippe,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Édouard Philippe; persons: edouard philippe",7,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,philippot,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Florian Philippot | Philippot; persons: florian philippot",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,polony,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Natacha Polony | Polony; persons: natacha polony",3,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,retailleau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Retailleau | Retailleau; persons: bruno retailleau",2,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,roussel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Fabien Roussel | Roussel; persons: fabien roussel",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,royal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Ségolène Royal; persons: segolene royal",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,ruffin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Ruffin | Ruffin; persons: francois ruffin",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,tondelier,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Tondelier | Tondelier; persons: marine tondelier",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,villepin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Dominique de Villepin | Villepin; persons: dominique de villepin",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-15,zemmour,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Éric Zemmour | Zemmour; persons: eric zemmour",0,2562,data/raw/gdelt/2026-10-18.json
+2026-10-16,arthaud,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nathalie Arthaud | Arthaud; persons: nathalie arthaud",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,asselineau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Asselineau | Asselineau; persons: francois asselineau",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,attal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Gabriel Attal | Attal; persons: gabriel attal",1,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,bardella,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jordan Bardella | Bardella; persons: jordan bardella",4,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,batho,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Delphine Batho; persons: delphine batho",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,becht,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Becht; persons: olivier becht",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,bertrand,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Xavier Bertrand; persons: xavier bertrand",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,bonnal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Sébastien Bonnal; persons: sebastien bonnal",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,bouamrane,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Karim Bouamrane | Bouamrane; persons: karim bouamrane",1,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,cazeneuve,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bernard Cazeneuve | Cazeneuve; persons: bernard cazeneuve",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,dupont_aignan,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nicolas Dupont-Aignan | Dupont-Aignan; persons: nicolas dupont aignan",2,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,faure,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Faure; persons: olivier faure",1,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,glucksmann,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Raphaël Glucksmann | Glucksmann; persons: raphael glucksmann",9,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,guedj,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jérôme Guedj | Guedj; persons: jerome guedj",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,hollande,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Hollande | Hollande; persons: francois hollande",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,kazib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Anasse Kazib | Kazib; persons: anasse kazib",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,labib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Selma Labib; persons: selma labib",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,le_maire,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Le Maire; persons: bruno le maire",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,le_pen,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Le Pen | Le Pen; persons: marine le pen",9,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,lisnard,"GDELT GKG translation stream, srclc:fra, hourly sample; title: David Lisnard | Lisnard; persons: david lisnard",2,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,maurel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Emmanuel Maurel; persons: emmanuel maurel",1,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,melenchon,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jean-Luc Mélenchon | Mélenchon; persons: jean luc melenchon",5,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,philippe,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Édouard Philippe; persons: edouard philippe",5,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,philippot,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Florian Philippot | Philippot; persons: florian philippot",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,polony,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Natacha Polony | Polony; persons: natacha polony",1,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,retailleau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Retailleau | Retailleau; persons: bruno retailleau",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,roussel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Fabien Roussel | Roussel; persons: fabien roussel",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,royal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Ségolène Royal; persons: segolene royal",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,ruffin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Ruffin | Ruffin; persons: francois ruffin",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,tondelier,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Tondelier | Tondelier; persons: marine tondelier",1,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,villepin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Dominique de Villepin | Villepin; persons: dominique de villepin",0,2707,data/raw/gdelt/2026-10-18.json
+2026-10-16,zemmour,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Éric Zemmour | Zemmour; persons: eric zemmour",1,2707,data/raw/gdelt/2026-10-18.json
+2026-10-17,arthaud,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nathalie Arthaud | Arthaud; persons: nathalie arthaud",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,asselineau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Asselineau | Asselineau; persons: francois asselineau",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,attal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Gabriel Attal | Attal; persons: gabriel attal",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,bardella,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jordan Bardella | Bardella; persons: jordan bardella",2,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,batho,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Delphine Batho; persons: delphine batho",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,becht,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Becht; persons: olivier becht",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,bertrand,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Xavier Bertrand; persons: xavier bertrand",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,bonnal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Sébastien Bonnal; persons: sebastien bonnal",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,bouamrane,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Karim Bouamrane | Bouamrane; persons: karim bouamrane",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,cazeneuve,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bernard Cazeneuve | Cazeneuve; persons: bernard cazeneuve",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,dupont_aignan,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Nicolas Dupont-Aignan | Dupont-Aignan; persons: nicolas dupont aignan",1,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,faure,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Olivier Faure; persons: olivier faure",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,glucksmann,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Raphaël Glucksmann | Glucksmann; persons: raphael glucksmann",3,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,guedj,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jérôme Guedj | Guedj; persons: jerome guedj",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,hollande,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Hollande | Hollande; persons: francois hollande",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,kazib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Anasse Kazib | Kazib; persons: anasse kazib",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,labib,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Selma Labib; persons: selma labib",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,le_maire,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Le Maire; persons: bruno le maire",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,le_pen,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Le Pen | Le Pen; persons: marine le pen",4,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,lisnard,"GDELT GKG translation stream, srclc:fra, hourly sample; title: David Lisnard | Lisnard; persons: david lisnard",1,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,maurel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Emmanuel Maurel; persons: emmanuel maurel",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,melenchon,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Jean-Luc Mélenchon | Mélenchon; persons: jean luc melenchon",9,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,philippe,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Édouard Philippe; persons: edouard philippe",4,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,philippot,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Florian Philippot | Philippot; persons: florian philippot",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,polony,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Natacha Polony | Polony; persons: natacha polony",1,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,retailleau,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Bruno Retailleau | Retailleau; persons: bruno retailleau",5,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,roussel,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Fabien Roussel | Roussel; persons: fabien roussel",1,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,royal,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Ségolène Royal; persons: segolene royal",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,ruffin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: François Ruffin | Ruffin; persons: francois ruffin",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,tondelier,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Marine Tondelier | Tondelier; persons: marine tondelier",1,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,villepin,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Dominique de Villepin | Villepin; persons: dominique de villepin",0,1636,data/raw/gdelt/2026-10-18.json
+2026-10-17,zemmour,"GDELT GKG translation stream, srclc:fra, hourly sample; title: Éric Zemmour | Zemmour; persons: eric zemmour",0,1636,data/raw/gdelt/2026-10-18.json

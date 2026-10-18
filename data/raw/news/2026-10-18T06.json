@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-18T06:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-18T05:00:00Z",
+      "title": "«Il va falloir qu’ils obéissent» : comment Jean-Luc Mélenchon compte mettre l’État à sa botte",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/il-va-falloir-qu-ils-obeissent-comment-jean-luc-melenchon-compte-mettre-l-etat-a-sa-botte-20261018"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T06:05:40Z",
+      "title": "SONDAGE BFMTV. Présidentielle 2027: Édouard Philippe, Raphaël Glucksmann et Jean-Luc Mélenchon donnés au coude-à-coude derrière Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-sondage-bfmtv-presidentielle-2027-edouard-philippe-raphael-glucksmann-et-jean-luc-melenchon-donnes-au-coude-a-coude-derriere-marine-le-pen_VN-202610180084.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-18T05:11:00Z",
+      "title": "Delors-Balladur, Fillon-Le Pen... Quels étaient les duels pour le second tour à six mois des précédentes élections présidentielles?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/delors-balladur-fillon-le-pen-quels-etaient-les-duels-pour-le-second-tour-a-six-mois-des-precedentes-elections-presidentielles_AN-202610180030.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Pas de voyage pour Marine Le Pen, #blocus qui cartonne, la fin du monde selon Artus… Nos indiscrétions de la semaine",
+      "url": "https://www.leparisien.fr/politique/pas-de-voyage-pour-marine-le-pen-blocus-qui-cartonne-la-fin-du-monde-selon-artus-nos-indiscretions-de-la-semaine-18-10-2026-NOHZ75MVWFHL5JDPTOZWIZSVHE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
