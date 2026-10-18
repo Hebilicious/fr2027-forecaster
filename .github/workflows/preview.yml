@@ -1,8 +1,8 @@
 name: Preview
 
-# Every pull request that can change what a visitor sees gets its own Worker, fr2027-pr-<number>, serving the
-# branch's site at its workers.dev address, which this workflow posts on the pull request. The Worker is
-# deleted when the pull request closes. Production (the Worker fr2027) is never touched.
+# Every pull request that can change what a visitor sees gets a Worker Preview of fr2027 named after its branch
+# (`previews` in app/worker/wrangler.jsonc), serving the branch's site; this workflow posts its Preview URL on the
+# pull request and deletes the Preview when the pull request closes. Production is never touched.
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
@@ -26,7 +26,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  WORKER: fr2027-pr-${{ github.event.pull_request.number }}
+  BRANCH: ${{ github.head_ref }}
   PR: ${{ github.event.pull_request.number }}
   GH_TOKEN: ${{ github.token }}
   GH_REPO: ${{ github.repository }}
@@ -41,9 +41,10 @@ jobs:
     timeout-minutes: 30
     steps:
       # Actions are pinned to full commit SHAs; the tag is in the comment.
-      # Full history, as in ci.yml: moon compares the pull request against main.
+      # The branch itself, not the merge commit, with full history, as in ci.yml: moon compares it against main.
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
+          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
           persist-credentials: false
       - uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
@@ -77,7 +78,7 @@ jobs:
             echo "::error::CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID is not set, so there is no preview."
             exit 1
           fi
-          # What worker:preview-deploy does, which moon skips in CI (runInCI: false), as live.yml does for production.
+          # What worker:preview does, which moon skips in CI (runInCI: false), as live.yml does for production.
           moon run cli:build web:build
           # A publication blackout (docs/operations.md) covers previews too: they are public.
           set +e; target/release/fr2027 export; code=$?; set -e
@@ -87,9 +88,9 @@ jobs:
             exit 0
           fi
           if [ "$code" -ne 0 ]; then exit "$code"; fi
-          (cd app/worker && pnpm exec wrangler deploy --env preview --name "$WORKER") | tee deploy.log
-          url=$(grep -oE "https://$WORKER\.[a-z0-9.-]+\.workers\.dev" deploy.log | head -1)
-          if [ -z "$url" ]; then echo "::error::The deploy printed no workers.dev URL."; exit 1; fi
+          (cd app/worker && pnpm exec wrangler preview --name "$BRANCH") | tee deploy.log
+          url=$(sed -n 's/^Preview URL: *\(https:[^ ]*\).*/\1/p' deploy.log | head -1)
+          if [ -z "$url" ]; then echo "::error::The deploy printed no Preview URL."; exit 1; fi
           echo "url=$url" >> "$GITHUB_OUTPUT"
       - name: Post the preview's address
         env:
@@ -119,9 +120,9 @@ jobs:
       - name: Delete
         run: |
           pnpm install --frozen-lockfile --filter @fr2027/worker
-          # A pull request closed during a blackout, or before its first deploy, has no Worker to delete.
-          if (cd app/worker && pnpm exec wrangler delete --env preview --name "$WORKER" --force); then
+          # A pull request closed during a blackout, or before its first deploy, has no Preview to delete.
+          if (cd app/worker && pnpm exec wrangler preview delete --name "$BRANCH" --skip-confirmation); then
             gh pr comment "$PR" --edit-last --create-if-none --body "**Preview:** deleted with the pull request."
           else
-            echo "::notice::No preview Worker $WORKER to delete."
+            echo "::notice::No Preview $BRANCH to delete."
           fi
