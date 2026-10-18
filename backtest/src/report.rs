@@ -638,6 +638,7 @@ pub fn run(repo: &Repo, simulations: Option<u32>, progress: &mut dyn FnMut(&str)
             polls_only_model.signals.shock_sd_grid = vec![0.0];
             polls_only_model.signals.momentum_weight = 0.0;
             polls_only_model.signals.x_momentum_weight = 0.0;
+            polls_only_model.signals.tone_momentum_weight = 0.0;
             let polls_only = if model.signals == polls_only_model.signals {
                 replays.clone()
             } else {

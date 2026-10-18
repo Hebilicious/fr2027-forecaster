@@ -383,6 +383,7 @@
         "half_life_days",
         "momentum_weight",
         "x_momentum_weight",
+        "tone_momentum_weight",
         "spikes",
         "momentum"
       ],
@@ -392,6 +393,7 @@
         "half_life_days": { "type": "number", "exclusiveMinimum": 0 },
         "momentum_weight": { "type": "number" },
         "x_momentum_weight": { "type": "number" },
+        "tone_momentum_weight": { "type": "number" },
         "momentum": {
           "description": "Candidates whose simulated round 1 vote the momentum tilts, by the log factor applied.",
           "type": "array",

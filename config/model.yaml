@@ -2,7 +2,7 @@
 # research/LOG.md; values marked "provisional" are placeholders until the backtests in
 # milestone 3 fit them.
 
-model_version: "0.5.0"
+model_version: "0.6.0"
 seed: 20270418
 simulations: 50000
 round1_date: 2027-04-18
@@ -106,6 +106,13 @@ signals:
   # against the baseline_days before, times x_momentum_weight. X has no history to backtest; the
   # forward log (fr2027 forward) scores it as polls arrive.
   x_momentum_weight: 0.5
+  # Tone momentum: the same tilt from the change in the GDELT tone of the candidate's articles
+  # against the day's tone of every French article (article-weighted), last momentum_days against
+  # the baseline_days before, times tone_momentum_weight, in points of tone. A candidate with fewer
+  # than tone_min_articles articles in either window gets none. The weight is the one that scored
+  # best on the 2017 and 2022 replays (research/LOG.md, 2026-10-18).
+  tone_momentum_weight: 0.05
+  tone_min_articles: 30
 
 market_blend:
   # p_blend ∝ exp(w ln p_model + (1 − w) ln p_market) (model/src/blend.rs), for who wins over the
