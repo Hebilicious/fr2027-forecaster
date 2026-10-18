@@ -19,6 +19,14 @@ and when.
 - Every handoff message includes the clickable URL of the task's pull request, or of every pull request in its stack,
   each time, including handoffs after a review correction. Copy the URL from `gh pr view --json url` or `gh stack view`
   rather than retyping it.
+- Every handoff of a change a visitor can see (the web UI, the Worker's routes, what the exported site shows) also
+  includes the URL of the branch's Worker Preview, deployed from the commit being handed off, each time. The Preview
+  workflow (`.github/workflows/preview.yml`) deploys one for every pull request that touches `app/web`, `app/worker`,
+  `cli`, `model`, `config` or `schemas`, named after the branch (`previews` in `app/worker/wrangler.jsonc`), posts its
+  Preview URL on the pull request and deletes it when the pull request closes. To have it before the run finishes,
+  deploy the same Preview from the worktree with `moon run worker:preview`: wrangler is already signed in, with
+  `CLOUDFLARE_ACCOUNT_ID` set to the Hebilicious account (`cf auth whoami`). Open the Preview and check the change
+  there before handing off. A handoff without it is incomplete; during a publication blackout, say there is none.
 - Use `gh stack` whenever the work splits into layers a reviewer can read one at a time, and always for a change too
   large for one pull request: one branch and pull request per layer, all in the task's worktree, submitted with
   `gh stack submit`. [.agents/skills/gh-stack/SKILL.md](.agents/skills/gh-stack/SKILL.md) covers the commands; it is

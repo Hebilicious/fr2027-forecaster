@@ -33,4 +33,17 @@
     "GITHUB_REPOSITORY": "Hebilicious/fr2027-forecaster",
     "GITHUB_APP_CLIENT_ID": "Iv23lierXRciGQXCgOuJ",
   },
+  // A branch's Worker Preview (`moon run worker:preview`, and the Preview workflow for every pull request):
+  // the branch's site at https://<branch>-fr2027.<subdomain>.workers.dev, with its own Durable Object storage.
+  // Cron triggers never run on a Preview, so it never starts the Live workflow, and it has no secrets, so its
+  // inbox answers 503. Bindings and vars are not inherited into a Preview, so they are repeated.
+  "previews": {
+    "durable_objects": {
+      "bindings": [{ "name": "INBOX", "class_name": "Inbox" }],
+    },
+    "vars": {
+      "GITHUB_REPOSITORY": "Hebilicious/fr2027-forecaster",
+      "GITHUB_APP_CLIENT_ID": "Iv23lierXRciGQXCgOuJ",
+    },
+  },
 }
