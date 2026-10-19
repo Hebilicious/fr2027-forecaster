@@ -294,15 +294,23 @@ export interface VolumeRow {
   readonly name: string
   /** Articles naming the candidate in the range. */
   readonly articles: number
-  /** Those articles' share of every article GDELT sampled in the range. */
+  /** Those articles' share of every French article GDELT read in the range. */
   readonly share: number | null
+  /**
+   * The GDELT tone of those articles against each day's tone of every French article, article-weighted, in points;
+   * `null` below `TONE_MIN_ARTICLES` articles with a tone.
+   */
+  readonly tone: number | null
   /** Articles per day over everything the API sends, oldest first. */
   readonly daily: readonly Point[]
 }
 
+/** Fewest articles for a candidate's tone over a range to be shown. */
+export const TONE_MIN_ARTICLES = 10
+
 /**
- * GDELT's French-language news volume: articles per candidate over the range's last days, the `top` first,
- * with every day the API sends for the sparkline.
+ * GDELT's French-language news volume: articles per candidate over the range's last days, the `top` first, their
+ * tone against the day's, and every day the API sends for the sparkline.
  */
 export function pressVolume(
   volume: readonly NewsVolumeDay[],
@@ -315,15 +323,19 @@ export function pressVolume(
   const first = volume.reduce((min, v) => (v.date < min ? v.date : min), end)
   const days = rangeDays(range)
   const from = days === null ? first : addDays(end, -(days - 1))
-  // The sampled total is the same on every candidate's row of a day: counted once per day.
+  // The day's total is the same on every candidate's row of a day: counted once per day.
   const totals = new Map<string, number>()
-  const byCandidate = new Map<string, { articles: number; daily: Point[] }>()
+  const byCandidate = new Map<string, { articles: number; toned: number; tone: number; daily: Point[] }>()
   for (const v of volume) {
-    const entry = byCandidate.get(v.candidate_id) ?? { articles: 0, daily: [] }
+    const entry = byCandidate.get(v.candidate_id) ?? { articles: 0, toned: 0, tone: 0, daily: [] }
     entry.daily.push({ date: v.date, value: v.articles })
     if (v.date >= from) {
       entry.articles += v.articles
       totals.set(v.date, v.total_articles)
+      if (v.tone != null && v.total_tone != null && v.articles > 0) {
+        entry.toned += v.articles
+        entry.tone += (v.tone - v.total_tone) * v.articles
+      }
     }
     byCandidate.set(v.candidate_id, entry)
   }
@@ -335,6 +347,7 @@ export function pressVolume(
       name: nameOf(names, id),
       articles: entry.articles,
       share: total > 0 ? entry.articles / total : null,
+      tone: entry.toned >= TONE_MIN_ARTICLES ? entry.tone / entry.toned : null,
       daily: entry.daily.toSorted((a, b) => a.date.localeCompare(b.date)),
     }))
     .toSorted((a, b) => b.articles - a.articles || a.name.localeCompare(b.name))

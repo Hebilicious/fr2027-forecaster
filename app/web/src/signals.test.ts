@@ -271,6 +271,25 @@ describe("news", () => {
     ])
     expect(pressVolume([], names, "7d")).toEqual({ rows: [], window: null, range: null })
   })
+
+  it("reads each candidate's tone against the day's, weighted by articles, from enough articles", () => {
+    const toned = (date: string, candidate_id: string, articles: number, tone: number) => ({
+      ...volumeDay(date, candidate_id, articles),
+      tone,
+      total_tone: -1,
+    })
+    const volume = [
+      toned("2026-10-09", "a", 6, 0), // 1 point warmer than the day
+      toned("2026-10-08", "a", 4, -3.5), // 2.5 points darker
+      toned("2026-10-09", "b", 3, 2),
+      volumeDay("2026-10-09", "c", 20), // a fetch from before tone was kept
+    ]
+    const rows = pressVolume(volume, names, "7d").rows
+    const toneOf = (id: string) => rows.find((r) => r.candidateId === id)?.tone
+    expect(toneOf("a")).toBeCloseTo((6 * 1 + 4 * -2.5) / 10)
+    expect(toneOf("b")).toBeNull()
+    expect(toneOf("c")).toBeNull()
+  })
 })
 
 const xRow = (window_end: string, candidate_id: string, mentions: number | null, mood?: [number, number, number]) =>
