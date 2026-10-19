@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-19T09:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "arthaud"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-19T09:00:09Z",
+      "title": "Présidentielle 2027 : près de Toulouse, Nathalie Arthaud candidate à une élection dont « il ne faut pas tout attendre »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/19/presidentielle-2027-pres-de-toulouse-nathalie-arthaud-candidate-a-une-election-dont-il-ne-faut-pas-tout-attendre_6797506_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-19T09:12:59Z",
+      "title": "Mobilisations du 17 octobre : LFI est un bouc émissaire bien trop facile",
+      "url": "https://www.liberation.fr/politique/mobilisations-du-17-octobre-lfi-est-un-bouc-emissaire-bien-trop-facile-20261019_2NU56RSNIBDLHBB7IOI67I6NJA/"
+    }
+  ],
+  "schema_version": "1.0"
+}
