@@ -1,12 +1,14 @@
 //! Everything that reads the network. Each source has a pure `parse` function, tested on saved
 //! responses in `tests/`, and a `fetch` function that does the HTTP request and calls it.
 
+pub mod article;
 pub mod gdelt;
 pub mod http;
 pub mod inbox;
 pub mod kalshi;
 pub mod polymarket;
 pub mod rss;
+pub mod typesafe;
 pub mod wikipedia;
 
 pub use http::Client;

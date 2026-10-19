@@ -72,6 +72,7 @@ impl Ingested {
             (news::CLEAN_FILE, news::clean_bytes(&self.news)?),
             (attention::CLEAN_FILE, attention::clean_bytes(&self.attention)?),
             (gdelt::CLEAN_FILE, gdelt::clean_bytes(&self.gdelt)?),
+            (gdelt::ARTICLES_FILE, gdelt::articles_bytes(&self.gdelt)?),
             (events::CLEAN_FILE, events::clean_bytes(&self.events)?),
         ])
     }

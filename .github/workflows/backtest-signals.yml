@@ -4,8 +4,10 @@ name: Backtest signals
 # news volume since 1 August 2026 (`fr2027 collect gdelt --backfill`), on GitHub runners, and
 # uploads one merged artifact per target, to be committed by hand into data/backtest/<year>/ or
 # data/raw/gdelt/. The news volume reads every one of GDELT's raw files, 96 a day: about 35,000
-# a year, 400 to 900 GB, each downloaded, read for its French records and dropped. Each target is
-# cut into 32 runs of days, one runner each.
+# a year, 400 to 900 GB, each downloaded, read for its French records and dropped; then every
+# article whose headline names a candidate is read, live or in the Internet Archive, and Jev
+# (TypeSafe, the TYPESAFE_API_KEY secret) judges how it portrays them. Each target is cut into
+# 32 runs of days, one runner each.
 #
 # Run it from the Actions tab, or push a branch named backtest-signals/<year or live> to fetch
 # that target's news volume, or backtest-signals/<anything else> for every election and live.
@@ -113,6 +115,8 @@ jobs:
         run: moon run cli:build
       - name: Fetch
         env:
+          # Jev reads each matched article for how it portrays the candidates it names.
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
           YEAR: ${{ matrix.year }}
           START: ${{ matrix.start }}
           END: ${{ matrix.end }}
@@ -164,7 +168,8 @@ jobs:
             jq -s '
               .[0] + {
                 start: (map(.start) | min), end: (map(.end) | max),
-                candidates: [.[0].candidates[] as $c | $c + {days: [.[] as $p | $p.candidates[] | select(.candidate_id == $c.candidate_id) | .days[]] | sort_by(.date)}]
+                candidates: [.[0].candidates[] as $c | $c + {days: [.[] as $p | $p.candidates[] | select(.candidate_id == $c.candidate_id) | .days[]] | sort_by(.date)}],
+                articles: ([.[].articles[]?] | sort_by(.date, .url))
               }' $(for p in $pieces; do echo "$p/live.json"; done) > merged.json
             # Named after the fetch date it records, as the ingest checks.
             mv merged.json "merged/$(jq -r '.fetched_at[:10]' merged.json)-backfill.json"

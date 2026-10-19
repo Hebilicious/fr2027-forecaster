@@ -26,10 +26,14 @@ use std::collections::BTreeMap;
 use std::io::{Cursor, Read};
 use std::sync::Mutex;
 
-use fr2027_collectors::{gdelt::DayCount, names::NameMatcher, sources::SourcesConfig};
+use fr2027_collectors::{
+    gdelt::{ArticleRecord, DayCount, DayStance, Reached},
+    names::NameMatcher,
+    sources::SourcesConfig,
+};
 use jiff::{ToSpan, civil::Date};
 
-use crate::{Client, Error, Result};
+use crate::{Client, Error, Result, article, typesafe::Jev};
 
 const FILES: &str = "https://data.gdeltproject.org/gdeltv2";
 /// How long one file may take to download.
@@ -41,6 +45,7 @@ pub const FIRST_DAY: Date = jiff::civil::date(2015, 2, 19);
 
 /// Columns of an article's address, its tone, its translation note, and the extras holding its
 /// title (0-based, GKG 2.1).
+const DATE: usize = 1;
 const URL: usize = 4;
 const TONE: usize = 15;
 const TRANSLATION: usize = 25;
@@ -48,10 +53,11 @@ const EXTRAS: usize = 26;
 /// The minutes of each hour GDELT publishes a file at.
 const MINUTES: [u8; 4] = [0, 15, 30, 45];
 
-/// A candidate the counts are kept for.
+/// A candidate the counts are kept for, with the full name Jev is asked about.
 #[derive(Clone, Debug)]
 pub struct Person {
     pub candidate_id: String,
+    pub full_name: String,
 }
 
 impl Person {
@@ -74,9 +80,10 @@ impl Matcher {
     /// `candidates`: each candidate's id and names, as in config/sources.yaml.
     pub fn new(candidates: &BTreeMap<String, fr2027_collectors::sources::CandidateSources>) -> Self {
         let people = candidates
-            .keys()
-            .map(|id| Person {
+            .iter()
+            .map(|(id, c)| Person {
                 candidate_id: id.clone(),
+                full_name: c.names.first().cloned().unwrap_or_else(|| id.clone()),
             })
             .collect();
         let sources = SourcesConfig {
@@ -91,6 +98,15 @@ impl Matcher {
 
     pub fn people(&self) -> &[Person] {
         &self.people
+    }
+
+    /// Whether an article's text names the candidate, in any case.
+    fn names_in_text(&self, text: &str, id: &str) -> bool {
+        self.names
+            .find(text)
+            .iter()
+            .chain(&self.names.find_any_case(text))
+            .any(|found| found == id)
     }
 
     /// The candidates an article's title or address names.
@@ -113,6 +129,19 @@ pub struct FileCounts {
     pub french_tone: f64,
     pub counts: Vec<u64>,
     pub tone: Vec<f64>,
+    /// The articles whose headline names a candidate.
+    pub matched: Vec<Matched>,
+}
+
+/// An article whose headline names at least one candidate.
+#[derive(Clone, Debug, PartialEq)]
+pub struct Matched {
+    /// The record's DATE, as an ISO timestamp.
+    pub seen_at: String,
+    pub url: String,
+    pub title: Option<String>,
+    pub candidate_ids: Vec<String>,
+    pub tone: f64,
 }
 
 pub fn count_file(zipped: &[u8], matcher: &Matcher) -> Result<FileCounts> {
@@ -144,15 +173,42 @@ fn count_lines(text: &[u8], matcher: &Matcher) -> FileCounts {
         file.french_tone += tone;
         let url = String::from_utf8_lossy(fields.get(URL).copied().unwrap_or_default());
         let extras = String::from_utf8_lossy(fields.get(EXTRAS).copied().unwrap_or_default());
-        let named = matcher.named(title(&extras).as_deref(), &url);
+        let title = title(&extras);
+        let named = matcher.named(title.as_deref(), &url);
         for (i, person) in people.iter().enumerate() {
             if named.contains(&person.candidate_id) {
                 file.counts[i] += 1;
                 file.tone[i] += tone;
             }
         }
+        if !named.is_empty() {
+            file.matched.push(Matched {
+                seen_at: seen_at(fields.get(DATE).copied().unwrap_or_default()),
+                url: url.into_owned(),
+                title,
+                candidate_ids: named,
+                tone,
+            });
+        }
     }
     file
+}
+
+/// A record's DATE (`20261016121500`) as `2026-10-16T12:15:00Z`; empty when malformed.
+fn seen_at(field: &[u8]) -> String {
+    let d = String::from_utf8_lossy(field);
+    if d.len() != 14 || !d.bytes().all(|b| b.is_ascii_digit()) {
+        return String::new();
+    }
+    format!(
+        "{}-{}-{}T{}:{}:{}Z",
+        &d[0..4],
+        &d[4..6],
+        &d[6..8],
+        &d[8..10],
+        &d[10..12],
+        &d[12..14]
+    )
 }
 
 /// The first number of V2Tone, the article's tone; 0 when the field is empty or unreadable.
@@ -262,6 +318,24 @@ struct Day {
     counts: Vec<u64>,
     tone: Vec<f64>,
     files: u32,
+    /// The day's matched articles, once each.
+    matched: BTreeMap<String, Matched>,
+}
+
+/// How to read the matched articles: the client their pages are fetched with, Jev, and how many to
+/// read at once.
+pub struct Reading<'a> {
+    pub pages: &'a Client,
+    pub jev: &'a Jev,
+    pub workers: usize,
+}
+
+/// What [`count_days`] found: each candidate's days, and, when the articles were read, every
+/// matched article with how it was read.
+#[derive(Debug, Default)]
+pub struct Counted {
+    pub candidates: Vec<(String, Vec<DayCount>)>,
+    pub articles: Vec<ArticleRecord>,
 }
 
 /// Each person's daily count of French articles naming them and their mean tone, from `start` to
@@ -269,14 +343,19 @@ struct Day {
 /// a time. `total_articles` and `total_tone` are the day's French articles and their mean tone;
 /// `files` is how many files the day had (GDELT's stream has gaps: a file it never published is not
 /// a failure, any other download error is). A day with no file at all is left out.
+///
+/// With `reading`, every article whose headline names a candidate is then read
+/// ([`crate::article::read`]) and Jev judges how it portrays each candidate it names; the days
+/// carry the sums ([`DayStance`]) and [`Counted::articles`] every article.
 pub fn count_days(
     client: &Client,
     matcher: &Matcher,
     start: Date,
     end: Date,
     workers: usize,
+    reading: Option<&Reading>,
     progress: &(dyn Fn(&str) + Sync),
-) -> Result<Vec<(String, Vec<DayCount>)>> {
+) -> Result<Counted> {
     let mut files = Vec::new();
     let mut day = start.max(FIRST_DAY);
     while day <= end {
@@ -330,6 +409,19 @@ pub fn count_days(
                             for (sum, t) in entry.tone.iter_mut().zip(file.tone) {
                                 *sum += t;
                             }
+                            // An article several files list keeps its earliest listing; a record
+                            // without a readable DATE takes its file's.
+                            for mut article in file.matched {
+                                if article.seen_at.is_empty() {
+                                    article.seen_at = format!("{day}T{hour:02}:{minute:02}:00Z");
+                                }
+                                match entry.matched.get(&article.url) {
+                                    Some(kept) if kept.seen_at <= article.seen_at => {}
+                                    _ => {
+                                        entry.matched.insert(article.url.clone(), article);
+                                    }
+                                }
+                            }
                         }
                         Ok(None) => {}
                         Err(error) => {
@@ -350,7 +442,33 @@ pub fn count_days(
         return Err(error);
     }
     let days = days.into_inner().expect("days");
-    Ok(people
+    let articles = match reading {
+        Some(reading) => read_articles(matcher, &days, reading, progress)?,
+        None => Vec::new(),
+    };
+    // Each candidate's day of read articles.
+    let mut stances: BTreeMap<(String, String), DayStance> = BTreeMap::new();
+    for article in &articles {
+        for id in &article.candidate_ids {
+            let entry = stances.entry((article.date.clone(), id.clone())).or_default();
+            match article.stance.get(id) {
+                None => entry.unreachable += 1,
+                Some(stance) if !stance.is_about() => entry.not_about += 1,
+                Some(stance) => {
+                    let about = stance.favourable + stance.unfavourable + stance.neutral;
+                    if about > 0.0 {
+                        entry.read += 1;
+                        entry.favourable += stance.favourable / about;
+                        entry.unfavourable += stance.unfavourable / about;
+                        entry.neutral += stance.neutral / about;
+                    }
+                }
+            }
+        }
+    }
+    let round = |x: f64| (x * 10_000.0).round() / 10_000.0;
+    let candidates = matcher
+        .people()
         .iter()
         .enumerate()
         .map(|(i, person)| {
@@ -363,11 +481,105 @@ pub fn count_days(
                     tone: mean(day.tone[i], day.counts[i]),
                     total_tone: mean(day.french_tone, day.french),
                     files: Some(day.files),
+                    stance: reading.map(|_| {
+                        let s = stances
+                            .get(&(date.to_string(), person.candidate_id.clone()))
+                            .copied()
+                            .unwrap_or_default();
+                        DayStance {
+                            favourable: round(s.favourable),
+                            unfavourable: round(s.unfavourable),
+                            neutral: round(s.neutral),
+                            ..s
+                        }
+                    }),
                 })
                 .collect();
             (person.candidate_id.clone(), counts)
         })
-        .collect())
+        .collect();
+    Ok(Counted { candidates, articles })
+}
+
+/// Reads every matched article of `days`, `reading.workers` at a time, and asks Jev about the
+/// candidates each one's headline names. An article whose text cannot be reached has no stance;
+/// a Jev failure (after its retries) stops the count.
+fn read_articles(
+    matcher: &Matcher,
+    days: &BTreeMap<Date, Day>,
+    reading: &Reading,
+    progress: &(dyn Fn(&str) + Sync),
+) -> Result<Vec<ArticleRecord>> {
+    let full_names: BTreeMap<&str, &str> = matcher
+        .people()
+        .iter()
+        .map(|p| (p.candidate_id.as_str(), p.full_name.as_str()))
+        .collect();
+    let queue: Vec<(Date, &Matched)> = days
+        .iter()
+        .flat_map(|(date, day)| day.matched.values().map(move |m| (*date, m)))
+        .collect();
+    let total = queue.len();
+    let queue = Mutex::new(queue.into_iter());
+    let records: Mutex<Vec<ArticleRecord>> = Mutex::new(Vec::new());
+    let failure: Mutex<Option<Error>> = Mutex::new(None);
+    std::thread::scope(|scope| {
+        for _ in 0..reading.workers.max(1) {
+            scope.spawn(|| {
+                loop {
+                    if failure.lock().expect("failure").is_some() {
+                        break;
+                    }
+                    let Some((date, matched)) = queue.lock().expect("queue").next() else {
+                        break;
+                    };
+                    let names_a_candidate =
+                        |text: &str| matched.candidate_ids.iter().any(|id| matcher.names_in_text(text, id));
+                    let text = article::read(reading.pages, &matched.url, date, &names_a_candidate);
+                    let mut record = ArticleRecord {
+                        date: date.to_string(),
+                        seen_at: matched.seen_at.clone(),
+                        url: matched.url.clone(),
+                        title: matched.title.clone().or(text.title.clone()),
+                        candidate_ids: matched.candidate_ids.clone(),
+                        tone: matched.tone,
+                        reached: text.reached,
+                        stance: BTreeMap::new(),
+                    };
+                    if text.reached != Reached::Unreachable {
+                        let asked: Vec<(String, String)> = matched
+                            .candidate_ids
+                            .iter()
+                            .map(|id| {
+                                (
+                                    id.clone(),
+                                    full_names.get(id.as_str()).copied().unwrap_or(id).to_string(),
+                                )
+                            })
+                            .collect();
+                        match reading.jev.stance(record.title.as_deref(), &text.body, &asked) {
+                            Ok(stance) => record.stance = stance,
+                            Err(error) => {
+                                *failure.lock().expect("failure") = Some(error);
+                                break;
+                            }
+                        }
+                    }
+                    let mut records = records.lock().expect("records");
+                    records.push(record);
+                    if records.len().is_multiple_of(500) {
+                        progress(&format!("{} of {total} articles read", records.len()));
+                    }
+                }
+            });
+        }
+    });
+    if let Some(error) = failure.into_inner().expect("failure") {
+        return Err(error);
+    }
+    let mut records = records.into_inner().expect("records");
+    records.sort_by(|a, b| (&a.date, &a.url).cmp(&(&b.date, &b.url)));
+    Ok(records)
 }
 
 /// A summed tone over `n` articles as their mean, to four decimals; `None` without articles.
@@ -399,6 +611,7 @@ mod tests {
     /// A GKG line with the fields the counts read.
     fn row(url: &str, tone: &str, note: &str, title: Option<&str>) -> String {
         let mut fields = vec![String::new(); 27];
+        fields[DATE] = "20261016121500".into();
         fields[URL] = url.into();
         fields[TONE] = tone.into();
         fields[TRANSLATION] = note.into();
@@ -477,6 +690,12 @@ mod tests {
         );
         assert_eq!(slug("https://example.org/a/%C3%A9douard-philippe"), "édouard philippe");
         assert_eq!(slug("https://example.org"), "");
+    }
+
+    #[test]
+    fn reads_when_gdelt_listed_an_article() {
+        assert_eq!(seen_at(b"20261016121500"), "2026-10-16T12:15:00Z");
+        assert_eq!(seen_at(b"2026101612"), "");
     }
 
     #[test]
