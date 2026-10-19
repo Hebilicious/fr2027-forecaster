@@ -1,0 +1,186 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-19T18:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-19T17:54:40Z",
+      "title": "Présidentielle 2027 : au lendemain des émeutes, le RN veut incarner le « parti de l’ordre »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-au-lendemain-des-emeutes-le-rn-veut-incarner-le-parti-de-l-ordre-20261019"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-19T17:48:47Z",
+      "title": "17 octobre : comment Jean-Luc Mélenchon s’est retrouvé à porter le costume du coupable idéal",
+      "url": "https://www.liberation.fr/politique/17-octobre-comment-jean-luc-melenchon-sest-retrouve-a-porter-le-costume-du-coupable-ideal-20261019_HXZL644UWFFABA5YHTIIX456QE/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-19T17:15:39Z",
+      "title": "«Un avant-goût de ce qu’on va subir si Le Pen l’emporte en 2027» : à Amilly, le maire RN sabre les subventions du centre d’art des Tanneries",
+      "url": "https://www.liberation.fr/culture/un-avant-gout-de-ce-quon-va-subir-si-le-pen-lemporte-en-2027-a-amilly-le-maire-rn-sabre-les-subventions-du-centre-dart-des-tanneries-20261019_BL5E7VXNSJFU7CD7WDBVZZTT3U/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T18:07:03Z",
+      "title": "Pillages, casseurs: \"C'est le RN qui récolte les fruits de cette situation\", déplore Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pillages-casseurs-c-est-le-rn-qui-recolte-les-fruits-de-cette-situation-deplore-gabriel-attal_VN-202610190833.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T18:04:11Z",
+      "title": "Pillages, casseurs: \"C'est le RN qui récolte les fruits de cette situation\", déclare Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-pillages-casseurs-c-est-le-rn-qui-recolte-les-fruits-de-cette-situation-declare-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202610190823.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T18:02:57Z",
+      "title": "Pillages, casseurs: \"C'est 30 ans de lâcheté et de laxisme\", estime Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-pillages-casseurs-c-est-30-ans-de-lachete-et-de-laxisme-estime-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202610190822.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T17:56:18Z",
+      "title": "Pillages, casseurs: \"On a un retard en France sur l'usage de la reconnaissance faciale et de l'IA\", observe Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-pillages-casseurs-on-a-un-retard-en-france-sur-l-usage-de-la-reconnaissance-faciale-et-de-l-ia-observe-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202610190819.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T17:55:06Z",
+      "title": "Interdiction des réseaux sociaux: \"C'est possible de le faire\", estime Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-interdiction-des-reseaux-sociaux-c-est-possible-de-le-faire-estime-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202610190818.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T17:47:37Z",
+      "title": "Pillages, casseurs: \"Il faut une mobilisation exceptionnelle des forces de l'ordre\", déclare Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-pillages-casseurs-il-faut-une-mobilisation-exceptionnelle-des-forces-de-l-ordre-declare-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202610190813.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T17:45:59Z",
+      "title": "Pillages, casseurs: \"C'est un traumatisme pour tous les Français\", déclare Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-pillages-casseurs-c-est-un-traumatisme-pour-tous-les-francais-declare-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202610190810.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T17:44:53Z",
+      "title": "Pillages, casseurs: \"Il faut des exemples\" pour rétablir l'ordre, lance Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-pillages-casseurs-il-faut-des-exemples-pour-retablir-l-ordre-lance-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202610190809.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
