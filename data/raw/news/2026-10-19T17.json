@@ -1,0 +1,142 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-19T17:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-19T17:15:01Z",
+      "title": "Présidentielle 2027 : face à l’impopularité d’Emmanuel Macron, Edouard Philippe et Gabriel Attal rejouent la stratégie de la rupture",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/19/presidentielle-2027-face-a-l-impopularite-d-emmanuel-macron-edouard-philippe-et-gabriel-attal-rejouent-la-strategie-de-la-rupture_6797573_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-19T16:39:50Z",
+      "title": "Chers casseurs, vous êtes les meilleurs agents électoraux de Marine Le Pen",
+      "url": "https://www.liberation.fr/idees-et-debats/opinions/chers-casseurs-vous-etes-les-meilleurs-agents-electoraux-de-marine-le-pen-20261019_R3GNOIT6HRBHPCZ3SVGGQGYZ2Q/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T16:34:45Z",
+      "title": "Violences du 17 octobre: Édouard Philippe affirme qu'il est \"indispensable que l'ordre revienne\"",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-edouard-philippe-affirme-qu-il-est-indispensable-que-l-ordre-revienne_VN-202610190735.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T16:33:35Z",
+      "title": "17 octobre: un rassemblement autour du maire du Havre, Édouard Philippe, perturbé par des manifestants",
+      "url": "https://www.bfmtv.com/politique/video-17-octobre-un-rassemblement-autour-du-maire-du-havre-edouard-philippe-perturbe-par-des-manifestants_VN-202610190734.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-19T16:00:08Z",
+      "title": "Après les pillages du 17 octobre, faut-il couper les réseaux sociaux ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/apres-les-pillages-du-17-octobre-faut-il-couper-les-reseaux-sociaux"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-19T16:37:00Z",
+      "title": "17-Octobre : le Rassemblement national se pose en parti de l'ordre face au gouvernement et à LFI",
+      "url": "https://www.france24.com/fr/france/20261019-france-17-octobre-face-au-chaos-rassemblement-national-se-pose-en-parti-de-l-ordre-face-au-gouvernement-et-lfi"
+    }
+  ],
+  "schema_version": "1.0"
+}
