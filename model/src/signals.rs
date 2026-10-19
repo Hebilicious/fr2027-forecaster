@@ -49,6 +49,18 @@
 //!
 //! A candidate with fewer than `tone_min_articles` articles in either window gets no tone tilt:
 //! the tone of a handful of articles is noise.
+//!
+//! **Stance momentum** reads the same articles for what they say about the candidate rather than
+//! their words' mood: Jev (TypeSafe's classifier) judges each article favourable, neutral or
+//! unfavourable to each candidate it names, leaving aside the opinions of the people it quotes.
+//! The tilt adds `stance_momentum_weight` times the change in the candidate's net stance, the
+//! favourable share minus the unfavourable share of the articles read, between the same windows;
+//! fewer than `stance_min_articles` read articles in either window give none:
+//!
+//! ```text
+//! S_c(window) = Σ_days (favourable_c − unfavourable_c) / Σ_days read_c
+//! p_c ∝ p_c · exp(stance_momentum_weight · (S_c(recent) − S_c(baseline)) · 2^(−days_to_election / momentum_half_life_days))
+//! ```
 
 use std::collections::BTreeMap;
 
@@ -70,6 +82,11 @@ pub enum SignalSource {
     /// The day's GDELT tone of the candidate's articles against every French article's, times their
     /// number of articles (`(tone_c − tone_all) · articles_c`), for tone momentum only.
     NewsTone,
+    /// The day's articles naming the candidate that Jev read and found about them, for stance
+    /// momentum only.
+    StanceRead,
+    /// Their favourable probabilities summed minus their unfavourable ones, for stance momentum only.
+    StanceNet,
 }
 
 /// Event detection settings, read from `config/model.yaml` (`signals`).
@@ -106,6 +123,11 @@ pub struct SignalParams {
     pub tone_momentum_weight: f64,
     /// Fewest articles in each window for a candidate's tone to count.
     pub tone_min_articles: f64,
+    /// Weight of stance momentum: the change in the candidate's net stance (favourable minus
+    /// unfavourable share of the articles Jev read) over the same windows.
+    pub stance_momentum_weight: f64,
+    /// Fewest articles read in each window for a candidate's stance to count.
+    pub stance_min_articles: f64,
     /// How fast a momentum tilt fades over the days left to the election: it halves every this
     /// many days, so far from the vote it counts for little.
     pub momentum_half_life_days: f64,
@@ -129,6 +151,8 @@ impl SignalParams {
             x_momentum_weight: 0.0,
             tone_momentum_weight: 0.0,
             tone_min_articles: 30.0,
+            stance_momentum_weight: 0.0,
+            stance_min_articles: 20.0,
             momentum_half_life_days: 10.0,
         }
     }
@@ -155,12 +179,15 @@ impl SignalParams {
         if !self.momentum_weight.is_finite()
             || !self.x_momentum_weight.is_finite()
             || !self.tone_momentum_weight.is_finite()
+            || !self.stance_momentum_weight.is_finite()
             || self.momentum_days == 0
         {
             return invalid("the momentum weights must be numbers and momentum_days positive");
         }
-        if !(self.tone_min_articles.is_finite() && self.tone_min_articles >= 1.0) {
-            return invalid("tone_min_articles must be at least 1");
+        if !(self.tone_min_articles.is_finite() && self.tone_min_articles >= 1.0)
+            || !(self.stance_min_articles.is_finite() && self.stance_min_articles >= 1.0)
+        {
+            return invalid("tone_min_articles and stance_min_articles must be at least 1");
         }
         Ok(())
     }
@@ -169,7 +196,7 @@ impl SignalParams {
         match source {
             SignalSource::Attention => self.attention_floor,
             SignalSource::News => self.news_floor,
-            SignalSource::XSupport | SignalSource::NewsTone => 0.0,
+            SignalSource::XSupport | SignalSource::NewsTone | SignalSource::StanceRead | SignalSource::StanceNet => 0.0,
         }
     }
 }
@@ -269,8 +296,9 @@ pub fn detect(signals: &Signals, field: &Field, params: &SignalParams, as_of: Da
 /// Each candidate's momentum tilt on the log scale (see the module notes), from values dated
 /// before `as_of`: `momentum_weight` times the log change of their share of attention, plus
 /// `x_momentum_weight` times the change in their X support share, plus `tone_momentum_weight`
-/// times the change in their relative news tone, decayed with `momentum_half_life_days` over the
-/// days left to `election`. 0 for a candidate without data.
+/// times the change in their relative news tone, plus `stance_momentum_weight` times the change in
+/// their net news stance, decayed with `momentum_half_life_days` over the days left to `election`.
+/// 0 for a candidate without data.
 pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: Date, election: Date) -> Vec<f64> {
     let n = field.len();
     let last = day_number(as_of) - 1;
@@ -283,10 +311,12 @@ pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: 
     const SHARE_FLOOR: f64 = 0.001;
     let mut sums = vec![0.0; n];
     let mut counts = vec![0usize; n];
-    let volume = params
-        .sources
-        .iter()
-        .filter(|s| !matches!(s, SignalSource::XSupport | SignalSource::NewsTone));
+    let volume = params.sources.iter().filter(|s| {
+        !matches!(
+            s,
+            SignalSource::XSupport | SignalSource::NewsTone | SignalSource::StanceRead | SignalSource::StanceNet
+        )
+    });
     for &source in volume.filter(|_| params.momentum_weight != 0.0) {
         let totals = |from: i32, to: i32| -> Vec<f64> {
             (0..n)
@@ -348,6 +378,25 @@ pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: 
         }
     };
 
+    // Stance: the change in the net stance of the articles Jev read, when both windows hold enough.
+    let stance_shift = |c: usize| -> f64 {
+        if params.stance_momentum_weight == 0.0 {
+            return 0.0;
+        }
+        let (Some(net), Some(read)) = (series(c, SignalSource::StanceNet), series(c, SignalSource::StanceRead)) else {
+            return 0.0;
+        };
+        let share = |from: i32, to: i32| {
+            let n: f64 = read.range(from..=to).map(|(_, v)| v).sum();
+            let sum: f64 = net.range(from..=to).map(|(_, v)| v).sum();
+            (n >= params.stance_min_articles).then(|| sum / n)
+        };
+        match (share(recent_start, last), share(baseline_start, recent_start - 1)) {
+            (Some(recent), Some(baseline)) => params.stance_momentum_weight * (recent - baseline),
+            _ => 0.0,
+        }
+    };
+
     let days = f64::from((day_number(election) - day_number(as_of)).max(0));
     let decay = (-std::f64::consts::LN_2 * days / params.momentum_half_life_days).exp();
     (0..n)
@@ -357,7 +406,7 @@ pub fn momentum(signals: &Signals, field: &Field, params: &SignalParams, as_of: 
             } else {
                 params.momentum_weight * sums[c] / counts[c] as f64
             };
-            (attention + x_shift(c) + tone_shift(c)) * decay
+            (attention + x_shift(c) + tone_shift(c) + stance_shift(c)) * decay
         })
         .collect()
 }
@@ -559,6 +608,29 @@ mod tests {
             vec![0.0, 0.0],
             "off at weight 0"
         );
+    }
+
+    #[test]
+    fn stance_momentum_follows_the_net_stance_of_the_articles_read() {
+        // r1: 10 articles read a day; net stance +0.2 per article through September, −0.3 from the 24th.
+        let mut s = Signals::new();
+        let start = day_number(date(2026, 8, 20));
+        for d in 0..42 {
+            let day = crate::date_from_day_number(start + d);
+            let net = if day >= date(2026, 9, 24) { -0.3 } else { 0.2 };
+            s.add("r1", SignalSource::StanceRead, day, 10.0);
+            s.add("r1", SignalSource::StanceNet, day, net * 10.0);
+            s.add("l1", SignalSource::StanceRead, day, 1.0);
+            s.add("l1", SignalSource::StanceNet, day, 1.0);
+        }
+        let p = SignalParams {
+            stance_momentum_weight: 0.5,
+            ..params()
+        };
+        let as_of = date(2026, 10, 1);
+        let tilt = momentum(&s, &field(), &p, as_of, as_of);
+        assert_eq!(tilt[0], 0.0, "7 read in a week is under stance_min_articles");
+        assert!((tilt[1] - 0.5 * (-0.3 - 0.2)).abs() < 1e-9, "{tilt:?}");
     }
 
     #[test]

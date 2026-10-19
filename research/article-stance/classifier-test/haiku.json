@@ -1,0 +1,26 @@
+```json
+[
+{"article": 1, "candidate": "Jean-Luc Mélenchon", "stance": "neutral"},
+{"article": 2, "candidate": "Emmanuel Macron", "stance": "not_about"},
+{"article": 2, "candidate": "Raphaël Glucksmann", "stance": "not_about"},
+{"article": 2, "candidate": "Édouard Philippe", "stance": "neutral"},
+{"article": 2, "candidate": "Gabriel Attal", "stance": "unfavourable"},
+{"article": 3, "candidate": "Edouard Philippe", "stance": "neutral"},
+{"article": 4, "candidate": "Marine Le Pen", "stance": "neutral"},
+{"article": 5, "candidate": "Édouard Philippe", "stance": "not_about"},
+{"article": 6, "candidate": "Edouard Philippe", "stance": "neutral"},
+{"article": 7, "candidate": "Marine Le Pen", "stance": "neutral"},
+{"article": 7, "candidate": "Jean-Luc Mélenchon", "stance": "neutral"},
+{"article": 7, "candidate": "Raphaël Glucksmann", "stance": "favourable"},
+{"article": 7, "candidate": "Edouard Philippe", "stance": "neutral"},
+{"article": 8, "candidate": "Marine Le Pen", "stance": "neutral"},
+{"article": 8, "candidate": "Jean-Luc Mélenchon", "stance": "neutral"},
+{"article": 8, "candidate": "Raphaël Glucksmann", "stance": "favourable"},
+{"article": 8, "candidate": "Edouard Philippe", "stance": "unfavourable"},
+{"article": 9, "candidate": "Emmanuel Macron", "stance": "unfavourable"},
+{"article": 9, "candidate": "Marine Le Pen", "stance": "unfavourable"},
+{"article": 9, "candidate": "Jean-Luc Mélenchon", "stance": "favourable"},
+{"article": 9, "candidate": "Raphaël Glucksmann", "stance": "favourable"},
+{"article": 10, "candidate": "Édouard Philippe", "stance": "not_about"}
+]
+```

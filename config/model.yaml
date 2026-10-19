@@ -2,7 +2,7 @@
 # research/LOG.md; values marked "provisional" are placeholders until the backtests in
 # milestone 3 fit them.
 
-model_version: "0.6.0"
+model_version: "0.7.0"
 seed: 20270418
 simulations: 50000
 round1_date: 2027-04-18
@@ -113,6 +113,14 @@ signals:
   # best on the 2017 and 2022 replays (research/LOG.md, 2026-10-18).
   tone_momentum_weight: 0.05
   tone_min_articles: 30
+  # Stance momentum: the same tilt from the change in the candidate's net stance in the press, the
+  # favourable share minus the unfavourable share of the articles naming them that Jev (TypeSafe's
+  # classifier) read, last momentum_days against the baseline_days before, times
+  # stance_momentum_weight. A candidate with fewer than stance_min_articles articles read in either
+  # window gets none. The weight is the one that scored best on the 2017 and 2022 replays
+  # (research/LOG.md, 2026-10-19).
+  stance_momentum_weight: 0.25
+  stance_min_articles: 20
 
 market_blend:
   # p_blend ∝ exp(w ln p_model + (1 − w) ln p_market) (model/src/blend.rs), for who wins over the

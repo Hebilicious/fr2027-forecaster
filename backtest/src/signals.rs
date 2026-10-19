@@ -93,6 +93,10 @@ impl ElectionSignals {
             if let Some(relative) = relative_tone(row.tone, row.total_tone, row.articles) {
                 signals.add(&row.candidate_id, SignalSource::NewsTone, row.date, relative);
             }
+            if let (Some(read), Some(fav), Some(unfav)) = (row.stance_read, row.favourable, row.unfavourable) {
+                signals.add(&row.candidate_id, SignalSource::StanceRead, row.date, read as f64);
+                signals.add(&row.candidate_id, SignalSource::StanceNet, row.date, fav - unfav);
+            }
         }
         signals
     }

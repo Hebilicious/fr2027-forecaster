@@ -384,16 +384,37 @@
         "momentum_weight",
         "x_momentum_weight",
         "tone_momentum_weight",
+        "stance_momentum_weight",
         "spikes",
         "momentum"
       ],
       "properties": {
-        "sources": { "type": "array", "items": { "enum": ["attention", "news"] } },
-        "shock_sd": { "type": "number", "minimum": 0 },
-        "half_life_days": { "type": "number", "exclusiveMinimum": 0 },
-        "momentum_weight": { "type": "number" },
-        "x_momentum_weight": { "type": "number" },
-        "tone_momentum_weight": { "type": "number" },
+        "sources": {
+          "type": "array",
+          "items": {
+            "enum": ["attention", "news"]
+          }
+        },
+        "shock_sd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "half_life_days": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "momentum_weight": {
+          "type": "number"
+        },
+        "x_momentum_weight": {
+          "type": "number"
+        },
+        "tone_momentum_weight": {
+          "type": "number"
+        },
+        "stance_momentum_weight": {
+          "type": "number"
+        },
         "momentum": {
           "description": "Candidates whose simulated round 1 vote the momentum tilts, by the log factor applied.",
           "type": "array",
@@ -401,7 +422,14 @@
             "type": "object",
             "additionalProperties": false,
             "required": ["candidate_id", "tilt"],
-            "properties": { "candidate_id": { "type": "string" }, "tilt": { "type": "number" } }
+            "properties": {
+              "candidate_id": {
+                "type": "string"
+              },
+              "tilt": {
+                "type": "number"
+              }
+            }
           }
         },
         "spikes": {
@@ -411,8 +439,12 @@
             "additionalProperties": false,
             "required": ["candidate_id", "date", "score", "ratios"],
             "properties": {
-              "candidate_id": { "type": "string" },
-              "date": { "$ref": "#/$defs/date" },
+              "candidate_id": {
+                "type": "string"
+              },
+              "date": {
+                "$ref": "#/$defs/date"
+              },
               "score": {
                 "type": "number",
                 "description": "Mean over the sources of the log of the day's value over its baseline."
@@ -420,7 +452,14 @@
               "ratios": {
                 "type": "object",
                 "additionalProperties": false,
-                "properties": { "attention": { "type": "number" }, "news": { "type": "number" } }
+                "properties": {
+                  "attention": {
+                    "type": "number"
+                  },
+                  "news": {
+                    "type": "number"
+                  }
+                }
               }
             }
           }
@@ -435,7 +474,10 @@
         "additionalProperties": false,
         "required": ["scale", "candidates"],
         "properties": {
-          "scale": { "type": "number", "minimum": 0 },
+          "scale": {
+            "type": "number",
+            "minimum": 0
+          },
           "candidates": {
             "type": "array",
             "items": {
@@ -443,9 +485,19 @@
               "additionalProperties": false,
               "required": ["candidate_id", "p_qualify_r1", "p_win"],
               "properties": {
-                "candidate_id": { "type": "string" },
-                "p_qualify_r1": { "type": "number", "minimum": 0, "maximum": 1 },
-                "p_win": { "type": "number", "minimum": 0, "maximum": 1 }
+                "candidate_id": {
+                  "type": "string"
+                },
+                "p_qualify_r1": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "p_win": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
               }
             }
           }
@@ -458,8 +510,14 @@
       "additionalProperties": false,
       "required": ["hand_weight", "market_fetched_at", "candidates"],
       "properties": {
-        "hand_weight": { "type": "number", "minimum": 0, "maximum": 1 },
-        "market_fetched_at": { "type": ["string", "null"] },
+        "hand_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "market_fetched_at": {
+          "type": ["string", "null"]
+        },
         "candidates": {
           "type": "array",
           "items": {
@@ -467,9 +525,19 @@
             "additionalProperties": false,
             "required": ["candidate_id", "p_run_hand", "p_market"],
             "properties": {
-              "candidate_id": { "type": "string" },
-              "p_run_hand": { "type": "number", "minimum": 0, "maximum": 1 },
-              "p_market": { "type": "number", "minimum": 0, "maximum": 1 }
+              "candidate_id": {
+                "type": "string"
+              },
+              "p_run_hand": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "p_market": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
             }
           }
         }
@@ -497,7 +565,14 @@
             "type": "object",
             "additionalProperties": false,
             "required": ["candidate_id", "date"],
-            "properties": { "candidate_id": { "type": "string" }, "date": { "$ref": "#/$defs/date" } }
+            "properties": {
+              "candidate_id": {
+                "type": "string"
+              },
+              "date": {
+                "$ref": "#/$defs/date"
+              }
+            }
           }
         },
         "p_win_delta": {

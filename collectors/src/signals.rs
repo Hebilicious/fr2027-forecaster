@@ -35,6 +35,16 @@ pub fn read_clean(repo: &Repo) -> Result<Signals> {
                     (tone - all) * row.articles as f64,
                 );
             }
+            // How Jev read the day's articles (fetches since 2026-10-19).
+            if let Some(stance) = row.stance() {
+                signals.add(&row.candidate_id, SignalSource::StanceRead, date, stance.read as f64);
+                signals.add(
+                    &row.candidate_id,
+                    SignalSource::StanceNet,
+                    date,
+                    stance.favourable - stance.unfavourable,
+                );
+            }
         }
     }
     if present(grok::CLEAN_FILE) {

@@ -44,6 +44,8 @@ pub struct Variant {
     pub momentum_weight: Option<f64>,
     /// The tone momentum weight (default: none).
     pub tone_momentum_weight: Option<f64>,
+    /// The stance momentum weight (default: none).
+    pub stance_momentum_weight: Option<f64>,
     /// Whether spikes may add variance (default: yes); off to score momentum alone.
     pub widening: Option<bool>,
 }
@@ -63,6 +65,7 @@ impl Variant {
             },
             momentum_weight: self.momentum_weight.unwrap_or(0.0),
             tone_momentum_weight: self.tone_momentum_weight.unwrap_or(0.0),
+            stance_momentum_weight: self.stance_momentum_weight.unwrap_or(0.0),
             ..base.clone()
         }
     }
@@ -222,6 +225,7 @@ pub fn run(
             news_floor: None,
             momentum_weight: None,
             tone_momentum_weight: None,
+            stance_momentum_weight: None,
             widening: None,
         },
         signals: published

@@ -58,6 +58,7 @@ pub fn run(repo: &Repo, args: &Args) -> Result<()> {
                         SignalSource::News => "articles",
                         SignalSource::XSupport => "X support",
                         SignalSource::NewsTone => "news tone",
+                        SignalSource::StanceRead | SignalSource::StanceNet => "news stance",
                     };
                     format!("{name} {ratio:.1}× their baseline")
                 })

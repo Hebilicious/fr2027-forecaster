@@ -66,6 +66,12 @@ function size(flag: ForwardFlag): string {
             </td>
           </tr>
           <tr>
+            <th scope="row">{{ content.stanceMomentum }}</th>
+            <td class="num">
+              {{ signals?.stance_momentum_weight ? decimal(signals.stance_momentum_weight, 2, locale) : content.off }}
+            </td>
+          </tr>
+          <tr>
             <th scope="row">{{ content.ballot }}</th>
             <td class="num">{{ ballotWeight > 0 ? percent(ballotWeight, 0, locale) : content.off }}</td>
           </tr>
