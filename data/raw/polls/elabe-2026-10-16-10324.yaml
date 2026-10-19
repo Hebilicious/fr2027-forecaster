@@ -1,0 +1,136 @@
+schema_version: "1.0"
+poll_id: elabe-2026-10-16-10324
+supersedes: elabe-2026-10-16-bfmtv
+firm: elabe
+sponsor: BFMTV / La Tribune Dimanche
+field_start: "2026-10-14"
+field_end: "2026-10-16"
+published_at: "2026-10-17"
+sample_size: 1701
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10324-pres-iv-elabe-17-octobre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10324-pres-iv-elabe-17-octobre.pdf
+index_url: null
+retrieved_at: 2026-10-18T20:45Z
+entry: primary
+notes: >-
+  Entered from Commission notice 10324. Sample of 1,701 adults including 1,553
+  registered voters; voting intentions count only registered voters who intend to
+  vote, as a share of those expressing a choice. First published on elabe.fr on 17
+  October 2026 at 20:30.
+agent:
+  name: Grok Bot fr2027
+  run_id: checks-2026-10-18T20:39Z
+  skill_version: checks-1
+scenarios:
+- label: Tondelier+Glucksmann+Philippe+Villepin
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 1
+    dupont_aignan: 2.5
+    glucksmann: 15.5
+    le_pen: 32.5
+    melenchon: 15
+    philippe: 16.5
+    retailleau: 7
+    roussel: 1.5
+    tondelier: 3
+    villepin: 2
+    zemmour: 3.5
+- label: Tondelier+Glucksmann+Attal+Villepin
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 1
+    attal: 10.5
+    dupont_aignan: 2
+    glucksmann: 16.5
+    le_pen: 33.5
+    melenchon: 16
+    retailleau: 9.5
+    roussel: 2
+    tondelier: 2.5
+    villepin: 3
+    zemmour: 3.5
+- label: Tondelier+Glucksmann+Philippe+Lisnard
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 3
+    glucksmann: 15
+    le_pen: 31.5
+    lisnard: 5.5
+    melenchon: 15.5
+    philippe: 15.5
+    retailleau: 6.5
+    roussel: 1.5
+    tondelier: 2.5
+    zemmour: 3
+- label: Ruffin+Glucksmann+Attal+Lisnard
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 1
+    attal: 9.5
+    dupont_aignan: 2.5
+    glucksmann: 16.5
+    le_pen: 31
+    lisnard: 6.5
+    melenchon: 16
+    retailleau: 9
+    roussel: 1.5
+    ruffin: 3
+    zemmour: 3.5
+- label: Tondelier+Glucksmann+Attal+Philippe
+  round: 1
+  scenario_id: S5
+  shares:
+    arthaud: 0.5
+    attal: 4.5
+    dupont_aignan: 3
+    glucksmann: 15.5
+    le_pen: 32.5
+    melenchon: 15.5
+    philippe: 13.5
+    retailleau: 7.5
+    roussel: 1.5
+    tondelier: 2.5
+    zemmour: 3.5
+- label: Tondelier+Glucksmann+Polony+Philippe
+  round: 1
+  scenario_id: S6
+  shares:
+    arthaud: 1
+    dupont_aignan: 2.5
+    glucksmann: 16
+    le_pen: 33.5
+    melenchon: 15
+    philippe: 16.5
+    polony: 1.5
+    retailleau: 7.5
+    roussel: 1
+    tondelier: 2.5
+    zemmour: 3
+- label: Melenchon v Le Pen
+  round: 2
+  scenario_id: H1
+  shares:
+    le_pen: 69
+    melenchon: 31
+- label: Glucksmann v Le Pen
+  round: 2
+  scenario_id: H2
+  shares:
+    glucksmann: 46.5
+    le_pen: 53.5
+- label: Philippe v Le Pen
+  round: 2
+  scenario_id: H3
+  shares:
+    le_pen: 52.5
+    philippe: 47.5

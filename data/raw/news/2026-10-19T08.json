@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-19T08:46:38Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T08:35:07Z",
+      "title": "Violences du 17 octobre: Raphaël Glucksmann appelle à une réponse \"extrêmement ferme\" des autorités",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/violences-du-17-octobre-raphael-glucksmann-appelle-a-une-reponse-extremement-ferme-des-autorites_AN-202610190326.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Violences du 17 octobre : Gabriel Attal estime que « le gouvernement a failli » et appelle à décréter l’état d’urgence",
+      "url": "https://www.leparisien.fr/politique/violences-du-17-octobre-gabriel-attal-estime-que-le-gouvernement-a-failli-et-appelle-a-decreter-letat-durgence-19-10-2026-XEGPPEUVJRFXPI3A67REK5DFJQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
