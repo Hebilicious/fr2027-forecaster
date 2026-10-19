@@ -1,0 +1,170 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-19T10:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T10:01:50Z",
+      "title": "Violences du 17 octobre: Jordan Bardella dénonce le \"terrible aveu d'impuissance\" du gouvernement",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-jordan-bardella-denonce-le-terrible-aveu-d-impuissance-du-gouvernement_VN-202610190408.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T09:32:55Z",
+      "title": "Violences du 17 octobre: \"Le gouvernement a failli\", accuse Jordan Bardella (RN)",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-le-gouvernement-a-failli-accuse-jordan-bardella-rn_VN-202610190369.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T09:28:57Z",
+      "title": "Violences du 17 octobre: \"L'État doit tenir et reprendre le contrôle maintenant ou jamais\", affirme Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-l-etat-doit-tenir-et-reprendre-le-controle-maintenant-ou-jamais-affirme-jordan-bardella-president-du-rn_VN-202610190366.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T09:19:24Z",
+      "title": "Jordan Bardella appelle au déploiement de \"tous les moyens légaux possibles\" pour \"ramener l'ordre et la sécurité partout sur le territoire national\"",
+      "url": "https://www.bfmtv.com/politique/video-jordan-bardella-appelle-au-deploiement-de-tous-les-moyens-legaux-possibles-pour-ramener-l-ordre-et-la-securite-partout-sur-le-territoire-national_VN-202610190361.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T09:14:12Z",
+      "title": "Jordan Bardella: \"Les rues de Paris, de Marseille, de Lyon, de Lille, de Limoges ou Valence, ont été livrées aux casseurs et aux prédateurs sous les yeux d'un pouvoir public débordé\"",
+      "url": "https://www.bfmtv.com/politique/video-jordan-bardella-les-rues-de-paris-de-marseille-de-lyon-de-lille-de-limoges-ou-valence-ont-ete-livrees-aux-casseurs-et-aux-predateurs-sous-les-yeux-d-un-pouvoir-public-deborde_VN-202610190360.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T09:09:36Z",
+      "title": "Violences du 17 octobre: Jordan Bardella dénonce \"le terrible aveu d'impuissance\" du gouvernement",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-jordan-bardella-denonce-le-terrible-aveu-d-impuissance-du-gouvernement_VN-202610190357.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T08:59:22Z",
+      "title": "La porte-parole du gouvernement affirme que Jean-Luc Mélenchon prône \"une forme de sédition avec la République\"",
+      "url": "https://www.bfmtv.com/politique/gouvernement/la-porte-parole-du-gouvernement-affirme-que-jean-luc-melenchon-prone-une-forme-de-sedition-avec-la-republique_AP-202610190342.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Glucksmann appelle à une réponse « extrêmement ferme » aux violences sinon Le Pen sera « bénéficiaire du chaos »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-glucksmann-appelle-a-une-reponse-extremement-ferme-aux-violences-sinon-le-pen-sera-beneficiaire-du-chaos-19-10-2026-7FR74WEWJ5EYXCF3PRD4M6SHQA.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Édouard Philippe, Raphaël Glucksmann et Jean-Luc Mélenchon au coude à coude dans un nouveau sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-edouard-philippe-raphael-glucksmann-et-jean-luc-melenchon-au-coude-a-coude-dans-un-nouveau-sondage-19-10-2026-JULD5LZWRBGILHZQYPOAH45U6I.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
