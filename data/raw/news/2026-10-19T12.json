@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-19T12:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T11:25:50Z",
+      "title": "Violences et pillages: Raphaël Glucksmann appelle l'État à \"sortir de l'impuissance\"",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-violences-et-pillages-raphael-glucksmann-appelle-l-etat-a-sortir-de-l-impuissance_VN-202610190481.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T11:21:55Z",
+      "title": "Raphaël Glucksmann, candidat PS-Place publique à l'élection présidentielle, appelle à \"traquer\" les casseurs et à des \"sanctions lourdes\"",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-raphael-glucksmann-candidat-ps-place-publique-a-l-election-presidentielle-appelle-a-traquer-les-casseurs-et-a-des-sanctions-lourdes_VN-202610190474.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T11:20:04Z",
+      "title": "Violences et pillages: \"Il faut désormais que l'État sorte de l'impuissance\", affirme Raphaël Glucksmann, candidat PS-Place publique à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-violences-et-pillages-il-faut-desormais-que-l-etat-sorte-de-l-impuissance-affirme-raphael-glucksmann-candidat-ps-place-publique-a-l-election-presidentielle_VN-202610190471.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
