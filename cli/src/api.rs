@@ -655,6 +655,8 @@ fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str, volume_since: 
                 "candidate_id": r.candidate_id,
                 "articles": r.articles,
                 "total_articles": r.total_articles,
+                "tone": r.tone,
+                "total_tone": r.total_tone,
             }))
             .collect::<Vec<_>>(),
     }))
