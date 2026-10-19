@@ -1,18 +1,20 @@
 name: Backtest signals
 
-# Fetches a past election's page views or news volume (`fr2027 backtest-signals`) on a GitHub
-# runner and uploads the files as an artifact, to be committed by hand into data/backtest/<year>/.
-# The news volume reads about 9,000 of GDELT's raw files a year (some 60 GB); a runner's network
-# does it faster than a home connection.
+# Fetches a past election's page views or news volume (`fr2027 backtest-signals`), or the live
+# news volume since 1 August 2026 (`fr2027 collect gdelt --backfill`), on GitHub runners, and
+# uploads one merged artifact per target, to be committed by hand into data/backtest/<year>/ or
+# data/raw/gdelt/. The news volume reads every one of GDELT's raw files, 96 a day: about 35,000
+# a year, 400 to 900 GB, each downloaded, read for its French records and dropped. Each target is
+# cut into 32 runs of days, one runner each.
 #
-# Run it from the Actions tab, or push a branch named backtest-signals/<anything> to fetch every
-# election's news volume.
+# Run it from the Actions tab, or push a branch named backtest-signals/<year or live> to fetch
+# that target's news volume, or backtest-signals/<anything else> for every election and live.
 
 on:
   workflow_dispatch:
     inputs:
       year:
-        description: "Election year, as in config/backtest.yaml"
+        description: "Election year, as in config/backtest.yaml, or live"
         required: true
         type: string
       source:
@@ -28,38 +30,48 @@ permissions:
   contents: read
 
 jobs:
-  # The elections to fetch: the one given by hand; on a push, the year a branch named
-  # backtest-signals/<year> ends with, or every election in config/backtest.yaml.
+  # The targets to fetch: the one given by hand; on a push, the year (or live) a branch named
+  # backtest-signals/<target> ends with, or every election with signals and live.
   plan:
     runs-on: ubuntu-24.04
     outputs:
       chunks: ${{ steps.chunks.outputs.chunks }}
+      targets: ${{ steps.chunks.outputs.targets }}
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           persist-credentials: false
-      # Each election's window (data/backtest/<year>/signals.yaml) cut into 8 runs of days, one
-      # runner each: a year of GDELT files is about 60 GB.
+      # Each target's window cut into 32 runs of days, one runner each: a year of GDELT files is
+      # 400 to 900 GB. An election's window is in data/backtest/<year>/signals.yaml; live runs
+      # from 1 August 2026 to yesterday.
       - id: chunks
         env:
           INPUT_YEAR: ${{ inputs.year }}
           BRANCH: ${{ github.ref_name }}
         run: |
           if [ -n "$INPUT_YEAR" ]; then
-            years="$INPUT_YEAR"
-          elif [[ "$BRANCH" =~ /([0-9]{4})$ ]]; then
-            years="${BASH_REMATCH[1]}"
+            targets="$INPUT_YEAR"
+          elif [[ "$BRANCH" =~ /([0-9]{4}|live)$ ]]; then
+            targets="${BASH_REMATCH[1]}"
           else
-            years=$(sed -n 's/^  - { year: \([0-9]\{4\}\),.*/\1/p' config/backtest.yaml | paste -sd' ' -)
+            # Only the elections that have signals: data/backtest/<year>/signals.yaml.
+            years=$(sed -n 's/^  - { year: \([0-9]\{4\}\),.*/\1/p' config/backtest.yaml | while read -r y; do
+              [ -f "data/backtest/$y/signals.yaml" ] && echo "$y"
+            done | paste -sd' ' -)
+            targets="$years live"
           fi
           chunks="[]"
-          for y in $years; do
-            [[ "$y" =~ ^[0-9]{4}$ ]] || { echo "::error::bad year $y"; exit 1; }
-            file="data/backtest/$y/signals.yaml"
-            start=$(sed -n 's/^start: //p' "$file"); end=$(sed -n 's/^end: //p' "$file")
+          for y in $targets; do
+            if [ "$y" = live ]; then
+              start=2026-08-01; end=$(date -ud yesterday +%F)
+            else
+              [[ "$y" =~ ^[0-9]{4}$ ]] || { echo "::error::bad target $y"; exit 1; }
+              file="data/backtest/$y/signals.yaml"
+              start=$(sed -n 's/^start: //p' "$file"); end=$(sed -n 's/^end: //p' "$file")
+            fi
             days=$(( ($(date -ud "$end" +%s) - $(date -ud "$start" +%s)) / 86400 + 1 ))
-            size=$(( (days + 7) / 8 ))
-            for i in $(seq 0 7); do
+            size=$(( (days + 31) / 32 ))
+            for i in $(seq 0 31); do
               from=$(date -ud "$start + $((i * size)) days" +%F)
               to=$(date -ud "$start + $((i * size + size - 1)) days" +%F)
               [[ "$from" > "$end" ]] && break
@@ -68,12 +80,13 @@ jobs:
             done
           done
           echo "chunks=$chunks" >> "$GITHUB_OUTPUT"
+          echo "targets=$(jq -cn --arg t "$targets" '$t | split(" ")')" >> "$GITHUB_OUTPUT"
 
   fetch:
     name: fetch ${{ matrix.year }} ${{ matrix.start }}
     needs: plan
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    timeout-minutes: 360
     strategy:
       fail-fast: false
       matrix:
@@ -105,17 +118,66 @@ jobs:
           END: ${{ matrix.end }}
           SOURCE: ${{ inputs.source || 'news' }}
         run: |
-          [[ "$YEAR" =~ ^[0-9]{4}$ ]] || { echo "::error::year must be YYYY"; exit 1; }
+          mkdir -p out
+          if [ "$YEAR" = live ]; then
+            target/release/fr2027 collect gdelt --backfill --start "$START" --end "$END"
+            # The one raw file this run wrote, beside those already in the repository.
+            git ls-files --others --exclude-standard data/raw/gdelt | xargs -I{} cp {} out/live.json
+            exit 0
+          fi
+          [[ "$YEAR" =~ ^[0-9]{4}$ ]] || { echo "::error::year must be YYYY or live"; exit 1; }
           case "$SOURCE" in
             news | attention) only=(--only "$SOURCE") ;;
             both) only=() ;;
             *) echo "::error::unknown source $SOURCE"; exit 1 ;;
           esac
           target/release/fr2027 backtest-signals "$YEAR" "${only[@]}" --start "$START" --end "$END"
+          for f in gdelt.csv attention.csv; do
+            if [ -n "$(git status --porcelain "data/backtest/$YEAR/$f")" ]; then cp "data/backtest/$YEAR/$f" "out/$f"; fi
+          done
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: backtest-signals-${{ matrix.year }}-${{ matrix.start }}
-          path: |
-            data/backtest/${{ matrix.year }}/gdelt.csv
-            data/backtest/${{ matrix.year }}/attention.csv
+          path: out/
+          if-no-files-found: error
+
+  # One artifact per target: an election's CSV pieces concatenated in date order, or the live
+  # pieces' days joined into one raw file, data/raw/gdelt/<today>-backfill.json.
+  merge:
+    needs: [plan, fetch]
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        target: ${{ fromJSON(needs.plan.outputs.targets) }}
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: backtest-signals-${{ matrix.target }}-*
+          path: pieces
+      - env:
+          TARGET: ${{ matrix.target }}
+        run: |
+          mkdir -p merged
+          pieces=$(ls -d pieces/*/ | sort)
+          if [ "$TARGET" = live ]; then
+            jq -s '
+              .[0] + {
+                start: (map(.start) | min), end: (map(.end) | max),
+                candidates: [.[0].candidates[] as $c | $c + {days: [.[] as $p | $p.candidates[] | select(.candidate_id == $c.candidate_id) | .days[]] | sort_by(.date)}]
+              }' $(for p in $pieces; do echo "$p/live.json"; done) > merged.json
+            # Named after the fetch date it records, as the ingest checks.
+            mv merged.json "merged/$(jq -r '.fetched_at[:10]' merged.json)-backfill.json"
+            exit 0
+          fi
+          for f in gdelt.csv attention.csv; do
+            first=$(for p in $pieces; do [ -f "$p/$f" ] && echo "$p/$f"; done | head -1)
+            [ -z "$first" ] && continue
+            head -1 "$first" > "merged/$f"
+            for p in $pieces; do [ -f "$p/$f" ] && tail -n +2 "$p/$f" >> "merged/$f"; done
+          done
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: merged-${{ matrix.target }}
+          path: merged/
           if-no-files-found: error

@@ -51,6 +51,9 @@ Run project tools through their moon tasks (`moon run web:dev`, `moon run cli:se
 
 - When a backtest, a gate or a rule would leave a feature the owner asked for with no effect, stop and report it to the
   owner before finishing the work; don't deliver the feature switched off.
+- Never sample or drop part of a data source to save time, bandwidth or disk without the owner's approval: a collector
+  reads everything its source publishes, for the live data and the backtest history alike. A pull request that adds or
+  changes a collector states what share of the source it reads, and how that was checked.
 
 ## UI languages
 

@@ -1,11 +1,12 @@
 # Where the 2017 replays' page views and news volume come from (`fr2027 backtest-signals 2017`
 # writes attention.csv and gdelt.csv beside this file). Each candidate: the French Wikipedia
-# article, and the names GDELT is queried with, by config/sources.yaml's rule (the surname alone
-# only when it is not a common word or another well-known person's name). Every title was
-# checked on 2026-10-16 to exist without a redirect; Charlotte Marchandise has no article.
+# article, and the names a GDELT article's title or address is matched with, by
+# config/sources.yaml's rule (the surname alone only when it is not a common word or another
+# well-known person's name). Every title was checked on
+# 2026-10-16 to exist without a redirect; Charlotte Marchandise has no article.
 # The window starts 400 days before round 1: the replays see polls from 365 days out, and event
-# detection needs four weeks of history before that. GDELT's DOC API starts on 2017-01-01, so
-# news volume covers only the last 112 days before round 1; page views cover the whole window.
+# detection needs four weeks of history before that. News volume reads every GDELT file of the
+# window; its files hold no titles before 2018, so 2017's articles are matched by their address.
 start: 2016-03-19
 end: 2017-04-22
 candidates:

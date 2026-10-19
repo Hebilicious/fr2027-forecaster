@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "gdelt.schema.json",
   "title": "GDELT news volume",
-  "description": "data/raw/gdelt/YYYY-MM-DD.json (UTC day of the fetch): per candidate and day, how many French-language articles in GDELT's raw Global Knowledge Graph files (translation stream, the file at minute 00 of each hour) named the candidate in their title or their list of people, and how many French-language articles that sample held. A later fetch of the same day replaces an earlier one in data/clean/gdelt.csv.",
+  "description": "data/raw/gdelt/YYYY-MM-DD.json (UTC day of the fetch): per candidate and day, how many French-language articles in GDELT's raw Global Knowledge Graph files (translation stream) named the candidate in their title or their list of people, how many French-language articles the files held, and the mean GDELT tone of each. Fetches before 2026-10-18 read only the file at minute 00 of each hour and have no tone or files; later ones read every file. A later fetch of the same day replaces an earlier one in data/clean/gdelt.csv.",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "fetched_at", "start", "end", "candidates"],
@@ -31,7 +31,21 @@
               "properties": {
                 "date": { "$ref": "#/$defs/date" },
                 "articles": { "type": "integer", "minimum": 0 },
-                "total_articles": { "type": "integer", "minimum": 0 }
+                "total_articles": { "type": "integer", "minimum": 0 },
+                "tone": {
+                  "description": "Mean GDELT tone (V2Tone: positive minus negative words, in percent of the words) of the articles naming the candidate; null without any.",
+                  "type": ["number", "null"]
+                },
+                "total_tone": {
+                  "description": "Mean GDELT tone of every French article that day.",
+                  "type": ["number", "null"]
+                },
+                "files": {
+                  "description": "GDELT files read for the day (96 when none is missing).",
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 96
+                }
               }
             }
           }
