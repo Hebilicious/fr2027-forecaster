@@ -2,16 +2,16 @@
 import { computed, shallowRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { News } from "../../api/schemas"
-import { count, dateTime, percent, relativeTime, safeUrl, shortDate } from "../../format"
+import { count, dateTime, percent, points, relativeTime, safeUrl, shortDate } from "../../format"
 import { useNow } from "../../useNow"
-import { headlinesFor, headlinesInRange, nameOf, newsCounts, pressVolume } from "../../signals"
+import { TONE_MIN_ARTICLES, headlinesFor, headlinesInRange, nameOf, newsCounts, pressVolume } from "../../signals"
 import { useSignalRange } from "../../useSignalRange"
 import CandidateAvatar from "../CandidateAvatar.vue"
 import Sparkline from "../Sparkline.vue"
 import RangeControl from "./RangeControl.vue"
 
 // The press over the chosen period: headlines per candidate from the RSS feeds with their days, the headlines
-// themselves, and GDELT's count of French-language articles with its whole history.
+// themselves, and GDELT's count of French-language articles, their tone against the day's, and the whole history.
 const props = defineProps<{ news: News; names: ReadonlyMap<string, string> }>()
 const content = useIntlayer("news-section")
 const { locale } = useLocale()
@@ -33,6 +33,9 @@ const maxVolume = computed(() => Math.max(1, ...volume.value.rows.map((v) => v.a
 const failing = computed(() => props.news.feeds.filter((f) => f.status !== "ok").length)
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 const day = (date: string) => shortDate(date, locale.value)
+// GDELT's tone is a difference of word shares in percent: shown as points, + for warmer coverage than the day's.
+const tone = (t: number) => points(t / 100, locale.value)
+const toneClass = (t: number) => (t > 0.05 ? "warm" : t < -0.05 ? "cold" : "")
 </script>
 
 <template>
@@ -86,7 +89,7 @@ const day = (date: string) => shortDate(date, locale.value)
               })
             }}
           </p>
-          <ul class="bars">
+          <ul class="bars toned">
             <li v-for="(v, i) in volume.rows" :key="v.candidateId" :style="{ '--i': i }">
               <span class="bar-name">
                 <CandidateAvatar :id="v.candidateId" :name="v.name" :size="22" />
@@ -99,6 +102,15 @@ const day = (date: string) => shortDate(date, locale.value)
               >
                 {{ count(v.articles, locale) }}
               </span>
+              <span
+                v-if="v.tone !== null"
+                class="num tone"
+                :class="toneClass(v.tone)"
+                :title="content.toneLabel({ tone: tone(v.tone) }).value"
+              >
+                {{ tone(v.tone) }}
+              </span>
+              <span v-else class="num tone muted">—</span>
               <Sparkline
                 v-if="volume.window"
                 :points="v.daily"
@@ -108,6 +120,7 @@ const day = (date: string) => shortDate(date, locale.value)
             </li>
           </ul>
           <p class="muted small">{{ content.volumeNote }}</p>
+          <p class="muted small">{{ content.toneNote({ n: count(TONE_MIN_ARTICLES, locale) }) }}</p>
         </div>
       </div>
 
@@ -202,6 +215,26 @@ const day = (date: string) => shortDate(date, locale.value)
   align-items: center;
 }
 
+/* GDELT's rows carry the tone between the count and the line. */
+.bars.toned li {
+  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr) 3em 4.5em auto;
+}
+
+.tone {
+  text-align: right;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  color: var(--ink-2);
+}
+
+.tone.warm {
+  color: var(--series);
+}
+
+.tone.cold {
+  color: var(--accent);
+}
+
 .bar-name {
   display: flex;
   align-items: center;
@@ -285,6 +318,10 @@ const day = (date: string) => shortDate(date, locale.value)
 @media (max-width: 760px) {
   .bars li {
     grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 3em auto;
+  }
+
+  .bars.toned li {
+    grid-template-columns: minmax(0, 9rem) minmax(0, 1fr) 2.5em 4em auto;
   }
 }
 </style>

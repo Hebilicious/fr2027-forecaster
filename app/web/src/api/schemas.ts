@@ -273,12 +273,17 @@ const Feed = Schema.Struct({
 
 const NewsDay = Schema.Struct({ date: Schema.String, candidate_id: Schema.String, items: Schema.Finite })
 
-/** GDELT's French-language articles naming a candidate on a day, out of the day's sampled total. */
+/**
+ * GDELT's French-language articles naming a candidate on a day, out of the day's total, with the mean tone of those
+ * articles and of every French article that day (absent from older API builds, null before tone was kept).
+ */
 const NewsVolumeDay = Schema.Struct({
   date: Schema.String,
   candidate_id: Schema.String,
   articles: Schema.Finite,
   total_articles: Schema.Finite,
+  tone: Schema.optionalKey(Schema.NullOr(Schema.Finite)),
+  total_tone: Schema.optionalKey(Schema.NullOr(Schema.Finite)),
 })
 
 const Headline = Schema.Struct({
