@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-19T04:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-19T04:00:08Z",
+      "title": "Mobilisation du 17 octobre : au centre des critiques, LFI dénonce le « pourrissement » de la situation et assume le clivage avec le reste du monde politique",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/19/mobilisation-du-17-octobre-au-centre-des-critiques-lfi-denonce-le-pourrissement-de-la-situation-et-assume-le-clivage-avec-le-reste-du-monde-politique_6797443_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-19T03:53:46Z",
+      "title": "\"C'est un cadeau pour le RN\" : les violences du 17 octobre peuvent-elles avoir une influence sur la campagne présidentielle ?",
+      "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/c-est-un-cadeau-pour-le-rn-les-violences-du-17-octobre-peuvent-elles-avoir-une-influence-sur-la-campagne-presidentielle_8242600.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
