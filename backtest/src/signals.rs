@@ -75,8 +75,20 @@ impl ElectionSignals {
         }
         for row in &self.news {
             signals.add(&row.candidate_id, SignalSource::News, row.date, row.articles as f64);
+            if let Some(relative) = relative_tone(row.tone, row.total_tone, row.articles) {
+                signals.add(&row.candidate_id, SignalSource::NewsTone, row.date, relative);
+            }
         }
         signals
+    }
+}
+
+/// A day's tone against the day's, times the articles: what [`SignalSource::NewsTone`] records;
+/// `None` without articles or tone.
+pub fn relative_tone(tone: Option<f64>, total_tone: Option<f64>, articles: u64) -> Option<f64> {
+    match (tone, total_tone) {
+        (Some(tone), Some(all)) if articles > 0 => Some((tone - all) * articles as f64),
+        _ => None,
     }
 }
 
