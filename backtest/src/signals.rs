@@ -53,11 +53,26 @@ pub struct NewsRow {
     /// GDELT files read for the day.
     #[serde(default)]
     pub files: Option<u32>,
+    /// How Jev read the day's articles naming the candidate (`fr2027_collectors::gdelt::DayStance`,
+    /// flat); empty when they were not read.
+    #[serde(default)]
+    pub stance_read: Option<u64>,
+    #[serde(default)]
+    pub favourable: Option<f64>,
+    #[serde(default)]
+    pub unfavourable: Option<f64>,
+    #[serde(default)]
+    pub neutral: Option<f64>,
+    #[serde(default)]
+    pub stance_not_about: Option<u64>,
+    #[serde(default)]
+    pub stance_unreachable: Option<u64>,
     pub retrieved_at: String,
 }
 
 pub const ATTENTION_HEADER: &str = "date,candidate_id,article,views,retrieved_at";
-pub const NEWS_HEADER: &str = "date,candidate_id,query,articles,total_articles,tone,total_tone,files,retrieved_at";
+pub const NEWS_HEADER: &str = "date,candidate_id,query,articles,total_articles,tone,total_tone,files,\
+stance_read,favourable,unfavourable,neutral,stance_not_about,stance_unreachable,retrieved_at";
 
 /// The signals of one election, as fetched. Empty when the files are not there yet.
 #[derive(Clone, Debug, Default)]

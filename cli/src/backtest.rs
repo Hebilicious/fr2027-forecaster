@@ -9,7 +9,11 @@ use fr2027_backtest::{
     signals::{self, AttentionRow, NewsRow, SignalSources},
 };
 use fr2027_collectors::{Repo, csv_bytes, write};
-use fr2027_fetch::{Client, gdelt as gdelt_api, timestamp, wikipedia};
+use fr2027_fetch::{
+    Client, article, gdelt as gdelt_api, timestamp,
+    typesafe::{self, Jev},
+    wikipedia,
+};
 use jiff::Timestamp;
 
 use crate::data::Inputs;
@@ -107,7 +111,7 @@ pub fn fetch_signals(repo: &Repo, args: &SignalsArgs) -> Result<()> {
     }
     if wanted(SignalSource::News) {
         let client = Client::with_timeout(&inputs.sources.user_agent, gdelt_api::TIMEOUT)?;
-        let rows = fetch_news(&client, &sources)?;
+        let rows = fetch_news(&client, &inputs.sources.user_agent, &sources)?;
         let path = dir.join(signals::NEWS_FILE);
         write(&path, &csv_bytes(&rows, signals::NEWS_HEADER)?)?;
         println!("wrote {} ({} rows)", repo.relative(&path), rows.len());
@@ -141,17 +145,32 @@ fn fetch_attention(client: &Client, project: &str, sources: &SignalSources) -> R
     Ok(rows)
 }
 
-fn fetch_news(client: &Client, sources: &SignalSources) -> Result<Vec<NewsRow>> {
+fn fetch_news(client: &Client, user_agent: &str, sources: &SignalSources) -> Result<Vec<NewsRow>> {
     let matcher = gdelt_api::Matcher::new(&sources.candidates);
-    let counts = gdelt_api::count_days(
+    let pages = Client::with_timeout(user_agent, article::TIMEOUT)?;
+    let jev = Jev::from_env(user_agent)?;
+    if jev.is_none() {
+        eprintln!(
+            "{} is not set: the articles are counted, not read",
+            typesafe::KEY_VARIABLE
+        );
+    }
+    let reading = jev.as_ref().map(|jev| gdelt_api::Reading {
+        pages: &pages,
+        jev,
+        workers: gdelt_api::WORKERS,
+    });
+    let counted = gdelt_api::count_days(
         client,
         &matcher,
         sources.start,
         sources.end,
         gdelt_api::WORKERS,
+        reading.as_ref(),
         &|line| eprintln!("GDELT: {line}"),
     )
     .context("GDELT")?;
+    let counts = counted.candidates;
     let retrieved_at = timestamp(Timestamp::now());
     let mut rows = Vec::new();
     for (person, (candidate_id, days)) in matcher.people().iter().zip(counts) {
@@ -166,6 +185,12 @@ fn fetch_news(client: &Client, sources: &SignalSources) -> Result<Vec<NewsRow>> 
                 tone: day.tone,
                 total_tone: day.total_tone,
                 files: day.files,
+                stance_read: day.stance.map(|s| s.read),
+                favourable: day.stance.map(|s| s.favourable),
+                unfavourable: day.stance.map(|s| s.unfavourable),
+                neutral: day.stance.map(|s| s.neutral),
+                stance_not_about: day.stance.map(|s| s.not_about),
+                stance_unreachable: day.stance.map(|s| s.unreachable),
                 retrieved_at: retrieved_at.clone(),
             });
         }

@@ -122,9 +122,12 @@ jobs:
             $FR2027 collect attention || echo "::warning title=attention::collector failed, see the log"
           fi
 
-      # Once a day, like the page views. GDELT allows one request every 5 seconds, so a fetch
-      # takes about three minutes.
+      # Once a day, like the page views: every GDELT file of the last three days, then the articles
+      # whose headline names a candidate, read by Jev; a few minutes.
       - name: Collect news volume (GDELT)
+        # Jev reads each matched article for how it portrays the candidates it names.
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
         run: |
           if [ "$(date -u +%H)" -ge 6 ]; then
             $FR2027 collect gdelt || echo "::warning title=gdelt::collector failed, see the log"

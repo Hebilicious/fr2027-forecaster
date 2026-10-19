@@ -6,7 +6,11 @@ use anyhow::{Result, bail};
 use fr2027_collectors::{
     Repo, SchemaKind, attention, gdelt, markets, names::LabelMatcher, names::NameMatcher, news, pretty_json, write_new,
 };
-use fr2027_fetch::{Client, gdelt as gdelt_api, kalshi, polymarket, rss, timestamp, wikipedia};
+use fr2027_fetch::{
+    Client, article, gdelt as gdelt_api, kalshi, polymarket, rss, timestamp,
+    typesafe::{self, Jev},
+    wikipedia,
+};
 use jiff::{Timestamp, ToSpan, civil::Date, tz::TimeZone};
 
 use crate::data::Inputs;
@@ -266,13 +270,32 @@ fn collect_gdelt(repo: &Repo, inputs: &Inputs, client: &Client, now: Timestamp, 
         bail!("--start {start} is after --end {end}");
     }
     let matcher = gdelt_api::Matcher::new(&inputs.sources.candidates);
-    let counts = gdelt_api::count_days(client, &matcher, start, end, gdelt_api::WORKERS, &|line| {
-        println!("GDELT: {line}")
-    })?;
+    let pages = Client::with_timeout(&inputs.sources.user_agent, article::TIMEOUT)?;
+    let jev = Jev::from_env(&inputs.sources.user_agent)?;
+    if jev.is_none() {
+        println!(
+            "::warning title=gdelt::{} is not set: the articles are counted, not read",
+            typesafe::KEY_VARIABLE
+        );
+    }
+    let reading = jev.as_ref().map(|jev| gdelt_api::Reading {
+        pages: &pages,
+        jev,
+        workers: gdelt_api::WORKERS,
+    });
+    let counted = gdelt_api::count_days(
+        client,
+        &matcher,
+        start,
+        end,
+        gdelt_api::WORKERS,
+        reading.as_ref(),
+        &|line| println!("GDELT: {line}"),
+    )?;
     let candidates: Vec<gdelt::CandidateCounts> = matcher
         .people()
         .iter()
-        .zip(counts)
+        .zip(counted.candidates)
         .map(|(person, (candidate_id, days))| gdelt::CandidateCounts {
             query: person.description(&inputs.sources.candidates[&candidate_id].names),
             candidate_id,
@@ -292,6 +315,7 @@ fn collect_gdelt(repo: &Repo, inputs: &Inputs, client: &Client, now: Timestamp, 
         start: start.to_string(),
         end: end.to_string(),
         candidates,
+        articles: counted.articles,
     };
     let errors = gdelt::check(None, &fetch, &inputs.config);
     write_document(repo, inputs, &path, SchemaKind::Gdelt, &fetch, errors)
