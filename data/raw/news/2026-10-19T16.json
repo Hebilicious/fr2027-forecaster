@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-19T16:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T16:04:33Z",
+      "title": "Bruno Retailleau réitère son appel à \"déclarer l'état d'urgence\" et demande la déchéance de nationalité pour les binationaux",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-bruno-retailleau-reitere-son-appel-a-declarer-l-etat-d-urgence-et-demande-la-decheance-de-nationalite-pour-les-binationaux_VN-202610190695.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-19T15:56:26Z",
+      "title": "Violences du 17 octobre: peut-on bloquer les réseaux sociaux, comme le demande Gabriel Attal ?",
+      "url": "https://www.bfmtv.com/politique/elections/video-violences-du-17-octobre-peut-on-bloquer-les-reseaux-sociaux-comme-le-demande-gabriel-attal_VN-202610190682.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
