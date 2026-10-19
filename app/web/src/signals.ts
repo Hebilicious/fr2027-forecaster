@@ -5,6 +5,7 @@ import type {
   CandidateForecast,
   Forecast,
   Headline,
+  HeadlineStance,
   Markets,
   NewsDay,
   NewsVolumeDay,
@@ -301,6 +302,11 @@ export interface VolumeRow {
    * `null` below `TONE_MIN_ARTICLES` articles with a tone.
    */
   readonly tone: number | null
+  /**
+   * How Jev read those articles, as shares of the ones read and about the candidate; `null` below `TONE_MIN_ARTICLES`
+   * of them, or before the articles were read.
+   */
+  readonly stance: Sentiment | null
   /** Articles per day over everything the API sends, oldest first. */
   readonly daily: readonly Point[]
 }
@@ -325,9 +331,19 @@ export function pressVolume(
   const from = days === null ? first : addDays(end, -(days - 1))
   // The day's total is the same on every candidate's row of a day: counted once per day.
   const totals = new Map<string, number>()
-  const byCandidate = new Map<string, { articles: number; toned: number; tone: number; daily: Point[] }>()
+  const byCandidate = new Map<
+    string,
+    { articles: number; toned: number; tone: number; read: number; stance: Sentiment; daily: Point[] }
+  >()
   for (const v of volume) {
-    const entry = byCandidate.get(v.candidate_id) ?? { articles: 0, toned: 0, tone: 0, daily: [] }
+    const entry = byCandidate.get(v.candidate_id) ?? {
+      articles: 0,
+      toned: 0,
+      tone: 0,
+      read: 0,
+      stance: { pos: 0, neu: 0, neg: 0 },
+      daily: [],
+    }
     entry.daily.push({ date: v.date, value: v.articles })
     if (v.date >= from) {
       entry.articles += v.articles
@@ -335,6 +351,14 @@ export function pressVolume(
       if (v.tone != null && v.total_tone != null && v.articles > 0) {
         entry.toned += v.articles
         entry.tone += (v.tone - v.total_tone) * v.articles
+      }
+      if (v.stance_read != null && v.favourable != null && v.unfavourable != null && v.neutral != null) {
+        entry.read += v.stance_read
+        entry.stance = {
+          pos: entry.stance.pos + v.favourable,
+          neu: entry.stance.neu + v.neutral,
+          neg: entry.stance.neg + v.unfavourable,
+        }
       }
     }
     byCandidate.set(v.candidate_id, entry)
@@ -348,6 +372,14 @@ export function pressVolume(
       articles: entry.articles,
       share: total > 0 ? entry.articles / total : null,
       tone: entry.toned >= TONE_MIN_ARTICLES ? entry.tone / entry.toned : null,
+      stance:
+        entry.read >= TONE_MIN_ARTICLES
+          ? {
+              pos: entry.stance.pos / entry.read,
+              neu: entry.stance.neu / entry.read,
+              neg: entry.stance.neg / entry.read,
+            }
+          : null,
       daily: entry.daily.toSorted((a, b) => a.date.localeCompare(b.date)),
     }))
     .toSorted((a, b) => b.articles - a.articles || a.name.localeCompare(b.name))
@@ -559,6 +591,17 @@ function pool(candidateId: string, name: string, rows: readonly XRow[]): XPooled
       botWeight > 0 ? botRows.reduce((sum, r) => sum + r.bot_share_estimate! * r.sample_size!, 0) / botWeight : null,
     topics: rows.findLast((r) => r.top_topics?.length)?.top_topics ?? [],
   }
+}
+
+/** The stance Jev gives a candidate in one article: the option with the most probability, or `null` without one. */
+export function headlineStance(stance: HeadlineStance | undefined): "pos" | "neu" | "neg" | null {
+  if (!stance || stance.favourable === null || stance.unfavourable === null || stance.neutral === null) return null
+  const options = [
+    ["pos", stance.favourable],
+    ["neu", stance.neutral],
+    ["neg", stance.unfavourable],
+  ] as const
+  return options.reduce((best, option) => (option[1] > best[1] ? option : best))[0]
 }
 
 export interface Sentiment {

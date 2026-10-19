@@ -609,20 +609,47 @@ fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str, volume_since: 
             *daily.entry((date.clone(), id.to_string())).or_default() += 1;
         }
     }
-    let headlines: Vec<Value> = rows
+    // GDELT's articles whose page was read at its address (so the link works) and that Jev found
+    // about a candidate they name join the RSS headlines; an RSS headline GDELT also read gets its
+    // stance.
+    let mut gdelt_articles = gdelt_headlines(repo, since);
+    let mut headlines: Vec<Value> = rows
         .iter()
         .rev()
         .filter(|r| &r.published_at[..10] >= since)
         .map(|r| {
+            let stance = gdelt_articles.remove(&link_key(&r.url)).map(|a| a.stance);
             json!({
                 "published_at": r.published_at,
                 "outlet": r.outlet,
                 "title": r.title,
                 "url": r.url,
                 "candidate_ids": r.candidate_ids.split_whitespace().collect::<Vec<_>>(),
+                "source": "rss",
+                "stance": stance.unwrap_or_default(),
             })
         })
         .collect();
+    // The daily counts follow the list.
+    for article in gdelt_articles.values() {
+        for id in &article.candidate_ids {
+            *daily
+                .entry((article.seen_at[..10].to_string(), id.clone()))
+                .or_default() += 1;
+        }
+    }
+    headlines.extend(gdelt_articles.into_values().map(|a| {
+        json!({
+            "published_at": a.seen_at,
+            "outlet": a.outlet,
+            "title": a.title,
+            "url": a.url,
+            "candidate_ids": a.candidate_ids,
+            "source": "gdelt",
+            "stance": a.stance,
+        })
+    }));
+    headlines.sort_by(|a, b| b["published_at"].as_str().cmp(&a["published_at"].as_str()));
     let latest = newest_raw(&repo.raw_news_dir())?;
     let feeds: Vec<Value> = latest
         .as_ref()
@@ -657,9 +684,77 @@ fn news_signal(repo: &Repo, sources: &SourcesConfig, since: &str, volume_since: 
                 "total_articles": r.total_articles,
                 "tone": r.tone,
                 "total_tone": r.total_tone,
+                "stance_read": r.stance_read,
+                "favourable": r.favourable,
+                "unfavourable": r.unfavourable,
+                "neutral": r.neutral,
             }))
             .collect::<Vec<_>>(),
     }))
+}
+
+/// A GDELT article for the headline list.
+struct GdeltHeadline {
+    seen_at: String,
+    outlet: String,
+    title: String,
+    url: String,
+    /// The candidates Jev found it is about.
+    candidate_ids: Vec<String>,
+    stance: BTreeMap<String, Value>,
+}
+
+/// An address without its scheme, `www.`, query or trailing slash, to match the same article in two
+/// sources.
+fn link_key(url: &str) -> String {
+    let rest = url.split_once("://").map_or(url, |(_, r)| r);
+    let rest = rest.strip_prefix("www.").unwrap_or(rest);
+    let rest = rest.split(['?', '#']).next().unwrap_or_default();
+    rest.trim_end_matches('/').to_lowercase()
+}
+
+/// The GDELT articles since `since` read at their address, with a title, that Jev found about at
+/// least one candidate their headline names; by [`link_key`].
+fn gdelt_headlines(repo: &Repo, since: &str) -> BTreeMap<String, GdeltHeadline> {
+    let mut out: BTreeMap<String, GdeltHeadline> = BTreeMap::new();
+    for row in gdelt::read_article_rows(repo).unwrap_or_default() {
+        if row.date.as_str() < since || row.reached != gdelt::Reached::Live {
+            continue;
+        }
+        let (Some(title), Some(not_about)) = (row.title.clone(), row.not_about) else {
+            continue;
+        };
+        if not_about >= 0.5 {
+            continue;
+        }
+        let key = link_key(&row.url);
+        let entry = out.entry(key).or_insert_with(|| GdeltHeadline {
+            seen_at: row.seen_at.clone(),
+            outlet: row
+                .url
+                .split_once("://")
+                .map_or(row.url.as_str(), |(_, r)| r)
+                .split('/')
+                .next()
+                .unwrap_or_default()
+                .trim_start_matches("www.")
+                .to_string(),
+            title,
+            url: row.url.clone(),
+            candidate_ids: Vec::new(),
+            stance: BTreeMap::new(),
+        });
+        entry.candidate_ids.push(row.candidate_id.clone());
+        entry.stance.insert(
+            row.candidate_id.clone(),
+            json!({
+                "favourable": row.favourable,
+                "unfavourable": row.unfavourable,
+                "neutral": row.neutral,
+            }),
+        );
+    }
+    out
 }
 
 /// The last 28 windows (two weeks at two drops a day) of Grok Bot's X measurements. Stance shares

@@ -284,6 +284,19 @@ const NewsVolumeDay = Schema.Struct({
   total_articles: Schema.Finite,
   tone: Schema.optionalKey(Schema.NullOr(Schema.Finite)),
   total_tone: Schema.optionalKey(Schema.NullOr(Schema.Finite)),
+  // How Jev read the day's articles: those read and about the candidate, and the sums of their favourable,
+  // unfavourable and neutral probabilities. Null for days whose articles were not read; absent from older API builds.
+  stance_read: Schema.optionalKey(Schema.NullOr(Schema.Finite)),
+  favourable: Schema.optionalKey(Schema.NullOr(Schema.Finite)),
+  unfavourable: Schema.optionalKey(Schema.NullOr(Schema.Finite)),
+  neutral: Schema.optionalKey(Schema.NullOr(Schema.Finite)),
+})
+
+/** Jev's probabilities for how an article portrays one candidate. */
+const HeadlineStance = Schema.Struct({
+  favourable: Schema.NullOr(Schema.Finite),
+  unfavourable: Schema.NullOr(Schema.Finite),
+  neutral: Schema.NullOr(Schema.Finite),
 })
 
 const Headline = Schema.Struct({
@@ -292,6 +305,10 @@ const Headline = Schema.Struct({
   title: Schema.String,
   url: Schema.String,
   candidate_ids: Schema.Array(Schema.String),
+  // Where the headline comes from (an RSS feed, or GDELT with a link that worked), and how Jev read the article, by
+  // candidate. Absent from older API builds.
+  source: Schema.optionalKey(Schema.Literals(["rss", "gdelt"])),
+  stance: Schema.optionalKey(Schema.Record(Schema.String, HeadlineStance)),
 })
 
 const XRow = Schema.Struct({
@@ -410,6 +427,7 @@ export type News = typeof News.Type
 export type NewsDay = typeof NewsDay.Type
 export type NewsVolumeDay = typeof NewsVolumeDay.Type
 export type Headline = typeof Headline.Type
+export type HeadlineStance = typeof HeadlineStance.Type
 export type XRow = typeof XRow.Type
 export type CampaignEvent = typeof CampaignEvent.Type
 

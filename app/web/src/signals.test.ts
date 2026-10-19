@@ -7,6 +7,7 @@ import {
   eventSummary,
   eventsNewestFirst,
   filterSignals,
+  headlineStance,
   headlinesFor,
   headlinesInRange,
   marketRows,
@@ -193,6 +194,15 @@ const volumeDay = (date: string, candidate_id: string, articles: number) => ({
   total_articles: 1000,
 })
 
+// A GDELT day whose n articles Jev read, with the sums of their probabilities.
+const readDay = (date: string, candidate_id: string, n: number, fav: number, neu: number, neg: number) => ({
+  ...volumeDay(date, candidate_id, n),
+  stance_read: n,
+  favourable: fav,
+  neutral: neu,
+  unfavourable: neg,
+})
+
 describe("news", () => {
   const names = candidateNames(forecast)
   const headlines = [
@@ -289,6 +299,27 @@ describe("news", () => {
     expect(toneOf("a")).toBeCloseTo((6 * 1 + 4 * -2.5) / 10)
     expect(toneOf("b")).toBeNull()
     expect(toneOf("c")).toBeNull()
+  })
+
+  it("reads Jev's stance over the range as shares of the articles read", () => {
+    const volume = [
+      readDay("2026-10-09", "a", 6, 3, 2, 1),
+      readDay("2026-10-08", "a", 4, 1, 1, 2),
+      readDay("2026-10-09", "b", 3, 3, 0, 0),
+    ]
+    const rows = pressVolume(volume, names, "7d").rows
+    const a = rows.find((r) => r.candidateId === "a")!.stance!
+    expect(a.pos).toBeCloseTo(0.4)
+    expect(a.neu).toBeCloseTo(0.3)
+    expect(a.neg).toBeCloseTo(0.3)
+    expect(rows.find((r) => r.candidateId === "b")!.stance).toBeNull()
+  })
+
+  it("marks a headline with the stance Jev gives most probability", () => {
+    expect(headlineStance({ favourable: 0.1, neutral: 0.2, unfavourable: 0.7 })).toBe("neg")
+    expect(headlineStance({ favourable: 0.5, neutral: 0.4, unfavourable: 0.1 })).toBe("pos")
+    expect(headlineStance({ favourable: null, neutral: null, unfavourable: null })).toBeNull()
+    expect(headlineStance(undefined)).toBeNull()
   })
 })
 

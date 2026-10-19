@@ -4,7 +4,16 @@ import { useIntlayer, useLocale } from "vue-intlayer"
 import type { News } from "../../api/schemas"
 import { count, dateTime, percent, points, relativeTime, safeUrl, shortDate } from "../../format"
 import { useNow } from "../../useNow"
-import { TONE_MIN_ARTICLES, headlinesFor, headlinesInRange, nameOf, newsCounts, pressVolume } from "../../signals"
+import {
+  TONE_MIN_ARTICLES,
+  headlineStance,
+  headlinesFor,
+  headlinesInRange,
+  nameOf,
+  newsCounts,
+  pressVolume,
+  type Sentiment,
+} from "../../signals"
 import { useSignalRange } from "../../useSignalRange"
 import CandidateAvatar from "../CandidateAvatar.vue"
 import Sparkline from "../Sparkline.vue"
@@ -36,6 +45,15 @@ const day = (date: string) => shortDate(date, locale.value)
 // GDELT's tone is a difference of word shares in percent: shown as points, + for warmer coverage than the day's.
 const tone = (t: number) => points(t / 100, locale.value)
 const toneClass = (t: number) => (t > 0.05 ? "warm" : t < -0.05 ? "cold" : "")
+const share = (x: number) => percent(x, 0, locale.value)
+const stanceLabel = (name: string, s: Sentiment) =>
+  content.stanceLabel({ name, pos: share(s.pos), neu: share(s.neu), neg: share(s.neg) }).value
+// A headline's candidates with the stance Jev read in the article, when it read it.
+const marks = (h: (typeof headlines.value)[number]) =>
+  h.candidate_ids.flatMap((id) => {
+    const stance = headlineStance(h.stance?.[id])
+    return stance ? [{ id, name: nameOf(props.names, id), stance }] : []
+  })
 </script>
 
 <template>
@@ -111,6 +129,18 @@ const toneClass = (t: number) => (t > 0.05 ? "warm" : t < -0.05 ? "cold" : "")
                 {{ tone(v.tone) }}
               </span>
               <span v-else class="num tone muted">—</span>
+              <span
+                v-if="v.stance"
+                class="stance-bar"
+                role="img"
+                :aria-label="stanceLabel(v.name, v.stance)"
+                :title="stanceLabel(v.name, v.stance)"
+              >
+                <span class="pos" :style="{ width: pct(v.stance.pos) }" />
+                <span class="neu" :style="{ width: pct(v.stance.neu) }" />
+                <span class="neg" :style="{ width: pct(v.stance.neg) }" />
+              </span>
+              <span v-else class="stance-bar empty" />
               <Sparkline
                 v-if="volume.window"
                 :points="v.daily"
@@ -121,6 +151,7 @@ const toneClass = (t: number) => (t > 0.05 ? "warm" : t < -0.05 ? "cold" : "")
           </ul>
           <p class="muted small">{{ content.volumeNote }}</p>
           <p class="muted small">{{ content.toneNote({ n: count(TONE_MIN_ARTICLES, locale) }) }}</p>
+          <p class="muted small">{{ content.stanceNote }}</p>
         </div>
       </div>
 
@@ -145,7 +176,21 @@ const toneClass = (t: number) => (t > 0.05 ? "warm" : t < -0.05 ? "cold" : "")
         <ul v-if="headlines.length" class="headlines">
           <li v-for="(h, i) in headlines" :key="`${i}-${h.url}`">
             <a :href="safeUrl(h.url)" rel="noopener">{{ h.title }}</a>
-            <span class="muted small">{{ h.outlet }} · {{ dateTime(h.published_at, locale) }}</span>
+            <span class="muted small">
+              {{ h.outlet }} · {{ dateTime(h.published_at, locale) }}
+              <template v-if="h.source === 'gdelt'"> · {{ content.viaGdelt }}</template>
+            </span>
+            <span v-if="marks(h).length" class="marks small">
+              <span
+                v-for="m in marks(h)"
+                :key="m.id"
+                class="mark"
+                :class="m.stance"
+                :title="content.markLabel[m.stance]({ name: m.name }).value"
+              >
+                {{ m.name }}
+              </span>
+            </span>
           </li>
         </ul>
         <p v-else class="secondary small">
@@ -215,9 +260,57 @@ const toneClass = (t: number) => (t > 0.05 ? "warm" : t < -0.05 ? "cold" : "")
   align-items: center;
 }
 
-/* GDELT's rows carry the tone between the count and the line. */
+/* GDELT's rows carry the tone and Jev's stance between the count and the line. */
 .bars.toned li {
-  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr) 3em 4.5em auto;
+  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr) 3em 4.5em 4.5em auto;
+}
+
+/* Favourable in bleu, neutral in grey, unfavourable in rouge, as the X bars. */
+.stance-bar {
+  display: flex;
+  gap: 1px;
+  height: 8px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.stance-bar.empty {
+  background: none;
+}
+
+.stance-bar .pos,
+.mark.pos::before {
+  background: var(--series);
+}
+
+.stance-bar .neu,
+.mark.neu::before {
+  background: var(--dot);
+}
+
+.stance-bar .neg,
+.mark.neg::before {
+  background: var(--accent);
+}
+
+.marks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  color: var(--ink-2);
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mark::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
 }
 
 .tone {
@@ -321,7 +414,7 @@ const toneClass = (t: number) => (t > 0.05 ? "warm" : t < -0.05 ? "cold" : "")
   }
 
   .bars.toned li {
-    grid-template-columns: minmax(0, 9rem) minmax(0, 1fr) 2.5em 4em auto;
+    grid-template-columns: minmax(0, 8rem) minmax(0, 1fr) 2.5em 4em 3em auto;
   }
 }
 </style>
