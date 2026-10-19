@@ -2,54 +2,124 @@
 import { computed, shallowRef } from "vue"
 import { useIntlayer, useLocale } from "vue-intlayer"
 import type { News } from "../../api/schemas"
-import { count, dateTime, relativeTime, safeUrl } from "../../format"
+import { count, dateTime, percent, relativeTime, safeUrl, shortDate } from "../../format"
 import { useNow } from "../../useNow"
-import { latestHeadlines, nameOf, newsCounts } from "../../signals"
+import { headlinesFor, headlinesInRange, nameOf, newsCounts, pressVolume } from "../../signals"
+import { useSignalRange } from "../../useSignalRange"
 import CandidateAvatar from "../CandidateAvatar.vue"
+import Sparkline from "../Sparkline.vue"
+import RangeControl from "./RangeControl.vue"
 
+// The press over the chosen period: headlines per candidate from the RSS feeds with their days, the headlines
+// themselves, and GDELT's count of French-language articles with its whole history.
 const props = defineProps<{ news: News; names: ReadonlyMap<string, string> }>()
 const content = useIntlayer("news-section")
 const { locale } = useLocale()
 const now = useNow()
+const range = useSignalRange()
 
-const counts = computed(() => newsCounts(props.news.daily, props.names))
-const maxCount = computed(() => Math.max(1, ...counts.value.map((c) => c.items)))
+const inRange = computed(() => headlinesInRange(props.news.headlines, range.value))
+const span = computed(() => {
+  const newest = inRange.value[0]
+  const oldest = inRange.value.at(-1)
+  return newest && oldest ? { start: oldest.published_at, end: newest.published_at } : null
+})
+const counts = computed(() => newsCounts(props.news.headlines, props.news.daily, props.names, range.value))
+const maxCount = computed(() => Math.max(1, ...counts.value.rows.map((c) => c.items)))
 const filter = shallowRef<string | null>(null)
-const headlines = computed(() => latestHeadlines(props.news.headlines, filter.value))
+const headlines = computed(() => headlinesFor(inRange.value, filter.value))
+const volume = computed(() => pressVolume(props.news.volume ?? [], props.names, range.value))
+const maxVolume = computed(() => Math.max(1, ...volume.value.rows.map((v) => v.articles)))
 const failing = computed(() => props.news.feeds.filter((f) => f.status !== "ok").length)
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`
+const day = (date: string) => shortDate(date, locale.value)
 </script>
 
 <template>
   <section aria-labelledby="news-title" class="card">
-    <header class="card-head">
-      <h2 id="news-title">{{ content.title }}</h2>
+    <header class="card-head head">
+      <div class="titles">
+        <h2 id="news-title">{{ content.title }}</h2>
+        <p v-if="span" class="muted small">
+          {{
+            content.window({
+              start: dateTime(span.start, locale),
+              end: dateTime(span.end, locale),
+              n: count(inRange.length, locale),
+            })
+          }}
+        </p>
+      </div>
+      <RangeControl v-if="news.headlines.length" />
     </header>
-    <p v-if="news.headlines.length === 0 && counts.length === 0" class="secondary small">{{ content.empty }}</p>
+    <p v-if="news.headlines.length === 0 && volume.rows.length === 0" class="secondary small">{{ content.empty }}</p>
     <div v-else class="layout">
-      <div v-if="counts.length" class="block">
-        <h3 class="sub">{{ content.counts }}</h3>
-        <ul class="bars">
-          <li v-for="(c, i) in counts" :key="c.candidateId" :style="{ '--i': i }">
-            <span class="bar-name">
-              <CandidateAvatar :id="c.candidateId" :name="c.name" :size="22" />
-              <span class="bar-label">{{ c.name }}</span>
-            </span>
-            <span class="bar-track"><span class="bar" :style="{ width: pct(c.items / maxCount) }" /></span>
-            <span class="num bar-value">{{ count(c.items, locale) }}</span>
-          </li>
-        </ul>
+      <div class="column">
+        <div v-if="counts.rows.length" class="block">
+          <h3 class="sub">{{ content.counts }}</h3>
+          <ul class="bars">
+            <li v-for="(c, i) in counts.rows" :key="c.candidateId" :style="{ '--i': i }">
+              <span class="bar-name">
+                <CandidateAvatar :id="c.candidateId" :name="c.name" :size="22" />
+                <span class="bar-label">{{ c.name }}</span>
+              </span>
+              <span class="bar-track"><span class="bar" :style="{ width: pct(c.items / maxCount) }" /></span>
+              <span class="num bar-value">{{ count(c.items, locale) }}</span>
+              <Sparkline
+                v-if="counts.window"
+                :points="c.daily"
+                :window="counts.window"
+                :label="content.countsLabel({ name: c.name, start: day(counts.window[0]), end: day(counts.window[1]) }).value"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div v-if="volume.rows.length && volume.range" class="block">
+          <h3 class="sub">{{ content.volumeTitle }}</h3>
+          <p v-if="volume.window" class="muted small">
+            {{
+              content.volumeWindow({
+                start: day(volume.range[0]),
+                end: day(volume.range[1]),
+                first: day(volume.window[0]),
+              })
+            }}
+          </p>
+          <ul class="bars">
+            <li v-for="(v, i) in volume.rows" :key="v.candidateId" :style="{ '--i': i }">
+              <span class="bar-name">
+                <CandidateAvatar :id="v.candidateId" :name="v.name" :size="22" />
+                <span class="bar-label">{{ v.name }}</span>
+              </span>
+              <span class="bar-track"><span class="bar" :style="{ width: pct(v.articles / maxVolume) }" /></span>
+              <span
+                class="num bar-value"
+                :title="v.share === null ? undefined : content.volumeShare({ share: percent(v.share, 1, locale) }).value"
+              >
+                {{ count(v.articles, locale) }}
+              </span>
+              <Sparkline
+                v-if="volume.window"
+                :points="v.daily"
+                :window="volume.window"
+                :label="content.volumeLabel({ name: v.name, start: day(volume.window[0]), end: day(volume.window[1]) }).value"
+              />
+            </li>
+          </ul>
+          <p class="muted small">{{ content.volumeNote }}</p>
+        </div>
       </div>
 
       <div class="block">
         <h3 class="sub">{{ content.latestHeadlines }}</h3>
-        <div v-if="counts.length" class="chips" role="group" :aria-label="content.filter.value">
+        <div v-if="counts.rows.length" class="chips" role="group" :aria-label="content.filter.value">
           <span class="small muted">{{ content.filter }}</span>
           <button class="chip" type="button" :aria-pressed="filter === null" @click="filter = null">
             {{ content.allCandidates }}
           </button>
           <button
-            v-for="c in counts"
+            v-for="c in counts.rows"
             :key="c.candidateId"
             class="chip"
             type="button"
@@ -77,6 +147,25 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 </template>
 
 <style scoped>
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.titles {
+  display: grid;
+  gap: 4px;
+}
+
+.column {
+  display: grid;
+  gap: 28px;
+  align-content: start;
+}
+
 .layout {
   display: grid;
   gap: 28px 40px;
@@ -108,7 +197,7 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 
 .bars li {
   display: grid;
-  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr) 2.5em;
+  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr) 3em auto;
   gap: 12px;
   align-items: center;
 }
@@ -195,7 +284,7 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`
 
 @media (max-width: 760px) {
   .bars li {
-    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 2.5em;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 3em auto;
   }
 }
 </style>

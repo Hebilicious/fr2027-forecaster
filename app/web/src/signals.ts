@@ -7,6 +7,7 @@ import type {
   Headline,
   Markets,
   NewsDay,
+  NewsVolumeDay,
   PageViews,
   Question,
   Signals,
@@ -23,6 +24,13 @@ const DAY_MS = 86_400_000
 /** The ISO calendar date `days` after `isoDate` (negative to go back). */
 export function addDays(isoDate: string, days: number): string {
   return new Date(Date.parse(`${isoDate}T00:00:00Z`) + days * DAY_MS).toISOString().slice(0, 10)
+}
+
+/** Every ISO date from the window's first day to its last. */
+function daysOf([first, last]: Window): string[] {
+  const days: string[] = []
+  for (let date = first; date <= last; date = addDays(date, 1)) days.push(date)
+  return days
 }
 
 const latestDate = (dates: Iterable<string>): string | null => {
@@ -58,6 +66,7 @@ export function filterSignals(signals: Signals, hidden: ReadonlySet<string>): Si
       ...signals.news,
       daily: signals.news.daily.filter(shown),
       headlines: signals.news.headlines.filter((h) => anyShown(h.candidate_ids)),
+      ...(signals.news.volume && { volume: signals.news.volume.filter(shown) }),
     },
     events: signals.events.filter((e) => anyShown(e.candidate_ids)),
     forward: { ...signals.forward, flags: signals.forward.flags.filter(shown) },
@@ -222,35 +231,115 @@ export interface NewsCount {
   readonly candidateId: string
   readonly name: string
   readonly items: number
+  /** Headlines per day inside the window, oldest first, zero on days without any; empty without a window. */
+  readonly daily: readonly Point[]
 }
 
-/** Headlines per candidate over the last `days` days in the data, the `top` most covered first. */
+/** The headlines published in the range's last days before the newest one, newest first. */
+export function headlinesInRange(headlines: readonly Headline[], range: SignalRange): Headline[] {
+  const sorted = headlines.toSorted((a, b) => b.published_at.localeCompare(a.published_at))
+  const days = rangeDays(range)
+  const newest = sorted[0]
+  if (days === null || newest === undefined) return sorted
+  const from = Date.parse(newest.published_at) - days * DAY_MS
+  return sorted.filter((h) => Date.parse(h.published_at) > from)
+}
+
+/** The days a range covers up to `end`, or from `first` for everything; `null` below two days. */
+function dayWindow(range: SignalRange, end: string, first: string): Window | null {
+  const days = rangeDays(range)
+  const start = days === null ? first : addDays(end, -(days - 1))
+  return start < end ? [start, end] : null
+}
+
+/**
+ * Headlines per candidate in the range, the `top` most covered first, each with its headlines per day over the
+ * range's last complete days (no window below two).
+ */
 export function newsCounts(
+  headlines: readonly Headline[],
   daily: readonly NewsDay[],
   names: ReadonlyMap<string, string>,
-  days = 7,
+  range: SignalRange,
   top = 12,
-): NewsCount[] {
-  const end = latestDate(daily.map((d) => d.date))
-  if (end === null) return []
-  const start = addDays(end, -(days - 1))
+): { rows: NewsCount[]; window: Window | null } {
+  const inRange = headlinesInRange(headlines, range)
   const counts = new Map<string, number>()
-  for (const day of daily) {
-    if (day.date >= start) counts.set(day.candidate_id, (counts.get(day.candidate_id) ?? 0) + day.items)
+  for (const h of inRange) {
+    for (const id of h.candidate_ids) counts.set(id, (counts.get(id) ?? 0) + 1)
   }
-  return [...counts]
-    .filter(([, items]) => items > 0)
-    .map(([id, items]) => ({ candidateId: id, name: nameOf(names, id), items }))
+  // The newest headline's day is still under way: the line ends the day before, so it does not dip at the end.
+  const newest = inRange[0]?.published_at.slice(0, 10)
+  const end = newest === undefined ? null : addDays(newest, -1)
+  const first = daily.reduce((min, d) => (d.date < min ? d.date : min), end ?? "")
+  const window = end === null ? null : dayWindow(range, end, first)
+  const items = new Map(daily.map((d) => [`${d.date} ${d.candidate_id}`, d.items]))
+  const dates = window ? daysOf(window) : []
+  // A day without headlines is a zero, so the line drops to the floor rather than skipping it.
+  const perDay = (id: string): Point[] => dates.map((date) => ({ date, value: items.get(`${date} ${id}`) ?? 0 }))
+  const rows = [...counts]
+    .map(([id, n]) => ({ candidateId: id, name: nameOf(names, id), items: n, daily: perDay(id) }))
     .toSorted((a, b) => b.items - a.items || a.name.localeCompare(b.name))
     .slice(0, top)
+  return { rows, window }
 }
 
-/** The `limit` newest headlines, only those naming `candidateId` when one is given. */
-export function latestHeadlines(headlines: readonly Headline[], candidateId: string | null, limit = 30): Headline[] {
-  return headlines
-    .filter((h) => candidateId === null || h.candidate_ids.includes(candidateId))
-    .toSorted((a, b) => b.published_at.localeCompare(a.published_at))
-    .slice(0, limit)
+/** The headlines naming `candidateId`, or all of them. */
+export function headlinesFor(headlines: readonly Headline[], candidateId: string | null): Headline[] {
+  return candidateId === null ? [...headlines] : headlines.filter((h) => h.candidate_ids.includes(candidateId))
+}
+
+export interface VolumeRow {
+  readonly candidateId: string
+  readonly name: string
+  /** Articles naming the candidate in the range. */
+  readonly articles: number
+  /** Those articles' share of every article GDELT sampled in the range. */
+  readonly share: number | null
+  /** Articles per day over everything the API sends, oldest first. */
+  readonly daily: readonly Point[]
+}
+
+/**
+ * GDELT's French-language news volume: articles per candidate over the range's last days, the `top` first,
+ * with every day the API sends for the sparkline.
+ */
+export function pressVolume(
+  volume: readonly NewsVolumeDay[],
+  names: ReadonlyMap<string, string>,
+  range: SignalRange,
+  top = 12,
+): { rows: VolumeRow[]; window: Window | null; range: Window | null } {
+  const end = latestDate(volume.map((v) => v.date))
+  if (end === null) return { rows: [], window: null, range: null }
+  const first = volume.reduce((min, v) => (v.date < min ? v.date : min), end)
+  const days = rangeDays(range)
+  const from = days === null ? first : addDays(end, -(days - 1))
+  // The sampled total is the same on every candidate's row of a day: counted once per day.
+  const totals = new Map<string, number>()
+  const byCandidate = new Map<string, { articles: number; daily: Point[] }>()
+  for (const v of volume) {
+    const entry = byCandidate.get(v.candidate_id) ?? { articles: 0, daily: [] }
+    entry.daily.push({ date: v.date, value: v.articles })
+    if (v.date >= from) {
+      entry.articles += v.articles
+      totals.set(v.date, v.total_articles)
+    }
+    byCandidate.set(v.candidate_id, entry)
+  }
+  const total = [...totals.values()].reduce((a, b) => a + b, 0)
+  const rows = [...byCandidate]
+    .filter(([, entry]) => entry.articles > 0)
+    .map(([id, entry]) => ({
+      candidateId: id,
+      name: nameOf(names, id),
+      articles: entry.articles,
+      share: total > 0 ? entry.articles / total : null,
+      daily: entry.daily.toSorted((a, b) => a.date.localeCompare(b.date)),
+    }))
+    .toSorted((a, b) => b.articles - a.articles || a.name.localeCompare(b.name))
+    .slice(0, top)
+  return { rows, window: first < end ? [first, end] : null, range: [from, end] }
 }
 
 // Periods

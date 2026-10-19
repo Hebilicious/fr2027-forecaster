@@ -7,9 +7,11 @@ import {
   eventSummary,
   eventsNewestFirst,
   filterSignals,
-  latestHeadlines,
+  headlinesFor,
+  headlinesInRange,
   marketRows,
   newsCounts,
+  pressVolume,
   sentiment,
   stanceCounts,
   sparkline,
@@ -184,36 +186,90 @@ const headline = (published_at: string, ids: string[]): Headline => ({
   candidate_ids: ids,
 })
 
+const volumeDay = (date: string, candidate_id: string, articles: number) => ({
+  date,
+  candidate_id,
+  articles,
+  total_articles: 1000,
+})
+
 describe("news", () => {
   const names = candidateNames(forecast)
+  const headlines = [
+    headline("2026-10-09T10:00:00Z", ["b"]),
+    headline("2026-10-09T08:00:00Z", ["a", "b"]),
+    headline("2026-10-08T11:00:00Z", ["a"]), // 23 hours before the newest
+    headline("2026-10-08T09:00:00Z", ["a"]), // 25 hours before
+    headline("2026-10-01T09:00:00Z", ["c"]),
+  ]
 
-  it("counts headlines per candidate over the last 7 days in the data", () => {
-    const daily = [
-      day("2026-10-09", "a", 3),
-      day("2026-10-03", "a", 2),
-      day("2026-10-02", "a", 50), // eight days before the latest
-      day("2026-10-08", "b", 6),
-    ]
-    expect(newsCounts(daily, names)).toEqual([
-      { candidateId: "b", name: "B", items: 6 },
-      { candidateId: "a", name: "A", items: 5 },
-    ])
-    expect(newsCounts([], names)).toEqual([])
-  })
-
-  it("lists the newest headlines, filtered by candidate", () => {
-    const headlines = [
-      headline("2026-10-08T10:00:00Z", ["a"]),
-      headline("2026-10-09T10:00:00Z", ["b"]),
-      headline("2026-10-09T08:00:00Z", ["a", "b"]),
-    ]
-    expect(latestHeadlines(headlines, null).map((h) => h.published_at)).toEqual([
+  it("keeps the headlines of the range before the newest one, newest first", () => {
+    expect(headlinesInRange(headlines, "1d").map((h) => h.published_at)).toEqual([
       "2026-10-09T10:00:00Z",
       "2026-10-09T08:00:00Z",
-      "2026-10-08T10:00:00Z",
+      "2026-10-08T11:00:00Z",
     ])
-    expect(latestHeadlines(headlines, "a", 1).map((h) => h.published_at)).toEqual(["2026-10-09T08:00:00Z"])
-    expect(latestHeadlines(headlines, "c")).toEqual([])
+    expect(headlinesInRange(headlines, "7d")).toHaveLength(4)
+    expect(headlinesInRange(headlines.toReversed(), "all")).toEqual(headlines)
+    expect(headlinesInRange([], "7d")).toEqual([])
+  })
+
+  it("filters headlines by candidate", () => {
+    expect(headlinesFor(headlines, "b").map((h) => h.published_at)).toEqual([
+      "2026-10-09T10:00:00Z",
+      "2026-10-09T08:00:00Z",
+    ])
+    expect(headlinesFor(headlines, null)).toEqual(headlines)
+    expect(headlinesFor(headlines, "z")).toEqual([])
+  })
+
+  it("counts headlines per candidate in the range, with their days", () => {
+    const daily = [day("2026-10-09", "a", 1), day("2026-10-08", "a", 2), day("2026-10-01", "c", 1)]
+    const day1 = newsCounts(headlines, daily, names, "1d")
+    expect(day1.rows.map((r) => [r.candidateId, r.items])).toEqual([
+      ["a", 2],
+      ["b", 2],
+    ])
+    // A single day draws no line.
+    expect(day1.window).toBeNull()
+    // The line ends on 8 October, the last day before the newest headline's.
+    const week = newsCounts(headlines, daily, names, "7d")
+    expect(week.window).toEqual(["2026-10-02", "2026-10-08"])
+    expect(week.rows[0]).toEqual({
+      candidateId: "a",
+      name: "A",
+      items: 3,
+      daily: ["02", "03", "04", "05", "06", "07", "08"].map((d) => ({
+        date: `2026-10-${d}`,
+        value: d === "08" ? 2 : 0,
+      })),
+    })
+    expect(day1.rows[0]!.daily).toEqual([])
+    expect(newsCounts(headlines, daily, names, "all").window).toEqual(["2026-10-01", "2026-10-08"])
+    expect(newsCounts([], [], names, "7d")).toEqual({ rows: [], window: null })
+  })
+
+  it("sums GDELT's articles in the range, out of the day's sampled total counted once", () => {
+    const volume = [
+      volumeDay("2026-10-09", "a", 30),
+      volumeDay("2026-10-09", "b", 10),
+      volumeDay("2026-10-08", "a", 20),
+      volumeDay("2026-08-01", "b", 5),
+    ]
+    const day1 = pressVolume(volume, names, "1d")
+    expect(day1.range).toEqual(["2026-10-09", "2026-10-09"])
+    expect(day1.window).toEqual(["2026-08-01", "2026-10-09"])
+    expect(day1.rows.map((r) => [r.candidateId, r.articles, r.share])).toEqual([
+      ["a", 30, 0.03],
+      ["b", 10, 0.01],
+    ])
+    const all = pressVolume(volume, names, "all")
+    expect(all.rows[0]).toMatchObject({ candidateId: "a", articles: 50, share: 50 / 3000 })
+    expect(all.rows[1]!.daily).toEqual([
+      { date: "2026-08-01", value: 5 },
+      { date: "2026-10-09", value: 10 },
+    ])
+    expect(pressVolume([], names, "7d")).toEqual({ rows: [], window: null, range: null })
   })
 })
 
@@ -399,6 +455,10 @@ describe("filterSignals", () => {
           headline("2026-10-09T09:00:00Z", ["a", "b"]),
           headline("2026-10-09T10:00:00Z", []),
         ],
+        volume: [
+          { date: "2026-10-09", candidate_id: "a", articles: 3, total_articles: 100 },
+          { date: "2026-10-09", candidate_id: "b", articles: 1, total_articles: 100 },
+        ],
       },
       x: { rows: [xRow("2026-10-09T12:00:00Z", "a", 100), xRow("2026-10-09T12:00:00Z", "b", 50)] },
       events: [event("2026-10-01", "2026-10-01-a"), { ...event("2026-10-02", "2026-10-02-b"), candidate_ids: ["b"] }],
@@ -428,6 +488,7 @@ describe("filterSignals", () => {
     expect(shown.markets.history.some((q) => q.candidate_id === "a")).toBe(false)
     expect(new Set(shown.attention.rows.map((r) => r.candidate_id))).toEqual(new Set(["b"]))
     expect(shown.news.daily.map((d) => d.candidate_id)).toEqual(["b"])
+    expect(shown.news.volume?.map((d) => d.candidate_id)).toEqual(["b"])
     expect(shown.news.headlines.map((h) => h.candidate_ids)).toEqual([["a", "b"], []])
     expect(shown.x.rows.map((r) => r.candidate_id)).toEqual(["b"])
     expect(shown.events.map((e) => e.event_id)).toEqual(["2026-10-02-b"])
