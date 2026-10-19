@@ -127,39 +127,6 @@ const unmatchedPrices = (prices: Readonly<Record<Venue, number | null>>) =>
   gap: 14px 24px;
 }
 
-/* The question the markets answer: one choice of three, set like a segmented glass control. */
-.segmented {
-  display: inline-flex;
-  padding: 4px;
-  gap: 2px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 0 1px var(--border);
-}
-
-.segmented button {
-  font: inherit;
-  font-size: 0.82rem;
-  font-weight: 500;
-  padding: 7px 14px;
-  border: none;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink-2);
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.segmented button:hover {
-  color: var(--ink);
-}
-
-.segmented button[aria-pressed="true"] {
-  background: var(--ink);
-  color: var(--page);
-  box-shadow: 0 4px 14px -4px rgba(243, 239, 230, 0.4);
-}
-
 th[scope="row"] {
   font-weight: 500;
   color: var(--ink);
