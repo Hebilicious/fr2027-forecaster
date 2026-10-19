@@ -1,0 +1,106 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "france24-france: unable to parse feed: no root element",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-10-19T13:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Violences : ni Marine Le Pen ni Jordan Bardella ne participeront à la réunion des chefs de parti autour de Sébastien Lecornu",
+      "url": "https://www.leparisien.fr/politique/violences-ni-marine-le-pen-ni-jordan-bardella-ne-participeront-a-la-reunion-des-chefs-de-parti-autour-de-sebastien-lecornu-19-10-2026-WUR2IX7KC5FTFDETE3VDZM43JI.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-19T12:20:38Z",
+      "title": "Violences du 17 octobre : Le Pen et Bardella boycottent la réunion des chefs de parti avec Lecornu",
+      "url": "https://www.20minutes.fr/politique/4255668-20261019-violences-17-octobre-pen-bardella-boycottent-reunion-chefs-parti-lecornu"
+    }
+  ],
+  "schema_version": "1.0"
+}
