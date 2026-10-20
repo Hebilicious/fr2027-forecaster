@@ -1,0 +1,134 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-20T13:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-20T13:00:11Z",
+      "title": "Présidentielle 2027 : « Raphaël Glucksmann est devenu le domino qui bouscule le reste de l’édifice »",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/20/presidentielle-2027-raphael-glucksmann-est-devenu-le-domino-qui-bouscule-le-reste-de-l-edifice_6797921_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "guedj"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T13:08:17Z",
+      "title": "Maintien de l'ordre après le 17 octobre: \"Si les couvre-feux sont efficaces, alors il faut les maintenir aussi longtemps que nécessaire\", estime Jérôme Guedj (PS)",
+      "url": "https://www.bfmtv.com/politique/video-maintien-de-l-ordre-apres-le-17-octobre-si-les-couvre-feux-sont-efficaces-alors-il-faut-les-maintenir-aussi-longtemps-que-necessaire-estime-jerome-guedj-ps_VN-202610200568.html"
+    },
+    {
+      "candidate_ids": [
+        "arthaud"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Violences du 17 octobre : la candidate d’extrême gauche à la présidentielle Nathalie Arthaud « comprend » le « désarroi » des « petits commerçants »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/violences-du-17-octobre-la-candidate-dextreme-gauche-a-la-presidentielle-nathalie-arthaud-comprend-le-desarroi-des-petits-commercants-20-10-2026-QXHNLFACSJHLVJ5ETE7UA23NRY.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Violences du 17 octobre : faut-il bloquer les réseaux sociaux ? Marine Tondelier fustige la proposition de Gabriel Attal",
+      "url": "https://www.leparisien.fr/elections/presidentielle/violences-du-17-octobre-faut-il-bloquer-les-reseaux-sociaux-marine-tondelier-fustige-la-proposition-de-gabriel-attal-20-10-2026-CFFI3ZD3KNAI3BQWBPBA77GWMQ.php"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-20T12:20:27Z",
+      "title": "Violences du 17 octobre : peut-on déplacer la date du second tour de l’élection présidentielle ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/violences-du-17-octobre-peut-on-deplacer-la-date-du-second-tour-de-lelection-presidentielle"
+    }
+  ],
+  "schema_version": "1.0"
+}
