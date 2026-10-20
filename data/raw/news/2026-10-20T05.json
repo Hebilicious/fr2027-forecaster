@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-20T05:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-20T05:00:00Z",
+      "title": "Éric Ciotti au Figaro : «Si nous renonçons à employer la force contre les barbares, c’est la République qui s’effondrera»",
+      "url": "https://www.lefigaro.fr/politique/eric-ciotti-au-figaro-si-nous-renoncons-a-employer-la-force-contre-les-barbares-c-est-la-republique-qui-s-effondrera-20261020"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-20T05:10:56Z",
+      "title": "\"Je m'en fous\" : le candidat à la présidentielle David Lisnard s'agace après avoir été interrogé sur le 17 octobre 1961",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/je-m-en-fous-le-candidat-a-la-presidentielle-david-lisnard-s-agace-apres-avoir-ete-interroge-sur-le-17-octobre-1961_8245099.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T04:59:23Z",
+      "title": "\"J'en ai rien à cirer, j'étais pas né\": l'agacement de David Lisnard après avoir été interrogé par une étudiante sur le \"massacre\" du 17 octobre 1961",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/j-en-ai-rien-a-cirer-j-etais-pas-ne-l-agacement-de-david-lisnard-apres-avoir-ete-interroge-par-une-etudiante-sur-le-massacre-du-17-octobre-1961_AD-202610200128.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
