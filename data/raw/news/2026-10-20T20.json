@@ -1,0 +1,149 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-20T20:19:36Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:12:46Z",
+      "title": "Débordements en marge des manifestations: \"L'interdiction est une solution\", estime Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-debordements-en-marge-des-manifestations-l-interdiction-est-une-solution-estime-jordan-bardella-president-du-rassemblement-national_VN-202610200878.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:10:47Z",
+      "title": "Violences du 17 octobre: \"Nous serons intraitables avec les personnalités violentes\", promet Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-violences-du-17-octobre-nous-serons-intraitables-avec-les-personnalites-violentes-promet-jordan-bardella-president-du-rassemblement-national_VN-202610200877.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:08:50Z",
+      "title": "17 octobre: \"Ceux qui ont tout cassé dans les commerces sont certainement instrumentalisés par LFI\" affirme Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-17-octobre-ceux-qui-ont-tout-casse-dans-les-commerces-sont-certainement-instrumentalises-par-lfi-affirme-jordan-bardella-president-du-rassemblement-national_VN-202610200876.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:06:47Z",
+      "title": "Violences du 17 octobre: \"Il faut un sursaut pénal\", estime Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-violences-du-17-octobre-il-faut-un-sursaut-penal-estime-jordan-bardella-president-du-rassemblement-national_VN-202610200873.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:05:34Z",
+      "title": "Violences du 17 octobre: \"Le pouvoir a abdiqué\", estime Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-violences-du-17-octobre-le-pouvoir-a-abdique-estime-jordan-bardella-president-du-rassemblement-national_VN-202610200874.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T19:33:05Z",
+      "title": "\"On va te pourrir la réunion\", annonce Jean-Luc Mélenchon en réponse à l'invitation de Sébastien Lecornu",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-on-va-te-pourrir-la-reunion-annonce-jean-luc-melenchon-en-reponse-a-l-invitation-de-sebastien-lecornu_VN-202610200864.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T19:30:53Z",
+      "title": "Sébastien Lecornu affirme \"ne pas chercher à interdire\" la France insoumise mais \"veut la combattre dans les urnes\"",
+      "url": "https://www.bfmtv.com/politique/gouvernement/sebastien-lecornu-affirme-ne-pas-chercher-a-interdire-la-france-insoumise-mais-veut-la-combattre-dans-les-urnes_AD-202610200862.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
