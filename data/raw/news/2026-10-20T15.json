@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-20T15:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T15:14:49Z",
+      "title": "Violences et pillages: \"Il faut que le gouvernement accepte l'idée d'une désescalade\", affirme Olivier Faure, premier secrétaire du PS",
+      "url": "https://www.bfmtv.com/politique/video-violences-et-pillages-il-faut-que-le-gouvernement-accepte-l-idee-d-une-desescalade-affirme-olivier-faure-premier-secretaire-du-ps_VN-202610200657.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Violences du 17 octobre : les couvre-feux sont un « aveu d’échec » du gouvernement, juge Fabien Roussel",
+      "url": "https://www.leparisien.fr/elections/presidentielle/violences-du-17-octobre-les-couvre-feux-sont-un-aveu-dechec-du-gouvernement-juge-fabien-roussel-20-10-2026-EILHY3CBDZGPVO4PBZIZXT4ZWA.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
