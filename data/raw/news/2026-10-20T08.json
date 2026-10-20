@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-20T08:18:36Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-20T07:39:51Z",
+      "title": "«Non mais je m’en fous madame, j’étais pas né» : interrogé sur le 17 octobre 1961, David Lisnard s’énerve",
+      "url": "https://www.liberation.fr/politique/non-mais-je-men-fous-madame-jetais-pas-ne-interroge-sur-le-17-octobre-1961-david-lisnard-senerve-20261020_JZNDU5EO4JAADIKLCY2RDR2H54/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T07:44:26Z",
+      "title": "Réunion des chefs de partis: \"Il ne se passe pas grand-chose à ces réunions\", défend Jean-Philippe Tanguy, député du RN, concernant l'absence de Marine Le Pen et Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/front-national/video-reunion-des-chefs-de-partis-il-ne-se-passe-pas-grand-chose-a-ces-reunions-defend-jean-philippe-tanguy-depute-du-rn-concernant-l-absence-de-marine-le-pen-et-jordan-bardella_VN-202610200325.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : après les violences du 17 octobre, Retailleau veut changer la date du second tour de l’élection, fixée au lendemain du 1er Mai",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-apres-les-violences-du-17-octobre-retailleau-veut-changer-la-date-du-second-tour-de-lelection-fixee-au-lendemain-du-1er-mai-20-10-2026-NZ77MZG56REXZMV24C5NWPWMPQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
