@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-20T19:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-20T18:31:58Z",
+      "title": "Mobilisation du 17 octobre : la contre-attaque indécente de la macronie ouvre un boulevard à Marine Le Pen",
+      "url": "https://www.liberation.fr/idees-et-debats/editorial/mobilisation-du-17-octobre-la-contre-attaque-indecente-de-la-macronie-ouvre-un-boulevard-a-marine-le-pen-20261020_JJWYJWV46VFL3H4CYWXOYFBNV4/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-20T18:19:09Z",
+      "title": "Sous le feu des attaques après le 17 octobre, LFI fait «monter la pression» sur le gouvernement",
+      "url": "https://www.liberation.fr/politique/sous-le-feu-des-attaques-apres-le-17-octobre-lfi-fait-monter-la-pression-sur-le-gouvernement-20261020_QQOASIXEZVD5RAFX2X3PWIKKF4/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T19:09:48Z",
+      "title": "Manifestation du 24 octobre: Jean-Luc Mélenchon \"réquisitionne\" les Insoumis pour protéger les lycéens",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-manifestation-du-24-octobre-jean-luc-melenchon-requisitionne-les-insoumis-pour-proteger-les-lyceens_VN-202610200848.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T18:21:07Z",
+      "title": "\"C'est incroyable de se comporter comme ça\": Jean-Luc Mélenchon déplore le comportement de Sébastien Lecornu envers Mathilde Panot",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-c-est-incroyable-de-se-comporter-comme-ca-jean-luc-melenchon-deplore-le-comportement-de-sebastien-lecornu-envers-mathilde-panot_VN-202610200820.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
