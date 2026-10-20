@@ -1,0 +1,167 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-20T21:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-20T21:06:24Z",
+      "title": "Après les violences urbaines du 17 octobre, le gouvernement et Renaissance s’en prennent aux réseaux sociaux",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/20/apres-les-violences-urbaines-du-17-octobre-le-gouvernement-et-renaissance-s-en-prennent-aux-reseaux-sociaux_6798016_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T21:16:47Z",
+      "title": "DIRECT. Violences du 17 octobre: Marine Tondelier affirme qu'il était \"plus dur de manifester que de piller des magasins\"",
+      "url": "https://www.bfmtv.com/politique/direct-violences-du-17-octobre-des-couvre-feux-mis-en-place-dans-plusieurs-villes-sebastien-lecornu-a-limoges-vendredi_LN-202610200080.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T21:04:07Z",
+      "title": "Couvre-feux après le 17 octobre: \"C'est une solution à court terme\", estime Maël de Calan, président du parti Horizons dans le Finistère, porte-parole d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/horizons/video-couvre-feux-apres-le-17-octobre-c-est-une-solution-a-court-terme-estime-mael-de-calan-president-du-parti-horizons-dans-le-finistere-porte-parole-d-edouard-philippe_VN-202610200902.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T21:02:29Z",
+      "title": "Violences du 17 octobre: Marine Tondelier, candidate Les Écologistes à l'élection présidentielle, accuse Sébastien Lecornu de \"propager un climat de guerre civile\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-violences-du-17-octobre-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-accuse-sebastien-lecornu-de-propager-un-climat-de-guerre-civile_VN-202610200899.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:57:32Z",
+      "title": "Manifestations du 17 octobre: \"Si vous voulez de l'apaisement social, il faut des réponses sociales,\" explique Marine Tondelier, candidate Les Écologistes à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-manifestations-du-17-octobre-si-vous-voulez-de-l-apaisement-social-il-faut-des-reponses-sociales-explique-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202610200895.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:51:30Z",
+      "title": "Manifestations du 17 octobre: Marine Tondelier, candidate Les Écologistes à l'élection présidentielle, se dit \"sidérée par l'incapacité de ce gouvernement à répondre à la crise sociale\"",
+      "url": "https://www.bfmtv.com/politique/video-manifestations-du-17-octobre-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-se-dit-sideree-par-l-incapacite-de-ce-gouvernement-a-repondre-a-la-crise-sociale_VN-202610200893.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:46:59Z",
+      "title": "Violences du 17 octobre: \"Rien n'explique ce qu'il s'est passé ce week-end\", fustige Marine Tondelier, candidate Les Écologistes à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-rien-n-explique-ce-qu-il-s-est-passe-ce-week-end-fustige-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202610200890.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:43:15Z",
+      "title": "17 octobre: \"Il était plus difficile de manifester que de piller des magasins\", juge Marine Tondelier, candidate Les Écologistes à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-17-octobre-il-etait-plus-difficile-de-manifester-que-de-piller-des-magasins-juge-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202610200888.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-20T20:16:50Z",
+      "title": "\"Je ne veux plus que la France soit humiliée\", déclare Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-je-ne-veux-plus-que-la-france-soit-humiliee-declare-jordan-bardella-president-du-rassemblement-national_VN-202610200879.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
