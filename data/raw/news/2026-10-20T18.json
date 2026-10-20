@@ -1,0 +1,144 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-20T18:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-20T17:43:57Z",
+      "title": "EN DIRECT, manifestations du 17 octobre : nouveaux couvre-feux mardi soir ; Sébastien Lecornu recevra les syndicats mercredi et les partis politiques jeudi",
+      "url": "https://www.lemonde.fr/societe/live/2026/10/20/en-direct-manifestations-du-17-octobre-nouveaux-couvre-feux-mardi-soir-sebastien-lecornu-recevra-les-syndicats-mercredi-et-les-partis-politiques-jeudi_6795855_3224.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-20T18:00:00Z",
+      "title": "Présidentielle 2027 : en reflux dans les sondages, Édouard Philippe confronté au risque du dégagisme",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-en-reflux-dans-les-sondages-edouard-philippe-confronte-au-risque-du-degagisme-20261020"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-20T17:45:00Z",
+      "title": "Présidentielle 2027 : entre Jean-Luc Mélenchon et Raphaël Glucksmann, le duel qui vient",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-entre-jean-luc-melenchon-et-raphael-glucksmann-le-duel-qui-vient-20261020"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-20T17:30:00Z",
+      "title": "«Il faut qu’ils s’entendent : autrement c’est de la folie» : entre Bruno Retailleau et David Lisnard, l’urgence d’un accord entre deux compétiteurs du même camp",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/il-faut-qu-ils-s-entendent-autrement-c-est-de-la-folie-entre-bruno-retailleau-et-david-lisnard-l-urgence-d-un-accord-entre-deux-competiteurs-du-meme-camp-20261020"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-20T17:15:00Z",
+      "title": "«Je ne vois pas ce qui peut nous arrêter» : après les violences du 17 octobre, Marine Le Pen assoit sa domination sur la campagne",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/je-ne-vois-pas-ce-qui-peut-nous-arreter-apres-les-violences-du-17-octobre-marine-le-pen-assoit-sa-domination-sur-la-campagne-20261020"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : un premier sondage post-17 octobre donne Marine Le Pen largement en tête au premier tour, devant Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-un-premier-sondage-post-17-octobre-donne-marine-le-pen-largement-en-tete-au-premier-tour-devant-jean-luc-melenchon-20-10-2026-34TUA5TW6BAV5HSLDBY4R65OZI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
