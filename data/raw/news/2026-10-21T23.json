@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T23:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T22:13:42Z",
+      "title": "\"N'attendons pas de nous enfoncer plus\": Dominique de Villepin appelle les candidats à la présidentielle à se réunir via \"une plateforme commune anticrise\"",
+      "url": "https://www.bfmtv.com/politique/n-attendons-pas-de-nous-enfoncer-plus-dominique-de-villepin-appelle-les-candidats-a-la-presidentielle-a-se-reunir-via-une-plateforme-commune-anticrise_AD-202610210989.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T21:28:28Z",
+      "title": "Parcoursup: \"Je ne suis pas pour supprimer, mais réformer\", explique Natacha Polony",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-parcoursup-je-ne-suis-pas-pour-supprimer-mais-reformer-explique-natacha-polony_VN-202610210972.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
