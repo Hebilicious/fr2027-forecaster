@@ -1,0 +1,107 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T14:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-21T13:44:59Z",
+      "title": "Robert Ménard au Figaro : « Bruno Retailleau et David Lisnard ne finiront pas à deux face aux Français »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/robert-menard-au-figaro-bruno-retailleau-et-david-lisnard-ne-finiront-pas-a-deux-face-aux-francais-20261021"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Le Pen et Mélenchon, mais pas Tondelier ni Philippe… LCI organise un nouveau débat le 16 novembre",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-le-pen-et-melenchon-mais-pas-tondelier-ni-philippe-lci-organise-un-nouveau-debat-le-16-novembre-21-10-2026-EZSLSDC5XFD5JOWXDD7PXQQM5Q.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
