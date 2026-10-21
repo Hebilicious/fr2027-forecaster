@@ -1,0 +1,143 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T05:20:03Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-21T04:25:03Z",
+      "title": "Annulation de la dette publique française : les leçons des précédents dans l’histoire",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/21/annulation-de-la-dette-publique-francaise-les-lecons-des-precedents-dans-l-histoire_6798197_3234.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-21T04:49:57Z",
+      "title": "Donald Trump dit voir dans Marine Le Pen la \"voix conservatrice\" en France",
+      "url": "https://www.franceinfo.fr/monde/usa/presidentielle/donald-trump/donald-trump-dit-voir-dans-marine-le-pen-la-voix-conservatrice-en-france_8246665.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T05:04:37Z",
+      "title": "Violences du 17 octobre: LFI se rendra à la rencontre des partis politiques à Matignon, Jean-Luc Mélenchon prévient Sébastien Lecornu que son parti \"va pourrir la réunion\"",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/violences-du-17-octobre-lfi-se-rendra-a-la-rencontre-des-partis-politiques-a-matignon-jean-luc-melenchon-previent-sebastien-lecornu-que-son-parti-va-pourrir-la-reunion_AD-202610210118.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T04:44:46Z",
+      "title": "Fabien Roussel",
+      "url": "https://www.bfmtv.com/politique/fabien-roussel_DN-202105090296.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T04:44:45Z",
+      "title": "Présidentielle 2027: Marine Le Pen toujours largement en tête selon un nouveau sondage fait après le 17 octobre, Jean-Luc Mélenchon au second tour dans quasiment tous les cas de figure",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-marine-le-pen-toujours-largement-en-tete-selon-un-nouveau-sondage-fait-apres-le-17-octobre-jean-luc-melenchon-au-second-tour-dans-quasiment-tous-les-cas-de-figure_AD-202610210094.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-21T04:29:18Z",
+      "title": "Présidentielle 2027 : Mélenchon au second tour dans un sondage après les violences",
+      "url": "https://www.20minutes.fr/politique/4256158-20261021-presidentielle-2027-melenchon-second-tour-sondage-apres-violences"
+    }
+  ],
+  "schema_version": "1.0"
+}
