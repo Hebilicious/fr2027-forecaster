@@ -1,0 +1,135 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T10:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-21T09:36:44Z",
+      "title": "Eric Ciotti appelle Bruno Retailleau et David Lisnard à abandonner \"leurs candidatures de témoignages\" à la présidentielle pour se rassembler autour de Marine Le Pen",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/eric-ciotti-appelle-bruno-retailleau-et-david-lisnard-a-abandonner-leurs-candidatures-de-temoignages-pour-se-rassembler-autour-de-marine-le-pen_8247031.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Violences du 17 octobre : François Hollande critique LFI mais appelle à ne pas « faire de fixation » sur son rôle",
+      "url": "https://www.leparisien.fr/societe/violences-du-17-octobre-francois-hollande-critique-lfi-mais-appelle-a-ne-pas-faire-de-fixation-sur-son-role-21-10-2026-LNKCWZPZGNA6JC52CXIZVEWB3Y.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-21T09:32:39Z",
+      "title": "Congrès du RN à Orléans : Marine Le Pen n’a « pas d’inquiétude » sur la sécurité",
+      "url": "https://www.20minutes.fr/politique/4256247-20261021-congres-rn-orleans-marine-pen-inquietude-securite"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-21T09:57:46Z",
+      "title": "Présidentielle 2027 : Peut-on changer la date de l’élection comme le voudrait Bruno Retailleau ?",
+      "url": "https://www.20minutes.fr/politique/4256229-20261021-presidentielle-2027-peut-changer-date-election-comme-voudrait-bruno-retailleau"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-21T09:54:20Z",
+      "title": "Présidentielle 2027 : Ciotti appelle Retailleau et Lisnard à abandonner « leurs candidatures de témoignages »",
+      "url": "https://www.20minutes.fr/politique/4256227-20261021-presidentielle-2027-ciotti-appelle-retailleau-lisnard-abandonner-candidatures-temoignages"
+    }
+  ],
+  "schema_version": "1.0"
+}
