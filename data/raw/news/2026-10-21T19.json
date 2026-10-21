@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T19:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-21T18:25:00Z",
+      "title": "Violences du 17 octobre : le gouvernement sommé d’élargir les pouvoirs des polices municipales",
+      "url": "https://www.lefigaro.fr/politique/violences-du-17-octobre-le-gouvernement-somme-d-elargir-les-pouvoirs-des-polices-municipales-20261021"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-21T18:16:45Z",
+      "title": "« Ce serait la crise quasi immédiate » : ce que les milieux économiques pensent du programme de Jean-Luc Mélenchon",
+      "url": "https://www.lefigaro.fr/conjoncture/ce-serait-la-crise-quasi-immediate-ce-que-les-milieux-economiques-pensent-du-programme-de-jean-luc-melenchon-20261021"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T19:17:41Z",
+      "title": "Une \"mascarade\": Marine Le Pen dénonce l'absence de rapporteur RN au sein de la commission d'enquête sur le 17 octobre et promet un boycott",
+      "url": "https://www.bfmtv.com/politique/front-national/une-mascarade-marine-le-pen-denonce-l-absence-de-rapporteur-rn-au-sein-de-la-commission-d-enquete-sur-le-17-octobre-et-promet-un-boycott_AD-202610210904.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Un entre-soi gauchiste » : le RN n’aura pas de rapporteur à la commission d’enquête sur les violences du 17 octobre, Marine Le Pen furieuse",
+      "url": "https://www.leparisien.fr/politique/un-entre-soi-gauchiste-le-rn-naura-pas-de-rapporteur-a-la-commission-denquete-sur-les-violences-du-17-octobre-marine-le-pen-furieuse-21-10-2026-YR6XQBGUR5GADIJNY4UJKYN5EE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
