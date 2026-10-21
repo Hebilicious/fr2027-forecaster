@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T08:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-21T07:41:16Z",
+      "title": "\"Retrouver l'ordre, le droit, et le pouvoir d'achat\" : dans des petites communes de Dordogne, les violences du 17 octobre enracinent l'envie de voter Marine Le Pen",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/retrouver-l-ordre-le-droit-et-le-pouvoir-d-achat-dans-des-petites-communes-de-dordogne-les-violences-du-17-octobre-enracinent-l-envie-de-voter-marine-le-pen_8246170.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-21T07:39:29Z",
+      "title": "“Complément d'enquête”. Sarah Knafo : Zemmour, gloire et plan B",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/complement-d-enquete/complement-d-enquete-sarah-knafo-zemmour-gloire-et-plan-b_8219074.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-21T08:04:29Z",
+      "title": "Après le 17-Octobre, Marine Le Pen \"superpuissante\" dans les sondages",
+      "url": "https://www.france24.com/fr/%C3%A9missions/dans-la-presse/20261021-apr%C3%A8s-le-17-octobre-marine-le-pen-superpuissante-dans-les-sondages"
+    }
+  ],
+  "schema_version": "1.0"
+}
