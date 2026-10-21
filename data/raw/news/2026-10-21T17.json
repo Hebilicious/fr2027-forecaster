@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T17:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-21T17:00:36Z",
+      "title": "Des maires de gauche reprochent à David Lisnard ses propos sur le massacre du 17 octobre 1961",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/21/des-maires-de-gauche-reprochent-a-david-lisnard-ses-propos-sur-le-massacre-du-17-octobre-1961_6798298_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-21T16:56:36Z",
+      "title": "\"Bouc émissaire\", \"scandale d'Etat\"... On vous raconte le bras de fer entre le gouvernement et LFI au sujet des violences du 17 octobre",
+      "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/bouc-emissaire-scandale-d-etat-on-vous-raconte-le-bras-de-fer-entre-le-gouvernement-et-lfi-au-sujet-des-violences-du-17octobre_8247475.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-21T16:19:12Z",
+      "title": "Donald Trump apporte un soutien à Marine Le Pen",
+      "url": "https://www.franceinfo.fr/monde/usa/donald-trump-apporte-un-soutien-a-marine-le-pen_8247688.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
