@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T21:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T21:05:54Z",
+      "title": "Parcoursup: \"Je ne suis pas pour supprimer, mais réformer\", explique Natacha Polony, candidate \"Nous sommes la France\" à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-parcoursup-je-ne-suis-pas-pour-supprimer-mais-reformer-explique-natacha-polony-candidate-nous-sommes-la-france-a-l-election-presidentielle_VN-202610210956.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T20:46:10Z",
+      "title": "Violences du 17 octobre: \"Nous devons rappeler à nos concitoyens que les forces de l'ordre sont là pour les protéger\", clame Natacha Polony, candidate \"Nous sommes la France\" à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-nous-devons-rappeler-a-nos-concitoyens-que-les-forces-de-l-ordre-sont-la-pour-les-proteger-clame-natacha-polony-candidate-nous-sommes-la-france-a-l-election-presidentielle_VN-202610210953.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T20:40:23Z",
+      "title": "Violences du 17 octobre: Natacha Polony, candidate \"Nous sommes la France\" à la présidentielle dénonce un \"fiasco\" et espère \"que le gouvernement a tiré les leçons de ce qu'il s'est passé\"",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-natacha-polony-candidate-nous-sommes-la-france-a-la-presidentielle-denonce-un-fiasco-et-espere-que-le-gouvernement-a-tire-les-lecons-de-ce-qu-il-s-est-passe_VN-202610210951.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T20:37:41Z",
+      "title": "Violences du 17 octobre: \"Nous avons assisté à un effondrement\", estime Natacha Polony, candidate \"Nous sommes la France\" à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-nous-avons-assiste-a-un-effondrement-estime-natacha-polony-candidate-nous-sommes-la-france-a-l-election-presidentielle_VN-202610210949.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
