@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T15:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-21T14:41:47Z",
+      "title": "\"Continue comme ça Jean-Luc, c'est un sans faute ; voilà le SMS que j'aurais envoyé samedi si j'étais Marine Le Pen\", lance le sénateur Claude Malhuret",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-continue-comme-ca-jean-luc-c-est-un-sans-faute-voila-le-sms-que-j-aurais-envoye-samedi-si-j-etais-marine-le-pen-lance-le-senateur-claude-malhuret_VN-202610210668.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-21T14:48:49Z",
+      "title": "Violences du 17 octobre : Sébastien Lecornu accuse LFI de porter « une atteinte très grave à l’État de droit »",
+      "url": "https://www.publicsenat.fr/actualites/politique/violences-du-17-octobre-sebastien-lecornu-accuse-lfi-de-porter-une-atteinte-tres-grave-a-letat-de-droit"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-21T14:35:47Z",
+      "title": "Violences urbaines : « Nous ne sommes pas à un stade où il y aura déclaration de l’état d’urgence », affirme le ministre de l’Intérieur",
+      "url": "https://www.publicsenat.fr/actualites/politique/violences-urbaines-nous-ne-sommes-pas-a-un-stade-ou-il-y-aura-declaration-de-letat-durgence-affirme-le-ministre-de-linterieur"
+    }
+  ],
+  "schema_version": "1.0"
+}
