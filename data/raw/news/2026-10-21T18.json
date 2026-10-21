@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-21T18:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "cazeneuve",
+        "glucksmann"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-21T18:00:00Z",
+      "title": "Bernard Cazeneuve au Figaro : «Emmanuel Macron n’est pas responsable de tout, mais il l’est de l’essentiel»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/bernard-cazeneuve-au-figaro-emmanuel-macron-n-est-pas-responsable-de-tout-mais-il-l-est-de-l-essentiel-20261021"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-21T17:29:00Z",
+      "title": "« Éviter de finir ennemis » : dans les coulisses du déjeuner entre David Lisnard et Bruno Retailleau",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/eviter-de-finir-ennemis-dans-les-coulisses-du-dejeuner-entre-david-lisnard-et-bruno-retailleau-20261021"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« C’est dévastateur pour eux » : Édouard Philippe et Gabriel Attal face au « problème » Macron",
+      "url": "https://www.leparisien.fr/elections/presidentielle/cest-devastateur-pour-eux-edouard-philippe-et-gabriel-attal-face-au-probleme-macron-21-10-2026-KBB6MOXDPNDUZFYBTFLHYZMVV4.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-21T17:51:28Z",
+      "title": "Glucksmann, une histoire de famille",
+      "url": "https://www.france24.com/fr/%C3%A9missions/questions-directes/20261021-glucksmann-une-histoire-de-famille"
+    }
+  ],
+  "schema_version": "1.0"
+}
