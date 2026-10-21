@@ -6,6 +6,10 @@ project:
   title: "Web UI"
   description: "The local Vue app: reads only the fr2027 serve API."
 
+# .intlayer/ is shared by every task below that sets `mutex: "intlayer"`, and `vite build` deletes and rebuilds
+# all of it (vite-intlayer prepares with `clean: true` for a build), so those tasks never run at the same time:
+# a type check reading .intlayer/types while the build wipes it sees the `Locale` type of every locale Intlayer
+# knows, and fails.
 tasks:
   build:
     description: "Build the UI into dist/ for fr2027 serve."
@@ -22,14 +26,21 @@ tasks:
         "/pnpm-lock.yaml",
       ]
     outputs: ["dist"]
+    options:
+      mutex: "intlayer"
 
   # The *.content.ts dictionaries, compiled into .intlayer/ with the types that make `useIntlayer` typed.
+  # Not cached: Intlayer updates .intlayer/ in place, writing only the files that changed and each one
+  # atomically, while restoring it from moon's cache deletes and recreates every file, which a running
+  # `vite` dev server answers with a clean rebuild of the whole directory.
   dictionaries:
     description: "Build the Intlayer dictionaries and their types into .intlayer/."
     command: "intlayer"
     args: ["build"]
     inputs: ["src/**/*.content.ts", "intlayer.config.ts", "package.json", "/pnpm-lock.yaml"]
-    outputs: [".intlayer"]
+    options:
+      cache: false
+      mutex: "intlayer"
 
   articles:
     description: "Refresh src/articles.ts, each candidate's Wikipedia article in every site language, from config/sources.yaml."
@@ -45,6 +56,8 @@ tasks:
     args: ["test"]
     deps: ["~:dictionaries"]
     inputs: ["src/**/*.content.ts", "intlayer.config.ts"]
+    options:
+      mutex: "intlayer"
 
   dev:
     description: "Vite dev server with hot reload; proxies /api to fr2027 serve (FR2027_API overrides the address)."
@@ -60,6 +73,8 @@ tasks:
     args: ["check"]
     deps: ["~:dictionaries"]
     inputs: ["src/**/*", "intlayer.config.ts", "tsconfig.json", "vize.config.json", "package.json", "/pnpm-lock.yaml"]
+    options:
+      mutex: "intlayer"
 
   lint:
     description: "Lint Vue files with vize."
@@ -73,6 +88,8 @@ tasks:
     args: ["run"]
     deps: ["~:dictionaries"]
     inputs: ["src/**/*", "vite.config.ts", "intlayer.config.ts", "package.json", "/pnpm-lock.yaml"]
+    options:
+      mutex: "intlayer"
 
   # No shell for the two format tasks: bash would expand src/**/*.vue as src/*/*.vue (no globstar),
   # skipping src/App.vue and nested folders. vize expands the glob itself.
