@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T14:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-22T14:01:01Z",
+      "title": "Meeting du RN : la préfecture du Loiret interdit toute manifestation à Orléans dimanche 25 octobre, jour du discours de Marine Le Pen",
+      "url": "https://www.liberation.fr/politique/meeting-du-rn-la-prefecture-du-loiret-interdit-toute-manifestation-a-orleans-dimanche-25-octobre-jour-du-discours-de-marine-le-pen-20261022_KUHL2EQLCFHNLCQJYAXU6CM2AI/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-22T13:49:39Z",
+      "title": "Jordan Bardella ou le retour au second rôle : «Il n’est pas mort tant qu’elle n’a pas décidé qu’il l’était»",
+      "url": "https://www.liberation.fr/politique/jordan-bardella-ou-le-retour-au-second-role-il-nest-pas-mort-tant-quelle-na-pas-decide-quil-letait-20261022_CW6ZVDWK6FGEPB5JG2AHCSIO3Y/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T14:13:52Z",
+      "title": "Réunion à Matignon: \"J'ai demandé au Premier ministre de reconsidérer le calendrier\" de la présidentielle, déclare Bruno Retailleau, président des Républicains, qui redoute des débordements le 1ier mai 2027",
+      "url": "https://www.bfmtv.com/politique/video-reunion-a-matignon-j-ai-demande-au-premier-ministre-de-reconsiderer-le-calendrier-de-la-presidentielle-declare-bruno-retailleau-president-des-republicains-qui-redoute-des-debordements-le-1ier-mai-2027_VN-202610220658.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Nous sommes une boîte à idées permanente » : Éric Ciotti, l’allié préféré de Marine Le Pen",
+      "url": "https://www.leparisien.fr/politique/nous-sommes-une-boite-a-idees-permanente-eric-ciotti-lallie-prefere-de-marine-le-pen-22-10-2026-372N5JIAENCBRFIRZWCGMOPQQE.php"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Dominique de Villepin appelle les candidats à se réunir via « une plate-forme commune anticrise »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-dominique-de-villepin-appelle-les-candidats-a-se-reunir-via-une-plate-forme-commune-anticrise-22-10-2026-VSHLWWJ66FBR7CQJXDLECSK5MY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
