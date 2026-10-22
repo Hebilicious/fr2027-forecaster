@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T15:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel",
+        "tondelier"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-22T15:00:07Z",
+      "title": "Election présidentielle au Brésil : « Chaque victoire de l’extrême droite à l’étranger banalise cette perspective chez nous », alertent des responsables politiques de gauche en France",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/22/election-presidentielle-au-bresil-chaque-victoire-de-l-extreme-droite-a-l-etranger-banalise-cette-perspective-chez-nous-alertent-des-responsables-politiques-de-gauche-en-france_6798635_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Olivier Faure affirme qu’il n’y aura pas d’alliance avec LFI, sans exclure une union pour les législatives",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-olivier-faure-affirme-quil-ny-aura-pas-dalliance-avec-lfi-sans-exclure-une-union-pour-les-legislatives-22-10-2026-MVRFOG26VZF3DERYR7F3VIZTAQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-22T15:09:24Z",
+      "title": "Congrès du RN : « Contrevérités »… Marine Le Pen répond sèchement à un article du JDD de Bolloré",
+      "url": "https://www.20minutes.fr/politique/4256689-20261022-congres-rn-contreverites-marine-pen-repond-sechement-article-jdd-bollore"
+    }
+  ],
+  "schema_version": "1.0"
+}
