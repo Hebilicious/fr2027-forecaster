@@ -1,0 +1,194 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T21:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T21:05:50Z",
+      "title": "\"Le RN souffle sur les braises\" du 17 octobre, affirme Dominique de Villepin, ancien Premier ministre, face à Marion Maréchal",
+      "url": "https://www.bfmtv.com/politique/video-le-rn-souffle-sur-les-braises-du-17-octobre-affirme-dominique-de-villepin-ancien-premier-ministre-face-a-marion-marechal_VN-202610220975.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T21:02:43Z",
+      "title": "17 octobre: \"Vous préférez un policier blessé qu'un émeutier blessé\", lance Marion Maréchal, présidente d'Identité-Libertés, à Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/video-17-octobre-vous-preferez-un-policier-blesse-qu-un-emeutier-blesse-lance-marion-marechal-presidente-d-identite-libertes-a-dominique-de-villepin-ancien-premier-ministre_VN-202610220973.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:50:19Z",
+      "title": "Giorgia Meloni, Donald Trump, Benjamin Netanyahu... Dominique de Villepin, ancien Premier ministre, définit les régimes et les gouvernements étrangers",
+      "url": "https://www.bfmtv.com/politique/video-giorgia-meloni-donald-trump-benjamin-netanyahu-dominique-de-villepin-ancien-premier-ministre-definit-les-regimes-et-les-gouvernements-etrangers_VN-202610220970.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:49:02Z",
+      "title": "Colère sociale: \"Nous sommes dans un pays d'inégalités et les Français ne le supportent plus\", estime Dominique de Villepin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-colere-sociale-nous-sommes-dans-un-pays-d-inegalites-et-les-francais-ne-le-supportent-plus-estime-dominique-de-villepin_VN-202610220969.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:47:19Z",
+      "title": "\"L'idéologie du Rassemblement national comporte des risques majeurs pour la République\", répond Dominique de Villepin, ancien Premier ministre à Marion Maréchal",
+      "url": "https://www.bfmtv.com/politique/video-l-ideologie-du-rassemblement-national-comporte-des-risques-majeurs-pour-la-republique-repond-dominique-de-villepin-ancien-premier-ministre-a-marion-marechal_VN-202610220967.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:43:06Z",
+      "title": "Comparé à un \"crooner qui veut faire sa dernière tournée\", Dominique de Villepin se défend de vouloir se \"mettre en avant\"",
+      "url": "https://www.bfmtv.com/politique/video-compare-a-un-crooner-qui-veut-faire-sa-derniere-tournee-dominique-de-villepin-se-defend-de-vouloir-se-mettre-en-avant_VN-202610220966.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:37:23Z",
+      "title": "\"Les situations sont différentes\": Dominique de Villepin ne veut pas comparer les violences du 17 octobre avec les émeutes de 2005",
+      "url": "https://www.bfmtv.com/politique/les-situations-sont-differentes-dominique-de-villepin-ne-veut-pas-comparer-les-violences-du-17-octobre-avec-les-emeutes-de-2005_AV-202610220963.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:35:26Z",
+      "title": "Pour Dominique de Villepin, ancien Premier ministre, interdire les manifestations du 24 octobre revient à \"ligoter toutes formes d'expression\"",
+      "url": "https://www.bfmtv.com/politique/video-pour-dominique-de-villepin-ancien-premier-ministre-interdire-les-manifestations-du-24-octobre-revient-a-ligoter-toutes-formes-d-expression_VN-202610220964.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:30:16Z",
+      "title": "\"Notre pays crève de responsables politiques qui sont des chefs de tribus\", constate Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-notre-pays-creve-de-responsables-politiques-qui-sont-des-chefs-de-tribus-constate-dominique-de-villepin-ancien-premier-ministre_VN-202610220962.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:29:19Z",
+      "title": "Dominique de Villepin estime que le \"chemin de la République\" se perd",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dominique-de-villepin-estime-que-le-chemin-de-la-republique-se-perd_VN-202610220961.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:17:18Z",
+      "title": "Chômage des jeunes: selon Dominique de Villepin, ancien Premier ministre, il faut \"mieux préparer notre jeunesse à l'emploi\"",
+      "url": "https://www.bfmtv.com/politique/video-chomage-des-jeunes-selon-dominique-de-villepin-ancien-premier-ministre-il-faut-mieux-preparer-notre-jeunesse-a-l-emploi_VN-202610220955.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:15:20Z",
+      "title": "\"Je n'ai pas de clientèle\": Dominique de Villepin, ancien Premier ministre, définit son positionnement politique",
+      "url": "https://www.bfmtv.com/politique/video-je-n-ai-pas-de-clientele-dominique-de-villepin-ancien-premier-ministre-definit-son-positionnement-politique_VN-202610220952.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
