@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T23:18:06Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T21:41:35Z",
+      "title": "\"L'idéologie du Rassemblement national comporte des risques majeurs pour la République\", répond Dominique de Villepin à Marion Maréchal",
+      "url": "https://www.bfmtv.com/politique/front-national/video-l-ideologie-du-rassemblement-national-comporte-des-risques-majeurs-pour-la-republique-repond-dominique-de-villepin-a-marion-marechal_VN-202610220986.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T21:39:22Z",
+      "title": "Violences du 17 octobre, mouvement lycéen, candidature en 2027... Ce qu’il faut retenir de l’interview de Dominique de Villepin sur BFMTV",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/violences-du-17-octobre-mouvement-lyceen-candidature-en-2027-ce-qu-il-faut-retenir-de-l-interview-de-dominique-de-villepin-sur-bfmtv_AN-202610220984.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T21:32:36Z",
+      "title": "Présidentielle 2027: \"Nous avons dépassé les 300 signatures\", annonce Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-nous-avons-depasse-les-300-signatures-annonce-dominique-de-villepin-ancien-premier-ministre_VN-202610220983.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T21:28:54Z",
+      "title": "Manifestation contre le congrès du RN à Orléans: \"J'estime que ce n'est pas ma place\", déclare Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/front-national/video-manifestation-contre-le-congres-du-rn-a-orleans-j-estime-que-ce-n-est-pas-ma-place-declare-dominique-de-villepin-ancien-premier-ministre_VN-202610220982.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T21:25:35Z",
+      "title": "\"L'accélération de la transition écologique et énergétique est vitale\", lance Dominique de Villepin, ancien Premier ministre, à Marion Maréchal",
+      "url": "https://www.bfmtv.com/politique/video-l-acceleration-de-la-transition-ecologique-et-energetique-est-vitale-lance-dominique-de-villepin-ancien-premier-ministre-a-marion-marechal_VN-202610220981.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
