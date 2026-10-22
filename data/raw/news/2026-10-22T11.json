@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T11:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-22T10:24:16Z",
+      "title": "Edouard Philippe snobe un débat entre présidentiables pour cause de conseil municipal au Havre",
+      "url": "https://www.liberation.fr/politique/edouard-philippe-snobe-un-debat-entre-presidentiables-pour-cause-de-conseil-municipal-au-havre-20261022_E7EJPIBGLND6FDVSSP4E4IWI3Q/"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-22T10:26:27Z",
+      "title": "\"Le gouvernement ne peut pas traiter uniquement d'un manière sécuritaire un sujet qui est d'abord politique\", dénonce Olivier Faure",
+      "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/le-gouvernement-ne-peut-pas-traiter-uniquement-d-un-maniere-securitaire-un-sujet-qui-est-d-abord-politique-denonce-olivier-faure_8248861.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Lisnard critiqué par plusieurs maires après ses propos polémiques sur le 17 octobre 1961",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-lisnard-critique-par-plusieurs-maires-apres-ses-propos-polemiques-sur-le-17-octobre-1961-22-10-2026-C3SBWSTZQRFVPIHV5MYQKLWGEY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
