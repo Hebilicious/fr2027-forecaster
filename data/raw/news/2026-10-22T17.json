@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T17:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-22T16:22:55Z",
+      "title": "VIDEO. \"Le mâle dominant, ce n'est pas Éric Zemmour, c'est Sarah Knafo !\" Le patron de Reconquête est-il en passe d'être \"grand remplacé\" par sa compagne ?",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/complement-d-enquete/video-le-male-dominant-ce-n-est-pas-eric-zemmour-c-est-sarah-knafo-le-patron-de-reconquete-est-il-en-passe-d-etre-grand-remplace-par-sa-compagne_8247673.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T16:34:09Z",
+      "title": "Partis politiques reçus à Matignon: \"Nous n'avons pas obtenu de réponse claire\", affirme Raphaël Glucksmann, candidat PS-Place Publique à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-partis-politiques-recus-a-matignon-nous-n-avons-pas-obtenu-de-reponse-claire-affirme-raphael-glucksmann-candidat-ps-place-publique-a-l-election-presidentielle_VN-202610220785.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
