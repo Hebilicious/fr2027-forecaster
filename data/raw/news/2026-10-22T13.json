@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T13:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T12:31:31Z",
+      "title": "Réunion à Matignon: \"Le fiasco du 17 octobre ne peut pas se reproduire\", déclare Raphaël Glucksmann, candidat \"PS-Place Publique\" à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-reunion-a-matignon-le-fiasco-du-17-octobre-ne-peut-pas-se-reproduire-declare-raphael-glucksmann-candidat-ps-place-publique-a-l-election-presidentielle_VN-202610220577.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T12:27:42Z",
+      "title": "Réunion à Matignon: \"Si on ne parle pas des revendications de lycéens, alors cette réunion aura servi à rien\", déclare Marine Tondelier, secrétaire nationale Les Écologistes, candidate à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-reunion-a-matignon-si-on-ne-parle-pas-des-revendications-de-lyceens-alors-cette-reunion-aura-servi-a-rien-declare-marine-tondelier-secretaire-nationale-les-ecologistes-candidate-a-la-presidentielle_VN-202610220572.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Violences du 17 octobre : Bruno Retailleau accuse le gouvernement de « jouer petits bras »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/violences-du-17-octobre-bruno-retailleau-accuse-le-gouvernement-de-jouer-petits-bras-22-10-2026-TGIIPEUUI5B2LNHT6QVSBPHJZ4.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-22T13:07:39Z",
+      "title": "Subventions aux associations : le RN « n’aura pas la mémoire courte » en cas de victoire en 2027",
+      "url": "https://www.publicsenat.fr/actualites/politique/subventions-aux-associations-le-rn-naura-pas-la-memoire-courte-en-cas-de-victoire-en-2027"
+    }
+  ],
+  "schema_version": "1.0"
+}
