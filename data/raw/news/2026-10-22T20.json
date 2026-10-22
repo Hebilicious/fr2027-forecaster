@@ -1,0 +1,239 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T20:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-22T19:37:00Z",
+      "title": "Absent des mobilisations, Raphaël Glucksmann joue la distance au risque de se faire distancer",
+      "url": "https://www.liberation.fr/politique/absent-des-mobilisations-raphael-glucksmann-joue-la-distance-au-risque-de-se-faire-distancer-20261022_TTSQIFHLJFA53JK2XXVH7TUK6Y/"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:07:41Z",
+      "title": "Réforme des retraites: \"Il faudra que l'ensemble de la communauté nationale travaille plus\", estime Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/video-reforme-des-retraites-il-faudra-que-l-ensemble-de-la-communaute-nationale-travaille-plus-estime-dominique-de-villepin-ancien-premier-ministre_VN-202610220949.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:06:10Z",
+      "title": "\"Je souhaite créer un impôt unique sur le patrimoine\", propose Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/video-je-souhaite-creer-un-impot-unique-sur-le-patrimoine-propose-dominique-de-villepin-ancien-premier-ministre_VN-202610220945.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:03:27Z",
+      "title": "\"La première conviction économique que j'ai, c'est la souveraineté\", atteste Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/video-la-premiere-conviction-economique-que-j-ai-c-est-la-souverainete-atteste-dominique-de-villepin-ancien-premier-ministre_VN-202610220941.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T20:01:21Z",
+      "title": "Dominique de Villepin, ancien Premier ministre, revient sur la loi Contrat première embauche qui avait suscité une mobilisation étudiante massive en 2006",
+      "url": "https://www.bfmtv.com/politique/video-dominique-de-villepin-ancien-premier-ministre-revient-sur-la-loi-contrat-premiere-embauche-qui-avait-suscite-une-mobilisation-etudiante-massive-en-2006_VN-202610220939.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:56:57Z",
+      "title": "Dominique de Villepin, ancien Premier ministre, propose \"un profond changement\" du financement de la protection sociale\"",
+      "url": "https://www.bfmtv.com/politique/video-dominique-de-villepin-ancien-premier-ministre-propose-un-profond-changement-du-financement-de-la-protection-sociale_VN-202610220937.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:48:02Z",
+      "title": "Colère sociale: \"Nous sommes dans un pays d'inégalités et les Français ne le supportent plus\", affirme Dominique de Villepin, anicen Premier ministre",
+      "url": "https://www.bfmtv.com/politique/video-colere-sociale-nous-sommes-dans-un-pays-d-inegalites-et-les-francais-ne-le-supportent-plus-affirme-dominique-de-villepin-anicen-premier-ministre_VN-202610220934.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:44:14Z",
+      "title": "\"L'ultragauche déteste La France insoumise\", assure Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-l-ultragauche-deteste-la-france-insoumise-assure-dominique-de-villepin-ancien-premier-ministre_VN-202610220933.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:41:14Z",
+      "title": "2027: \"Le gouvernement ne peut pas laisser ce face-à-face entre ces deux partis radicaux\", lance Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-2027-le-gouvernement-ne-peut-pas-laisser-ce-face-a-face-entre-ces-deux-partis-radicaux-lance-dominique-de-villepin-ancien-premier-ministre_VN-202610220931.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:38:39Z",
+      "title": "Violences du 17 octobre: Dominique de Villepin, ancien Premier ministre, dénonce \"une impuissance publique\"",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-dominique-de-villepin-ancien-premier-ministre-denonce-une-impuissance-publique_VN-202610220928.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:37:35Z",
+      "title": "Dominique de Villepin, ancien Premier ministre, différencie les émeutes de 2005 aux mobilisations du 17 octobre",
+      "url": "https://www.bfmtv.com/politique/video-dominique-de-villepin-ancien-premier-ministre-differencie-les-emeutes-de-2005-aux-mobilisations-du-17-octobre_VN-202610220927.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:29:57Z",
+      "title": "Violences du 17 octobre: Dominique de Villepin, ancien Premier ministre, évoque \"un défaut d'anticipation et un manque de renseignement\"",
+      "url": "https://www.bfmtv.com/politique/video-violences-du-17-octobre-dominique-de-villepin-ancien-premier-ministre-evoque-un-defaut-d-anticipation-et-un-manque-de-renseignement_VN-202610220925.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:26:39Z",
+      "title": "\"Je pense que nous sommes devant une mécanique de guerre civile\", estime Dominique de Villepin",
+      "url": "https://www.bfmtv.com/politique/front-national/video-je-pense-que-nous-sommes-devant-une-mecanique-de-guerre-civile-estime-dominique-de-villepin_VN-202610220923.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:24:28Z",
+      "title": "Dominique de Villepin, ancien Premier ministre, veut \"introduire dans les manifestations des magistrats\"",
+      "url": "https://www.bfmtv.com/politique/video-dominique-de-villepin-ancien-premier-ministre-veut-introduire-dans-les-manifestations-des-magistrats_VN-202610220921.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:21:31Z",
+      "title": "Mouvement lycéen: Dominique de Villepin, ancien Premier ministre, propose de \"supprimer Parcoursup dans l'état actuel\"",
+      "url": "https://www.bfmtv.com/politique/video-mouvement-lyceen-dominique-de-villepin-ancien-premier-ministre-propose-de-supprimer-parcoursup-dans-l-etat-actuel_VN-202610220920.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:18:25Z",
+      "title": "Pour Dominique de Villepin, ancien Premier ministre, interdire les manifestations du 24 octobre revient à \"ligoter toutes formes d'expression\"",
+      "url": "https://www.bfmtv.com/politique/video-pour-dominique-de-villepin-ancien-premier-ministre-interdire-les-manifestations-du-24-octobre-revient-a-ligoter-toutes-formes-d-expression_VN-202610220918.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T19:16:26Z",
+      "title": "Emmanuel Macron va recevoir des organisations lycéennes: \"Il doit d'abord les écouter\", estime Dominique de Villepin, ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/video-emmanuel-macron-va-recevoir-des-organisations-lyceennes-il-doit-d-abord-les-ecouter-estime-dominique-de-villepin-ancien-premier-ministre_VN-202610220917.html"
+    }
+  ],
+  "schema_version": "1.0"
+}

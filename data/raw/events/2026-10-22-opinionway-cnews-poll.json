@@ -1,0 +1,28 @@
+{
+  "candidate_ids": [
+    "le_pen",
+    "melenchon",
+    "glucksmann",
+    "philippe"
+  ],
+  "date": "2026-10-22",
+  "event_id": "2026-10-22-opinionway-cnews-poll",
+  "kind": "poll_published",
+  "reported_at": "2026-10-22T19:21:29Z",
+  "reported_by": "Grok Bot fr2027",
+  "schema_version": "2.0",
+  "sources": [
+    {
+      "title": "Sondage : Marine Le Pen conforte son avance au premier tour de l'élection présidentielle et battrait plus largement Jean-Luc Mélenchon au second",
+      "url": "https://www.cnews.fr/france/2026-10-22/sondage-marine-le-pen-conforte-son-avance-au-premier-tour-de-lelection"
+    },
+    {
+      "title": "SONDAGE - Présidentielle 2027 : après le 17 octobre, Marine Le Pen consolide son avance au premier tour, David Lisnard devance Gabriel Attal",
+      "url": "https://www.europe1.fr/politique/sondage-presidentielle-2027-apres-le-17-octobre-marine-le-pen-consolide-son-avance-au-premier-tour-david-lisnard-devance-gabriel-attal-1174275"
+    }
+  ],
+  "summary": {
+    "en": "An OpinionWay poll for CNews, conducted online on 21 and 22 October among 973 registered voters and published on 22 October, puts Marine Le Pen first in the first round (36%), ahead of Jean-Luc Mélenchon (16%), Raphaël Glucksmann (13%) and Édouard Philippe (12%).",
+    "fr": "Un sondage OpinionWay pour CNews, réalisé en ligne les 21 et 22 octobre auprès de 973 personnes inscrites sur les listes électorales et publié le 22 octobre, place Marine Le Pen en tête du premier tour (36 %), devant Jean-Luc Mélenchon (16 %), Raphaël Glucksmann (13 %) et Édouard Philippe (12 %)."
+  }
+}
