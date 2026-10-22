@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T10:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T09:40:58Z",
+      "title": "Édouard Philippe: \"Lorsque l'État ne garantit pas à ses citoyens qu'il est en mesure de les protéger, il faut toujours redouter qu'ils cherchent à le faire eux-mêmes\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-edouard-philippe-lorsque-l-etat-ne-garantit-pas-a-ses-citoyens-qu-il-est-en-mesure-de-les-proteger-il-faut-toujours-redouter-qu-ils-cherchent-a-le-faire-eux-memes_VN-202610220439.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T09:30:15Z",
+      "title": "Violences: \"J'accuse aujourd'hui le pouvoir de jouer petit bras\", déclare Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-violences-j-accuse-aujourd-hui-le-pouvoir-de-jouer-petit-bras-declare-bruno-retailleau_VN-202610220429.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T09:19:57Z",
+      "title": "\"Faire face au discours de Marine Le Pen\": Olivier Faure et Bally Bagayoko justifient leur présence à la contre-mobilisation au congrès du RN",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/faire-face-au-discours-de-marine-le-pen-olivier-faure-et-bally-bagayoko-justifient-leur-presence-a-la-contre-mobilisation-au-congres-du-rn_AN-202610220416.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-22T08:30:54Z",
+      "title": "Présidentielle 2027 : Michel Barnier plaide pour une primaire de la droite et du centre",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-michel-barnier-plaide-pour-une-primaire-de-la-droite-et-du-centre"
+    }
+  ],
+  "schema_version": "1.0"
+}
