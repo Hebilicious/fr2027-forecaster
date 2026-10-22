@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T05:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-22T04:30:00Z",
+      "title": "Emmanuel Macron et Édouard Philippe, «gilets jaunes» et cagoules noires : histoire d’une malédiction",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/emmanuel-macron-et-edouard-philippe-gilets-jaunes-et-cagoules-noires-histoire-d-une-malediction-20261022"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-22T05:00:00Z",
+      "title": "Au Parlement européen, l’absentéisme de Bardella affaiblit l’influence des Français dans le groupe du RN",
+      "url": "https://www.liberation.fr/politique/au-parlement-europeen-labsenteisme-de-bardella-affaiblit-linfluence-des-francais-dans-le-groupe-du-rn-20261022_ZNDRRRP6QFF7JLB2YAUEIOGIII/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T04:43:55Z",
+      "title": "Après ses propos polémiques sur le 17 octobre 1961, David Lisnard assure avoir seulement refusé l'instrumentalisation du drame",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/apres-ses-propos-polemiques-sur-le-17-octobre-1961-david-lisnard-assure-avoir-seulement-refuse-l-instrumentalisation-du-drame_AD-202610220105.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
