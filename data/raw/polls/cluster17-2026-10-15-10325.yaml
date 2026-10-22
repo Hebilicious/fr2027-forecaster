@@ -1,0 +1,95 @@
+schema_version: "1.0"
+poll_id: cluster17-2026-10-15-10325
+supersedes: cluster17-2026-10-15-le-point
+firm: cluster17
+sponsor: Le Point
+field_start: "2026-10-14"
+field_end: "2026-10-15"
+published_at: "2026-10-18"
+sample_size: 1263
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10325-pres-focus-droite-et-centre-cluster17-le-point-18-octobre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10325-pres-focus-droite-et-centre-cluster17-le-point-18-octobre.pdf
+index_url: null
+retrieved_at: "2026-10-22T08:32:58Z"
+entry: primary
+notes: >-
+  Entered from Commission notice 10325 (published figures). Sample of 1,263
+  adults including 1,187 registered voters; shares are of expressed votes, weighted by
+  declared likelihood of voting, with blank votes and abstention excluded. Five
+  round-1 hypotheses, no round 2.
+agent:
+  name: Grok Bot fr2027
+  run_id: checks-2026-10-22T08:30Z
+  skill_version: checks-1
+scenarios:
+- label: Philippe, Lisnard and Retailleau
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 2
+    glucksmann: 11
+    le_pen: 31
+    lisnard: 7
+    melenchon: 18
+    philippe: 17
+    retailleau: 7
+    roussel: 1.5
+    tondelier: 2
+    zemmour: 3
+- label: Philippe as the only centre-right candidate
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 3
+    glucksmann: 12
+    le_pen: 35.5
+    melenchon: 20
+    philippe: 20
+    roussel: 2
+    tondelier: 2
+    zemmour: 5
+- label: Retailleau as the only centre-right candidate
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 1
+    dupont_aignan: 3
+    glucksmann: 16
+    le_pen: 34.5
+    melenchon: 20
+    retailleau: 17.5
+    roussel: 2
+    tondelier: 2
+    zemmour: 4
+- label: Lisnard as the only centre-right candidate
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 1
+    dupont_aignan: 2
+    glucksmann: 16
+    le_pen: 35.5
+    lisnard: 17
+    melenchon: 20.5
+    roussel: 2
+    tondelier: 2
+    zemmour: 4
+- label: Attal as the only centre-right candidate
+  round: 1
+  scenario_id: S5
+  shares:
+    arthaud: 1
+    attal: 17
+    dupont_aignan: 3.5
+    glucksmann: 13.5
+    le_pen: 35.5
+    melenchon: 20
+    roussel: 2
+    tondelier: 2
+    zemmour: 5.5
