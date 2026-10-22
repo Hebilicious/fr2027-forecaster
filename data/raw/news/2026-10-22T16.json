@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-22T16:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T15:46:04Z",
+      "title": "Partis politiques reçus à Matignon: \"On sort de cette réunion encore plus inquiets et en colère\", explique Marine Tondelier, candidate Les Écologistes à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-partis-politiques-recus-a-matignon-on-sort-de-cette-reunion-encore-plus-inquiets-et-en-colere-explique-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202610220730.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T15:43:09Z",
+      "title": "Partis politiques reçus à Matignon: \"Il faut que le gouvernement apporte des réponses et traite les causes de ces manifestations\", affirme Fabien Roussel, candidat du PCF à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-partis-politiques-recus-a-matignon-il-faut-que-le-gouvernement-apporte-des-reponses-et-traite-les-causes-de-ces-manifestations-affirme-fabien-roussel-candidat-du-pcf-a-l-election-presidentielle_VN-202610220727.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-22T15:40:10Z",
+      "title": "Mouvement lycéen: \"Cela fait un mois que des revendications raisonnables ne sont pas entendues\", estime Nicolas Mayer-Rossignol, maire PS de Rouen, soutien de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/video-mouvement-lyceen-cela-fait-un-mois-que-des-revendications-raisonnables-ne-sont-pas-entendues-estime-nicolas-mayer-rossignol-maire-ps-de-rouen-soutien-de-raphael-glucksmann_VN-202610220723.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : pour Matthieu Pigasse, « Glucksmann c’est ‘Bismillah, c’est les ténèbres’ »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-pour-matthieu-pigasse-glucksmann-cest-bismillah-cest-les-tenebres-22-10-2026-5Z7BZBKOARGSJJCC6CFIBZZZPQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
