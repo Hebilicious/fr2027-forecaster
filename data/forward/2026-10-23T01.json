@@ -1,0 +1,13 @@
+{
+  "detected_at": "2026-10-23T01:18:32Z",
+  "flags": [
+    {
+      "candidate_id": "villepin",
+      "date": "2026-10-23",
+      "detail": "support 0.15 [0.10, 0.20] in the drop to 2026-10-22T12:00:00Z → 0.37 [0.31, 0.44] in the drop to 2026-10-23T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.2286
+    }
+  ],
+  "schema_version": "1.0"
+}
