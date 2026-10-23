@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-23T06:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-23T05:15:00Z",
+      "title": "Guillaume Tabard : « Marine Le Pen, du vote rejet au vote d’adhésion »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-marine-le-pen-du-vote-rejet-au-vote-d-adhesion-20261023"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-23T06:10:02Z",
+      "title": "Édito. La manifestation contre le congrès du RN à Orléans contrarie la stratégie de normalisation de Marine Le Pen",
+      "url": "https://www.franceinfo.fr/replay-radio/l-edito-politique/edito-la-manifestation-contre-le-congres-du-rn-a-orleans-contrarie-la-strategie-de-normalisation-de-marine-le-pen_8229253.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T05:51:23Z",
+      "title": "Présidentielle 2027: un sondage place une nouvelle fois Marine Le Pen grande gagnante après un duel contre Jean-Luc Mélenchon au second tour",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-un-sondage-place-une-nouvelle-fois-marine-le-pen-grande-gagnante-apres-un-duel-contre-jean-luc-melenchon-au-second-tour_AD-202610230176.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
