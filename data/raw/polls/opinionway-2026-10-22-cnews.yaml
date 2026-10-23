@@ -1,0 +1,62 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-10-22-cnews
+firm: opinionway
+sponsor: CNews
+field_start: "2026-10-21"
+field_end: "2026-10-22"
+published_at: "2026-10-22"
+sample_size: 1033
+method: online
+population: null
+source_url: >-
+  https://www.opinion-way.com/wp-content/uploads/2026/10/OpinionWay-pour-CNEWS-Les-intentions-de-vote-a-lelection-presidentielle-2027-22-octobre-2026.pdf
+notice_url: null
+index_url: null
+retrieved_at: 2026-10-23T07:45Z
+entry: primary
+notes: >-
+  Wave 3 for CNews, entered from OpinionWay's own report; no Commission notice
+  was listed yet. 973 registered voters drawn from a sample of 1,033, online (CAWI),
+  21–22 October; the report does not say whether the published shares are
+  restricted to voters certain to vote, so population is null. Arthaud and Bouamrane '<1%'
+  are entered as 0.5.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-10-23T07:36Z
+  skill_version: polls-2
+scenarios:
+- label: Glucksmann+Bouamrane+Attal+Philippe+Lisnard
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    attal: 4
+    bouamrane: 0.5
+    dupont_aignan: 1
+    glucksmann: 13
+    le_pen: 36
+    lisnard: 6
+    melenchon: 16
+    philippe: 12
+    retailleau: 6
+    roussel: 1
+    tondelier: 1
+    zemmour: 4
+- label: Édouard Philippe v Marine Le Pen
+  round: 2
+  scenario_id: H1
+  shares:
+    le_pen: 56
+    philippe: 44
+- label: Jean-Luc Mélenchon v Marine Le Pen
+  round: 2
+  scenario_id: H2
+  shares:
+    le_pen: 69
+    melenchon: 31
+- label: Raphaël Glucksmann v Marine Le Pen
+  round: 2
+  scenario_id: H3
+  shares:
+    glucksmann: 44
+    le_pen: 56
