@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-23T18:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-23T17:28:59Z",
+      "title": "EN DIRECT, manifestations du 24 octobre : sept partis politiques de gauche déposent un recours auprès du Conseil d’Etat contre les interdictions de manifester",
+      "url": "https://www.lemonde.fr/societe/live/2026/10/23/en-direct-manifestations-du-24-octobre-sept-partis-politiques-de-gauche-deposent-un-recours-aupres-du-conseil-d-etat-contre-les-interdictions-de-manifester_6795855_3224.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-23T17:55:22Z",
+      "title": "Jordan Bardella au Figaro : « Notre objectif, passer de parti “de” gouvernement à parti “au” gouvernement »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/jordan-bardella-au-figaro-notre-objectif-passer-de-parti-de-gouvernement-a-parti-au-gouvernement-20261023"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« On est vraiment pris entre le marteau et l’enclume » : la campagne Tondelier en étau entre Mélenchon et Glucksmann",
+      "url": "https://www.leparisien.fr/elections/presidentielle/on-est-vraiment-pris-entre-le-marteau-et-lenclume-la-campagne-tondelier-en-etau-entre-melenchon-et-glucksmann-23-10-2026-EGNTVBWPLJG7RPDJHNDBHRP57U.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
