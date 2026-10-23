@@ -1,0 +1,133 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-23T09:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-23T08:52:57Z",
+      "title": "EN DIRECT, manifestations du 24 octobre : plusieurs partis et syndicats dénoncent les interdictions de manifester",
+      "url": "https://www.lemonde.fr/societe/live/2026/10/23/en-direct-manifestations-du-24-octobre-plusieurs-partis-et-syndicats-denoncent-les-interdictions-de-manifester_6795855_3224.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T08:59:38Z",
+      "title": "\"Une fuite en avant autoritaire\": LFI dénonce les mesures prises par le gouvernement après les violences du 17 octobre",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/une-fuite-en-avant-autoritaire-lfi-denonce-les-mesures-prises-par-le-gouvernement-apres-les-violences-du-17-octobre_AD-202610230359.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T08:56:37Z",
+      "title": "Présidentielle: \"On n'a pas le droit de rater cette campagne\", déclare Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-on-n-a-pas-le-droit-de-rater-cette-campagne-declare-raphael-glucksmann_VN-202610230357.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T08:50:06Z",
+      "title": "\"Je vais affronter Marine Le Pen politiquement\": Raphaël Glucksmann explique pourquoi il ne sera pas là à la mobilisation demain à Orléans contre le congrès du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-vais-affronter-marine-le-pen-politiquement-raphael-glucksmann-explique-pourquoi-il-ne-sera-pas-la-a-la-mobilisation-demain-a-orleans-contre-le-congres-du-rn_VN-202610230353.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Marine Le Pen battrait très facilement Jean-Luc Mélenchon au second tour, selon un nouveau sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-marine-le-pen-battrait-tres-facilement-jean-luc-melenchon-au-second-tour-selon-un-nouveau-sondage-23-10-2026-JCPITSD2VNAC7HHUGJ2TBLARZ4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
