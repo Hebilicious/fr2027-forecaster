@@ -1,0 +1,142 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-23T08:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-23T08:06:18Z",
+      "title": "\"Il faut que Marine Le Pen arrête son cinéma, on ne va pas empêcher la tenue de son congrès\", assure la cégétiste Sophie Binet",
+      "url": "https://www.franceinfo.fr/politique/front-national/il-faut-que-marine-le-pen-arrete-son-cinema-on-ne-va-pas-empecher-la-tenue-de-son-congres-assure-la-cegetiste-sophie-binet_8250310.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-23T07:39:31Z",
+      "title": "\"Les personnalités politiques\" qui manifesteront contre le RN à Orléans \"veulent intimider nos militants\", estime Laure Lavalette",
+      "url": "https://www.franceinfo.fr/politique/front-national/les-personnalites-politiques-qui-manifesteront-contre-le-rn-a-orleans-veulent-intimider-nos-militants-estime-laure-lavalette_8250322.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-23T07:24:17Z",
+      "title": "Dans les fauteuils rouges de \"Complément d'enquête\" : Sarah Knafo, députée européenne Reconquête",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/complement-d-enquete/dans-les-fauteuils-rouges-de-complement-d-enquete-sarah-knafo-deputee-europeenne-reconquete_8249476.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T07:56:45Z",
+      "title": "Mouvements sociaux: “Il n’y a plus un Français qui écoute monsieur Darmanin, monsieur Macron et les autres”, affirme Nicolas Dupont-Aignan, candidat Debout La France à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-mouvements-sociaux-il-n-y-a-plus-un-francais-qui-ecoute-monsieur-darmanin-monsieur-macron-et-les-autres-affirme-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle_VN-202610230328.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T07:55:32Z",
+      "title": "Manifestation du 24 octobre: Nicolas Dupont-Aignan, candidat Debout la France à l'élection présidentielle, appelle à être \"intraitable vis-à-vis des fauteurs de trouble\"",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-manifestation-du-24-octobre-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle-appelle-a-etre-intraitable-vis-a-vis-des-fauteurs-de-trouble_VN-202610230325.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T07:44:02Z",
+      "title": "La classe politique \"s'est alliée avec Jean-Luc Mélenchon\" et ils \"sont complices\", juge Nicolas Dupont-Aignan, président de Debout la France",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-la-classe-politique-s-est-alliee-avec-jean-luc-melenchon-et-ils-sont-complices-juge-nicolas-dupont-aignan-president-de-debout-la-france_VN-202610230315.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
