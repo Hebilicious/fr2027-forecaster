@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-23T04:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-23T03:30:03Z",
+      "title": "A Carcassonne, le maire RN Christophe Barthès poursuit ses outrances à coups de provoc sur les réseaux sociaux",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/10/23/a-carcassonne-le-maire-rn-christophe-barthes-poursuit-ses-outrances-a-coups-de-provoc-sur-les-reseaux-sociaux_6798941_4500055.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-23T04:17:00Z",
+      "title": "Surprise : Trump et Nétanyahou ont la même analyse du 17 octobre que Retailleau, Le Pen ou Zemmour",
+      "url": "https://www.liberation.fr/politique/surprise-trump-et-netanyahou-ont-la-meme-analyse-du-17-octobre-que-retailleau-le-pen-ou-zemmour-20261023_HVSDO4ZOQNFZVIDYPWD36B62P4/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-23T03:52:00Z",
+      "title": "Présidentielle 2027 : Edouard Philippe lance ses idées sans imprimer",
+      "url": "https://www.liberation.fr/politique/presidentielle-2027-edouard-philippe-lance-ses-idees-sans-imprimer-20261023_P4O7AV4C2NHR3DAU5QWB36QFTE/"
+    }
+  ],
+  "schema_version": "1.0"
+}
