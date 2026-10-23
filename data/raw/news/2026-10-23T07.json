@@ -1,0 +1,176 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-23T07:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-23T07:11:08Z",
+      "title": "Mobilisation du 24 octobre : \"Si la situation n'est pas rétablie, évidemment qu'il faudra déclarer [l'état d'urgence]\", estime Gabriel Attal",
+      "url": "https://www.franceinfo.fr/politique/gabriel-attal/mobilisation-du-24-octobre-si-la-situation-n-est-pas-retablie-evidemment-qu-il-faudra-declarer-l-etat-d-urgence-estime-gabriel-attal_8250256.html"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-23T06:59:19Z",
+      "title": "Vrai ou faux. Une loi \"casseur-payeur\" a-t-elle \"déjà existé\" par le passé, et a-t-elle été \"abrogée par François Mitterrand\", comme l'affirme Olivier Faure ?",
+      "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-une-loi-casseur-payeur-a-t-elle-deja-existe-par-le-passe-et-a-t-elle-ete-abrogee-par-francois-mitterrand-comme-l-affirme-olivier-faure_8229244.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T07:02:50Z",
+      "title": "Mouvements sociaux: Nicolas Dupont-Aignan, candidat “Debout La France” à l'élection présidentielle, veut “interdire les groupes d’ultragauche dangereux”",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-mouvements-sociaux-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle-veut-interdire-les-groupes-d-ultragauche-dangereux_VN-202610230267.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T07:00:21Z",
+      "title": "\"L'interdiction des manifestations est stupide\", affirme Nicolas Dupont-Aignan, candidat Debout la France à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-l-interdiction-des-manifestations-est-stupide-affirme-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle_VN-202610230262.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T06:49:50Z",
+      "title": "Réunion entre Sébastien Lecornu et les partis politiques: Nicolas Dupont-Aignan, candidat “Debout La France” à l'élection présidentielle, regrette de ne pas avoir été invité",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-reunion-entre-sebastien-lecornu-et-les-partis-politiques-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle-regrette-de-ne-pas-avoir-ete-invite_VN-202610230252.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T06:47:52Z",
+      "title": "Enseignement: Nicolas Dupont-Aignan, candidat Debout la France à l'élection présidentielle, estime que la France a abandonné le \"système méritocratique de la IIIe République\"",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-enseignement-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle-estime-que-la-france-a-abandonne-le-systeme-meritocratique-de-la-ii-ie-republique_VN-202610230250.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T06:45:38Z",
+      "title": "Parcoursup: Nicolas Dupont-Aignan, président de Debout la France et candidat à l'élection présidentielle, dénonce une \"injustice incroyable\" liée \"au contrôle continu\"",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-parcoursup-nicolas-dupont-aignan-president-de-debout-la-france-et-candidat-a-l-election-presidentielle-denonce-une-injustice-incroyable-liee-au-controle-continu_VN-202610230247.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T06:44:19Z",
+      "title": "Réunion entre Emmanuel Macron et les organisations lycéennes: “Le président fait tout, tout seul”, dénonce Nicolas Dupont-Aignan, candidat Debout La France à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-reunion-entre-emmanuel-macron-et-les-organisations-lyceennes-le-president-fait-tout-tout-seul-denonce-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle_VN-202610230246.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T06:42:57Z",
+      "title": "\"Ça fait dix ans que la seule politique menée est celle du mépris\", déclare Nicolas Dupont-Aignan, président de Debout la France et candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-ca-fait-dix-ans-que-la-seule-politique-menee-est-celle-du-mepris-declare-nicolas-dupont-aignan-president-de-debout-la-france-et-candidat-a-l-election-presidentielle_VN-202610230241.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-23T06:04:11Z",
+      "title": "Orléans : Le premier grand meeting de Le Pen au centre de la tension",
+      "url": "https://www.20minutes.fr/politique/4256835-20261023-orleans-premier-grand-meeting-pen-centre-tension"
+    }
+  ],
+  "schema_version": "1.0"
+}
