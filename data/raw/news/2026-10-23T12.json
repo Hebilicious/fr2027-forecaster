@@ -1,0 +1,95 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-23T12:11:32Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-23T11:38:51Z",
+      "title": "\"Il y a des groupes qui pourrissent l'ambiance\": Raphaël Glucksmann reproche à certains groupes politiques de l'empêcher de manifester sereinement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-y-a-des-groupes-qui-pourrissent-l-ambiance-raphael-glucksmann-reproche-a-certains-groupes-politiques-de-l-empecher-de-manifester-sereinement_VN-202610230503.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
