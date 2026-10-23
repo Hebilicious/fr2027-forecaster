@@ -1,0 +1,117 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-23T15:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-23T15:00:31Z",
+      "title": "Incendie de la mairie de Limoges : « Nous, élus du plateau de Millevaches, refusons les amalgames et les caricatures qu’on fait de notre territoire »",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/23/incendie-de-la-mairie-de-limoges-nous-elus-du-plateau-de-millevaches-refusons-les-amalgames-et-les-caricatures-qu-on-fait-de-notre-territoire_6799099_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Route barrée vers l’Élysée, accusations d’antisémitisme, tensions avec Le Pen : Bardella, le besoin d’ouvrir un nouveau chapitre",
+      "url": "https://www.leparisien.fr/elections/presidentielle/route-barree-vers-lelysee-accusations-dantisemitisme-tensions-avec-le-pen-bardella-le-besoin-douvrir-un-nouveau-chapitre-23-10-2026-R4ZT2PKAUFHXTCZSA4MCSSXGEI.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "faure",
+        "le_pen",
+        "tondelier"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-23T14:52:39Z",
+      "title": "Manifestation contre le RN à Orléans : un « aveu de faiblesse » pour la gauche ou un échec de la dédiabolisation de Marine Le Pen ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/manifestation-contre-le-rn-a-orleans-un-aveu-de-faiblesse-pour-la-gauche-ou-un-echec-de-la-dediabolisation-de-marine-le-pen"
+    }
+  ],
+  "schema_version": "1.0"
+}
