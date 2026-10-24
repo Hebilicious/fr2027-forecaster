@@ -1,0 +1,848 @@
+{
+  "agent": {
+    "name": "Grok Bot fr2027",
+    "run_id": "x-activity-2026-10-24T00:37Z",
+    "skill_version": "x-activity-3"
+  },
+  "candidates": [
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "arthaud",
+      "engagement": null,
+      "mentions": 53,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nathalie Arthaud\" OR \"Arthaud\") lang:fr",
+      "sample_size": 26,
+      "sentiment": null,
+      "stance": {
+        "neutral": 17,
+        "off_topic": 4,
+        "oppose": 0,
+        "posts_drawn": 26,
+        "read_all": true,
+        "support": 5
+      },
+      "top_topics": [
+        "left vote and LFI",
+        "tactical voting",
+        "far-left candidates in debates",
+        "lookalike jokes"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0833,
+      "candidate_id": "kazib",
+      "engagement": null,
+      "mentions": 33,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Anasse Kazib\" OR \"Kazib\") lang:fr",
+      "sample_size": 11,
+      "sentiment": null,
+      "stance": {
+        "neutral": 6,
+        "off_topic": 2,
+        "oppose": 2,
+        "posts_drawn": 11,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "right to protest and general strike",
+        "debate pluralism for minor candidates",
+        "far-left vote splitting",
+        "revolutionary communism"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "labib",
+      "engagement": null,
+      "mentions": 4,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Selma Labib\") lang:fr",
+      "sample_size": 3,
+      "sentiment": null,
+      "stance": {
+        "neutral": 2,
+        "off_topic": 1,
+        "oppose": 0,
+        "posts_drawn": 3,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "lists of candidates"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.099,
+      "candidate_id": "melenchon",
+      "engagement": null,
+      "mentions": 18623,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jean-Luc Mélenchon\" OR \"Mélenchon\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 49,
+        "off_topic": 0,
+        "oppose": 91,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 60
+      },
+      "top_topics": [
+        "Trappes racist shooting blame",
+        "left vote and second round",
+        "LFI and violence at protests",
+        "antisemitism accusations",
+        "polls and candidacy"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0669,
+      "candidate_id": "glucksmann",
+      "engagement": null,
+      "mentions": 3060,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Raphaël Glucksmann\" OR \"Glucksmann\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 79,
+        "off_topic": 1,
+        "oppose": 108,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 12
+      },
+      "top_topics": [
+        "Glucksmann vs Mélenchon and the useful vote",
+        "is he really on the left",
+        "skipping the Orléans anti-RN protest",
+        "Place publique not joining the left legal challenge",
+        "rally appeals to beat Le Pen"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1125,
+      "candidate_id": "faure",
+      "engagement": null,
+      "mentions": 1939,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Olivier Faure\") lang:fr",
+      "sample_size": 70,
+      "sentiment": null,
+      "stance": {
+        "neutral": 6,
+        "off_topic": 0,
+        "oppose": 63,
+        "posts_drawn": 70,
+        "read_all": false,
+        "support": 1
+      },
+      "top_topics": [
+        "counter-protest at far-right congress",
+        "alignment with LFI",
+        "primary defeat",
+        "reaction to Trappes shooting",
+        "far-right xenophobia accusation"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0455,
+      "candidate_id": "royal",
+      "engagement": null,
+      "mentions": 365,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Ségolène Royal\") lang:fr",
+      "sample_size": 39,
+      "sentiment": null,
+      "stance": {
+        "neutral": 9,
+        "off_topic": 0,
+        "oppose": 20,
+        "posts_drawn": 39,
+        "read_all": false,
+        "support": 10
+      },
+      "top_topics": [
+        "calling a CNews guest a thug after the Trappes attack",
+        "stance on the Algerian regime",
+        "call for Macron resignation",
+        "past PS primaries"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0943,
+      "candidate_id": "guedj",
+      "engagement": null,
+      "mentions": 252,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jérôme Guedj\" OR \"Guedj\") lang:fr",
+      "sample_size": 48,
+      "sentiment": null,
+      "stance": {
+        "neutral": 12,
+        "off_topic": 6,
+        "oppose": 26,
+        "posts_drawn": 48,
+        "read_all": false,
+        "support": 4
+      },
+      "top_topics": [
+        "Trappes attack and president statement",
+        "hierarchy of victims dispute",
+        "antisemitism and Zionism insults",
+        "PS internal rift with LFI",
+        "primary result"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "maurel",
+      "engagement": null,
+      "mentions": 3,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Emmanuel Maurel\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0758,
+      "candidate_id": "hollande",
+      "engagement": null,
+      "mentions": 883,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Hollande\" OR \"Hollande\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 89,
+        "off_topic": 9,
+        "oppose": 91,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 11
+      },
+      "top_topics": [
+        "Benalla call to rally behind a Hollande candidacy",
+        "his record as president 2012–2017",
+        "comparisons with Macron on the Trappes attack",
+        "cost of former presidents offices",
+        "Socialist Party and Glucksmann rivalry"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1,
+      "candidate_id": "roussel",
+      "engagement": null,
+      "mentions": 278,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Fabien Roussel\" OR \"Roussel\") lang:fr",
+      "sample_size": 108,
+      "sentiment": null,
+      "stance": {
+        "neutral": 30,
+        "off_topic": 9,
+        "oppose": 63,
+        "posts_drawn": 108,
+        "read_all": false,
+        "support": 6
+      },
+      "top_topics": [
+        "blaming the far right for the Trappes attack",
+        "7,000 minors arrested in the protests",
+        "communist history and the Limoges city hall fire",
+        "low poll numbers and left-wing vote splitting"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0632,
+      "candidate_id": "tondelier",
+      "engagement": null,
+      "mentions": 1248,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Tondelier\" OR \"Tondelier\") lang:fr",
+      "sample_size": 89,
+      "sentiment": null,
+      "stance": {
+        "neutral": 27,
+        "off_topic": 0,
+        "oppose": 59,
+        "posts_drawn": 89,
+        "read_all": false,
+        "support": 3
+      },
+      "top_topics": [
+        "reaction to the Trappes racist attack",
+        "Orleans protest against the RN congress",
+        "her baby on the campaign trail",
+        "low poll numbers",
+        "squeeze between Melenchon and Glucksmann"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.087,
+      "candidate_id": "ruffin",
+      "engagement": null,
+      "mentions": 94,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Ruffin\" OR \"Ruffin\") lang:fr",
+      "sample_size": 63,
+      "sentiment": null,
+      "stance": {
+        "neutral": 28,
+        "off_topic": 5,
+        "oppose": 18,
+        "posts_drawn": 63,
+        "read_all": true,
+        "support": 12
+      },
+      "top_topics": [
+        "campaign against perks for former presidents",
+        "reaction to the Trappes attack",
+        "viability and sponsorships",
+        "place on the left beyond LFI"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "bouamrane",
+      "engagement": null,
+      "mentions": 35,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Karim Bouamrane\" OR \"Bouamrane\") lang:fr",
+      "sample_size": 10,
+      "sentiment": null,
+      "stance": {
+        "neutral": 6,
+        "off_topic": 1,
+        "oppose": 2,
+        "posts_drawn": 10,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "inclusion in OpinionWay poll",
+        "online memes"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1111,
+      "candidate_id": "cazeneuve",
+      "engagement": null,
+      "mentions": 92,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bernard Cazeneuve\" OR \"Cazeneuve\") lang:fr",
+      "sample_size": 24,
+      "sentiment": null,
+      "stance": {
+        "neutral": 6,
+        "off_topic": 4,
+        "oppose": 9,
+        "posts_drawn": 24,
+        "read_all": true,
+        "support": 5
+      },
+      "top_topics": [
+        "withdrawal and endorsement of Glucksmann",
+        "record as interior minister on protests",
+        "C dans l air interview criticised"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "batho",
+      "engagement": null,
+      "mentions": 4,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Delphine Batho\") lang:fr",
+      "sample_size": 3,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 1,
+        "oppose": 0,
+        "posts_drawn": 3,
+        "read_all": true,
+        "support": 2
+      },
+      "top_topics": [
+        "minister labelling her far left"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1061,
+      "candidate_id": "philippe",
+      "engagement": null,
+      "mentions": 966,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Édouard Philippe\") lang:fr",
+      "sample_size": 153,
+      "sentiment": null,
+      "stance": {
+        "neutral": 60,
+        "off_topic": 1,
+        "oppose": 83,
+        "posts_drawn": 153,
+        "read_all": false,
+        "support": 9
+      },
+      "top_topics": [
+        "pension reform and the debt record",
+        "seen as Macron continued",
+        "Lisnard as the rival on the right",
+        "Trappes attack and Macron's response",
+        "second-round vote against Le Pen"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0842,
+      "candidate_id": "attal",
+      "engagement": null,
+      "mentions": 3421,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Gabriel Attal\" OR \"Attal\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 86,
+        "off_topic": 6,
+        "oppose": 98,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 10
+      },
+      "top_topics": [
+        "Trappes racist attack and political responsibility",
+        "polls and centre-bloc rallying",
+        "student representative linked to his campaign",
+        "social media blocking proposal",
+        "absence from anti-RN protest"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.2308,
+      "candidate_id": "le_maire",
+      "engagement": null,
+      "mentions": 46,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Le Maire\") lang:fr",
+      "sample_size": 10,
+      "sentiment": null,
+      "stance": {
+        "neutral": 6,
+        "off_topic": 0,
+        "oppose": 3,
+        "posts_drawn": 10,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "public debt and financial crisis warning",
+        "record as economy minister",
+        "veil remarks from 2019"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "becht",
+      "engagement": null,
+      "mentions": 3,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Olivier Becht\") lang:fr",
+      "sample_size": 1,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 1,
+        "oppose": 0,
+        "posts_drawn": 1,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "name lists only"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0934,
+      "candidate_id": "retailleau",
+      "engagement": null,
+      "mentions": 18768,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Retailleau\" OR \"Retailleau\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 42,
+        "off_topic": 1,
+        "oppose": 135,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 22
+      },
+      "top_topics": [
+        "LCI debate with an LFI mayor",
+        "exchange with a high-school student on TV",
+        "Trappes racist attack and blame on rhetoric",
+        "right-wing union and primary with Lisnard",
+        "polls and campaign viability"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0427,
+      "candidate_id": "lisnard",
+      "engagement": null,
+      "mentions": 4175,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"David Lisnard\" OR \"Lisnard\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 65,
+        "off_topic": 1,
+        "oppose": 68,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 66
+      },
+      "top_topics": [
+        "October 1961 remarks controversy",
+        "polls overtaking Retailleau",
+        "right-wing primary and union",
+        "party membership growth",
+        "Trappes shooting reactions"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "bertrand",
+      "engagement": null,
+      "mentions": 9,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Xavier Bertrand\") lang:fr",
+      "sample_size": 6,
+      "sentiment": null,
+      "stance": {
+        "neutral": 3,
+        "off_topic": 0,
+        "oppose": 2,
+        "posts_drawn": 6,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "LR stance on Guiraud win in Roubaix",
+        "right-wing primary speculation",
+        "second-round voting instructions"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.088,
+      "candidate_id": "villepin",
+      "engagement": null,
+      "mentions": 12129,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Dominique de Villepin\" OR \"Villepin\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 58,
+        "off_topic": 3,
+        "oppose": 89,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 50
+      },
+      "top_topics": [
+        "televised debate with Marion Maréchal",
+        "Trappes shooting and calls for calm",
+        "veil for young girls",
+        "relations with Algeria",
+        "possible presidential bid"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0857,
+      "candidate_id": "le_pen",
+      "engagement": null,
+      "mentions": 19450,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Le Pen\" OR \"Le Pen\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 81,
+        "off_topic": 15,
+        "oppose": 81,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 23
+      },
+      "top_topics": [
+        "Trappes racist shooting",
+        "pension reform",
+        "RN congress in Orléans",
+        "embezzlement conviction",
+        "second-round polls vs Mélenchon"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1812,
+      "candidate_id": "bardella",
+      "engagement": null,
+      "mentions": 10106,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jordan Bardella\" OR \"Bardella\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 18,
+        "off_topic": 0,
+        "oppose": 141,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 41
+      },
+      "top_topics": [
+        "Trappes racist attack and blame for his 2022 remarks on the town",
+        "reply to Macron on past terror attacks",
+        "antisemitism allegations",
+        "RN congress in Orléans",
+        "debate challenges"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1392,
+      "candidate_id": "zemmour",
+      "engagement": null,
+      "mentions": 14283,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Éric Zemmour\" OR \"Zemmour\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 45,
+        "off_topic": 1,
+        "oppose": 118,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 36
+      },
+      "top_topics": [
+        "Trappes racist attack and blame on far-right rhetoric",
+        "silence after the Trappes attack",
+        "Complement d enquete report on Knafo",
+        "right-wing alliance with Lisnard",
+        "remigration and immigration"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0494,
+      "candidate_id": "dupont_aignan",
+      "engagement": null,
+      "mentions": 316,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nicolas Dupont-Aignan\" OR \"Dupont-Aignan\") lang:fr",
+      "sample_size": 56,
+      "sentiment": null,
+      "stance": {
+        "neutral": 26,
+        "off_topic": 2,
+        "oppose": 19,
+        "posts_drawn": 56,
+        "read_all": false,
+        "support": 9
+      },
+      "top_topics": [
+        "Frexit credibility dispute",
+        "sovereigntist union",
+        "right-wing coalition",
+        "riots and law and order",
+        "polls"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0976,
+      "candidate_id": "philippot",
+      "engagement": null,
+      "mentions": 190,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Florian Philippot\" OR \"Philippot\") lang:fr",
+      "sample_size": 59,
+      "sentiment": null,
+      "stance": {
+        "neutral": 19,
+        "off_topic": 5,
+        "oppose": 19,
+        "posts_drawn": 59,
+        "read_all": false,
+        "support": 16
+      },
+      "top_topics": [
+        "Frexit and the sovereigntist alliance",
+        "rivalry with Asselineau and Dupont-Aignan",
+        "calls to remove Macron after Trappes",
+        "Covid trial in the Netherlands",
+        "45th birthday"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1348,
+      "candidate_id": "asselineau",
+      "engagement": null,
+      "mentions": 1990,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Asselineau\" OR \"Asselineau\") lang:fr",
+      "sample_size": 180,
+      "sentiment": null,
+      "stance": {
+        "neutral": 46,
+        "off_topic": 2,
+        "oppose": 20,
+        "posts_drawn": 180,
+        "read_all": false,
+        "support": 112
+      },
+      "top_topics": [
+        "Frexit rivalry with Dupont-Aignan",
+        "exclusion from polls and media",
+        "sovereigntist union talks",
+        "national debt and austerity",
+        "calls to impeach Macron"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "bonnal",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Sébastien Bonnal\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0606,
+      "candidate_id": "polony",
+      "engagement": null,
+      "mentions": 64,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Natacha Polony\" OR \"Polony\") lang:fr",
+      "sample_size": 27,
+      "sentiment": null,
+      "stance": {
+        "neutral": 5,
+        "off_topic": 3,
+        "oppose": 9,
+        "posts_drawn": 27,
+        "read_all": true,
+        "support": 10
+      },
+      "top_topics": [
+        "reaction to the Trappes racist attack",
+        "inclusion in polls and membership claims",
+        "500 sponsorships viability",
+        "field campaign leafleting"
+      ],
+      "unique_authors": null
+    }
+  ],
+  "collected_at": "2026-10-24T00:56:15Z",
+  "double_labels": {
+    "counts": {
+      "neutral": {
+        "neutral": 155,
+        "off_topic": 1,
+        "oppose": 15,
+        "support": 6
+      },
+      "off_topic": {
+        "neutral": 1,
+        "off_topic": 18,
+        "oppose": 1,
+        "support": 0
+      },
+      "oppose": {
+        "neutral": 18,
+        "off_topic": 0,
+        "oppose": 285,
+        "support": 0
+      },
+      "support": {
+        "neutral": 11,
+        "off_topic": 0,
+        "oppose": 0,
+        "support": 94
+      }
+    },
+    "posts": 605
+  },
+  "query_method": "Grok Bot native X search, one query per candidate, lang:fr, routine v3",
+  "rubric_version": "stance-1",
+  "sampling": {
+    "automated_excluded": true,
+    "max_posts_per_author": 2,
+    "method": "random_spread",
+    "posts_per_candidate": 200,
+    "read_all_below": 100,
+    "relabel_share": 0.2,
+    "reposts_excluded": true
+  },
+  "schema_version": "1.0",
+  "window": {
+    "end": "2026-10-24T00:00:00Z",
+    "start": "2026-10-23T12:00:00Z"
+  }
+}
