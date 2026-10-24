@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-24T15:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-24T14:47:06Z",
+      "title": "Seul candidat, Jordan Bardella est réélu président du RN",
+      "url": "https://www.franceinfo.fr/politique/front-national/seul-candidat-jordan-bardella-est-reelu-president-du-rn_8252359.html"
+    },
+    {
+      "candidate_ids": [
+        "labib"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-24T15:12:03Z",
+      "title": "24 octobre: \"Malgré les interdictions de manifester, on était encore des centaines de milliers dans la rue\", déclare Selma Labib, candidate NPA Révolutionnaire à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-24-octobre-malgre-les-interdictions-de-manifester-on-etait-encore-des-centaines-de-milliers-dans-la-rue-declare-selma-labib-candidate-npa-revolutionnaire-a-l-election-presidentielle_VN-202610240329.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle : Mélenchon et Le Pen au second tour, Philippe et Attal dévissent… Les leçons de notre sondage post-17 octobre",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-melenchon-et-le-pen-au-second-tour-philippe-et-attal-devissent-les-lecons-de-notre-sondage-post-17-octobre-24-10-2026-LYN2KP57QBBW3LILMLVLHS5DQU.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-24T14:04:58Z",
+      "title": "Jordan Bardella, réélu président du Rassemblement national avec 98,98 % des voix",
+      "url": "https://www.france24.com/fr/france/20261024-jordan-bardella-r%C3%A9%C3%A9lu-pr%C3%A9sident-du-rn-avec-98-98-des-voix"
+    }
+  ],
+  "schema_version": "1.0"
+}
