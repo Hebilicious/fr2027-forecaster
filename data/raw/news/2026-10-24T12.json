@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-24T12:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-24T12:07:12Z",
+      "title": "Changement du parcours de la manifestation du 24 octobre à Paris: \"Tout est fait pour qu'on ne parle plus des revendications\", dénonce Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/video-changement-du-parcours-de-la-manifestation-du-24-octobre-a-paris-tout-est-fait-pour-qu-on-ne-parle-plus-des-revendications-denonce-marine-tondelier_VN-202610240258.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Sa stratégie, c’est laisser la France se désintégrer » : pour Louis Sarkozy, les débordements en France profitent à Marine Le Pen",
+      "url": "https://www.leparisien.fr/politique/sa-strategie-cest-laisser-la-france-se-desintegrer-pour-louis-sarkozy-les-debordements-en-france-profitent-a-marine-le-pen-24-10-2026-QKLCUZCVUJBNLOQ6UHZSLVLNQQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
