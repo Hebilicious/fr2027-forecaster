@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-24T14:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-24T14:06:15Z",
+      "title": "Au congrès du RN à Orléans, Jordan Bardella, seul candidat à sa succession, est réélu président du parti avec 98,98 % des voix",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/24/au-congres-du-rn-a-orleans-jordan-bardella-seul-candidat-a-sa-succession-est-reelu-president-du-parti-avec-98-98-des-voix_6799707_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-24T13:54:02Z",
+      "title": "DIRECT. Congrès du Rassemblement national à Orléans : seul candidat, Jordan Bardella est réélu président du parti avec 98,98% des voix",
+      "url": "https://www.franceinfo.fr/politique/front-national/congres-du-rn-a-orleans-le-maire-de-la-ville-annonce-un-couvre-feu-pour-les-mineurs-de-moins-de-15-ans-pour-les-deux-nuits-prochaines_8252014.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-24T13:50:30Z",
+      "title": "Congrès du Rassemblement national: seul candidat, Jordan Bardella réélu à la tête du parti avec 98,98% des voix",
+      "url": "https://www.bfmtv.com/politique/front-national/congres-du-rassemblement-national-seul-candidat-jordan-bardella-reelu-a-la-tete-du-parti-avec-98-98-des-voix_AD-202610240304.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Rassemblement national : seul candidat, Jordan Bardella réélu président du parti avec 98,98 % des voix",
+      "url": "https://www.leparisien.fr/politique/rassemblement-national-seul-candidat-jordan-bardella-reelu-president-du-parti-avec-9898-des-voix-24-10-2026-GLAUPKZHWRFQTEDBP6HQARLQHQ.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-24T13:52:09Z",
+      "title": "Congrès du RN : Seul candidat, Bardella réélu président avec 98,98 des voix",
+      "url": "https://www.20minutes.fr/politique/4257206-20261024-congres-rn-seul-candidat-bardella-reelu-president-98-98-voix"
+    }
+  ],
+  "schema_version": "1.0"
+}
