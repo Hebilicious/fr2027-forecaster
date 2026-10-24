@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-24T18:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-24T18:04:37Z",
+      "title": "A Orléans, Jordan Bardella réélu lors d’un congrès sans surprise mais sous tension",
+      "url": "https://www.liberation.fr/politique/a-orleans-jordan-bardella-reelu-lors-dun-congres-sans-surprise-mais-sous-tension-20261024_NJWZPLV77VGYHL4ZZMFRDUW3PI/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-24T17:24:04Z",
+      "title": "Présidentielle: Marine Le Pen, Jean-Luc Mélenchon... Ce que révèle un dernier sondage paru après le 17 octobre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-marine-le-pen-jean-luc-melenchon-ce-que-revele-un-dernier-sondage-paru-apres-le-17-octobre_AD-202610240377.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
