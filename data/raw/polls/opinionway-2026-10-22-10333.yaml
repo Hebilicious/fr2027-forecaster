@@ -1,0 +1,62 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-10-22-10333
+supersedes: opinionway-2026-10-22-cnews
+firm: opinionway
+sponsor: CNews
+field_start: "2026-10-21"
+field_end: "2026-10-22"
+published_at: "2026-10-22"
+sample_size: 1033
+method: online
+population: likely
+source_url: https://www.commission-des-sondages.fr/notices/medias/fichiers/add/2352
+notice_url: https://www.commission-des-sondages.fr/notices/medias/fichiers/add/2352
+index_url: null
+retrieved_at: "2026-10-23T20:45:00Z"
+entry: primary
+notes: >-
+  Wave 3 for CNews, entered from Commission notice 10333. 973 registered voters
+  drawn from a sample of 1,033, online (CAWI), 21–22 October; the published column
+  is weighted on socio-demographics, 2022 presidential and 2024 legislative
+  first-round vote among voters certain to vote (9–10 out of 10). Arthaud and Bouamrane
+  '<1%' are entered as 0.5.
+agent:
+  name: Grok Bot fr2027
+  run_id: checks-2026-10-23T20:39Z
+  skill_version: checks-1
+scenarios:
+- label: Glucksmann+Bouamrane+Attal+Philippe+Lisnard
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    attal: 4
+    bouamrane: 0.5
+    dupont_aignan: 1
+    glucksmann: 13
+    le_pen: 36
+    lisnard: 6
+    melenchon: 16
+    philippe: 12
+    retailleau: 6
+    roussel: 1
+    tondelier: 1
+    zemmour: 4
+- label: Jean-Luc Mélenchon v Marine Le Pen
+  round: 2
+  scenario_id: H1
+  shares:
+    le_pen: 69
+    melenchon: 31
+- label: Édouard Philippe v Marine Le Pen
+  round: 2
+  scenario_id: H2
+  shares:
+    le_pen: 56
+    philippe: 44
+- label: Raphaël Glucksmann v Marine Le Pen
+  round: 2
+  scenario_id: H3
+  shares:
+    glucksmann: 44
+    le_pen: 56

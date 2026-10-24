@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-24T09:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-24T09:09:12Z",
+      "title": "Attentat raciste à Trappes: Olivier Faure, Premier secrétaire du PS dénonce \"un climat raciste, xénophobe\" dont le RN est \"responsable\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-attentat-raciste-a-trappes-olivier-faure-premier-secretaire-du-ps-denonce-un-climat-raciste-xenophobe-dont-le-rn-est-responsable_VN-202610240188.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-24T08:30:56Z",
+      "title": "Manifestation contre le congrès du RN à Orléans: \"Avec cette manifestation, on ne va pas pouvoir affronter le RN sur le terrain où il faut l'affronter\", estime Pierre-Henri Dumont, porte-parole de Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/front-national/video-manifestation-contre-le-congres-du-rn-a-orleans-avec-cette-manifestation-on-ne-va-pas-pouvoir-affronter-le-rn-sur-le-terrain-ou-il-faut-l-affronter-estime-pierre-henri-dumont-porte-parole-de-bruno-retailleau_VN-202610240170.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
