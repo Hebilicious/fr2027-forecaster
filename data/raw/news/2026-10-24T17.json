@@ -1,0 +1,95 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-24T17:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "arthaud"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-24T16:22:18Z",
+      "title": "Mobilisations du 24 octobre: \"410.000 manifestants aujourd'hui en France c'est énorme et c'est un grand succès\", se réjouit Nathalie Arthaud, porte-parole de Lutte ouvrière et candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-mobilisations-du-24-octobre-410-000-manifestants-aujourd-hui-en-france-c-est-enorme-et-c-est-un-grand-succes-se-rejouit-nathalie-arthaud-porte-parole-de-lutte-ouvriere-et-candidate-a-l-election-presidentielle_VN-202610240356.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
