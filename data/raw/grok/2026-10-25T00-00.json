@@ -1,0 +1,851 @@
+{
+  "agent": {
+    "name": "Grok Bot fr2027",
+    "run_id": "x-activity-2026-10-25T00:35Z",
+    "skill_version": "x-activity-3"
+  },
+  "candidates": [
+    {
+      "bot_share_estimate": 0.1351,
+      "candidate_id": "arthaud",
+      "engagement": null,
+      "mentions": 112,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nathalie Arthaud\" OR \"Arthaud\") lang:fr",
+      "sample_size": 30,
+      "sentiment": null,
+      "stance": {
+        "neutral": 14,
+        "off_topic": 0,
+        "oppose": 10,
+        "posts_drawn": 30,
+        "read_all": false,
+        "support": 6
+      },
+      "top_topics": [
+        "24 October protest day",
+        "TV interviews on protests",
+        "Ipsos bva poll",
+        "far-left vote and tactical voting"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "kazib",
+      "engagement": null,
+      "mentions": 28,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Anasse Kazib\" OR \"Kazib\") lang:fr",
+      "sample_size": 8,
+      "sentiment": null,
+      "stance": {
+        "neutral": 5,
+        "off_topic": 1,
+        "oppose": 1,
+        "posts_drawn": 8,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "far-left candidacies",
+        "protest march debate",
+        "runoff preferences"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1667,
+      "candidate_id": "labib",
+      "engagement": null,
+      "mentions": 164,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Selma Labib\") lang:fr",
+      "sample_size": 5,
+      "sentiment": null,
+      "stance": {
+        "neutral": 1,
+        "off_topic": 0,
+        "oppose": 4,
+        "posts_drawn": 5,
+        "read_all": false,
+        "support": 0
+      },
+      "top_topics": [
+        "TV appearance controversy",
+        "protest day of 24 October",
+        "anti-racism slogan"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.09,
+      "candidate_id": "melenchon",
+      "engagement": null,
+      "mentions": 38701,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jean-Luc Mélenchon\" OR \"Mélenchon\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 51,
+        "off_topic": 1,
+        "oppose": 115,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 33
+      },
+      "top_topics": [
+        "clash with BFMTV over racism remarks",
+        "24 October cost-of-living protests",
+        "Trappes racist shooting",
+        "runoff against Le Pen",
+        "Ipsos bva poll"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.121,
+      "candidate_id": "glucksmann",
+      "engagement": null,
+      "mentions": 2461,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Raphaël Glucksmann\" OR \"Glucksmann\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 96,
+        "off_topic": 0,
+        "oppose": 83,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 21
+      },
+      "top_topics": [
+        "absence from protests",
+        "Ipsos bva poll",
+        "left primary result",
+        "runoff tactical voting",
+        "attack by LFI mayor"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1504,
+      "candidate_id": "faure",
+      "engagement": null,
+      "mentions": 782,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Olivier Faure\") lang:fr",
+      "sample_size": 95,
+      "sentiment": null,
+      "stance": {
+        "neutral": 10,
+        "off_topic": 0,
+        "oppose": 80,
+        "posts_drawn": 95,
+        "read_all": false,
+        "support": 5
+      },
+      "top_topics": [
+        "Orleans anti-RN march",
+        "blaming far right for Trappes shooting",
+        "primary defeat",
+        "alleged alignment with LFI",
+        "RTL interview"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.125,
+      "candidate_id": "royal",
+      "engagement": null,
+      "mentions": 128,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Ségolène Royal\") lang:fr",
+      "sample_size": 19,
+      "sentiment": null,
+      "stance": {
+        "neutral": 9,
+        "off_topic": 0,
+        "oppose": 10,
+        "posts_drawn": 19,
+        "read_all": false,
+        "support": 0
+      },
+      "top_topics": [
+        "Algeria relations",
+        "comments on journalist critic of Algeria",
+        "headscarf debate",
+        "past presidential campaign"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0645,
+      "candidate_id": "guedj",
+      "engagement": null,
+      "mentions": 383,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jérôme Guedj\" OR \"Guedj\") lang:fr",
+      "sample_size": 29,
+      "sentiment": null,
+      "stance": {
+        "neutral": 10,
+        "off_topic": 1,
+        "oppose": 14,
+        "posts_drawn": 29,
+        "read_all": false,
+        "support": 4
+      },
+      "top_topics": [
+        "Trappes attack and Macron statement criticism",
+        "victim competition controversy",
+        "Eribon street insult incident",
+        "LFI antisemitism row",
+        "left union for the runoff"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "maurel",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Emmanuel Maurel\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.093,
+      "candidate_id": "hollande",
+      "engagement": null,
+      "mentions": 614,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Hollande\" OR \"Hollande\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 74,
+        "off_topic": 9,
+        "oppose": 104,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 13
+      },
+      "top_topics": [
+        "comparisons of Macron with his presidency",
+        "record as president 2012-2017",
+        "possible 2027 candidacy and left vote",
+        "conspiracy talk about attacks and polls",
+        "Macron post-presidency office costs"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.087,
+      "candidate_id": "roussel",
+      "engagement": null,
+      "mentions": 236,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Fabien Roussel\" OR \"Roussel\") lang:fr",
+      "sample_size": 81,
+      "sentiment": null,
+      "stance": {
+        "neutral": 33,
+        "off_topic": 10,
+        "oppose": 34,
+        "posts_drawn": 81,
+        "read_all": false,
+        "support": 4
+      },
+      "top_topics": [
+        "cost of living protests and general strike call",
+        "Orléans anti-far-right rally",
+        "Ipsos bva poll results",
+        "communism history attacks",
+        "left union and withdrawal talk"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1216,
+      "candidate_id": "tondelier",
+      "engagement": null,
+      "mentions": 1467,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Tondelier\" OR \"Tondelier\") lang:fr",
+      "sample_size": 127,
+      "sentiment": null,
+      "stance": {
+        "neutral": 36,
+        "off_topic": 0,
+        "oppose": 84,
+        "posts_drawn": 127,
+        "read_all": false,
+        "support": 7
+      },
+      "top_topics": [
+        "Paris protest route change",
+        "Trappes racist attack and media blame",
+        "media airtime vs poll level",
+        "Rousseau call to withdraw candidacy",
+        "Ipsos bva poll results"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0492,
+      "candidate_id": "ruffin",
+      "engagement": null,
+      "mentions": 139,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Ruffin\" OR \"Ruffin\") lang:fr",
+      "sample_size": 54,
+      "sentiment": null,
+      "stance": {
+        "neutral": 11,
+        "off_topic": 16,
+        "oppose": 22,
+        "posts_drawn": 54,
+        "read_all": false,
+        "support": 5
+      },
+      "top_topics": [
+        "anti-Macron office petition and email harvesting",
+        "rift with LFI and Mélenchon",
+        "accusations of racism after Trappes",
+        "Iran remarks",
+        "left primary and alliances"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.125,
+      "candidate_id": "bouamrane",
+      "engagement": null,
+      "mentions": 31,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Karim Bouamrane\" OR \"Bouamrane\") lang:fr",
+      "sample_size": 7,
+      "sentiment": null,
+      "stance": {
+        "neutral": 3,
+        "off_topic": 0,
+        "oppose": 4,
+        "posts_drawn": 7,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "Trappes shooting response",
+        "march attendance",
+        "positioning on the left",
+        "Gaza and LFI",
+        "polls ignoring candidacy"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0909,
+      "candidate_id": "cazeneuve",
+      "engagement": null,
+      "mentions": 68,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bernard Cazeneuve\" OR \"Cazeneuve\") lang:fr",
+      "sample_size": 10,
+      "sentiment": null,
+      "stance": {
+        "neutral": 2,
+        "off_topic": 3,
+        "oppose": 4,
+        "posts_drawn": 10,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "left-wing candidates",
+        "republican universalism",
+        "protest management",
+        "social democracy"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "batho",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Delphine Batho\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0968,
+      "candidate_id": "philippe",
+      "engagement": null,
+      "mentions": 407,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Édouard Philippe\") lang:fr",
+      "sample_size": 138,
+      "sentiment": null,
+      "stance": {
+        "neutral": 55,
+        "off_topic": 0,
+        "oppose": 74,
+        "posts_drawn": 138,
+        "read_all": false,
+        "support": 9
+      },
+      "top_topics": [
+        "campaign struggles",
+        "Macron legacy",
+        "polls and second round",
+        "Notre-Dame-des-Landes record",
+        "right-wing primary"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0467,
+      "candidate_id": "attal",
+      "engagement": null,
+      "mentions": 3197,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Gabriel Attal\" OR \"Attal\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 100,
+        "off_topic": 8,
+        "oppose": 91,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 1
+      },
+      "top_topics": [
+        "Ipsos bva poll slump",
+        "social media blocking proposal",
+        "meeting crowd size comparison",
+        "calls to withdraw",
+        "Macron record"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "le_maire",
+      "engagement": null,
+      "mentions": 6,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Le Maire\") lang:fr",
+      "sample_size": 1,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 1,
+        "posts_drawn": 1,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "sanctions on Russia",
+        "Russian gas imports"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "becht",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Olivier Becht\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0839,
+      "candidate_id": "retailleau",
+      "engagement": null,
+      "mentions": 5519,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Retailleau\" OR \"Retailleau\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 70,
+        "off_topic": 2,
+        "oppose": 105,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 23
+      },
+      "top_topics": [
+        "Guiraud TV debate",
+        "Trappes racist attack blame",
+        "right-wing union and primary with Lisnard",
+        "second-round stance on Le Pen vs Philippe",
+        "new polls"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.063,
+      "candidate_id": "lisnard",
+      "engagement": null,
+      "mentions": 3450,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"David Lisnard\" OR \"Lisnard\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 58,
+        "off_topic": 0,
+        "oppose": 53,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 89
+      },
+      "top_topics": [
+        "Nouvelle Energie membership surge",
+        "right-wing primary and union with Retailleau",
+        "Ipsos bva poll standing",
+        "petition to join the LCI debate",
+        "remarks on colonial memory controversy"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "bertrand",
+      "engagement": null,
+      "mentions": 9,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Xavier Bertrand\") lang:fr",
+      "sample_size": 9,
+      "sentiment": null,
+      "stance": {
+        "neutral": 5,
+        "off_topic": 0,
+        "oppose": 4,
+        "posts_drawn": 9,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "right-wing primary",
+        "presidential bid speculation",
+        "LR old guard"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0892,
+      "candidate_id": "villepin",
+      "engagement": null,
+      "mentions": 3613,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Dominique de Villepin\" OR \"Villepin\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 86,
+        "off_topic": 1,
+        "oppose": 89,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 24
+      },
+      "top_topics": [
+        "Trappes shooting response",
+        "debate with Marion Maréchal",
+        "headscarf on young girls",
+        "Qatar ties",
+        "LFI and the left"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0881,
+      "candidate_id": "le_pen",
+      "engagement": null,
+      "mentions": 12887,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Le Pen\" OR \"Le Pen\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 94,
+        "off_topic": 22,
+        "oppose": 60,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 24
+      },
+      "top_topics": [
+        "RN congress in Orléans",
+        "Trappes shooting blame",
+        "second round against Mélenchon",
+        "new Ipsos poll",
+        "journalists removed from congress"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0824,
+      "candidate_id": "bardella",
+      "engagement": null,
+      "mentions": 10421,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jordan Bardella\" OR \"Bardella\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 60,
+        "off_topic": 2,
+        "oppose": 84,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 54
+      },
+      "top_topics": [
+        "re-election as RN president",
+        "Mediapart antisemitism allegations",
+        "Trappes shooting blame",
+        "journalists removed from congress",
+        "Orléans protest slogans"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1107,
+      "candidate_id": "zemmour",
+      "engagement": null,
+      "mentions": 20841,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Éric Zemmour\" OR \"Zemmour\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 45,
+        "off_topic": 0,
+        "oppose": 88,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 67
+      },
+      "top_topics": [
+        "BFMTV interview cancelled",
+        "Trappes racist attack",
+        "media censorship debate",
+        "hate speech convictions",
+        "union of the right"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0714,
+      "candidate_id": "dupont_aignan",
+      "engagement": null,
+      "mentions": 239,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nicolas Dupont-Aignan\" OR \"Dupont-Aignan\") lang:fr",
+      "sample_size": 59,
+      "sentiment": null,
+      "stance": {
+        "neutral": 31,
+        "off_topic": 0,
+        "oppose": 16,
+        "posts_drawn": 59,
+        "read_all": false,
+        "support": 12
+      },
+      "top_topics": [
+        "union of the right",
+        "EU exit stance",
+        "Ipsos bva poll",
+        "sovereigntist rivalry",
+        "right-wing primary"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0769,
+      "candidate_id": "philippot",
+      "engagement": null,
+      "mentions": 318,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Florian Philippot\" OR \"Philippot\") lang:fr",
+      "sample_size": 84,
+      "sentiment": null,
+      "stance": {
+        "neutral": 39,
+        "off_topic": 1,
+        "oppose": 24,
+        "posts_drawn": 84,
+        "read_all": false,
+        "support": 20
+      },
+      "top_topics": [
+        "45th birthday",
+        "Frexit campaign",
+        "Macron resignation protests",
+        "Ukraine aid",
+        "sovereigntist alliance"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.2115,
+      "candidate_id": "asselineau",
+      "engagement": null,
+      "mentions": 2149,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Asselineau\" OR \"Asselineau\") lang:fr",
+      "sample_size": 177,
+      "sentiment": null,
+      "stance": {
+        "neutral": 37,
+        "off_topic": 0,
+        "oppose": 36,
+        "posts_drawn": 177,
+        "read_all": false,
+        "support": 104
+      },
+      "top_topics": [
+        "media censorship complaints",
+        "Frexit",
+        "sovereigntist rivalry",
+        "Trappes attack reaction",
+        "freemasonry remarks"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "bonnal",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Sébastien Bonnal\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0909,
+      "candidate_id": "polony",
+      "engagement": null,
+      "mentions": 60,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Natacha Polony\" OR \"Polony\") lang:fr",
+      "sample_size": 20,
+      "sentiment": null,
+      "stance": {
+        "neutral": 6,
+        "off_topic": 0,
+        "oppose": 7,
+        "posts_drawn": 20,
+        "read_all": true,
+        "support": 7
+      },
+      "top_topics": [
+        "campaign launch canvassing",
+        "presidential address video",
+        "Trappes attack reaction",
+        "second-round scenarios",
+        "school and justice proposals"
+      ],
+      "unique_authors": null
+    }
+  ],
+  "collected_at": "2026-10-25T00:53:23Z",
+  "double_labels": {
+    "counts": {
+      "neutral": {
+        "neutral": 177,
+        "off_topic": 4,
+        "oppose": 19,
+        "support": 8
+      },
+      "off_topic": {
+        "neutral": 0,
+        "off_topic": 14,
+        "oppose": 1,
+        "support": 0
+      },
+      "oppose": {
+        "neutral": 14,
+        "off_topic": 2,
+        "oppose": 245,
+        "support": 0
+      },
+      "support": {
+        "neutral": 6,
+        "off_topic": 0,
+        "oppose": 1,
+        "support": 105
+      }
+    },
+    "posts": 596
+  },
+  "query_method": "Grok Bot native X search, one query per candidate, lang:fr, routine v3",
+  "rubric_version": "stance-1",
+  "sampling": {
+    "automated_excluded": true,
+    "max_posts_per_author": 2,
+    "method": "random_spread",
+    "posts_per_candidate": 200,
+    "read_all_below": 100,
+    "relabel_share": 0.2,
+    "reposts_excluded": true
+  },
+  "schema_version": "1.0",
+  "window": {
+    "end": "2026-10-25T00:00:00Z",
+    "start": "2026-10-24T12:00:00Z"
+  }
+}
