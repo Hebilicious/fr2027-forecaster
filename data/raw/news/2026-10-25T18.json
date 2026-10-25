@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-25T18:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T18:07:38Z",
+      "title": "Discours de Marine Le Pen et Jordan Bardella à Orléans: \"J'observe l'incohérence de ce parti\", lance Léon Deffontaines, porte-parole du Parti communiste Français",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-discours-de-marine-le-pen-et-jordan-bardella-a-orleans-j-observe-l-incoherence-de-ce-parti-lance-leon-deffontaines-porte-parole-du-parti-communiste-francais_VN-202610250336.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T17:30:29Z",
+      "title": "Congrès du RN à Orléans: l'Union des étudiants juifs de France perturbe le discours de Jordan Bardella, il dénonce \"des militants d'ultra gauche\"",
+      "url": "https://www.bfmtv.com/politique/front-national/congres-du-rn-a-orleans-l-union-des-etudiants-juifs-de-france-perturbe-le-discours-de-jordan-bardella-il-denonce-des-militants-d-ultra-gauche_AV-202610250316.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-25T17:28:35Z",
+      "title": "Congrès RN à Orléans : Marine Le Pen lance sa campagne de « France apaisée » (dans une ville barricadée)",
+      "url": "https://www.20minutes.fr/politique/4257330-20261025-congres-rn-orleans-marine-pen-lance-campagne-france-apaisee-ville-barricadee"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-25T17:54:35Z",
+      "title": "Pour les électeurs de Marine Le Pen, \"c’est faux de dire que le RN incite à la haine\"",
+      "url": "https://www.france24.com/fr/france/20261025-france-pour-les-electeurs-de-marine-le-pen-c-est-faux-de-dire-que-le-rn-incite-a-la-haine"
+    }
+  ],
+  "schema_version": "1.0"
+}
