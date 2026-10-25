@@ -1,0 +1,339 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-25T16:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-25T13:42:55Z",
+      "title": "Congrès du RN : Marine Le Pen lance sa campagne à Orléans avec un premier meeting",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/25/congres-du-rn-a-orleans-une-centaine-de-militants-antifascistes-se-rassemblent-malgre-les-interdictions_6800086_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-25T07:24:43Z",
+      "title": "Manifestations : Olivier Faure (PS) appelle à « répondre aux revendications » ; Laurent Marcangeli (Horizons) suggère de faire payer les dégradations par LFI",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/25/manifestations-le-patron-des-deputes-horizons-laurent-marcangeli-suggere-de-faire-payer-les-degradations-par-lfi-jugeant-le-mouvement-solidaire-des-casseurs_6800056_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-25T14:56:49Z",
+      "title": "Congrès du RN à Orléans : une centaine de militants antifascistes se sont rassemblés en dépit des interdictions",
+      "url": "https://www.franceinfo.fr/politique/front-national/congres-du-rn-a-orleans-une-centaine-de-militants-antifascistes-se-sont-rassembles-en-depit-des-interdictions_8253235.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:16:30Z",
+      "title": "Marine Le Pen, candidate RN à la présidentielle: \"L'État, en bien mauvais état, sera restauré dans ses moyens, son prestige et son autorité\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-marine-le-pen-candidate-rn-a-la-presidentielle-l-etat-en-bien-mauvais-etat-sera-restaure-dans-ses-moyens-son-prestige-et-son-autorite_VN-202610250291.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:11:52Z",
+      "title": "Retraites: \"Je propose de faire entrer plus tôt les jeunes sur le marché du travail\", déclare Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retraites-je-propose-de-faire-entrer-plus-tot-les-jeunes-sur-le-marche-du-travail-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250288.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:09:27Z",
+      "title": "\"Nous rétablirons nos frontières et même une double frontière française et européenne\", déclare Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-retablirons-nos-frontieres-et-meme-une-double-frontiere-francaise-et-europeenne-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250287.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:06:37Z",
+      "title": "\"Nous protégerons l'espace public pour qu'il soit un lieu de vie\", déclare Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-protegerons-l-espace-public-pour-qu-il-soit-un-lieu-de-vie-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250285.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:47:13Z",
+      "title": "\"Nous établirons un mode de scrutin proportionnel avec une prime majoritaire\", déclare Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-etablirons-un-mode-de-scrutin-proportionnel-avec-une-prime-majoritaire-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250281.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:46:13Z",
+      "title": "\"Nous respecterons la volonté des citoyens et rétablirons grâce au référendum leur droit d'expression politique\", annonce Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/front-national/video-nous-respecterons-la-volonte-des-citoyens-et-retablirons-grace-au-referendum-leur-droit-d-expression-politique-annonce-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250280.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:44:33Z",
+      "title": "\"La Renaissance sera d'abord celle de l'école, l’école du savoir notamment avec le retour de la promotion républicaine\", déclare Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-renaissance-sera-d-abord-celle-de-l-ecole-l-ecole-du-savoir-notamment-avec-le-retour-de-la-promotion-republicaine-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250279.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:38:29Z",
+      "title": "\"Le redressement de la France commence ici à Orléans\", lance Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-redressement-de-la-france-commence-ici-a-orleans-lance-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250276.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:38:07Z",
+      "title": "\"La France est dans cet état à cause de ses dirigeants\", fustige Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/front-national/video-la-france-est-dans-cet-etat-a-cause-de-ses-dirigeants-fustige-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250275.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:32:52Z",
+      "title": "Marine Le Pen, candidate du RN à l'élection présidentielle, pointe \"une terrifiante violence toujours plus grave et incompréhensible\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-marine-le-pen-candidate-du-rn-a-l-election-presidentielle-pointe-une-terrifiante-violence-toujours-plus-grave-et-incomprehensible_VN-202610250274.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:27:07Z",
+      "title": "Si le RN arrive au pouvoir \"nous réformerons Parcoursup\", annonce Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/front-national/video-si-le-rn-arrive-au-pouvoir-nous-reformerons-parcoursup-annonce-jordan-bardella_VN-202610250273.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:25:10Z",
+      "title": "Discours de Jordan Bardella perturbé: des militants de l'Union des étudiants juifs de France et un journaliste de Mediapart exfiltrés du congrès du RN",
+      "url": "https://www.bfmtv.com/politique/video-discours-de-jordan-bardella-perturbe-des-militants-de-l-union-des-etudiants-juifs-de-france-et-un-journaliste-de-mediapart-exfiltres-du-congres-du-rn_VN-202610250272.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:23:29Z",
+      "title": "À l'école, \"nous restaurerons l'autorité, le vouvoiement des professeurs sera obligatoire, une tenue unique sera instaurée\", déclare Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-a-l-ecole-nous-restaurerons-l-autorite-le-vouvoiement-des-professeurs-sera-obligatoire-une-tenue-unique-sera-instauree-declare-jordan-bardella-president-du-rassemblement-national_VN-202610250271.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:21:33Z",
+      "title": "Congrès du RN: \"Sous la présidence de Marine Le Pen, notre gouvernement mettra en place le principe du casseur-payeur (...), que ceux qui pillent sachent qu'ils devront rembourser\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-congres-du-rn-sous-la-presidence-de-marine-le-pen-notre-gouvernement-mettra-en-place-le-principe-du-casseur-payeur-que-ceux-qui-pillent-sachent-qu-ils-devront-rembourser_VN-202610250270.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:20:26Z",
+      "title": "Si le Rassemblement national accède au pouvoir, \"la majorité pénale sera abaissée à 16 ans\", déclare Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/front-national/video-si-le-rassemblement-national-accede-au-pouvoir-la-majorite-penale-sera-abaissee-a-16-ans-declare-jordan-bardella-president-du-rn_VN-202610250269.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:18:39Z",
+      "title": "Congrès du RN: le discours de Jordan Bardella perturbé, plusieurs personnes exfiltrées",
+      "url": "https://www.bfmtv.com/politique/video-congres-du-rn-le-discours-de-jordan-bardella-perturbe-plusieurs-personnes-exfiltrees_VN-202610250267.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:14:58Z",
+      "title": "\"Tu touches à un policier, tu dors en prison\": Jordan Bardella, président du RN, propose \"la présomption de légitime défense pour les forces de l'ordre\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-tu-touches-a-un-policier-tu-dors-en-prison-jordan-bardella-president-du-rn-propose-la-presomption-de-legitime-defense-pour-les-forces-de-l-ordre_VN-202610250266.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:08:01Z",
+      "title": "Dégradations du 17 octobre: Jordan Bardella, président du Rassemblement national, fustige \"l'alliance des casseurs d'ultra-gauche qui haïssent l'État\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-degradations-du-17-octobre-jordan-bardella-president-du-rassemblement-national-fustige-l-alliance-des-casseurs-d-ultra-gauche-qui-haissent-l-etat_VN-202610250263.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:04:18Z",
+      "title": "Manifestations du 17 octobre: Jordan Bardella, président du Rassemblement national, souligne \"un tournant sans précédent dans la faillite sécuritaire de l'État\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-manifestations-du-17-octobre-jordan-bardella-president-du-rassemblement-national-souligne-un-tournant-sans-precedent-dans-la-faillite-securitaire-de-l-etat_VN-202610250260.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T15:02:48Z",
+      "title": "Attentat raciste à Trappes: \"La France s'enfonce dans des violences d'une gravité particulière\", déplore Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-attentat-raciste-a-trappes-la-france-s-enfonce-dans-des-violences-d-une-gravite-particuliere-deplore-jordan-bardella-president-du-rassemblement-national_VN-202610250259.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T14:59:15Z",
+      "title": "Congrès du RN: Jordan Bardella, président du Rassemblement national, accuse \"les organisations d'ultra-gauche d'avoir tenté d'empêcher le premier parti de France d'organiser son congrès\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-congres-du-rn-jordan-bardella-president-du-rassemblement-national-accuse-les-organisations-d-ultra-gauche-d-avoir-tente-d-empecher-le-premier-parti-de-france-d-organiser-son-congres_VN-202610250258.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T14:55:24Z",
+      "title": "Congrès du Rassemblement national: le discours de Jordan Bardella perturbé, plusieurs individus ont été exfiltrés",
+      "url": "https://www.bfmtv.com/politique/front-national/video-congres-du-rassemblement-national-le-discours-de-jordan-bardella-perturbe-plusieurs-individus-ont-ete-exfiltres_VN-202610250255.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T14:51:32Z",
+      "title": "Réélection de Jordan Bardella à la présidence du RN: \"Je l'accueille comme une marque de confiance\", déclare Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-reelection-de-jordan-bardella-a-la-presidence-du-rn-je-l-accueille-comme-une-marque-de-confiance-declare-jordan-bardella-president-du-rassemblement-national_VN-202610250254.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T14:40:18Z",
+      "title": "Congrès du Rassemblement national: que faut-il attendre des discours de Marine Le Pen et Jordan Bardella?",
+      "url": "https://www.bfmtv.com/politique/front-national/video-congres-du-rassemblement-national-que-faut-il-attendre-des-discours-de-marine-le-pen-et-jordan-bardella_VN-202610250250.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-25T15:00:22Z",
+      "title": "En direct : Le Pen promet de ne pas \"refaire la France d'avant\", à son premier meeting de campagne",
+      "url": "https://www.france24.com/fr/france/20261025-marine-le-pen-veut-miser-sur-l-optimisme-pour-son-premier-meeting-de-campagne"
+    }
+  ],
+  "schema_version": "1.0"
+}
