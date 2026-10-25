@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-25T19:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-25T19:01:59Z",
+      "title": "Présidentielle 2027 : à Orléans, Marine Le Pen lance sa campagne entre radicalité et « optimisme », dans une ville en état de siège",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/25/presidentielle-2027-a-orleans-marine-le-pen-lance-sa-campagne-entre-radicalite-et-optimisme-dans-une-ville-en-etat-de-siege_6800113_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-25T18:55:45Z",
+      "title": "Présidentielle 2027 : Marine Le Pen réorganise son parti et lance sa campagne à Orléans",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-marine-le-pen-reorganise-son-parti-et-lance-sa-campagne-a-orleans-20261025"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-25T18:41:24Z",
+      "title": "Congrès du RN : des militants expulsés pour avoir brandi une banderole contre l’antisémitisme pendant le discours de Bardella",
+      "url": "https://www.liberation.fr/politique/congres-du-rn-des-militants-expulses-pour-avoir-brandi-une-banderole-contre-lantisemitisme-pendant-le-discours-de-bardella-20261025_QF2H4GV3LNE6VCQ54HPXYCAFGE/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-25T18:34:21Z",
+      "title": "REPORTAGE. \"On a gagné la bataille des idées\" : à Orléans, Marine Le Pen lance sa campagne dans une ville sous haute surveillance",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/reportage-on-a-gagne-la-bataille-des-idees-a-orleans-marine-le-pen-lance-sa-campagne-dans-une-ville-sous-haute-surveillance_8252908.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-25T19:02:59Z",
+      "title": "\"La montée du Rassemblement national est un symptôme de la destruction progressive de notre démocratie\" : estime Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/avant-le-20h/la-montee-du-rassemblement-national-est-un-symptome-de-la-destruction-progressive-de-notre-democratie-estime-natacha-polony-candidate-a-l-election-presidentielle_8253430.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« La fin d’un monde, de leur monde » : à Orléans, l’optimisme forcé de Marine Le Pen",
+      "url": "https://www.leparisien.fr/elections/presidentielle/la-fin-dun-monde-de-leur-monde-a-orleans-loptimisme-force-de-marine-le-pen-25-10-2026-WL3JGMY5XRAKFCLSJISCE6VXTI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
