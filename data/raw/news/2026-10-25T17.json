@@ -1,0 +1,253 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-25T17:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-25T17:10:16Z",
+      "title": "Congrès du RN : pour son premier discours de campagne, Marine Le Pen dit vouloir présider à la « Renaissance » de la France",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/25/congres-du-rn-pour-son-premier-discours-de-campagne-marine-le-pen-dit-vouloir-presider-a-la-renaissance-de-la-france_6800086_823449.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-25T17:06:16Z",
+      "title": "Congrès du RN :Marine Le Pen promet un gouvernement \"d'union nationale\", \"pluraliste\" et dirigé par Jordan Bardella",
+      "url": "https://www.franceinfo.fr/politique/front-national/congres-du-rn-marine-le-pen-promet-un-gouvernement-d-union-nationale-pluraliste-et-dirige-par-jordan-bardella_8253364.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-25T16:41:42Z",
+      "title": "Congrès du RN à Orléans : le discours de Jordan Bardella a été interrompu par des militants de l'Union des Etudiants Juifs de France",
+      "url": "https://www.franceinfo.fr/politique/front-national/congres-du-rn-a-orleans-le-discours-de-jordan-bardella-a-ete-interrompu-par-des-militants-de-l-union-des-etudiants-juifs-de-france_8253304.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T17:06:27Z",
+      "title": "Jordan Bardella: si le Rassemblement national arrive au pouvoir, \"nous réformerons Parcoursup\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-jordan-bardella-si-le-rassemblement-national-arrive-au-pouvoir-nous-reformerons-parcoursup_VN-202610250309.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T17:06:21Z",
+      "title": "\"Jordan Bardella sera le chef d'un gouvernement ouvert et pluraliste\", affirme Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/front-national/video-jordan-bardella-sera-le-chef-d-un-gouvernement-ouvert-et-pluraliste-affirme-marine-le-pen_VN-202610250310.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T17:05:46Z",
+      "title": "Marine Le Pen souhaite inscrire la \"communauté nationale\" dans la Constitution",
+      "url": "https://www.bfmtv.com/politique/video-marine-le-pen-souhaite-inscrire-la-communaute-nationale-dans-la-constitution_VN-202610250308.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:48:05Z",
+      "title": "\"Je ne vous propose pas de refaire la France d'avant\": Marine Le Pen plaide pour une \"Renaissance\" du pays",
+      "url": "https://www.bfmtv.com/politique/front-national/je-ne-vous-propose-pas-de-refaire-la-france-d-avant-marine-le-pen-plaide-pour-une-renaissance-du-pays_AD-202610250302.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:43:09Z",
+      "title": "\"Rétablir l’État de droit\": les discours de Jordan Bardella et Marine Le Pen au congrès du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retablir-l-etat-de-droit-les-discours-de-jordan-bardella-et-marine-le-pen-au-congres-du-rn_VN-202610250311.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:37:26Z",
+      "title": "Congrès du RN perturbé par l'Union des étudiants juifs de France: \"L'ultragauche est un véritable danger pour la démocratie\", estime Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/front-national/video-congres-du-rn-perturbe-par-l-union-des-etudiants-juifs-de-france-l-ultragauche-est-un-veritable-danger-pour-la-democratie-estime-jordan-bardella-president-du-rn_VN-202610250299.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:34:16Z",
+      "title": "\"Mon Premier ministre sera Jordan Bardella, il sera le chef d'un gouvernement ouvert et pluraliste\", déclare Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-mon-premier-ministre-sera-jordan-bardella-il-sera-le-chef-d-un-gouvernement-ouvert-et-pluraliste-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250298.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:31:10Z",
+      "title": "\"La fonction présidentielle a été tellement abîmée\", estime Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-fonction-presidentielle-a-ete-tellement-abimee-estime-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250297.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:29:18Z",
+      "title": "Marine Le Pen, candidate RN à la présidentielle: \"Nous n'enverrons pas nos jeunes mourir dans des aventures guerrières inconsidérées ou irresponsables, et encore moins dans des guerres qui ne sont pas les nôtres\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-le-pen-candidate-rn-a-la-presidentielle-nous-n-enverrons-pas-nos-jeunes-mourir-dans-des-aventures-guerrieres-inconsiderees-ou-irresponsables-et-encore-moins-dans-des-guerres-qui-ne-sont-pas-les-notres_VN-202610250296.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:24:28Z",
+      "title": "\"Nous appliquerons la règle du casseur payeur et s'il faut qu'ils payent toute leur vie, ils payeront toute leur vie\", lance Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-appliquerons-la-regle-du-casseur-payeur-et-s-il-faut-qu-ils-payent-toute-leur-vie-ils-payeront-toute-leur-vie-lance-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250295.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:19:58Z",
+      "title": "\"Nous allons rétablir l’État de droit,\", lance Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-allons-retablir-l-etat-de-droit-lance-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250294.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:18:47Z",
+      "title": "Marine Le Pen, candidate RN à la présidentielle: \"La droite incrimine celui qui souffre, la gauche celui qui réussit, moi je refuse de les opposer\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-marine-le-pen-candidate-rn-a-la-presidentielle-la-droite-incrimine-celui-qui-souffre-la-gauche-celui-qui-reussit-moi-je-refuse-de-les-opposer_VN-202610250293.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T16:17:40Z",
+      "title": "\"Nous abolirons la stupide loi Hulot qui interdit la recherche d'hydrocarbures sur le sol français\", annonce Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-abolirons-la-stupide-loi-hulot-qui-interdit-la-recherche-d-hydrocarbures-sur-le-sol-francais-annonce-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202610250292.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Jordan Bardella confirmé comme Premier ministre en cas de victoire du Rassemblement national",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-jordan-bardella-confirme-comme-premier-ministre-en-cas-de-victoire-du-rassemblement-national-25-10-2026-F72REPORYVCV5JHJNHFQSAT6JY.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Vous êtes un danger pour la France » : des militants de l’UEJF interrompent Jordan Bardella en plein discours au congrès du RN",
+      "url": "https://www.leparisien.fr/politique/congres-du-rn-le-discours-de-jordan-bardella-interrompu-par-des-militants-dune-association-de-lutte-contre-lantisemitisme-25-10-2026-WDRDLBUZ3JABNBKS45UK4ILHXE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
