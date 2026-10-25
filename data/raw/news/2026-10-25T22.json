@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-25T22:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "arthaud"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T22:06:15Z",
+      "title": "\"Je suis convaincue qu'à moins de 2.200 euros net par mois, on ne peut pas avoir une vie digne aujourd'hui\", déclare Nathalie Arthaud, porte-parole de Lutte ouvrière et candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-suis-convaincue-qu-a-moins-de-2-200-euros-net-par-mois-on-ne-peut-pas-avoir-une-vie-digne-aujourd-hui-declare-nathalie-arthaud-porte-parole-de-lutte-ouvriere-et-candidate-a-l-election-presidentielle_VN-202610250411.html"
+    },
+    {
+      "candidate_ids": [
+        "arthaud"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T21:58:04Z",
+      "title": "Colère lycéenne: \"Il y a un fort sentiment d'inégalité, de marginalisation\" de la part des élèves, explique Nathalie Arthaud, porte-parole de Lutte ouvrière et candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-colere-lyceenne-il-y-a-un-fort-sentiment-d-inegalite-de-marginalisation-de-la-part-des-eleves-explique-nathalie-arthaud-porte-parole-de-lutte-ouvriere-et-candidate-a-l-election-presidentielle_VN-202610250408.html"
+    },
+    {
+      "candidate_ids": [
+        "arthaud"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T21:56:33Z",
+      "title": "\"C'est au gouvernement et ceux qui dirigent que j'ai envie de demander des comptes\", lance Nathalie Arthaud, porte-parole de Lutte ouvrière et candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-c-est-au-gouvernement-et-ceux-qui-dirigent-que-j-ai-envie-de-demander-des-comptes-lance-nathalie-arthaud-porte-parole-de-lutte-ouvriere-et-candidate-a-l-election-presidentielle_VN-202610250407.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T21:28:14Z",
+      "title": "Mobilisation sociale: \"Tous ceux qui nous gouvernent ne sont jamais confrontés à la carte bleue qui se vide\", lance Ségolène Royal, ancienne ministre",
+      "url": "https://www.bfmtv.com/politique/video-mobilisation-sociale-tous-ceux-qui-nous-gouvernent-ne-sont-jamais-confrontes-a-la-carte-bleue-qui-se-vide-lance-segolene-royal-ancienne-ministre_VN-202610250400.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-25T21:24:35Z",
+      "title": "Colère lycéenne, mobilisation sociale: \"La quasi-totalité des Français souffrent aujourd'hui de la crise du pouvoir d'achat\", observe Ségolène Royal, ancienne ministre",
+      "url": "https://www.bfmtv.com/politique/video-colere-lyceenne-mobilisation-sociale-la-quasi-totalite-des-francais-souffrent-aujourd-hui-de-la-crise-du-pouvoir-d-achat-observe-segolene-royal-ancienne-ministre_VN-202610250399.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
