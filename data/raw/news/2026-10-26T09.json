@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-26T09:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-26T09:00:09Z",
+      "title": "Jonas Haddad, le porte-parole de Bruno Retailleau qui veut défendre les jeunes actifs écrasés par « le système »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/26/jonas-haddad-le-porte-parole-de-bruno-retailleau-qui-veut-defendre-les-jeunes-actifs-ecrases-par-le-systeme_6800601_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-26T08:46:57Z",
+      "title": "Thomas Ménagé dénonce \"un coup monté\" de Mediapart et de l'UEJF, après l'interruption du meeting du RN par des militants",
+      "url": "https://www.franceinfo.fr/politique/front-national/thomas-menage-denonce-un-coup-monte-de-mediapart-et-de-l-uejf-apres-l-interruption-du-meeting-du-rn-par-des-militants_8253949.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-26T09:08:19Z",
+      "title": "Raphaël Glucksmann affirme être victime d'une \"campagne de harcèlement\" de La France insoumise",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/raphael-glucksmann-affirme-etre-victime-d-une-campagne-de-harcelement-de-la-france-insoumise_AD-202610260306.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
