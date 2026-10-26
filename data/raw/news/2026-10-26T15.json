@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-26T15:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-26T15:15:10Z",
+      "title": "« La révision constitutionnelle que Marine Le Pen entend mettre en œuvre ferait basculer la France dans le camp des démocraties illibérales »",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/26/la-revision-constitutionnelle-que-marine-le-pen-entend-mettre-en-uvre-ferait-basculer-la-france-dans-le-camp-des-democraties-illiberales_6800796_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-26T14:28:59Z",
+      "title": "Opposition au budget : après les divisions de la primaire, les députés socialistes font bloc",
+      "url": "https://www.liberation.fr/politique/opposition-au-budget-apres-les-divisions-de-la-primaire-les-deputes-socialistes-font-bloc-20261026_SC4YPZTLSZHMVAY6I5T6CN74EM/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Sébastien Chenu remplace Marine Le Pen à la tête du groupe RN à l’Assemblée",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-sebastien-chenu-remplace-marine-le-pen-a-la-tete-du-groupe-rn-a-lassemblee-26-10-2026-HTTJRL76HBEENGLVDAFXJOPNPM.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "tondelier"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-26T14:38:48Z",
+      "title": "Présidentielle 2027 : Marine Tondelier pourrait se retirer « s’il y a un chemin de victoire »",
+      "url": "https://www.20minutes.fr/politique/4257702-20261026-presidentielle-2027-marine-tondelier-pourrait-retirer-chemin-victoire"
+    }
+  ],
+  "schema_version": "1.0"
+}
