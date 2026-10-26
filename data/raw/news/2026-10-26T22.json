@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-26T22:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "guedj"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-26T21:59:50Z",
+      "title": "Rassemblement contre le racisme après l'attentat dans les Yvelines: \"C'est la comité national dans son entièreté qui est meurtri.\", déclare Jérôme Guedj, député PS de l'Essonne",
+      "url": "https://www.bfmtv.com/politique/video-rassemblement-contre-le-racisme-apres-l-attentat-dans-les-yvelines-c-est-la-comite-national-dans-son-entierete-qui-est-meurtri-declare-jerome-guedj-depute-ps-de-l-essonne_VN-202610260941.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-26T21:25:39Z",
+      "title": "\"Nous ne devons pas pardonner\": après l'attentat dans les Yvelines, Jean-Luc Mélenchon appelle à \"ne pas regarder ailleurs\"",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/nous-ne-devons-pas-pardonner-apres-l-attentat-dans-les-yvelines-jean-luc-melenchon-appelle-a-ne-pas-regarder-ailleurs_AD-202610260920.html"
+    }
+  ],
+  "schema_version": "1.0"
+}

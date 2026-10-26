@@ -1,0 +1,86 @@
+schema_version: "1.0"
+poll_id: ipsos-bva-2026-10-22-10338
+supersedes: ipsos-bva-2026-10-22-le-parisien
+firm: ipsos-bva
+sponsor: Le Parisien
+field_start: "2026-10-21"
+field_end: "2026-10-22"
+published_at: "2026-10-24"
+sample_size: 1500
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10338-pres-iv-ipsos-bva-le-parisien-24-octobre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10338-pres-iv-ipsos-bva-le-parisien-24-octobre.pdf
+index_url: null
+retrieved_at: "2026-10-26T09:39:32Z"
+entry: primary
+notes: >-
+  Ipsos bva-CESI École d'ingénieurs poll for Le Parisien, entered from Commission
+  notice 10338. 1,500 registered voters online, 21–22 October; shares are of
+  voters certain to vote who expressed a choice (1,048 to 1,069 depending on the
+  scenario).
+agent:
+  name: Grok Bot fr2027
+  run_id: checks-2026-10-26T09:36Z
+  skill_version: checks-1
+scenarios:
+- label: Attal+Philippe
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    attal: 4
+    dupont_aignan: 1.5
+    glucksmann: 13
+    le_pen: 33.5
+    melenchon: 17
+    philippe: 13
+    retailleau: 7.5
+    roussel: 2
+    tondelier: 3.5
+    zemmour: 4.5
+- label: Philippe
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 2
+    glucksmann: 14
+    le_pen: 33.5
+    melenchon: 17
+    philippe: 15
+    retailleau: 8
+    roussel: 2
+    tondelier: 3.5
+    zemmour: 4.5
+- label: Attal
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 0.5
+    attal: 9.5
+    dupont_aignan: 2
+    glucksmann: 15.5
+    le_pen: 33.5
+    melenchon: 17
+    retailleau: 11.5
+    roussel: 2.5
+    tondelier: 3.5
+    zemmour: 4.5
+- label: Philippe+Lisnard
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 1.5
+    glucksmann: 13
+    le_pen: 32
+    lisnard: 6.5
+    melenchon: 17
+    philippe: 14
+    retailleau: 5.5
+    roussel: 2.5
+    tondelier: 3.5
+    zemmour: 4
