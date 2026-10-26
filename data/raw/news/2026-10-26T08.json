@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-26T08:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-26T07:39:44Z",
+      "title": "Présidentielle 2027 : depuis Orléans, Marine Le Pen lance sa campagne",
+      "url": "https://www.franceinfo.fr/replay-jt/franceinfo/21h-minuit/23-heures/presidentielle-2027-depuis-orleans-marine-le-pen-lance-sa-campagne_8253877.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-26T08:16:32Z",
+      "title": "\"Je pense qu'il y a quand même une certaine impunité envers les mouvements d'extrême droite qui ne peut plus durer\", déclare Marine Tondelier, secrétaire nationale des Écologistes et candidate à l'élection présidentielle",
+      "url": "https://www.franceinfo.fr/politique/je-pense-qu-il-y-a-quand-meme-une-certaine-impunite-envers-les-mouvements-d-extreme-droite-qui-ne-peut-plus-durer-declare-marine-tondelier-secretaire-nationale-des-ecologistes-et-candidate-a-l-election-presidentielle_8253919.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-26T07:35:21Z",
+      "title": "Raphaël Glucksmann dit être victime d'une \"campagne de harcèlement\" de LFI",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/raphael-glucksmann-dit-etre-victime-d-une-campagne-de-harcelement-de-lfi_8253889.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
