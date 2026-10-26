@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-26T10:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "villepin"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-26T09:16:04Z",
+      "title": "Attal, de Villepin, Le Pen… Créer un fonds souverain français, une piste qui séduit les politiques mais délicate à mettre en œuvre",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/attal-de-villepin-le-pen-creer-un-fonds-souverain-francais-une-piste-qui-seduit-les-politiques-mais-delicate-a-mettre-en-oeuvre-20261026"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-26T09:57:35Z",
+      "title": "Glucksmann dit être victime d’une «campagne de harcèlement» de LFI, Bompard répond qu’il «construit une confrontation»",
+      "url": "https://www.liberation.fr/politique/glucksmann-dit-etre-victime-dune-campagne-de-harcelement-de-lfi-bompard-repond-quil-construit-une-confrontation-20261026_3ZY7CE5APNEIBINYIKWTN2VLXQ/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-26T09:46:40Z",
+      "title": "Le Conseil constitutionnel écarte la demande de démission de son président formulée par le RN et l'UDR",
+      "url": "https://www.franceinfo.fr/politique/front-national/le-conseil-constitutionnel-ecarte-la-demande-de-demission-de-son-president-formulee-par-le-rn-et-l-udr_8254027.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-26T09:59:05Z",
+      "title": "Présidentielle 2027 : Hué au congrès du RN, Mélenchon traite la foule « d’abrutie » et promet un futur « malgré » elle",
+      "url": "https://www.20minutes.fr/politique/4257591-20261026-presidentielle-2027-hue-congres-rn-melenchon-traite-foule-abrutie-promet-futur-malgre"
+    }
+  ],
+  "schema_version": "1.0"
+}
