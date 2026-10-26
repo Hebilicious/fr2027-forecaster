@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-26T19:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-26T18:41:35Z",
+      "title": "François Hollande au Figaro : « Mon père pensait que le monde allait à sa perte »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/francois-hollande-au-figaro-mon-pere-pensait-que-le-monde-allait-a-sa-perte-20261026"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-26T18:22:08Z",
+      "title": "Attentat dans les Yvelines: Jean-Luc Mélenchon ne voudra \"plus jamais entendre parler d'un raciste\" s'il est élu président",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-attentat-dans-les-yvelines-jean-luc-melenchon-ne-voudra-plus-jamais-entendre-parler-d-un-raciste-s-il-est-elu-president_VN-202610260788.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-26T18:19:13Z",
+      "title": "Attentat de Trappes: \"Le racisme a fait son nid en lui\", affirme Jean-Luc Mélenchon à propos du suspect",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-attentat-de-trappes-le-racisme-a-fait-son-nid-en-lui-affirme-jean-luc-melenchon-a-propos-du-suspect_VN-202610260783.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
