@@ -1,0 +1,151 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-26T11:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-26T10:50:43Z",
+      "title": "Le Conseil constitutionnel rejette la demande, portée par le RN et l’UDR, de démission de Richard Ferrand",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/26/le-conseil-constitutionnel-rejette-la-demande-portee-par-le-rn-et-l-udr-de-demission-de-richard-ferrand_6800741_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-26T10:38:45Z",
+      "title": "Ça alors, encore une histoire de salut nazi au RN !",
+      "url": "https://www.liberation.fr/politique/ca-alors-encore-une-histoire-de-salut-nazi-au-rn-20261026_RZUSYEUJWZHC5LM4HF2SD7DIV4/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-26T10:25:46Z",
+      "title": "Attentat raciste à Trappes : Marine Le Pen remplace des années de stigmatisation par un peu de compassion",
+      "url": "https://www.liberation.fr/politique/attentat-raciste-a-trappes-marine-le-pen-grand-remplace-des-annees-de-stigmatisation-par-un-peu-de-compassion-20261026_37WFF2DP4VB3REYEFXYVEE3DRA/"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-26T11:09:11Z",
+      "title": "Marine Tondelier prête à retirer sa candidature à l'élection présidentielle \"s'il y a un chemin de victoire\" pour la gauche",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/marine-tondelier-prete-a-retirer-sa-candidature-a-l-election-presidentielle-s-il-y-a-un-chemin-de-victoire-pour-la-gauche_AD-202610260396.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Dominique de Villepin estime que « le RN porte une responsabilité dans la polarisation de notre pays »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-dominique-de-villepin-estime-que-le-rn-porte-une-responsabilite-dans-la-polarisation-de-notre-pays-26-10-2026-MUERKBTBVBGJLJSCNF4E77NY7Q.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Raphaël Glucksmann assure que LFI mène une « campagne de harcèlement » à son encontre",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-raphael-glucksmann-assure-que-lfi-mene-une-campagne-de-harcelement-a-son-encontre-26-10-2026-7BLWXBQY2ZCPDISHJN7OUNDUWY.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Édouard Philippe doublé par Jean-Luc Mélenchon, qualifié pour un second tour avec Marine Le Pen, selon un nouveau sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-edouard-philippe-double-par-jean-luc-melenchon-qualifie-pour-un-second-tour-avec-marine-le-pen-selon-un-nouveau-sondage-26-10-2026-H3MMNQ4PABEDVO4TC4OYKNTQIQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
