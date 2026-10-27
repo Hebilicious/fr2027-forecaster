@@ -1,0 +1,118 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-27T05:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-27T04:00:00Z",
+      "title": "Sondage : Raphaël Glucksmann et David Lisnard voient leur popularité progresser",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-raphael-glucksmann-et-david-lisnard-voient-leur-popularite-progresser"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "bardella",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-27T04:00:00Z",
+      "title": "Sondage : Le Pen et Mélenchon, grands bénéficiaires de la colère sociale",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-le-pen-et-melenchon-grands-beneficiaires-de-la-colere-sociale"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-27T04:00:00Z",
+      "title": "Sondage : 83% des Français jugent qu’Emmanuel Macron est un mauvais président, un record",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-83-des-francais-jugent-quemmanuel-macron-est-un-mauvais-president-un-record"
+    }
+  ],
+  "schema_version": "1.0"
+}
