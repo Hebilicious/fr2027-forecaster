@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-27T10:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T10:14:14Z",
+      "title": "Annonces du gouvernement pour les lycéens: \"Il y a eu des avancées, mais il y a encore des insuffisances\", juge François Hollande",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-annonces-du-gouvernement-pour-les-lyceens-il-y-a-eu-des-avancees-mais-il-y-a-encore-des-insuffisances-juge-francois-hollande_VN-202610270370.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T10:06:15Z",
+      "title": "Pouvoir d'achat: François Hollande souhaite que \"le gouvernement ne prenne pas trop de temps pour comprendre la nécessité d'ouvrir une négociation avec les organisations syndicales et le patronat\"",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-pouvoir-d-achat-francois-hollande-souhaite-que-le-gouvernement-ne-prenne-pas-trop-de-temps-pour-comprendre-la-necessite-d-ouvrir-une-negociation-avec-les-organisations-syndicales-et-le-patronat_VN-202610270365.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
