@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-27T16:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Pas un choix de facilité » : qui est Alexandre Ouizille, sénateur PS et directeur de campagne de Raphaël Glucksmann ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/pas-un-choix-de-facilite-qui-est-alexandre-ouizille-senateur-ps-et-directeur-de-campagne-de-raphael-glucksmann-27-10-2026-HHCMPI2XJREG3B42TGVQAFVARU.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Vous aurez du mal à trouver ici quelqu’un ayant une mauvaise opinion de lui » : à Bruxelles, l’eurodéputé Glucksmann a marqué des points",
+      "url": "https://www.leparisien.fr/elections/presidentielle/vous-aurez-du-mal-a-trouver-ici-quelquun-ayant-une-mauvaise-opinion-de-lui-a-bruxelles-leurodepute-glucksmann-a-marque-des-points-27-10-2026-HG6RPRCWUVC45J7ZMTNQ2PYRQA.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-27T15:25:20Z",
+      "title": "Présidentielle 2027 : Entre Lisnard et Retailleau, le « match » dans le match à droite",
+      "url": "https://www.20minutes.fr/politique/4258028-20261027-presidentielle-2027-entre-lisnard-retailleau-match-match-droite"
+    }
+  ],
+  "schema_version": "1.0"
+}
