@@ -1,0 +1,71 @@
+schema_version: "1.0"
+poll_id: cluster17-2026-10-22-10339
+supersedes: cluster17-2026-10-22-politico
+firm: cluster17
+sponsor: Politico
+field_start: "2026-10-19"
+field_end: "2026-10-22"
+published_at: "2026-10-26"
+sample_size: 3000
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10339-pres-iv-cluster17-politico-26-octobre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/octobre/10339-pres-iv-cluster17-politico-26-octobre.pdf
+index_url: null
+retrieved_at: "2026-10-27T21:41:42Z"
+entry: primary
+notes: >-
+  Entered from Commission notice 10339 (published figures). Sample of 3,000
+  adults including 2,817 registered voters; shares are of expressed votes, weighted by
+  declared likelihood of voting, with blank votes and abstention excluded. Three
+  round-1 hypotheses, no round 2.
+agent:
+  name: Grok Bot fr2027
+  run_id: checks-2026-10-27T21:40Z
+  skill_version: checks-1
+scenarios:
+- label: Philippe as the centre candidate
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 3
+    glucksmann: 13
+    le_pen: 33
+    melenchon: 18.5
+    philippe: 16
+    retailleau: 8
+    roussel: 2
+    tondelier: 2
+    zemmour: 4
+- label: Attal as the centre candidate
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 0.5
+    attal: 12
+    dupont_aignan: 3.5
+    glucksmann: 14
+    le_pen: 32.5
+    melenchon: 19.5
+    retailleau: 10
+    roussel: 2
+    tondelier: 2
+    zemmour: 4
+- label: Philippe, with Hollande and Lisnard
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 3
+    hollande: 6.5
+    le_pen: 30.5
+    lisnard: 8
+    melenchon: 19.5
+    philippe: 17
+    retailleau: 7
+    roussel: 2
+    tondelier: 2.5
+    zemmour: 3.5
