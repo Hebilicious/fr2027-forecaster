@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.france24.com/fr/france/rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;france24&#46;com&#47;fr&#47;france&#47;rss\" on this server.<P>\nReference&#32;&#35;18&#46;da2cc717&#46;1793128698&#46;886176e\n<P>https&#58;&#47;&#47;errors&",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-10-27T19:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-27T18:47:37Z",
+      "title": "Présidentielle 2027 : Glucksmann-Philippe, le duel des modérés qui rêvent de recréer le clivage gauche-droite",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-glucksmann-philippe-le-duel-des-moderes-qui-revent-de-recreer-le-clivage-gauche-droite-20261027"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-27T19:02:23Z",
+      "title": "Jean-Luc Mélenchon et la Russie : un relativisme toujours aussi problématique",
+      "url": "https://www.liberation.fr/politique/jean-luc-melenchon-et-la-russie-un-relativisme-toujours-aussi-problematique-20261027_YTQBVUD3VBEHBIJBB6F7PMUI5A/"
+    }
+  ],
+  "schema_version": "1.0"
+}
