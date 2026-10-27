@@ -1,0 +1,20 @@
+{
+  "detected_at": "2026-10-27T01:18:15Z",
+  "flags": [
+    {
+      "candidate_id": "dupont_aignan",
+      "date": "2026-10-27",
+      "detail": "support 0.34 [0.22, 0.48] in the drop to 2026-10-26T12:00:00Z → 0.13 [0.07, 0.22] in the drop to 2026-10-27T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.2122
+    },
+    {
+      "candidate_id": "melenchon",
+      "date": "2026-10-27",
+      "detail": "support 0.37 [0.31, 0.44] in the drop to 2026-10-26T12:00:00Z → 0.15 [0.11, 0.21] in the drop to 2026-10-27T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.22
+    }
+  ],
+  "schema_version": "1.0"
+}
