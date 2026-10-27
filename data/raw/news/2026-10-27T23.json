@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-27T23:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T23:00:01Z",
+      "title": "Violences du 17 octobre: Édouard Philippe estime que \"l'échec de l'intégration\" depuis \"plusieurs décennies est incontestable\"",
+      "url": "https://www.bfmtv.com/politique/horizons/violences-du-17-octobre-edouard-philippe-estime-que-l-echec-de-l-integration-depuis-plusieurs-decennies-est-incontestable_AD-202610270924.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T22:32:48Z",
+      "title": "Mobilisation du 31 octobre, colère lycéenne: \"L'inquiétude est palpable et elle est entendable\", explique Céline Géraud, porte-parole de la campagne de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/video-mobilisation-du-31-octobre-colere-lyceenne-l-inquietude-est-palpable-et-elle-est-entendable-explique-celine-geraud-porte-parole-de-la-campagne-de-gabriel-attal_VN-202610270917.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-27T21:45:27Z",
+      "title": "« Nous allons vivre un moment historique » : Bruno Retailleau appelle la jeunesse à prendre part à la présidentielle",
+      "url": "https://www.publicsenat.fr/actualites/politique/nous-allons-vivre-un-moment-historique-bruno-retailleau-appelle-la-jeunesse-a-prendre-part-a-la-pre"
+    }
+  ],
+  "schema_version": "1.0"
+}
