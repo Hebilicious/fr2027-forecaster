@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-27T11:21:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-27T05:43:00Z",
+      "title": "Frédéric Chatillon, l’ami néofasciste de Le Pen et Bardella, écarté de la Fondation Brigitte-Bardot",
+      "url": "https://www.liberation.fr/societe/frederic-chatillon-lami-neofasciste-de-le-pen-et-bardella-ecarte-de-la-fondation-brigitte-bardot-20261027_CJPCXGHG7NAILH7I6XJCCL4TXA/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T11:02:57Z",
+      "title": "\"Nous, nous ne parlons jamais de Raphaël Glucksmann\": Mathilde Panot répond à Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-nous-nous-ne-parlons-jamais-de-raphael-glucksmann-mathilde-panot-repond-a-raphael-glucksmann_VN-202610270415.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Une République islamiste en miniature » : le RN réitère les propos passés de Jordan Bardella sur Trappes",
+      "url": "https://www.leparisien.fr/yvelines-78/trappes-78190/une-republique-islamiste-en-miniature-le-rn-reitere-les-propos-passes-de-jordan-bardella-sur-trappes-27-10-2026-UQDB5UFH5JGAXKET7YSNLDZMO4.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Sortir de notre mollesse » : Glucksmann reconnaît perdre du terrain chez les jeunes face à Mélenchon et évoque « un enjeu de radicalité »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sortir-de-notre-mollesse-glucksmann-reconnait-perdre-du-terrain-chez-les-jeunes-face-a-melenchon-et-evoque-un-enjeu-de-radicalite-27-10-2026-KCEKTBGARJEVDNYWSYGEYJNI3Q.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
