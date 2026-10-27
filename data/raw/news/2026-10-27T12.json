@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-27T12:18:30Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-27T11:53:56Z",
+      "title": "Trappes, une «république islamiste en miniature» : la sénatrice RN Edwige Diaz reprend sur BFM TV d’anciens propos de Bardella",
+      "url": "https://www.liberation.fr/politique/trappes-une-republique-islamiste-en-miniature-la-senatrice-rn-edwige-diaz-reprend-sur-bfm-tv-danciens-propos-de-bardella-20261027_6N6AZNFGLFDTLA5GOFHOGRWBLY/"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T11:54:59Z",
+      "title": "Colère lycéenne: François Hollande juge les revendications \"légitimes\" et \"financièrement possibles\"",
+      "url": "https://www.bfmtv.com/politique/video-colere-lyceenne-francois-hollande-juge-les-revendications-legitimes-et-financierement-possibles_VN-202610270457.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
