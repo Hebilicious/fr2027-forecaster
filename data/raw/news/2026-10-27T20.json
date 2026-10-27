@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-27T20:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-27T19:24:20Z",
+      "title": "Présidentielle 2027 : Edouard Philippe estime que « l’échec de l’intégration » depuis « plusieurs décennies est incontestable »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/27/presidentielle-2027-edouard-philippe-estime-que-l-echec-de-l-integration-depuis-plusieurs-decennies-est-incontestable_6801342_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T20:05:44Z",
+      "title": "David Lisnard, Bruno Retailleau \"peuvent nous rejoindre\", lance Louis Aliot, vice-président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-david-lisnard-bruno-retailleau-peuvent-nous-rejoindre-lance-louis-aliot-vice-president-du-rn_VN-202610270829.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T19:53:10Z",
+      "title": "\"On peut redonner de l'espoir\", assure Karim Bouamrane, maire de Saint-Ouen-sur-Seine et candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-on-peut-redonner-de-l-espoir-assure-karim-bouamrane-maire-de-saint-ouen-sur-seine-et-candidat-a-la-presidentielle_VN-202610270823.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T19:51:41Z",
+      "title": "Karim Bouamrane, candidat à la présidentielle, met \"absolument sur le même plan\" Jean-Luc Mélenchon et Marine Le Pen, \"bien qu'ils n'aient pas la même matrice idéologique\"",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-karim-bouamrane-candidat-a-la-presidentielle-met-absolument-sur-le-meme-plan-jean-luc-melenchon-et-marine-le-pen-bien-qu-ils-n-aient-pas-la-meme-matrice-ideologique_VN-202610270822.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T19:48:47Z",
+      "title": "\"Aujourd'hui, le travail ne paye plus\", dénonce Karim Bouamrane, maire de Saint-Ouen-sur-Seine et candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-aujourd-hui-le-travail-ne-paye-plus-denonce-karim-bouamrane-maire-de-saint-ouen-sur-seine-et-candidat-a-l-election-presidentielle_VN-202610270820.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-27T19:47:29Z",
+      "title": "Pour Karim Bouamrane, maire PS de Saint-Ouen-sur-Seine et candidat à l'élection présidentielle, \"il faut attaquer le RN sur les questions politiques\"",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-pour-karim-bouamrane-maire-ps-de-saint-ouen-sur-seine-et-candidat-a-l-election-presidentielle-il-faut-attaquer-le-rn-sur-les-questions-politiques_VN-202610270818.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-27T18:45:00Z",
+      "title": "HEC Débats – Public Sénat : suivez en direct la rencontre avec Bruno Retailleau",
+      "url": "https://www.publicsenat.fr/actualites/politique/hec-debats-public-senat-suivez-en-direct-la-rencontre-avec-bruno-retailleau"
+    }
+  ],
+  "schema_version": "1.0"
+}
