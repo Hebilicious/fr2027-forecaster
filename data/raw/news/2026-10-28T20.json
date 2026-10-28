@@ -1,0 +1,133 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T20:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-28T20:00:04Z",
+      "title": "Présidentielle 2027 : Gabriel Attal pour l’organisation d’une « grande primaire des démocrates »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/28/presidentielle-2027-gabriel-attal-pour-l-organisation-d-une-grande-primaire-des-democrates_6801640_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-28T19:48:51Z",
+      "title": "\"Il est temps d'être tous responsables\": Gabriel Attal appelle à l'organisation d'une \"grande primaire des démocrates\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/il-est-temps-d-etre-tous-responsables-gabriel-attal-appelle-a-l-organisation-d-une-grande-primaire-des-democrates_AN-202610280880.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Gabriel Attal plaide pour l’organisation d’une « grande primaire des démocrates »",
+      "url": "https://www.leparisien.fr/politique/presidentielle-2027-gabriel-attal-plaide-pour-lorganisation-dune-grande-primaire-des-democrates-28-10-2026-WGXD43JJS5BMROSDPMJOIIRAVA.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-28T19:57:54Z",
+      "title": "Présidentielle 2027 : Enfarinage, insultes… Raphaël Glucksmann a du mal à faire campagne sur le terrain",
+      "url": "https://www.20minutes.fr/politique/4258431-20261028-presidentielle-2027-enfarinage-insultes-raphael-glucksmann-mal-faire-campagne-terrain"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-28T19:22:48Z",
+      "title": "Présidentielle 2027 : LFI reprend la stratégie de « l’armée de Lula » sur WhatsApp pour invisibiliser l’extrême droite",
+      "url": "https://www.20minutes.fr/politique/4258408-20261028-presidentielle-2027-lfi-reprend-strategie-armee-lula-whatsapp-invisibiliser-extreme-droite"
+    }
+  ],
+  "schema_version": "1.0"
+}
