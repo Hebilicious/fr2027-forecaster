@@ -2,6 +2,36 @@
 
 Dated entries for every assumption, parameter change, source added or dropped, and the reason. Newest first within a day.
 
+## 2026-10-18
+
+### Model 0.6.0: tone momentum from GDELT, on news counts rebuilt from every GDELT file
+
+**The GDELT counts were wrong.** The collector read one GDELT file in four (minute 00 of each hour) and counted an article for a candidate when its title, or GDELT's list of the people it names, held their name. That list is extracted from GDELT's English machine translation: it writes Mélenchon as `luc mlenchon`, Pécresse as `valerie pcresse`, Édouard Philippe as `edward philippe` and Le Drian as `mondrian`, and over the sample days read (20 April 2017, 25 March 2022, 16 October 2026) it never lists Marine Le Pen, Emmanuel Macron, Jordan Bardella, Ségolène Royal, Bruno Le Maire or Marine Tondelier at all. 2017's files hold no titles, so the 2017 replays saw Sarkozy 28,923 times and Macron, Le Pen, Fillon and Mélenchon almost never.
+
+**Fix.** Every file is read (96 a day), and an article counts when its title or the slug of its address (the longest part of the URL path, so not the section it is filed under) names the candidate, by the RSS headline rule; on 20 April 2017 that counts Macron 439, Fillon 363, Le Pen 262 and Mélenchon 257 articles. GDELT's people list is no longer used. The Backtest signals workflow refetched 2017 and 2022 (400 days each) and 1 August to 17 October 2026 on 89 runner jobs in about 20 minutes, each file downloaded, read for its French records and dropped: every file GDELT published (37,975 of 38,400 for 2017, 37,655 of 38,400 for 2022, 7,488 of 7,488 live; the others return 404 at GDELT). The live collector now reads every file of the last three days each morning. Each day also keeps the mean GDELT tone (V2Tone: positive minus negative words, in percent, scored on the English translation) of the articles naming each candidate and of every French article.
+
+**Tone momentum** (`signals.tone_momentum_weight`, `signals.tone_min_articles`). The momentum tilt gains a term: the weight times the change in the candidate's tone against the day's tone of every French article, article-weighted, over the last 7 days against the 28 before, with the same 90-day fade; a candidate with fewer than 30 articles in either window gets none. Reading tone against the day's keeps a dark news day for everyone from moving anyone. A week-on-month change has a standard deviation of about 1.1 points of tone in both elections (5th to 95th percentile −1.9 to +1.6). Over whole campaigns, the coverage of Fillon (−0.71 against the day's) and Le Pen (−0.64) in 2017 and of Zemmour (−1.23) and Mélenchon (−0.81) in 2022 was the darkest.
+
+**Backtest** (`research/backtest/report.md`), against the polls only (share and runoff log scores: higher is better; log-loss: lower is better):
+
+| Settings                                         | 2017 share | 2017 runoff | 2017 qualify / win log-loss | 2022 share | 2022 runoff | 2022 qualify / win log-loss |
+| ------------------------------------------------ | ---------- | ----------- | --------------------------- | ---------- | ----------- | --------------------------- |
+| Tone 0.02                                        | −0.1       | +0.01       | 0.000 / 0.000               | +0.1       | −0.02       | +0.001 / 0.000              |
+| Tone 0.05                                        | −0.2       | +0.04       | +0.001 / 0.000              | +0.5       | −0.04       | +0.001 / 0.000              |
+| Tone 0.10                                        | −0.8       | +0.06       | +0.003 / 0.000              | +1.6       | −0.08       | +0.002 / +0.001             |
+| Tone 0.20                                        | −3.0       | +0.14       | +0.010 / 0.000              | +1.4       | −0.16       | +0.006 / +0.003             |
+| Tone −0.05                                       | −0.2       | −0.05       | −0.001 / 0.000              | −0.5       | +0.04       | 0.000 / 0.000               |
+| Momentum 0.15                                    | +1.4       | +0.03       | −0.003 / −0.002             | +0.3       | −0.07       | +0.001 / +0.001             |
+| Momentum 0.15 and tone 0.05                      | +1.2       | +0.06       | −0.002 / −0.002             | +1.5       | −0.11       | +0.001 / +0.001             |
+| Published (spikes 0.1, momentum 0.15, tone 0.05) | −4.4       | −1.20       | +0.010 / +0.012             | +0.6       | −0.05       | −0.002 / −0.002             |
+
+- Tone helps 2022's round 1 shares and 2017's runoff, costs a little on 2017's shares, and leaves who qualifies and who wins about where the polls put them. A negative weight is worse on both elections' shares, as it should be if darker coverage goes with falling support.
+- 0.05 is the weight chosen: on top of attention momentum it adds +1.0 to the share log score over both elections (momentum alone −108.4, with tone −107.4, polls only −110.1), and it keeps 2017's cost small; 0.10 does better on 2022 and worse on 2017.
+- With the rebuilt counts, attention momentum 0.15 does better than before (2017 share +1.4, against +1.17 on the sampled counts), and news spikes alone no longer get a `shock_sd` from the polls (no effect). The published settings' cost on 2017 still comes from widening every spike by 0.1.
+- On the forecast of 18 October, six months out, the tone term moves no one by more than 1.6% (Retailleau +1.6%, Bardella +1.5%, Glucksmann +1.3%: their coverage was less dark last week than in the month before).
+
+`model_version` 0.5.0 → 0.6.0.
+
 ## 2026-10-17
 
 ### A slider for the news and social signals, and a slower momentum fade (owner's choices)

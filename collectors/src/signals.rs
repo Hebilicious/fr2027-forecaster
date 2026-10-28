@@ -1,5 +1,5 @@
 //! The model's view of the live signals: Wikipedia page views (`data/clean/attention.csv`), GDELT
-//! article counts (`data/clean/gdelt.csv`) and the share of sampled X posts supporting each
+//! article counts and their tone (`data/clean/gdelt.csv`) and the share of sampled X posts supporting each
 //! candidate (`data/clean/grok.csv`), by candidate and day.
 
 use std::collections::BTreeMap;
@@ -23,6 +23,18 @@ pub fn read_clean(repo: &Repo) -> Result<Signals> {
         for row in gdelt::read_clean_rows(repo)? {
             let date = parse_date(repo, gdelt::CLEAN_FILE, &row.date)?;
             signals.add(&row.candidate_id, SignalSource::News, date, row.articles as f64);
+            // The day's tone against every French article's, times the articles (fetches since
+            // 2026-10-18 carry it).
+            if let (Some(tone), Some(all)) = (row.tone, row.total_tone)
+                && row.articles > 0
+            {
+                signals.add(
+                    &row.candidate_id,
+                    SignalSource::NewsTone,
+                    date,
+                    (tone - all) * row.articles as f64,
+                );
+            }
         }
     }
     if present(grok::CLEAN_FILE) {
