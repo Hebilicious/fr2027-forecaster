@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T05:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-28T05:00:00Z",
+      "title": "Marc Ferracci : «Faisons débattre les candidats du bloc central devant les Français »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/marc-ferracci-faisons-debattre-les-candidats-du-bloc-central-devant-les-francais-20261028"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Marine Le Pen et Jean-Luc Mélenchon sont les gagnants de la colère sociale, selon un nouveau sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-marine-le-pen-et-jean-luc-melenchon-sont-les-gagnants-de-la-colere-sociale-selon-un-nouveau-sondage-28-10-2026-KRTP75C7MJFBNM2DJNYWGAVLK4.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-28T05:03:47Z",
+      "title": "Présidentielle 2027 : Édouard Philippe juge « incontestable » « l’échec de l’intégration »",
+      "url": "https://www.20minutes.fr/politique/4258156-20261028-presidentielle-2027-edouard-philippe-juge-incontestable-echec-integration"
+    }
+  ],
+  "schema_version": "1.0"
+}
