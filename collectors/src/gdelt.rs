@@ -1,7 +1,8 @@
-//! News volume from GDELT: `data/raw/gdelt/YYYY-MM-DD.json` → `data/clean/gdelt.csv`, one row
-//! per candidate per day: how many French-language articles GDELT read named the candidate, in a
-//! one-in-four sample of its raw files (`fetch/src/gdelt.rs`). When two fetches cover the same day,
-//! the later one wins.
+//! News volume and tone from GDELT: `data/raw/gdelt/YYYY-MM-DD.json` → `data/clean/gdelt.csv`, one
+//! row per candidate per day: how many French-language articles GDELT read named the candidate,
+//! from every one of its raw files (`fetch/src/gdelt.rs`), and their mean tone against the day's.
+//! When two fetches cover the same day, the later one wins; fetches before 2026-10-18 read one file
+//! in four and carry no tone, and every day they covered has been fetched again since.
 //!
 //! The RSS headlines in `news.csv` are what the Signals view lists; this is the daily count the
 //! model's event detection reads, because GDELT also has it for 2017 and 2022, so the backtest
@@ -17,7 +18,7 @@ use crate::{
 };
 
 pub const CLEAN_FILE: &str = "gdelt.csv";
-const HEADER: &str = "date,candidate_id,query,articles,total_articles,source_file";
+const HEADER: &str = "date,candidate_id,query,articles,total_articles,tone,total_tone,files,source_file";
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Fetch {
@@ -41,10 +42,20 @@ pub struct CandidateCounts {
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct DayCount {
     pub date: String,
-    /// French articles naming the candidate, in the day's sample.
+    /// French articles naming the candidate.
     pub articles: u64,
-    /// Every French article in the day's sample, for scale.
+    /// Every French article of the day, for scale.
     pub total_articles: u64,
+    /// Mean GDELT tone of the articles naming the candidate; `None` without any, or in a fetch
+    /// before tone was kept.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub tone: Option<f64>,
+    /// Mean GDELT tone of every French article of the day.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub total_tone: Option<f64>,
+    /// GDELT files read for the day; `None` in a fetch before every file was read.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub files: Option<u32>,
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -54,6 +65,9 @@ pub struct GdeltRow {
     pub query: String,
     pub articles: u64,
     pub total_articles: u64,
+    pub tone: Option<f64>,
+    pub total_tone: Option<f64>,
+    pub files: Option<u32>,
     pub source_file: String,
 }
 
@@ -109,8 +123,13 @@ pub fn check_days(fetch: &Fetch) -> Vec<String> {
     errors
 }
 
-/// One row per candidate and day; for a day several fetches cover, the last fetch's count.
+/// One row per candidate and day; for a day several fetches cover, the count of a fetch that read
+/// every file over one that read one in four (those carry no `files`), then of the one fetched last
+/// (by `fetched_at`, not by file name: `<date>-backfill.json` sorts before `<date>.json`).
 pub fn rows<'a>(fetches: impl IntoIterator<Item = (&'a Fetch, String)>) -> Vec<GdeltRow> {
+    let mut fetches: Vec<(&Fetch, String)> = fetches.into_iter().collect();
+    let every_file = |f: &Fetch| f.candidates.iter().flat_map(|c| &c.days).any(|d| d.files.is_some());
+    fetches.sort_by(|a, b| (every_file(a.0), &a.0.fetched_at).cmp(&(every_file(b.0), &b.0.fetched_at)));
     let mut by_day: BTreeMap<(String, String), GdeltRow> = BTreeMap::new();
     for (fetch, source_file) in fetches {
         for candidate in &fetch.candidates {
@@ -123,6 +142,9 @@ pub fn rows<'a>(fetches: impl IntoIterator<Item = (&'a Fetch, String)>) -> Vec<G
                         query: candidate.query.clone(),
                         articles: day.articles,
                         total_articles: day.total_articles,
+                        tone: day.tone,
+                        total_tone: day.total_tone,
+                        files: day.files,
                         source_file: source_file.clone(),
                     },
                 );
@@ -162,9 +184,8 @@ pub fn read_clean_rows(repo: &Repo) -> Result<Vec<GdeltRow>> {
 mod tests {
     use super::*;
 
-    #[test]
-    fn later_fetch_wins() {
-        let fetch = |fetched_at: &str, articles: u64| Fetch {
+    fn sampled(fetched_at: &str, articles: u64, files: Option<u32>) -> Fetch {
+        Fetch {
             schema_version: "1.0".into(),
             fetched_at: fetched_at.into(),
             start: "2026-10-01".into(),
@@ -178,12 +199,34 @@ mod tests {
                     date: "2026-10-02".into(),
                     articles,
                     total_articles: 1000,
+                    tone: None,
+                    total_tone: None,
+                    files,
                 }],
             }],
-        };
+        }
+    }
+
+    #[test]
+    fn later_fetch_wins() {
+        let fetch = |fetched_at: &str, articles: u64| sampled(fetched_at, articles, None);
         let (a, b) = (fetch("2026-10-02T06:00:00Z", 3), fetch("2026-10-03T06:00:00Z", 5));
-        let rows = rows([(&a, "a".to_string()), (&b, "b".to_string())]);
-        assert_eq!(rows.len(), 1);
-        assert_eq!((rows[0].articles, rows[0].source_file.as_str()), (5, "b"));
+        for order in [[(&a, "a"), (&b, "b")], [(&b, "b"), (&a, "a")]] {
+            let rows = rows(order.map(|(f, name)| (f, name.to_string())));
+            assert_eq!(rows.len(), 1);
+            assert_eq!(
+                (rows[0].articles, rows[0].source_file.as_str()),
+                (5, "b"),
+                "whatever the file order"
+            );
+        }
+    }
+
+    #[test]
+    fn a_fetch_of_every_file_wins_over_a_later_sample() {
+        let full = sampled("2026-10-02T06:00:00Z", 20, Some(96));
+        let later_sample = sampled("2026-10-03T06:00:00Z", 5, None);
+        let rows = rows([(&full, "full".to_string()), (&later_sample, "sample".to_string())]);
+        assert_eq!((rows[0].articles, rows[0].source_file.as_str()), (20, "full"));
     }
 }
