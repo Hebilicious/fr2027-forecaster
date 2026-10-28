@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T12:13:34Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-28T11:28:14Z",
+      "title": "Charles Alloncle nommé porte-parole de la campagne de Marine Le Pen",
+      "url": "https://www.liberation.fr/politique/charles-alloncle-nomme-porte-parole-de-la-campagne-de-marine-le-pen-20261028_X46MVDNIOZEONJTEC65K4JWY2M/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-28T11:19:36Z",
+      "title": "L’inspiration brésilienne des insoumis pour contrer l’extrême droite sur les réseaux sociaux",
+      "url": "https://www.liberation.fr/politique/elections/linspiration-bresilienne-des-insoumis-pour-contrer-lextreme-droite-sur-les-reseaux-sociaux-20261028_SKEUM2DYSZFS3FZF7SUO3WDOC4/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-28T11:42:00Z",
+      "title": "Présidentielle 2027: Gabriel Attal souhaite un \"choc massif de simplification\" pour les entreprises",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-gabriel-attal-souhaite-un-choc-massif-de-simplification-pour-les-entreprises_VN-202610280475.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : plus de Français souhaitent empêcher Jean-Luc Mélenchon d’arriver au pouvoir que Marine Le Pen selon un sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-plus-de-francais-souhaitent-empecher-jean-luc-melenchon-darriver-au-pouvoir-que-marine-le-pen-selon-un-sondage-28-10-2026-O4JQIHWHJBGHHEJ4AVAZ3FVASI.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-28T12:10:53Z",
+      "title": "Gilles Boyer (Horizons) : \"Je ne suis pas pour qu'on interdise quiconque de s'exprimer\"",
+      "url": "https://www.france24.com/fr/%C3%A9missions/mardi-politique/20261028-gilles-boyer-horizons-je-ne-suis-pas-pour-qu-on-interdise-quiconque-de-s-exprimer"
+    }
+  ],
+  "schema_version": "1.0"
+}
