@@ -1,0 +1,116 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T21:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-28T20:55:17Z",
+      "title": "Avec son appel à une «grande primaire», Attal joint sa voix à ceux qui veulent faire craquer Philippe",
+      "url": "https://www.liberation.fr/politique/avec-son-appel-a-une-grande-primaire-attal-joint-sa-voix-a-ceux-qui-veulent-faire-craquer-philippe-20261028_KOSAWAUGVRHOHNMGQAPTT5SOC4/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-28T20:41:09Z",
+      "title": "Gabriel Attal plaide pour l'organisation d'une \"grande primaire des démocrates\" en vue de la présidentielle",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/gabriel-attal-plaide-pour-l-organisation-d-une-grande-primaire-des-democrates-en-vue-de-la-presidentielle_8257895.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-28T20:52:43Z",
+      "title": "Le candidat LR à la présidentielle Bruno Retailleau juge \"fantaisiste et ridicule\" l'organisation d'une \"grande primaire des démocrates\" proposée par son adversaire Gabriel Attal",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/le-candidat-lr-a-la-presidentielle-bruno-retailleau-juge-fantaisiste-et-ridicule-l-organisation-d-une-grande-primaire-des-democrates-proposee-par-son-adversaire-gabriel-attal_8257928.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
