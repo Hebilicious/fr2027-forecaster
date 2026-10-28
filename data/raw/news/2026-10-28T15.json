@@ -1,0 +1,142 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T15:19:05Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-28T14:20:16Z",
+      "title": "Désormais patron du groupe RN, Sébastien Chenu va conserver la vice-présidence de l’Assemblée nationale",
+      "url": "https://www.lefigaro.fr/politique/desormais-patron-du-groupe-rn-sebastien-chenu-va-conserver-la-vice-presidence-de-l-assemblee-nationale-20261028"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "maurel"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-28T14:53:42Z",
+      "title": "Emmanuel Maurel, député, l’âme à gauche",
+      "url": "https://www.liberation.fr/portraits/emmanuel-maurel-depute-lame-a-gauche-20261028_Z65IFHAIE5ARDMBUC2MMC5YJN4/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon veut remplacer le directeur de Bpifrance qui « n’en fait qu’à sa tête »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-jean-luc-melenchon-veut-remplacer-le-directeur-de-bpifrance-qui-nen-fait-qua-sa-tete-28-10-2026-YJHF7F3ZCFB7JCNBLPVAPIVYUY.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Contrairement à mon lapsus… » : le porte-parole de Raphaël Glucksmann fait son mea-culpa après s’être emmêlé les pinceaux sur BFMTV",
+      "url": "https://www.leparisien.fr/elections/presidentielle/contrairement-a-mon-lapsus-le-porte-parole-de-raphael-glucksmann-fait-son-mea-culpa-apres-setre-emmele-les-pinceaux-sur-bfmtv-28-10-2026-GEDI7J5KENDQZFNAZ3KPLTMPWQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : un magistrat honoraire conteste l’éligibilité de Marine Le Pen, elle saisit le Conseil supérieur de la magistrature",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-un-magistrat-honoraire-conteste-leligibilite-de-marine-le-pen-elle-saisit-le-conseil-superieur-de-la-magistrature-28-10-2026-R4BIBD6KC5DMXKRT6PUTJCKSIY.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-28T14:34:40Z",
+      "title": "« Personne ne le connaît, mais tout le monde en parle » : David Lisnard, réel « engouement » ou « bulle algorithmique » ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/personne-ne-le-connait-mais-tout-le-monde-en-parle-david-lisnard-reel-engouement-ou-bulle-algorithmique"
+    }
+  ],
+  "schema_version": "1.0"
+}
