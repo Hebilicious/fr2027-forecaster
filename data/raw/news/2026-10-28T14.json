@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T14:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-28T13:30:26Z",
+      "title": "\"Double casquette\": Marc Fesneau dénonce le \"mélange des genres\" de David Lisnard, candidat à la présidentielle et président de l'AMF",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/double-casquette-marc-fesneau-denonce-le-melange-des-genres-de-david-lisnard-candidat-a-la-presidentielle-et-president-de-l-amf_AD-202610280551.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« On a tous un Alloncle raciste » : Éric Ciotti demande à un député de « présenter des excuses » après un tweet sur le porte-parole de Marine Le Pen",
+      "url": "https://www.leparisien.fr/elections/presidentielle/on-a-tous-un-alloncle-raciste-eric-ciotti-demande-a-un-depute-de-presenter-des-excuses-apres-un-tweet-sur-le-porte-parole-de-marine-le-pen-28-10-2026-5WXEW66KGRHLTDP27G2X2KVEI4.php"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Gabriel Attal défend une économie « libérale » mais « planifiée » pour financer un « capitalisme de l’innovation »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-gabriel-attal-defend-une-economie-liberale-mais-planifiee-pour-financer-un-capitalisme-de-linnovation-28-10-2026-TFIXV4YKRRGT3IS3IWH5FRXV4I.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
