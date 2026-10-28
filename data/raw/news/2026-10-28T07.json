@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T07:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-28T07:08:26Z",
+      "title": "\"Ils vont sortir fatigués de cet automne\" : coincés entre les crises et la parole du gouvernement, Gabriel Attal et Edouard Philippe tentent de se faire entendre",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/ils-vont-sortir-fatigues-de-cet-automne-coinces-entre-les-crises-et-la-parole-du-gouvernement-gabriel-attal-et-edouard-philippe-tentent-de-se-faire-entendre_8256418.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-28T07:01:01Z",
+      "title": "Jordan Bardella a-t-il vraiment retiré une montre de luxe de son poignet alors qu'il prenait la parole au congrès du Rassemblement national ?",
+      "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/jordan-bardella-a-t-il-vraiment-retire-une-montre-de-luxe-de-son-poignet-alors-qu-il-prenait-la-parole-au-congres-du-rassemblement-national_8236312.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
