@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T18:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-28T17:15:52Z",
+      "title": "Antoine Vermorel-Marques, député LR : « La France décroche de toute part mais une autre écologie peut être à son service »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/antoine-vermorel-marques-depute-lr-la-france-decroche-de-toute-part-mais-une-autre-ecologie-peut-etre-a-son-service-20261028"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-28T17:38:39Z",
+      "title": "Présidentielle 2027 : « Barack Obama donne l’exemple »… Le message subliminal de François Hollande",
+      "url": "https://www.20minutes.fr/politique/4258405-20261028-presidentielle-2027-barack-obama-donne-exemple-message-subliminal-francois-hollande"
+    }
+  ],
+  "schema_version": "1.0"
+}
