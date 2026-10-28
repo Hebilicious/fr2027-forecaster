@@ -1,0 +1,144 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-28T11:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-28T10:30:56Z",
+      "title": "Liberté d’expression sur les réseaux sociaux : «Ça commence où, l’insurrection, si c’est Le Pen au pouvoir dans six mois ?»",
+      "url": "https://www.liberation.fr/politique/liberte-dexpression-sur-les-reseaux-sociaux-ca-commence-ou-linsurrection-si-cest-le-pen-au-pouvoir-dans-six-mois-20261028_4LHZ4YKG75FA3BCSS5XKKT3UWU/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-28T10:38:26Z",
+      "title": "\"Sa présence à la tête de cette banque est incompatible avec la nôtre\": Jean-Luc Mélenchon s'en prend au directeur de Bpifrance",
+      "url": "https://www.bfmtv.com/politique/video-sa-presence-a-la-tete-de-cette-banque-est-incompatible-avec-la-notre-jean-luc-melenchon-s-en-prend-au-directeur-de-bpifrance_VN-202610280416.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-28T10:35:19Z",
+      "title": "Propriété privée: Jean-Luc Mélenchon se défend \"de proposer la collectivisation de toutes les voitures, de tous les frigos\"",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-propriete-privee-jean-luc-melenchon-se-defend-de-proposer-la-collectivisation-de-toutes-les-voitures-de-tous-les-frigos_VN-202610280414.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-28T10:22:27Z",
+      "title": "Présidentielle 2027: Bruno Retailleau estime qu'une primaire \"ne sert à rien\" si Édouard Philippe n'y participe pas",
+      "url": "https://www.bfmtv.com/politique/les-republicains/presidentielle-2027-favorable-a-une-primaire-bruno-retailleau-estime-qu-elle-ne-sert-a-rien-si-edouard-philippe-n-y-participe-pas_AN-202610280400.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : une alliance avec David Lisnard ? Chacun doit faire sa campagne « jusqu’à janvier », affirme Bruno Retailleau",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-une-alliance-avec-david-lisnard-chacun-doit-faire-sa-campagne-jusqua-janvier-affirme-bruno-retailleau-28-10-2026-AI7JN4SXTFERFM3LXI55EH6WVY.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-28T09:40:17Z",
+      "title": "Candidat à la présidentielle et à la présidence de l’AMF : Marc Fesneau dénonce le « mélange des genres » de David Lisnard",
+      "url": "https://www.publicsenat.fr/actualites/politique/candidat-a-la-presidentielle-et-a-la-presidence-de-lamf-marc-fesneau-denonce-le-melange-des-genres-de-david-lisnard"
+    }
+  ],
+  "schema_version": "1.0"
+}
