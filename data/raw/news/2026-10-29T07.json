@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-29T07:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-29T07:00:00Z",
+      "title": "«Jean-Luc Mélenchon est l’idiot utile de Marine Le Pen» : les indiscrétions du Figaro Magazine",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/sondages/jean-luc-melenchon-est-l-idiot-utile-de-marine-le-pen-les-indiscretions-du-figaro-magazine-20261029"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « je confie pas mes petits-enfants à Mathilde Panot ou à Marine Le Pen », Patrick Sébastien révèle pour qui il votera",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-je-confie-pas-mes-petits-enfants-a-mathilde-panot-ou-a-marine-le-pen-patrick-sebastien-revele-pour-qui-il-votera-29-10-2026-KSHISAF35VFAPJCADEDOKGC2BU.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "hollande"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il ne veut pas apparaître comme le Judas de l’équipe » : après la victoire de Glucksmann, François Hollande attend son heure",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-ne-veut-pas-apparaitre-comme-le-judas-de-lequipe-apres-la-victoire-de-glucksmann-francois-hollande-attend-son-heure-29-10-2026-2MWXGYRIKJDZZLIBS55FEZEG5U.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
