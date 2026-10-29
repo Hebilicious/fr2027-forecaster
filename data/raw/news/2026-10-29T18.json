@@ -1,0 +1,116 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-29T18:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-29T17:42:10Z",
+      "title": "Pourquoi LFI veut \"garantir le droit d'accès des joueurs aux jeux vidéo\", même après la coupure des serveurs en ligne",
+      "url": "https://www.franceinfo.fr/culture/jeux-video/pourquoi-lfi-veut-garantir-le-droit-d-acces-des-joueurs-aux-jeux-video-meme-apres-la-coupure-des-serveurs-en-ligne_8258870.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-29T17:20:33Z",
+      "title": "Un \"chant du cygne\"? À la peine dans les sondages, Gabriel Attal tente de se relancer avec l’option d'une primaire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/un-chant-du-cygne-a-la-peine-dans-les-sondages-gabriel-attal-tente-de-se-relancer-avec-l-option-d-une-primaire_AV-202610290746.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-29T17:34:41Z",
+      "title": "Après la proposition de primaire de Gabriel Attal, rejetée par le camp Philippe et Retailleau, le blocage perdure",
+      "url": "https://www.publicsenat.fr/actualites/politique/apres-la-proposition-de-primaire-de-gabriel-attal-rejetee-par-le-camp-philippe-et-retailleau-le-blocage-perdure"
+    }
+  ],
+  "schema_version": "1.0"
+}
