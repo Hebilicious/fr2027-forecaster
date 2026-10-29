@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-29T19:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-29T18:44:04Z",
+      "title": "Présidentielle 2027 : le reflux d’Édouard Philippe réveille le débat sur la primaire à droite",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/primaires-droite/presidentielle-2027-le-reflux-d-edouard-philippe-reveille-le-debat-sur-la-primaire-a-droite-20261029"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-29T18:30:00Z",
+      "title": "Présidentielle 2027 : la « primaire des démocrates » esquissée par Gabriel Attal peine à faire consensus",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-la-primaire-des-democrates-esquissee-par-gabriel-attal-peine-a-faire-consensus-20261029"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-29T18:40:26Z",
+      "title": "Départ de Christine Lagarde de la BCE : Mélenchon (LFI) et Tanguy (RN) accusent Macron d’être à la manœuvre",
+      "url": "https://www.20minutes.fr/politique/4258761-20261029-depart-christine-lagarde-bce-melenchon-lfi-tanguy-rn-accusent-macron-etre-man-uvre"
+    }
+  ],
+  "schema_version": "1.0"
+}
