@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-29T06:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-29T05:57:01Z",
+      "title": "L'ÉDITO POLITIQUE - François Hollande, le non-candidat qui fait campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-edito-politique-francois-hollande-le-non-candidat-qui-fait-campagne_VN-202610290133.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-29T05:55:03Z",
+      "title": "Un projet \"cafouilleux\": les entourages d'Édouard Philippe et de Bruno Retailleau accueillent très froidement l'idée d'une \"primaire démocrates\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/un-projet-cafouilleux-les-entourages-d-edouard-philippe-et-de-bruno-retailleau-accueillent-tres-froidement-l-idee-d-une-primaire-democrates_AD-202610290128.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-29T06:07:37Z",
+      "title": "Présidentielle 2027 : « Il nous faut un autre candidat », alertent des macronistes déçus par Philippe et Attal",
+      "url": "https://www.20minutes.fr/politique/4258243-20261029-presidentielle-2027-faut-autre-candidat-alertent-macronistes-decus-philippe-attal"
+    }
+  ],
+  "schema_version": "1.0"
+}
