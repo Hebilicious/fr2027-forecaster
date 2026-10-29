@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-29T10:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-29T09:37:41Z",
+      "title": "Edouard Philippe et Gabriel Attal, empêtrés dans une campagne présidentielle laborieuse, tentent de conjurer leur effacement",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/10/29/edouard-philippe-et-gabriel-attal-empetres-dans-une-campagne-presidentielle-laborieuse-tentent-de-conjurer-leur-effacement_6802302_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-29T10:00:00Z",
+      "title": "« Une écologie humaine qui fait confiance à la science » : le projet présidentiel de Bruno Retailleau veut rompre avec une logique punitive",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/une-ecologie-humaine-qui-fait-confiance-a-la-science-le-projet-presidentiel-de-bruno-retailleau-veut-rompre-avec-une-logique-punitive-20261029"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-28T09:42:43Z",
+      "title": "Pour la présidentielle, La France insoumise mise aussi sur les jeux vidéo",
+      "url": "https://www.france24.com/fr/france/20261028-pour-la-pr%C3%A9sidentielle-la-france-insoumise-mise-aussi-sur-les-jeux-vid%C3%A9o"
+    }
+  ],
+  "schema_version": "1.0"
+}
