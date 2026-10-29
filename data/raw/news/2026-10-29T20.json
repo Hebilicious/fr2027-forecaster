@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-29T20:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-29T20:10:16Z",
+      "title": "L’Arcom adresse une mise en garde à Radio France à la suite de la diffusion sur France Culture d’un montage détournant des propos de Jean-Luc Mélenchon",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/29/l-arcom-adresse-une-mise-en-garde-a-radio-france-a-la-suite-de-la-diffusion-sur-france-culture-d-un-montage-detournant-des-propos-de-jean-luc-melenchon_6802387_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-29T20:01:52Z",
+      "title": "Présidentielle 2027 : Des maires dénoncent le « mélange des genres » de David Lisnard, leur président",
+      "url": "https://www.20minutes.fr/politique/4258772-20261029-presidentielle-2027-maires-denoncent-melange-genres-david-lisnard-president"
+    }
+  ],
+  "schema_version": "1.0"
+}
