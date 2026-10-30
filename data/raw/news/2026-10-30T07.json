@@ -1,0 +1,107 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T07:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-10-30T07:15:21Z",
+      "title": "EDITO. Édouard Philippe, Gabriel Attal, jusqu'où ira la chute ?",
+      "url": "https://www.franceinfo.fr/replay-radio/l-edito-politique/edito-edouard-philippe-gabriel-attal-jusqu-ou-ira-la-chute_8239483.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T06:19:11Z",
+      "title": "Soupçons de détournement de fonds publics au Havre: Édouard Philippe placé sous le statut de témoin assisté",
+      "url": "https://www.bfmtv.com/politique/horizons/soupcons-de-detournement-de-fonds-publics-au-havre-edouard-philippe-place-sous-le-statut-de-temoin-assiste_AD-202610300165.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
