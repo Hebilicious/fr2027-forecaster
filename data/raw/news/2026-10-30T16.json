@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T16:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-30T16:00:02Z",
+      "title": "Après le Brésil, la France ? Comment les « insoumis » tentent de s’inspirer du « janonisme » en ligne",
+      "url": "https://www.lemonde.fr/pixels/article/2026/10/30/apres-le-bresil-la-france-comment-les-insoumis-tentent-de-s-inspirer-du-janonisme-en-ligne_6803110_4408996.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-30T15:48:58Z",
+      "title": "Que change pour Edouard Philippe son placement sous statut de témoin assisté dans l'enquête pour détournement de fonds publics ?",
+      "url": "https://www.franceinfo.fr/politique/edouard-philippe/que-change-pour-edouard-philippe-son-placement-sous-statut-de-temoin-assiste-dans-l-enquete-pour-detournement-de-fonds-publics_8260295.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : David Lisnard tiendra son premier grand meeting de campagne à Lyon en décembre",
+      "url": "https://www.leparisien.fr/politique/presidentielle-2027-david-lisnard-tiendra-son-plus-premier-grand-meeting-de-campagne-a-lyon-en-decembre-30-10-2026-ZKBM7G454VACHAJ5TAUQTTPOEY.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "philippe",
+        "tondelier"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-30T15:59:42Z",
+      "title": "Attentat raciste dans les Yvelines : les partis de gauche présents pour l'hommage prévu à Trappes",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261030-attentat-raciste-dans-les-yvelines-les-partis-de-gauche-pr%C3%A9sents-pour-l-hommage-pr%C3%A9vu-%C3%A0-trappes"
+    }
+  ],
+  "schema_version": "1.0"
+}
