@@ -1,0 +1,189 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T11:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-30T10:28:25Z",
+      "title": "« En décembre, les Français entreront de plein fouet dans la présidentielle » : David Lisnard prévoit un grand meeting à Lyon",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/en-decembre-les-francais-entreront-de-plein-fouet-dans-la-presidentielle-david-lisnard-prevoit-un-grand-meeting-a-lyon-20261030"
+    },
+    {
+      "candidate_ids": [
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-30T11:03:53Z",
+      "title": "Interdire LFI mais pas Reconquête ? Le grand moment de malaise de la vice-présidente des jeunes LR",
+      "url": "https://www.liberation.fr/politique/interdire-lfi-mais-pas-reconquete-le-grand-moment-de-malaise-de-la-vice-presidente-des-jeunes-lr-20261030_RNF3HAUHNVHIBHNVM47GODDWGU/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-30T10:33:28Z",
+      "title": "Rassemblement contre le racisme à Trappes : les bonnes excuses d’Attal, Philippe et Retailleau pour sécher l’hommage",
+      "url": "https://www.liberation.fr/politique/rassemblement-contre-le-racisme-a-trappes-les-bonnes-excuses-dattal-philippe-et-retailleau-pour-secher-lhommage-20261030_H7GYBDAI2FEMBC2O47F4L7OLBY/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-30T10:27:20Z",
+      "title": "«S’ils ne se corrigent pas, ils dégagent» : Yannick Jadot réclame des sanctions plus dures contre le racisme sur CNews",
+      "url": "https://www.liberation.fr/politique/sils-ne-se-corrigent-pas-ils-degagent-yannick-jadot-reclame-des-sanctions-plus-dures-contre-le-racisme-sur-cnews-20261030_SSYWYNSZRRAUNNSTMSEE3DD454/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-30T10:25:24Z",
+      "title": "«On dirait les macronistes en 2017» : les cadres RN face au risque de l’arrogance",
+      "url": "https://www.liberation.fr/politique/on-dirait-les-macronistes-en-2017-les-cadres-rn-face-au-risque-de-larrogance-20261030_YEI7ID7EXNCSRJM76JSWPRWWYU/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-30T11:05:30Z",
+      "title": "Racisme dans les médias : Yannick Jadot veut durcir les sanctions",
+      "url": "https://www.franceinfo.fr/politique/racisme-dans-les-medias-yannick-jadot-veut-durcir-les-sanctions_8260331.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T11:11:38Z",
+      "title": "\"Primaire des démocrates\" voulue par Gabriel Attal: Emmanuel Macron favorable à \"l'unité des modérés\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/primaire-des-democrates-voulue-par-gabriel-attal-emmanuel-macron-favorable-a-l-unite-des-moderes_AV-202610300450.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il ne devrait plus y avoir un rond pour Macron à la sortie de l’Élysée » : François Ruffin appelle à supprimer les avantages des anciens présidents",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-ne-devrait-plus-y-avoir-un-rond-pour-macron-a-la-sortie-de-lelysee-francois-ruffin-appelle-a-supprimer-les-avantages-des-anciens-presidents-30-10-2026-UEVLENEICRH6VEETIXIEF2MSIY.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : l’Arcom adresse une mise en garde à France Culture après la diffusion d’un montage détournant des propos de Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-larcom-adresse-une-mise-en-garde-a-france-culture-apres-la-diffusion-dun-montage-detournant-des-propos-de-jean-luc-melenchon-30-10-2026-COYJ5B4E6FBDLOXVW6M7E5W64Q.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il faut voir ce que l’on voit » : soutien d’Édouard Philippe, Nathalie Loiseau assume faire le lien entre immigration et vandalisme",
+      "url": "https://www.leparisien.fr/politique/il-faut-voir-ce-que-lon-voit-soutien-dedouard-philippe-nathalie-loiseau-assume-faire-le-lien-entre-immigration-et-vandalisme-30-10-2026-O2P7GJUHPZC6JKCPKFJVUTIR24.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau",
+        "villepin"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-30T11:02:50Z",
+      "title": "Primaire au centre-droit : Attal, Philippe, de Villepin, Retailleau… qui est pour, qui est contre ?",
+      "url": "https://www.20minutes.fr/politique/4258845-20261030-primaire-centre-droit-attal-philippe-villepin-retailleau-contre"
+    }
+  ],
+  "schema_version": "1.0"
+}
