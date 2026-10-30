@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T20:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bertrand"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-10-30T19:15:00Z",
+      "title": "Présidentielle 2027 : « Il continue de penser qu’il y a un chemin », Xavier Bertrand trace sa route vers une candidature",
+      "url": "https://www.lefigaro.fr/politique/presidentielle-2027-il-continue-de-penser-qu-il-y-a-un-chemin-xavier-bertrand-trace-sa-route-vers-une-candidature-20261030"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T19:41:32Z",
+      "title": "\"Pour défendre la République, il faut défendre l'État de droit\", rétorque Éric Dupond-Moretti face à la nouvelle affiche de campagne de Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/extreme-droite/video-pour-defendre-la-republique-il-faut-defendre-l-etat-de-droit-retorque-eric-dupond-moretti-face-a-la-nouvelle-affiche-de-campagne-de-marine-le-pen_VN-202610300881.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
