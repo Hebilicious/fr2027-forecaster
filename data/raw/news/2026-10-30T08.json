@@ -1,0 +1,178 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T08:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-30T07:43:33Z",
+      "title": "Budget 2027 : \"Il faut savoir prendre des risques\", estime Michel Barnier qui plaide pour un 49.3 du Premier ministre Sébastien Lecornu",
+      "url": "https://www.franceinfo.fr/politique/budget-2027-il-faut-savoir-prendre-des-risques-estime-michel-barnier-qui-plaide-pour-un-49-3-du-premier-ministre-sebastien-lecornu_8260058.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T08:09:03Z",
+      "title": "DIRECT. Colère sociale: François Ruffin estime que la \"France d'en haut se gave\" et constate \"la convergence des pourrissements\"",
+      "url": "https://www.bfmtv.com/politique/direct-colere-sociale-une-cellule-interministerielle-de-crise-s-est-tenue-hier-avant-de-nouvelles-manifestations-jugees-a-risque-tres-eleve-ce-samedi_LN-202610300140.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T08:00:20Z",
+      "title": "François Ruffin, candidat \"Debout!\" à l'élection présidentielle, \"craint que le drame de Trappes soit à l'image de ce qu'il risque de se passer si Marine Le Pen arrivait au pouvoir\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-francois-ruffin-candidat-debout-a-l-election-presidentielle-craint-que-le-drame-de-trappes-soit-a-l-image-de-ce-qu-il-risque-de-se-passer-si-marine-le-pen-arrivait-au-pouvoir_VN-202610300295.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T07:59:03Z",
+      "title": "Bugdet 2027: François Ruffin dénonce \"un budget de provocation\" et appelle le gouvernement à revoir sa copie",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/bugdet-2027-francois-ruffin-denonce-un-budget-de-provocation-et-appelle-le-gouvernement-a-revoir-sa-copie_AV-202610300288.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T07:58:14Z",
+      "title": "Polémique Kylian Mbappé: “Ce que l'on voit là, c'est le poids du capitalisme et du nationalisme chinois”, dénonce François Ruffin, candidat “Debout!” à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-polemique-kylian-mbappe-ce-que-l-on-voit-la-c-est-le-poids-du-capitalisme-et-du-nationalisme-chinois-denonce-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202610300293.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T07:50:17Z",
+      "title": "“On a un salariat à deux vitesses”, constate François Ruffin, candidat “Debout!” à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-on-a-un-salariat-a-deux-vitesses-constate-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202610300280.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T07:47:29Z",
+      "title": "François Ruffin, candidat \"Debout!\" à l'élection présidentielle, dénonce \"un budget de provocation\" du gouvernement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-francois-ruffin-candidat-debout-a-l-election-presidentielle-denonce-un-budget-de-provocation-du-gouvernement_VN-202610300275.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T07:45:20Z",
+      "title": "Crise sociale: François Ruffin, candidat “Debout!” à l’élection présidentielle, observe \"la convergence des pourrissements\" du gouvernement",
+      "url": "https://www.bfmtv.com/politique/video-crise-sociale-francois-ruffin-candidat-debout-a-l-election-presidentielle-observe-la-convergence-des-pourrissements-du-gouvernement_VN-202610300273.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T07:39:23Z",
+      "title": "\"C'est la récession\", estime François Ruffin, candidat \"Debout!\" à l'élection présidentielle, à propos de la situation économique française",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-c-est-la-recession-estime-francois-ruffin-candidat-debout-a-l-election-presidentielle-a-propos-de-la-situation-economique-francaise_VN-202610300265.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-10-30T07:00:00Z",
+      "title": "« Je ne veux pas devenir un vieux con » : du mouvement lycéen à Raphaël Glucksmann, David Assouline, l’ancien trotskiste toujours dans les coulisses",
+      "url": "https://www.publicsenat.fr/actualites/politique/je-ne-veux-pas-devenir-un-vieux-con-du-mouvement-lyceen-a-raphael-glucksmann-david-assouline-lancien-trotskiste-toujours-dans-les-coulisses"
+    }
+  ],
+  "schema_version": "1.0"
+}
