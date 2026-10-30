@@ -1,0 +1,95 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T21:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T20:14:28Z",
+      "title": "Jean-Luc Mélenchon a eu des mots \"qui sont une expression débridée d'un antisémitisme insupportable\", dénonce Éric Dupond-Moretti",
+      "url": "https://www.bfmtv.com/politique/front-national/video-jean-luc-melenchon-a-eu-des-mots-qui-sont-une-expression-debridee-d-un-antisemitisme-insupportable-denonce-eric-dupond-moretti_VN-202610300890.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
