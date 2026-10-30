@@ -1,0 +1,107 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T19:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann",
+        "melenchon",
+        "royal"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-10-30T18:58:15Z",
+      "title": "Attentat raciste à Trappes : « Que faut-il de plus pour ouvrir les yeux ? », a lancé le maire Ali Rabeh lors du rassemblement en hommage aux victimes, pointant la responsabilité du RN",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/30/attentat-raciste-a-trappes-que-faut-il-de-plus-pour-ouvrir-les-yeux-a-lance-le-maire-ali-rabeh-lors-du-rassemblement-en-hommage-aux-victimes-pointant-la-responsabilite-du-rn_6803131_3224.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-30T18:17:06Z",
+      "title": "Livre : François Ruffin, eh oh, eh oh, le chantre du «boulot»",
+      "url": "https://www.liberation.fr/politique/elections/francois-ruffin-eh-oh-eh-oh-le-chantre-du-boulot-20261030_JLHT3SGIVFAM3JPAANIGYE7DNA/"
+    }
+  ],
+  "schema_version": "1.0"
+}
