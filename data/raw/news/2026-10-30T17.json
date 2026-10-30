@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T17:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-30T15:56:14Z",
+      "title": "Présidentielle 2027 : Libérée par la BCE, Christine Lagarde peut-elle être le messie du bloc central ?",
+      "url": "https://www.20minutes.fr/politique/4258960-20261030-presidentielle-2027-liberee-bce-christine-lagarde-peut-etre-messie-bloc-central"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-10-30T17:12:38Z",
+      "title": "Attentat raciste dans les Yvelines : rassemblement à La Verrière en hommage aux victimes",
+      "url": "https://www.france24.com/fr/france/20261030-attentat-raciste-yvelines-centaines-personnes-rassemblement-la-verri%C3%A8re-hommage-victimes-edouard-philippe"
+    }
+  ],
+  "schema_version": "1.0"
+}
