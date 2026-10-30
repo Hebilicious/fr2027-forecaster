@@ -1,0 +1,13 @@
+{
+  "detected_at": "2026-10-30T14:18:31Z",
+  "flags": [
+    {
+      "candidate_id": "asselineau",
+      "date": "2026-10-30",
+      "detail": "support 0.60 [0.53, 0.66] in the drop to 2026-10-29T00:00:00Z → 0.74 [0.67, 0.80] in the drop to 2026-10-30T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.1461
+    }
+  ],
+  "schema_version": "1.0"
+}
