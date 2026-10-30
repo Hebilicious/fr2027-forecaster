@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T18:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-30T18:00:00Z",
+      "title": "Albert Zennou : « Présidentielle 2027, le moment David Lisnard, le doute Bruno Retailleau »",
+      "url": "https://www.lefigaro.fr/vox/politique/albert-zennou-presidentielle-2027-le-moment-david-lisnard-le-doute-bruno-retailleau-20261030"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-10-30T17:30:00Z",
+      "title": "Présidentielle 2027 : qui est Alexandre Ouizille, le directeur de campagne de Raphaël Glucksmann ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-qui-est-alexandre-ouizille-le-directeur-de-campagne-de-raphael-glucksmann-20261030"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Dire haut et fort la dangerosité des programmes de Mélenchon et Le Pen » : quel rôle pour Christine Lagarde en 2027 ?",
+      "url": "https://www.leparisien.fr/politique/dire-haut-et-fort-la-dangerosite-des-programmes-de-melenchon-et-le-pen-quel-role-pour-christine-lagarde-en-2027-30-10-2026-XNHITO6DCVETZOBWKBFROQLKNA.php"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-10-30T18:11:17Z",
+      "title": "« Il ne devrait plus avoir un rond »… Ruffin s’offusque d’une « provision » de 2,3 millions pour le futur bureau de Macron",
+      "url": "https://www.20minutes.fr/politique/4259071-20261030-devrait-plus-avoir-rond-ruffin-offusque-provision-2-3-millions-futur-bureau-macron"
+    }
+  ],
+  "schema_version": "1.0"
+}
