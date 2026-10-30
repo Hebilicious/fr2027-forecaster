@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.france24.com/fr/france/rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;france24&#46;com&#47;fr&#47;france&#47;rss\" on this server.<P>\nReference&#32;&#35;18&#46;d22cc717&#46;1793355497&#46;27dc1822\n<P>https&#58;&#47;&#47;errors",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-10-30T10:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-10-30T09:46:55Z",
+      "title": "Attentat raciste de Trappes : Yannick Jadot regrette l’absence d’Edouard Philippe et de Gabriel Attal au rassemblement en hommage aux victimes prévu vendredi soir",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/30/attentat-raciste-de-trappes-yannick-jadot-regrette-l-absence-d-edouard-philippe-et-de-gabriel-attal-au-rassemblement-en-hommage-aux-victimes-prevu-vendredi-soir_6803029_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-30T09:39:38Z",
+      "title": "Quand Attal refusait toute alliance avec Retailleau… qu’il implore désormais de participer à sa primaire",
+      "url": "https://www.liberation.fr/politique/elections/quand-attal-refusait-toute-alliance-avec-retailleau-quil-implore-desormais-de-participer-a-sa-primaire-20261030_OCGMR5PD55AX5PVSLFBLFQPDRY/"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T09:34:36Z",
+      "title": "Bruno Le Maire",
+      "url": "https://www.bfmtv.com/politique/bruno-le-maire_DN-202108310642.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T09:34:35Z",
+      "title": "Primaire proposée par Gabriel Attal: Bruno Le Maire se dit favorable à tout ce qui peut \"rassembler\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/primaire-proposee-par-gabriel-attal-bruno-le-maire-se-dit-favorable-a-tout-ce-qui-peut-rassembler_AD-202610300371.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T08:23:31Z",
+      "title": "François Ruffin, candidat \"Debout!\" à l'élection présidentielle, dénonce un \"budget de provocation\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-francois-ruffin-candidat-debout-a-l-election-presidentielle-denonce-un-budget-de-provocation_VN-202610300327.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Un paradoxe » : Jean-Luc Mélenchon avoue vivre « très confortablement » grâce à la retraite par capitalisation qu’il combat",
+      "url": "https://www.leparisien.fr/elections/presidentielle/un-paradoxe-jean-luc-melenchon-avoue-vivre-tres-confortablement-grace-a-la-retraite-par-capitalisation-quil-combat-30-10-2026-J5OKNSSH5RHOPPJTIUOBG3HJQ4.php"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Bruno Le Maire « enthousiaste » à l’idée d’une éventuelle candidature de Christine Lagarde",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2026-bruno-le-maire-enthousiaste-a-lidee-dune-eventuelle-candidature-de-christine-lagarde-30-10-2026-64LVEJA5JRBPBGLZPMMCJCULRY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
