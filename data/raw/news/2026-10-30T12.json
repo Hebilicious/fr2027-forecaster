@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T12:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-30T11:56:28Z",
+      "title": "Candidat et patron des maires ? L’argument pourri de David Lisnard pour se défendre de tout conflit d’intérêts",
+      "url": "https://www.liberation.fr/politique/candidat-et-patron-des-maires-largument-pourri-de-david-lisnard-pour-se-defendre-de-tout-conflit-dinterets-20261030_CJTOYZRNRJAT5PJIACKWMZMTTQ/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-30T12:11:12Z",
+      "title": "Présidentielle 2027 : jusqu'où ira la chute de Gabriel Attal et Édouard Philippe ?",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-jusqu-ou-ira-la-chute-de-gabriel-attal-et-edouard-philippe_8260412.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-10-30T12:03:48Z",
+      "title": "Marine Le Pen est-elle vraiment inéligible à l'élection présidentielle, comme l'affirme un magistrat honoraire de la Cour de cassation ?",
+      "url": "https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-est-elle-vraiment-ineligible-a-l-election-presidentielle-comme-l-affirme-un-magistrat-honoraire-de-la-cour-de-cassation_8257378.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Marine Le Pen considère que je suis l’homme des députés » : Sébastien Chenu promu chef du groupe RN, mais exclu du bureau exécutif",
+      "url": "https://www.leparisien.fr/politique/marine-le-pen-considere-que-je-suis-lhomme-des-deputes-sebastien-chenu-promu-chef-du-groupe-rn-mais-exclu-du-bureau-executif-30-10-2026-UXYS2R57FVBELES4262TPEHJEI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
