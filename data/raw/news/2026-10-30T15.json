@@ -1,0 +1,106 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-10-30T15:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-10-30T15:08:19Z",
+      "title": "François Ruffin : «Je suis là pour mettre mes sujets dans les pattes des grands candidats»",
+      "url": "https://www.liberation.fr/politique/francois-ruffin-je-suis-la-pour-mettre-mes-sujets-dans-les-pattes-des-grands-candidats-20261030_YLWIIPDHYRAXHGLTPLD3A4VIDE/"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-10-30T14:57:25Z",
+      "title": "Neuf collaborateurs et des \"beaux appartements à 2,3 millions d’euros\"? Ce à quoi Emmanuel Macron va avoir droit à son départ de l'Élysée, alors que François Ruffin parle d'un \"scandale\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/neuf-collaborateurs-et-des-beaux-appartements-a-2-3-millions-d-euros-ce-a-quoi-emmanuel-macron-va-avoir-droit-a-son-depart-de-l-elysee-alors-que-francois-ruffin-parle-d-un-scandale_AV-202610300631.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
