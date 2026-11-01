@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-01T12:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T12:13:26Z",
+      "title": "Présidentielle: \"David Lisnard est le candidat de l'automne\", pointe Jean-François Copé, maire LR de Meaux",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-david-lisnard-est-le-candidat-de-l-automne-pointe-jean-francois-cope-maire-lr-de-meaux_VN-202611010254.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T12:11:48Z",
+      "title": "Candidature d'Edouard Philippe: \"Il est au dessus de tous les autres\" à droite, estime Jean-François Copé, maire LR de Meaux",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-d-edouard-philippe-il-est-au-dessus-de-tous-les-autres-a-droite-estime-jean-francois-cope-maire-lr-de-meaux_VN-202611010252.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T12:04:29Z",
+      "title": "\"Personne n'est d'accord\": Jean-François Copé estime qu'il \"n'y aura pas de primaire\" de la droite et du centre en vue de la présidentielle 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/personne-n-est-d-accord-jean-francois-cope-estime-qu-il-n-y-aura-pas-de-primaire-de-la-droite-et-du-centre-en-vue-de-la-presidentielle-2027_AV-202611010247.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T11:54:57Z",
+      "title": "Propos d'Édouard Philippe sur une supposée \"surréprésentation des jeunes issus de l'immigration\" le 17 octobre: \"on le sait, on le voit\", répond Jean-François Copé, maire LR de Meaux",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-propos-d-edouard-philippe-sur-une-supposee-surrepresentation-des-jeunes-issus-de-l-immigration-le-17-octobre-on-le-sait-on-le-voit-repond-jean-francois-cope-maire-lr-de-meaux_VN-202611010243.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T11:29:23Z",
+      "title": "Présidentielle: Jean-François Copé, maire LR de Meaux, évoque \"une stratégie assumée de radicalisation\" de Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-jean-francois-cope-maire-lr-de-meaux-evoque-une-strategie-assumee-de-radicalisation-de-jean-luc-melenchon_VN-202611010231.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
