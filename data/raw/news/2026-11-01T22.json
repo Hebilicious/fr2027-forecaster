@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-01T22:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T22:15:24Z",
+      "title": "31 octobre: \"Je me félicite du bilan\" de cette journée, \"c'est une réussite de ce mouvement social\", estime Marine Tondelier, candidate \"EELV\" à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/europe-ecologie-les-verts/video-31-octobre-je-me-felicite-du-bilan-de-cette-journee-c-est-une-reussite-de-ce-mouvement-social-estime-marine-tondelier-candidate-eelv-a-l-election-presidentielle_VN-202611010435.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T20:58:53Z",
+      "title": "Présidentielle 2027: Édouard Philippe refuse de participer à une primaire de la droite et du centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-edouard-philippe-refuse-de-participer-a-une-primaire-de-la-droite-et-du-centre_AD-202611010415.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T20:13:35Z",
+      "title": "Karim Bouamrane, maire PS de Saint-Ouen, face à Robert Ménard, maire DVD de Béziers",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-karim-bouamrane-maire-ps-de-saint-ouen-face-a-robert-menard-maire-dvd-de-beziers_VN-202611010407.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Fâché contre TF1 après l’interview d’Édouard Philippe, Jean-Luc Mélenchon annule un passage au 20 Heures de la chaîne",
+      "url": "https://www.leparisien.fr/elections/presidentielle/fache-contre-tf1-apres-linterview-dedouard-philippe-jean-luc-melenchon-annule-un-passage-au-20-heures-de-la-chaine-demain-01-11-2026-Y3UJFZ5Y5ZF7BF7QUPRKEB7PFU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
