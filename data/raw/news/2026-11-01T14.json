@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-01T14:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-01T14:00:08Z",
+      "title": "Présidentielle 2027 : Rémy Goubert, fondateur des Jeunes avec Hollande, veut se « tenir prêt » à un retour",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/01/presidentielle-2027-remy-goubert-fondateur-des-jeunes-avec-hollande-veut-se-tenir-pret-a-un-retour_6804375_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-01T13:45:00Z",
+      "title": "Présidentielle 2027 : Marion Maréchal, un électron libre dans la campagne de Marine Le Pen",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-marion-marechal-un-electron-libre-dans-la-campagne-de-marine-le-pen-20261101"
+    }
+  ],
+  "schema_version": "1.0"
+}
