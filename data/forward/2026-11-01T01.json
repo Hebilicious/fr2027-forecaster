@@ -1,0 +1,20 @@
+{
+  "detected_at": "2026-11-01T01:18:12Z",
+  "flags": [
+    {
+      "candidate_id": "faure",
+      "date": "2026-11-01",
+      "detail": "support 0.04 [0.01, 0.21] in the drop to 2026-10-31T00:00:00Z → 0.41 [0.22, 0.64] in the drop to 2026-11-01T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.3683
+    },
+    {
+      "candidate_id": "retailleau",
+      "date": "2026-11-01",
+      "detail": "support 0.06 [0.03, 0.10] in the drop to 2026-10-31T00:00:00Z → 0.19 [0.14, 0.25] in the drop to 2026-11-01T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.134
+    }
+  ],
+  "schema_version": "1.0"
+}
