@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-01T19:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-01T18:33:30Z",
+      "title": "« Une combinaison complètement improbable » : pourquoi des électeurs d’Emmanuel Macron en 2022 s’apprêtent à voter Marine Le Pen",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/une-combinaison-completement-improbable-pourquoi-des-electeurs-d-emmanuel-macron-en-2022-s-appretent-a-voter-marine-le-pen-20261101"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T18:49:24Z",
+      "title": "\"Ma démarche est indépendante\": David Lisnard se défend de vouloir gouverner avec le RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/ma-demarche-est-independante-david-lisnard-se-defend-de-vouloir-gouverner-avec-le-rn_AD-202611010383.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-01T14:02:50Z",
+      "title": "« En grande partie des femmes »… Natacha Polony revendique 174 parrainages de maires pour la présidentielle 2027",
+      "url": "https://www.20minutes.fr/politique/4259330-20261101-grande-partie-femmes-natacha-polony-revendique-174-parrainages-maires-presidentielle-2027"
+    }
+  ],
+  "schema_version": "1.0"
+}
