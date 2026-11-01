@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-01T17:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T17:02:17Z",
+      "title": "Crise sociale: \"C'est la conséquence de dix années de macronisme\", critique Pierre-Henri Dumont, secrétaire général adjoint des Républicains, soutien de Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-crise-sociale-c-est-la-consequence-de-dix-annees-de-macronisme-critique-pierre-henri-dumont-secretaire-general-adjoint-des-republicains-soutien-de-bruno-retailleau_VN-202611010347.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T15:38:19Z",
+      "title": "Présidentielle 2027: Natacha Polony revendique 174 parrainages de maires et le soutien de Jean-Pierre Chevènement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-natacha-polony-revendique-174-parrainages-de-maires-et-le-soutien-de-jean-pierre-chevenement_AD-202611010312.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-01T15:33:29Z",
+      "title": "Colère lycéenne: \"Le gouvernement a beaucoup écouté les jeunes de gauche et d'extrême gauche\", estime Jennyfer Haas, vice-présidente des jeunes Républicains, soutien de Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-colere-lyceenne-le-gouvernement-a-beaucoup-ecoute-les-jeunes-de-gauche-et-d-extreme-gauche-estime-jennyfer-haas-vice-presidente-des-jeunes-republicains-soutien-de-bruno-retailleau_VN-202611010309.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
