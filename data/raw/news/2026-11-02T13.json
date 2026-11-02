@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-02T13:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-02T13:00:09Z",
+      "title": "Pourquoi la modification de la Constitution, exigée par le RN pour appliquer son programme, est très compliquée",
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/11/02/pourquoi-la-modification-de-la-constitution-exigee-par-le-rn-pour-appliquer-son-programme-est-tres-compliquee_6805252_4355770.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Raphaël Glucksmann plaide pour l’inéligibilité des candidats condamnés pour racisme ou antisémitisme",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-raphael-glucksmann-plaide-pour-lineligibilite-des-candidats-condamnes-pour-racisme-ou-antisemitisme-02-11-2026-ECQLGK7PVFF7LBGKG3MAYV25CA.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-02T12:27:02Z",
+      "title": "Pologne : Marine Le Pen dénonce « une prise de contrôle forcée » du tribunal constitutionnel, Raphaël Glucksmann riposte",
+      "url": "https://www.20minutes.fr/politique/4259691-20261102-pologne-marine-pen-denonce-prise-controle-forcee-tribunal-constitutionnel-raphael-glucksmann-riposte"
+    }
+  ],
+  "schema_version": "1.0"
+}
