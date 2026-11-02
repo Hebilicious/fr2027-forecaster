@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-02T09:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-02T08:51:34Z",
+      "title": "Jean-Luc Mélenchon annule son passage au «20 heures» de TF1, la chaîne assure que l’interview «n’était déjà plus d’actualité»",
+      "url": "https://www.liberation.fr/politique/jean-luc-melenchon-annule-son-passage-au-20-heures-de-tf1-la-chaine-assure-que-linterview-netait-deja-plus-dactualite-20261102_PM3K4MOEUREPFODWLIJQ4KATEE/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T09:08:56Z",
+      "title": "Grève du 5 novembre: \"Je serai dans la rue\", assure Raphaël Glucksmann, candidat PS-Place publique",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-greve-du-5-novembre-je-serai-dans-la-rue-assure-raphael-glucksmann-candidat-ps-place-publique_VN-202611020387.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T09:06:16Z",
+      "title": "Colère lycéenne: Raphaël Glucksmann, candidat PS-Place publique à l'élection présidentielle, accuse le gouvernement d'avoir \"tenté le pourrissement\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-colere-lyceenne-raphael-glucksmann-candidat-ps-place-publique-a-l-election-presidentielle-accuse-le-gouvernement-d-avoir-tente-le-pourrissement_VN-202611020378.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T08:51:49Z",
+      "title": "Présidentielle: malgré le refus d'Édouard Philippe, Gabriel Attal pense la primaire \"inéluctable\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-malgre-le-refus-d-edouard-philippe-gabriel-attal-pense-la-primaire-ineluctable_AD-202611020365.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T08:36:30Z",
+      "title": "Crise politique en Pologne: Raphaël Glucksmann appelle à soutenir le Premier ministre Donald Tusk",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-crise-politique-en-pologne-raphael-glucksmann-appelle-a-soutenir-le-premier-ministre-donald-tusk_VN-202611020354.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T08:33:20Z",
+      "title": "\"Je pense que ce serait intelligent\": Raphaël Glucksmann, candidat PS-Place publique, se dit favorable au report de la date du second tour de l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-pense-que-ce-serait-intelligent-raphael-glucksmann-candidat-ps-place-publique-se-dit-favorable-au-report-de-la-date-du-second-tour-de-l-election-presidentielle_VN-202611020349.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T08:24:35Z",
+      "title": "\"Il n'y avait que des dirigeants de gauche\": Raphaël Glucksmann déplore qu'il n'y ait pas eu \"de moment d'unité nationale\" lors de l'hommage aux victimes de l'attentat à Trappes",
+      "url": "https://www.bfmtv.com/politique/il-n-y-avait-que-des-dirigeants-de-gauche-raphael-glucksmann-deplore-qu-il-n-y-ait-pas-eu-de-moment-d-unite-nationale-lors-de-l-hommage-aux-victimes-de-l-attentat-a-trappes_AV-202611020342.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
