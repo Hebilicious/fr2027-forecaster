@@ -1,0 +1,27 @@
+{
+  "detected_at": "2026-11-02T06:18:43Z",
+  "flags": [
+    {
+      "candidate_id": "roussel",
+      "date": "2026-11-01",
+      "detail": "page views 15.7× their baseline, articles 0.8× their baseline",
+      "kind": "spike",
+      "score": 1.2855
+    },
+    {
+      "candidate_id": "philippe",
+      "date": "2026-11-01",
+      "detail": "page views 2.7× their baseline, articles 3.9× their baseline",
+      "kind": "spike",
+      "score": 1.1756
+    },
+    {
+      "candidate_id": "polony",
+      "date": "2026-11-01",
+      "detail": "page views 3.2× their baseline, articles 3.4× their baseline",
+      "kind": "spike",
+      "score": 1.1914
+    }
+  ],
+  "schema_version": "1.0"
+}
