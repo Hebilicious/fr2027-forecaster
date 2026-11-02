@@ -1,0 +1,142 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-02T20:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-02T19:33:53Z",
+      "title": "Présidentielle : entre Edouard Philippe et Raphaël Glucksmann, une bataille pour l’issue de recours",
+      "url": "https://www.liberation.fr/politique/presidentielle-entre-edouard-philippe-et-raphael-glucksmann-une-bataille-pour-lissue-de-recours-20261102_KXIDYDJLLNAKRNBZI3WXNREVK4/"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T20:12:30Z",
+      "title": "Prix du carburant: \"Ce que je souhaiterais, c'est mettre les ministres au Smic\", affirme François Ruffin, candidat Debout ! à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-prix-du-carburant-ce-que-je-souhaiterais-c-est-mettre-les-ministres-au-smic-affirme-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202611020910.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T20:10:03Z",
+      "title": "Burn-out: \"Je suis pour le broyeur-payeur\", annonce François Ruffin, candidat Debout ! à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-burn-out-je-suis-pour-le-broyeur-payeur-annonce-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202611020907.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T20:00:12Z",
+      "title": "Pouvoir d'achat: François Ruffin, candidat Debout ! à l'élection présidentielle, critique \"les vieilles recettes\" d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/video-pouvoir-d-achat-francois-ruffin-candidat-debout-a-l-election-presidentielle-critique-les-vieilles-recettes-d-edouard-philippe_VN-202611020900.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T19:57:33Z",
+      "title": "Dette de la France: \"La balle est dans le camp du Medef\", assure François Ruffin, candidat Debout ! à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-dette-de-la-france-la-balle-est-dans-le-camp-du-medef-assure-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202611020898.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T19:53:25Z",
+      "title": "\"Si on était dans un pays où ça allait mal pour tout le monde, on comprendrait qu'il faut se serrer la ceinture\", estime François Ruffin, candidat Debout ! à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-si-on-etait-dans-un-pays-ou-ca-allait-mal-pour-tout-le-monde-on-comprendrait-qu-il-faut-se-serrer-la-ceinture-estime-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202611020895.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
