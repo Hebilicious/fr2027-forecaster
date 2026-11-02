@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-02T11:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-02T10:58:09Z",
+      "title": "Le secrétaire général de l’association de financement de Glucksmann s’était allié avec LFI aux dernières municipales",
+      "url": "https://www.liberation.fr/politique/le-secretaire-general-de-lassociation-de-financement-de-glucksmann-setait-allie-avec-lfi-aux-dernieres-municipales-20261102_QWFQVHAJC5DFHMHV7ATEKOAHIA/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "bardella",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-02T10:23:45Z",
+      "title": "Au JT de TF1, Attal arrive à faire pire que Philippe, Mélenchon ou Bardella mais mieux que Knafo",
+      "url": "https://www.liberation.fr/politique/au-jt-de-tf1-attal-arrive-a-faire-pire-que-philippe-melenchon-ou-bardella-mais-mieux-que-knafo-20261102_NVMRWVDM7NFAVBAM545KEOQLN4/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-02T10:23:45Z",
+      "title": "Sondages, macronisme : les petits arrangements d’Edouard Philippe avec ses paroles et ses actes",
+      "url": "https://www.liberation.fr/politique/sondages-macronisme-les-petits-arrangements-dedouard-philippe-avec-ses-paroles-et-ses-actes-20261102_ISE7MSF6OVGYFJPSVAM54F676Y/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : TF 1 défend le « professionnalisme » d’Anne-Claire Coudray face aux critiques de Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-tf-1-defend-le-professionnalisme-danne-claire-coudray-face-aux-critiques-de-jean-luc-melenchon-02-11-2026-AZAP3HF6OJDIHAP35SULUQARDY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
