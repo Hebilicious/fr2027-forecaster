@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-02T19:18:30Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-02T18:24:25Z",
+      "title": "Au sein du service d’ordre du Rassemblement national, les méthodes du groupe de choc de « Kaiser »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/02/au-sein-du-service-d-ordre-du-rassemblement-national-les-methodes-du-groupe-de-choc-de-kaiser_6805308_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-02T18:43:01Z",
+      "title": "Pour Gérald Darmanin, Jean-Luc Mélenchon et Marine Le Pen \"tueront l'Europe telle qu'elle existe\" en cas de victoire à la présidentielle",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/pour-gerald-darmanin-jean-luc-melenchon-et-marine-le-pen-tueront-l-europe-telle-qu-elle-existe-en-cas-de-victoire-a-la-presidentielle_8264663.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« J’ai eu recours à un examen interdit en France » : l’écologiste Marine Tondelier se confie sur son parcours de PMA infructueux",
+      "url": "https://www.leparisien.fr/politique/jai-eu-recours-a-un-examen-interdit-en-france-lecologiste-marine-tondelier-se-confie-sur-son-parcours-de-pma-infructueux-02-11-2026-QV7DKLKRTRA2PHI5YNGYZWXVAU.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-02T18:20:34Z",
+      "title": "« Le congrès des maires de France ne peut pas devenir un temps de la présidentielle » : avec David Lisnard contesté, il se passe quelque chose… à l’AMF",
+      "url": "https://www.publicsenat.fr/actualites/politique/le-congres-des-maires-de-france-ne-peut-pas-devenir-un-temps-de-la-presidentielle-avec-david-lisnard-conteste-il-se-passe-quelque-chose-a-lamf"
+    }
+  ],
+  "schema_version": "1.0"
+}
