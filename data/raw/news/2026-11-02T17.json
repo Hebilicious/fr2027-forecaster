@@ -1,0 +1,133 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-02T17:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-02T16:33:59Z",
+      "title": "Gérald Darmanin, soutien d’Edouard Philippe, estime que les propositions de Jean-Luc Mélenchon et de Marine Le Pen « tueront l’Europe telle qu’elle existe »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/02/gerald-darmanin-soutien-d-edouard-philippe-estime-que-les-propositions-de-jean-luc-melenchon-et-de-marine-le-pen-tueront-l-europe-telle-qu-elle-existe_6805290_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T16:53:28Z",
+      "title": "\"Quand on lutte contre le racisme ou l'antisémitisme, ce n'est pas pour sortir un joker\": passe d'armes tendue entre Dominique Sopo (SOS Racisme) et Pierre-Henri Dumont (LR)",
+      "url": "https://www.bfmtv.com/politique/video-quand-on-lutte-contre-le-racisme-ou-l-antisemitisme-ce-n-est-pas-pour-sortir-un-joker-passe-d-armes-tendue-entre-dominique-sopo-sos-racisme-et-pierre-henri-dumont-lr_VN-202611020738.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ce serait intelligent » : Raphaël Glucksmann favorable au décalage des dates de l’élection présidentielle",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ce-serait-intelligent-raphael-glucksmann-favorable-au-decalage-des-dates-de-lelection-presidentielle-02-11-2026-3GPTYT3QGFBCJN3CR5IW2DACYU.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Marine Le Pen considérée comme la plus à même de défendre la souveraineté culturelle française, selon un sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-marine-le-pen-consideree-comme-la-plus-a-meme-de-defendre-la-souverainete-culturelle-francaise-selon-un-sondage-02-11-2026-WFC3M6QL3NGMJOIIRT5K6DUWGE.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-02T17:03:15Z",
+      "title": "Présidentielle 2027 : le débat sur l’inéligibilité de Marine Le Pen relancé",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-le-debat-sur-lineligibilite-de-marine-le-pen-relance"
+    }
+  ],
+  "schema_version": "1.0"
+}
