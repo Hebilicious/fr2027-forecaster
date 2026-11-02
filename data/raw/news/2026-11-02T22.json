@@ -1,0 +1,162 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-02T22:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe",
+        "villepin"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-02T21:16:50Z",
+      "title": "«Voir ce que l’on voit» : les propos d’Edouard Philippe associant les pillages et l’immigration dénoncés, de la gauche à Villepin",
+      "url": "https://www.liberation.fr/politique/voir-ce-que-lon-voit-les-propos-dedouard-philippe-associant-les-pillages-et-limmigration-denonces-de-la-gauche-a-villepin-20261102_LYR5X4MYURDRHNQCWWZELHWRUY/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-02T21:45:03Z",
+      "title": "Y aura-t-il une primaire du centre et de la droite ? Les électeurs du camp macroniste déboussolés",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/y-aura-t-il-une-primaire-du-centre-et-de-la-droite-les-electeurs-du-camp-macroniste-deboussoles_8264828.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-02T21:40:46Z",
+      "title": "Le camp d'Edouard Philippe critiqué par la gauche pour ses propos sur l'immigration",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/le-camp-d-edouard-philippe-critique-par-la-gauche-pour-ses-propos-sur-l-immigration_8264831.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T21:08:31Z",
+      "title": "Gouvernement: \"Je souhaite qu'il n'y ait plus de privilèges\", déclare François Ruffin (Debout!)",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-gouvernement-je-souhaite-qu-il-n-y-ait-plus-de-privileges-declare-francois-ruffin-debout_VN-202611020959.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T21:07:20Z",
+      "title": "Burn-out: \"Je suis pour le broyeur-payeur\", propose François Ruffin, candidat Debout ! à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-burn-out-je-suis-pour-le-broyeur-payeur-propose-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202611020958.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T20:33:00Z",
+      "title": "Mouvement lycéen: \"Ce qu'ils ont fait, c'est bon pour le pays tout entier\", assure François Ruffin, candidat Debout ! à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-mouvement-lyceen-ce-qu-ils-ont-fait-c-est-bon-pour-le-pays-tout-entier-assure-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202611020933.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T20:17:53Z",
+      "title": "\"Aujourd'hui on a une panne du travail (...) qui produit des difficultés supplémentaires d'intégration\", souligne François Ruffin, candidat Debout ! à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-aujourd-hui-on-a-une-panne-du-travail-qui-produit-des-difficultes-supplementaires-d-integration-souligne-francois-ruffin-candidat-debout-a-l-election-presidentielle_VN-202611020919.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-02T21:39:51Z",
+      "title": "Présidentielle 2027 : Après ses propos sur l’immigration, la gauche accuse Philippe de flirter avec l’extrême droite",
+      "url": "https://www.20minutes.fr/politique/4259847-20261102-presidentielle-2027-apres-propos-immigration-gauche-accuse-philippe-flirter-extreme-droite"
+    }
+  ],
+  "schema_version": "1.0"
+}
