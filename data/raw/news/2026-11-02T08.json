@@ -1,0 +1,215 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-02T08:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-02T07:52:39Z",
+      "title": "\"C'est sa stratégie depuis le début\" : pourquoi Edouard Philippe refuse-t-il de participer à une primaire ?",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/c-est-sa-strategie-depuis-le-debut-pourquoi-edouard-philippe-refuse-t-il-de-participer-a-une-primaire_8263550.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-02T07:34:12Z",
+      "title": "Jean-Luc Mélenchon annonce annuler un passage au \"20 heures\" de TF1 à la suite d'une interview d'Edouard Philippe",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/jean-luc-melenchon-annonce-annuler-un-passage-au-20-heures-de-tf1-a-la-suite-d-une-interview-d-edouard-philippe_8263556.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T08:15:55Z",
+      "title": "DIRECT. Crise des lycées: Raphaël Glucksmann juge les demandes \"parfaitement légitimes\" et la réponse du gouvernement \"trop tard et trop floue\"",
+      "url": "https://www.bfmtv.com/politique/direct-rentree-sous-tension-et-crainte-de-nouveaux-blocages-apres-les-vacances-de-la-toussaint-les-organisations-lyceennes-et-etudiantes-appellent-a-poursuivre-le-mouvement_LN-202611020127.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T08:02:00Z",
+      "title": "Primaire des \"démocrates\" proposée par Gabriel Attal: \"C'est la primaire de ceux qui assument le bilan du macronisme, ce n'est pas mon histoire\", lance Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-des-democrates-proposee-par-gabriel-attal-c-est-la-primaire-de-ceux-qui-assument-le-bilan-du-macronisme-ce-n-est-pas-mon-histoire-lance-raphael-glucksmann_VN-202611020324.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T08:00:11Z",
+      "title": "Raphaël Glucksmann veut que les personnes \"condamnées pour injure raciale ou incitation à la haine raciale ou antisémitisme ne puissent plus être élues\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-raphael-glucksmann-veut-que-les-personnes-condamnees-pour-injure-raciale-ou-incitation-a-la-haine-raciale-ou-antisemitisme-ne-puissent-plus-etre-elues_VN-202611020319.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T07:58:21Z",
+      "title": "Hommage aux victimes de l'attentat de Trappes: Raphaël Glucksmann, candidat PS-Place publique à l'élection présidentielle, regrette qu'il n'y ait pas eu \"de moment d'unité nationale\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-hommage-aux-victimes-de-l-attentat-de-trappes-raphael-glucksmann-candidat-ps-place-publique-a-l-election-presidentielle-regrette-qu-il-n-y-ait-pas-eu-de-moment-d-unite-nationale_VN-202611020318.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T07:56:10Z",
+      "title": "\"Je pense que la France est menacée de dislocation\", lance Raphaël Glucksmann, candidat PS-Place publique à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-pense-que-la-france-est-menacee-de-dislocation-lance-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle_VN-202611020316.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T07:53:16Z",
+      "title": "Raphaël Glucksmann, candidat PS-Place publique à la présidentielle, accuse les militants insoumis d'\"installer une atmopshère détestable\" via \"leur propagande haineuse\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle-accuse-les-militants-insoumis-d-installer-une-atmopshere-detestable-via-leur-propagande-haineuse_VN-202611020311.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T07:50:32Z",
+      "title": "Grève générale du 5 novembre: \"Je soutiens et je serai dans la rue\", déclare Raphaël Glucksmann, candidat PS-Place publique à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-greve-generale-du-5-novembre-je-soutiens-et-je-serai-dans-la-rue-declare-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle_VN-202611020306.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T07:48:14Z",
+      "title": "Baisse du prix du gazole: \"C'est un pas positif, mais ce n'est pas suffisant\", affirme Raphaël Glucksmann, candidat PS-Place publique à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-baisse-du-prix-du-gazole-c-est-un-pas-positif-mais-ce-n-est-pas-suffisant-affirme-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle_VN-202611020302.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T07:45:40Z",
+      "title": "Colère lycéenne: \"En France, on a sacrifié la voie et la formation professionnelles\", estime Raphaël Glucksmann, candidat PS - Place publique à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-colere-lyceenne-en-france-on-a-sacrifie-la-voie-et-la-formation-professionnelles-estime-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle_VN-202611020297.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T07:42:52Z",
+      "title": "Colère lycéenne: \"Le gouvernement a tenté, pendant plus d'un mois et demi, le pourrissement\", assure Raphaël Glucksmann, candidat PS-Place publique à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-colere-lyceenne-le-gouvernement-a-tente-pendant-plus-d-un-mois-et-demi-le-pourrissement-assure-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle_VN-202611020289.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-02T07:40:18Z",
+      "title": "\"Vous avez obtenu beaucoup\": Raphaël Glucksmann, candidat PS-Place publique à la présidentielle, appelle les lycéens à \"faire attention\" à obtenir les avancées promises par le gouvernement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-vous-avez-obtenu-beaucoup-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle-appelle-les-lyceens-a-faire-attention-a-obtenir-les-avancees-promises-par-le-gouvernement_VN-202611020283.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-02T08:17:52Z",
+      "title": "Manifestation du 5 novembre: Raphaël Glucksmann affirme qu'il sera \"dans la rue\" ce jeudi malgré les \"campagnes de harcèlement\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/manifestation-du-5-novembre-raphael-glucksmann-affirme-qu-il-sera-dans-la-rue-ce-jeudi-malgre-les-campagnes-de-harcelement_AV-202611020336.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
