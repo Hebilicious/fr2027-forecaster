@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-03T12:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-03T11:50:41Z",
+      "title": "L'édito. Pourquoi Marine Le Pen se mêle-t-elle de la crise politique en Pologne ?",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/l-edito-pourquoi-marine-le-pen-se-mele-t-elle-de-la-crise-politique-en-pologne_8265788.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-03T12:09:46Z",
+      "title": "\"L'Histoire peut bégayer\" : Fabien Roussel fait un parralèle entre la situation actuelle en France et les années 1930",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-histoire-peut-begayer-fabien-roussel-fait-un-parralele-entre-la-situation-actuelle-en-france-et-les-annees-1930_VN-202611030553.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Procréation médicalement assistée : c’est quoi le DPI-A, cet « examen interdit en France » réalisé par Marine Tondelier",
+      "url": "https://www.leparisien.fr/sciences/procreation-medicalement-assistee-cest-quoi-le-dpi-a-cet-examen-interdit-en-france-realise-par-marine-tondelier-03-11-2026-4HFVJNG7VRFNBMECA3LKOTSK3U.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-03T11:43:01Z",
+      "title": "Présidentielle 2027 : Michel Houellebecq ne croit pas que « Marine Le Pen ait hérité des obsessions de son père »",
+      "url": "https://www.20minutes.fr/politique/4259961-20261103-presidentielle-2027-michel-houellebecq-croit-marine-pen-herite-obsessions-pere"
+    }
+  ],
+  "schema_version": "1.0"
+}
