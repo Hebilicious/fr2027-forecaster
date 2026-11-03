@@ -1,0 +1,13 @@
+{
+  "detected_at": "2026-11-03T01:18:28Z",
+  "flags": [
+    {
+      "candidate_id": "philippe",
+      "date": "2026-11-03",
+      "detail": "support 0.04 [0.02, 0.07] in the drop to 2026-11-02T00:00:00Z → 0.12 [0.08, 0.17] in the drop to 2026-11-03T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.081
+    }
+  ],
+  "schema_version": "1.0"
+}
