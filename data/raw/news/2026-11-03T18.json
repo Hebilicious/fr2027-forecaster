@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-03T18:18:39Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-03T17:15:45Z",
+      "title": "Raphaël Glucksmann a trouvé son QG pour la campagne présidentielle",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/raphael-glucksmann-a-trouve-son-qg-pour-la-campagne-presidentielle-20261103"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-03T17:15:00Z",
+      "title": "Présidentielle 2027 : la progression de David Lisnard peut-elle inquiéter les libéraux du RN et de l’UDR ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-la-progression-de-david-lisnard-peut-elle-inquieter-les-liberaux-du-rn-et-de-l-udr-20261103"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-03T17:31:23Z",
+      "title": "«Ce n’est pas inédit mais c’est relativement rare» : l’Arcom saisit la justice pour des propos racistes de Zemmour sur LCI, BFM et CNews",
+      "url": "https://www.liberation.fr/politique/ce-nest-pas-inedit-mais-cest-relativement-rare-larcom-saisit-la-justice-pour-des-propos-racistes-de-zemmour-sur-lci-bfm-et-cnews-20261103_5R3KZYBBAFDAFFP2QYZVEVMUNM/"
+    },
+    {
+      "candidate_ids": [
+        "guedj"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-03T18:04:35Z",
+      "title": "Mobilisation des lycéens: \"Toutes les revendications portées par ce mouvement sont légitimes\", affirme Jérôme Guedj, député Parti socialiste",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-mobilisation-des-lyceens-toutes-les-revendications-portees-par-ce-mouvement-sont-legitimes-affirme-jerome-guedj-depute-parti-socialiste_VN-202611030817.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-03T17:22:14Z",
+      "title": "Election présidentielle : pourquoi les dates choisies font débat ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/election-presidentielle-pourquoi-les-dates-choisies-font-debat"
+    }
+  ],
+  "schema_version": "1.0"
+}
