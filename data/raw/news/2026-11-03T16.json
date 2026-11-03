@@ -1,0 +1,135 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-03T16:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-03T15:48:21Z",
+      "title": "Présidentielle : Darmanin, Lisnard, Attal, Philippe, Bayrou, Retailleau… Qui dit quoi sur la primaire ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-darmanin-lisnard-attal-philippe-bayrou-retailleau-qui-dit-quoi-sur-la-primaire-20261103"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : cette Europe que veulent Marine Le Pen et Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-cette-europe-que-veulent-marine-le-pen-et-jean-luc-melenchon-03-11-2026-UAUUVFBUDBFQPEMZOESVUYLZXA.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il est de droite, c’est un agent de la CIA » : critiqué à gauche, Raphaël Glucksmann ironise sur ce que « disent les gens sur Twitter »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-est-de-droite-cest-un-agent-de-la-cia-critique-a-gauche-raphael-glucksmann-ironise-sur-ce-que-disent-les-gens-sur-twitter-03-11-2026-VZF3KHCZNJHNZCPHSQJRXZO3AY.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-03T16:08:58Z",
+      "title": "« Je n’ai jamais signé chez Edouard Philippe » : le sénateur Pierre-Jean Rochette quitte le groupe Les Indépendants, à majorité Horizons",
+      "url": "https://www.publicsenat.fr/actualites/politique/je-nai-jamais-signe-chez-edouard-philippe-le-senateur-pierre-jean-rochette-quitte-le-groupe-les-independants-a-majorite-horizons"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-03T15:38:53Z",
+      "title": "Présidentielle en France : y aura-t-il une primaire de la droite ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261103-pr%C3%A9sidentielle-en-france-y-aura-t-il-une-primaire-de-la-droite"
+    }
+  ],
+  "schema_version": "1.0"
+}
