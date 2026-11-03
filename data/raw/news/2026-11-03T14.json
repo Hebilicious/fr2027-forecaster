@@ -1,0 +1,143 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-03T14:18:29Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "royal",
+        "tondelier"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-03T14:00:12Z",
+      "title": "Etre une femme politique et devenir mère, le piège de l’injonction contradictoire",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/03/etre-une-femme-politique-et-devenir-mere-le-piege-de-l-injonction-contradictoire_6805594_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-03T13:56:48Z",
+      "title": "Comment s’explique la progression de Marine Le Pen dans les sondages, notamment au second tour ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/comment-s-explique-la-progression-de-marine-le-pen-dans-les-sondages-notamment-au-second-tour-20261103"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-03T13:47:47Z",
+      "title": "Présidentielle 2027 : qui bénéficierait d’un retrait de Gabriel Attal de la course à l’Élysée ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-qui-beneficierait-d-un-retrait-de-gabriel-attal-de-la-course-a-l-elysee-20261103"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-03T13:37:04Z",
+      "title": "«Montée de la haine et du racisme», menaces contre LFI et la CGT : Fabien Roussel fait le parallèle avec «les années 30»",
+      "url": "https://www.liberation.fr/politique/elections/montee-de-la-haine-et-du-racisme-mise-a-lindex-de-lfi-et-de-la-cgt-fabien-roussel-fait-le-parallele-avec-les-annees-30-20261103_TWCEAF5FLFDFZLBFJHWNLEYOHU/"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Hordes de barbares », « racailles arabo-musulmanes », « remigration »… l’Arcom saisit la justice après les propos d’Éric Zemmour",
+      "url": "https://www.leparisien.fr/culture-loisirs/tv/hordes-de-barbares-racailles-arabo-musulmanes-remigration-larcom-saisit-la-justice-apres-les-propos-deric-zemmour-03-11-2026-MQA2I5RIOJC4NF2DK5D7A6EO2E.php"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-03T13:54:56Z",
+      "title": "« L’Histoire peut bégayer »… Fabien Roussel fait un parallèle avec la montée de l’extrême droite dans les années 1930",
+      "url": "https://www.20minutes.fr/politique/4260051-20261103-histoire-peut-begayer-fabien-roussel-fait-parallele-montee-extreme-droite-annees-1930"
+    }
+  ],
+  "schema_version": "1.0"
+}
