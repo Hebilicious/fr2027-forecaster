@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-03T10:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-03T09:17:41Z",
+      "title": "Fabien Roussel appelle à continuer la mobilisation \"tant que le gouvernement n'entend pas ce cri de souffrance, de douleur, de colère\"",
+      "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/fabien-roussel-appelle-a-continuer-la-mobilisation-tant-que-le-gouvernement-n-entend-pas-ce-cri-de-souffrance-de-douleur-de-colere_8265494.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-03T09:22:58Z",
+      "title": "\"Soyez patient\": Dominique de Villepin assure qu'il sera bien candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/soyez-patient-dominique-de-villepin-assure-qu-il-sera-bien-candidat-a-la-presidentielle_AD-202611030375.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Soyez patients », Dominique de Villepin confirme son intention de candidater",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-soyez-patients-dominique-de-villepin-confirme-son-intention-de-candidater-03-11-2026-XYE6ZJ64QFFYXC65PMEK4U3M5E.php"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« C’est nous qui sommes tondus par ce gouvernement depuis dix ans » : Fabien Roussel veut que « les riches se fassent tondre »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/cest-nous-qui-sommes-tondus-par-ce-gouvernement-depuis-dix-ans-fabien-roussel-veut-que-les-riches-se-fassent-tondre-03-11-2026-DPXEGZNVVFEI3EVJRMN3PIOSAU.php"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-03T09:37:13Z",
+      "title": "Présidentielle 2027 : « Pas de doute »… Villepin confirme qu’il sera bien candidat",
+      "url": "https://www.20minutes.fr/politique/4259937-20261103-presidentielle-2027-doute-villepin-confirme-bien-candidat"
+    }
+  ],
+  "schema_version": "1.0"
+}
