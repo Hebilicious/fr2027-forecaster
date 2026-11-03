@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-03T15:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-03T15:00:35Z",
+      "title": "Eric Zemmour : l’Arcom saisit la justice après des propos du polémiste d’extrême droite prononcés le lendemain de la mobilisation du 17 octobre",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/03/eric-zemmour-l-arcom-saisit-la-justice-apres-des-propos-du-polemiste-d-extreme-droite-prononces-le-lendemain-de-la-mobilisation-du-17-octobre_6805606_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-03T14:17:51Z",
+      "title": "Ukraine, ingérences russes, Meloni, Gaza… Raphaël Glucksmann mise tout sur le front européen",
+      "url": "https://www.liberation.fr/international/europe/ukraine-ingerences-russes-meloni-gaza-raphael-glucksmann-mise-tout-sur-le-front-europeen-20261103_44WL3KYU5NCI7OYCG5LUJNKNOA/"
+    }
+  ],
+  "schema_version": "1.0"
+}
