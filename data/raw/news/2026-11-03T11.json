@@ -1,0 +1,151 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-03T11:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-03T11:04:42Z",
+      "title": "Edouard Philippe est RN-compatible, et depuis très longtemps",
+      "url": "https://www.liberation.fr/politique/edouard-philippe-est-rn-compatible-et-depuis-tres-longtemps-20261103_ALLNRP5MNFE3BHJL2RPZT6WU5E/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-03T10:45:09Z",
+      "title": "Gabriel Attal et Edouard Philippe s’accusent mutuellement d’être macronistes",
+      "url": "https://www.liberation.fr/politique/gabriel-attal-et-edouard-philippe-saccusent-mutuellement-detre-macronistes-20261103_4WIIPXHS3JBNFGBJIXEWI66NIU/"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-03T11:10:28Z",
+      "title": "Colère sociale: Fabien Roussel (PCF) appelle à \"des mesures fortes\" inscrites dans le budget",
+      "url": "https://www.bfmtv.com/politique/video-colere-sociale-fabien-roussel-pcf-appelle-a-des-mesures-fortes-inscrites-dans-le-budget_VN-202611030491.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-03T11:03:53Z",
+      "title": "\"Nous voulons plus\": Fabien Roussel appelle à ce que les manifestations du 5 novembre soient les \"plus fortes possibles\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-voulons-plus-fabien-roussel-appelle-a-ce-que-les-manifestations-du-5-novembre-soient-les-plus-fortes-possibles_VN-202611030479.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-03T11:02:10Z",
+      "title": "Colère lycéenne: \"Si le gouvernement répondait à leurs revendications, ils retourneraient étudier\", estime Rania Kassi, juriste, conseillère de Paris et porte-parole de Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/video-colere-lyceenne-si-le-gouvernement-repondait-a-leurs-revendications-ils-retourneraient-etudier-estime-rania-kassi-juriste-conseillere-de-paris-et-porte-parole-de-marine-tondelier_VN-202611030486.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Darmanin appelle Attal et Retailleau à « aider » Philippe à se « qualifier au second tour »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-darmanin-appelle-attal-et-retailleau-a-aider-philippe-a-se-qualifier-au-second-tour-03-11-2026-U6NS236L6JA5FAT6VSJERQPUVQ.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-03T10:40:35Z",
+      "title": "David Lisnard candidat à l’Elysée et à l’AMF : « Ce n’est pas tenable durablement », selon le sénateur Bernard Delcros, qui lui demande de « prendre ses responsabilités »",
+      "url": "https://www.publicsenat.fr/actualites/territoires/david-lisnard-candidat-a-lelysee-et-a-lamf-ce-nest-pas-tenable-durablement-selon-le-senateur-bernard-delcros-qui-lui-demande-de"
+    }
+  ],
+  "schema_version": "1.0"
+}
