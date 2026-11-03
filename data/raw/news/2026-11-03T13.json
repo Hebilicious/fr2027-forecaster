@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-03T13:18:29Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-03T12:47:41Z",
+      "title": "Secouez Emmanuel Macron, \"vous allez voir les billets qui vont tomber\"",
+      "url": "https://www.franceinfo.fr/politique/fabien-roussel/secouez-emmanuel-macron-vous-allez-voir-les-billets-qui-vont-tomber_8265863.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Fabien Roussel va organiser un meeting le 6 décembre à Avion, le lendemain de celui de Jean-Luc Mélenchon au Havre",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-fabien-roussel-va-organiser-un-meeting-le-6-decembre-a-avion-le-lendemain-de-celui-de-jean-luc-melenchon-au-havre-03-11-2026-O54LVECQMVHSDORHGJRKMBTYQ4.php"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-03T11:19:09Z",
+      "title": "Bonjour chez vous ! — Pierre Jouvet : « Rien ni personne ne nous intimidera dans cette campagne »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/pierre-jouvet-rien-ni-personne-ne-nous-intimidera-dans-cette-campagne-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
