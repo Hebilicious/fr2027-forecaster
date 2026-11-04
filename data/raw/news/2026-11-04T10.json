@@ -1,0 +1,134 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T10:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T09:52:58Z",
+      "title": "Présidentielle 2027 : comment Borne parvient à enquiquiner Attal et en même temps Glucksmann",
+      "url": "https://www.liberation.fr/politique/presidentielle-2027-comment-borne-parvient-a-enquiquiner-attal-et-en-meme-temps-glucksmann-20261104_LUHKWW7UNZHQRBRTUWCNQ2V7DE/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T09:49:53Z",
+      "title": "La haine de LFI rend Bruno Retailleau aveugle envers Eric Zemmour",
+      "url": "https://www.liberation.fr/politique/la-haine-de-lfi-rend-bruno-retailleau-aveugle-envers-eric-zemmour-20261104_CY5UBT6XZBH77HCZJNJFVLUC2E/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T09:35:05Z",
+      "title": "Pour Bardella, une nouvelle promo et toujours les mêmes mythos",
+      "url": "https://www.liberation.fr/politique/pour-bardella-une-nouvelle-promo-et-toujours-les-memes-mythos-20261104_OI25DBVZLZDQHCOGK2NBRHDXJU/"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-04T09:46:06Z",
+      "title": "Pour départager les quatre principaux candidats de la droite et du centre à l'élection présidentielle, Bruno Retailleau estime qu'il \"faudra une primaire\"",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/pour-departager-les-quatre-principaux-candidats-de-la-droite-et-du-centre-a-l-election-presidentielle-bruno-retailleau-estime-qu-il-faudra-une-primaire_8267411.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-04T10:13:29Z",
+      "title": "Midterms en France : la gauche fête la défaite de Trump aux élections",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261104-midterms-en-france-la-gauche-f%C3%AAte-la-d%C3%A9faite-de-trump-aux-%C3%A9lections"
+    }
+  ],
+  "schema_version": "1.0"
+}
