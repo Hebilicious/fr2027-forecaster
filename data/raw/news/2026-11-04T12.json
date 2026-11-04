@@ -1,0 +1,183 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T12:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-04T11:30:23Z",
+      "title": "« Nous sommes le deuxième parti de France derrière le RN »: David Lisnard fait certifier ses 100 000 adhérents et réclame la transparence à ses rivaux",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/nous-sommes-le-deuxieme-parti-de-france-derriere-le-rn-david-lisnard-fait-certifier-ses-100-000-adherents-et-reclame-la-transparence-a-ses-rivaux-20261104"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-04T11:00:00Z",
+      "title": "Alexandre Devecchio : « Édouard Philippe est-il vraiment coupable de délit de faciès ? »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/alexandre-devecchio-edouard-philippe-est-il-vraiment-coupable-de-delit-de-facies-20261104"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-04T10:31:51Z",
+      "title": "\"Un message d’espoir pour tous\" : en France, la gauche salue le revers infligé à Donald Trump lors des midterms 2026",
+      "url": "https://www.franceinfo.fr/monde/usa/midterms-2018/un-message-d-espoir-pour-tous-en-france-la-gauche-salue-le-revers-inflige-a-donald-trump-lors-des-midterms-2026_8267498.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T12:16:30Z",
+      "title": "\"Où il veut, quand il veut\": Édouard Philippe propose un \"débat\" à Jean-Luc Mélenchon sur les sujets d'immigration et d'intégration",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/ou-il-veut-quand-il-veut-edouard-philippe-propose-un-debat-a-jean-luc-melenchon-sur-les-sujets-d-immigration-et-d-integration_AN-202611040525.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T11:55:37Z",
+      "title": "Présidentielle: le bloc central s'effondre dans les sondages",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-le-bloc-central-s-effondre-dans-les-sondages_VN-202611040506.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Propos d’Édouard Philippe sur le 17 octobre et les casseurs : « Peut-être que ça a été maladroit », concède une députée Horizons",
+      "url": "https://www.leparisien.fr/politique/propos-dedouard-philippe-sur-le-17-octobre-et-les-casseurs-peut-etre-que-ca-a-ete-maladroit-concede-une-deputee-horizons-04-11-2026-GNCEFACX7NFPBE4MS2NCW63PNM.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Toc toc, c’est moi qui frappe à la porte de l’élection » : David Lisnard se réjouit du soutien de Patrick Sébastien à la présidentielle",
+      "url": "https://www.leparisien.fr/elections/presidentielle/toc-toc-cest-moi-qui-frappe-a-la-porte-de-lelection-david-lisnard-se-rejouit-du-soutien-de-patrick-sebastien-a-la-presidentielle-04-11-2026-NMTALN6YHRAALOE3DBVPUNZE4E.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-04T11:15:09Z",
+      "title": "Présidentielle 2027 : S’il est élu, David Lisnard promet un « gouvernement commando »",
+      "url": "https://www.20minutes.fr/politique/4260312-20261104-presidentielle-2027-elu-david-lisnard-promet-gouvernement-commando"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-04T10:53:37Z",
+      "title": "Sondage présidentielle 2027 : Un second tour Le Pen – Mélenchon assuré, la droite et le bloc central peinent à remonter, Lisnard confirme sa percée",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-presidentielle-2027-un-second-tour-le-pen-melenchon-assure-la-droite-et-le-bloc-central-peine-a-remonter-lisnard-confirme-sa-percee"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-04T10:51:00Z",
+      "title": "Défaite de Trump : il n'y a \"pas de fatalité\" face à l'extrême droite, réagit la gauche française",
+      "url": "https://www.france24.com/fr/france/20261104-defaite-de-trump-il-n-y-a-pas-de-fatalite-face-extreme-droite-reagit-la-gauche-francaise"
+    }
+  ],
+  "schema_version": "1.0"
+}
