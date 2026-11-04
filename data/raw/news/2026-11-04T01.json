@@ -1,0 +1,127 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T01:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-03T23:30:50Z",
+      "title": "Pouvoir d'achat, écologie et État régalien: Bruno Retailleau propose trois débats à David Lisnard, Gabriel Attal et Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/pouvoir-d-achat-ecologie-et-etat-regalien-bruno-retailleau-propose-trois-debats-a-david-lisnard-gabriel-attal-et-edouard-philippe_AV-202611031023.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-03T23:21:56Z",
+      "title": "\"J'ai du mal à voir comment vous allez incarner un renouveau\", explique Anthonin à Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-ai-du-mal-a-voir-comment-vous-allez-incarner-un-renouveau-explique-anthonin-a-bruno-retailleau_VN-202611031021.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-03T23:15:43Z",
+      "title": "Bruno Retailleau ne dissoudra pas le parti d'Éric Zemmour, Reconquête",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-retailleau-ne-dissoudra-pas-le-parti-d-eric-zemmour-reconquete_VN-202611031019.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-04T00:36:12Z",
+      "title": "Présidentielle 2027 : Retailleau estime qu’il « faudra une primaire sans doute en début d’année »",
+      "url": "https://www.20minutes.fr/politique/4260190-20261104-presidentielle-2027-retailleau-estime-faudra-primaire-doute-debut-annee"
+    }
+  ],
+  "schema_version": "1.0"
+}
