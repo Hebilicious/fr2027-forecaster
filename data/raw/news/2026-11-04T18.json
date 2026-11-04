@@ -1,0 +1,126 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T18:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-04T17:34:05Z",
+      "title": "Présidentielle 2027 : plutôt qu’une primaire, Macron veut une coalition allant de Glucksmann à Lisnard pour déjouer le duel Le Pen-Mélenchon",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-plutot-qu-une-primaire-macron-veut-une-coalition-allant-de-glucksmann-a-lisnard-pour-dejouer-le-duel-le-pen-melenchon-20261104"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-04T17:19:07Z",
+      "title": "Un «13e voire un 14e mois de salaire» contre la fin des 35 heures : la promesse de Bruno Retailleau est-elle viable ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/un-13e-voire-un-14e-mois-de-salaire-contre-la-fin-des-35-heures-la-promesse-de-bruno-retailleau-est-elle-viable-20261104"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "royal"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T17:49:57Z",
+      "title": "«Ils n’ont rien vu venir» : l’Elysée embarrassée par les confidences d’Emmanuel Macron dans un livre",
+      "url": "https://www.liberation.fr/politique/ils-nont-rien-vu-venir-lelysee-embarrassee-par-les-confidences-demmanuel-macron-dans-un-livre-20261104_KPHX5OD2HNHFJD4YSOWLHU2LJU/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T17:32:12Z",
+      "title": "\"LE 20.27\" - \"Toc toc, c'est moi qui frappe à la porte\", David Lisnard se réjouit du soutien de Patrick Sébastien",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-20-27-toc-toc-c-est-moi-qui-frappe-a-la-porte-david-lisnard-se-rejouit-du-soutien-de-patrick-sebastien_VN-202611040770.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
