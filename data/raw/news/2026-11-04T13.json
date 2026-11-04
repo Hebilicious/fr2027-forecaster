@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T13:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-04T13:08:46Z",
+      "title": "EDITO. Pourquoi Donald Trump est l'épouvantail de la campagne présidentielle en France ?",
+      "url": "https://www.franceinfo.fr/monde/usa/presidentielle/donald-trump/edito-pourquoi-donald-trump-est-l-epouvantail-de-la-campagne-presidentielle-en-france_8267753.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-04T13:04:39Z",
+      "title": "\"Oui, il y a un problème d'intégration en France\", estime Edouard Philippe, qui propose à Jean-Luc Mélenchon un débat sur l'immigration",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/oui-il-y-a-un-probleme-d-integration-en-france-edouard-philippe-propose-a-jean-luc-melenchon-un-debat-sur-l-immigration_8267711.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T12:28:12Z",
+      "title": "\"Une police de la pensée imposée par l'extrême gauche\": Édouard Philippe (Horizons) répond aux critiques sur l'emploi du terme \"Français issus de l'immigration\"",
+      "url": "https://www.bfmtv.com/politique/horizons/video-une-police-de-la-pensee-imposee-par-l-extreme-gauche-edouard-philippe-horizons-repond-aux-critiques-sur-l-emploi-du-terme-francais-issus-de-l-immigration_VN-202611040535.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Bruno Retailleau glisse quelques pistes concernant son gouvernement en cas d’élection",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-bruno-retailleau-glisse-quelques-pistes-concernant-son-gouvernement-en-cas-delection-04-11-2026-67GEOVDIUVFJLKVSJPNGPSTC4E.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
