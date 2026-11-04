@@ -1,0 +1,126 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T14:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T13:55:19Z",
+      "title": "Édouard Philippe propose un \"débat\" à Jean-Luc Mélenchon sur les sujets d'immigration et d'intégration",
+      "url": "https://www.bfmtv.com/politique/video-edouard-philippe-propose-un-debat-a-jean-luc-melenchon-sur-les-sujets-d-immigration-et-d-integration_VN-202611040607.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : David Lisnard confirme son avance sur Bruno Retailleau au premier tour dans un nouveau sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-david-lisnard-confirme-son-avance-sur-bruno-retailleau-au-premier-tour-dans-un-nouveau-sondage-04-11-2026-YKEKQGHOIRHFTECQSBHUT2IW64.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Édouard Philippe invite Jean-Luc Mélenchon à débattre de « racisme » et « d’antisémitisme », l’Insoumis rejette l’offre",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-edouard-philippe-invite-jean-luc-melenchon-a-debattre-de-racisme-et-dantisemitisme-linsoumis-rejette-loffre-04-11-2026-DGOORRJ3HRGWHKPLDQR3AB2UOQ.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-04T13:45:54Z",
+      "title": "Présidentielle 2027 : Énervé, Philippe invite Mélenchon à débattre sur le « racisme » et « l’antisémitisme »",
+      "url": "https://www.20minutes.fr/politique/4260366-20261104-presidentielle-2027-enerve-philippe-invite-melenchon-debattre-racisme-antisemitisme"
+    }
+  ],
+  "schema_version": "1.0"
+}
