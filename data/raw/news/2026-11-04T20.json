@@ -1,0 +1,179 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T20:04:49Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:57:06Z",
+      "title": "\"Les Français, moi, je ne les trie pas\", assure Gabriel Attal, candidat Renaissance à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-francais-moi-je-ne-les-trie-pas-assure-gabriel-attal-candidat-renaissance-a-l-election-presidentielle_VN-202611040917.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:55:34Z",
+      "title": "\"Je crois avoir montré que j'étais à la hauteur\", réagit Gabriel Attal, candidat Renaissance à l'élection présidentielle, après la publication de messages d'Emmanuel Macron",
+      "url": "https://www.bfmtv.com/politique/video-je-crois-avoir-montre-que-j-etais-a-la-hauteur-reagit-gabriel-attal-candidat-renaissance-a-l-election-presidentielle-apres-la-publication-de-messages-d-emmanuel-macron_VN-202611040915.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:48:46Z",
+      "title": "\"J'ai des différences avec tous les candidats\", assure Gabriel Attal, candidat Renaissance à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-ai-des-differences-avec-tous-les-candidats-assure-gabriel-attal-candidat-renaissance-a-l-election-presidentielle_VN-202611040906.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:47:58Z",
+      "title": "Soutien en cas de défaite à une primaire: \"C'est un débat qui est un peu hypocrite\", estime Gabriel Attal, candidat Renaissance à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-soutien-en-cas-de-defaite-a-une-primaire-c-est-un-debat-qui-est-un-peu-hypocrite-estime-gabriel-attal-candidat-renaissance-a-l-election-presidentielle_VN-202611040905.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:47:34Z",
+      "title": "\"J'en suis absolument convaincu\": Gabriel Attal assure qu'une primaire \"aura lieu\" pour départager les candidats de la droite et du centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/j-en-suis-absolument-convaincu-gabriel-attal-assure-qu-une-primaire-aura-lieu-pour-departager-les-candidats-de-la-droite-et-du-centre_AV-202611040903.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:40:09Z",
+      "title": "\"Il n'y a pas un candidat qui se détache dans les sondages\", constate Gabriel Attal, candidat Renaissance à l'élection présidentielle, à propos du centre et de la droite",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-n-y-a-pas-un-candidat-qui-se-detache-dans-les-sondages-constate-gabriel-attal-candidat-renaissance-a-l-election-presidentielle-a-propos-du-centre-et-de-la-droite_VN-202611040902.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:36:18Z",
+      "title": "Gabriel Attal, candidat Renaissance à l'élection présidentielle, estime que \"doivent pouvoir participer à la primaire\" du centre et de la droite, \"ceux qui sont clairs sur le fait qu'ils ne feront aucune alliance avec LFI ou le RN\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-gabriel-attal-candidat-renaissance-a-l-election-presidentielle-estime-que-doivent-pouvoir-participer-a-la-primaire-du-centre-et-de-la-droite-ceux-qui-sont-clairs-sur-le-fait-qu-ils-ne-feront-aucune-alliance-avec-lfi-ou-le-rn_VN-202611040900.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:32:20Z",
+      "title": "Présidentielle 2027: \"Cette primaire, elle aura lieu\", assure Gabriel Attal, candidat Renaissance à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-cette-primaire-elle-aura-lieu-assure-gabriel-attal-candidat-renaissance-a-l-election-presidentielle_VN-202611040897.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:29:57Z",
+      "title": "Pour Gabriel Attal, candidat Renaissance à l'élection présidentielle, le pays \"ne se relèverait pas\" d'un duel entre Jean-Luc Mélenchon et Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-gabriel-attal-candidat-renaissance-a-l-election-presidentielle-le-pays-ne-se-releverait-pas-d-un-duel-entre-jean-luc-melenchon-et-marine-le-pen_VN-202611040894.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T19:07:20Z",
+      "title": "Pour Éric Ciotti, président de l'UDR et maire de Nice, Bruno Retailleau, candidat LR à la présidentielle \"n'est plus crédible\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-eric-ciotti-president-de-l-udr-et-maire-de-nice-bruno-retailleau-candidat-lr-a-la-presidentielle-n-est-plus-credible_VN-202611040877.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
