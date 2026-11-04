@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.france24.com/fr/france/rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;france24&#46;com&#47;fr&#47;france&#47;rss\" on this server.<P>\nReference&#32;&#35;18&#46;43721102&#46;1793805500&#46;1c0e1aaf\n<P>https&#58;&#47;&#47;errors",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-11-04T15:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T14:14:15Z",
+      "title": "Edouard Philippe invite Jean-Luc Mélenchon à débattre de «racisme» et d’«antisémitisme»",
+      "url": "https://www.liberation.fr/politique/edouard-philippe-invite-jean-luc-melenchon-a-debattre-de-racisme-et-dantisemitisme-20261104_SNQG4X6JAFGC3KYKM67CSD6M24/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-04T14:56:36Z",
+      "title": "\"On est dans des contextes très différents\" : pour le président du RN, il n'y a aucun \"rapport\" entre les midterms aux États-Unis et la France",
+      "url": "https://www.franceinfo.fr/monde/usa/midterms-2018/on-est-dans-des-contextes-tres-differents-pour-le-president-du-rn-il-n-y-a-aucun-rapport-entre-les-midterms-aux-etats-unis-et-la-france_8267780.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T15:10:27Z",
+      "title": "\"Vous ne serez pas président ni même candidat\": la réponse de Jordan Bardella à Bruno Retailleau qui a affirmé que le président du RN \"ne sera pas\" son Premier ministre s'il est élu",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/vous-ne-serez-pas-president-ni-meme-candidat-la-reponse-de-jordan-bardella-a-bruno-retailleau-qui-a-affirme-que-le-president-du-rn-ne-sera-pas-son-premier-ministre-s-il-est-elu_AN-202611040651.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
