@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T09:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-04T08:28:23Z",
+      "title": "\"Gouverner\" : que contient le nouveau livre de Jordan Bardella ?",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T08:25:14Z",
+      "title": "\"Nous ne sommes pas une force d'appoint de la droite\": Élisabeth Borne contre une primaire \"du bloc central jusqu'à David Lisnard\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/nous-ne-sommes-pas-une-force-d-appoint-de-la-droite-elisabeth-borne-contre-une-primaire-du-bloc-central-jusqu-a-david-lisnard_AN-202611040355.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T08:25:14Z",
+      "title": "Élisabeth Borne",
+      "url": "https://www.bfmtv.com/politique/elisabeth-borne_DN-202108310658.html"
+    },
+    {
+      "candidate_ids": [
+        "becht"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Olivier Becht, et si ce n’était pas lui ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-olivier-becht-et-si-ce-netait-pas-lui-04-11-2026-A5POFDYOJBG4FDQ742V4GTI3S4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
