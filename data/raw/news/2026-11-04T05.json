@@ -1,0 +1,96 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T05:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-04T05:03:08Z",
+      "title": "\"Bien sûr qu'ils s'inquiètent\" : l'émergence de David Lisnard peut-elle menacer la candidature de Bruno Retailleau à la présidentielle ?",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/bien-sur-qu-ils-s-inquietent-l-emergence-de-david-lisnard-peut-elle-menacer-la-candidature-de-bruno-retailleau-a-la-presidentielle_8264240.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
