@@ -1,0 +1,85 @@
+schema_version: "1.0"
+poll_id: ifop-2026-10-29-10351
+firm: ifop
+sponsor: LCI
+field_start: "2026-10-27"
+field_end: "2026-10-29"
+published_at: "2026-11-03"
+sample_size: 1650
+method: online
+population: registered
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10352-pres-iv-ifop-lci-3-novembre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10352-pres-iv-ifop-lci-3-novembre.pdf
+index_url: null
+retrieved_at: "2026-11-04T20:18:00Z"
+entry: primary
+notes: >-
+  Ifop for LCI, 1,501 registered voters drawn from 1,650 adults, online 27-29
+  October; shares of expressed votes as published. The Commission lists this notice as
+  10351, although its PDF file name carries 10352.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-04T20:17Z
+  skill_version: polls-2
+scenarios:
+- label: Attal+Philippe+Retailleau+Lisnard
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    attal: 5
+    dupont_aignan: 1.5
+    glucksmann: 10
+    le_pen: 35
+    lisnard: 7
+    melenchon: 18
+    philippe: 9.5
+    retailleau: 4
+    roussel: 2
+    tondelier: 3
+    zemmour: 4.5
+- label: Attal for the centre bloc, Retailleau+Lisnard
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 0.5
+    attal: 9
+    dupont_aignan: 2
+    glucksmann: 13
+    le_pen: 36
+    lisnard: 7.5
+    melenchon: 17.5
+    retailleau: 5
+    roussel: 2
+    tondelier: 3
+    zemmour: 4.5
+- label: Philippe for the centre bloc, Retailleau only right candidate
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 1
+    dupont_aignan: 2
+    glucksmann: 11.5
+    le_pen: 37
+    melenchon: 17.5
+    philippe: 15
+    retailleau: 7
+    roussel: 1.5
+    tondelier: 3.5
+    zemmour: 4
+- label: Philippe for the centre bloc, Lisnard only right candidate
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 2
+    glucksmann: 11
+    le_pen: 36
+    lisnard: 9
+    melenchon: 17.5
+    philippe: 15
+    roussel: 2
+    tondelier: 3
+    zemmour: 4
