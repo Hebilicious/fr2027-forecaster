@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T17:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-04T17:00:00Z",
+      "title": "Sondage : Sébastien Lecornu à son plus bas historique, spectaculaire percée pour David Lisnard",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/sondages/sondage-sebastien-lecornu-a-son-plus-bas-historique-spectaculaire-percee-pour-david-lisnard-20261104"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T16:27:24Z",
+      "title": "Présidentielle : Retailleau réclame à son tour une primaire, la pression monte sur Philippe",
+      "url": "https://www.liberation.fr/politique/presidentielle-retailleau-reclame-a-son-tour-une-primaire-la-pression-monte-sur-philippe-20261104_GPI32KIPRRAKRGOTZJYHQJPFAY/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "royal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-04T16:52:28Z",
+      "title": "\"Vous êtes tous trop durs avec moi\" : les confidences d'Emmanuel Macron dévoilées dans un livre choc de l'éditorialiste de gauche Françoise Degois",
+      "url": "https://www.franceinfo.fr/politique/emmanuel-macron/vous-etes-tous-trop-durs-avec-moi-les-confidences-d-emmanuel-macron-devoilees-dans-un-livre-choc-de-l-editorialiste-de-gauche-francoise-degois_8267477.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-04T16:34:46Z",
+      "title": "Tensions à l’Association des maires de France : David Lisnard assure ne pas « faire entrer la présidentielle dans l’AMF, ceux qui me le reprochent le font »",
+      "url": "https://www.publicsenat.fr/actualites/politique/tensions-a-lassociation-des-maires-de-france-david-lisnard-assure-ne-pas-faire-entrer-la-presidentielle-dans-lamf-ceux-qui-me-le-reprochent-le-font"
+    }
+  ],
+  "schema_version": "1.0"
+}
