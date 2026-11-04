@@ -1,0 +1,179 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T08:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-04T07:52:57Z",
+      "title": "Election à la présidence des maires de France : le sortant David Lisnard sous pression",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/04/election-a-la-presidence-des-maires-de-france-le-sortant-david-lisnard-sous-pression_6806122_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-04T07:00:09Z",
+      "title": "Dans « Gouverner », Jordan Bardella creuse le sillon libéral-sécuritaire du RN, sans propositions nouvelles",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/04/dans-gouverner-jordan-bardella-creuse-le-sillon-liberal-securitaire-du-rn-sans-propositions-nouvelles_6806117_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-04T07:01:55Z",
+      "title": "Gouverner, de Jordan Bardella : le livre d’un homme qui voulait être candidat à la présidentielle",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/gouverner-de-jordan-bardella-le-livre-d-un-homme-qui-voulait-etre-candidat-a-la-presidentielle-20261104"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T08:05:00Z",
+      "title": "Au Bourget, Mélenchon veut-il enterrer Hollande ? «Chez Pol, l’émission» avec Thomas Legrand et Lucie Alexandre",
+      "url": "https://www.liberation.fr/politique/elections/au-bourget-melenchon-veut-il-enterrer-hollande-chez-pol-lemission-avec-thomas-legrand-et-lucie-alexandre-20261104_H5JFXGOA3FA53HU2UOLR5Z3C2Q/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T07:17:28Z",
+      "title": "Primaire à droite et au centre : Bruno Retailleau remet la pression sur Edouard Philippe, «il sera contraint à un moment ou un autre de l’accepter»",
+      "url": "https://www.liberation.fr/politique/elections/primaire-a-droite-et-au-centre-bruno-retailleau-remet-la-pression-sur-edouard-philippe-il-sera-contraint-a-un-moment-ou-un-autre-de-laccepter-20261104_C3XFQIVOOVBATCVCSJ4SVJVFIY/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-04T07:00:00Z",
+      "title": "«Gouverner» : entre non-dits et banalités, Jordan Bardella et son livre impossible",
+      "url": "https://www.liberation.fr/politique/elections/gouverner-entre-non-dits-et-banalites-jordan-bardella-et-son-livre-impossible-20261104_IAREP66LRFGNJHFAQLWLVNRIXM/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T07:16:13Z",
+      "title": "Présidentielle 2027: un duel entre Jean-Luc Mélenchon et Marine Le Pen inévitable au second tour selon un nouveau sondage, Raphaël Glucksmann en forte baisse",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-un-duel-entre-jean-luc-melenchon-et-marine-le-pen-inevitable-au-second-tour-selon-un-nouveau-sondage-raphael-glucksmann-en-forte-baisse_AD-202611040260.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T07:00:00Z",
+      "title": "Présidentielle, accusations d'antisémitisme, critique de la classe politique, Marine Le Pen... Ce que contient le nouveau livre de Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/front-national/presidentielle-accusations-d-antisemitisme-critique-de-la-classe-politique-marine-le-pen-ce-que-contient-le-nouveau-livre-de-jordan-bardella_AN-202611040060.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Gouverner » : que retenir du nouveau livre du non-candidat Jordan Bardella ?",
+      "url": "https://www.leparisien.fr/politique/gouverner-que-retenir-du-nouveau-livre-du-non-candidat-jordan-bardella-04-11-2026-36ZF35WGWVDYRENOTX2EPAGRHQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
