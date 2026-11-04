@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-04T22:18:07Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bouamrane",
+        "glucksmann"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-04T21:49:38Z",
+      "title": "«Je suis convaincu qu’on va faire campagne ensemble» : à Saint-Ouen, Glucksmann tend la main à Bouamrane",
+      "url": "https://www.lefigaro.fr/politique/je-suis-convaincu-qu-on-va-faire-campagne-ensemble-a-saint-ouen-glucksmann-tend-la-main-a-bouamrane-20261104"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-04T21:16:45Z",
+      "title": "Présidentielle: Gabriel Attal persiste et maintient qu'une primaire aura lieu à droite et au centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-gabriel-attal-persiste-et-maintient-qu-une-primaire-aura-lieu-a-droite-et-au-centre_VN-202611040972.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
