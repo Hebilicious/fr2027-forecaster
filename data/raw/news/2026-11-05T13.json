@@ -1,0 +1,153 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T13:18:30Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-05T13:00:00Z",
+      "title": "«Édouard Philippe, c’est Balladur en mou» : les indiscrétions du Figaro Magazine",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/edouard-philippe-c-est-balladur-en-mou-les-indiscretions-du-figaro-magazine-20261105"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-05T12:24:29Z",
+      "title": "Pour la présidentielle, Macron veut une «coalition» allant de Raphaël Glucksmann à David Lisnard",
+      "url": "https://www.liberation.fr/politique/pour-la-presidentielle-macron-veut-une-coalition-allant-de-raphael-glucksmann-a-david-lisnard-20261105_WZKJCENBGFDN7IUIWMV3P6PT2M/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:15:16Z",
+      "title": "Présidentielle 2027: pour Bruno Retailleau, \"les héritiers du macronisme\" ne pourraient pas gagner une éventuelle primaire de la droite et du centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-pour-bruno-retailleau-les-heritiers-du-macronisme-ne-pourraient-pas-gagner-une-eventuelle-primaire-de-la-droite-et-du-centre_AD-202611050504.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:07:18Z",
+      "title": "Budget 2027 rejeté à l'unanimité: \"Une fin de règne qui est un peu pathétique\", tacle Marine Le Pen, candidate Rassemblement national à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/front-national/video-budget-2027-rejete-a-l-unanimite-une-fin-de-regne-qui-est-un-peu-pathetique-tacle-marine-le-pen-candidate-rassemblement-national-a-la-presidentielle_VN-202611050501.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T12:46:50Z",
+      "title": "Augmentation du SMIC: \"Nos entreprises sont dans une situation trop fragile\", répond Marine Le Pen, candidate RN à la présidentielle, à la CGT",
+      "url": "https://www.bfmtv.com/politique/front-national/video-augmentation-du-smic-nos-entreprises-sont-dans-une-situation-trop-fragile-repond-marine-le-pen-candidate-rn-a-la-presidentielle-a-la-cgt_VN-202611050490.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Hausse du smic : Édouard Philippe propose plutôt « un temps de travail supplémentaire » et « une meilleure organisation » de l’activité",
+      "url": "https://www.leparisien.fr/politique/hausse-du-smic-edouard-philippe-propose-un-temps-de-travail-supplementaire-et-une-meilleure-organisation-de-lactivite-05-11-2026-42T35MP6LREG5EWQ7MPFJSIIB4.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Emmanuel Macron se dit en faveur d’une « coalition » de David Lisnard à Raphaël Glucksmann",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-emmanuel-macron-se-dit-en-faveur-dune-coalition-de-david-lisnard-a-raphael-glucksmann-05-11-2026-5SOFNVKY7NDCRP7KNAQKNG267I.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
