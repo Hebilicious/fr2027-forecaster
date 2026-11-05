@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T20:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-05T19:21:13Z",
+      "title": "Coalition de Glucksmann à Lisnard : l’idée d’Emmanuel Macron ne trouve pas d’écho, même chez ses héritiers",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/05/coalition-de-glucksmann-a-lisnard-l-idee-d-emmanuel-macron-ne-trouve-pas-d-echo-meme-chez-ses-heritiers_6807337_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-05T19:17:53Z",
+      "title": "Présidentielle 2027 : pourquoi la gauche a tort de voir dans la défaite de Donald Trump un mauvais présage pour Marine Le Pen",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-pourquoi-la-gauche-a-tort-de-voir-dans-la-defaite-de-donald-trump-un-mauvais-presage-pour-marine-le-pen-20261105"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T20:00:57Z",
+      "title": "Manifestations du 5 novembre: Marine Tondelier, candidate Les Écologistes, remercie les \"jeunes d'avoir réveillé le pays\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-manifestations-du-5-novembre-marine-tondelier-candidate-les-ecologistes-remercie-les-jeunes-d-avoir-reveille-le-pays_VN-202611050796.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T19:57:13Z",
+      "title": "Manifestations du 5 novembre: \"Le départ de Monsieur Lecornu se pose\", affirme Marine Tondelier, candidate Les Écologistes à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-manifestations-du-5-novembre-le-depart-de-monsieur-lecornu-se-pose-affirme-marine-tondelier-candidate-les-ecologistes-a-la-presidentielle_VN-202611050794.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T19:48:36Z",
+      "title": "Manifestations du 5 novembre: Marine Tondelier, candidate Les Écologistes à la présidentielle, rêve d'un \"grand meeting dans un stade de foot\" pour discuter des revendications",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-manifestations-du-5-novembre-marine-tondelier-candidate-les-ecologistes-a-la-presidentielle-reve-d-un-grand-meeting-dans-un-stade-de-foot-pour-discuter-des-revendications_VN-202611050790.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
