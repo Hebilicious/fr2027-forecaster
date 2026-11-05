@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T12:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T11:58:11Z",
+      "title": "Augmentation du SMIC: \"C'est une mauvaise piste\", affirme Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-augmentation-du-smic-c-est-une-mauvaise-piste-affirme-bruno-retailleau_VN-202611050457.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T11:25:03Z",
+      "title": "Budget de la défense: Bruno Retailleau reconnaît \"l'effort substantiel\" mais alerte sur le \"désastre\" de la dette",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-budget-de-la-defense-bruno-retailleau-reconnait-l-effort-substantiel-mais-alerte-sur-le-desastre-de-la-dette_VN-202611050424.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Les gens m’en remercient dans la rue » : Tondelier défend sa ligne « unioniste » face aux « camps » Glucksmann et Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/les-gens-men-remercient-dans-la-rue-tondelier-defend-sa-ligne-unioniste-face-aux-camps-glucksmann-et-melenchon-05-11-2026-UBRELAXXERCRFDCJBSKLMXXSTY.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-05T11:47:36Z",
+      "title": "Présidentielle : « Qu’ils fassent tourner les serviettes », suggère David Lisnard aux détracteurs de Patrick Sébastien",
+      "url": "https://www.20minutes.fr/politique/4260584-20261105-presidentielle-fassent-tourner-serviettes-suggere-david-lisnard-detracteurs-patrick-sebastien"
+    }
+  ],
+  "schema_version": "1.0"
+}
