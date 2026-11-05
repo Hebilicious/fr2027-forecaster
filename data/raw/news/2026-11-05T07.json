@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T07:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-05T06:51:35Z",
+      "title": "Jordan Bardella rattrapé par ses propos antisémites au lancement de son nouveau livre",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/05/jordan-bardella-rattrape-par-ses-propos-antisemites-au-lancement-de-son-nouveau-livre_6806827_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-05T07:05:44Z",
+      "title": "Des journalistes quittent la soirée de lancement du livre de Jordan Bardella, après que le RN a refusé l'accès à Médiapart",
+      "url": "https://www.franceinfo.fr/politique/front-national/des-journalistes-quittent-la-soiree-de-lancement-du-livre-de-jordan-bardella-apres-que-le-rn-a-refuse-l-acces-a-mediapart_8268878.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-05T06:32:36Z",
+      "title": "Présidentielle 2027 : « Ils veulent nous intimider… » Raphaël Glucksmann peut-il encore aller dans les manifestations ?",
+      "url": "https://www.20minutes.fr/politique/4260272-20261105-presidentielle-2027-veulent-intimider-raphael-glucksmann-peut-encore-aller-manifestations"
+    }
+  ],
+  "schema_version": "1.0"
+}
