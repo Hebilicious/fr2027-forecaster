@@ -1,0 +1,134 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.france24.com/fr/france/rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;france24&#46;com&#47;fr&#47;france&#47;rss\" on this server.<P>\nReference&#32;&#35;18&#46;892cc717&#46;1793895522&#46;31f5f28f\n<P>https&#58;&#47;&#47;errors",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-11-05T16:18:38Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-05T16:04:46Z",
+      "title": "Présidentielle 2027 : les Français favorables à une primaire de la droite, David Lisnard confirme sa dynamique",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/sondages/presidentielle-2027-les-francais-favorables-a-une-primaire-de-la-droite-david-lisnard-confirme-sa-dynamique-20261105"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« La cote de confiance la plus basse jamais mesurée » : Emmanuel Macron bat le record d’impopularité de Hollande à l’Élysée, selon un sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/la-cote-de-confiance-la-plus-basse-jamais-mesuree-emmanuel-macron-bat-le-record-dimpopularite-de-hollande-a-lelysee-selon-un-sondage-05-11-2026-6E5P2SV65ZALVDBPBI5TFSITHA.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Un acte de désobéissance civile », des députés communistes lâchent Fabien Roussel pour Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/un-acte-de-desobeissance-civile-une-majorite-de-deputes-communistes-lachent-fabien-roussel-pour-jean-luc-melenchon-05-11-2026-ZLVBVJOGRBCCTC54AJB5H7KPO4.php"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-05T16:03:22Z",
+      "title": "Macron fait pire qu’Hollande et bat un record d’impopularité, selon un sondage",
+      "url": "https://www.20minutes.fr/politique/4260714-20261105-macron-fait-pire-hollande-bat-record-impopularite-selon-sondage"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-05T15:47:59Z",
+      "title": "La majorité du groupe communiste à l’Assemblée soutiendra Mélenchon à la présidentielle",
+      "url": "https://www.20minutes.fr/politique/4260692-20261105-majorite-groupe-communiste-assemblee-soutiendra-melenchon-presidentielle"
+    }
+  ],
+  "schema_version": "1.0"
+}
