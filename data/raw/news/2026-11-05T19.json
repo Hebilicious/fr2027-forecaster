@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T19:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-05T19:04:43Z",
+      "title": "Grève du 5 novembre : \"Dans ce pays qu'on pensait un peu atone, la jeunesse nous a réveillés\", estime Léa Balage El Mariky, députée Écologiste et Social",
+      "url": "https://www.franceinfo.fr/economie/greve/greve/greve-du-5-novembre-dans-ce-pays-qu-on-pensait-un-peu-atone-la-jeunesse-nous-a-reveilles-estime-lea-balage-el-mariky-deputee-ecologiste-et-social_8269796.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "IA, maladies « écologiques », lutte contre les discriminations… Les nouveautés du programme de Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-ia-maladies-ecologiques-lutte-contre-les-discriminations-les-nouveautes-du-programme-de-jean-luc-melenchon-05-11-2026-N5PVVQLFSFBTLERTV2CZ3AECPQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
