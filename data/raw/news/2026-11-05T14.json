@@ -1,0 +1,126 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T14:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-05T14:00:40Z",
+      "title": "«Nous nous engageons à soutenir Jean-Luc Mélenchon» : Fabien Roussel lâché par la majorité du groupe communiste à l’Assemblée",
+      "url": "https://www.liberation.fr/politique/elections/nous-nous-engageons-a-soutenir-jean-luc-melenchon-fabien-roussel-lache-par-la-majorite-du-groupe-communiste-a-lassemblee-melenchon-20261105_NMD2ZUWHY5FXHGWMSYLRJWUN6Y/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-05T14:11:11Z",
+      "title": "\"Je m'en contrefous\" : Raphaël Glucksmann répond aux militants hostiles à sa présence sur la manifestation parisienne",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/je-m-en-contrefous-raphael-glucksmann-repond-aux-militants-hostiles-a-sa-presence-sur-la-manifestation-parisienne_8269385.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Édouard Philippe veut « massifier notre armement conventionnel », l’effort de défense ne doit pas être « relâché »",
+      "url": "https://www.leparisien.fr/politique/presidentielle-2027-edouard-philippe-veut-massifier-notre-armement-conventionnel-leffort-de-defense-ne-doit-pas-etre-relache-05-11-2026-HHHH2VXS2FG3JAZJCUVR3ZRHC4.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-05T13:26:03Z",
+      "title": "Présidentielle 2027 : Macron fait savoir qu’il est pour une « coalition » de Lisnard à Glucksmann",
+      "url": "https://www.20minutes.fr/politique/4260640-20261105-presidentielle-2027-macron-fait-savoir-coalition-lisnard-glucksmann"
+    }
+  ],
+  "schema_version": "1.0"
+}
