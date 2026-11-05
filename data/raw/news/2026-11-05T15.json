@@ -1,0 +1,251 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T15:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-05T14:49:26Z",
+      "title": "Présidentielle 2027 : la majorité du groupe communiste et ultramarin à l’Assemblée annonce soutenir Jean-Luc Mélenchon",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/05/presidentielle-2027-la-majorite-du-groupe-communiste-et-ultramarin-a-l-assemblee-annonce-soutenir-jean-luc-melenchon_6806973_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-05T15:03:46Z",
+      "title": "Présidentielle 2027 : la majorité du groupe communiste à l'Assemblée apporte son soutien à Jean-Luc Mélenchon plutôt qu'à Fabien Roussel",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-la-majorite-du-groupe-communiste-a-l-assemblee-apporte-son-soutien-a-jean-luc-melenchon-plutot-qu-a-fabien-roussel_8269403.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T14:47:15Z",
+      "title": "Primaire, sondage XXL, statu quo… La droite et le bloc central cherchent la méthode pour n’avoir qu’un seul candidat au premier tour de la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/primaire-sondage-xxl-statu-quo-la-droite-et-le-bloc-central-cherchent-la-methode-pour-n-avoir-qu-un-seul-candidat-au-premier-tour-de-la-presidentielle_AN-202611050571.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T14:33:05Z",
+      "title": "Manifestations du 5 novembre: Raphaël Glucksmann quitte le cortège parisien après avoir été bloqué par des militants",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-manifestations-du-5-novembre-raphael-glucksmann-quitte-le-cortege-parisien-apres-avoir-ete-bloque-par-des-militants_VN-202611050564.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T14:09:51Z",
+      "title": "\"Je m'en fous, je m'en contrefous\": interrogé sur des huées entendues à son arrivée dans le cortège, Raphaël Glucksmann affirme que cela ne le touche pas",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-je-m-en-fous-je-m-en-contrefous-interroge-sur-des-huees-entendues-a-son-arrivee-dans-le-cortege-raphael-glucksmann-affirme-que-cela-ne-le-touche-pas_VN-202611050552.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T14:06:16Z",
+      "title": "Raphaël Glucksmann est arrivé dans le cortège de Paris, accueilli par quelques huées",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-raphael-glucksmann-est-arrive-dans-le-cortege-de-paris-accueilli-par-quelques-huees_VN-202611050551.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T14:05:34Z",
+      "title": "Ils choisissent Jean-Luc Mélenchon plutôt que Fabien Roussel: la majorité du groupe communiste à l'Assemblée, dont son président, annonce soutenir le leader LFI pour la présidentielle",
+      "url": "https://www.bfmtv.com/politique/parti-communiste-francais/ils-choisissent-jean-luc-melenchon-plutot-que-fabien-roussel-la-majorite-du-groupe-communiste-a-l-assemblee-dont-son-president-annoncent-soutenir-le-leader-lfi-pour-la-presidentielle_AD-202611050548.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T14:05:02Z",
+      "title": "Marine Tondelier dénonce \"l'inaction sociale du gouvernement qui \"va coûter plus cher à la fin\"",
+      "url": "https://www.bfmtv.com/politique/video-marine-tondelier-denonce-l-inaction-sociale-du-gouvernement-qui-va-couter-plus-cher-a-la-fin_VN-202611050550.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:58:52Z",
+      "title": "Manifestation du 5 novembre: Marine Tondelier dénonce \"l'inaction écologique\" du gouvernement",
+      "url": "https://www.bfmtv.com/politique/video-manifestation-du-5-novembre-marine-tondelier-denonce-l-inaction-ecologique-du-gouvernement_VN-202611050544.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:43:10Z",
+      "title": "Raphaël Glucksmann accueilli par quelques huées: \"S'il y a des militants hostiles à notre présence, je m'en fous\", leur répond-il",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-raphael-glucksmann-accueilli-par-quelques-hues-s-il-y-a-des-militants-hostiles-a-notre-presence-je-m-en-fous-leur-repond-il_VN-202611050525.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:40:37Z",
+      "title": "Grève du 5 novembre: \"Nous sommes la rupture démocrative\", assure Raphaël Glucksmann, candidat PS-Place Publique à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-greve-du-5-novembre-nous-sommes-la-rupture-democrative-assure-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle_VN-202611050524.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:38:34Z",
+      "title": "Grève 5 novembre: \"Le gouvernement fait la sourde oreille\", dénonce Raphaël Glucksmann, candidat PS-Place publique à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-greve-5-novembre-le-gouvernement-fait-la-sourde-oreille-denonce-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle_VN-202611050520.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:31:19Z",
+      "title": "Bruno Retailleau promet qu'il \"ne touchera pas\" au crédit d'impôt pour les services à la personne s'il est élu",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-retailleau-promet-qu-il-ne-touchera-pas-au-credit-d-impot-pour-les-services-a-la-personne-s-il-est-elu_VN-202611050516.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:30:51Z",
+      "title": "Manifestations du 5 novembre: Raphaël Glucksmann rejoint le cortège de Paris sous quelques huées",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-manifestations-du-5-novembre-raphael-glucksmann-rejoint-le-cortege-de-paris-sous-quelques-huees_VN-202611050518.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T13:30:18Z",
+      "title": "Services à la personne et seniors: Natacha Polony propose \"un pacte pour la dignité\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-services-a-la-personne-et-seniors-natacha-polony-propose-un-pacte-pour-la-dignite_VN-202611050515.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Retailleau propose la fin des 35 heures pour « quasiment deux mois » de salaire supplémentaires",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-retailleau-propose-la-fin-des-35-heures-pour-quasiment-deux-mois-de-salaire-supplementaires-05-11-2026-FCTWCGD4SBGAPM6J6DMWAWLDJA.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Mobilisation du 5 novembre : bloqué par des militants place de la République, Raphaël Glucksmann a quitté la manifestation",
+      "url": "https://www.leparisien.fr/politique/mobilisation-du-5-novembre-bloque-par-des-militants-place-de-la-republique-raphael-glucksmann-a-quitte-la-manifestation-05-11-2026-CHNYSBRH2BCHVEU4UTFNQBVSVU.php"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-05T14:44:02Z",
+      "title": "Mobilisations en France : \"il va falloir un peu se bouger sur les réponses sociales\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-mobilisations-en-france-il-va-falloir-un-peu-se-bouger-sur-les-r%C3%A9ponses-sociales"
+    }
+  ],
+  "schema_version": "1.0"
+}
