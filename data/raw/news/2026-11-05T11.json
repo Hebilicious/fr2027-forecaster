@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T11:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-05T10:55:25Z",
+      "title": "David Lisnard fait officiellement certifier les 100 000 adhérents de son parti Nouvelle Energie",
+      "url": "https://www.liberation.fr/politique/david-lisnard-fait-officiellement-certifier-les-100-000-adherents-de-son-parti-nouvelle-energie-20261105_RSWPDTRENJCZXAXB6XMR4ZWVMM/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-05T10:39:12Z",
+      "title": "Quand Edouard Philippe livrait un plaidoyer pro-primaire : «Je ne suis pas par nature un enthousiaste de la primaire…»",
+      "url": "https://www.liberation.fr/politique/quand-edouard-philippe-livrait-un-plaidoyer-pro-primaire-je-ne-suis-pas-par-nature-un-enthousiaste-de-la-primaire-20261105_CQQTAGS6IVBIJBHM3J2RXCBKRI/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T10:44:49Z",
+      "title": "\"Une discussion sur le SMIC devrait relever d'une discussion entre les partenaires sociaux\", estime Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-une-discussion-sur-le-smic-devrait-relever-d-une-discussion-entre-les-partenaires-sociaux-estime-edouard-philippe_VN-202611050394.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T10:43:26Z",
+      "title": "\"Une incitation au racisme\": Dominique de Villepin dénonce le \"naufrage moral et politique\" d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/une-incitation-au-racisme-dominique-de-villepin-denonce-le-naufrage-moral-et-politique-d-edouard-philippe_AD-202611050392.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-05T10:41:13Z",
+      "title": "\"Il ne se résout pas à un duel LFI/RN\": Emmanuel Macron pour une \"coalition\" de David Lisnard à Raphaël Glucksmann avant la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/il-ne-se-resout-pas-a-un-duel-lfi-rn-emmanuel-macron-pour-une-coalition-de-david-lisnard-a-raphael-glucksmann-avant-la-presidentielle_AD-202611050388.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "David Lisnard poursuit sa percée selon un nouveau sondage, tandis que Jean-Luc Mélenchon patine",
+      "url": "https://www.leparisien.fr/elections/presidentielle/david-lisnard-poursuit-sa-percee-selon-un-nouveau-sondage-tandis-que-jean-luc-melenchon-patine-05-11-2026-ASRUQUYWE5EG3AF7KHSSSRC2II.php"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-05T10:09:38Z",
+      "title": "Présidentielle 2027 : « Personne ne gagnera seul », assure Marine Tondelier",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-personne-ne-gagnera-seul-assure-marine-tondelier"
+    }
+  ],
+  "schema_version": "1.0"
+}
