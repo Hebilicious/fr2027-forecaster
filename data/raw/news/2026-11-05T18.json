@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T18:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-05T17:56:42Z",
+      "title": "Grève du 5 novembre : malmené sur le terrain social, Raphaël Glucksmann veut continuer à aller « partout »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/greve-du-5-novembre-malmene-sur-le-terrain-social-raphael-glucksmann-veut-continuer-a-aller-partout-20261105"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-05T18:04:01Z",
+      "title": "«S’il y a des militants politiques qui sont hostiles, je m’en fous» : Raphaël Glucksmann présent à la manifestation mais forcé de rebrousser chemin",
+      "url": "https://www.liberation.fr/politique/sil-y-a-des-militants-politiques-qui-sont-hostiles-je-men-fous-raphael-glucksmann-present-a-la-manifestation-mais-force-de-rebrousser-chemin-20261105_JDBBQPL6ABGCTG4VLDMIKM5CJM/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-05T18:09:03Z",
+      "title": "Jordan Bardella demande le vote \"en urgence\" d'une \"règle d'or\" dans la Constitution, après le rejet du budget 2027 à l'Assemblée nationale",
+      "url": "https://www.franceinfo.fr/economie/budget/jordan-bardella-demande-le-vote-en-urgence-d-une-regle-d-or-dans-la-constitution-apres-le-rejet-du-budget-2027-a-l-assemblee-nationale_8269751.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-05T17:30:21Z",
+      "title": "Mobilisation du 5 novembre : Raphaël Glucksmann quitte le cortège après avoir été hué",
+      "url": "https://www.franceinfo.fr/economie/greve/greve/mobilisation-du-5-novembre-raphael-glucksmann-quitte-le-cortege-apres-avoir-ete-hue_8269736.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Soutien de Retailleau, adversaire de Braun-Pivet... À bientôt 80 ans, Jacques Myard se dit « en pleine forme »",
+      "url": "https://www.leparisien.fr/yvelines-78/soutien-de-retailleau-adversaire-de-braun-pivet-a-bientot-80-ans-jacques-myard-se-dit-en-pleine-forme-05-11-2026-Z3SADW5CMFAENMFYF4NBYVEMMI.php"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-05T16:41:04Z",
+      "title": "Sondage : 82 % des Français ne font pas confiance à Emmanuel Macron, qui bat le record d’impopularité de François Hollande à l’Elysée",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-82-des-francais-ne-font-pas-confiance-a-emmanuel-macron-qui-bat-le-record-dimpopularite-de-francois-hollande-a-lelysee"
+    }
+  ],
+  "schema_version": "1.0"
+}
