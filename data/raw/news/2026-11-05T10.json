@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-05T10:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bouamrane",
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-05T09:18:09Z",
+      "title": "Glucksmann en visite chez Bouamrane : «On se complète totalement»",
+      "url": "https://www.liberation.fr/politique/elections/glucksmann-en-visite-chez-bouamrane-on-se-complete-totalement-20261105_XFQGYUO3TJE2DI2OVMDOV6GYOU/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-05T09:27:19Z",
+      "title": "Des militants contre l'antisémitisme perturbent la soirée de lancement du livre de Jordan Bardella",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/des-militants-contre-l-antisemitisme-perturbent-la-soiree-de-lancement-du-livre-de-jordan-bardella_8269049.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Dominique de Villepin dénonce le « naufrage moral et politique » d’Édouard Philippe, après ses propos sur l’immigration",
+      "url": "https://www.leparisien.fr/politique/dominique-de-villepin-denonce-le-naufrage-moral-et-politique-dedouard-philippe-apres-ses-propos-sur-limmigration-05-11-2026-FBLJXKIDJVFW3ITY52Y2TZH3NA.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-05T10:08:51Z",
+      "title": "Philippe accuse Attal de consommer de la cocaïne ? Encore une trace d’ingérence russe dans la présidentielle française",
+      "url": "https://www.20minutes.fr/politique/4260447-20261105-philippe-accuse-attal-consommer-cocaine-encore-trace-ingerence-russe-presidentielle-francaise"
+    }
+  ],
+  "schema_version": "1.0"
+}
