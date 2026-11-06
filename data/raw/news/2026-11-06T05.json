@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-06T05:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-06T05:00:00Z",
+      "title": "Le troisième livre de Jordan Bardella «Gouverner» suscitera-t-il l’engouement du premier ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/le-troisieme-livre-de-jordan-bardella-gouverner-suscitera-t-il-l-engouement-du-premier-20261106"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T05:00:01Z",
+      "title": "Clémence Guetté (LFI) : «La VIe République sera écologique»",
+      "url": "https://www.liberation.fr/politique/elections/clemence-guette-lfi-la-vie-republique-sera-ecologique-20261106_W6DDNLKZK5G5NJGIKNX7HYUMVQ/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T05:00:01Z",
+      "title": "«Libé» a cherché les 7 différences dans le nouveau programme de Mélenchon : écologie, IA, Europe…",
+      "url": "https://www.liberation.fr/politique/elections/libe-a-cherche-les-7-differences-dans-le-nouveau-programme-de-melenchon-ecologie-ia-europe-20261106_4M26K43WZFGZRE2DRVIGDZT6ZQ/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : la volte-face stratégique de Bruno Retailleau",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-la-volte-face-strategique-de-bruno-retailleau-06-11-2026-OLTPWJ2ZMRFH7KQEWMLZPM653I.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
