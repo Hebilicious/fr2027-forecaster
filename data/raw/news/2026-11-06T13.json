@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-06T13:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T12:17:13Z",
+      "title": "Empêcher Glucksmann de défiler devrait révolter tout le monde à gauche, y compris les insoumis",
+      "url": "https://www.liberation.fr/politique/elections/empecher-glucksmann-de-defiler-devrait-revolter-tout-le-monde-a-gauche-y-compris-les-insoumis-20261106_BTBW7YCGNBFJRP24M2BJESFON4/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T13:04:18Z",
+      "title": "Présidentielle 2027: Gabriel Attal estime qu'une primaire de la droite et du centre pourrait aboutir \"rapidement\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-gabriel-attal-estime-qu-une-primaire-de-la-droite-et-du-centre-pourrait-aboutir-rapidement_AD-202611060522.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T12:20:38Z",
+      "title": "Une primaire de la droite et du centre pourrait aboutir \"rapidement\", selon Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-une-primaire-de-la-droite-et-du-centre-pourrait-aboutir-rapidement-selon-gabriel-attal_VN-202611060506.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Liberté, Égalité, Solidarité », Jean-Luc Mélenchon dévoile une nouvelle affiche de campagne",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-liberte-egalite-solidarite-jean-luc-melenchon-devoile-une-nouvelle-affiche-de-campagne-06-11-2026-B6WRBL2BNNHSPFP7JVDPYCLSNI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
