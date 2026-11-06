@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-06T22:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T22:07:14Z",
+      "title": "Crise sociale: \"Le gouvernement doit donner des gages\", estime Karim Bouamrane",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-crise-sociale-le-gouvernement-doit-donner-des-gages-estime-karim-bouamrane_VN-202611060939.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T22:06:20Z",
+      "title": "\"Il n'y aura pas de budget voté s'il n'y a pas de compromis\", estime Karim Bouamrane, maire PS de Saint-Ouen et candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-il-n-y-aura-pas-de-budget-vote-s-il-n-y-a-pas-de-compromis-estime-karim-bouamrane-maire-ps-de-saint-ouen-et-candidat-a-l-election-presidentielle_VN-202611060933.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T21:58:49Z",
+      "title": "Crise sociale: \"Il y a un mélange d'espoir et le rejet du mépris\", estime Karim Bouamrane, maire PS de Saint-Ouen et candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-crise-sociale-il-y-a-un-melange-d-espoir-et-le-rejet-du-mepris-estime-karim-bouamrane-maire-ps-de-saint-ouen-et-candidat-a-l-election-presidentielle_VN-202611060929.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T21:44:50Z",
+      "title": "Crise sociale: \"Le gouvernement doit tout de suite donner des gages\", estime Karim Bouamrane, maire PS de Saint-Ouen et candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-crise-sociale-le-gouvernement-doit-tout-de-suite-donner-des-gages-estime-karim-bouamrane-maire-ps-de-saint-ouen-et-candidat-a-l-election-presidentielle_VN-202611060922.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
