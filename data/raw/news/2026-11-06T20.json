@@ -1,0 +1,126 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-06T20:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-06T19:42:56Z",
+      "title": "Choc fiscal massif, envolée des dépenses publiques… La dangereuse expérience collectiviste proposée par Mélenchon pour la présidentielle",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/choc-fiscal-massif-envolee-des-depenses-publiques-la-dangereuse-experience-collectiviste-proposee-par-melenchon-pour-la-presidentielle-20261106"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T19:54:47Z",
+      "title": "D’un Bourget à l’autre : comment Jean-Luc Mélenchon veut continuer de supplanter le PS",
+      "url": "https://www.liberation.fr/politique/dun-bourget-a-lautre-comment-jean-luc-melenchon-veut-continuer-de-supplanter-le-ps-20261106_A22URJZ24NCBFAVXZYA5VXMMIA/"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T19:51:28Z",
+      "title": "Présidentielle 2027 : au Bourget, Mélenchon et l’ombre de Hollande",
+      "url": "https://www.liberation.fr/idees-et-debats/editorial/presidentielle-2027-au-bourget-melenchon-et-lombre-de-hollande-20261106_QLPLAYU2MJEXJFQYEAJXBE45MU/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-06T19:02:39Z",
+      "title": "« La fébrilité est de leur côté, pas du sien » : sous pression du camp Attal et Retailleau, Edouard Philippe reste droit dans ses bottes et refuse la primaire",
+      "url": "https://www.publicsenat.fr/actualites/politique/la-febrilite-est-de-leur-cote-pas-du-sien-sous-pression-du-camp-attal-et-retailleau-edouard-philippe-reste-droit-dans-ses-bottes-et-refuse-la-primaire"
+    }
+  ],
+  "schema_version": "1.0"
+}
