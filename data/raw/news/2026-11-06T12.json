@@ -1,0 +1,133 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-06T12:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T12:11:19Z",
+      "title": "Présidentielle 2027 : «Si Mélenchon dispose d’un socle très solide, il est à un niveau de rejet sans équivalent»",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-si-melenchon-dispose-dun-socle-tres-solide-il-est-a-un-niveau-de-rejet-sans-equivalent-20261106_RMCTIM53B5D7RKJW32ABCTY76M/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T11:39:37Z",
+      "title": "Des primaires à droite? \"Il faudrait au moins qu'on ait la maturité pour faire trois débats\", estime Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-des-primaires-a-droite-il-faudrait-au-moins-qu-on-ait-la-maturite-pour-faire-trois-debats-estime-bruno-retailleau_VN-202611060481.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T11:35:53Z",
+      "title": "Présidentielle 2027: Bruno Retailleau \"pense\" que Jean-Luc Mélenchon dépassera \"le seuil de 20%\"",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-presidentielle-2027-bruno-retailleau-pense-que-jean-luc-melenchon-depassera-le-seuil-de-20_VN-202611060480.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T11:23:09Z",
+      "title": "\"Je veux réviser la constitution\": Bruno Retailleau favorable à un référendum sur l'immigration",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-je-veux-reviser-la-constitution-bruno-retailleau-favorable-a-un-referendum-sur-l-immigration_VN-202611060474.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T11:17:38Z",
+      "title": "Retraites et fonctionnaires: deux sujets indispensables de la présidentielle selon Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-retraites-et-fonctionnaires-deux-sujets-indispensables-de-la-presidentielle-selon-bruno-retailleau_VN-202611060468.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
