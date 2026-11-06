@@ -1,0 +1,136 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-06T11:18:26Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T10:16:22Z",
+      "title": "Présidentielle : François Ruffin pourrait retirer sa candidature «si une solution se dégage pour battre Marine Le Pen»",
+      "url": "https://www.liberation.fr/politique/presidentielle-francois-ruffin-pourrait-retirer-sa-candidature-si-une-solution-se-degage-pour-battre-marine-le-pen-20261106_RUQMLP44YZGGZFYLF3ZH2H3SBQ/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T11:00:51Z",
+      "title": "Présidentielle 2027: Bruno Retailleau dénonce la multiplication des normes, \"des boulets que l'on met aux Français\"",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-presidentielle-2027-bruno-retailleau-denonce-la-multiplication-des-normes-des-boulets-que-l-on-met-aux-francais_VN-202611060452.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T09:25:41Z",
+      "title": "Présidentielle 2027: François Ruffin retirera sa candidature \"si une solution se dégage pour battre Marine Le Pen\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-francois-ruffin-retirera-sa-candidature-si-une-solution-se-degage-pour-battre-marine-le-pen_AD-202611060378.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : émission sur les réseaux ce vendredi et « grand meeting » à Paris le 6 décembre, Raphaël Glucksmann lance sa campagne",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-emission-sur-les-reseaux-ce-vendredi-et-grand-meeting-a-paris-le-6-decembre-raphael-glucksmann-lance-sa-campagne-06-11-2026-VJAS3ET2JJBA5C7JDA47N6FOIY.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : François Ruffin se dit prêt à retirer sa candidature… mais pas pour Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-francois-ruffin-se-dit-pret-a-retirer-sa-candidature-mais-pas-pour-jean-luc-melenchon-06-11-2026-HCRDJPLNBNAPTABGGVFIMRJH2E.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
