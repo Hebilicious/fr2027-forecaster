@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-06T08:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-06T08:01:59Z",
+      "title": "\"Il faut mettre le SMIC net à 1 600 euros\", propose Nicolas Dupont-Aignan au lendemain de la mobilisation contre la vie chère",
+      "url": "https://www.franceinfo.fr/politique/il-faut-mettre-le-smic-net-a-1-600-euros-propose-nicolas-dupont-aignan-au-lendemain-de-la-mobilisation-contre-la-vie-chere_8270444.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T07:44:09Z",
+      "title": "Raphaël Glucksmann chahuté dans le cortège parisien du 5 novembre: \"Une manifestation n'est pas un lieu de campagne\", souligne Alain Bauer, professeur émérite en criminologie",
+      "url": "https://www.bfmtv.com/politique/video-raphael-glucksmann-chahute-dans-le-cortege-parisien-du-5-novembre-une-manifestation-n-est-pas-un-lieu-de-campagne-souligne-alain-bauer-professeur-emerite-en-criminologie_VN-202611060292.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
