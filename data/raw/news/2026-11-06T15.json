@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.france24.com/fr/france/rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;france24&#46;com&#47;fr&#47;france&#47;rss\" on this server.<P>\nReference&#32;&#35;18&#46;1751c317&#46;1793978307&#46;1bc19949\n<P>https&#58;&#47;&#47;errors",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-11-06T15:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-06T15:00:03Z",
+      "title": "Le député LR Antoine Vermorel veut verdir la droite avec un livre programme sur l’environnement",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/06/le-depute-lr-antoine-vermorel-veut-verdir-la-droite-avec-un-livre-programme-sur-l-environnement_6807801_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T14:42:51Z",
+      "title": "«Caca sur Bardella», «fanfare et révolution»… Ces hymnes du mouvement lycéen qui chantent la protestation joyeuse contre l’air du temps réac",
+      "url": "https://www.liberation.fr/politique/caca-sur-bardella-fanfare-et-revolution-ces-hymnes-du-mouvement-lyceen-qui-chantent-la-protestation-joyeuse-contre-lair-du-temps-reac-20261106_TPLLKQ6BPJEMRBJ36ULOE467K4/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "David Lisnard, « candidat de l’automne » ? Ces anciens prétendants à l’Élysée très populaires dans les sondages, qui ont fini loin du podium lors du scrutin",
+      "url": "https://www.leparisien.fr/elections/presidentielle/david-lisnard-candidat-de-lautomne-ces-anciens-pretendants-a-lelysee-tres-populaires-dans-les-sondages-qui-ont-fini-loin-du-podium-lors-du-scrutin-06-11-2026-XZZ47JS2VRBL5EILSBNPQKUZL4.php"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "glucksmann"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-06T14:34:36Z",
+      "title": "[DOCUMENT] L’organigramme de campagne complet de Raphaël Glucksmann, Olivier Faure membre du comité politique",
+      "url": "https://www.publicsenat.fr/actualites/politique/document-lorganigramme-de-campagne-complet-de-raphael-glucksmann-olivier-faure-membre-du-comite-politique"
+    }
+  ],
+  "schema_version": "1.0"
+}
