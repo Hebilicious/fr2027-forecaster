@@ -1,0 +1,150 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-06T19:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-06T19:00:00Z",
+      "title": "Guillaume Tabard : « Jordan Bardella, un rôle à réinventer pour le numéro deux »",
+      "url": "https://www.lefigaro.fr/politique/guillaume-tabard-jordan-bardella-un-role-a-reinventer-pour-le-numero-deux-20261106"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-06T18:25:00Z",
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon fait de la conquête de la rue un tremplin vers sa « révolution citoyenne »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-jean-luc-melenchon-fait-de-la-conquete-de-la-rue-un-tremplin-vers-sa-revolution-citoyenne-20261106"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-06T18:10:00Z",
+      "title": "Immigration, police, international… Le programme présidentiel toujours plus radical de LFI",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/immigration-police-international-le-programme-presidentiel-toujours-plus-radical-de-lfi-20261106"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T19:01:14Z",
+      "title": "France Info : l’éditorialiste Alix Bouilhaguet visée par une procédure disciplinaire après de fausses affirmations sur Mélenchon",
+      "url": "https://www.liberation.fr/economie/medias/france-info-leditorialiste-alix-bouilhaguet-visee-par-une-procedure-disciplinaire-apres-de-fausses-affirmations-sur-melenchon-20261106_ZY3F7XTERBHEDPAEFHHJMX2BVM/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-06T18:50:14Z",
+      "title": "Nouvelle-Calédonie : les indépendantistes du FLNKS annoncent soutenir Jean-Luc Mélenchon pour la présidentielle",
+      "url": "https://www.liberation.fr/politique/elections/nouvelle-caledonie-les-independantistes-du-flnks-annoncent-soutenir-jean-luc-melenchon-pour-la-presidentielle-20261106_TTITGX45JBBWPFJ4KYEZ7RI47U/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T19:09:35Z",
+      "title": "\"Les gens ne sont pas contre la démocratie heureusement, ils sont contre l'impussance\", déclare David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-gens-ne-sont-pas-contre-la-democratie-heureusement-ils-sont-contre-l-impussance-declare-david-lisnard_VN-202611060848.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-06T18:19:53Z",
+      "title": "\"Le 20.27\" - Marine Le Pen et Bruno Retailleau à Aéronaval: qui pour piloter le pays ?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-20-27-marine-le-pen-et-bruno-retailleau-a-aeronaval-qui-pour-piloter-le-pays_VN-202611060812.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
