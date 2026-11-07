@@ -1,0 +1,163 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T22:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:40:45Z",
+      "title": "\"Nous sommes nombreux a demandé la baisse de la TVA\" sur l'énergie, déclare Fabien Roussel",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-sommes-nombreux-a-demande-la-baisse-de-la-tva-sur-l-energie-declare-fabien-roussel_VN-202611070535.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:38:25Z",
+      "title": "\"Les bisbilles à gauche ce n'est pas mon dada, moi je vais rester concentré sur le programme que nous voulons défendre\", déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-bisbilles-a-gauche-ce-n-est-pas-mon-dada-moi-je-vais-rester-concentre-sur-le-programme-que-nous-voulons-defendre-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070531.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:38:01Z",
+      "title": "\"Aujourd'hui pour que la gauche puisse l'emporter, il faut qu'elle soit plus forte\", déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-aujourd-hui-pour-que-la-gauche-puisse-l-emporter-il-faut-qu-elle-soit-plus-forte-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070530.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:34:50Z",
+      "title": "Députés communistes qui soutiennent Jean-Luc Mélenchon: \"Ce n'est pas très élégant ce qu'ils ont fait, il n'y a même pas eu un petit coup de fil\", déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-deputes-communistes-qui-soutiennent-jean-luc-melenchon-ce-n-est-pas-tres-elegant-ce-qu-ils-ont-fait-il-n-y-a-meme-pas-eu-un-petit-coup-de-fil-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070528.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:17:06Z",
+      "title": "Emmanuel Macron \"a été le serviteur zélé des plus riches et des institutions bancaires\", dénonce Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-emmanuel-macron-a-ete-le-serviteur-zele-des-plus-riches-et-des-institutions-bancaires-denonce-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070521.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:16:14Z",
+      "title": "\"L'abrogation de Parcoursup il faut le faire, on a fait sans Parcoursup avant\", déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-abrogation-de-parcoursup-il-faut-le-faire-on-a-fait-sans-parcoursup-avant-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070520.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:15:29Z",
+      "title": "\"Il faut un coup de pouce sur le SMIC mais en même temps une indexation des salaires\", déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faut-un-coup-de-pouce-sur-le-smic-mais-en-meme-temps-une-indexation-des-salaires-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070519.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
