@@ -1,0 +1,149 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T21:18:08Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-07T20:30:30Z",
+      "title": "REPORTAGE. \"Nous allons gagner\" : au Bourget, Jean-Luc Mélenchon dévoile son programme pour 2027 et poursuit sa démonstration de force",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/reportage-nous-allons-gagner-au-bourget-jean-luc-melenchon-devoile-son-programme-pour-2027-et-poursuit-sa-demonstration-de-force_8272679.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:05:49Z",
+      "title": "\"Nous sommes nombreux au Parlement a demandé la baisse de la TVA\" sur l'énergie, déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-sommes-nombreux-au-parlement-a-demande-la-baisse-de-la-tva-sur-l-energie-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070514.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T21:05:24Z",
+      "title": "\"Nous demandons de porter le SMIC à 2.200 euros brut\", déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-demandons-de-porter-le-smic-a-2-200-euros-brut-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070513.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T20:56:12Z",
+      "title": "Crise sociale: \"Ce n’est pas du bleu qu'il faut, mais des actes\", déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-crise-sociale-ce-n-est-pas-du-bleu-qu-il-faut-mais-des-actes-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070511.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T20:55:35Z",
+      "title": "\"Je refuse les discours déclinistes\", déclare Fabien Roussel, candidat PCF à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-refuse-les-discours-declinistes-declare-fabien-roussel-candidat-pcf-a-la-presidentielle_VN-202611070510.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-07T20:45:39Z",
+      "title": "Présidentielle 2027 : La large coalition suggérée par Macron « décrédibilise la politique », estime Raphaël Glucksmann",
+      "url": "https://www.20minutes.fr/politique/4261213-20261107-presidentielle-2027-large-coalition-suggeree-macron-decredibilise-politique-estime-raphael-glucksmann"
+    }
+  ],
+  "schema_version": "1.0"
+}
