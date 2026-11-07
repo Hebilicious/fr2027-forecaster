@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T09:18:07Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-07T08:45:00Z",
+      "title": "Après le «moment Bardella», l’aura faiblissante du RN chez la jeunesse",
+      "url": "https://www.liberation.fr/politique/apres-le-moment-bardella-laura-faiblissante-du-rn-chez-la-jeunesse-20261107_7GTSRYMPOJEBDN3GTFF2AQ5KME/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-07T08:12:00Z",
+      "title": "Face à l’attraction insoumise, les tiraillements écolos et communistes",
+      "url": "https://www.liberation.fr/politique/face-a-lattraction-insoumise-les-tiraillements-ecolos-et-communistes-20261107_DLJKFCEYDVFXPESESJBASR7IEA/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-07T08:38:42Z",
+      "title": "Augmentation du Smic, primaire de la droite et du centre, propos d'Edouard Philippe sur les pillards du 17 octobre... Le \"8h30 franceinfo\" de Jérémie Patrier-Leitus",
+      "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/augmentation-du-smic-primaire-de-la-droite-et-du-centre-propos-d-edouard-philippe-sur-les-pillards-du-17-octobre-le-8h30-franceinfo-de-jeremie-patrier-leitus_8251732.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-06T23:32:01Z",
+      "title": "Grand meeting de Mélenchon au Bourget, après la sortie de son programme présidentiel",
+      "url": "https://www.france24.com/fr/france/20261106-grand-meeting-de-m%C3%A9lenchon-au-bourget-apr%C3%A8s-la-sortie-de-son-programme-pr%C3%A9sidentiel"
+    }
+  ],
+  "schema_version": "1.0"
+}
