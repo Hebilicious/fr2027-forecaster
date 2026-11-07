@@ -1,0 +1,134 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T11:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-07T10:53:44Z",
+      "title": "\"La primaire est un instrument de division\", affirme Jérémie Patrier-Leitus, porte-parole d'Edouard Philippe pour 2027",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/la-primaire-est-un-instrument-de-division-affirme-jeremie-patrier-leitus-porte-parole-d-edouard-philippe-pour-2027_8272208.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T10:59:13Z",
+      "title": "Programme de LFI pour 2027: Marine Le Pen y voit un \"projet de démantèlement de la France\", Jean-Luc Mélenchon estime que le RN \"c'est presque du Édouard Philippe\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/programme-de-lfi-pour-2027-marine-le-pen-y-voit-un-projet-de-demantelement-de-la-france-jean-luc-melenchon-estime-que-le-rn-c-est-presque-du-edouard-philippe_AD-202611070210.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T10:30:57Z",
+      "title": "Édouard Philippe, candidat Horizons, s'exprime avant une réunion publique à La Ciotat",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-edouard-philippe-candidat-horizons-s-exprime-avant-une-reunion-publique-a-la-ciotat_VN-202611070201.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T10:26:35Z",
+      "title": "Conférence sociale: \"Je crains qu'on ne soit pas en mesure de régler durablement les problèmes avant l'élection présidentielle\", déplore Édouard Philippe, candidat \"Horizons à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-conference-sociale-je-crains-qu-on-ne-soit-pas-en-mesure-de-regler-durablement-les-problemes-avant-l-election-presidentielle-deplore-edouard-philippe-candidat-horizons-a-la-presidentielle_VN-202611070199.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-07T10:53:29Z",
+      "title": "Présidentielle 2027 : Le Pen pense que le programme de LFI est un « projet de démantèlement de la France »",
+      "url": "https://www.20minutes.fr/politique/4261144-20261107-presidentielle-2027-pen-pense-programme-lfi-projet-demantelement-france"
+    }
+  ],
+  "schema_version": "1.0"
+}
