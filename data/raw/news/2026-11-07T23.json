@@ -1,0 +1,119 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T23:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T23:02:40Z",
+      "title": "\"Ce que je propose, ce n'est pas la même chose que ce que souhaite\" Emmanuel Macron, déclare Édouard Philippe, candidat (Horizons) à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ce-que-je-propose-ce-n-est-pas-la-meme-chose-que-ce-que-souhaite-emmanuel-macron-declare-edouard-philippe-candidat-horizons-a-la-presidentielle_VN-202611070565.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T22:44:12Z",
+      "title": "Présidentielle 2027: la réponse de Fabien Roussel (PCF) sur les députés de son parti qui soutiennent Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-la-reponse-de-fabien-roussel-pcf-sur-les-deputes-de-son-parti-qui-soutiennent-jean-luc-melenchon_VN-202611070557.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T22:39:50Z",
+      "title": "Crise sociale: pour Fabien Roussel, candidat PCF à la présidentielle, il faut augmenter le Smic",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-crise-sociale-pour-fabien-roussel-candidat-pcf-a-la-presidentielle-il-faut-augmenter-le-smic_VN-202611070554.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
