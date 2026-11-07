@@ -1,0 +1,120 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T08:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-07T08:08:41Z",
+      "title": "\"Il n'y en a qu'un qui ne veut pas de cette primaire\" : sous pression, Édouard Philippe peut-il encore échapper à une primaire de la droite et du centre ?",
+      "url": "https://www.franceinfo.fr/replay-radio/le-brief-politique/il-n-y-en-a-qu-un-qui-ne-veut-pas-de-cette-primaire-sous-pression-edouard-philippe-peut-il-encore-echapper-a-une-primaire-de-la-droite-et-du-centre_8251654.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-07T08:15:29Z",
+      "title": "DIRECT. Présidentielle 2027 : Jean-Luc Mélenchon va présenter son programme au Bourget",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-jean-luc-melenchon-va-presenter-son-programme-au-bourget_8272022.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-07T07:47:37Z",
+      "title": "Présidentielle 2027 : Que disent les derniers sondages à cinq mois du premier tour ?",
+      "url": "https://www.20minutes.fr/politique/4260946-20261107-presidentielle-2027-disent-derniers-sondages-cinq-mois-premier-tour"
+    }
+  ],
+  "schema_version": "1.0"
+}
