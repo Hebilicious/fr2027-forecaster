@@ -1,0 +1,317 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T17:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-07T16:21:22Z",
+      "title": "Présidentielle 2027 : « Je n’ai qu’une chose raisonnable à vous proposer : il faut tout changer », lance Jean-Luc Mélenchon en introduction de son meeting au Bourget",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/07/presidentielle-2027-je-n-ai-qu-une-chose-raisonnable-a-vous-proposer-il-faut-tout-changer-lance-jean-luc-melenchon-en-introduction-de-son-meeting-au-bourget_6808296_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-07T17:00:03Z",
+      "title": "Les automnes de la Présidentielle",
+      "url": "https://www.franceinfo.fr/replay-radio/l-info-de-l-histoire/les-automnes-de-la-presidentielle_8251696.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:10:36Z",
+      "title": "\"Nous proposons une VIe République organisée autour de la souveraineté populaire permanente\", lance Jean-Luc Mélenchon, candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-nous-proposons-une-v-ie-republique-organisee-autour-de-la-souverainete-populaire-permanente-lance-jean-luc-melenchon-candidat-a-la-presidentielle_VN-202611070438.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:09:03Z",
+      "title": "\"Je vous parle de la nouvelle France\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-vous-parle-de-la-nouvelle-france-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070437.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:07:49Z",
+      "title": "\"Nous allons créer un pôle public du médicament (...) nous ferons le 100% sécu\", annonce Jean-Luc Mélenchon, candidat LFI à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-allons-creer-un-pole-public-du-medicament-nous-ferons-le-100-secu-annonce-jean-luc-melenchon-candidat-lfi-a-la-presidentielle_VN-202611070436.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:06:43Z",
+      "title": "\"La santé est devenue un problème central pour la survie de notre espèce, beaucoup refusent de le voir et de l'admettre\", dénonce Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-sante-est-devenue-un-probleme-central-pour-la-survie-de-notre-espece-beaucoup-refusent-de-le-voir-et-de-l-admettre-denonce-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070434.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:00:15Z",
+      "title": "Présidentielle 2027: \"Certains me recommandent de mettre de l'eau dans mon vin pour séduire et être moins clivant, je ne le ferai pas\", assure Jean-Luc Mélenchon, candidat LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-certains-me-recommandent-de-mettre-de-l-eau-dans-mon-vin-pour-seduire-et-etre-moins-clivant-je-ne-le-ferai-pas-assure-jean-luc-melenchon-candidat-lfi_VN-202611070428.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:56:17Z",
+      "title": "\"Nous allons nous battre jusqu'à la dernière seconde et à la fin nous allons gagner\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-allons-nous-battre-jusqu-a-la-derniere-seconde-et-a-la-fin-nous-allons-gagner-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070426.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:55:03Z",
+      "title": "\"Dans ce pays, le Code du travail a été abîmé dès la première heure par Emmanuel Macron\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dans-ce-pays-le-code-du-travail-a-ete-abime-des-la-premiere-heure-par-emmanuel-macron-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070425.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:54:01Z",
+      "title": "Pour Jean-Luc Mélenchon, l'intelligence artificielle est \"un défi existentiel\" qu'il faut \"réguler\" à l'échelle \"mondiale\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-jean-luc-melenchon-l-intelligence-artificielle-est-un-defi-existentiel-qu-il-faut-reguler-a-l-echelle-mondiale_VN-202611070424.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:51:42Z",
+      "title": "Écologie: \"Nous organiserons un changement complet\", détaille Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ecologie-nous-organiserons-un-changement-complet-detaille-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070423.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:50:14Z",
+      "title": "Jean-Luc Mélenchon veut \"agir frontalement au secours des Palestiniens contre le génocide à Gaza et contre l'annexion progressive de la Cisjordanie\" en cas de victoire à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-veut-agir-frontalement-au-secours-des-palestiniens-contre-le-genocide-a-gaza-et-contre-l-annexion-progressive-de-la-cisjordanie-en-cas-de-victoire-a-l-election-presidentielle_VN-202611070422.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:47:58Z",
+      "title": "\"Il faut remettre à l'ordre du jour le désarmement nucléaire de la planète région par région\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faut-remettre-a-l-ordre-du-jour-le-desarmement-nucleaire-de-la-planete-region-par-region-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070421.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:47:07Z",
+      "title": "\"Nous n'avons rien à faire dans l'Otan\", lance Jean-Luc Mélenchon, candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-n-avons-rien-a-faire-dans-l-otan-lance-jean-luc-melenchon-candidat-a-la-presidentielle_VN-202611070419.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:45:57Z",
+      "title": "\"Il faudrait immédiatement bloquer les prix, augmenter le SMIC, indexer les salaires sur l'inflation \", détaille Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faudrait-immediatement-bloquer-les-prix-augmenter-le-smic-indexer-les-salaires-sur-l-inflation-detaille-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070418.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:43:43Z",
+      "title": "Jean-Luc Mélenchon veut \"une politique de relance\" avec \"des milliards orientés vers les besoins écologiques et sociaux\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-veut-une-politique-de-relance-avec-des-milliards-orientes-vers-les-besoins-ecologiques-et-sociaux_VN-202611070417.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:38:35Z",
+      "title": "\"Marine Le Pen et Jordan Bardella sont devenus les plus hostiles aux droits sociaux du peuple en France\", dénonce Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-le-pen-et-jordan-bardella-sont-devenus-les-plus-hostiles-aux-droits-sociaux-du-peuple-en-france-denonce-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070413.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:33:12Z",
+      "title": "\"Tu nais ici, tu es Français\": Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle, défend le droit du sol",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-tu-nais-ici-tu-es-francais-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle-defend-le-droit-du-sol_VN-202611070410.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:28:55Z",
+      "title": "\"Je n'ai qu'une chose raisonnable à vous proposer, il faut tout changer\", lance Jean-Luc Mélenchon, candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-n-ai-qu-une-chose-raisonnable-a-vous-proposer-il-faut-tout-changer-lance-jean-luc-melenchon-candidat-a-l-election-presidentielle_VN-202611070408.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:26:15Z",
+      "title": "Dettes privées, IA: \"Tout cela va effondrer le système financier international, il faut démanteler les citadelles de ce système pourri\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dettes-privees-ia-tout-cela-va-effondrer-le-systeme-financier-international-il-faut-demanteler-les-citadelles-de-ce-systeme-pourri-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070407.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:24:33Z",
+      "title": "\"Tout le monde déteste le pouvoir macroniste\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-tout-le-monde-deteste-le-pouvoir-macroniste-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070401.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:23:36Z",
+      "title": "Colère lycéenne: pour Jean-Luc Mélenchon, candidat LFI à la présidentielle, \"Parcoursup\" est un \"emblème répugnant du projet libéral\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-colere-lyceenne-pour-jean-luc-melenchon-candidat-lfi-a-la-presidentielle-parcoursup-est-un-embleme-repugnant-du-projet-liberal_VN-202611070402.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:18:26Z",
+      "title": "\"Une fois au pouvoir nous poursuivrons au peigne fin le racisme par tous les moyens légaux\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-une-fois-au-pouvoir-nous-poursuivrons-au-peigne-fin-le-racisme-par-tous-les-moyens-legaux-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070400.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:15:43Z",
+      "title": "\"Bienvenue à qui veut agir avec nous\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle, pour saluer le soutien d'une partie des députés communistes",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bienvenue-a-qui-veut-agir-avec-nous-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle-pour-saluer-le-soutien-d-une-partie-des-deputes-communistes_VN-202611070399.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
