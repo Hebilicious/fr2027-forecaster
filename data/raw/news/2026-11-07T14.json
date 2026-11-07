@@ -1,0 +1,134 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T14:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-07T13:37:27Z",
+      "title": "Présidentielle 2027 : les députés communistes qui soutiennent LFI se mettent « en dehors du parti », dit le PCF",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/07/presidentielle-2027-les-deputes-communistes-qui-soutiennent-lfi-se-mettent-en-dehors-du-parti-dit-le-pcf_6808279_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T14:03:43Z",
+      "title": "Le Parti communiste français déclare que tout adhérent qui ne soutient pas son candidat pour 2027 se met \"en dehors du parti\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/le-parti-communiste-francais-declare-que-tout-adherent-qui-ne-soutient-pas-son-candidat-pour-2027-se-met-en-dehors-du-parti_AD-202611070342.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T13:39:50Z",
+      "title": "“Marine Le Pen est la seule qui peut incarner cette rupture”, juge Éric Ciotti, président de l'UDR et maire de Nice, aux Rencontres de l'Avenir de Saint Raphaël",
+      "url": "https://www.bfmtv.com/politique/video-marine-le-pen-est-la-seule-qui-peut-incarner-cette-rupture-juge-eric-ciotti-president-de-l-udr-et-maire-de-nice-aux-rencontres-de-l-avenir-de-saint-raphael_VN-202611070323.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T13:32:42Z",
+      "title": "Édouard Philippe critique la \"vision communautariste\" de Jean-Luc Mélenchon et revient sur ses propos sur les Français \"issus de l'immigration\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/edouard-philippe-critique-la-vision-communautariste-de-jean-luc-melenchon-et-revient-sur-ses-propos-sur-les-francais-issus-de-l-immigration_AD-202611070319.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-07T13:34:49Z",
+      "title": "Grand meeting de Mélenchon au Bourget : LFI lance sa campagne",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261107-grand-meeting-de-m%C3%A9lenchon-au-bourget-lfi-lance-sa-campagne"
+    }
+  ],
+  "schema_version": "1.0"
+}
