@@ -1,0 +1,168 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T18:18:07Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-07T17:59:42Z",
+      "title": "Les députés communistes qui soutiennent La France insoumise se sont mis \"en dehors du parti\", estime le PCF",
+      "url": "https://www.franceinfo.fr/politique/les-deputes-communistes-qui-soutiennent-la-france-insoumise-se-sont-mis-en-dehors-du-parti-estime-le-pcf_8272592.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T18:11:18Z",
+      "title": "“L’intelligence artificielle est devenue un élément de puissance” : Édouard Philippe expose sa vision sur l’intelligence artificielle et les régulations nécéssaires",
+      "url": "https://www.bfmtv.com/politique/video-l-intelligence-artificielle-est-devenue-un-element-de-puissance-edouard-philippe-expose-sa-vision-sur-l-intelligence-artificielle-et-les-regulations-necessaires_VN-202611070468.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:50:21Z",
+      "title": "“Il n’y a pas assez d’orientations” : Édouard Philippe évoque ce qui ne fonctionne pas sur Parcoursup",
+      "url": "https://www.bfmtv.com/politique/video-il-n-y-a-pas-assez-d-orientations-edouard-philippe-evoque-ce-qui-ne-fonctionne-pas-sur-parcoursup_VN-202611070460.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:46:09Z",
+      "title": "“On est écrasé par l’immédiateté” : Édouard Philippe veut des décisions qui soient bénéfiques sur le long terme",
+      "url": "https://www.bfmtv.com/politique/video-on-est-ecrase-par-l-immediatete-edouard-philippe-veut-des-decisions-qui-soient-benefiques-sur-le-long-terme_VN-202611070459.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:32:08Z",
+      "title": "“La société française est dans un état d’inquiétude spectaculaire” : Édouard Philippe réagit à la vision pessimiste de l’avenir des Français",
+      "url": "https://www.bfmtv.com/politique/video-la-societe-francaise-est-dans-un-etat-d-inquietude-spectaculaire-edouard-philippe-reagit-a-la-vision-pessimiste-de-l-avenir-des-francais_VN-202611070446.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:19:20Z",
+      "title": "Jean-Luc Mélenchon, candidat LFI à la présidentielle, était en meeting au Bourget",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-candidat-lfi-a-la-presidentielle-etait-en-meeting-au-bourget_VN-202611070439.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T17:17:35Z",
+      "title": "\"Je n'ai qu'une chose raisonnable à vous proposer, il faut tout changer\", déclare Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-n-ai-qu-une-chose-raisonnable-a-vous-proposer-il-faut-tout-changer-declare-jean-luc-melenchon_VN-202611070452.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-07T17:18:42Z",
+      "title": "Mélenchon : \"Je n'ai qu'une chose raisonnable à vous proposer, il faut tout changer\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261107-m%C3%A9lenchon-je-n-ai-qu-une-chose-raisonnable-%C3%A0-vous-proposer-il-faut-tout-changer-1"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-07T17:08:52Z",
+      "title": "Mélenchon : \"Je n'ai qu'une chose raisonnable à vous proposer, il faut tout changer\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261107-m%C3%A9lenchon-je-n-ai-qu-une-chose-raisonnable-%C3%A0-vous-proposer-il-faut-tout-changer"
+    }
+  ],
+  "schema_version": "1.0"
+}
