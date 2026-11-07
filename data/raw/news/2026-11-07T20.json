@@ -1,0 +1,211 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T20:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-07T19:35:59Z",
+      "title": "Au Bourget, Jean-Luc Mélenchon refuse l’ouverture au reste de la gauche, un pari à haut risque",
+      "url": "https://www.liberation.fr/politique/au-bourget-jean-luc-melenchon-refuse-louverture-au-reste-de-la-gauche-un-pari-a-haut-risque-20261107_HLVHHJCBYVAJNPEAGSYMY7MYSU/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-07T19:43:45Z",
+      "title": "\"Il faut tout changer !\", scande Jean-Luc Mélenchon lors de son grand meeting du Bourget",
+      "url": "https://www.franceinfo.fr/politique/melenchon/il-faut-tout-changer-scande-jean-luc-melenchon-lors-de-son-grand-meeting-du-bourget_8272676.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T20:10:16Z",
+      "title": "Primaire à droite: \"Édouard Philippe n'a pas raison de refuser la primaire\", estime Gérard Longuet, ancien ministre de la Défense",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-a-droite-edouard-philippe-n-a-pas-raison-de-refuser-la-primaire-estime-gerard-longuet-ancien-ministre-de-la-defense_VN-202611070501.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T19:51:59Z",
+      "title": "Meeting au Bourget: \"Jean-Luc Mélenchon est une bête de scène, il sait parler mais ne sait pas compter\", observe Gérard Longuet, ancien ministre de la Défense",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-meeting-au-bourget-jean-luc-melenchon-est-une-bete-de-scene-il-sait-parler-mais-ne-sait-pas-compter-observe-gerard-longuet-ancien-ministre-de-la-defense_VN-202611070497.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T19:48:33Z",
+      "title": "Présidentielle 2027: \"Mettre de l'eau dans mon vin? Je ne le ferai pas\", assure Jean-Luc Mélenchon (LFI)",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-mettre-de-l-eau-dans-mon-vin-je-ne-le-ferai-pas-assure-jean-luc-melenchon-lfi_VN-202611070496.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T19:42:34Z",
+      "title": "\"Je pense que moins le président de la République s'occupera de la vie politique et de l'élection présidentielle mieux ce sera, y compris pour sa fin de mandat\", déclare l'ancien président de la République François Hollande à RTL",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-pense-que-moins-le-president-de-la-republique-s-occupera-de-la-vie-politique-et-de-l-election-presidentielle-mieux-ce-sera-y-compris-pour-sa-fin-de-mandat-declare-l-ancien-president-de-la-republique-francois-hollande-a-rtl_VN-202611070493.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T19:29:45Z",
+      "title": "Programme de LFI: \"Le peuple de gauche doit comprendre qu'il ne faut pas travailler à nos divisions\", lance Alexis Corbière, député (L'Après)",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-lfi-le-peuple-de-gauche-doit-comprendre-qu-il-ne-faut-pas-travailler-a-nos-divisions-lance-alexis-corbiere-depute-l-apres_VN-202611070491.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T19:16:41Z",
+      "title": "Programme de LFI: \"J'ai envie de dire aux gens réveillez-vous\", lance Florence Portelli, vice-présidente du parti LR",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-lfi-j-ai-envie-de-dire-aux-gens-reveillez-vous-lance-florence-portelli-vice-presidente-du-parti-lr_VN-202611070489.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T19:03:37Z",
+      "title": "Édouard Philippe, candidat (Horizons) à l'élection présidentielle explique ses propos concernant \"les Français issus de l'immigration\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-edouard-philippe-candidat-horizons-a-l-election-presidentielle-explique-ses-propos-concernant-les-francais-issus-de-l-immigration_VN-202611070483.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T18:58:27Z",
+      "title": "\"Il faut tout changer\", Sixième République, désarmement nucléaire... Ce qu'il faut retenir du meeting de Jean-Luc Mélenchon au Bourget",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/il-faut-tout-changer-sixieme-republique-desarmement-nucleaire-ce-qu-il-faut-retenir-du-meeting-de-jean-luc-melenchon-au-bourget_AV-202611070479.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T18:23:36Z",
+      "title": "“La primaire va conduire à diviser, à distendre, à critiquer et à attaquer” : Édouard Philippe justifie son opposition à l’organisation d’une primaire de la droite et du centre pour l’élection présidentielle de 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-primaire-va-conduire-a-diviser-a-distendre-a-critiquer-et-a-attaquer-edouard-philippe-justifie-son-opposition-a-l-organisation-d-une-primaire-de-la-droite-et-du-centre-pour-l-election-presidentielle-de-2027_VN-202611070471.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ici est la force ! » : depuis Le Bourget, Jean-Luc Mélenchon prêt à décoller pour le second tour de la présidentielle",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ici-est-la-force-depuis-le-bourget-jean-luc-melenchon-pret-a-decoller-pour-le-second-tour-de-la-presidentielle-07-11-2026-5AP5ZDQ7V5CATKZPLLC7VKHT6I.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-07T19:52:11Z",
+      "title": "« Il est l’heure de tout changer » : au Bourget, LFI met en scène sa « Nouvelle France »",
+      "url": "https://www.publicsenat.fr/actualites/politique/il-est-lheure-de-tout-changer-au-bourget-lfi-met-en-scene-sa-nouvelle-france"
+    }
+  ],
+  "schema_version": "1.0"
+}
