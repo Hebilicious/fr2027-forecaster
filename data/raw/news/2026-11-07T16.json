@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-07T16:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:13:46Z",
+      "title": "\"Nous sommes confrontés à une crise globale de la civilisation humaine\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-sommes-confrontes-a-une-crise-globale-de-la-civilisation-humaine-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070398.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:06:57Z",
+      "title": "Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle, appelle à observer une minute de silence en hommage à Pengo Bossio Wangi tué lors de l'attentat raciste de Trappes",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle-appelle-a-observer-une-minute-de-silence-en-hommage-a-pengo-bossio-wangi-tue-lors-de-l-attentat-raciste-de-trappes_VN-202611070393.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-07T16:05:29Z",
+      "title": "\"Nous sommes en train d'ouvrir le chemin d'un grand changement\", déclare Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-sommes-en-train-d-ouvrir-le-chemin-d-un-grand-changement-declare-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611070392.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
