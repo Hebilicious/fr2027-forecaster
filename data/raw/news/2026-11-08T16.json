@@ -1,0 +1,128 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T16:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-08T15:53:46Z",
+      "title": "La «Nouvelle France» rassemblée au meeting de Mélenchon au Bourget : une réalité à ne pas minimiser",
+      "url": "https://www.liberation.fr/politique/elections/la-nouvelle-france-rassemblee-au-meeting-de-melenchon-au-bourget-une-realite-a-ne-pas-minimiser-20261108_CSFT2KNSAVFNTBBTO7EVTHKF5A/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "bardella",
+        "glucksmann",
+        "lisnard",
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T15:35:23Z",
+      "title": "Hausse du Smic : \"Beaucoup de petites entreprises ne peuvent pas se le permettre\", estime Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-hausse-du-smic-beaucoup-de-petites-entreprises-ne-peuvent-pas-se-le-permettre-estime-jordan-bardella-president-du-rn_VN-202611080318.html"
+    },
+    {
+      "candidate_ids": [
+        "arthaud"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T15:31:15Z",
+      "title": "Pour Nathalie Arthaud, candidate Lutte Ouvrière à la présidentielle, il faut \"un minimum de 2.200 euros net\" pour vivre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-nathalie-arthaud-candidate-lutte-ouvriere-a-la-presidentielle-il-faut-un-minimum-de-2-200-euros-net-pour-vivre_VN-202611080316.html"
+    },
+    {
+      "candidate_ids": [
+        "cazeneuve"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T15:29:23Z",
+      "title": "Domicile d'un policier incendié dans le Gers: \"Aller attaquer quelqu'un chez lui, c'est extrêmement grave\", déclare Jean-René Cazeneuve, député EPR du département",
+      "url": "https://www.bfmtv.com/politique/video-domicile-d-un-policier-incendie-dans-le-gers-aller-attaquer-quelqu-un-chez-lui-c-est-extremement-grave-declare-jean-rene-cazeneuve-depute-epr-du-departement_VN-202611080313.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
