@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T17:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-08T16:50:08Z",
+      "title": "A la veille d’un déplacement à Chartres, Edouard Philippe cerné par les appels à la primaire",
+      "url": "https://www.liberation.fr/politique/elections/a-la-veille-dun-deplacement-a-chartres-edouard-philippe-cerne-par-les-appels-a-la-primaire-20261108_CPNO4X2F4ZHLZDEAJREX2ZA2YA/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T16:23:14Z",
+      "title": "Jad Zahab, porte-parole de Gabriel Attal, estime que la proposition d'augmenter le Smic à 1.700 euros net revient \"à mettre en faillite un certain nombre de petites entreprises\"",
+      "url": "https://www.bfmtv.com/politique/video-jad-zahab-porte-parole-de-gabriel-attal-estime-que-la-proposition-d-augmenter-le-smic-a-1-700-euros-net-revient-a-mettre-en-faillite-un-certain-nombre-de-petites-entreprises_VN-202611080334.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
