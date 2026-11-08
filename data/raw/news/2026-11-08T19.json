@@ -1,0 +1,163 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T19:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-08T18:58:53Z",
+      "title": "Présidentielle 2027 : Glucksmann assure qu’il va « mettre fin » à l’« hégémonie culturelle, idéologique et politique » de Mélenchon sur la gauche",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/ils-ne-le-supportent-pas-glucksmann-assure-qu-il-va-mettre-fin-a-l-hegemonie-culturelle-ideologique-et-politique-de-melenchon-sur-la-gauche-20261108"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-08T18:05:06Z",
+      "title": "Présidentielle 2027 : dans le Sud-Est, les rivaux Édouard Philippe et Gabriel Attal s’opposent sur la primaire",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-dans-le-sud-est-les-rivaux-edouard-philippe-et-gabriel-attal-s-opposent-sur-la-primaire-20261108"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-08T19:05:23Z",
+      "title": "Raphaël Glucksmann affirme avoir refusé le poste de Premier ministre en 2024",
+      "url": "https://www.liberation.fr/politique/raphael-glucksmann-affirme-avoir-refuse-le-poste-de-premier-ministre-en-2024-20261108_VB6A55NENJCL3BZF43VE646YX4/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T19:01:55Z",
+      "title": "Raphaël Glucksmann affirme avoir refusé d'être Premier ministre en 2024",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/raphael-glucksmann-affirme-avoir-refuse-d-etre-premier-ministre-en-2024_AD-202611080387.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T18:48:28Z",
+      "title": "Raphaël Glucksmann veut \"mettre fin à l’hégémonie de Jean-Luc Mélenchon sur la gauche française\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/raphael-glucksmann-veut-mettre-fin-a-l-hegemonie-de-jean-luc-melenchon-sur-la-gauche-francaise_AV-202611080383.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T18:27:23Z",
+      "title": "Le gouvernement va accepter une revalorisation anticipée du Smic au 1er décembre au-delà de 1.500 euros net contre 1.477 actuellement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-gouvernement-va-accepter-une-revalorisation-anticipee-du-smic-au-1er-decembre-au-dela-de-1-500-euros-net-contre-1-477-actuellement_VN-202611080372.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Raphaël Glucksmann estime que Jean-Luc Mélenchon et Marine Le Pen reprennent « la propagande de Moscou »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-raphael-glucksmann-estime-que-jean-luc-melenchon-et-marine-le-pen-reprennent-la-propagande-de-moscou-08-11-2026-TCRHYWF7LFGTFPEGAGHJ3BV3ZI.php"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ce n’est pas très élégant » : la campagne présidentielle de Fabien Roussel a du plomb dans l’aile",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ce-nest-pas-tres-elegant-la-campagne-presidentielle-de-fabien-roussel-a-du-plomb-dans-laile-08-11-2026-CYMSY6NNCBCRRKZJYLTXEZGK4A.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
