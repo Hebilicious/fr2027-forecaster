@@ -1,0 +1,118 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T22:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-08T22:08:42Z",
+      "title": "Revalorisation du SMIC : Fabien Roussel souhaite \"l’augmentation généralisée des salaires\"",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/avant-le-20h/revalorisation-du-smic-fabien-roussel-souhaite-l-augmentation-generalisee-des-salaires_8273774.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "lisnard",
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T22:03:21Z",
+      "title": "Manifestations en France: \"La crise sociale est très profonde\", observe Henri Guaino, ancien conseiller de Nicolas Sarkozy",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-manifestations-en-france-la-crise-sociale-est-tres-profonde-observe-henri-guaino-ancien-conseiller-de-nicolas-sarkozy_VN-202611080440.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-08T22:02:23Z",
+      "title": "Présidentielle 2027 : Raphaël Glucksmann affirme avoir refusé d’être Premier ministre en 2024",
+      "url": "https://www.20minutes.fr/politique/4261363-20261108-presidentielle-2027-raphael-glucksmann-affirme-avoir-refuse-etre-premier-ministre-2024"
+    }
+  ],
+  "schema_version": "1.0"
+}
