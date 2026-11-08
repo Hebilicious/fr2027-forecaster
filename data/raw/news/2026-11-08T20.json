@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T20:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-08T19:26:03Z",
+      "title": "Présidentielle 2027 : Raphaël Glucksmann affirme avoir refusé Matignon après la dissolution de 2024",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/08/presidentielle-2027-raphael-glucksmann-affirme-avoir-refuse-matignon-apres-la-dissolution-de-2024_6808468_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-08T19:28:00Z",
+      "title": "Présidentielle 2027 : en dépit des départs chez LFI, Fabien Roussel assure qu’il ira «jusqu’au bout»",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-en-depit-des-departs-chez-lfi-fabien-roussel-assure-quil-ira-jusquau-bout-20261108_HIS3472YWZDDLOVZR7KOXSHEYM/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Raphaël Glucksmann affirme avoir refusé d’être le Premier ministre d’Emmanuel Macron après la dissolution",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-raphael-glucksmann-affirme-avoir-refuse-detre-le-premier-ministre-demmanuel-macron-apres-la-dissolution-08-11-2026-4HIMT65N3VASZHG2UXNAKTDLGU.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "roussel"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-08T19:54:44Z",
+      "title": "Présidentielle 2027 : Wauquiez pour un seul candidat, Roussel candidat malgré les départs et Glucksmann balance sur 2024",
+      "url": "https://www.20minutes.fr/politique/4261353-20261108-presidentielle-2027-wauquiez-seul-candidat-roussel-candidat-malgre-departs-glucksmann-balance-2024"
+    }
+  ],
+  "schema_version": "1.0"
+}
