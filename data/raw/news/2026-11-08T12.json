@@ -1,0 +1,142 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T12:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-08T11:50:37Z",
+      "title": "Philippe, Attal, Retailleau, Lisnard : 66 élus du centre et de la droite appellent à une primaire pour départager leurs candidats à la présidentielle",
+      "url": "https://www.liberation.fr/politique/elections/philippe-attal-retailleau-lisnard-66-elus-du-centre-et-de-la-droite-appellent-a-une-primaire-pour-departager-leurs-candidats-a-la-presidentielle-20261108_MCSWXB7VPJHBDDZSFXA3QA6PLY/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-08T11:45:50Z",
+      "title": "\"Il faut tout changer !\" : Jean-Luc Mélenchon a présenté son programme pour l'élection présidentielle 2027",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/il-faut-tout-changer-jean-luc-melenchon-a-presente-son-programme-pour-l-election-presidentielle-2027_8273312.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T11:59:21Z",
+      "title": "Pouvoir d’achat: \"Tous les travailleurs retiendront que Marine Le Pen est opposée à l'augmentation du Smic\", souligne Manuel Bompard, coordinateur national de La France Insoumise",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pouvoir-d-achat-tous-les-travailleurs-retiendront-que-marine-le-pen-est-opposee-a-l-augmentation-du-smic-souligne-manuel-bompard-coordinateur-national-de-la-france-insoumise_VN-202611080236.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T11:53:49Z",
+      "title": "\"Je propose à Raphaël Glucksmann d'arrêter de brutaliser le débat politique à gauche\", déclare Manuel Bompard, coordinateur de La France insoumise",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-propose-a-raphael-glucksmann-d-arreter-de-brutaliser-le-debat-politique-a-gauche-declare-manuel-bompard-coordinateur-de-la-france-insoumise_VN-202611080229.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T11:32:05Z",
+      "title": "Manuel Bompard, coordinateur de La France insoumise: \"Édouard Philippe se livre à une forme de stigmatisation raciste\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-manuel-bompard-coordinateur-de-la-france-insoumise-edouard-philippe-se-livre-a-une-forme-de-stigmatisation-raciste_VN-202611080217.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T11:25:52Z",
+      "title": "\"Il faut être en capacité de prendre des mesures immédiates\": Manuel Bompard, coordinateur de La France insoumise, détaille la proposition \"d'état d'urgence social\" proposée par Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faut-etre-en-capacite-de-prendre-des-mesures-immediates-manuel-bompard-coordinateur-de-la-france-insoumise-detaille-la-proposition-d-etat-d-urgence-social-proposee-par-jean-luc-melenchon_VN-202611080204.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
