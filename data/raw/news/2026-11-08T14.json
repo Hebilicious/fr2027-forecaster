@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T14:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-08T13:48:04Z",
+      "title": "Présidentielle 2027 : Gabriel Attal répond à Edouard Philippe et continue de défendre une primaire de la droite et du centre",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/08/presidentielle-2027-gabriel-attal-repond-a-edouard-philippe-et-continue-de-defendre-une-primaire-de-la-droite-et-du-centre_6808434_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T14:13:32Z",
+      "title": "“La responsabilité des politiques, c'est de redonner un désir d'avenir”, estime Ségolène Royal, ancienne ministre de la Transition écologique",
+      "url": "https://www.bfmtv.com/politique/video-la-responsabilite-des-politiques-c-est-de-redonner-un-desir-d-avenir-estime-segolene-royal-ancienne-ministre-de-la-transition-ecologique_VN-202611080289.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T14:10:27Z",
+      "title": "“Il faut demander à la grande distribution de bloquer les prix sur 100 produits alimentaires et d’hygiène de qualité” : les propositions de Ségolène Royal pour redonner du pouvoir d’achat aux Français",
+      "url": "https://www.bfmtv.com/politique/video-il-faut-demander-a-la-grande-distribution-de-bloquer-les-prix-sur-100-produits-alimentaires-et-d-hygiene-de-qualite-les-propositions-de-segolene-royal-pour-redonner-du-pouvoir-d-achat-aux-francais_VN-202611080286.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T14:09:01Z",
+      "title": "“Comment ça se fait qu’on n’écoute pas la jeunesse?” : Ségolène Royal réagit à la crise sociale que traverse la France et à la mobilisation des lycéens",
+      "url": "https://www.bfmtv.com/politique/video-comment-ca-se-fait-qu-on-n-ecoute-pas-la-jeunesse-segolene-royal-reagit-a-la-crise-sociale-que-traverse-la-france-et-a-la-mobilisation-des-lyceens_VN-202611080285.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Guerre en Ukraine : Jean-Luc Mélenchon est le « porte-parole du Kremlin », selon le ministre des Affaires étrangères",
+      "url": "https://www.leparisien.fr/elections/presidentielle/guerre-en-ukraine-jean-luc-melenchon-est-le-porte-parole-du-kremlin-selon-le-ministre-des-affaires-etrangeres-08-11-2026-YNC3FXHFYNEMFIMXI4Y6PRF6VU.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « État d’urgence sociale »… les Insoumis justifient les mesures juridiques voulues par Mélenchon en cas de victoire",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-etat-durgence-sociale-les-insoumis-justifient-les-mesures-juridiques-voulues-par-melenchon-en-cas-de-victoire-08-11-2026-Y5VGFAH4PRCSJPO4W7L7B2TNBI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
