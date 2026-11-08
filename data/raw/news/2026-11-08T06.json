@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T06:18:05Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T06:05:51Z",
+      "title": "Présidentielle 2027: Raphaël Glucksmann estime que la large coalition suggérée par Emmanuel Macron “décrédibilise la politique”",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-raphael-glucksmann-estime-que-la-large-coalition-suggeree-par-emmanuel-macron-decredibilise-la-politique_AD-202611080081.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T05:59:35Z",
+      "title": "L'ÉDITO POLITIQUE - Présidentielle: en perte de vitesse dans les sondages, Édouard Philippe contraint à la primaire?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-edito-politique-presidentielle-en-perte-de-vitesse-dans-les-sondages-edouard-philippe-contraint-a-la-primaire_VN-202611080077.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T05:19:37Z",
+      "title": "\"Il faut tout changer\": Jean-Luc Mélenchon développe son programme lors d'un meeting au Bourget",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faut-tout-changer-jean-luc-melenchon-developpe-son-programme-lors-d-un-meeting-au-bourget_VN-202611080066.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Le pronostic de Sarkozy, Mélenchon en replay, Gougler des rails aux planches… Nos indiscrétions de la semaine",
+      "url": "https://www.leparisien.fr/elections/presidentielle/le-pronostic-de-sarkozy-melenchon-en-replay-gougler-des-rails-aux-planches-nos-indiscretions-de-la-semaine-08-11-2026-MC5AOKVH4BAVFGKGQEE4E3IPAE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
