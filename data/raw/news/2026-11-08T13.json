@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T13:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-08T13:04:32Z",
+      "title": "Jean-Luc Mélenchon « s’est fait le porte-parole du Kremlin » sur le Donbass, tance Jean-Noël Barrot",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/08/jean-luc-melenchon-accuse-de-relayer-le-discours-du-kremlin-sur-le-donbass-il-s-est-fait-porte-parole-du-kremlin-tance-jean-noel-barrot_6808430_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-08T12:59:11Z",
+      "title": "Gabriel Attal juge \"sidérant\" le peu de place de l'intelligence artificielle dans la présidentielle, \"clé\" pour \"faire monter les salaires\"",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/gabriel-attal-juge-siderant-le-peu-de-place-de-l-intelligence-artificielle-dans-la-presidentielle-cle-pour-faire-monter-les-salaires_8273348.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T12:41:02Z",
+      "title": "Guerre en Ukraine: Jean-Noël Barrot accuse Jean-Luc Mélenchon de s'être \"fait porte-parole du Kremlin\"",
+      "url": "https://www.bfmtv.com/politique/gouvernement/guerre-en-ukraine-jean-noel-barrot-accuse-jean-luc-melenchon-de-s-etre-fait-porte-parole-du-kremlin_AD-202611080259.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T12:24:56Z",
+      "title": "Manuel Bompard assure que Raphaël Glucksmann n'est pas \"l'adversaire\" de LFI et déplore qu'il \"contribue à créer une forme de schisme\" à gauche",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/manuel-bompard-assure-que-raphael-glucksmann-n-est-pas-l-adversaire-de-lfi-et-deplore-qu-il-contribue-a-creer-une-forme-de-schisme-a-gauche_AV-202611080255.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
