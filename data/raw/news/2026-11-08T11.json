@@ -1,0 +1,206 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-08T11:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-08T11:00:11Z",
+      "title": "« Contrairement à ce que semble craindre David Lisnard, la mémoire ne conduit pas nécessairement à la complaisance ou à la militance »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/08/contrairement-a-ce-que-semble-craindre-david-lisnard-la-memoire-ne-conduit-pas-necessairement-a-la-complaisance-ou-a-la-militance_6808421_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-08T09:27:31Z",
+      "title": "Revalorisation du Smic, mobilisation sociale, campagne présidentielle de Jean-Luc Mélenchon... Le \"8h30 franceinfo\" d'Antoine Léaument",
+      "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/revalorisation-du-smic-mobilisation-sociale-campagne-presidentielle-de-jean-luc-melenchon-le-8h30-franceinfo-d-antoine-leaument_8232082.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-08T11:08:51Z",
+      "title": "DIRECT. Présidentielle : \"Aucun candidat n'est au second tour à part Marine Le Pen et Jean-Luc Mélenchon\", relève Gabriel Attal, qui plaide pour une primaire",
+      "url": "https://www.franceinfo.fr/politique/direct-politique-je-n-attends-plus-grand-chose-de-ce-gouvernement-a-part-de-le-remplacer-par-nous-memes-tacle-le-depute-lfi-antoine-leaument_8273093.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-08T10:56:59Z",
+      "title": "\"Il ne s'agit pas de l'épouser, il s'agit de choisir un programme\", dit Antoine Léaument, responsable communication de la campagne de Jean-Luc Mélenchon et député LFI",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/il-ne-s-agit-pas-de-l-epouser-il-s-agit-de-choisir-un-programme-dit-antoine-leaument-responsable-communication-de-la-campagne-de-jean-luc-melenchon-et-depute-lfi_8273237.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T11:01:33Z",
+      "title": "Gabriel Attal, candidat Renaissance à la présidentielle, s'exprime depuis les Rencontres de l'avenir",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-gabriel-attal-candidat-renaissance-a-la-presidentielle-s-exprime-depuis-les-rencontres-de-l-avenir_VN-202611080196.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T10:48:28Z",
+      "title": "Colère sociale: \"Le principal problème, ce n'est pas tant le niveau du Smic, mais la part de Français bloqués au niveau du Smic\", affirme Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-colere-sociale-le-principal-probleme-ce-n-est-pas-tant-le-niveau-du-smic-mais-la-part-de-francais-bloques-au-niveau-du-smic-affirme-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202611080186.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T10:46:01Z",
+      "title": "\"Cette primaire [de la droite et du centre] aura lieu\", affirme Gabriel Attal, candidat Renaissance à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-cette-primaire-de-la-droite-et-du-centre-aura-lieu-affirme-gabriel-attal-candidat-renaissance-a-la-presidentielle_VN-202611080181.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T10:36:00Z",
+      "title": "“Je propose un plan de formation pour former 20 millions de salariés français en trois ans” : Gabriel Attal détaille sa vision sur l’intelligence artificielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-propose-un-plan-de-formation-pour-former-20-millions-de-salaries-francais-en-trois-ans-gabriel-attal-detaille-sa-vision-sur-l-intelligence-artificielle_VN-202611080177.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T10:34:35Z",
+      "title": "“Il faut assumer de repenser notre modèle social” : Gabriel Attal s'exprime sur la question des retraites",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faut-assumer-de-repenser-notre-modele-social-gabriel-attal-s-exprime-sur-la-question-des-retraites_VN-202611080174.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T10:32:06Z",
+      "title": "“Avec moi, l’État sera intraitable sur la question de la laïcité” : Gabriel Attal revient sur la laïcité en milieu scolaire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-avec-moi-l-etat-sera-intraitable-sur-la-question-de-la-laicite-gabriel-attal-revient-sur-la-laicite-en-milieu-scolaire_VN-202611080172.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T10:29:37Z",
+      "title": "“Il faut recréer des rites républicains ” : Gabriel Attal souhaite un service civique obligatoire d’un mois",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faut-recreer-des-rites-republicains-gabriel-attal-souhaite-un-service-civique-obligatoire-d-un-mois_VN-202611080169.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-08T10:23:34Z",
+      "title": "“Aujourd’hui, un doute s’est installé” : Gabriel Attal analyse la crise sociale que traverse la France",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-aujourd-hui-un-doute-s-est-installe-gabriel-attal-analyse-la-crise-sociale-que-traverse-la-france_VN-202611080167.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-08T10:37:15Z",
+      "title": "Présidentielle : \"Il faut tout changer\" lance Mélenchon à son meeting au Bourget",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261108-pr%C3%A9sidentielle-il-faut-tout-changer-lance-m%C3%A9lenchon-%C3%A0-son-meeting-au-bourget"
+    }
+  ],
+  "schema_version": "1.0"
+}
