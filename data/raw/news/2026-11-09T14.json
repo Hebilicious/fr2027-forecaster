@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T14:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-09T13:35:29Z",
+      "title": "Marine Le Pen affirme que la France est \"le pays le moins raciste\" et suscite la polémique",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/marine-le-pen-affirme-que-la-france-est-le-pays-le-moins-raciste-et-suscite-la-polemique_8274581.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-09T13:37:42Z",
+      "title": "Pass mobilité, nucléaire, leasing social à 100 euros par mois... Les propositions de Raphaël Glucksmann pour sa \"révolution écologique\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/pass-mobilite-nucleaire-leasing-social-a-100-euros-par-mois-les-propositions-de-raphael-glucksmann-pour-sa-revolution-ecologique_AN-202611090579.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je n’ai pas pu faire une seule séance de ma préparation » : David Lisnard fait le marathon Nice-Cannes en binôme",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-nai-pas-pu-faire-une-seule-seance-de-ma-preparation-david-lisnard-fait-le-marathon-nice-cannes-en-binome-09-11-2026-FXE3NASG5VCABI7E44XHAV45JI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
