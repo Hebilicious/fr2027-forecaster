@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T12:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-09T11:27:06Z",
+      "title": "Marine Le Pen ne s’oppose plus à la «remigration»",
+      "url": "https://www.liberation.fr/politique/marine-le-pen-ne-soppose-plus-a-la-remigration-20261109_DJTPUVAS4ZFQLMPIP772ORKJ54/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T12:03:20Z",
+      "title": "\"Je l'admire\": Édouard Philippe, candidat Horizons à la présidentielle, réagit à l'annonce de la candidature de Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-l-admire-edouard-philippe-candidat-horizons-a-la-presidentielle-reagit-a-l-annonce-de-la-candidature-de-teddy-riner_VN-202611090528.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T11:31:09Z",
+      "title": "“Il est inconcevable que nous restions dépendants du régime qui nous fait la guerre” : Raphaël Glucksmann affirme qu’il mettra fin à la dépendance énergétique à la Russie s’il est élu président",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-est-inconcevable-que-nous-restions-dependants-du-regime-qui-nous-fait-la-guerre-raphael-glucksmann-affirme-qu-il-mettra-fin-a-la-dependance-energetique-a-la-russie-s-il-est-elu-president_VN-202611090484.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "DIRECT. Présidentielle 2027 : quid de la primaire ? Pourquoi Philippe et Attal baissent-ils dans les sondages ? Posez nous vos questions sur le bloc central et la droite",
+      "url": "https://www.leparisien.fr/politique/direct-presidentielle-2027-quid-de-la-primaire-pourquoi-philippe-et-attal-baissent-ils-dans-les-sondages-posez-nous-vos-questions-sur-le-bloc-central-et-la-droite-09-11-2026-FC5R4QBIMZESNHUUERYAFAHRNA.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
