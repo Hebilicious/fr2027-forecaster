@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T10:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-09T10:15:01Z",
+      "title": "Dominique de Villepin, pas encore candidat, prépare une virée en outre-mer",
+      "url": "https://www.liberation.fr/politique/elections/dominique-de-villepin-pas-encore-candidat-prepare-une-viree-en-outre-mer-20261109_OXFWM72NYNCANGZTY7KB24NEOE/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-09T10:02:31Z",
+      "title": "Pour Marine Le Pen «il n’y a pas de discriminations» en France, qui est «le pays le moins raciste au monde»",
+      "url": "https://www.liberation.fr/politique/pour-marine-le-pen-il-ny-a-pas-de-discriminations-en-france-qui-est-le-pays-le-moins-raciste-au-monde-20261109_STUPAFJLJVFJTBKRMXP265E43Q/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-09T10:06:32Z",
+      "title": "Raphaël Glucksmann affirme avoir refusé d'être Premier ministre en 2024",
+      "url": "https://www.franceinfo.fr/politique/raphael-glucksmann/raphael-glucksmann-affirme-avoir-refuse-d-etre-premier-ministre-en-2024_8274305.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : quel est ce congé de 7 jours que Jean-Luc Mélenchon propose pour le décès d’un ami ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-quel-est-ce-conge-de-7-jours-que-jean-luc-melenchon-propose-pour-le-deces-dun-ami-09-11-2026-GSQYEEEZQFBYPDSVVXGI25CEGM.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
