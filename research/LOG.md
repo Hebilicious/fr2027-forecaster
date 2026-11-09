@@ -2,6 +2,19 @@
 
 Dated entries for every assumption, parameter change, source added or dropped, and the reason. Newest first within a day.
 
+## 2026-11-09
+
+### Field: 2026-11-09-riner-declares (via Grok Bot field_change `2026-11-09-riner-declares`)
+
+Teddy Riner, a five-time Olympic judo champion, declared his candidacy for the 2027 presidential election on 9 November 2026, presenting himself as neither right nor left and saying he intends to go all the way.
+
+Teddy Riner declared on 9 November 2026 in a social-media video and an interview with Le Parisien (franceinfo, France 24). He is added as a declared candidate in his own slot. New slot riner at p 0.15: a first-time candidate who must still collect 500 sponsorships and has not been on a presidential ballot.
+
+- `config/candidates.yaml`: new candidate `riner` (Teddy Riner, other, declared) in slot `riner` at p 0.15; `as_of` 2026-11-09.
+- Sources: [« La résignation n'est pas une option » : Teddy Riner annonce sa candidature à l'élection présidentielle 2027](https://www.franceinfo.fr/elections/presidentielle/la-resignation-n-est-pas-une-option-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-2027_8274359.html), [Présidentielle : le champion olympique de judo Teddy Riner annonce sa candidature](https://www.france24.com/fr/france/20261109-le-champion-olympique-de-judo-teddy-riner-annonce-sa-candidature-%C3%A0-l-%C3%A9lection-pr%C3%A9sidentielle).
+- Events: `2026-11-09-riner-declares`.
+- Sent by Grok Bot fr2027 (checks-1, run `checks-2026-11-09T21:36Z`); checked and applied by the Live workflow.
+
 ## 2026-10-18
 
 ### Model 0.6.0: tone momentum from GDELT, on news counts rebuilt from every GDELT file

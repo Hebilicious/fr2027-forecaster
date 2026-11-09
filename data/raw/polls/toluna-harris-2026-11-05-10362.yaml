@@ -1,0 +1,120 @@
+schema_version: "1.0"
+poll_id: toluna-harris-2026-11-05-10362
+firm: toluna-harris
+sponsor: M6 / RTL
+field_start: "2026-11-03"
+field_end: "2026-11-05"
+published_at: "2026-11-09"
+sample_size: 2436
+method: online
+population: registered
+source_url: >-
+  https://tolunacorporate.com/wp-content/uploads/2026/11/Rapport-Toluna-Barometre-Presidentielle-2027-Vague-9-M6-RTL-9-novembre-2026.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10362-pres-iv-toluna-harris-interactive-9-novembre.pdf
+index_url: null
+retrieved_at: "2026-11-09T20:22:16Z"
+entry: primary
+notes: >-
+  Wave 9, entered from Toluna's own report because the Commission notice PDF
+  (10362) returned HTTP 500 and has no Wayback copy. 2,101 registered voters drawn from
+  a sample of 2,436; the report gives shares of expressed votes among registered
+  voters and does not say whether they are restricted to voters certain to vote.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-09T20:19Z
+  skill_version: polls-2
+scenarios:
+- label: Glucksmann+Philippe+Villepin+Lisnard
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 1
+    dupont_aignan: 1
+    glucksmann: 11
+    le_pen: 34
+    lisnard: 9
+    melenchon: 19
+    philippe: 12
+    retailleau: 5
+    roussel: 1
+    tondelier: 2
+    villepin: 2
+    zemmour: 3
+- label: Glucksmann+Attal+Villepin+Lisnard
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 1
+    attal: 9
+    dupont_aignan: 1
+    glucksmann: 12
+    le_pen: 35
+    lisnard: 9
+    melenchon: 19
+    retailleau: 6
+    roussel: 1
+    tondelier: 2
+    villepin: 2
+    zemmour: 3
+- label: Glucksmann+Attal+Philippe
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 1
+    attal: 6
+    dupont_aignan: 2
+    glucksmann: 11
+    le_pen: 36
+    melenchon: 18
+    philippe: 11
+    retailleau: 7
+    roussel: 2
+    tondelier: 2
+    zemmour: 4
+- label: Glucksmann+Philippe
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 1
+    dupont_aignan: 2
+    glucksmann: 12
+    le_pen: 36
+    melenchon: 19
+    philippe: 14
+    retailleau: 8
+    roussel: 2
+    tondelier: 2
+    zemmour: 4
+- label: Glucksmann+Attal
+  round: 1
+  scenario_id: S5
+  shares:
+    arthaud: 1
+    attal: 10
+    dupont_aignan: 2
+    glucksmann: 13
+    le_pen: 36
+    melenchon: 19
+    retailleau: 10
+    roussel: 2
+    tondelier: 3
+    zemmour: 4
+- label: Jean-Luc Mélenchon v Marine Le Pen
+  round: 2
+  scenario_id: H1
+  shares:
+    le_pen: 68
+    melenchon: 32
+- label: Raphaël Glucksmann v Marine Le Pen
+  round: 2
+  scenario_id: H2
+  shares:
+    glucksmann: 40
+    le_pen: 60
+- label: Édouard Philippe v Marine Le Pen
+  round: 2
+  scenario_id: H3
+  shares:
+    le_pen: 58
+    philippe: 42

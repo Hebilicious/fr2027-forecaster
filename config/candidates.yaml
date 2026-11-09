@@ -4,7 +4,7 @@
 # Each candidate belongs to exactly one slot. A slot draws at most one option, and an option lists
 # the candidates who run together; 1 - sum(p) is the chance nobody from the slot runs.
 schema_version: "1.0"
-as_of: 2026-10-16
+as_of: 2026-11-09
 blocs: [far_left, left, centre, right, far_right, other]
 candidates:
   - id: arthaud
@@ -356,6 +356,18 @@ candidates:
     sources:
       - url: "https://www.franceinfo.fr/elections/presidentielle/l-essayiste-natacha-polony-annonce-sa-candidature-a-l-election-presidentielle_8236714.html"
         date: 2026-10-14
+  - id: riner
+    name: "Teddy Riner"
+    party: "none (independent)"
+    bloc: other
+    status: declared
+    declared_on: 2026-11-09
+    notes: "Announced 9 November 2026 in a social-media video and an interview with Le Parisien (franceinfo, France 24). Five-time Olympic judo champion; presents himself as neither right nor left; says he intends to go all the way."
+    sources:
+      - url: "https://www.franceinfo.fr/elections/presidentielle/la-resignation-n-est-pas-une-option-teddy-riner-annonce-sa-candidature-a-l-election-presidentielle-2027_8274359.html"
+        date: 2026-11-09
+      - url: "https://www.france24.com/fr/france/20261109-le-champion-olympique-de-judo-teddy-riner-annonce-sa-candidature-%C3%A0-l-%C3%A9lection-pr%C3%A9sidentielle"
+        date: 2026-11-09
 slots:
   - id: rn
     label: "Rassemblement national nominee"
@@ -472,3 +484,7 @@ slots:
     rationale: "Declared 14 October 2026; first presidential run, 500 sponsorships not yet collected."
     options:
       - { run: [polony], p: 0.15 }
+  - id: riner
+    rationale: "Declared 9 November 2026; first presidential run, 500 sponsorships not yet collected."
+    options:
+      - { run: [riner], p: 0.15 }
