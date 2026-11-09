@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T20:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-09T20:05:02Z",
+      "title": "\"L'enjeu de Mélenchon, ce n'est pas que rassembler la gauche au second tour en 2027, mais aussi fédérer le peuple\" : Manuel Cervera-Marzal, sociologue",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/l-enjeu-de-melenchon-ce-n-est-pas-que-rassembler-la-gauche-au-second-tour-en-2027-mais-aussi-federer-le-peuple-manuel-cervera-marzal-sociologue_8275076.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-09T20:00:01Z",
+      "title": "\"Ça arrange Mélenchon que Le Pen gagne la présidentielle\" : Lucile Schmid, présidente de la Fabrique écologique",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/ca-arrange-melenchon-que-le-pen-gagne-la-presidentielle-lucile-schmid-presidente-de-la-fabrique-ecologique_8275073.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Guerre en Ukraine : « Les Ukrainiens ont déjà voté », Kiev répond sèchement aux propos de Jean-Luc Mélenchon sur le Donbass",
+      "url": "https://www.leparisien.fr/international/ukraine/guerre-en-ukraine-les-ukrainiens-ont-deja-vote-kiev-repond-sechement-aux-propos-de-jean-luc-melenchon-sur-le-donbass-09-11-2026-5M4YQKZ3H5CDRALVIQ2SIR4LME.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
