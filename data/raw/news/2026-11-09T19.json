@@ -1,0 +1,151 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T19:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-09T18:03:43Z",
+      "title": "« Je veux remettre la France silencieuse au pouvoir » : à Colombey, Bruno Retailleau invoque l’idéal gaulliste face au défaitisme ambiant",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/je-veux-remettre-la-france-silencieuse-au-pouvoir-a-colombey-bruno-retailleau-invoque-l-ideal-gaulliste-face-au-defaitisme-ambiant-20261109"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-09T17:34:55Z",
+      "title": "«Les Ukrainiens ont déjà voté» : Kyiv répond aux propos de Mélenchon sur le Donbass",
+      "url": "https://www.liberation.fr/international/europe/les-ukrainiens-ont-deja-vote-kyiv-repond-aux-propos-de-melenchon-sur-le-donbass-20261109_N3QZBU4ZMVDQRGUYW4CDXYY3BY/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-09T19:00:02Z",
+      "title": "Les primaires présidentielles, d'où ça vient ?",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/les-primaires-presidentielles-d-ou-ca-vient_8272349.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T18:04:06Z",
+      "title": "\"Sortir des énergies fossiles\": Raphaël Glucksmann prévoit 200 milliards d'investissements pour sa \"révolution écologique\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/sortir-des-energies-fossiles-raphael-glucksmann-prevoit-200-milliards-d-investissements-pour-sa-revolution-ecologique_AD-202611090800.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T17:27:16Z",
+      "title": "VRAI/FAUX. Gérald Darmanin a-t-il dit \"la même chose\" qu'Éric Zemmour sur l'immigration et la délinquance, comme l'affirme Sarah Knafo?",
+      "url": "https://www.bfmtv.com/politique/reconquete/vrai-faux-gerald-darmanin-a-t-il-dit-la-meme-chose-qu-eric-zemmour-sur-l-immigration-et-la-delinquance-comme-l-affirme-sarah-knafo_AV-202611090761.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Dans mon plan, tout est financé » : Raphaël Glucksmann promet 200 milliards d’investissement pour sa « révolution écologique »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/dans-mon-plan-tout-est-finance-raphael-glucksmann-promet-200-milliards-dinvestissement-pour-sa-revolution-ecologique-09-11-2026-DSU2ILHHQBFQ3FGWIIJ5WZRILA.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-09T18:07:59Z",
+      "title": "La France est-elle vraiment exemplaire sur le racisme, comme l’affirme Marine Le Pen ?",
+      "url": "https://www.20minutes.fr/politique/4261620-20261109-france-vraiment-exemplaire-racisme-comme-affirme-marine-pen"
+    }
+  ],
+  "schema_version": "1.0"
+}
