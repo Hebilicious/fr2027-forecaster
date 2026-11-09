@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T15:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-09T14:32:57Z",
+      "title": "Du « bon élève » à une « campagne de pirate » : comment Bruno Retailleau veut enrayer la chute",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/du-bon-eleve-a-une-campagne-de-pirate-comment-bruno-retailleau-veut-enrayer-la-chute-20261109"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-09T14:52:58Z",
+      "title": "Présidentielle : Glucksmann promet 200 milliards d'euros pour la sortie des énergies fossiles",
+      "url": "https://www.france24.com/fr/france/20261109-pr%C3%A9sidentielle-glucksmann-promet-200-milliards-euros-sortie-%C3%A9nergies-fossiles"
+    }
+  ],
+  "schema_version": "1.0"
+}
