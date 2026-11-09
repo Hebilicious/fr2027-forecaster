@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T08:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T07:59:34Z",
+      "title": "Sarah Knafo, députée européenne Reconquête !: \"Je souhaite qu'Éric Zemmour soit candidat\" à l'élection présidentielle, \"donc non, je n'irai pas\"",
+      "url": "https://www.bfmtv.com/politique/video-sarah-knafo-deputee-europeenne-reconquete-je-souhaite-qu-eric-zemmour-soit-candidat-a-l-election-presidentielle-donc-non-je-n-irai-pas_VN-202611090314.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T07:58:20Z",
+      "title": "\"Son combat est d'éviter la guerre civile\": Sarah Knafo défend les multiples condamnations pour incitation à la haine raciale d'Éric Zemmour",
+      "url": "https://www.bfmtv.com/politique/video-son-combat-est-d-eviter-la-guerre-civile-sarah-knafo-defend-les-multiples-condamnations-pour-incitation-a-la-haine-raciale-d-eric-zemmour_VN-202611090313.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T07:54:58Z",
+      "title": "Sarah Knafo, députée européenne Reconquête, accuse Jean-Luc Mélenchon “de vouloir mener une révolte bolchevique”",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-sarah-knafo-deputee-europeenne-reconquete-accuse-jean-luc-melenchon-de-vouloir-mener-une-revolte-bolchevique_VN-202611090306.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T07:24:06Z",
+      "title": "Présidentielle 2027: Marine Le Pen estime que la France est le pays \"le moins raciste\" au monde",
+      "url": "https://www.bfmtv.com/politique/front-national/presidentielle-2027-marine-le-pen-estime-que-la-france-est-le-pays-le-moins-raciste-au-monde_AN-202611090255.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
