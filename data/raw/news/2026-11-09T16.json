@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T16:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-09T16:04:17Z",
+      "title": "A Chartres, Edouard Philippe persiste après sa sortie sur la «surreprésentation» de jeunes «issus de l’immigration» dans les pillages du 17 octobre",
+      "url": "https://www.liberation.fr/politique/elections/a-chartres-edouard-philippe-persiste-apres-sa-sortie-sur-la-surrepresentation-de-jeunes-issus-de-limmigration-dans-les-pillages-du-17-octobre-20261109_PLCKPNN3UVHRJFSRVS4KFFZMP4/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T16:08:28Z",
+      "title": "Présidentielle 2027: Teddy Riner est \"un candidat sérieux\", estime Céline Géraud, ancienne judokate et porte-parole de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/video-presidentielle-2027-teddy-riner-est-un-candidat-serieux-estime-celine-geraud-ancienne-judokate-et-porte-parole-de-gabriel-attal_VN-202611090689.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T15:42:09Z",
+      "title": "\"Les Ukrainiens ont déjà résolu la question des frontières de leur pays\": Kiev répond aux propos de Jean-Luc Mélenchon sur le Donbass",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/les-ukrainiens-ont-deja-resolu-la-question-des-frontieres-de-leur-pays-kiev-repond-aux-propos-de-jean-luc-melenchon-sur-le-donbass_AD-202611090664.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Dommage d’être aussi péremptoire » : accusé de s’être emmêlé dans ses notes sur CNews, Jordan Bardella se défend",
+      "url": "https://www.leparisien.fr/elections/presidentielle/dommage-detre-aussi-peremptoire-accuse-de-setre-emmele-dans-ses-notes-sur-cnews-jordan-bardella-se-defend-09-11-2026-H5VCWULTJBEXLKCW3TFDB22FQQ.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-09T15:23:09Z",
+      "title": "Présidentielle 2027 : Raphaël Glucksmann met 200 milliards sur la table et invite le Sénat à voter en faveur d’une future « République écologique »",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-raphael-glucksmann-met-200-milliards-sur-la-table-et-invite-le-senat-a-voter-en-faveur-dune-future-republique-ecologique"
+    }
+  ],
+  "schema_version": "1.0"
+}
