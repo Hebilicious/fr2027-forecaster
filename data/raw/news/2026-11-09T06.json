@@ -1,0 +1,117 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T06:18:35Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-09T05:30:00Z",
+      "title": "Guillaume Tabard : «Jean-Luc Mélenchon, une stratégie efficace, une idéologie dangereuse»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-jean-luc-melenchon-une-strategie-efficace-une-ideologie-dangereuse-20261109"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-09T06:12:00Z",
+      "title": "Modernes contre anciens, les candidats du nouveau monde électoral ne sont pas ceux que vous croyez, par Denis Pingaud",
+      "url": "https://www.liberation.fr/idees-et-debats/tribunes/modernes-contre-anciens-les-candidats-du-nouveau-monde-electoral-ne-sont-pas-ceux-que-vous-croyez-par-denis-pingaud-20261109_HT464Y4D7ZHAFGJOOZPESHHWTI/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T05:53:49Z",
+      "title": "L'ÉDITO POLITIQUE DE GUILLAUME DARET - La nouvelle passe d'armes entre Raphaël Glucksmann et Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/video-l-edito-politique-de-guillaume-daret-la-nouvelle-passe-d-armes-entre-raphael-glucksmann-et-jean-luc-melenchon_VN-202611090130.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
