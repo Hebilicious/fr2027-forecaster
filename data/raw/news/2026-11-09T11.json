@@ -1,0 +1,177 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-09T11:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-09T10:47:04Z",
+      "title": "« La France est le pays le moins raciste du monde » : les propos de Marine Le Pen sur la chaîne américaine CBS, pourtant démentis par une étude du Défenseur des droits",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/09/marine-le-pen-affirme-sur-une-chaine-americaine-que-la-france-est-le-pays-le-moins-raciste-au-monde-et-qu-il-n-y-a-pas-de-discriminations_6808639_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-09T10:30:09Z",
+      "title": "La diplomatie dans le programme de LFI pour la présidentielle : le risque d’une France affaiblie",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/09/la-diplomatie-dans-le-programme-de-lfi-pour-la-presidentielle-le-risque-d-une-france-affaiblie_6808634_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-09T10:51:12Z",
+      "title": "Bruno Retailleau fait appel aux fédés LR pour financer sa campagne présidentielle",
+      "url": "https://www.liberation.fr/politique/bruno-retailleau-fait-appel-aux-fedes-lr-pour-financer-sa-campagne-presidentielle-20261109_7C6MQWO3LVHJ3O5VOPH2DSE3MU/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-09T10:33:11Z",
+      "title": "«Se retirer pour quelqu’un qui n’est même pas donné au 2e tour ?» : Attal menace de ne pas se rallier à ce loser de Philippe",
+      "url": "https://www.liberation.fr/politique/se-retirer-pour-quelquun-qui-nest-meme-pas-donne-au-2e-tour-attal-menace-de-ne-pas-se-rallier-a-ce-loser-de-philippe-20261109_HVZAZUAYBZHV3DYVF667VTIIW4/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-09T10:25:47Z",
+      "title": "Une peluche du chien de Gabriel Attal à 19,99 euros : le merch de campagne, ça marche vraiment ?",
+      "url": "https://www.franceinfo.fr/replay-radio/l-il-de-constance/une-peluche-du-chien-de-gabriel-attal-a-19-99-euros-le-merch-de-campagne-ca-marche-vraiment_8253685.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T11:07:31Z",
+      "title": "Hausse du Smic: \"100 euros d'augmentation, c'est ce qu'il faut immédiatement\", affirme Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-hausse-du-smic-100-euros-d-augmentation-c-est-ce-qu-il-faut-immediatement-affirme-raphael-glucksmann_VN-202611090465.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T11:01:22Z",
+      "title": "Climat: \"Les patrimoines au-dessus des 100 millions d'euros seront mis à contribution\", déclare Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/video-climat-les-patrimoines-au-dessus-des-100-millions-d-euros-seront-mis-a-contribution-declare-raphael-glucksmann_VN-202611090459.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-09T10:55:22Z",
+      "title": "Écologie: \"On doit pérenniser l'énergie nucléaire\", affirme Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/video-ecologie-on-doit-perenniser-l-energie-nucleaire-affirme-raphael-glucksmann_VN-202611090452.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-09T08:11:05Z",
+      "title": "Bonjour chez vous ! — Qui mettra de l’eau dans le vin de Jean-Luc Mélenchon ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/qui-mettra-de-leau-dans-le-vin-de-jean-luc-melenchon-e0"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "maurel"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-09T08:11:04Z",
+      "title": "Bonjour chez vous ! — Emmanuel Maurel : « Raphaël Glucksmann est à sa place dans les manifestations »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/emmanuel-maurel-raphael-glucksmann-est-a-sa-place-dans-les-manifestations-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
