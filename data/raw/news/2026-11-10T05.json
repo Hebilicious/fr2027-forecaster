@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T05:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-10T05:02:50Z",
+      "title": "\"Il en avait parlé\" : pourquoi la candidature de Teddy Riner à l'élection présidentielle n'est pas une si grande surprise",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/il-en-avait-parle-pourquoi-la-candidature-de-teddy-riner-a-l-election-presidentielle-n-est-pas-une-si-grande-surprise_8274893.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-10T05:00:01Z",
+      "title": "Teddy Riner candidat à l'élection présidentielle : George Weah, Imran Khan, Pal Schmitt... Ces sportifs qui ont atteint les plus hautes fonctions en politique",
+      "url": "https://www.franceinfo.fr/sports/judo/teddy-riner/teddy-riner-candidat-a-l-election-presidentielle-george-weah-imran-khan-pal-schmitt-ces-sportifs-qui-ont-atteint-les-plus-hautes-fonctions-en-politique_8274392.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "À Paris, certains se disent prêts à voter pour Teddy Riner : « Pourquoi pas lui ? On peut être agréablement surpris »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/a-paris-certains-se-disent-prets-a-voter-pour-teddy-riner-pourquoi-pas-lui-on-peut-etre-agreablement-surpris-10-11-2026-6YLN7NJA2JEPTP7VL6HQT7DVRA.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Teddy Riner, l’effet de surprise",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-teddy-riner-leffet-de-surprise-10-11-2026-MA4BOCQ3KZAKDFVK57VIHNJ6UQ.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : la cote de popularité de David Lisnard au plus haut, celle d’Emmanuel Macron historiquement basse, selon un nouveau sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-la-cote-de-popularite-de-david-lisnard-au-plus-haut-celle-demmanuel-macron-historiquement-basse-selon-un-nouveau-sondage-10-11-2026-RIKNZ5R6CFDL7CCEFXN25K7XM4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
