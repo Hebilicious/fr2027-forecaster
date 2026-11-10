@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T19:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-10T18:46:16Z",
+      "title": "Monsieur Mélenchon, depuis l’Ukraine, j’ai écouté vos mots avec attention…",
+      "url": "https://www.liberation.fr/politique/elections/monsieur-melenchon-depuis-lukraine-jai-ecoute-vos-mots-avec-attention-20261110_P4WNSFKNXNDP5JUYHXCQSHWGQQ/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T19:12:56Z",
+      "title": "Présidentielle 2027: qui sont les candidats? Notre album Panini des prétendants à l’Élysée",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-qui-sont-les-candidats-notre-album-panini-des-pretendants-a-l-elysee_VN-202611100857.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T19:09:11Z",
+      "title": "Présidentielle 2027: \"Je crois qu'il a plus envie de faire campagne que d'être candidat\", estime Alain Duhamel sur l'ambition de Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/video-presidentielle-2027-je-crois-qu-il-a-plus-envie-de-faire-campagne-que-d-etre-candidat-estime-alain-duhamel-sur-l-ambition-de-teddy-riner_VN-202611100852.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "riner"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-10T19:00:00Z",
+      "title": "Teddy Riner candidat : « Opération téléguidée » par l’Elysée, ou « révélateur d’une crise politique profonde » ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/teddy-riner-candidat-operation-teleguidee-par-lelysee-ou-revelateur-dune-crise-politique-profonde"
+    }
+  ],
+  "schema_version": "1.0"
+}
