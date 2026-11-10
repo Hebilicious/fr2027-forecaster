@@ -1,0 +1,150 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T11:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-10T11:07:41Z",
+      "title": "Auto-déclaration des arrêts de travail : le gouvernement scandalisé par cette idée de Mélenchon à laquelle il était favorable il y a deux ans",
+      "url": "https://www.liberation.fr/politique/auto-declaration-des-arrets-de-travail-le-gouvernement-scandalise-par-cette-idee-de-melenchon-a-laquelle-il-etait-favorable-il-y-a-deux-ans-20261110_RLL67M47OZDTXIMG7WU76LQ7H4/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T11:08:18Z",
+      "title": "Teddy Riner candidat à la présidentielle: \"Il est libre, comme chacun de nos concitoyens, de pouvoir se présenter aux suffrages des électeurs\", répond le gouvernement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-candidat-a-la-presidentielle-il-est-libre-comme-chacun-de-nos-concitoyens-de-pouvoir-se-presenter-aux-suffrages-des-electeurs-repond-le-gouvernement_VN-202611100479.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T10:29:08Z",
+      "title": "Saluée dans le bloc central, scepticisme à gauche: l'échiquier politique réagit à la candidature de Teddy Riner à la présidentielle 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/saluee-dans-le-bloc-central-scepticisme-a-gauche-l-echiquier-politique-reagit-a-la-candidature-de-teddy-riner-a-la-presidentielle-2027_AN-202611100447.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T10:18:16Z",
+      "title": "Candidature de Teddy Riner: \"Nous ne la jugeons ni favorablement ni défavorablement\", réagit Mathilde Panot",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-teddy-riner-nous-ne-la-jugeons-ni-favorablement-ni-defavorablement-reagit-mathilde-panot_VN-202611100438.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je ne disparaîtrai pas d’un coup » : Marine Tondelier indique qu’elle ne se désistera pas pour la présidentielle 2027",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-ne-disparaitrai-pas-dun-coup-marine-tondelier-indique-quelle-ne-se-desistera-pas-pour-la-presidentielle-2027-10-11-2026-Y5PNASTQQBFL7KVRGB5EMRLF4Y.php"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-10T07:30:31Z",
+      "title": "Riner candidat à la présidentielle 2027 : « La politique, c’est un autre domaine », réagit Hollande",
+      "url": "https://www.20minutes.fr/politique/4261823-20261110-riner-candidat-presidentielle-2027-politique-autre-domaine-reagit-hollande"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-10T11:09:43Z",
+      "title": "Présidentielle 2027 : « Il n’est pas mal du tout »… Jusqu’où la candidature de Teddy Riner peut-elle aller ?",
+      "url": "https://www.20minutes.fr/politique/4261730-20261110-presidentielle-2027-mal-tout-jusqu-candidature-teddy-riner-peut-aller"
+    }
+  ],
+  "schema_version": "1.0"
+}
