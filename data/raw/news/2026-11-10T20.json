@@ -1,0 +1,168 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T20:02:47Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-10T19:55:14Z",
+      "title": "Eric Zemmour confirme sa candidature à l’élection présidentielle",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/10/eric-zemmour-confirme-sa-candidature-a-l-election-presidentielle_6808904_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-10T19:40:13Z",
+      "title": "Éric Zemmour se lance dans une seconde campagne présidentielle",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/eric-zemmour-se-lance-dans-une-seconde-campagne-presidentielle-20261110"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-10T19:40:08Z",
+      "title": "Présidentielle 2027 : Eric Zemmour bien candidat pour la deuxième fois",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-eric-zemmour-bien-candidat-pour-la-deuxieme-fois-20261110_XPLKJUN3CZEUBK5R6SQAA42ONY/"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-10T19:49:36Z",
+      "title": "Eric Zemmour, leader du parti d'extrême droite Reconquête, officialise sa candidature à la présidentielle",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/eric-zemmour-leader-du-parti-d-extreme-droite-reconquete-officialise-sa-candidature-a-la-presidentielle_8276858.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T19:46:33Z",
+      "title": "DIRECT. Jordan Bardella: pouvoir d'achat, politique étrangère, éducation... Le président du RN est \"Face à BFM\" ce soir à partir de 21h",
+      "url": "https://www.bfmtv.com/politique/front-national/direct-jordan-bardella-pouvoir-d-achat-politique-etrangere-education-le-president-du-rn-est-face-a-bfm-ce-soir-a-partir-de-21h_LN-202611100869.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T19:39:53Z",
+      "title": "Éric Zemmour officialise sa candidature à l'élection présidentielle de 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-eric-zemmour-officialise-sa-candidature-a-l-election-presidentielle-de-2027_VN-202611100876.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T19:37:24Z",
+      "title": "\"Je suis bien candidat\": Éric Zemmour confirme se présenter à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/je-suis-bien-candidat-eric-zemmour-confirme-se-presenter-a-l-election-presidentielle_AN-202611100873.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T19:20:21Z",
+      "title": "\"Très intelligent, cultivé, pittoresque\": Alain Duhamel livre son regard sur Jean-Luc Mélenchon, candidat LFI à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-tres-intelligent-cultive-pittoresque-alain-duhamel-livre-son-regard-sur-jean-luc-melenchon-candidat-lfi-a-l-election-presidentielle_VN-202611100865.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-10T19:51:04Z",
+      "title": "Présidentielle 2027 : Eric Zemmour officialise sa candidature",
+      "url": "https://www.20minutes.fr/politique/4262075-20261110-presidentielle-2027-eric-zemmour-officialise-candidature"
+    }
+  ],
+  "schema_version": "1.0"
+}
