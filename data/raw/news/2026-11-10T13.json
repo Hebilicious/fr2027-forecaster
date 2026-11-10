@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T13:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-10T12:45:17Z",
+      "title": "S’il est ceinture noire de judo, «il reste ceinture blanche en politique» : le monde du sport juge la candidature de Teddy Riner «légitime»",
+      "url": "https://www.liberation.fr/politique/elections/sil-est-ceinture-noire-de-judo-il-reste-ceinture-blanche-en-politique-le-monde-du-sport-juge-la-candidature-de-teddy-riner-legitime-20261110_LPXY7R53EZBWVPG5UGP3TFL5AE/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-10T13:00:31Z",
+      "title": "ÉDITO. Teddy Riner mettra-t-il tous ses adversaires au tapis dans la course à l'Élysée ?",
+      "url": "https://www.franceinfo.fr/sports/judo/teddy-riner/edito-teddy-riner-mettra-t-il-tous-ses-adversaires-au-tapis-dans-la-course-a-l-elysee_8276354.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
