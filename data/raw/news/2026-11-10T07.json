@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T07:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-10T07:00:00Z",
+      "title": "Stature présidentielle : Marine Le Pen creuse l’écart avec ses concurrents, Jean-Luc Mélenchon en dernière position",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/sondages/stature-presidentielle-marine-le-pen-creuse-l-ecart-avec-ses-concurrents-jean-luc-melenchon-en-derniere-position-20261110"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-10T06:50:58Z",
+      "title": "EDITO. La candidature de Teddy Riner n'est pas passée inaperçue sur les réseaux",
+      "url": "https://www.franceinfo.fr/replay-radio/l-edito-politique/edito-la-candidature-de-teddy-riner-n-est-pas-passee-inapercue-sur-les-reseaux_8255011.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-10T06:28:34Z",
+      "title": "A suivre Loïc de la Mornais : Teddy Riner candidat, c'est du lourd ?",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/a-suivre-avec-loic-de-la-mornais/a-suivre-loic-de-la-mornais-teddy-riner-candidat-c-est-du-lourd_8275841.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T06:29:21Z",
+      "title": "Auto-déclaration des arrêts maladie de courte durée: ça coûterait combien?",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-auto-declaration-des-arrets-maladie-de-courte-duree-ca-couterait-combien_VN-202611100185.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
