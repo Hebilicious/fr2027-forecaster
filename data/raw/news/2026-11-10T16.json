@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T16:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T15:56:45Z",
+      "title": "Référendum et \"cadre diplomatique\": ce que Jean-Luc Mélenchon dit vraiment sur la guerre en Ukraine",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/referendum-et-cadre-diplomatique-ce-que-jean-luc-melenchon-dit-vraiment-sur-la-guerre-en-ukraine_AN-202611100671.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Pas plus illégitime qu’un autre », « un candidat pro-business »… La candidature de Teddy Riner à la présidentielle fait réagir la classe politique",
+      "url": "https://www.leparisien.fr/elections/presidentielle/pas-plus-illegitime-quun-autre-un-candidat-pro-business-la-candidature-de-teddy-riner-a-la-presidentielle-fait-reagir-la-classe-politique-10-11-2026-2JKDXUKUZVDS5JMQEUJBBHIBDU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
