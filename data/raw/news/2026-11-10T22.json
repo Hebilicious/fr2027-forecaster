@@ -1,0 +1,196 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T22:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:06:51Z",
+      "title": "Jordan Bardella annonce une \"présomption de légitime défense\" pour les forces de l'ordre si le RN arrive au pouvoir",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-annonce-une-presomption-de-legitime-defense-pour-les-forces-de-l-ordre-si-le-rn-arrive-au-pouvoir_VN-202611100985.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:03:13Z",
+      "title": "\"Ils sont devenus fous\": Jordan Bardella dénonce le refus de certains syndicats enseignants de rendre hommage au 11-Novembre dans les écoles",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ils-sont-devenus-fous-jordan-bardella-denonce-le-refus-de-certains-syndicats-enseignants-de-rendre-hommage-au-11-novembre-dans-les-ecoles_VN-202611100983.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:59:58Z",
+      "title": "\"L'objectif de cette affaire, c'était de me tuer\": Jordan Bardella revient sur les propos antisémites qui lui sont attribués par Mediapart",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-objectif-de-cette-affaire-c-etait-de-me-tuer-jordan-bardella-revient-sur-les-propos-antisemites-qui-lui-sont-attribues-par-mediapart_VN-202611100980.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:56:23Z",
+      "title": "\"On est une coalition avec des partenaires et des alliés, nous travaillons ensemble à co-construire un projet de redressement national\", déclare Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-on-est-une-coalition-avec-des-partenaires-et-des-allies-nous-travaillons-ensemble-a-co-construire-un-projet-de-redressement-national-declare-jordan-bardella_VN-202611100977.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:56:09Z",
+      "title": "Présidentielle 2027: 22% des électeurs seraient \"prêts\" à voter pour Teddy Riner selon un sondage",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-22-des-electeurs-seraient-prets-a-voter-pour-teddy-riner-selon-un-sondage_AD-202611100975.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:45:47Z",
+      "title": "Jordan Bardella assure que \"l'État sera pro-police\" si Marine Le Pen est élue présidente et s'il est nommé Premier ministre",
+      "url": "https://www.bfmtv.com/politique/front-national/jordan-bardella-assure-que-l-etat-sera-pro-police-si-marine-le-pen-est-elue-presidente-et-s-il-est-nomme-premier-ministre_AV-202611100972.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:44:42Z",
+      "title": "\"La France est le pays le moins raciste du monde\": Jordan Bardella \"partage à 300%\" les propos de Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/front-national/video-la-france-est-le-pays-le-moins-raciste-du-monde-jordan-bardella-partage-a-300-les-propos-de-marine-le-pen_VN-202611100973.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:42:04Z",
+      "title": "Jordan Bardella n'est \"pas favorable\" au droit de vote à 16 ans",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-n-est-pas-favorable-au-droit-de-vote-a-16-ans_VN-202611100971.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:40:50Z",
+      "title": "\"Nous ne remplacerons pas 223.000 postes\" de fonctionnaires \"pour que l'État fonctionne mieux\", affirme Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-ne-remplacerons-pas-223-000-postes-de-fonctionnaires-pour-que-l-etat-fonctionne-mieux-affirme-jordan-bardella-president-du-rn_VN-202611100969.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:37:08Z",
+      "title": "Logements sociaux: Jordan Bardella, président du RN, souhaite que \"le fait d'avoir un casier judiciaire discrédite pour avoir un logement social\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logements-sociaux-jordan-bardella-president-du-rn-souhaite-que-le-fait-d-avoir-un-casier-judiciaire-discredite-pour-avoir-un-logement-social_VN-202611100966.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:33:57Z",
+      "title": "Augmentation du SMIC: Jordan Bardella, président du RN, évoque \"une solution insuffisante\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-augmentation-du-smic-jordan-bardella-president-du-rn-evoque-une-solution-insuffisante_VN-202611100965.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:23:46Z",
+      "title": "Crise du logement: Jordan Bardella détaille les propositions du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-crise-du-logement-jordan-bardella-detaille-les-propositions-du-rn_VN-202611100961.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
