@@ -1,0 +1,244 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T08:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-10T07:43:14Z",
+      "title": "Teddy Riner entre dans la présidentielle avec toute la panoplie du parfait petit macroniste",
+      "url": "https://www.liberation.fr/politique/teddy-riner-entre-dans-la-presidentielle-avec-toute-la-panoplie-du-parfait-petit-macroniste-20261110_NRNHZAAMYFFQVE2JPVX46FOBTY/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "riner"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-10T07:58:59Z",
+      "title": "Gabriel Attal souhaite la \"bienvenue\" à Teddy Riner \"dans cette course\" à l’élection présidentielle",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/gabriel-attal-dit-bienvenue-a-teddy-riner-dans-cette-course-a-l-election-presidentielle_8275922.html"
+    },
+    {
+      "candidate_ids": [
+        "riner",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T08:17:25Z",
+      "title": "\"On a tous besoin d'un Teddy Riner près de chez soi\": Dominique de Villepin \"se réjouit\" de la candidature à la présidentielle 2027 du judoka",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/on-a-tous-besoin-d-un-teddy-riner-pres-de-chez-soi-dominique-de-villepin-se-rejouit-de-la-candidature-a-la-presidentielle-2027-du-judoka_AV-202611100332.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T08:14:30Z",
+      "title": "DIRECT. Colère sociale: Dominique de Villepin estime que la hausse du Smic \"est un petit coup de pouce très insuffisant\"",
+      "url": "https://www.bfmtv.com/politique/direct-colere-sociale-nouvelle-journee-de-mobilisation-des-lyceens-etudiants-et-enseignants_LN-202611100131.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T08:00:40Z",
+      "title": "Cérémonie obligatoire à l'école autour du 11-Novembre: pour Dominique de Villepin, \"c'est quelque chose qui se prépare\"",
+      "url": "https://www.bfmtv.com/politique/video-ceremonie-obligatoire-a-l-ecole-autour-du-11-novembre-pour-dominique-de-villepin-c-est-quelque-chose-qui-se-prepare_VN-202611100318.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:57:37Z",
+      "title": "Ingérences étrangères: \"Il faut que chacun sache ce qu'il aura à faire\", martèle Dominique de Villepin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ingerences-etrangeres-il-faut-que-chacun-sache-ce-qu-il-aura-a-faire-martele-dominique-de-villepin_VN-202611100311.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:56:26Z",
+      "title": "Cyberattaque contre des frigos: “Il faut être capable de riposter de façon à qu’il y ait un coût pour celui qui nous attaque”, argumente Dominique de Villepin, fondateur du mouvement La France Humaniste",
+      "url": "https://www.bfmtv.com/politique/video-cyberattaque-contre-des-frigos-il-faut-etre-capable-de-riposter-de-facon-a-qu-il-y-ait-un-cout-pour-celui-qui-nous-attaque-argumente-dominique-de-villepin-fondateur-du-mouvement-la-france-humaniste_VN-202611100310.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:54:00Z",
+      "title": "Cyberattaque contre des frigos: \"Il faut prendre ça très au sérieux\", souligne Dominique de Villepin, fondateur du mouvement La France Humaniste",
+      "url": "https://www.bfmtv.com/politique/video-cyberattaque-contre-des-frigos-il-faut-prendre-ca-tres-au-serieux-souligne-dominique-de-villepin-fondateur-du-mouvement-la-france-humaniste_VN-202611100308.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:49:37Z",
+      "title": "“Je veux être prêt”: Dominique de Villepin, fondateur du mouvement La France Humaniste, réagit à l’annonce de sa potentielle candidature à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-veux-etre-pret-dominique-de-villepin-fondateur-du-mouvement-la-france-humaniste-reagit-a-l-annonce-de-sa-potentielle-candidature-a-la-presidentielle_VN-202611100304.html"
+    },
+    {
+      "candidate_ids": [
+        "riner",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:48:44Z",
+      "title": "Présidentielle 2027: Dominique de Villepin se \"réjouit\" de la candidature de Teddy Riner, qui \"a une voix à faire entendre\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-dominique-de-villepin-se-rejouit-de-la-candidature-de-teddy-riner-qui-a-une-voix-a-faire-entendre_VN-202611100303.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:47:18Z",
+      "title": "Dominique de Villepin, fondateur du mouvement La France Humaniste, appelle à ne pas donner \"nos data centers et des espaces à tout-va (...) à tous ceux qui veulent investir du côté des États-Unis\"",
+      "url": "https://www.bfmtv.com/politique/video-dominique-de-villepin-fondateur-du-mouvement-la-france-humaniste-appelle-a-ne-pas-donner-nos-data-centers-et-des-espaces-a-tout-va-a-tous-ceux-qui-veulent-investir-du-cote-des-etats-unis_VN-202611100302.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:45:31Z",
+      "title": "Présidentielle 2027: Dominique de Villepin, fondateur du mouvement La France Humaniste, ne veut pas “proposer la poursuite du macronisme” et souhaite “proposer une République fraternelle”",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-dominique-de-villepin-fondateur-du-mouvement-la-france-humaniste-ne-veut-pas-proposer-la-poursuite-du-macronisme-et-souhaite-proposer-une-republique-fraternelle_VN-202611100300.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:44:14Z",
+      "title": "Crise sociale: \"Je suis pour l'augmentation de la CSG\", déclare Dominique de Villepin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-crise-sociale-je-suis-pour-l-augmentation-de-la-csg-declare-dominique-de-villepin_VN-202611100298.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:41:40Z",
+      "title": "Sortie du nucléaire: “C’est une absurdité”, déclare Dominique de Villepin, fondateur du mouvement La France Humaniste",
+      "url": "https://www.bfmtv.com/politique/video-sortie-du-nucleaire-c-est-une-absurdite-declare-dominique-de-villepin-fondateur-du-mouvement-la-france-humaniste_VN-202611100290.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:40:35Z",
+      "title": "Hausse du smic: \"C'est un petit coup de pouce mais très insuffisant dans un pays dont les caisses sont vides\", estime Dominique de Villepin, fondateur du mouvement La France Humaniste",
+      "url": "https://www.bfmtv.com/politique/video-hausse-du-smic-c-est-un-petit-coup-de-pouce-mais-tres-insuffisant-dans-un-pays-dont-les-caisses-sont-vides-estime-dominique-de-villepin-fondateur-du-mouvement-la-france-humaniste_VN-202611100291.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T07:39:49Z",
+      "title": "Pouvoir d’achat: Dominique de Villepin, fondateur du mouvement La France Humaniste, estime que “la répartition entre les actifs et les inactifs se fait mal et n’est pas juste”",
+      "url": "https://www.bfmtv.com/politique/video-pouvoir-d-achat-dominique-de-villepin-fondateur-du-mouvement-la-france-humaniste-estime-que-la-repartition-entre-les-actifs-et-les-inactifs-se-fait-mal-et-n-est-pas-juste_VN-202611100287.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "riner"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-10T08:16:49Z",
+      "title": "Teddy Riner à la présidentielle de 2027, un candidat macroniste de plus ?",
+      "url": "https://www.france24.com/fr/france/20261110-france-teddy-riner-champion-judo-candidat-election-presidentielle-2027-macroniste"
+    }
+  ],
+  "schema_version": "1.0"
+}
