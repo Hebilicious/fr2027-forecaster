@@ -1,0 +1,306 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T21:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-10T21:04:25Z",
+      "title": "\"C'est aux Ukrainiens de décider\" : La France insoumise répond à la polémique sur les propos de Jean-Luc Mélenchon évoquant le Donbass",
+      "url": "https://www.franceinfo.fr/politique/melenchon/c-est-aux-ukrainiens-de-decider-la-france-insoumise-repond-a-la-polemique-sur-les-propos-de-jean-luc-melenchon-evoquant-le-donbass_8276936.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-10T20:54:51Z",
+      "title": "\"Une écrasante majorité à droite voterait pour Le Pen face à Mélenchon au second tour...» Baptiste Roger-Lacan, historien",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/une-ecrasante-majorite-a-droite-voterait-pour-le-pen-face-a-melenchon-au-second-tour-baptiste-roger-lacan-historien_8276939.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:11:00Z",
+      "title": "Retraites: Jordan Bardella, président du RN, veut \"ajouter une dose de capitalisation dans le système\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retraites-jordan-bardella-president-du-rn-veut-ajouter-une-dose-de-capitalisation-dans-le-systeme_VN-202611100952.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:08:19Z",
+      "title": "\"Le système des retraites aujourd'hui n'est pas soutenable\", déclare Jordan Bardella, président du RN #FaceABFM",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-systeme-des-retraites-aujourd-hui-n-est-pas-soutenable-declare-jordan-bardella-president-du-rn-face-abfm_VN-202611100946.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:04:59Z",
+      "title": "\"L'État sera pro-police\": Jordan Bardella annonce une \"présomption de légitime défense\" pour les forces de l'ordre si le RN arrive au pouvoir",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-etat-sera-pro-police-jordan-bardella-annonce-une-presomption-de-legitime-defense-pour-les-forces-de-l-ordre-si-le-rn-arrive-au-pouvoir_VN-202611100940.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:03:16Z",
+      "title": "\"Je fermerai les mosquées radicales, j'expulserai les étrangers radicalisés qui diffusent l'idéologie islamiste\", assure Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-fermerai-les-mosquees-radicales-j-expulserai-les-etrangers-radicalises-qui-diffusent-l-ideologie-islamiste-assure-jordan-bardella-president-du-rn_VN-202611100937.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T21:00:41Z",
+      "title": "Éducation: \"Nous souhaitons mettre en place une tenue commune, un uniforme à l'école\", déclare Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-education-nous-souhaitons-mettre-en-place-une-tenue-commune-un-uniforme-a-l-ecole-declare-jordan-bardella-president-du-rn_VN-202611100935.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:59:29Z",
+      "title": "\"Teddy Riner a le droit d'être candidat à la présidentielle, il n'y a pas de problème avec ça\", lance Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-a-le-droit-d-etre-candidat-a-la-presidentielle-il-n-y-a-pas-de-probleme-avec-ca-lance-jordan-bardella-president-du-rn_VN-202611100932.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:47:19Z",
+      "title": "\"La France est le pays le moins raciste du monde\": Jordan Bardella \"partage à 300%\" les propos de Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-france-est-le-pays-le-moins-raciste-du-monde-jordan-bardella-partage-a-300-les-propos-de-marine-le-pen_VN-202611100925.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:44:39Z",
+      "title": "\"Nous avons toujours condamné toutes les formes de violence\", lance Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-avons-toujours-condamne-toutes-les-formes-de-violence-lance-jordan-bardella-president-du-rn_VN-202611100924.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:43:31Z",
+      "title": "Jordan Bardella accuse \"des dirigeants de gauche et d'extrême gauche\" de \"mettre des fatwas et des cibles sur le dos\" de responsables politiques",
+      "url": "https://www.bfmtv.com/politique/front-national/jordan-bardella-accuse-des-dirigeants-de-gauche-et-d-extreme-gauche-de-mettre-des-fatwas-et-des-cibles-sur-le-dos-de-responsables-politiques_AN-202611100920.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:37:53Z",
+      "title": "\"La France insoumise a une responsabilité très lourde dans la dégradation du climat\", estime Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-france-insoumise-a-une-responsabilite-tres-lourde-dans-la-degradation-du-climat-estime-jordan-bardella-president-du-rn_VN-202611100916.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:29:35Z",
+      "title": "Edwige Diaz, Charles Alloncle, Laurent Jacobelli: des personnalités \"qui seront naturellement ministres\" si Marine Le Pen remporte la présidentielle, déclare Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-edwige-diaz-charles-alloncle-laurent-jacobelli-des-personnalites-qui-seront-naturellement-ministres-si-marine-le-pen-remporte-la-presidentielle-declare-jordan-bardella-president-du-rn_VN-202611100910.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:28:40Z",
+      "title": "Vie chère: Jordan Bardella, président du RN, souhaite \"baisser la TVA de 20% à 5,5% sur le carburant et sur l'énergie\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-vie-chere-jordan-bardella-president-du-rn-souhaite-baisser-la-tva-de-20-a-5-5-sur-le-carburant-et-sur-l-energie_VN-202611100909.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:23:33Z",
+      "title": "Jordan Bardella: “Nous proposons de libérer 10% d’augmentation nette des salaires qui seraient exonérés de charges pour les chefs entreprises, jusqu’à trois fois le Smic”",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-president-du-rn-veut-indexer-le-smic-sur-l-inflation-en-cas-de-victoire-du-rn-a-l-election-presidentielle_VN-202611100905.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:20:03Z",
+      "title": "Augmentation du Smic: selon Jordan Bardella, président du RN, c'est un \"sparadrap sur une plaie immense\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-augmentation-du-smic-selon-jordan-bardella-president-du-rn-c-est-un-sparadrap-sur-une-plaie-immense_VN-202611100903.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:17:28Z",
+      "title": "Éducation: le gouvernement a \"baissé les bras\", déplore Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-education-le-gouvernement-a-baisse-les-bras-deplore-jordan-bardella-president-du-rassemblement-national_VN-202611100901.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:13:01Z",
+      "title": "Violences: Jordan Bardella, président du RN, propose \"une révision totale de notre politique sécuritaire\", en cas de victoire à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-violences-jordan-bardella-president-du-rn-propose-une-revision-totale-de-notre-politique-securitaire-en-cas-de-victoire-a-l-election-presidentielle_VN-202611100898.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:08:30Z",
+      "title": "Élue visée par un jet de bouteille d'essence à Chelles: \"On n'est plus dans des revendications\", déclare Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-elue-visee-par-un-jet-de-bouteille-d-essence-a-chelles-on-n-est-plus-dans-des-revendications-declare-jordan-bardella-president-du-rn_VN-202611100890.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T20:01:47Z",
+      "title": "Éric Zemmour confirme se présenter à l'élection présidentielle 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-eric-zemmour-confirme-se-presenter-a-l-election-presidentielle-2027_VN-202611100882.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il peut perturber le match ! » : de la gauche à la droite en passant par le centre, qui doit craindre la candidature de Teddy Riner ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-peut-perturber-le-match-de-la-gauche-a-la-droite-en-passant-par-le-centre-qui-doit-craindre-la-candidature-de-teddy-riner-10-11-2026-J4RP455NEVFZDHJFJCIHP3UK2U.php"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Conserver une France française » : Éric Zemmour de nouveau candidat à la présidentielle",
+      "url": "https://www.leparisien.fr/politique/conserver-une-france-francaise-eric-zemmour-de-nouveau-candidat-a-la-presidentielle-10-11-2026-SOXHKHRZXVCUHMFIQWJE5CRC2I.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-10T20:55:18Z",
+      "title": "Présidentielle 2027 : 22 % des Français prêts à voter pour Teddy Riner, selon un premier sondage",
+      "url": "https://www.20minutes.fr/politique/4262076-20261110-presidentielle-2027-22-francais-prets-voter-teddy-riner-selon-premier-sondage"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-10T20:15:17Z",
+      "title": "Éric Zemmour confirme sa candidature à la présidentielle pour \"enrayer le déclin\"",
+      "url": "https://www.france24.com/fr/france/20261110-%C3%A9ric-zemmour-confirme-candidature-pr%C3%A9sidentielle-enrayer-d%C3%A9clin"
+    }
+  ],
+  "schema_version": "1.0"
+}
