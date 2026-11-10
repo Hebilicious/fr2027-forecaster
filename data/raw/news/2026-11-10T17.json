@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T17:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-10T17:01:50Z",
+      "title": "Teddy Riner candidat, les meilleures vidéos humoristiques vues sur les réseaux sociaux",
+      "url": "https://www.franceinfo.fr/l-actu-pour-les-jeunes/teddy-riner-candidat-les-meilleures-videos-humoristiques-vues-sur-les-reseaux-sociaux_8276681.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T17:01:25Z",
+      "title": "Présidentielle 2027: Béatrice Bellay, députée PS de la Martinique, explique pourquoi elle parrainera Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-beatrice-bellay-deputee-ps-de-la-martinique-explique-pourquoi-elle-parrainera-teddy-riner_VN-202611100725.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : LFI annonce la réimpression de 300 000 exemplaires du livre-programme de Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-lfi-annonce-la-reimpression-de-300-000-exemplaires-du-livre-programme-de-jean-luc-melenchon-10-11-2026-Q2S5JUJG6NHGPFJRP3WRUCHWQE.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-10T16:40:28Z",
+      "title": "Présidentielle 2027 : Teddy Riner au défi de transformer « son capital sympathie en capital électoral »",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-teddy-riner-au-defi-de-transformer-son-capital-sympathie-en-capital-electoral"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-10T16:29:48Z",
+      "title": "Présidentielle 2027 : le judoka Teddy Riner candidat surprise à l'élection",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261110-pr%C3%A9sidentielle-2027-le-judoka-teddy-riner-candidat-surprise-%C3%A0-l-%C3%A9lection"
+    }
+  ],
+  "schema_version": "1.0"
+}
