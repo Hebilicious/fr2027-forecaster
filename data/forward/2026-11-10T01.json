@@ -1,0 +1,20 @@
+{
+  "detected_at": "2026-11-10T01:18:32Z",
+  "flags": [
+    {
+      "candidate_id": "attal",
+      "date": "2026-11-10",
+      "detail": "support 0.05 [0.03, 0.09] in the drop to 2026-11-05T00:00:00Z → 0.00 [0.00, 0.02] in the drop to 2026-11-10T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.0508
+    },
+    {
+      "candidate_id": "polony",
+      "date": "2026-11-10",
+      "detail": "support 0.25 [0.16, 0.39] in the drop to 2026-11-05T00:00:00Z → 0.07 [0.04, 0.12] in the drop to 2026-11-10T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.1835
+    }
+  ],
+  "schema_version": "1.0"
+}
