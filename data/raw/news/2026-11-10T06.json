@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T06:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T06:05:29Z",
+      "title": "\"C'est bien d'avoir un sportif qui a envie de rassembler les Français\": les réactions du monde du sport à la candidature de Teddy Riner à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-c-est-bien-d-avoir-un-sportif-qui-a-envie-de-rassembler-les-francais-les-reactions-du-monde-du-sport-a-la-candidature-de-teddy-riner-a-l-election-presidentielle_VN-202611100160.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-10T05:32:36Z",
+      "title": "Présidentielle 2027 : Riner y va aussi, combien de candidats au maximum pourraient en théorie se présenter à l’élection ?",
+      "url": "https://www.20minutes.fr/politique/4261694-20261110-presidentielle-2027-riner-va-aussi-combien-candidats-maximum-pourraient-theorie-presenter-election"
+    }
+  ],
+  "schema_version": "1.0"
+}
