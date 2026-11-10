@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T09:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-10T08:59:19Z",
+      "title": "Teddy Riner, une candidature inattendue qui vient bousculer un peu plus la campagne présidentielle",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/10/teddy-riner-une-candidature-inattendue-qui-vient-bousculer-un-peu-plus-la-campagne-presidentielle_6808802_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T08:50:09Z",
+      "title": "Présidentielle: Dominique de Villepin ne veut pas “proposer la poursuite du macronisme”",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-dominique-de-villepin-ne-veut-pas-proposer-la-poursuite-du-macronisme_VN-202611100370.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T08:48:17Z",
+      "title": "Face aux ingérences étrangères, \"il faut que chacun sache ce qu'il aura à faire\", martèle Dominique de Villepin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-face-aux-ingerences-etrangeres-il-faut-que-chacun-sache-ce-qu-il-aura-a-faire-martele-dominique-de-villepin_VN-202611100362.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
