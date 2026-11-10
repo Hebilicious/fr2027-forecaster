@@ -1,0 +1,221 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T23:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T23:04:51Z",
+      "title": "Jordan Bardella revient sur les propos antisémites qui lui sont attribués par Mediapart",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-revient-sur-les-propos-antisemites-qui-lui-sont-attribues-par-mediapart_VN-202611101013.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:54:02Z",
+      "title": "VRAI/FAUX. L'uniforme à l'école permet-il \"de gommer toutes les différences sociales\", comme l'affirme Jordan Bardella?",
+      "url": "https://www.bfmtv.com/politique/front-national/vrai-faux-l-uniforme-a-l-ecole-permet-il-de-gommer-toutes-les-differences-sociales-comme-l-affirme-jordan-bardella_AV-202611101006.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:53:36Z",
+      "title": "Fonction publique: Jordan Bardella, président du Rassemblement national, prévoit le non-remplacement de 223.000 postes",
+      "url": "https://www.bfmtv.com/politique/front-national/video-fonction-publique-jordan-bardella-president-du-rassemblement-national-prevoit-le-non-remplacement-de-223-000-postes_VN-202611101008.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:51:16Z",
+      "title": "Présidentielle: Jordan Bardella \"ne peut pas imaginer\" que Marine Le Pen soit condamnée en cassation avant l'élection",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-jordan-bardella-ne-peut-pas-imaginer-que-marine-le-pen-soit-condamnee-en-cassation-avant-l-election_VN-202611101007.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:49:59Z",
+      "title": "Financement de la campagne présidentielle: \"Nous avons deux accords de principe de la part d'établissements bancaires européens\", indique Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-financement-de-la-campagne-presidentielle-nous-avons-deux-accords-de-principe-de-la-part-d-etablissements-bancaires-europeens-indique-jordan-bardella-president-du-rn_VN-202611101004.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:45:09Z",
+      "title": "\"Oui\": Jordan Bardella, président du RN, reconnaît que Jean-Luc Mélenchon est fort en communication",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-oui-jordan-bardella-president-du-rn-reconnait-que-jean-luc-melenchon-est-fort-en-communication_VN-202611101003.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:38:42Z",
+      "title": "\"J'ai de très bons liens avec Marion (Maréchal), elle soutient la campagne\", assure Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-ai-de-tres-bons-liens-avec-marion-marechal-elle-soutient-la-campagne-assure-jordan-bardella-president-du-rn_VN-202611101001.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:34:19Z",
+      "title": "\"Bien sûr\": Jordan Bardella assure que Marine Le Pen débattra avec Jean-Luc Mélenchon en cas de duel au second tour de la présidentielle",
+      "url": "https://www.bfmtv.com/politique/front-national/bien-sur-jordan-bardella-assure-que-marine-le-pen-debattra-avec-jean-luc-melenchon-en-cas-de-duel-au-second-tour-de-la-presidentielle_AV-202611101000.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:33:29Z",
+      "title": "\"État pro-police\", racisme, réforme des retraites... Ce qu'il faut retenir du \"Face à BFM\" de Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/front-national/etat-pro-police-racisme-reforme-des-retraites-ce-qu-il-faut-retenir-du-face-a-bfm-de-jordan-bardella_AN-202611100999.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:29:49Z",
+      "title": "Présidentielle: en cas de second tour face à Jean-Luc Mélenchon, Jordan Bardella assure que Marine Le Pen acceptera un débat avec le candidat LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-en-cas-de-second-tour-face-a-jean-luc-melenchon-jordan-bardella-assure-que-marine-le-pen-acceptera-un-debat-avec-le-candidat-lfi_VN-202611100997.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:23:07Z",
+      "title": "Jordan Bardella, président du RN, évoque \"une administration\" et une \"confiance mutuelle\" avec Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-president-du-rn-evoque-une-administration-et-une-confiance-mutuelle-avec-marine-le-pen_VN-202611100995.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:18:36Z",
+      "title": "\"Bruno Retailleau a été ministre d'Emmanuel Macron et je pense que les Français veulent tourner la page du macronisme\", déclare Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-retailleau-a-ete-ministre-d-emmanuel-macron-et-je-pense-que-les-francais-veulent-tourner-la-page-du-macronisme-declare-jordan-bardella_VN-202611100993.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-10T22:15:50Z",
+      "title": "En cas de victoire du RN à l'élection présidentielle, Jordan Bardella souhaite un gouvernement \"resserré autour de 15 ministres\" issus du RN et veut accueillir des \"patriotes\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-en-cas-de-victoire-du-rn-a-l-election-presidentielle-jordan-bardella-souhaite-un-gouvernement-resserre-autour-de-15-ministres-issus-du-rn-et-veut-accueillir-des-patriotes_VN-202611100992.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Jordan Bardella veut arrêter le renouvellement des titres de séjour des étrangers sans emploi depuis plus de 6 mois",
+      "url": "https://www.leparisien.fr/politique/jordan-bardella-veut-arreter-le-renouvellement-des-titres-de-sejour-des-etrangers-sans-emploi-depuis-plus-de-6-mois-10-11-2026-HRML3SPKMFCBVPRG3VK53MJCK4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
