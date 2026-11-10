@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-10T14:18:29Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-10T14:00:03Z",
+      "title": "Présidentielle 2027 : David Lisnard et les raisons d’une surprenante percée libérale",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/10/presidentielle-2027-david-lisnard-et-les-raisons-d-une-percee-liberale-inattendue_6808840_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-10T13:26:48Z",
+      "title": "Voile dans le sport, taxation des sociétés, santé mentale… Ces fois où Teddy Riner s’est immiscé dans le débat politique",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/voile-dans-le-sport-taxation-des-societes-sante-mentale-ces-fois-ou-teddy-riner-s-est-immisce-dans-le-debat-politique-20261110"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-10T13:50:47Z",
+      "title": "Nomination de Lise Boëll à la tête de Grasset : «Bolloré se comporte comme un casseur», dénoncent une soixantaine d’anciens auteurs",
+      "url": "https://www.liberation.fr/culture/livres/nomination-de-lise-boell-a-la-tete-de-grasset-bollore-se-comporte-comme-un-casseur-denoncent-une-soixantaine-danciens-auteurs-20261110_2ESDJQ3AFBAABIGC5K7WEZDAFI/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-10T13:20:36Z",
+      "title": "Teddy Riner candidat à la présidentielle : c’est bien son droit mais ça n’a pas grand sens",
+      "url": "https://www.liberation.fr/politique/elections/teddy-riner-candidat-a-la-presidentielle-cest-bien-son-droit-mais-ca-na-pas-grand-sens-20261110_2LNRM7XNABECDMGFMTNNXVBAGQ/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-10T13:51:41Z",
+      "title": "\"C'est au peuple de décider ce qu'il veut\" : on vous résume la polémique suscitée par les propos de Jean-Luc Mélenchon sur l'Ukraine",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/c-est-au-peuple-de-decider-lui-meme-ce-qu-il-veut-on-vous-resume-la-polemique-suscitee-par-les-propos-de-jean-luc-melenchon-sur-l-ukraine_8276072.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-10T14:03:08Z",
+      "title": "Sécurité, retraites... Que propose Teddy Riner, candidat à l’élection présidentielle de 2027 ?",
+      "url": "https://www.franceinfo.fr/replay-jt/france-2/13-heures/securite-retraites-que-propose-teddy-riner-candidat-a-l-election-presidentielle-de-2027_8276396.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
