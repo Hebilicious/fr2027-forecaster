@@ -1,0 +1,140 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.france24.com/fr/france/rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;france24&#46;com&#47;fr&#47;france&#47;rss\" on this server.<P>\nReference&#32;&#35;18&#46;88422417&#46;1794399500&#46;15e9a78e\n<P>https&#58;&#47;&#47;errors",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-11-11T12:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-11T12:07:18Z",
+      "title": "Présidentielle 2027 : Marine Le Pen a rencontré plusieurs dirigeants de grandes entreprises, dont Renault et TotalEnergies, fin octobre",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/11/presidentielle-2027-marine-le-pen-a-rencontre-plusieurs-dirigeants-de-grandes-entreprises-dont-renault-et-totalenergies-fin-octobre_6808967_3234.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-11T11:45:23Z",
+      "title": "André Laignel : « Respectons notre accord de gouvernance conclu à l’AMF avec David Lisnard »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/andre-laignel-respectons-notre-accord-de-gouvernance-conclu-a-l-amf-avec-david-lisnard-20261111"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T11:53:59Z",
+      "title": "11-Novembre: Jean-Luc Mélenchon appelle à se souvenir de l’Histoire pour ne pas \"la voir se renouveler\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-11-novembre-jean-luc-melenchon-appelle-a-se-souvenir-de-l-histoire-pour-ne-pas-la-voir-se-renouveler_VN-202611110446.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T11:45:45Z",
+      "title": "11-Novembre: \"On ne construit pas la paix, ni le sentiment d'appartenance nationale, si nécessaire à la cohésion sociale, sur l'oubli\", affirme Marine Le Pen, candidate RN à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-11-novembre-on-ne-construit-pas-la-paix-ni-le-sentiment-d-appartenance-nationale-si-necessaire-a-la-cohesion-sociale-sur-l-oubli-affirme-marine-le-pen-candidate-rn-a-la-presidentielle_VN-202611110440.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T11:39:47Z",
+      "title": "11-Novembre: \"Face aux malheurs du pays, on ne peut rester spectateurs ou commentateurs\", déclare Marine Le Pen, candidate RN à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-11-novembre-face-aux-malheurs-du-pays-on-ne-peut-rester-spectateurs-ou-commentateurs-declare-marine-le-pen-candidate-rn-a-la-presidentielle_VN-202611110438.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T11:35:37Z",
+      "title": "Le président de SOS Racisme estime que la candidature d'Éric Zemmour, condamné pour provocation à la haine raciale, pose un \"problème républicain\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/le-president-de-sos-racisme-estime-que-la-candidature-d-eric-zemmour-condamne-pour-provocation-a-la-haine-raciale-pose-un-probleme-republicain_AV-202611110433.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
