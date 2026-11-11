@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T10:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-11T09:54:07Z",
+      "title": "Bruno Retailleau propose une primaire de la droite et du centre les 31 janvier et 7 février",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/bruno-retailleau-propose-une-primaire-de-la-droite-et-du-centre-les-31-janvier-et-7-fevrier_8277581.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T09:54:41Z",
+      "title": "11-Novembre: Marine Le Pen dépose une gerbe de fleurs à Hénin-Beaumont",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-11-novembre-marine-le-pen-depose-une-gerbe-de-fleurs-a-henin-beaumont_VN-202611110360.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T09:45:25Z",
+      "title": "Présidentielle 2027: financements, soutiens, déplacements... Les coulisses de la candidature surprise de Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-financements-soutiens-deplacements-les-coulisses-de-la-candidature-surprise-de-teddy-riner_AV-202611110354.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Éric Zemmour candidat à l’élection, à combien est-il donné dans les derniers sondages ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-eric-zemmour-candidat-a-lelection-a-combien-est-il-donne-dans-les-derniers-sondages-11-11-2026-U2ZWG4ORAVFFTOFFOVJYWHHV6Y.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
