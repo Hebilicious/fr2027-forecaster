@@ -1,0 +1,162 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T14:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-11T12:00:34Z",
+      "title": "11-Novembre : Emmanuel Macron a présidé sa dernière cérémonie de commémoration à Paris ; Jean-Luc Mélenchon a appelé à se souvenir de l’histoire, Marine Le Pen à « l’unité »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/11/11-novembre-emmanuel-macron-preside-la-ceremonie-de-commemoration-pour-la-derniere-fois_6808966_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-11T14:13:08Z",
+      "title": "11-Novembre : \"On ne construit pas la paix ni le sentiment d'appartenance nationale sur l'oubli\", prononce Marine Le Pen à Hénin-Beaumont après les refus d'hommages dans certaines écoles",
+      "url": "https://www.franceinfo.fr/societe/guerre-de-14-18/11-novembre/11-novembre-on-ne-construit-pas-la-paix-ni-le-sentiment-d-appartenance-nationale-sur-l-oubli-prononce-marine-le-pen-a-henin-beaumont-apres-les-refus-d-hommages-dans-certaines-ecoles_8277827.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T13:51:56Z",
+      "title": "Primaire de la droite et du centre: \"Il n'y a pas un sauveur\", soutient Geoffroy Boulard, maire LR du 17ème arrondissement de Paris et proche de David Lisnard",
+      "url": "https://www.bfmtv.com/politique/video-primaire-de-la-droite-et-du-centre-il-n-y-a-pas-un-sauveur-soutient-geoffroy-boulard-maire-lr-du-17eme-arrondissement-de-paris-et-proche-de-david-lisnard_VN-202611110518.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : la candidature d’Éric Zemmour pose un « problème républicain », juge le président de SOS Racisme",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-la-candidature-deric-zemmour-pose-un-probleme-republicain-juge-le-president-de-sos-racisme-11-11-2026-SXPJ5MWB3FGF5FH5RTTGJ42HHI.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : la députée de Martinique Béatrice Bellay « rétropédale » sur son parrainage évoqué à Teddy Riner",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-la-deputee-de-martinique-beatrice-bellay-retropedale-sur-son-parrainage-evoque-a-teddy-riner-11-11-2026-CWQGLKKAJNGSRKLCBJ2PC2KPVA.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il faut demander aux populations » : accusé de complaisance envers la Russie, Jean-Luc Mélenchon défend sa position sur l’Ukraine",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-faut-demander-aux-populations-accuse-de-complaisance-envers-la-russie-jean-luc-melenchon-defend-sa-position-sur-lukraine-11-11-2026-MEUUSG37I5H5RLAKP5MYC364II.php"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : face à ses multiples condamnations judiciaires, Éric Zemmour dénonce un « harcèlement judiciaire »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-face-a-ses-multiples-condamnations-judiciaires-eric-zemmour-denonce-un-harcelement-judiciaire-11-11-2026-RKZEHX7ATZFWNOVMKPJ4IGSZPI.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-11T13:53:20Z",
+      "title": "Guerre en Ukraine : Jean-Luc Mélenchon défend sa position sur les référendums",
+      "url": "https://www.20minutes.fr/politique/4262173-20261111-guerre-ukraine-jean-luc-melenchon-defend-position-referendums"
+    }
+  ],
+  "schema_version": "1.0"
+}
