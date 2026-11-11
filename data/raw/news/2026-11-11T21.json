@@ -1,0 +1,165 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T21:18:36Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-11T19:20:46Z",
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon, critiqué pour ses propositions sur l’Ukraine, accuse les médias d’avoir « truqué ses paroles »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/11/presidentielle-2027-jean-luc-melenchon-critique-pour-ses-propositions-sur-l-ukraine-accuse-les-medias-d-avoir-truque-ses-paroles_6809023_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-11T20:26:40Z",
+      "title": "Marine Le Pen appelle à \"l'unité\" et Jean-Luc Mélenchon à se souvenir de l'Histoire, lors des commémorations du 11-Novembre",
+      "url": "https://www.franceinfo.fr/societe/guerre-de-14-18/11-novembre/marine-le-pen-appelle-a-l-unite-et-jean-luc-melenchon-a-se-souvenir-de-l-histoire-lors-des-commemorations-du-11-novembre_8278301.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-11T19:43:12Z",
+      "title": "Référendum dans le Donbass : pourquoi la proposition de Jean-Luc Mélenchon fait réagir jusqu’à Kiev",
+      "url": "https://www.franceinfo.fr/vrai-ou-fake/referendum-dans-le-donbass-pourquoi-la-proposition-de-jean-luc-melenchon-fait-reagir-jusqu-a-kiev_8278241.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T20:06:03Z",
+      "title": "Primaire du centre et de la droite: \"Une réunion de campagne est prévue mardi avec les équipes de Bruno Retailleau, de David Lisnard et de Gabriel Attal\", explique Céline Géraud, porte-parole de la campagne de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-du-centre-et-de-la-droite-une-reunion-de-campagne-est-prevue-mardi-avec-les-equipes-de-bruno-retailleau-de-david-lisnard-et-de-gabriel-attal-explique-celine-geraud-porte-parole-de-la-campagne-de-gabriel-attal_VN-202611110755.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T19:54:42Z",
+      "title": "\"Enfin la droite a un candidat qui ressemble à quelque chose\": Jean-Luc Mélenchon réagit à la candidature de Teddy Riner à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/enfin-la-droite-a-un-candidat-qui-ressemble-a-quelque-chose-jean-luc-melenchon-reagit-a-la-candidature-de-teddy-riner-a-l-election-presidentielle_AD-202611110743.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T19:47:15Z",
+      "title": "Candidature de Teddy Riner: Zinédine Zidane lui souhaite \"bonne chance\"",
+      "url": "https://www.bfmtv.com/politique/video-candidature-de-teddy-riner-zinedine-zidane-lui-souhaite-bonne-chance_VN-202611110740.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T19:40:35Z",
+      "title": "Présidentielle: Teddy Riner \"peut proposer un projet à droite\", estime Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-teddy-riner-peut-proposer-un-projet-a-droite-estime-jean-luc-melenchon_VN-202611110738.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T19:39:18Z",
+      "title": "Défense: la guerre, \"moi je n'en veux pas\", martèle Jean-Luc Mélenchon dans la Creuse",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-defense-la-guerre-moi-je-n-en-veux-pas-martele-jean-luc-melenchon-dans-la-creuse_VN-202611110736.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
