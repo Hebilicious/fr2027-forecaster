@@ -1,0 +1,164 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T17:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-11T16:39:58Z",
+      "title": "Bruno Retailleau : « Il est hors de question que j’utilise ma famille pour me mettre en avant »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/bruno-retailleau-il-est-hors-de-question-que-j-utilise-ma-famille-pour-me-mettre-en-avant-20261111"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-11T17:06:41Z",
+      "title": "Présidentielle 2027 : Edouard Philippe fait la course entêté",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-edouard-philippe-fait-la-course-entete-20261111_WLI24ITDQZDDXNWRBU75PXUOGI/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-11T16:38:45Z",
+      "title": "11 novembre : la «der» pour Macron, «l’unité» pour Le Pen et «la paix» pour Mélenchon",
+      "url": "https://www.liberation.fr/politique/elections/11-novembre-la-der-pour-macron-lunite-pour-le-pen-et-la-paix-pour-melenchon-20261111_2ZTOOXWLZZDQJAFGLF6TA2KYNM/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-11T16:15:53Z",
+      "title": "A droite, Riner sème le trouble",
+      "url": "https://www.liberation.fr/politique/elections/a-droite-riner-seme-le-trouble-20261111_A33KEHULKBBR5NEWLIECFAZV2I/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T16:31:38Z",
+      "title": "Présidentielle 2027: Édouard Philippe et Gabriel Attal \"n'ont rien à proposer\", assure Jean-Luc Mélenchon, candidat LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-edouard-philippe-et-gabriel-attal-n-ont-rien-a-proposer-assure-jean-luc-melenchon-candidat-lfi_VN-202611110604.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Teddy Riner candidat à la présidentielle : entrepreneur ultralibéral, ancien ministre d’Emmanuel Macron… qui sont les soutiens du judoka ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/teddy-riner-candidat-a-la-presidentielle-entrepreneur-ultraliberal-ancien-ministre-demmanuel-macron-qui-accompagne-le-judoka-11-11-2026-NWM5VUUCEBFNLC7QHSHIWYFYGY.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Je sais pour qui je ne voterai jamais », la rescapée de la Shoah Ginette Kolinka tacle Marine Le Pen",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-je-sais-pour-qui-je-ne-voterai-jamais-la-rescapee-de-la-shoah-ginette-kolinka-tacle-marine-le-pen-11-11-2026-UGJ2FM4SN5HYDOP7OO53DABDAY.php"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sardoche, Thaïs d’Escufon, Louise Montangon... qui sont les « voix d’Internet » venues « confronter » Éric Zemmour sur YouTube ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sardoche-thais-descufon-louise-montangon-qui-sont-les-voix-dinternet-venues-confronter-eric-zemmour-sur-youtube-11-11-2026-RVVDVE3WTFGWDMEXF23MIKJ5P4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
