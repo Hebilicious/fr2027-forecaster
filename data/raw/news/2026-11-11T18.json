@@ -1,0 +1,149 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T18:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "riner"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-11T17:31:03Z",
+      "title": "Présidentielle 2027 : comment Emmanuel Macron a adoubé la candidature de Teddy Riner",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/11/presidentielle-2027-comment-emmanuel-macron-a-adoube-la-candidature-de-teddy-riner_6809010_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-11T18:03:17Z",
+      "title": "Le Pen à Hénin-Beaumont, Mélenchon dans la Creuse : le match à distance sur fond de commémorations",
+      "url": "https://www.lefigaro.fr/politique/le-pen-a-henin-beaumont-melenchon-dans-la-creuse-le-match-a-distance-sur-fond-de-commemorations-20261111"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-11T18:08:01Z",
+      "title": "Le livre-programme de Jean-Luc Mélenchon attire plus de lecteurs que le lauréat du Goncourt",
+      "url": "https://www.franceinfo.fr/culture/livres/le-livre-programme-de-jean-luc-melenchon-attire-plus-de-lecteurs-que-le-laureat-du-goncourt_8278001.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T17:25:27Z",
+      "title": "Présidentielle: \"Il n'y a pas beaucoup de candidats qui ont l'air d'avoir compris la fonction présidentielle\", estime Henri Guaino, ancien conseiller de Nicolas Sarkozy",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-il-n-y-a-pas-beaucoup-de-candidats-qui-ont-l-air-d-avoir-compris-la-fonction-presidentielle-estime-henri-guaino-ancien-conseiller-de-nicolas-sarkozy_VN-202611110664.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Sa position est très raide » : sur l’international et l’Europe, Jean-Luc Mélenchon crispe de nouveau",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sa-position-est-tres-raide-sur-linternational-et-leurope-jean-luc-melenchon-crispe-de-nouveau-11-11-2026-R2VECVKSDJBE5LEVOWLFDX4UHE.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "lisnard",
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Riner et Attal à 2 %, Lisnard, Glucksmann et Philippe à 8 %… Un nouveau sondage teste 18 personnalités",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-riner-et-attal-a-2-lisnard-glucksmann-et-philippe-a-8-un-nouveau-sondage-teste-18-personnalites-11-11-2026-YOMIEHXPTJAAZMYLIOWYOC77HM.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
