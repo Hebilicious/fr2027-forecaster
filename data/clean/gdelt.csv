@@ -3168,69 +3168,102 @@ date,candidate_id,query,articles,total_articles,tone,total_tone,files,source_fil
 2026-11-07,tondelier,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Tondelier | Tondelier",0,7030,,-0.6603,96,data/raw/gdelt/2026-11-10.json
 2026-11-07,villepin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Dominique de Villepin | Villepin",0,7030,,-0.6603,96,data/raw/gdelt/2026-11-10.json
 2026-11-07,zemmour,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Éric Zemmour | Zemmour",1,7030,-0.463,-0.6603,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,arthaud,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nathalie Arthaud | Arthaud",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,asselineau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Asselineau | Asselineau",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,attal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Gabriel Attal | Attal",13,6409,-0.7581,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,bardella,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jordan Bardella | Bardella",4,6409,-0.618,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,batho,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Delphine Batho",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,becht,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Becht",2,6409,-3.0612,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,bertrand,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Xavier Bertrand",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,bonnal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Sébastien Bonnal",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,bouamrane,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Karim Bouamrane | Bouamrane",1,6409,-3.4091,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,cazeneuve,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bernard Cazeneuve | Cazeneuve",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,dupont_aignan,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nicolas Dupont-Aignan | Dupont-Aignan",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,faure,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Faure",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,glucksmann,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Raphaël Glucksmann | Glucksmann",25,6409,-2.333,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,guedj,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jérôme Guedj | Guedj",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,hollande,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Hollande | Hollande",3,6409,1.3921,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,kazib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Anasse Kazib | Kazib",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,labib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Selma Labib",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,le_maire,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Le Maire",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,le_pen,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Le Pen | Le Pen",7,6409,-2.9134,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,lisnard,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: David Lisnard | Lisnard",3,6409,-0.8821,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,maurel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Emmanuel Maurel",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,melenchon,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jean-Luc Mélenchon | Mélenchon",50,6409,-3.2515,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,philippe,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Édouard Philippe",10,6409,-0.7056,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,philippot,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Florian Philippot | Philippot",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,polony,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Natacha Polony | Polony",1,6409,-1.5267,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,retailleau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Retailleau | Retailleau",1,6409,1.4706,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,riner,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Teddy Riner | Riner",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,roussel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Fabien Roussel | Roussel",5,6409,-1.1915,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,royal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Ségolène Royal",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,ruffin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Ruffin | Ruffin",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,tondelier,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Tondelier | Tondelier",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,villepin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Dominique de Villepin | Villepin",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-08,zemmour,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Éric Zemmour | Zemmour",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,arthaud,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nathalie Arthaud | Arthaud",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,asselineau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Asselineau | Asselineau",1,10354,-0.5181,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,attal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Gabriel Attal | Attal",6,10354,-0.8998,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,bardella,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jordan Bardella | Bardella",5,10354,0.1691,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,batho,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Delphine Batho",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,becht,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Becht",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,bertrand,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Xavier Bertrand",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,bonnal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Sébastien Bonnal",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,bouamrane,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Karim Bouamrane | Bouamrane",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,cazeneuve,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bernard Cazeneuve | Cazeneuve",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,dupont_aignan,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nicolas Dupont-Aignan | Dupont-Aignan",1,10354,0.0,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,faure,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Faure",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,glucksmann,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Raphaël Glucksmann | Glucksmann",42,10354,-1.2899,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,guedj,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jérôme Guedj | Guedj",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,hollande,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Hollande | Hollande",2,10354,-0.7414,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,kazib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Anasse Kazib | Kazib",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,labib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Selma Labib",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,le_maire,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Le Maire",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,le_pen,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Le Pen | Le Pen",55,10354,-4.1491,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,lisnard,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: David Lisnard | Lisnard",19,10354,-0.1305,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,maurel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Emmanuel Maurel",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,melenchon,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jean-Luc Mélenchon | Mélenchon",52,10354,-1.4687,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,philippe,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Édouard Philippe",15,10354,-1.4861,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,philippot,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Florian Philippot | Philippot",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,polony,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Natacha Polony | Polony",3,10354,-0.5301,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,retailleau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Retailleau | Retailleau",5,10354,-2.7821,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,riner,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Teddy Riner | Riner",112,10354,-1.0485,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,roussel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Fabien Roussel | Roussel",2,10354,-2.4504,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,royal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Ségolène Royal",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,ruffin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Ruffin | Ruffin",1,10354,1.6667,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,tondelier,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Tondelier | Tondelier",4,10354,-0.7878,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,villepin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Dominique de Villepin | Villepin",1,10354,1.0753,-0.7195,96,data/raw/gdelt/2026-11-10.json
-2026-11-09,zemmour,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Éric Zemmour | Zemmour",5,10354,-1.3815,-0.7195,96,data/raw/gdelt/2026-11-10.json
+2026-11-08,arthaud,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nathalie Arthaud | Arthaud",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,asselineau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Asselineau | Asselineau",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,attal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Gabriel Attal | Attal",13,6409,-0.7581,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,bardella,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jordan Bardella | Bardella",4,6409,-0.618,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,batho,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Delphine Batho",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,becht,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Becht",2,6409,-3.0612,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,bertrand,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Xavier Bertrand",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,bonnal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Sébastien Bonnal",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,bouamrane,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Karim Bouamrane | Bouamrane",1,6409,-3.4091,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,cazeneuve,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bernard Cazeneuve | Cazeneuve",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,dupont_aignan,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nicolas Dupont-Aignan | Dupont-Aignan",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,faure,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Faure",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,glucksmann,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Raphaël Glucksmann | Glucksmann",25,6409,-2.333,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,guedj,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jérôme Guedj | Guedj",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,hollande,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Hollande | Hollande",3,6409,1.3921,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,kazib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Anasse Kazib | Kazib",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,labib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Selma Labib",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,le_maire,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Le Maire",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,le_pen,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Le Pen | Le Pen",7,6409,-2.9134,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,lisnard,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: David Lisnard | Lisnard",3,6409,-0.8821,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,maurel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Emmanuel Maurel",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,melenchon,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jean-Luc Mélenchon | Mélenchon",50,6409,-3.2515,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,philippe,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Édouard Philippe",10,6409,-0.7056,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,philippot,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Florian Philippot | Philippot",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,polony,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Natacha Polony | Polony",1,6409,-1.5267,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,retailleau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Retailleau | Retailleau",1,6409,1.4706,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,riner,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Teddy Riner | Riner",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,roussel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Fabien Roussel | Roussel",5,6409,-1.1915,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,royal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Ségolène Royal",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,ruffin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Ruffin | Ruffin",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,tondelier,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Tondelier | Tondelier",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,villepin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Dominique de Villepin | Villepin",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-08,zemmour,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Éric Zemmour | Zemmour",0,6409,,-0.6889,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,arthaud,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nathalie Arthaud | Arthaud",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,asselineau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Asselineau | Asselineau",1,10354,-0.5181,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,attal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Gabriel Attal | Attal",6,10354,-0.8998,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,bardella,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jordan Bardella | Bardella",5,10354,0.1691,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,batho,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Delphine Batho",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,becht,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Becht",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,bertrand,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Xavier Bertrand",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,bonnal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Sébastien Bonnal",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,bouamrane,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Karim Bouamrane | Bouamrane",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,cazeneuve,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bernard Cazeneuve | Cazeneuve",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,dupont_aignan,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nicolas Dupont-Aignan | Dupont-Aignan",1,10354,0.0,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,faure,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Faure",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,glucksmann,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Raphaël Glucksmann | Glucksmann",42,10354,-1.2899,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,guedj,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jérôme Guedj | Guedj",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,hollande,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Hollande | Hollande",2,10354,-0.7414,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,kazib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Anasse Kazib | Kazib",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,labib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Selma Labib",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,le_maire,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Le Maire",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,le_pen,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Le Pen | Le Pen",55,10354,-4.1491,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,lisnard,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: David Lisnard | Lisnard",19,10354,-0.1305,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,maurel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Emmanuel Maurel",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,melenchon,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jean-Luc Mélenchon | Mélenchon",52,10354,-1.4687,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,philippe,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Édouard Philippe",15,10354,-1.4861,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,philippot,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Florian Philippot | Philippot",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,polony,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Natacha Polony | Polony",3,10354,-0.5301,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,retailleau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Retailleau | Retailleau",5,10354,-2.7821,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,riner,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Teddy Riner | Riner",112,10354,-1.0485,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,roussel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Fabien Roussel | Roussel",2,10354,-2.4504,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,royal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Ségolène Royal",0,10354,,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,ruffin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Ruffin | Ruffin",1,10354,1.6667,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,tondelier,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Tondelier | Tondelier",4,10354,-0.7878,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,villepin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Dominique de Villepin | Villepin",1,10354,1.0753,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-09,zemmour,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Éric Zemmour | Zemmour",5,10354,-1.3815,-0.7195,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,arthaud,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nathalie Arthaud | Arthaud",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,asselineau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Asselineau | Asselineau",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,attal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Gabriel Attal | Attal",14,10784,0.1118,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,bardella,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jordan Bardella | Bardella",11,10784,-3.2658,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,batho,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Delphine Batho",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,becht,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Becht",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,bertrand,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Xavier Bertrand",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,bonnal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Sébastien Bonnal",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,bouamrane,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Karim Bouamrane | Bouamrane",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,cazeneuve,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bernard Cazeneuve | Cazeneuve",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,dupont_aignan,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nicolas Dupont-Aignan | Dupont-Aignan",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,faure,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Faure",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,glucksmann,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Raphaël Glucksmann | Glucksmann",11,10784,-0.8658,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,guedj,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jérôme Guedj | Guedj",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,hollande,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Hollande | Hollande",1,10784,0.7874,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,kazib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Anasse Kazib | Kazib",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,labib,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Selma Labib",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,le_maire,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Le Maire",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,le_pen,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Le Pen | Le Pen",30,10784,-0.4928,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,lisnard,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: David Lisnard | Lisnard",15,10784,0.6803,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,maurel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Emmanuel Maurel",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,melenchon,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jean-Luc Mélenchon | Mélenchon",45,10784,-1.5026,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,philippe,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Édouard Philippe",6,10784,-1.1823,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,philippot,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Florian Philippot | Philippot",1,10784,-0.6711,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,polony,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Natacha Polony | Polony",1,10784,0.0,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,retailleau,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Retailleau | Retailleau",3,10784,-0.1696,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,riner,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Teddy Riner | Riner",80,10784,0.3481,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,roussel,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Fabien Roussel | Roussel",1,10784,-2.1053,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,royal,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Ségolène Royal",0,10784,,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,ruffin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Ruffin | Ruffin",3,10784,-3.1295,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,tondelier,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Tondelier | Tondelier",5,10784,-0.179,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,villepin,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Dominique de Villepin | Villepin",2,10784,0.6097,-0.8204,96,data/raw/gdelt/2026-11-11.json
+2026-11-10,zemmour,"GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Éric Zemmour | Zemmour",42,10784,-2.4563,-0.8204,96,data/raw/gdelt/2026-11-11.json

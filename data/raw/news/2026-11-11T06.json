@@ -1,0 +1,116 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T06:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T05:53:03Z",
+      "title": "L'ÉDITO POLITIQUE DE GUILLAUME DARET - Éric Zemmour officiellement candidat: pour quoi faire?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-edito-politique-de-guillaume-daret-eric-zemmour-officiellement-candidat-pour-quoi-faire_VN-202611110168.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T05:44:06Z",
+      "title": "\"Le déni n'est plus possible\": Bruno Retailleau propose une primaire de la droite et du centre les 31 janvier et 7 février",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/le-deni-n-est-plus-possible-bruno-retailleau-propose-une-primaire-de-la-droite-et-du-centre-les-31-janvier-et-7-fevrier_AD-202611110157.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : 22 % des électeurs seraient « prêts » à voter pour Teddy Riner, selon un sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-22-des-electeurs-seraient-prets-a-voter-pour-teddy-riner-selon-un-sondage-11-11-2026-SGOHSDUITNBOZOXXBVQHYM2NGI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
