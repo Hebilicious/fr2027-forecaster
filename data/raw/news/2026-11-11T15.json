@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T15:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-11T14:24:18Z",
+      "title": "Présidentielle 2027 : Bruno Retailleau propose aux candidats de la droite et du centre d’organiser une primaire les 31 janvier et 7 février",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/11/presidentielle-2027-bruno-retailleau-propose-aux-candidats-de-la-droite-et-du-centre-d-organiser-une-primaire-les-31-janvier-et-7-fevrier_6808981_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-11T15:00:46Z",
+      "title": "DIRECT. Cérémonie du 11-Novembre : Marine Le Pen appelle à \"l'unité\", Jean-Luc Mélenchon à se souvenir de l'histoire",
+      "url": "https://www.franceinfo.fr/societe/guerre-de-14-18/11-novembre/direct-ceremonie-du-11-novembre-suivez-les-commemorations-et-l-emission-speciale-de-france-2_8276093.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« À qui comptez-vous faire la guerre ? » : l’Allemagne veut avoir l’armée la plus puissante d’Europe, Mélenchon « n’accepte pas l’idée »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/a-qui-voulez-vous-faire-la-guerre-lallemagne-veut-avoir-larmee-la-plus-puissante-deurope-melenchon-naccepte-pas-lidee-11-11-2026-SZQTXKJ43NFLVB5C4FWUD3VXCM.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
