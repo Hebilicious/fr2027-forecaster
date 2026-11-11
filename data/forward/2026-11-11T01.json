@@ -1,0 +1,20 @@
+{
+  "detected_at": "2026-11-11T01:18:23Z",
+  "flags": [
+    {
+      "candidate_id": "bardella",
+      "date": "2026-11-11",
+      "detail": "support 0.09 [0.06, 0.14] in the drop to 2026-11-10T00:00:00Z → 0.27 [0.21, 0.33] in the drop to 2026-11-11T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.1772
+    },
+    {
+      "candidate_id": "riner",
+      "date": "2026-11-11",
+      "detail": "support 0.11 [0.07, 0.16] in the drop to 2026-11-10T00:00:00Z → 0.23 [0.17, 0.29] in the drop to 2026-11-11T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.1173
+    }
+  ],
+  "schema_version": "1.0"
+}
