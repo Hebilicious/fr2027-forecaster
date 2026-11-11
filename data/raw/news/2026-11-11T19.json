@@ -1,0 +1,153 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T19:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-11T18:40:15Z",
+      "title": "Guillaume Tabard : « Zemmour à la recherche d’une nouvelle utilité politique »",
+      "url": "https://www.lefigaro.fr/politique/guillaume-tabard-zemmour-a-la-recherche-d-une-nouvelle-utilite-politique-20261111"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-11T19:15:39Z",
+      "title": "«Il a de l’allure le gars ! C’est un champion !» : en meeting, Mélenchon ironise sur la candidature de Riner",
+      "url": "https://www.liberation.fr/politique/elections/il-a-de-lallure-le-gars-cest-un-champion-en-meeting-melenchon-ironise-sur-la-candidature-de-riner-20261111_YPXLCRZFDVDUDBDLZFO6SUMXNE/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-11T19:03:08Z",
+      "title": "Un référendum pour changer la constitution : 110 constitutionnalistes critiquent le projet de Marine Le Pen",
+      "url": "https://www.liberation.fr/politique/elections/un-referendum-pour-changer-la-constitution-110-constitutionnalistes-critiquent-le-projet-de-marine-le-pen-20261111_FKMMJMKVCNETHJZ2X7ADMX5Y4M/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-11T18:47:40Z",
+      "title": "Présidentielle 2027 : éviter de faire rêver les électeurs, un pari risqué pour Edouard Philippe",
+      "url": "https://www.liberation.fr/idees-et-debats/editorial/presidentielle-2027-eviter-de-faire-rever-les-electeurs-un-pari-risque-pour-edouard-philippe-20261111_I5RGXTWKHRBXTNLFEKKWLYLSGE/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T18:49:34Z",
+      "title": "Primaire de la droite et du centre: les directeurs de campagne de Gabriel Attal, Bruno Retailleau et David Lisnard se réuniront le 17 novembre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/primaire-de-la-droite-et-du-centre-les-directeurs-de-campagne-de-gabriel-attal-bruno-retailleau-et-david-lisnard-se-reuniront-le-17-novembre_AN-202611110712.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T18:39:21Z",
+      "title": "\"L'enjeu dépasse les orientations politiques\": 110 constitutionnalistes estiment irrégulière la proposition de référendum de Marine Le Pen pour changer la Constitution",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/l-enjeu-depasse-les-orientations-politiques-110-constitutionnalistes-estiment-irreguliere-la-proposition-de-referendum-de-marine-le-pen-pour-changer-la-constitution_AD-202611110706.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-11T19:13:45Z",
+      "title": "Présidentielle 2026 : A peine candidat, Teddy Riner rattrapé par le fisc",
+      "url": "https://www.20minutes.fr/politique/4262226-20261111-presidentielle-2026-peine-candidat-teddy-riner-rattrape-fisc"
+    }
+  ],
+  "schema_version": "1.0"
+}
