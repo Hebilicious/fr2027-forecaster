@@ -1,0 +1,126 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T23:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-11T22:53:01Z",
+      "title": "Plus de cent constitutionnalistes critiquent le référendum pour changer la Constitution tel que proposé par Marine Le Pen",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/plus-de-cent-constitutionnalistes-critiquent-le-referendum-pour-changer-la-constitution-tel-que-propose-par-marine-le-pen_8278388.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T21:55:29Z",
+      "title": "FORUM BFMTV - Pierre-Henri Dumont, porte-parole de Bruno Retailleau, affirme “qu’il y a une angoisse” autour de Parcoursup",
+      "url": "https://www.bfmtv.com/politique/video-forum-bfmtv-pierre-henri-dumont-porte-parole-de-bruno-retailleau-affirme-qu-il-y-a-une-angoisse-autour-de-parcoursup_VN-202611110816.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Avec Teddy Riner, la « droite » a trouvé un candidat qui « a de l’allure », juge Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/politique/avec-teddy-riner-la-droite-a-trouve-un-candidat-qui-a-de-lallure-juge-jean-luc-melenchon-11-11-2026-NAMQDSTNAREIJNFVDWS3BXDTR4.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-11T14:42:08Z",
+      "title": "Bruno Retailleau propose une primaire de la droite et du centre les 31 janvier et 7 février",
+      "url": "https://www.france24.com/fr/france/20261111-bruno-retailleau-propose-une-primaire-de-la-droite-et-du-centre-les-31-janvier-et-7-f%C3%A9vrier"
+    }
+  ],
+  "schema_version": "1.0"
+}
