@@ -1,0 +1,148 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-11T13:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-11T13:00:08Z",
+      "title": "Présidentielle 2027 : « Que la Constitution soit complexe à réviser ne donne pas le droit de s’affranchir des règles qu’elle impose »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/11/presidentielle-2027-que-la-constitution-soit-complexe-a-reviser-ne-donne-pas-le-droit-de-s-affranchir-des-regles-qu-elle-impose_6808972_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-11T12:35:58Z",
+      "title": "Présidentielle 2027 : la candidature d’Eric Zemmour pose « un problème républicain », estime le président de SOS Racisme, Dominique Sopo",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/11/presidentielle-2027-la-candidature-d-eric-zemmour-pose-un-probleme-republicain-estime-le-president-de-sos-racisme-dominique-sopo_6808971_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T12:27:37Z",
+      "title": "Primaire de la droite et du centre: \"Édouard Philippe ne participera pas car il est candidat à l'élection présidentielle\", justifie Jérémie Patrier-Leitrus, député Horizons du Calvados",
+      "url": "https://www.bfmtv.com/politique/elections/video-primaire-de-la-droite-et-du-centre-edouard-philippe-ne-participera-pas-car-il-est-candidat-a-l-election-presidentielle-justifie-jeremie-patrier-leitrus-depute-horizons-du-calvados_VN-202611110468.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T12:20:11Z",
+      "title": "Présidentielle 2027: \"Le risque c'est qu'on abandonne la France à un match entre Marine Le Pen et Jean-Luc Mélenchon\", estime Bruno Retailleau, candidat LR à l'élection",
+      "url": "https://www.bfmtv.com/politique/elections/video-presidentielle-2027-le-risque-c-est-qu-on-abandonne-la-france-a-un-match-entre-marine-le-pen-et-jean-luc-melenchon-estime-bruno-retailleau-candidat-lr-a-l-election_VN-202611110465.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-11T12:17:07Z",
+      "title": "\"À bas les invasions\": accusé de se faire le \"porte-parole du Kremlin\", Jean-Luc Mélenchon réplique",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-a-bas-les-invasions-accuse-de-se-faire-le-porte-parole-du-kremlin-jean-luc-melenchon-replique_VN-202611110463.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Candidat à la présidentielle et déjà de retour à l’entraînement pour les JO : reverra-t-on un jour Teddy Riner le judoka ?",
+      "url": "https://www.leparisien.fr/sports/candidat-a-la-presidentielle-et-deja-de-retour-a-lentrainement-pour-les-jo-reverra-t-on-un-jour-teddy-riner-le-judoka-11-11-2026-GL6ONHYJORBJPBIP3BIXVZH6IY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}

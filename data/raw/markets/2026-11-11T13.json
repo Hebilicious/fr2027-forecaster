@@ -1,0 +1,1863 @@
+{
+  "fetched_at": "2026-11-11T13:18:25Z",
+  "markets": [
+    {
+      "contracts": [
+        {
+          "ask": 0.467,
+          "bid": 0.466,
+          "candidate_id": "le_pen",
+          "label": "Marine Le Pen",
+          "last": 0.466,
+          "price": 0.4665,
+          "volume": 5369000.459782
+        },
+        {
+          "ask": 0.137,
+          "bid": 0.134,
+          "candidate_id": "lisnard",
+          "label": "David Lisnard",
+          "last": 0.137,
+          "price": 0.1355,
+          "volume": 7412068.445038
+        },
+        {
+          "ask": 0.14,
+          "bid": 0.13,
+          "candidate_id": "melenchon",
+          "label": "Jean-Luc Mélenchon",
+          "last": 0.13,
+          "price": 0.135,
+          "volume": 3700871.7236520005
+        },
+        {
+          "ask": 0.09,
+          "bid": 0.08,
+          "candidate_id": "philippe",
+          "label": "Édouard Philippe",
+          "last": 0.08,
+          "price": 0.085,
+          "volume": 3242764.737698
+        },
+        {
+          "ask": 0.059,
+          "bid": 0.058,
+          "candidate_id": null,
+          "label": "Christine Lagarde",
+          "last": 0.059,
+          "price": 0.0585,
+          "volume": 2937894.3707569996
+        },
+        {
+          "ask": 0.021,
+          "bid": 0.02,
+          "candidate_id": "hollande",
+          "label": "François Hollande",
+          "last": 0.02,
+          "price": 0.0205,
+          "volume": 3227191.392112
+        },
+        {
+          "ask": 0.021,
+          "bid": 0.02,
+          "candidate_id": "glucksmann",
+          "label": "Raphaël Glucksmann",
+          "last": 0.021,
+          "price": 0.0205,
+          "volume": 3681977.282671999
+        },
+        {
+          "ask": 0.02,
+          "bid": 0.019,
+          "candidate_id": "bardella",
+          "label": "Jordan Bardella",
+          "last": 0.02,
+          "price": 0.0195,
+          "volume": 3724393.134369
+        },
+        {
+          "ask": 0.019,
+          "bid": 0.018,
+          "candidate_id": "villepin",
+          "label": "Dominique de Villepin",
+          "last": 0.018,
+          "price": 0.0185,
+          "volume": 3648408.0239300006
+        },
+        {
+          "ask": 0.018,
+          "bid": 0.017,
+          "candidate_id": "riner",
+          "label": "Teddy Riner",
+          "last": 0.018,
+          "price": 0.0175,
+          "volume": 538176.5496810001
+        },
+        {
+          "ask": 0.013,
+          "bid": 0.012,
+          "candidate_id": "retailleau",
+          "label": "Bruno Retailleau",
+          "last": 0.012,
+          "price": 0.0125,
+          "volume": 3956092.565194
+        },
+        {
+          "ask": 0.015,
+          "bid": 0.006,
+          "candidate_id": "zemmour",
+          "label": "Éric Zemmour",
+          "last": 0.014,
+          "price": 0.0105,
+          "volume": 3686760.3424800006
+        },
+        {
+          "ask": 0.005,
+          "bid": 0.004,
+          "candidate_id": "attal",
+          "label": "Gabriel Attal",
+          "last": 0.004,
+          "price": 0.0045,
+          "volume": 3853577.6427569995
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": null,
+          "label": "François Baroin",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 2015854.989783
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": null,
+          "label": "Sarah Knafo",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 3506535.6371090002
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": null,
+          "label": "Sébastien Lecornu",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 2793253.583656
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": "bertrand",
+          "label": "Xavier Bertrand",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 7027046.940838999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "kazib",
+          "label": "Anasse Kazib",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 50.0
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "cazeneuve",
+          "label": "Bernard Cazeneuve",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 2503700.9019419993
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Carole Delga",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 4747685.473386999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Clémence Guetté",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 4192682.6750649996
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Clémentine Autain",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 4995098.031528001
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "roussel",
+          "label": "Fabien Roussel",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 4274184.881007999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "asselineau",
+          "label": "François Asselineau",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 6318317.179117
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "François Bayrou",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 5949279.721652
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "ruffin",
+          "label": "François Ruffin",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 4917159.608626999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Gérald Darmanin",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 2094159.5307900002
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Jean Castex",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 2079925.0248840002
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Juan Branco",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 2380619.723277
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "bouamrane",
+          "label": "Karim Bouamrane",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 1333144.099283
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Laurent Wauquiez",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 3708336.282265
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Lucie Castets",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 423789.418
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Manuel Bompard",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 5250836.583262999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "tondelier",
+          "label": "Marine Tondelier",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 4634552.499946999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Marion Maréchal",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 1090562.498
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Mathilde Panot",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 6426223.027722001
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Michel Barnier",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 5326739.677683999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "polony",
+          "label": "Natacha Polony",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 188995.511
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "dupont_aignan",
+          "label": "Nicolas Dupont-Aignan",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 4946157.895842999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "faure",
+          "label": "Olivier Faure",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 6434158.734355001
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Sylvain Durif",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 51786.0
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": "royal",
+          "label": "Ségolène Royal",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 6991036.052871001
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Valérie Pécresse",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 4072936.9542620005
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Yannick Jadot",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 750493.243586
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Yaël Braun-Pivet",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 5891350.459578999
+        },
+        {
+          "ask": 0.001,
+          "bid": null,
+          "candidate_id": null,
+          "label": "Élisabeth Borne",
+          "last": 0.001,
+          "price": 0.001,
+          "volume": 5557932.211541
+        }
+      ],
+      "error": null,
+      "event": "next-french-presidential-election",
+      "id": "polymarket-win",
+      "question": "win",
+      "status": "ok",
+      "url": "https://polymarket.com/event/next-french-presidential-election",
+      "venue": "polymarket"
+    },
+    {
+      "contracts": [
+        {
+          "ask": 0.91,
+          "bid": 0.9,
+          "candidate_id": "le_pen",
+          "label": "Marine Le Pen",
+          "last": 0.9,
+          "price": 0.905,
+          "volume": 33309.49626100001
+        },
+        {
+          "ask": 0.57,
+          "bid": 0.52,
+          "candidate_id": "melenchon",
+          "label": "Jean-Luc Mélenchon",
+          "last": 0.52,
+          "price": 0.545,
+          "volume": 37473.476438
+        },
+        {
+          "ask": 0.179,
+          "bid": 0.166,
+          "candidate_id": "lisnard",
+          "label": "David Lisnard",
+          "last": 0.179,
+          "price": 0.1725,
+          "volume": 250981.80657900003
+        },
+        {
+          "ask": 0.16,
+          "bid": 0.15,
+          "candidate_id": "philippe",
+          "label": "Édouard Philippe",
+          "last": 0.19,
+          "price": 0.155,
+          "volume": 17109.524338
+        },
+        {
+          "ask": 0.09,
+          "bid": 0.07,
+          "candidate_id": "bardella",
+          "label": "Jordan Bardella",
+          "last": 0.08,
+          "price": 0.08,
+          "volume": 24985.602120999996
+        },
+        {
+          "ask": 0.08,
+          "bid": 0.07,
+          "candidate_id": null,
+          "label": "Christine Lagarde",
+          "last": 0.08,
+          "price": 0.075,
+          "volume": 8078.661252
+        },
+        {
+          "ask": 0.08,
+          "bid": 0.055,
+          "candidate_id": "glucksmann",
+          "label": "Raphaël Glucksmann",
+          "last": 0.065,
+          "price": 0.0675,
+          "volume": 17761.542717
+        },
+        {
+          "ask": 0.058,
+          "bid": 0.042,
+          "candidate_id": "attal",
+          "label": "Gabriel Attal",
+          "last": 0.042,
+          "price": 0.05,
+          "volume": 9488.588623000001
+        },
+        {
+          "ask": 0.053,
+          "bid": 0.041,
+          "candidate_id": "retailleau",
+          "label": "Bruno Retailleau",
+          "last": 0.047,
+          "price": 0.047,
+          "volume": 4377.608753
+        },
+        {
+          "ask": 0.049,
+          "bid": 0.035,
+          "candidate_id": "hollande",
+          "label": "François Hollande",
+          "last": 0.04,
+          "price": 0.042,
+          "volume": 20658.35191
+        },
+        {
+          "ask": 0.046,
+          "bid": 0.033,
+          "candidate_id": null,
+          "label": "Clémence Guetté",
+          "last": 0.041,
+          "price": 0.0395,
+          "volume": 3905.2917929999994
+        },
+        {
+          "ask": 0.048,
+          "bid": 0.023,
+          "candidate_id": "bertrand",
+          "label": "Xavier Bertrand",
+          "last": 0.023,
+          "price": 0.0355,
+          "volume": 2987.055092
+        },
+        {
+          "ask": 0.04,
+          "bid": 0.03,
+          "candidate_id": "cazeneuve",
+          "label": "Bernard Cazeneuve",
+          "last": 0.032,
+          "price": 0.035,
+          "volume": 5801.511705
+        },
+        {
+          "ask": 0.047,
+          "bid": 0.023,
+          "candidate_id": null,
+          "label": "Manuel Bompard",
+          "last": 0.022,
+          "price": 0.035,
+          "volume": 7548.4011279999995
+        },
+        {
+          "ask": 0.042,
+          "bid": 0.024,
+          "candidate_id": null,
+          "label": "Sarah Knafo",
+          "last": 0.062,
+          "price": 0.033,
+          "volume": 8238.925541999999
+        },
+        {
+          "ask": 0.034,
+          "bid": 0.028,
+          "candidate_id": "roussel",
+          "label": "Fabien Roussel",
+          "last": 0.032,
+          "price": 0.031,
+          "volume": 8404.547845
+        },
+        {
+          "ask": 0.045,
+          "bid": 0.015,
+          "candidate_id": null,
+          "label": "Laurent Wauquiez",
+          "last": 0.027,
+          "price": 0.03,
+          "volume": 1841.230937
+        },
+        {
+          "ask": 0.034,
+          "bid": 0.023,
+          "candidate_id": null,
+          "label": "François Bayrou",
+          "last": 0.023,
+          "price": 0.0285,
+          "volume": 4448.4438230000005
+        },
+        {
+          "ask": 0.034,
+          "bid": 0.022,
+          "candidate_id": "ruffin",
+          "label": "François Ruffin",
+          "last": 0.027,
+          "price": 0.028,
+          "volume": 9551.140067
+        },
+        {
+          "ask": 0.034,
+          "bid": 0.022,
+          "candidate_id": null,
+          "label": "Sébastien Lecornu",
+          "last": 0.032,
+          "price": 0.028,
+          "volume": 3771.194894
+        },
+        {
+          "ask": 0.041,
+          "bid": 0.013,
+          "candidate_id": null,
+          "label": "Juan Branco",
+          "last": 0.044,
+          "price": 0.027,
+          "volume": 5930.505893
+        },
+        {
+          "ask": 0.041,
+          "bid": 0.013,
+          "candidate_id": "tondelier",
+          "label": "Marine Tondelier",
+          "last": 0.027,
+          "price": 0.027,
+          "volume": 5515.288576000002
+        },
+        {
+          "ask": 0.032,
+          "bid": 0.02,
+          "candidate_id": null,
+          "label": "Gérald Darmanin",
+          "last": 0.017,
+          "price": 0.026,
+          "volume": 2782.234709
+        },
+        {
+          "ask": 0.041,
+          "bid": 0.01,
+          "candidate_id": "faure",
+          "label": "Olivier Faure",
+          "last": 0.023,
+          "price": 0.0255,
+          "volume": 6236.0996190000005
+        },
+        {
+          "ask": 0.037,
+          "bid": 0.012,
+          "candidate_id": null,
+          "label": "Valérie Pécresse",
+          "last": 0.012,
+          "price": 0.0245,
+          "volume": 3278.706
+        },
+        {
+          "ask": 0.032,
+          "bid": 0.017,
+          "candidate_id": null,
+          "label": "Yaël Braun-Pivet",
+          "last": 0.017,
+          "price": 0.0245,
+          "volume": 4796.410079000001
+        },
+        {
+          "ask": 0.033,
+          "bid": 0.013,
+          "candidate_id": null,
+          "label": "Élisabeth Borne",
+          "last": 0.023,
+          "price": 0.023,
+          "volume": 7436.624942
+        },
+        {
+          "ask": 0.031,
+          "bid": 0.014,
+          "candidate_id": null,
+          "label": "Michel Barnier",
+          "last": 0.021,
+          "price": 0.0225,
+          "volume": 3489.0256820000004
+        },
+        {
+          "ask": 0.03,
+          "bid": 0.013,
+          "candidate_id": null,
+          "label": "Clémentine Autain",
+          "last": 0.027,
+          "price": 0.0215,
+          "volume": 6152.152816000001
+        },
+        {
+          "ask": 0.035,
+          "bid": 0.008,
+          "candidate_id": null,
+          "label": "Jean Castex",
+          "last": 0.022,
+          "price": 0.0215,
+          "volume": 3438.718141
+        },
+        {
+          "ask": 0.033,
+          "bid": 0.008,
+          "candidate_id": "royal",
+          "label": "Ségolène Royal",
+          "last": 0.018,
+          "price": 0.0205,
+          "volume": 6473.463861000001
+        },
+        {
+          "ask": 0.027,
+          "bid": 0.013,
+          "candidate_id": "dupont_aignan",
+          "label": "Nicolas Dupont-Aignan",
+          "last": 0.027,
+          "price": 0.02,
+          "volume": 2159.283664
+        },
+        {
+          "ask": 0.03,
+          "bid": 0.007,
+          "candidate_id": null,
+          "label": "Mathilde Panot",
+          "last": 0.017,
+          "price": 0.0185,
+          "volume": 1922.2970210000003
+        },
+        {
+          "ask": 0.019,
+          "bid": 0.016,
+          "candidate_id": "asselineau",
+          "label": "François Asselineau",
+          "last": 0.016,
+          "price": 0.0175,
+          "volume": 2847.180324
+        },
+        {
+          "ask": 0.024,
+          "bid": 0.009,
+          "candidate_id": "zemmour",
+          "label": "Éric Zemmour",
+          "last": 0.023,
+          "price": 0.0165,
+          "volume": 1308.321515
+        },
+        {
+          "ask": 0.018,
+          "bid": 0.012,
+          "candidate_id": null,
+          "label": "Carole Delga",
+          "last": 0.017,
+          "price": 0.015,
+          "volume": 11407.158403
+        },
+        {
+          "ask": 0.012,
+          "bid": 0.004,
+          "candidate_id": "villepin",
+          "label": "Dominique de Villepin",
+          "last": 0.013,
+          "price": 0.008,
+          "volume": 3869.4931399999996
+        }
+      ],
+      "error": null,
+      "event": "next-french-presidential-election-who-will-advance-to-the-2nd-round",
+      "id": "polymarket-qualify",
+      "question": "qualify",
+      "status": "ok",
+      "url": "https://polymarket.com/event/next-french-presidential-election-who-will-advance-to-the-2nd-round",
+      "venue": "polymarket"
+    },
+    {
+      "contracts": [
+        {
+          "ask": 0.97,
+          "bid": 0.958,
+          "candidate_id": "melenchon",
+          "label": "Jean-Luc Mélenchon",
+          "last": 0.969,
+          "price": 0.964,
+          "volume": 34149.927397
+        },
+        {
+          "ask": 0.93,
+          "bid": 0.92,
+          "candidate_id": "arthaud",
+          "label": "Nathalie Arthaud",
+          "last": 0.93,
+          "price": 0.925,
+          "volume": 10038.039807999998
+        },
+        {
+          "ask": 0.91,
+          "bid": 0.89,
+          "candidate_id": "le_pen",
+          "label": "Marine Le Pen",
+          "last": 0.9,
+          "price": 0.9,
+          "volume": 43325.40345399999
+        },
+        {
+          "ask": 0.85,
+          "bid": 0.83,
+          "candidate_id": "glucksmann",
+          "label": "Raphaël Glucksmann",
+          "last": 0.83,
+          "price": 0.84,
+          "volume": 32911.148457999996
+        },
+        {
+          "ask": 0.84,
+          "bid": 0.8,
+          "candidate_id": "roussel",
+          "label": "Fabien Roussel",
+          "last": 0.82,
+          "price": 0.82,
+          "volume": 7635.745768000001
+        },
+        {
+          "ask": 0.82,
+          "bid": 0.78,
+          "candidate_id": "lisnard",
+          "label": "David Lisnard",
+          "last": 0.81,
+          "price": 0.8,
+          "volume": 36363.21658800001
+        },
+        {
+          "ask": 0.74,
+          "bid": 0.71,
+          "candidate_id": "zemmour",
+          "label": "Éric Zemmour",
+          "last": 0.71,
+          "price": 0.725,
+          "volume": 24232.832843000004
+        },
+        {
+          "ask": 0.72,
+          "bid": 0.54,
+          "candidate_id": "philippe",
+          "label": "Édouard Philippe",
+          "last": 0.7,
+          "price": 0.7,
+          "volume": 27455.064343000002
+        },
+        {
+          "ask": 0.65,
+          "bid": 0.63,
+          "candidate_id": "dupont_aignan",
+          "label": "Nicolas Dupont-Aignan",
+          "last": 0.63,
+          "price": 0.64,
+          "volume": 3736.820246
+        },
+        {
+          "ask": 0.57,
+          "bid": 0.44,
+          "candidate_id": null,
+          "label": "Jean Lassalle",
+          "last": 0.55,
+          "price": 0.55,
+          "volume": 846.5625
+        },
+        {
+          "ask": 0.417,
+          "bid": 0.4,
+          "candidate_id": "riner",
+          "label": "Teddy Riner",
+          "last": 0.4,
+          "price": 0.4085,
+          "volume": 40586.675347
+        },
+        {
+          "ask": 0.37,
+          "bid": 0.32,
+          "candidate_id": "villepin",
+          "label": "Dominique de Villepin",
+          "last": 0.39,
+          "price": 0.345,
+          "volume": 25489.964102000005
+        },
+        {
+          "ask": 0.28,
+          "bid": 0.25,
+          "candidate_id": "tondelier",
+          "label": "Marine Tondelier",
+          "last": 0.28,
+          "price": 0.265,
+          "volume": 17727.947235
+        },
+        {
+          "ask": 0.27,
+          "bid": 0.25,
+          "candidate_id": "retailleau",
+          "label": "Bruno Retailleau",
+          "last": 0.27,
+          "price": 0.26,
+          "volume": 22717.758448
+        },
+        {
+          "ask": 0.27,
+          "bid": 0.24,
+          "candidate_id": "hollande",
+          "label": "François Hollande",
+          "last": 0.27,
+          "price": 0.255,
+          "volume": 48718.280542
+        },
+        {
+          "ask": 0.23,
+          "bid": 0.21,
+          "candidate_id": "asselineau",
+          "label": "François Asselineau",
+          "last": 0.23,
+          "price": 0.22,
+          "volume": 18981.833654000002
+        },
+        {
+          "ask": 0.18,
+          "bid": 0.16,
+          "candidate_id": "attal",
+          "label": "Gabriel Attal",
+          "last": 0.2,
+          "price": 0.17,
+          "volume": 23524.312313000002
+        },
+        {
+          "ask": 0.17,
+          "bid": 0.11,
+          "candidate_id": "ruffin",
+          "label": "François Ruffin",
+          "last": 0.14,
+          "price": 0.14,
+          "volume": 4137.155885999999
+        },
+        {
+          "ask": 0.13,
+          "bid": 0.11,
+          "candidate_id": null,
+          "label": "Christine Lagarde",
+          "last": 0.13,
+          "price": 0.12,
+          "volume": 1677.7798589999998
+        },
+        {
+          "ask": 0.117,
+          "bid": 0.105,
+          "candidate_id": "bertrand",
+          "label": "Xavier Bertrand",
+          "last": 0.106,
+          "price": 0.111,
+          "volume": 16798.113748
+        },
+        {
+          "ask": 0.12,
+          "bid": 0.05,
+          "candidate_id": null,
+          "label": "Sarah Knafo",
+          "last": 0.16,
+          "price": 0.085,
+          "volume": 42621.634792
+        },
+        {
+          "ask": 0.079,
+          "bid": 0.067,
+          "candidate_id": "bardella",
+          "label": "Jordan Bardella",
+          "last": 0.068,
+          "price": 0.073,
+          "volume": 35115.010823
+        },
+        {
+          "ask": 0.062,
+          "bid": 0.057,
+          "candidate_id": null,
+          "label": "Michel Barnier",
+          "last": 0.057,
+          "price": 0.0595,
+          "volume": 3505.0121329999997
+        },
+        {
+          "ask": 0.07,
+          "bid": 0.038,
+          "candidate_id": null,
+          "label": "Matthieu Pigasse",
+          "last": 0.043,
+          "price": 0.054,
+          "volume": 17790.056987
+        },
+        {
+          "ask": 0.059,
+          "bid": 0.042,
+          "candidate_id": null,
+          "label": "Michel-Edouard Leclerc",
+          "last": 0.042,
+          "price": 0.0505,
+          "volume": 11746.524685999999
+        },
+        {
+          "ask": 0.054,
+          "bid": 0.042,
+          "candidate_id": null,
+          "label": "Sébastien Lecornu",
+          "last": 0.052,
+          "price": 0.048,
+          "volume": 8805.472473
+        },
+        {
+          "ask": 0.053,
+          "bid": 0.042,
+          "candidate_id": null,
+          "label": "Philippe de Villiers",
+          "last": 0.042,
+          "price": 0.0475,
+          "volume": 4550.456816999999
+        },
+        {
+          "ask": 0.051,
+          "bid": 0.039,
+          "candidate_id": null,
+          "label": "Jean Castex",
+          "last": 0.053,
+          "price": 0.045,
+          "volume": 4021.540085
+        },
+        {
+          "ask": 0.044,
+          "bid": 0.042,
+          "candidate_id": null,
+          "label": "Yaël Braun-Pivet",
+          "last": 0.054,
+          "price": 0.043,
+          "volume": 1933.0655730000003
+        },
+        {
+          "ask": 0.045,
+          "bid": 0.039,
+          "candidate_id": null,
+          "label": "Bally Bagayoko",
+          "last": 0.043,
+          "price": 0.042,
+          "volume": 11465.831321000003
+        },
+        {
+          "ask": 0.044,
+          "bid": 0.038,
+          "candidate_id": null,
+          "label": "François Bayrou",
+          "last": 0.049,
+          "price": 0.041,
+          "volume": 5453.6691040000005
+        },
+        {
+          "ask": 0.05,
+          "bid": 0.031,
+          "candidate_id": null,
+          "label": "Juan Branco",
+          "last": 0.03,
+          "price": 0.0405,
+          "volume": 14647.546356000003
+        },
+        {
+          "ask": 0.051,
+          "bid": 0.029,
+          "candidate_id": null,
+          "label": "Carole Delga",
+          "last": 0.042,
+          "price": 0.04,
+          "volume": 5193.222684000001
+        },
+        {
+          "ask": 0.058,
+          "bid": 0.021,
+          "candidate_id": null,
+          "label": "Jean-Michel Fauvergue",
+          "last": 0.07,
+          "price": 0.0395,
+          "volume": 4582.303879
+        },
+        {
+          "ask": 0.042,
+          "bid": 0.037,
+          "candidate_id": null,
+          "label": "Manuel Valls",
+          "last": 0.037,
+          "price": 0.0395,
+          "volume": 1282.6946710000002
+        },
+        {
+          "ask": 0.048,
+          "bid": 0.03,
+          "candidate_id": null,
+          "label": "Manuel Bompard",
+          "last": 0.047,
+          "price": 0.039,
+          "volume": 4550.361348999999
+        },
+        {
+          "ask": 0.05,
+          "bid": 0.028,
+          "candidate_id": "faure",
+          "label": "Olivier Faure",
+          "last": 0.041,
+          "price": 0.039,
+          "volume": 8584.321516
+        },
+        {
+          "ask": 0.053,
+          "bid": 0.025,
+          "candidate_id": null,
+          "label": "Élisabeth Borne",
+          "last": 0.037,
+          "price": 0.039,
+          "volume": 3736.9531760000004
+        },
+        {
+          "ask": 0.044,
+          "bid": 0.031,
+          "candidate_id": null,
+          "label": "Mathilde Panot",
+          "last": 0.037,
+          "price": 0.0375,
+          "volume": 3447.983063
+        },
+        {
+          "ask": 0.042,
+          "bid": 0.032,
+          "candidate_id": null,
+          "label": "Gérald Darmanin",
+          "last": 0.038,
+          "price": 0.037,
+          "volume": 6210.396075000001
+        },
+        {
+          "ask": 0.04,
+          "bid": 0.033,
+          "candidate_id": "cazeneuve",
+          "label": "Bernard Cazeneuve",
+          "last": 0.037,
+          "price": 0.0365,
+          "volume": 13626.598172999998
+        },
+        {
+          "ask": 0.049,
+          "bid": 0.023,
+          "candidate_id": "bouamrane",
+          "label": "Karim Bouamrane",
+          "last": 0.047,
+          "price": 0.036,
+          "volume": 11456.083028
+        },
+        {
+          "ask": 0.034,
+          "bid": 0.032,
+          "candidate_id": null,
+          "label": "Laurent Wauquiez",
+          "last": 0.034,
+          "price": 0.033,
+          "volume": 21657.968348000002
+        },
+        {
+          "ask": 0.03,
+          "bid": 0.022,
+          "candidate_id": "guedj",
+          "label": "Jérôme Guedj",
+          "last": 0.042,
+          "price": 0.026,
+          "volume": 8706.743723999998
+        },
+        {
+          "ask": 0.036,
+          "bid": 0.012,
+          "candidate_id": "royal",
+          "label": "Ségolène Royal",
+          "last": 0.012,
+          "price": 0.024,
+          "volume": 6176.05099
+        },
+        {
+          "ask": 0.032,
+          "bid": 0.012,
+          "candidate_id": null,
+          "label": "Clémentine Autain",
+          "last": 0.012,
+          "price": 0.022,
+          "volume": 2915.738781
+        },
+        {
+          "ask": 0.028,
+          "bid": 0.012,
+          "candidate_id": null,
+          "label": "Valérie Pécresse",
+          "last": 0.037,
+          "price": 0.02,
+          "volume": 1531.51408
+        },
+        {
+          "ask": 0.027,
+          "bid": 0.012,
+          "candidate_id": "batho",
+          "label": "Delphine Batho",
+          "last": 0.024,
+          "price": 0.0195,
+          "volume": 5142.3958059999995
+        }
+      ],
+      "error": null,
+      "event": "2027-french-presidential-election-who-will-be-on-the-ballot",
+      "id": "polymarket-on-ballot",
+      "question": "on_ballot",
+      "status": "ok",
+      "url": "https://polymarket.com/event/2027-french-presidential-election-who-will-be-on-the-ballot",
+      "venue": "polymarket"
+    },
+    {
+      "contracts": [
+        {
+          "ask": 0.5,
+          "bid": 0.49,
+          "candidate_id": "le_pen",
+          "label": "Marine Le Pen",
+          "last": 0.49,
+          "price": 0.495,
+          "volume": 498048.25
+        },
+        {
+          "ask": 0.13,
+          "bid": 0.12,
+          "candidate_id": "lisnard",
+          "label": "David Lisnard",
+          "last": 0.13,
+          "price": 0.125,
+          "volume": 154242.69
+        },
+        {
+          "ask": 0.12,
+          "bid": 0.11,
+          "candidate_id": "melenchon",
+          "label": "Jean-Luc Mélenchon",
+          "last": 0.12,
+          "price": 0.115,
+          "volume": 257376.29
+        },
+        {
+          "ask": 0.06,
+          "bid": 0.05,
+          "candidate_id": null,
+          "label": "Christine Lagarde",
+          "last": 0.06,
+          "price": 0.055,
+          "volume": 173939.58
+        },
+        {
+          "ask": 0.053,
+          "bid": 0.052,
+          "candidate_id": "philippe",
+          "label": "Édouard Philippe",
+          "last": 0.066,
+          "price": 0.0525,
+          "volume": 87833.17
+        },
+        {
+          "ask": 0.04,
+          "bid": 0.03,
+          "candidate_id": "glucksmann",
+          "label": "Raphaël Glucksmann",
+          "last": 0.04,
+          "price": 0.035,
+          "volume": 75547.41
+        },
+        {
+          "ask": 0.03,
+          "bid": 0.02,
+          "candidate_id": "hollande",
+          "label": "François Hollande",
+          "last": 0.02,
+          "price": 0.025,
+          "volume": 108237.59
+        },
+        {
+          "ask": 0.022,
+          "bid": 0.021,
+          "candidate_id": "bardella",
+          "label": "Jordan Bardella",
+          "last": 0.021,
+          "price": 0.0215,
+          "volume": 252198.21
+        },
+        {
+          "ask": 0.02,
+          "bid": 0.01,
+          "candidate_id": "riner",
+          "label": "Teddy Riner",
+          "last": 0.01,
+          "price": 0.015,
+          "volume": 21138.36
+        },
+        {
+          "ask": 0.012,
+          "bid": 0.011,
+          "candidate_id": "retailleau",
+          "label": "Bruno Retailleau",
+          "last": 0.011,
+          "price": 0.0115,
+          "volume": 61884.19
+        },
+        {
+          "ask": 0.009,
+          "bid": 0.008,
+          "candidate_id": "villepin",
+          "label": "Dominique de Villepin",
+          "last": 0.008,
+          "price": 0.0085,
+          "volume": 70537.01
+        },
+        {
+          "ask": 0.006,
+          "bid": 0.005,
+          "candidate_id": "attal",
+          "label": "Gabriel Attal",
+          "last": 0.005,
+          "price": 0.0055,
+          "volume": 130655.14
+        },
+        {
+          "ask": 0.006,
+          "bid": 0.005,
+          "candidate_id": "zemmour",
+          "label": "Éric Zemmour",
+          "last": 0.006,
+          "price": 0.0055,
+          "volume": 120378.0
+        },
+        {
+          "ask": 0.005,
+          "bid": 0.004,
+          "candidate_id": null,
+          "label": "François Bayrou",
+          "last": 0.004,
+          "price": 0.0045,
+          "volume": 98933.61
+        },
+        {
+          "ask": 0.005,
+          "bid": 0.004,
+          "candidate_id": null,
+          "label": "Manuel Bompard",
+          "last": 0.005,
+          "price": 0.0045,
+          "volume": 95243.74
+        },
+        {
+          "ask": 0.004,
+          "bid": 0.003,
+          "candidate_id": null,
+          "label": "Jean Castex",
+          "last": 0.004,
+          "price": 0.0035,
+          "volume": 108610.05
+        },
+        {
+          "ask": 0.004,
+          "bid": 0.003,
+          "candidate_id": null,
+          "label": "Laurent Wauquiez",
+          "last": 0.003,
+          "price": 0.0035,
+          "volume": 110800.46
+        },
+        {
+          "ask": 0.004,
+          "bid": 0.003,
+          "candidate_id": null,
+          "label": "Yaël Braun-Pivet",
+          "last": 0.003,
+          "price": 0.0035,
+          "volume": 199844.73
+        },
+        {
+          "ask": 0.003,
+          "bid": 0.002,
+          "candidate_id": null,
+          "label": "Mathilde Panot",
+          "last": 0.003,
+          "price": 0.0025,
+          "volume": 167538.17
+        },
+        {
+          "ask": 0.003,
+          "bid": 0.002,
+          "candidate_id": null,
+          "label": "Michel Barnier",
+          "last": 0.002,
+          "price": 0.0025,
+          "volume": 102285.19
+        },
+        {
+          "ask": 0.003,
+          "bid": 0.002,
+          "candidate_id": "faure",
+          "label": "Olivier Faure",
+          "last": 0.002,
+          "price": 0.0025,
+          "volume": 101814.19
+        },
+        {
+          "ask": 0.003,
+          "bid": 0.002,
+          "candidate_id": null,
+          "label": "Valérie Pécresse",
+          "last": 0.002,
+          "price": 0.0025,
+          "volume": 93885.2
+        },
+        {
+          "ask": 0.003,
+          "bid": 0.002,
+          "candidate_id": "bertrand",
+          "label": "Xavier Bertrand",
+          "last": 0.003,
+          "price": 0.0025,
+          "volume": 97415.67
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": "cazeneuve",
+          "label": "Bernard Cazeneuve",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 22703.9
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": "le_maire",
+          "label": "Bruno Le Maire",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 22377.15
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": null,
+          "label": "Carole Delga",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 21743.15
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": "ruffin",
+          "label": "François Ruffin",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 20889.96
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": null,
+          "label": "Gérald Darmanin",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 24133.88
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": null,
+          "label": "Sarah Knafo",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 112697.9
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": null,
+          "label": "Sébastien Lecornu",
+          "last": 0.002,
+          "price": 0.0015,
+          "volume": 36992.29
+        },
+        {
+          "ask": 0.002,
+          "bid": 0.001,
+          "candidate_id": null,
+          "label": "Élisabeth Borne",
+          "last": 0.001,
+          "price": 0.0015,
+          "volume": 23139.15
+        }
+      ],
+      "error": null,
+      "event": "KXFRENCHPRES-27",
+      "id": "kalshi-win",
+      "question": "win",
+      "status": "ok",
+      "url": "https://kalshi.com/markets/kxfrenchpres",
+      "venue": "kalshi"
+    },
+    {
+      "contracts": [
+        {
+          "ask": 0.93,
+          "bid": 0.1,
+          "candidate_id": "lisnard",
+          "label": "David Lisnard",
+          "last": 0.99,
+          "price": 0.99,
+          "volume": 10.09
+        },
+        {
+          "ask": 0.84,
+          "bid": 0.83,
+          "candidate_id": "le_pen",
+          "label": "Marine Le Pen",
+          "last": 0.84,
+          "price": 0.835,
+          "volume": 9637.76
+        },
+        {
+          "ask": 0.59,
+          "bid": 0.45,
+          "candidate_id": "melenchon",
+          "label": "Jean-Luc Mélenchon",
+          "last": 0.45,
+          "price": 0.45,
+          "volume": 2582.3
+        },
+        {
+          "ask": 0.2,
+          "bid": 0.19,
+          "candidate_id": "philippe",
+          "label": "Édouard Philippe",
+          "last": 0.07,
+          "price": 0.195,
+          "volume": 2391.78
+        },
+        {
+          "ask": 0.12,
+          "bid": 0.1,
+          "candidate_id": "attal",
+          "label": "Gabriel Attal",
+          "last": 0.16,
+          "price": 0.11,
+          "volume": 0.02
+        },
+        {
+          "ask": 0.08,
+          "bid": 0.05,
+          "candidate_id": "glucksmann",
+          "label": "Raphaël Glucksmann",
+          "last": 0.08,
+          "price": 0.065,
+          "volume": 145.85
+        },
+        {
+          "ask": 0.09,
+          "bid": 0.02,
+          "candidate_id": "retailleau",
+          "label": "Bruno Retailleau",
+          "last": 0.06,
+          "price": 0.055,
+          "volume": 10.19
+        },
+        {
+          "ask": 0.07,
+          "bid": 0.03,
+          "candidate_id": "hollande",
+          "label": "François Hollande",
+          "last": 0.07,
+          "price": 0.05,
+          "volume": 2008.13
+        },
+        {
+          "ask": 0.07,
+          "bid": 0.01,
+          "candidate_id": "cazeneuve",
+          "label": "Bernard Cazeneuve",
+          "last": 0.08,
+          "price": 0.04,
+          "volume": 80.19
+        },
+        {
+          "ask": 0.07,
+          "bid": 0.01,
+          "candidate_id": "villepin",
+          "label": "Dominique de Villepin",
+          "last": 0.1,
+          "price": 0.04,
+          "volume": 0.18
+        },
+        {
+          "ask": 0.05,
+          "bid": 0.01,
+          "candidate_id": null,
+          "label": "Sébastien Lecornu",
+          "last": 0.06,
+          "price": 0.03,
+          "volume": 3.13
+        },
+        {
+          "ask": 0.05,
+          "bid": 0.01,
+          "candidate_id": null,
+          "label": "Élisabeth Borne",
+          "last": 0.06,
+          "price": 0.03,
+          "volume": 0.19
+        },
+        {
+          "ask": 0.04,
+          "bid": 0.01,
+          "candidate_id": "bardella",
+          "label": "Jordan Bardella",
+          "last": 0.04,
+          "price": 0.025,
+          "volume": 252.63
+        },
+        {
+          "ask": 0.04,
+          "bid": 0.01,
+          "candidate_id": "faure",
+          "label": "Olivier Faure",
+          "last": 0.05,
+          "price": 0.025,
+          "volume": 4.18
+        }
+      ],
+      "error": null,
+      "event": "KXFRPRESADVANCE-26APR18",
+      "id": "kalshi-qualify",
+      "question": "qualify",
+      "status": "ok",
+      "url": "https://kalshi.com/markets/kxfrpresadvance",
+      "venue": "kalshi"
+    },
+    {
+      "contracts": [
+        {
+          "ask": 0.98,
+          "bid": 0.95,
+          "candidate_id": "melenchon",
+          "label": "Jean-Luc Mélenchon",
+          "last": 0.87,
+          "price": 0.965,
+          "volume": 6.01
+        },
+        {
+          "ask": 0.96,
+          "bid": 0.94,
+          "candidate_id": "le_pen",
+          "label": "Marine Le Pen",
+          "last": 0.93,
+          "price": 0.95,
+          "volume": 351.16
+        },
+        {
+          "ask": 0.94,
+          "bid": 0.86,
+          "candidate_id": "arthaud",
+          "label": "Nathalie Arthaud",
+          "last": 0.77,
+          "price": 0.9,
+          "volume": 8.76
+        },
+        {
+          "ask": 0.82,
+          "bid": 0.81,
+          "candidate_id": "glucksmann",
+          "label": "Raphaël Glucksmann",
+          "last": 0.81,
+          "price": 0.815,
+          "volume": 3150.05
+        },
+        {
+          "ask": 0.82,
+          "bid": 0.76,
+          "candidate_id": "roussel",
+          "label": "Fabien Roussel",
+          "last": 0.82,
+          "price": 0.79,
+          "volume": 632.58
+        },
+        {
+          "ask": 0.78,
+          "bid": 0.75,
+          "candidate_id": "zemmour",
+          "label": "Éric Zemmour",
+          "last": 0.74,
+          "price": 0.765,
+          "volume": 5000.72
+        },
+        {
+          "ask": 0.81,
+          "bid": 0.46,
+          "candidate_id": "philippe",
+          "label": "Édouard Philippe",
+          "last": 0.72,
+          "price": 0.72,
+          "volume": 1747.29
+        },
+        {
+          "ask": 0.69,
+          "bid": 0.61,
+          "candidate_id": "dupont_aignan",
+          "label": "Nicolas Dupont-Aignan",
+          "last": 0.68,
+          "price": 0.65,
+          "volume": 193.6
+        },
+        {
+          "ask": 0.61,
+          "bid": 0.56,
+          "candidate_id": null,
+          "label": "Jean Lassalle",
+          "last": 0.57,
+          "price": 0.585,
+          "volume": 970.75
+        },
+        {
+          "ask": 0.35,
+          "bid": 0.31,
+          "candidate_id": "villepin",
+          "label": "Dominique de Villepin",
+          "last": 0.32,
+          "price": 0.33,
+          "volume": 1977.77
+        },
+        {
+          "ask": 0.3,
+          "bid": 0.23,
+          "candidate_id": "retailleau",
+          "label": "Bruno Retailleau",
+          "last": 0.28,
+          "price": 0.265,
+          "volume": 3924.02
+        },
+        {
+          "ask": 0.27,
+          "bid": 0.23,
+          "candidate_id": "hollande",
+          "label": "François Hollande",
+          "last": 0.28,
+          "price": 0.25,
+          "volume": 3233.42
+        },
+        {
+          "ask": 0.27,
+          "bid": 0.2,
+          "candidate_id": "tondelier",
+          "label": "Marine Tondelier",
+          "last": 0.2,
+          "price": 0.235,
+          "volume": 139.99
+        },
+        {
+          "ask": 0.23,
+          "bid": 0.22,
+          "candidate_id": "attal",
+          "label": "Gabriel Attal",
+          "last": 0.22,
+          "price": 0.225,
+          "volume": 5665.84
+        },
+        {
+          "ask": 0.22,
+          "bid": 0.16,
+          "candidate_id": "ruffin",
+          "label": "François Ruffin",
+          "last": 0.24,
+          "price": 0.19,
+          "volume": 412.74
+        },
+        {
+          "ask": 0.2,
+          "bid": 0.15,
+          "candidate_id": "asselineau",
+          "label": "François Asselineau",
+          "last": 0.14,
+          "price": 0.175,
+          "volume": 338.0
+        },
+        {
+          "ask": 0.09,
+          "bid": 0.07,
+          "candidate_id": "cazeneuve",
+          "label": "Bernard Cazeneuve",
+          "last": 0.07,
+          "price": 0.08,
+          "volume": 695.82
+        },
+        {
+          "ask": 0.09,
+          "bid": 0.05,
+          "candidate_id": "guedj",
+          "label": "Jérôme Guedj",
+          "last": 0.05,
+          "price": 0.07,
+          "volume": 272.12
+        },
+        {
+          "ask": 0.1,
+          "bid": 0.03,
+          "candidate_id": "bardella",
+          "label": "Jordan Bardella",
+          "last": 0.13,
+          "price": 0.065,
+          "volume": 495.18
+        },
+        {
+          "ask": 0.1,
+          "bid": 0.03,
+          "candidate_id": "bouamrane",
+          "label": "Karim Bouamrane",
+          "last": 0.03,
+          "price": 0.065,
+          "volume": 365.01
+        },
+        {
+          "ask": 0.09,
+          "bid": 0.02,
+          "candidate_id": null,
+          "label": "Gérald Darmanin",
+          "last": 0.5,
+          "price": 0.055,
+          "volume": 0.01
+        },
+        {
+          "ask": 0.08,
+          "bid": 0.01,
+          "candidate_id": null,
+          "label": "Clémentine Autain",
+          "last": 0.08,
+          "price": 0.045,
+          "volume": 1.01
+        },
+        {
+          "ask": 0.05,
+          "bid": 0.04,
+          "candidate_id": "faure",
+          "label": "Olivier Faure",
+          "last": 0.05,
+          "price": 0.045,
+          "volume": 558.56
+        }
+      ],
+      "error": null,
+      "event": "KXFRPRESBALLOT-27JUN30",
+      "id": "kalshi-on-ballot",
+      "question": "on_ballot",
+      "status": "ok",
+      "url": "https://kalshi.com/markets/kxfrpresballot",
+      "venue": "kalshi"
+    }
+  ],
+  "schema_version": "1.0"
+}
