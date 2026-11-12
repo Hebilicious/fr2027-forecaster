@@ -1,0 +1,206 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T17:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-12T17:00:18Z",
+      "title": "Présidentielle 2027 : les territoires d’outre-mer, pièces maîtresses de la stratégie de Jean-Luc Mélenchon",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/12/presidentielle-2027-les-territoires-d-outre-mer-pieces-maitresses-de-la-strategie-de-jean-luc-melenchon_6809135_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-12T16:43:21Z",
+      "title": "EN DIRECT, présidentielle 2027 | Suivez le grand oral de huit candidats sur Franceinfo : Edouard Philippe dit qu’il faut « interdire la possibilité de se syndiquer dans la magistrature »",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/12/en-direct-presidentielle-2027-suivez-le-grand-oral-de-huit-candidats-sur-franceinfo-edouard-philippe-maintient-sa-position-je-ne-me-soumettrai-pas-a-une-primaire-de-la-droite-et-du-centre_6809070_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-12T16:45:00Z",
+      "title": "Salaire médian à 4 000 euros net, référendums citoyens, moratoire sur l’immigration… Bruno Le Maire propose « une autre France » pour rebondir",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/salaire-median-a-4-000-euros-net-referendums-citoyens-moratoire-sur-l-immigration-bruno-le-maire-propose-une-autre-france-pour-rebondir-20261112"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-12T16:21:07Z",
+      "title": "« Les choses sont figées, elles ne bougeront plus, on va gagner » : à cinq mois de la présidentielle, le RN menacé par l’excès de confiance ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/les-choses-sont-figees-elles-ne-bougeront-plus-on-va-gagner-a-cinq-mois-de-la-presidentielle-le-rn-menace-par-l-exces-de-confiance-20261112"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-12T17:11:39Z",
+      "title": "Israël interdit de territoire Jean-Luc Mélenchon en raison d’une «position extrêmement hostile»",
+      "url": "https://www.liberation.fr/politique/elections/israel-interdit-de-territoire-jean-luc-melenchon-en-raison-dune-position-extremement-hostile-20261112_HJWXENCSYRGBLI4UD6UX5ATXHE/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-12T17:04:04Z",
+      "title": "«Quelle est l’histoire qu’il se raconte à lui-même ?» Après la candidature de Teddy Riner, le monde du judo reste dubitatif",
+      "url": "https://www.liberation.fr/sports/quelle-est-lhistoire-quil-se-raconte-a-lui-meme-apres-la-candidature-de-teddy-riner-le-monde-du-judo-reste-dubitatif-20261112_KJEDGVU3L5C2LPRH5WJIKDCJ7E/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T17:13:07Z",
+      "title": "Israël interdit à Jean-Luc Mélenchon et Mathilde Panot l'entrée sur son territoire, dénonçant \"la position extrêmement anti-israélienne\" de La France insoumise",
+      "url": "https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T16:38:32Z",
+      "title": "Présidentielle 2027 : \"Je ne me soumettrai pas à une primaire\", répète Édouard Philippe, candidat Horizons",
+      "url": "https://www.franceinfo.fr/elections/presidentielle-2027-je-ne-me-soumettrai-pas-a-une-primaire-repete-edouard-philippe-candidat-horizons_8279726.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T16:55:59Z",
+      "title": "LES ÉCLAIREURS - Primaire: ces candidats qui avaient refusé avant d'accepter",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-eclaireurs-primaire-ces-candidats-qui-avaient-refuse-avant-d-accepter_VN-202611120727.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Israël interdit l’entrée sur son territoire à Jean-Luc Mélenchon et Mathilde Panot",
+      "url": "https://www.leparisien.fr/international/israel/israel-interdit-lentree-sur-son-territoire-a-jean-luc-melenchon-et-mathilde-panot-12-11-2026-3WQMZDCHIRHWVBFVAINM4L4WZI.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je gagnerai cette compétition » : Bruno Retailleau défend une primaire, même sans Édouard Philippe",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-gagnerai-cette-competition-bruno-retailleau-defend-une-primaire-meme-sans-edouard-philippe-12-11-2026-AVAK4YB6BNCNZE6WU6CCI2WROQ.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-12T17:02:51Z",
+      "title": "Israël interdit l’entrée sur son territoire à Jean-Luc Mélenchon",
+      "url": "https://www.20minutes.fr/politique/4262498-20261112-israel-interdit-entree-territoire-jean-luc-melenchon"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-12T16:18:48Z",
+      "title": "Présidentielles 2027 : Saxo Bank suspend sa collaboration avec Teddy Riner après sa candidature",
+      "url": "https://www.20minutes.fr/sport/4262470-20261112-presidentielles-2027-saxo-bank-suspend-collaboration-teddy-riner-apres-candidature"
+    }
+  ],
+  "schema_version": "1.0"
+}
