@@ -1,0 +1,213 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T22:18:26Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T21:19:37Z",
+      "title": "\"Toutes les personnes qui travaillent en France, qui ont des enfants qui sont scolarisés en France, devraient être régularisées\", estime Marine Tondelier, candidate Les Écologistes à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-toutes-les-personnes-qui-travaillent-en-france-qui-ont-des-enfants-qui-sont-scolarises-en-france-devraient-etre-regularisees-estime-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202611120945.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T21:16:41Z",
+      "title": "\"Vous ne combattez pas une addiction seulement avec de la répression\": Marine Tondelier défend sa proposition de dépénaliser les drogues et d'interdire la vente de tabac aux personnes nées après 2014",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-vous-ne-combattez-pas-une-addiction-seulement-avec-de-la-repression-marine-tondelier-defend-sa-proposition-de-depenaliser-les-drogues-et-d-interdire-la-vente-de-tabac-aux-personnes-nees-apres-2014_VN-202611120942.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T22:12:09Z",
+      "title": "\"J'aimerais vraiment voter pour vous et en même temps on est hyper lucides\", témoigne Lisa face à Marine Tondelier, candidate Les Écologistes à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-aimerais-vraiment-voter-pour-vous-et-en-meme-temps-on-est-hyper-lucides-temoigne-lisa-face-a-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202611120970.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T22:07:57Z",
+      "title": "\"La déclaration Sacem des Corons de Pierre Bachelet\": Marine Tondelier dévoile le premier objet qu'elle emmènerait à l'Élysée en cas de victoire à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-declaration-sacem-des-corons-de-pierre-bachelet-marine-tondelier-devoile-le-premier-objet-qu-elle-emmenerait-a-l-elysee-en-cas-de-victoire-a-l-election-presidentielle_VN-202611120969.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T22:04:00Z",
+      "title": "\"Pas pour les vendre au supermarché ou chez le buraliste\": Marine Tondelier plaide pour la légalisation des drogues et l'interdiction de la vente de tabac aux personnes nées après 2014",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/pas-pour-les-vendre-au-supermarche-ou-chez-le-buraliste-marine-tondelier-plaide-pour-la-legalisation-des-drogues-et-l-interdiction-de-la-vente-de-tabac-aux-personnes-nees-apres-2014_AN-202611120966.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:59:16Z",
+      "title": "Natalité: \"Je veux qu'on lâche la grappe aux femmes\", répond Marine Tondelier, candidate Les Écologistes à l’élection présidentielle interrogée sur l'éco-anxiété",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-natalite-je-veux-qu-on-lache-la-grappe-aux-femmes-repond-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-interrogee-sur-l-eco-anxiete_VN-202611120963.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:56:25Z",
+      "title": "\"On vit à crédit sur la planète\": Marine Tondelier pointe un \"surendettement climatique\" qui crée le \"surendettement des ménages\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-on-vit-a-credit-sur-la-planete-marine-tondelier-pointe-un-surendettement-climatique-qui-cree-le-surendettement-des-menages_VN-202611120962.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:54:12Z",
+      "title": "\"J'ai eu honte\": Marine Tondelier déplore que l'écologie n'ait pas été au centre des débats lors de la rentrée politique",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-ai-eu-honte-marine-tondelier-deplore-que-l-ecologie-n-ait-pas-ete-au-centre-des-debats-lors-de-la-rentree-politique_VN-202611120961.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:45:34Z",
+      "title": "Marine Tondelier se dit \"extrêmement sereine\" face au RN qui souhaite déposer plainte contre elle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-se-dit-extremement-sereine-face-au-rn-qui-souhaite-deposer-plainte-contre-elle_VN-202611120958.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:38:24Z",
+      "title": "\"Je ne me désisterai pas comme ça, je ne vais pas disparaître d'un coup, mais je suis prête à rejoindre une coalition\", déclare Marine Tondelier, candidate Les Écologistes à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-suis-prete-a-rejoindre-une-coalition-declare-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202611120955.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:36:12Z",
+      "title": "\"C'est pas moi qui vais décider toute seule\", répond Marine Tondelier, candidate Les Écologistes à l’élection présidentielle, interrogée sur l’avenir de son parti dans la campagne électorale",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-c-est-pas-moi-qui-vais-decider-toute-seule-repond-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-interrogee-sur-l-avenir-de-son-parti-dans-la-campagne-electorale_VN-202611120954.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:33:31Z",
+      "title": "Marine Tondelier, candidate Les Écologistes à l'élection présidentielle, pense \"manquer\" de notoriété",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-pense-manquer-de-notoriete_VN-202611120951.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:27:58Z",
+      "title": "\"Monsieur Macron fait des choses qui humainement sont dégueulasses\", lance Marine Tondelier, candidate Les Écologistes à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-monsieur-macron-fait-des-choses-qui-humainement-sont-degueulasses-lance-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202611120948.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "tondelier"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-12T21:25:29Z",
+      "title": "\"Un chef, c'est fait pour cheffer, surtout si c'est un homme et qu'il est socialiste\", ironise Marine Tondelier après les propos de Yannick Jadot au sujet de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-un-chef-c-est-fait-pour-cheffer-surtout-si-c-est-un-homme-et-qu-il-est-socialiste-ironise-marine-tondelier-apres-les-propos-de-yannick-jadot-au-sujet-de-raphael-glucksmann_VN-202611120946.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
