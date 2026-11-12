@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T16:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-12T16:06:50Z",
+      "title": "Après le «tour de France», le «projet» : Bruno Le Maire, un non-candidat qui fait tout comme",
+      "url": "https://www.liberation.fr/politique/elections/apres-le-tour-de-france-le-projet-bruno-le-maire-un-non-candidat-qui-fait-tout-comme-20261112_IFFUZYIAGJCONDNDPI65OJIGAY/"
+    },
+    {
+      "candidate_ids": [
+        "le_maire",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T16:06:07Z",
+      "title": "\"J'arrive avec un projet\" : Bruno Le Maire présente un programme pour \"une autre France\" mais reste flou sur une candidature à la présidentielle",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/j-arrive-avec-un-projet-bruno-le-maire-presente-un-programme-pour-une-autre-france-mais-reste-flou-sur-une-candidature-a-la-presidentielle_8279576.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T16:03:43Z",
+      "title": "Présidentielle : Marine Tondelier promet l'ouverture de 2 000 centres de santé d'ici 2030 en France",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-marine-tondelier-promet-l-ouverture-de-2-000-centres-de-sante-d-ici-2030-en-france_8279639.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T15:55:30Z",
+      "title": "Présidentielle 2027 : \"Je ne veux pas d'une société où les grands médias sont contrôlés par quelques oligarques\", assure Raphaël Glucksmann",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-je-ne-veux-pas-d-une-societe-ou-les-grands-medias-sont-controles-par-quelques-oligarques-assure-raphael-glucksmann_8279636.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T15:20:46Z",
+      "title": "Attentat raciste de Trappes : \"C’est au Rassemblement national de s’expliquer plutôt que de m’attaquer en justice\", estime Marine Tondelier",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/attentat-raciste-de-trappes-c-est-au-rassemblement-national-de-s-expliquer-plutot-que-de-m-attaquer-en-justice-estime-marine-tondelier_8279558.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T15:23:47Z",
+      "title": "Présidentielle 2027: ces affaires qui pourraient plomber la campagne de Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-ces-affaires-qui-pourraient-plomber-la-campagne-de-teddy-riner_VN-202611120658.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-12T15:06:05Z",
+      "title": "Révision de la Constitution : 110 constitutionnalistes rappellent à Marine Le Pen et Jean-Luc Mélenchon qu’ils ne pourront pas avoir recours au référendum via l’article 11",
+      "url": "https://www.publicsenat.fr/actualites/politique/revision-de-la-constitution-110-constitutionnalistes-rappellent-a-marine-le-pen-et-jean-luc-melenchon-quils-ne-pourront-pas-avoir-recours-au-referendum-via-larticle-11"
+    }
+  ],
+  "schema_version": "1.0"
+}
