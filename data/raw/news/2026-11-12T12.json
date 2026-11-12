@@ -1,0 +1,176 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T12:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "melenchon",
+        "philippe",
+        "retailleau",
+        "roussel",
+        "tondelier",
+        "zemmour"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-12T11:50:45Z",
+      "title": "EN DIRECT, présidentielle 2027 | Suivez le grand oral de huit candidats sur les services publics : Raphaël Glucksmann souhaite une « refonte et un sauvetage de l’école publique dans son ensemble »",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/12/en-direct-presidentielle-2027-suivez-le-grand-oral-de-huit-candidats-sur-les-services-publics-raphael-glucksmann-souhaite-une-refonte-et-un-sauvetage-de-l-ecole-publique-dans-son-ensemble_6809070_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-12T12:07:00Z",
+      "title": "Présidentielle 2027 : le livre programme de Jean-Luc Mélenchon, « L’Avenir en commun », en tête des ventes de livres, devant le prix Goncourt",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/12/presidentielle-2027-le-livre-programme-de-jean-luc-melenchon-l-avenir-en-commun-en-tete-des-ventes-de-livres-devant-le-prix-goncourt_6809100_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T12:03:42Z",
+      "title": "Le président du Rassemblement national, Jordan Bardella, porte plainte \"pour faux et usage de faux\" après les accusations d'antisémitisme portées par Mediapart",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/le-president-du-rassemblement-national-jordan-bardella-porte-plainte-pour-faux-et-usage-de-faux-apres-les-accusations-d-antisemitisme-portees-par-mediapart_8279252.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T11:57:08Z",
+      "title": "Écrits antisémites: Jordan Bardella a porté plainte pour \"faux et usage de faux\" après les révélations de Médiapart",
+      "url": "https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-a-porte-plainte-pour-faux-et-usage-de-faux-apres-les-revelations-de-mediapart_AD-202611120506.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T11:54:39Z",
+      "title": "ÉDITO - Bruno Le Maire présente un programme présidentiel, sans être candidat",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-edito-bruno-le-maire-presente-un-programme-presidentiel-sans-etre-candidat_VN-202611120513.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T11:46:32Z",
+      "title": "Présidentielle: \"On a eu déjà eu beaucoup de candidatures cette semaine, ce n'est pas la peine d'en rajouter une\", répond Bruno Le Maire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-on-a-eu-deja-eu-beaucoup-de-candidatures-cette-semaine-ce-n-est-pas-la-peine-d-en-rajouter-une-repond-bruno-le-maire_VN-202611120505.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Accusations d’antisémitisme : Jordan Bardella a porté plainte pour faux et usage de faux, indique le parquet de Paris",
+      "url": "https://www.leparisien.fr/politique/accusations-dantisemitisme-jordan-bardella-a-porte-plainte-pour-faux-et-usage-de-faux-indique-le-parquet-de-paris-12-11-2026-2KW4MF7QVFGJNI272GXWQPOXLQ.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : pas candidate, Christine Lagarde fait mieux qu’Édouard Philippe ou Gabriel Attal",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-pas-candidate-christine-lagarde-fait-mieux-quedouard-philippe-ou-gabriel-attal-12-11-2026-4A3WHRBISBA4BDSGEKSBVFUBYY.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-12T11:50:13Z",
+      "title": "Accusations d'antisémitisme : Jordan Bardella a porté plainte pour faux et usage de faux",
+      "url": "https://www.france24.com/fr/france/20261112-france-accusations-antisemitisme-jordan-bardella-a-porte-plainte-pour-faux-et-usage-de-faux"
+    }
+  ],
+  "schema_version": "1.0"
+}
