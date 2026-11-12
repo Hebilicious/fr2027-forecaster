@@ -1,0 +1,179 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T13:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-12T12:23:02Z",
+      "title": "Ecrits antisémites : Jordan Bardella porte plainte pour faux et usage de faux",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/12/ecrits-antisemites-jordan-bardella-porte-plainte-pour-faux-et-usage-de-faux_6809101_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T13:09:46Z",
+      "title": "Liste de personnalités de gauche retrouvée chez le suspect de l'attentat raciste de Trappes : \"Moi-même je vis sous protection policière depuis des années\", réagit Eric Zemmour",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/liste-de-personnalites-de-gauche-retrouvee-chez-le-suspect-de-l-attentat-raciste-de-trappes-moi-meme-je-vis-sous-protection-policiere-depuis-des-annees-reagit-eric-zemmour_8279345.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "riner"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T12:35:23Z",
+      "title": "Teddy Riner candidat à la présidentielle : \"Ni de droite, ni de gauche, c'est ce qu'on a vu pendant 10 ans\", ironise Raphaël Glucksmann",
+      "url": "https://www.franceinfo.fr/sports/judo/teddy-riner/teddy-riner-candidat-a-la-presidentielle-ni-de-droite-ni-de-gauche-c-est-ce-qu-on-a-vu-pendant-10-ans-ironise-raphael-glucksmann_8279291.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T12:29:18Z",
+      "title": "Présidentielle : Fabien Roussel propose la mise en place de 60 000 \"policiers, gendarmes et douaniers\" de proximité",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-fabien-roussel-propose-la-mise-en-place-de-60-000-policiers-gendarmes-et-douaniers-de-proximite_8279156.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T13:13:52Z",
+      "title": "Un premier sponsor de Teddy Riner se retire après l'annonce de sa candidature à la présidentielle 2027",
+      "url": "https://www.bfmtv.com/politique/video-un-premier-sponsor-de-teddy-riner-se-retire-apres-l-annonce-de-sa-candidature-a-la-presidentielle-2027_VN-202611120564.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Teddy Riner candidat, Saxo Banque suspend d’« un commun accord » son partenariat avec le judoka",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-teddy-riner-candidat-saxo-banque-suspend-d-un-commun-accord-son-partenariat-avec-le-judoka-12-11-2026-N5BQG2EULFBMHIF4K7KYL6VM4E.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : David Lisnard continue de progresser et atteint 10 % des intentions de vote, le double de Bruno Retailleau",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-david-lisnard-continue-de-progresser-et-atteint-10-des-intentions-de-vote-le-double-de-bruno-retailleau-12-11-2026-53IAVVSDQRHWDBTUHHBO33EVGQ.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-12T12:41:24Z",
+      "title": "Accusé d’antisémitisme, Bardella a finalement porté plainte pour faux et usage de faux",
+      "url": "https://www.20minutes.fr/politique/4262381-20261112-accuse-antisemitisme-bardella-finalement-porte-plainte-faux-usage-faux"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-12T12:37:30Z",
+      "title": "Meurtre de Thomas à Crépol : La maire de Romans-sur-Isère préférerait voter Le Pen que Mélenchon",
+      "url": "https://www.20minutes.fr/politique/4262365-20261112-meurtre-thomas-crepol-maire-romans-isere-prefererait-voter-pen-melenchon"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-12T12:44:03Z",
+      "title": "Fin de l’emploi à vie des fonctionnaires, hausse de la TVA et du salaire net, RIC, suppression du département et du 49.3 : le projet de Bruno Le Maire, non-candidat à la présidentielle",
+      "url": "https://www.publicsenat.fr/actualites/politique/fin-de-lemploi-a-vie-des-fonctionnaires-hausse-de-la-tva-et-du-salaire-net-ric-suppression-du-departement-et-du-49-3-le-projet-de-bruno-le-maire-non-candidat-a-la-presidentielle"
+    }
+  ],
+  "schema_version": "1.0"
+}
