@@ -1,0 +1,169 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T11:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-12T10:21:11Z",
+      "title": "Macron était prévenu avant tout le monde de l’annonce de candidature de Riner",
+      "url": "https://www.liberation.fr/politique/macron-etait-prevenu-avant-tout-le-monde-de-lannonce-de-candidature-de-riner-20261112_OL3AAPBSNVG6FAQOND7MPGQELI/"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T11:07:25Z",
+      "title": "Attentat raciste de Trappes : \"L'extrême droite tue la démocratie et l'extrême droite tue même celles et ceux qui l'exercent\", dénonce Fabien Roussel",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/attentat-raciste-de-trappes-l-extreme-droite-tue-la-democratie-et-l-extreme-droite-tue-meme-celles-et-ceux-qui-l-exercent-denonce-fabien-roussel_8279168.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T10:57:36Z",
+      "title": "Présidentielle 2027 : Gabriel Attal promet qu'il n'y aura \"pas de poste supprimé\" dans l'Éducation nationale s'il est élu",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-le-candidat-renaissance-gabriel-attal-promet-qu-il-n-y-aura-pas-de-poste-supprime-dans-l-education-nationale-s-il-est-elu_8278985.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T10:25:52Z",
+      "title": "Présidentielle: Bruno Le Maire se dit prêt à abandonner le 49.3, sous conditions",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-bruno-le-maire-se-dit-pret-a-abandonner-le-49-3-sous-conditions_VN-202611120448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T10:18:36Z",
+      "title": "Primaires et élection présidentielle: \"Pourquoi pas. Mais pour aller où ?\", s'interroge Bruno Le Maire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaires-et-election-presidentielle-pourquoi-pas-mais-pour-aller-ou-s-interroge-bruno-le-maire_VN-202611120441.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Je crois en ma candidature et à la victoire du bloc socio-démocrate », affirme Karim Bouamrane",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-je-crois-en-ma-candidature-et-a-la-victoire-du-bloc-socio-democrate-affirme-karim-bouamrane-12-11-2026-RVT2ENFAQ5AOBDXL3YR46PE2QQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : de Dassault à TotalEnergies, Marine Le Pen tente de rassurer les grands patrons",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-de-dassault-a-totalenergies-marine-le-pen-tente-de-rassurer-les-grands-patrons-12-11-2026-UL6TX5TY4NCV7DQPLOTWKTVBXA.php"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Je n’ai rien à voir avec les macronistes », Dominique de Villepin refuse de participer à une primaire de la droite et du centre",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-je-nai-rien-a-voir-avec-les-macronistes-dominique-de-villepin-refuse-de-participer-a-une-primaire-de-la-droite-et-du-centre-12-11-2026-KSREQYMWDVAOBLVEVMWXNNTPTI.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-09T08:41:07Z",
+      "title": "Bonjour chez vous ! — Qui survivra au crépuscule de Macron ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/qui-survivra-au-crepuscule-de-macron-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
