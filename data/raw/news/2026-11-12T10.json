@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T10:18:31Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-12T09:39:53Z",
+      "title": "Présidentielle 2027 : Bruno Le Maire présente un programme pour « une autre France », sans s’être encore déclaré candidat",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/12/presidentielle-2027-bruno-le-maire-presente-un-programme-pour-une-autre-france-sans-s-etre-encore-declare-candidat_6809082_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T09:41:19Z",
+      "title": "Primaire de la droite et du centre : \"Il y aura un siège\" pour Edouard Philippe \"dans toutes les réunions\", assure Gabriel Attal",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/primaire-de-la-droite-et-du-centre-il-y-aura-un-siege-pour-edouard-philippe-dans-toutes-les-reunions-assure-gabriel-attal_8279009.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T10:04:27Z",
+      "title": "\"Je n’ai rien à voir avec les macronistes\": Dominique de Villepin écarte toute participation à une éventuelle primaire de la droite et du centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/je-n-ai-rien-a-voir-avec-les-macronistes-dominique-de-villepin-ecarte-toute-participation-a-une-eventuelle-primaire-de-la-droite-et-du-centre_AN-202611120432.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : pour la première fois, Jean-Luc Mélenchon franchit la barre symbolique des 20 % des intentions de vote",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-pour-la-premiere-fois-jean-luc-melenchon-franchit-la-barre-symbolique-des-20-des-intentions-de-vote-12-11-2026-F35LCMXCHJHHHCG5267NMMGA2A.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
