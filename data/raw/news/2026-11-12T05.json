@@ -1,0 +1,128 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T05:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-12T05:00:08Z",
+      "title": "Présidentielle 2027 : Bruno Retailleau propose un calendrier pour la primaire et accentue la pression sur Edouard Philippe",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/12/presidentielle-2027-bruno-retailleau-propose-un-calendrier-pour-la-primaire-et-accentue-la-pression-sur-edouard-philippe_6809051_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-12T05:00:00Z",
+      "title": "«Edouard Philippe va être obligé de céder» : à droite, la question de la primaire devient centrale",
+      "url": "https://www.liberation.fr/politique/edouard-philippe-va-etre-oblige-de-ceder-a-droite-la-question-de-la-primaire-devient-centrale-20261112_P5EEAIDSWVEKXASNXECZJBSBIA/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T05:04:08Z",
+      "title": "Quand ? Avec qui ? Comment ? A droite et au centre, l'idée d'une primaire fait encore débat à six mois de la présidentielle",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/quand-avec-qui-comment-a-droite-et-au-centre-l-idee-d-une-primaire-fait-encore-debat-a-six-mois-de-la-presidentielle_8277515.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-12T05:04:59Z",
+      "title": "\"Il a une image de gagnant\" : quel candidat à la présidentielle a le plus à craindre de la candidature de Teddy Riner ?",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/il-a-une-image-de-gagnant-quel-candidat-a-la-presidentielle-a-le-plus-a-craindre-de-la-candidature-de-teddy-riner_8277656.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
