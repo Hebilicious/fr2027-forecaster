@@ -1,0 +1,186 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T21:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T21:01:05Z",
+      "title": "Primaire à droite et au centre, les Verts courtisés à gauche… Le point sur la \"Bataille de l'Elysée\" ce 12 novembre",
+      "url": "https://www.franceinfo.fr/elections/primaire-a-droite-et-au-centre-les-verts-courtises-a-gauche-le-point-sur-la-bataille-de-l-elysee-ce-12-novembre_8280032.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T21:08:53Z",
+      "title": "Marine Tondelier juge qu’il ne sera “pas possible” de sortir du nucléaire à l’horizon 2032",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-juge-qu-il-ne-sera-pas-possible-de-sortir-du-nucleaire-a-l-horizon-2032_VN-202611120938.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T21:04:43Z",
+      "title": "Proposition d'augmentation du SMIC: \"Il y aura des aides dédiées aux TPE et PME qui ne peuvent pas se permettre cette augmentation\", assure Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-proposition-d-augmentation-du-smic-il-y-aura-des-aides-dediees-aux-tpe-et-pme-qui-ne-peuvent-pas-se-permettre-cette-augmentation-assure-marine-tondelier_VN-202611120936.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T21:00:28Z",
+      "title": "Marine Tondelier, accusée de diffamation par le RN après des propos sur le suspect de l'attentat des Yvelines, se dit \"extrêmement sereine\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/marine-tondelier-accusee-de-diffamation-par-le-rn-apres-des-propos-sur-le-suspect-de-l-attentat-des-yvelines-se-dit-extremement-sereine_AV-202611120933.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T21:00:12Z",
+      "title": "Au moins 2.000 euros brut \"tout de suite\": Marine Tondelier détaille sa proposition pour le SMIC en cas de victoire à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-au-moins-2-000-euros-brut-tout-de-suite-marine-tondelier-detaille-sa-proposition-pour-le-smic-en-cas-de-victoire-a-l-election-presidentielle_VN-202611120935.html"
+    },
+    {
+      "candidate_ids": [
+        "riner",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T20:42:53Z",
+      "title": "Candidature de Teddy Riner: \"La politique ne doit pas appartenir qu'à des professionnels de la politique\", estime Marine Tondelier, candidate Les Écologistes à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-teddy-riner-la-politique-ne-doit-pas-appartenir-qu-a-des-professionnels-de-la-politique-estime-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202611120926.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T20:39:57Z",
+      "title": "\"C'est la campagne la plus dangereuse qu'on ait eue à vivre\", juge Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-c-est-la-campagne-la-plus-dangereuse-qu-on-ait-eue-a-vivre-juge-marine-tondelier_VN-202611120923.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T20:37:16Z",
+      "title": "Attentat raciste de Trappes: Marine Tondelier se dit \"extrêmement sereine\" après la plainte en diffamation que le RN souhaite déposer contre elle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-attentat-raciste-de-trappes-marine-tondelier-se-dit-extremement-sereine-apres-la-plainte-en-diffamation-que-le-rn-souhaite-deposer-contre-elle_VN-202611120922.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T20:28:42Z",
+      "title": "\"Comment on va tenir jusqu'à l'élection présidentielle ?\" dans un moment où \"tout est extrêmement tendu\", interroge Marine Tondelier, candidate Les Écologistes à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-comment-on-va-tenir-jusqu-a-l-election-presidentielle-dans-un-moment-ou-tout-est-extremement-tendu-interroge-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202611120917.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T20:27:05Z",
+      "title": "Israël interdit l'entrée sur son territoire à Jean-Luc Mélenchon et Mathilde Panot",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-israel-interdit-l-entree-sur-son-territoire-a-jean-luc-melenchon-et-mathilde-panot_VN-202611120913.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Attentat de Trappes : le RN annonce une plainte en diffamation contre Marine Tondelier pour des propos tenus sur BFMTV",
+      "url": "https://www.leparisien.fr/politique/attentat-de-trappes-le-rn-annonce-une-plainte-en-diffamation-contre-marine-tondelier-pour-des-propos-tenus-sur-bfmtv-12-11-2026-2GO5JTI2KFELVOLFTBJTITTVQU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
