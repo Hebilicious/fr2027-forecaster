@@ -1,0 +1,151 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T15:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-11T14:15:00Z",
+      "title": "Présidentielle 2027 : chez Teddy Riner, c’est la parole très à droite qui fait peur",
+      "url": "https://www.liberation.fr/idees-et-debats/tribunes/presidentielle-2027-chez-teddy-riner-cest-la-parole-tres-a-droite-qui-fait-peur-20261111_OE3UN5N2KVBDHJQPVYBEPOLPDA/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T15:01:38Z",
+      "title": "Présidentielle : Bruno Retailleau veut \"économiser 300 000 postes\" dans la fonction publique grâce à l'intelligence artificielle",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-bruno-retailleau-veut-economiser-300-000-postes-dans-la-fonction-publique-grace-a-l-intelligence-artificielle_8279522.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T14:23:32Z",
+      "title": "Présidentielle : Eric Zemmour souhaite supprimer 800 000 postes dans la fonction publique",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-eric-zemmour-souhaite-supprimer-800-000-postes-dans-la-fonction-publique_8279303.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T15:00:25Z",
+      "title": "Présidentielle 2027: Bruno Retailleau \"souhaite\" une primaire de la droite et du centre, même sans Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-bruno-retailleau-souhaite-une-primaire-de-la-droite-et-du-centre-meme-sans-edouard-philippe_AN-202611120639.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je me réserve toutes les possibilités » : Bruno Le Maire présente son projet « pour une autre France » et fait un pas vers une candidature",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-me-reserve-toutes-les-possibilites-bruno-le-maire-presente-son-projet-pour-une-autre-france-et-fait-un-pas-vers-une-candidature-12-11-2026-ACAPDXGOHJBTXPENDA2WMRBPHE.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Bruno Retailleau juge que la primaire de la droite et du centre doit avoir lieu, même sans Édouard Philippe",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-bruno-retailleau-juge-que-la-primaire-de-la-droite-et-du-centre-doit-avoir-lieu-meme-sans-edouard-philippe-12-11-2026-MZCNAUF5YFHVHCTGRGYAEO5ITY.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-12T14:47:44Z",
+      "title": "Présidentielle 2027 : la candidature de Teddy Riner peut-elle peser sur les résultats ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261112-pr%C3%A9sidentielle-2027-la-candidature-de-teddy-riner-peut-elle-peser-sur-les-r%C3%A9sultats"
+    }
+  ],
+  "schema_version": "1.0"
+}
