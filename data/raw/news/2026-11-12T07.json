@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T07:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-12T06:51:02Z",
+      "title": "Primaire à droite : une première réunion calée entre les directeurs de campagne d’Attal, Retailleau et Lisnard",
+      "url": "https://www.liberation.fr/politique/primaire-a-droite-une-premiere-reunion-calee-entre-les-directeurs-de-campagne-dattal-retailleau-et-lisnard-20261112_RXXYY5OVEFDORMLS6V7VU73POU/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-12T06:35:40Z",
+      "title": "Edouard Philippe passe-t-il à côté de sa campagne ? Nos journalistes répondent dans «Chez Pol, l’émission»",
+      "url": "https://www.liberation.fr/politique/elections/edouard-philippe-passe-t-il-a-cote-de-sa-campagne-nos-journalistes-repondent-dans-chez-pol-lemission-20261112_WHIPEBCP6FEFFLNOEZ3MNTQLDA/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-12T07:13:49Z",
+      "title": "DIRECT. Présidentielle 2027 : suivez l'interview de Gabriel Attal, premier des huit candidats interrogés dans le cadre de l'opération \"Nos services publics\", à 10h10",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-education-sante-transports-suivez-les-interviews-de-huit-candidats-dans-le-cadre-de-l-operation-nos-services-publics_8276135.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
