@@ -1,0 +1,221 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T23:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T23:13:12Z",
+      "title": "\"Je ne renoncerai pas\" à l'idée d'une union de la gauche, insiste Marine Tondelier, candidate Les Écologistes à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-ne-renoncerai-pas-a-l-idee-d-une-union-de-la-gauche-insiste-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202611121008.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T23:01:36Z",
+      "title": "Sortir de l'OTAN? \"Je ne pense pas que ce soit le moment\", défend Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-sortir-de-l-otan-je-ne-pense-pas-que-ce-soit-le-moment-defend-marine-tondelier_VN-202611121000.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T23:01:26Z",
+      "title": "Smic, coalition à gauche, immigration, nucléaire... Ce qu'il faut retenir de l'entretien de Marine Tondelier sur BFMTV",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/smic-coalition-a-gauche-immigration-nuclaire-ce-qu-il-faut-retenir-de-l-entretien-de-marine-tondelier-sur-bfmtv_AV-202611120997.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:59:29Z",
+      "title": "\"Je veux un monde sans l'arme atomique\", plaide Marine Tondelier, qui estime néanmoins que \"ce n'est pas le moment\" du désarmement pour la France",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-veux-un-monde-sans-l-arme-atomique-plaide-marine-tondelier-qui-estime-neanmoins-que-ce-n-est-pas-le-moment-du-desarmement-pour-la-france_VN-202611120998.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:58:06Z",
+      "title": "\"Une faute industrielle\": Marine Tondelier dénonce une mise à l'écart de l'industrie photovoltaïque en France",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-une-faute-industrielle-marine-tondelier-denonce-une-mise-a-l-ecart-de-l-industrie-photovoltaique-en-france_VN-202611120994.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:55:50Z",
+      "title": "Énergie: Marine Tondelier, candidate Les Écologistes à l’élection présidentielle, reconnaît “des nuisances pour l’environnement” et affirme avoir “combattu certains projets éoliens” pour protéger les oiseaux ou les poissons",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-energie-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle-reconnait-des-nuisances-pour-l-environnement-et-affirme-avoir-combattu-certains-projets-eoliens-pour-proteger-les-oiseaux-ou-les-poissons_VN-202611120993.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:43:15Z",
+      "title": "\"Monsieur Macron fait des choses qui humainement sont dégueulasses\", estime Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-monsieur-macron-fait-des-choses-qui-humainement-sont-degueulasses-estime-marine-tondelier_VN-202611120987.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:41:30Z",
+      "title": "Consommer davantage français? \"On doit jouer avec nos avantages comparatifs\", clame Marine Tondelier, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-consommer-davantage-francais-on-doit-jouer-avec-nos-avantages-comparatifs-clame-marine-tondelier-candidate-a-l-election-presidentielle_VN-202611120986.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:38:53Z",
+      "title": "Mallorie, électrice indécise, interroge Marine Tondelier sur sa proposition d’augmenter le SMIC, alors que la candidate défend également une réduction du temps de travail",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-mallorie-electrice-indecise-interroge-marine-tondelier-sur-sa-proposition-d-augmenter-le-smic-alors-que-la-candidate-defend-egalement-une-reduction-du-temps-de-travail_VN-202611120982.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:36:26Z",
+      "title": "Présidentielle: en cas de victoire, Marine Tondelier propose d'augmenter le salaire de \"tous les gens qui touchent moins de 2.000 euros nets\", en plus d'une hausse du SMIC",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-en-cas-de-victoire-marine-tondelier-propose-d-augmenter-le-salaire-de-tous-les-gens-qui-touchent-moins-de-2-000-euros-nets-en-plus-d-une-hausse-du-smic_VN-202611120980.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:34:17Z",
+      "title": "Changer la date du deuxième tour de l'élection présidentielle? \"Je ne passe pas mon temps à discuter les règles du jeu\", lance Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-changer-la-date-du-deuxieme-tour-de-l-election-presidentielle-je-ne-passe-pas-mon-temps-a-discuter-les-regles-du-jeu-lance-marine-tondelier_VN-202611120979.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:32:23Z",
+      "title": "VRAI/FAUX. Y a-t-il 2.3 millions de travailleurs pauvres en France, comme l'affirme Marine Tondelier?",
+      "url": "https://www.bfmtv.com/politique/europe-ecologie-les-verts/vrai-faux-y-a-t-il-2-3-millions-de-travailleurs-pauvres-en-france-comme-l-affirme-marine-tondelier_AV-202611120977.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:27:58Z",
+      "title": "Présidentielle: \"Aujourd'hui moi je n'ai pas de solution\", déplore Anne, qui ne sait pas encore pour qui voter",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-aujourd-hui-moi-je-n-ai-pas-de-solution-deplore-anne-qui-ne-sait-pas-encore-pour-qui-voter_VN-202611120976.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:25:16Z",
+      "title": "Marine Tondelier déplore l'émergence d'un \"vote utile au premier tour\" de l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-deplore-l-emergence-d-un-vote-utile-au-premier-tour-de-l-election-presidentielle_VN-202611120975.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T22:17:27Z",
+      "title": "Au moins 2.000 euros brut \"tout de suite\": Marine Tondelier donne sa proposition pour le SMIC",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-au-moins-2-000-euros-brut-tout-de-suite-marine-tondelier-donne-sa-proposition-pour-le-smic_VN-202611120971.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
