@@ -1,0 +1,160 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-12T19:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-12T18:31:58Z",
+      "title": "Présidentielle 2027 : pour Bruno Retailleau, une primaire de la droite doit se faire même sans Edouard Philippe",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-pour-bruno-retailleau-une-primaire-de-la-droite-doit-se-faire-meme-sans-edouard-philippe-20261112_PVIINOMGVVFH5BBITBMCAGUZOQ/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-12T18:41:48Z",
+      "title": "VIDEO. \"Culte de la personnalité\", purges supposées de militants… des témoignages pointent une dérive autocratique de Gabriel Attal à la tête de Renaissance",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/complement-d-enquete/video-culte-de-la-personnalite-purges-supposees-de-militants-des-temoignages-pointent-une-derive-autocratique-de-gabriel-attal-a-la-tete-de-renaissance_8279141.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T18:47:54Z",
+      "title": "Présidentielle: Raphaël Glucksmann veut \"être plus décomplexé\" dans la campagne, selon François Kalfon, député européen PS-Place publique",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-raphael-glucksmann-veut-etre-plus-decomplexe-dans-la-campagne-selon-francois-kalfon-depute-europeen-ps-place-publique_VN-202611120848.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Édouard Philippe souhaite « interdire » aux magistrats le droit de se syndiquer",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-edouard-philippe-souhaite-interdire-aux-magistrats-le-droit-de-se-syndiquer-12-11-2026-AOUB3KJ6WBFFRGI74INLRQ2NRA.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-12T18:47:21Z",
+      "title": "Présidentielle 2027 : Retailleau insiste sur la primaire, même sans Philippe (qui redit non)",
+      "url": "https://www.20minutes.fr/politique/4262516-20261112-presidentielle-2027-retailleau-insiste-primaire-philippe-redit-non"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "melenchon",
+        "philippe",
+        "retailleau",
+        "roussel",
+        "tondelier",
+        "zemmour"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-12T18:44:26Z",
+      "title": "Présidentielle 2027 : santé, justice, éducation, culture…Que retenir du grand oral des candidats sur les services publics",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-sante-justice-education-cultureque-retenir-du-grand-oral-des-candidats-sur-les-services-publics"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-09T08:43:04Z",
+      "title": "Sens Public — Primaire de la droite : Édouard Philippe va-t-il craquer ?",
+      "url": "https://www.publicsenat.fr/emission/sens-public/primaire-de-la-droite-edouard-philippe-va-t-il-craquer-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
