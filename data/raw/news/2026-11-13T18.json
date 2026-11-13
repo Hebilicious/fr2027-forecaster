@@ -1,0 +1,143 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T18:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-13T17:54:51Z",
+      "title": "«Travailler plus, pour gagner plus» : de Philippe à Mélenchon, le slogan de Sarkozy continue de structurer la campagne 20 ans plus tard",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/travailler-plus-pour-gagner-plus-de-philippe-a-melenchon-le-slogan-de-sarkozy-continue-de-structurer-la-campagne-20-ans-plus-tard-20261113"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-13T18:07:52Z",
+      "title": "\"Si je peux le rencontrer à Bruxelles, je le dirai à l'ambassadeur d'Ukraine\" : Marine Le Pen se dit prête à échanger avec Volodymyr Zelensky",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/si-je-peux-le-rencontrer-a-bruxelles-je-le-dirai-a-l-ambassadeur-d-ukraine-marine-le-pen-se-dit-prete-a-echanger-avec-volodymyr-zelensky_8281529.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T17:49:46Z",
+      "title": "Nicolas Sarkozy",
+      "url": "https://www.bfmtv.com/politique/nicolas-sarkozy_DN-200704120001.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T17:48:02Z",
+      "title": "Présidentielle: \"Si Édouard Philippe veut une chance, je crois qu'il n'a pas d'autre choix que de se présenter à une primaire\", estime Raquel Garrido, ancienne députée LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-si-edouard-philippe-veut-une-chance-je-crois-qu-il-n-a-pas-d-autre-choix-que-de-se-presenter-a-une-primaire-estime-raquel-garrido-ancienne-deputee-lfi_VN-202611130738.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T17:37:00Z",
+      "title": "\"Une curieuse vision de la démocratie\": Nicolas Sarkozy se dit contre l'interdiction de LFI suggérée par Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/une-curieuse-vision-de-la-democratie-nicolas-sarkozy-se-dit-contre-l-interdiction-de-lfi-suggeree-par-bruno-retailleau_AN-202611130717.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Partir très vite ne garantit absolument pas d’arriver très loin » : à Cergy, Raphaël Glucksmann poursuit la campagne à son rythme",
+      "url": "https://www.leparisien.fr/elections/presidentielle/partir-tres-vite-ne-garantit-absolument-pas-darriver-tres-loin-a-cergy-raphael-glucksmann-poursuit-la-campagne-a-son-rythme-13-11-2026-HDL3M6ZEFFAFBGVD7YTQHMXRXI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
