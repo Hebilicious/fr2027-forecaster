@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T00:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T23:39:35Z",
+      "title": "Marine Tondelier souhaite un monde \"sans l'arme atomique\" mais estime que ce n'est \"pas le moment\" du désarmement",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-souhaite-un-monde-sans-l-arme-atomique-mais-estime-que-ce-n-est-pas-le-moment-du-desarmement_VN-202611121021.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T23:20:38Z",
+      "title": "Marine Tondelier déplore l'émergence d'un \"vote utile au premier tour\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-deplore-l-emergence-d-un-vote-utile-au-premier-tour_VN-202611121016.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-12T23:15:49Z",
+      "title": "\"Vous avez répondu à certaines de mes questions\", \"L'union de la gauche, ça m'intéresse\": les électeurs indécis tirent leurs conclusions après avoir échangé avec Marine Tondelier, candidate Les Écologistes à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-vous-avez-repondu-a-certaines-de-mes-questions-l-union-de-la-gauche-ca-m-interesse-les-electeurs-indecis-tirent-leurs-conclusions-apres-avoir-echange-avec-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_VN-202611121011.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
