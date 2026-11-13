@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T16:18:29Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T16:03:22Z",
+      "title": "Marine Le Pen a été accueillie sous quelques huées lors de son passage au salon Made in France, à Paris",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-le-pen-a-ete-accueillie-sous-quelques-huees-lors-de-son-passage-au-salon-made-in-france-a-paris_VN-202611130636.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-13T16:16:42Z",
+      "title": "Marine Le Pen huée au salon du Made in France: la candidate RN à l'élection présidentielle veut que \"Jean-Luc Mélenchon demande à ses militants de laisser les autres candidats faire campagne sans faire l'objet d'intimidations\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-le-pen-huee-au-salon-du-made-in-france-la-candidate-rn-a-l-election-presidentielle-veut-que-jean-luc-melenchon-demande-a-ses-militants-de-laisser-les-autres-candidats-faire-campagne-sans-faire-l-objet-d-intimidations_VN-202611130646.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "France 2 : Gabriel Attal prochain invité de « L’heure de Vérité », d’autres candidats attendus",
+      "url": "https://www.leparisien.fr/culture-loisirs/tv/france-2-gabriel-attal-prochain-invite-de-lheure-de-verite-dautres-candidats-attendus-13-11-2026-7ACLEESBRBFUDGTPGLNLKK3ROY.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-13T15:13:25Z",
+      "title": "Présidentielle 2027 : peut-on interdire les syndicats de magistrats comme le propose Édouard Philippe ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-peut-on-interdire-les-syndicats-de-magistrats-comme-le-propose-edouard-philippe"
+    }
+  ],
+  "schema_version": "1.0"
+}
