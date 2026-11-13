@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T20:05:42Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-13T19:59:33Z",
+      "title": "Présidentielle : Teddy Riner, poids lourd ou poids plume ?",
+      "url": "https://www.liberation.fr/idees-et-debats/editorial/presidentielle-teddy-riner-poids-lourd-ou-poids-plume-20261113_3GUNMQ7S5JBNPLAK7MENDYAVBE/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T19:51:40Z",
+      "title": "Programme de LFI: \"On dit ce qu'on fait, et on fait ce qu'on dit\", assure Aurélie Trouvé, députée LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-lfi-on-dit-ce-qu-on-fait-et-on-fait-ce-qu-on-dit-assure-aurelie-trouve-deputee-lfi_VN-202611130835.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T19:23:18Z",
+      "title": "Bruno Le Maire souhaite doubler le salaire médian en France",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-le-maire-souhaite-doubler-le-salaire-median-en-france_VN-202611130822.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T19:18:21Z",
+      "title": "Bruno Le Maire, ancien ministre de l'Économie, estime que Christine Lagarde a les qualités pour \"diriger la France, c'est incontestable\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-le-maire-ancien-ministre-de-l-economie-estime-que-christine-lagarde-a-les-qualites-pour-diriger-la-france-c-est-incontestable_VN-202611130812.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T19:15:56Z",
+      "title": "\"Qu'il y ait des personnalités comme Teddy Riner qui s'engagent, je trouve ça très bien\", déclare Bruno Le Maire, ancien ministre de l'Économie",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-qu-il-y-ait-des-personnalites-comme-teddy-riner-qui-s-engagent-je-trouve-ca-tres-bien-declare-bruno-le-maire-ancien-ministre-de-l-economie_VN-202611130811.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
