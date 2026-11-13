@@ -1,0 +1,168 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T13:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T13:17:12Z",
+      "title": "Présidentielle 2027: Éric Zemmour \"espère\" que David Lisnard fera en sorte de l'intégrer à la primaire de la droite",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-eric-zemmour-espere-que-david-lisnard-fera-en-sorte-de-l-integrer-a-la-primaire-de-la-droite_AD-202611130544.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T13:09:32Z",
+      "title": "“J’ai pas vu le temps passer”: Teddy Riner dit avoir “appris beaucoup” à l’issue de son premier déplacement de campagne dans un hôpital",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/j-ai-pas-vu-le-temps-passer-teddy-riner-dit-avoir-appris-beaucoup-a-l-issue-de-son-premier-deplacement-de-campagne-dans-un-hopital_AV-202611130538.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T13:00:07Z",
+      "title": "\"J'avais besoin d'entendre ce [que les soignants] avaient besoin de faire passer comme message\", explique Teddy Riner, candidat à l'élection présidentielle après son premier déplacement de campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-avais-besoin-d-entendre-ce-que-les-soignants-avaient-besoin-de-faire-passer-comme-message-explique-teddy-riner-candidat-a-l-election-presidentielle-apres-son-premier-deplacement-de-campagne_VN-202611130531.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T12:48:52Z",
+      "title": "\"Je serai ravi d'être candidat dans cette primaire\", déclare Éric Zemmour, candidat Reconquête à la présidentielle, au salon \"Made In France\"",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-je-serai-ravi-d-etre-candidat-dans-cette-primaire-declare-eric-zemmour-candidat-reconquete-a-la-presidentielle-au-salon-made-in-france_VN-202611130526.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T12:30:32Z",
+      "title": "\"Ni de droite ni de gauche égal pas de gauche\": Jean-Luc Mélenchon réagit à la candidature de Teddy Riner à la présidentielle 2027",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/ni-de-droite-ni-de-gauche-egal-pas-de-gauche-jean-luc-melenchon-reagit-a-la-candidature-de-teddy-riner-a-la-presidentielle-2027_AV-202611130515.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T12:28:42Z",
+      "title": "Jean-Luc Mélenchon, candidat LFI à la présidentielle, s’exprime au salon du Made in France",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-candidat-lfi-a-la-presidentielle-s-exprime-au-salon-du-made-in-france_VN-202611130519.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Il y aura d’autres élections », Marine Tondelier fait un pas de plus vers le retrait de sa candidature",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-il-y-aura-dautres-elections-marine-tondelier-fait-un-pas-de-plus-vers-le-retrait-de-sa-candidature-13-11-2026-MDLOB322VBGLXPT4QFOJ6DZNCE.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« On a écouté avant tout » : Teddy Riner, attendu au tournant, lance à l’hôpital sa campagne présidentielle",
+      "url": "https://www.leparisien.fr/elections/presidentielle/on-a-ecoute-avant-tout-teddy-riner-attendu-au-tournant-lance-a-lhopital-sa-campagne-presidentielle-13-11-2026-BS726B2BI5G4BDP57MZ4SWX6X4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
