@@ -1,0 +1,134 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T14:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T13:39:57Z",
+      "title": "Présidentielle : premier déplacement dans un hôpital à Saint-Denis pour le candidat Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/video-presidentielle-premier-deplacement-dans-un-hopital-a-saint-denis-pour-le-candidat-teddy-riner_VN-202611130554.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T13:33:54Z",
+      "title": "Salon du Made in France, Teddy Riner: Marine Le Pen prend la parole",
+      "url": "https://www.bfmtv.com/politique/video-salon-du-made-in-france-teddy-riner-marine-le-pen-prend-la-parole_VN-202611130552.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T13:32:10Z",
+      "title": "Teddy Riner, candidat à l'élection présidentielle: \"On attend de savoir quelles sont ses propositions\", indique Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/video-teddy-riner-candidat-a-l-election-presidentielle-on-attend-de-savoir-quelles-sont-ses-propositions-indique-marine-le-pen_VN-202611130550.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T13:23:45Z",
+      "title": "Salon du Made in France: \"Il faut réindustrialiser\", affirme Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/video-salon-du-made-in-france-il-faut-reindustrialiser-affirme-marine-le-pen_VN-202611130548.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Éric Zemmour « espère » que David Lisnard fera en sorte de l’intégrer à une primaire à droite",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-eric-zemmour-espere-que-david-lisnard-fera-en-sorte-de-lintegrer-a-une-primaire-a-droite-13-11-2026-WKU6TAMADFBK5FILZDLSBLRUY4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
