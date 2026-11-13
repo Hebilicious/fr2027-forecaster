@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T21:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-13T20:23:08Z",
+      "title": "Présidentielle 2027 : Teddy Riner, le seul candidat adoubé par Emmanuel Macron",
+      "url": "https://www.lemonde.fr/politique/video/2026/11/13/presidentielle-2027-teddy-riner-le-seul-candidat-adoube-par-emmanuel-macron_6809383_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T21:08:14Z",
+      "title": "\"La concurrence est saine\": pour Bruno Le Maire, \"il ne restera plus qu'un seul candidat\" de la droite et du centre à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/la-concurrence-est-saine-pour-bruno-le-maire-il-ne-restera-plus-qu-un-seul-candidat-de-la-droite-et-du-centre-a-la-presidentielle_AV-202611130867.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T20:18:23Z",
+      "title": "Programme de LFI, Teddy Riner...: Aurélie Trouvé (LFI) répond",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-lfi-teddy-riner-aurelie-trouve-lfi-repond_VN-202611130851.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T20:06:52Z",
+      "title": "Candidature de Teddy Riner: \"C'est un candidat de plus\", réagit Aurélie Trouvé (LFI)",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-teddy-riner-c-est-un-candidat-de-plus-reagit-aurelie-trouve-lfi_VN-202611130839.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je prends du recul » : l’ex-ministre de la Santé François Braun se retire déjà de la campagne présidentielle de Teddy Riner",
+      "url": "https://www.leparisien.fr/elections/presidentielle/je-prends-du-recul-lex-ministre-de-la-sante-francois-braun-se-retire-deja-de-la-campagne-presidentielle-de-teddy-riner-13-11-2026-2UNNANM4GRGVPFNKOCHANDORUU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
