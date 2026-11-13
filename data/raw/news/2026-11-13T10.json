@@ -1,0 +1,160 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T10:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-13T09:44:33Z",
+      "title": "Attentat raciste de Trappes : le Rassemblement national annonce déposer une plainte en diffamation « très prochainement » contre Marine Tondelier",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/13/attentat-raciste-de-trappes-le-rassemblement-national-annonce-deposer-une-plainte-en-diffamation-tres-prochainement-contre-marine-tondelier_6809304_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-13T10:07:31Z",
+      "title": "Pourquoi Gabriel Attal est persuadé de gagner la primaire face à Retailleau et Lisnard",
+      "url": "https://www.liberation.fr/politique/pourquoi-gabriel-attal-est-persuade-de-gagner-la-primaire-face-a-retailleau-et-lisnard-20261113_RBF4A6X3TRBERDDRKPD5O5RTEY/"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-13T10:03:13Z",
+      "title": "Le candidat des Républicains à la présidentielle Bruno Retailleau n'a \"pas de prêt bancaire\" et accuse le gouvernement",
+      "url": "https://www.franceinfo.fr/elections/le-candidat-des-republicains-a-la-presidentielle-bruno-retailleau-n-a-pas-de-pret-bancaire-et-accuse-le-gouvernement_8280719.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T10:10:09Z",
+      "title": "Candidature de Teddy Riner: \"Je ne crois pas aux aventures individuelles\", réagit Benjamin Lucas-Lundy, député Écologiste et Social des Yvelines",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-teddy-riner-je-ne-crois-pas-aux-aventures-individuelles-reagit-benjamin-lucas-lundy-depute-ecologiste-et-social-des-yvelines_VN-202611130434.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « pas de prêt bancaire » pour sa campagne, Bruno Retailleau pointe Matignon du doigt",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-pas-de-pret-bancaire-pour-sa-campagne-bruno-retailleau-pointe-matignon-du-doigt-13-11-2026-RYXNZZG7JJGMBOEOQUAFLHGESQ.php"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : François Ruffin veut débattre avant de « prendre ses responsabilités » face au risque RN",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-francois-ruffin-veut-debattre-avant-de-prendre-ses-responsabilites-face-au-risque-rn-13-11-2026-RUDMB6FIQNAODI4D5NIIXJIJBI.php"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : 89 % des Français « ne souhaitent pas » la candidature de Bruno Le Maire",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-89-des-francais-ne-souhaitent-pas-la-candidature-de-bruno-le-maire-13-11-2026-4XBWXDOL4BAWVNUM2LTESDXXKA.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-13T09:41:11Z",
+      "title": "Présidentielle 2027 : Les choix de Teddy Riner pour ses deux premiers déplacements de campagne",
+      "url": "https://www.20minutes.fr/politique/4262577-20261113-presidentielle-2027-choix-teddy-riner-deux-premiers-deplacements-campagne"
+    }
+  ],
+  "schema_version": "1.0"
+}
