@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T15:18:30Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-13T14:49:02Z",
+      "title": "Élection présidentielle 2027 : Lisnard donné à 10 % ou plus, juste derrière Philippe et Glucksmann, selon un sondage",
+      "url": "https://www.20minutes.fr/politique/4262737-20261113-election-presidentielle-2027-lisnard-donne-10-plus-juste-derriere-philippe-glucksmann-selon-sondage"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-13T14:57:38Z",
+      "title": "Présidentielle 2027 : « J’ai écouté, j’ai noté »… Teddy Riner fait sa première visite de candidat dans un hôpital",
+      "url": "https://www.20minutes.fr/politique/4262734-20261113-presidentielle-2027-ecoute-note-teddy-riner-fait-premiere-visite-candidat-hopital"
+    }
+  ],
+  "schema_version": "1.0"
+}
