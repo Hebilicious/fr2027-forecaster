@@ -1,0 +1,97 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T06:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T05:47:36Z",
+      "title": "Présidentielle 2027: David Lisnard fait une percée à au moins 10%, juste derrière Édouard Philippe et Raphaël Glucksmann, selon un sondage",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-david-lisnard-fait-une-percee-a-au-moins-10-juste-derriere-edouard-philippe-et-raphael-glucksmann-selon-un-sondage_AD-202611130162.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
