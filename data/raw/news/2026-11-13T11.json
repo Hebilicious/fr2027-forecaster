@@ -1,0 +1,177 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T11:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-13T10:34:58Z",
+      "title": "A l’approche de la présidentielle, les grands patrons multiplient les rencontres avec Le Pen",
+      "url": "https://www.liberation.fr/politique/a-lapproche-de-la-presidentielle-les-grands-patrons-multiplient-les-rencontres-avec-le-pen-20261113_E6MZUY2IJNGA5B4IATWQPGYXZA/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T11:10:13Z",
+      "title": "\"C'est sympa de sa part de venir\": le personnel de l'hôpital Delafontaine de Saint-Denis réagit à la visite de Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-c-est-sympa-de-sa-part-de-venir-le-personnel-de-l-hopital-delafontaine-de-saint-denis-reagit-a-la-visite-de-teddy-riner_VN-202611130475.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T10:33:01Z",
+      "title": "Présidentielle 2027: Bruno Retailleau n'a \"pas de prêt bancaire\" pour financer sa campagne et accuse Matignon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-bruno-retailleau-n-a-pas-de-pret-bancaire-pour-financer-sa-campagne-et-accuse-matignon_AD-202611130445.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T10:25:05Z",
+      "title": "Présidentielle 2027: les images du premier déplacement de campagne de Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-les-images-du-premier-deplacement-de-campagne-de-teddy-riner_VN-202611130442.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T10:22:33Z",
+      "title": "Candidature de Teddy Riner: \"S'il est très clair sur sa volonté de s'allier ni avec LFI, ni avec le RN, il est le bienvenue dans la primaire des démocrates\", assure Jad Zahab, porte-parole de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-teddy-riner-s-il-est-tres-clair-sur-sa-volonte-de-s-allier-ni-avec-lfi-ni-avec-le-rn-il-est-le-bienvenue-dans-la-primaire-des-democrates-assure-jad-zahab-porte-parole-de-gabriel-attal_VN-202611130441.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T10:21:07Z",
+      "title": "Teddy Riner salue des membres du personnel de l'hôpital Delafontaine de Saint-Denis lors de son premier déplacement de campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-salue-des-membres-du-personnel-de-l-hopital-delafontaine-de-saint-denis-lors-de-son-premier-deplacement-de-campagne_VN-202611130439.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-13T10:19:52Z",
+      "title": "Teddy Riner arrive à l'hôpital Delafontaine de Saint-Denis pour son premier déplacement en tant que candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-arrive-a-l-hopital-delafontaine-de-saint-denis-pour-son-premier-deplacement-en-tant-que-candidat-a-l-election-presidentielle_VN-202611130440.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Éric Zemmour peut-il participer à la primaire de la droite ? « Pourquoi pas », dit François-Xavier Bellamy",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-eric-zemmour-peut-il-participer-a-la-primaire-de-la-droite-pourquoi-pas-dit-francois-xavier-bellamy-13-11-2026-O77C7FLXXZGODAMVDWO2XI4ISE.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-13T10:46:12Z",
+      "title": "Présidentielle 2027 : Comment Mélenchon veut relancer la filière textile made in France",
+      "url": "https://www.20minutes.fr/politique/4262619-20261113-presidentielle-2027-comment-melenchon-veut-relancer-filiere-textile-made-in-france"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-13T10:18:01Z",
+      "title": "Présidentielle 2027 : Edouard Philippe veut « interdire » aux magistrats le droit de se syndiquer",
+      "url": "https://www.20minutes.fr/politique/4262593-20261113-presidentielle-2027-edouard-philippe-veut-interdire-magistrats-droit-syndiquer"
+    }
+  ],
+  "schema_version": "1.0"
+}
