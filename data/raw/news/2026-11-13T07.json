@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-13T07:18:07Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-13T07:00:00Z",
+      "title": "Présidentielle 2027 : Knafo-Zemmour, un duo à l’épreuve de la campagne",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-knafo-zemmour-un-duo-a-l-epreuve-de-la-campagne-20261113"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Teddy Riner effectuera son premier déplacement au salon du Made in France ce samedi",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-teddy-riner-effectuera-son-premier-deplacement-au-salon-du-made-in-france-ce-samedi-13-11-2026-4DZ6FLGT4VCBLLJ74OEG6GJA2U.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
