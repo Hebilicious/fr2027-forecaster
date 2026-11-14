@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-14T10:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T09:57:46Z",
+      "title": "«Il faut réserver le marché européen aux productions européennes»: Raphaël Glucksmann développe sa vision de l’industrie française et européenne",
+      "url": "https://www.bfmtv.com/politique/video-il-faut-reserver-le-marche-europeen-aux-productions-europeennes-raphael-glucksmann-developpe-sa-vision-de-l-industrie-francaise-et-europeenne_VN-202611140189.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T09:29:47Z",
+      "title": "INFO BFMTV. Présidentielle 2027: Nicolas Sarkozy et Édouard Philippe ont déjeuné sur fond de primaire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/info-bfmtv-presidentielle-2027-nicolas-sarkozy-et-edouard-philippe-ont-dejeune-sur-fond-de-primaire_AN-202611140179.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
