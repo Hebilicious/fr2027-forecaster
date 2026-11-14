@@ -1,0 +1,133 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-14T21:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-14T20:53:06Z",
+      "title": "Michel Destot, ancien maire PS de Grenoble et député de l’Isère, est mort",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/14/michel-destot-ancien-maire-ps-de-grenoble-et-depute-de-l-isere-est-mort_6810610_3382.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T20:37:13Z",
+      "title": "Teddy Riner, le champion qui bouscule la campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-le-champion-qui-bouscule-la-campagne_VN-202611140376.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T20:36:15Z",
+      "title": "Teddy Riner crédité de 4,5% des intentions de vote dans un sondage: \"Ce qui est très inquiétant au-delà des personnes, c'est surtout que les deux extrêmes sont en train d'arriver au second tour\", déclare Florence Portelli, vice-présidente des LR",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T20:34:19Z",
+      "title": "Éducation: \"On veut remettre le baccalauréat tel qu'il était avant la réforme Blanquer\", déclare Thomas Ménagé, porte-parole du groupe RN à l'Assemblée nationale",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-education-on-veut-remettre-le-baccalaureat-tel-qu-il-etait-avant-la-reforme-blanquer-declare-thomas-menage-porte-parole-du-groupe-rn-a-l-assemblee-nationale_VN-202611140374.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T20:16:12Z",
+      "title": "LIGNE ROUGE - Teddy Riner, le champion qui bouscule la campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ligne-rouge-teddy-riner-le-champion-qui-bouscule-la-campagne_VN-202611140361.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
