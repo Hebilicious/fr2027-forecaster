@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-14T14:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T13:46:19Z",
+      "title": "\"Je ne suis pas un macroniste\": Teddy Riner qualifie les félicitations du président de la République à sa candidature de \"baiser empoisonné\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/je-ne-suis-pas-un-macroniste-teddy-riner-qualifie-les-felicitations-du-president-de-la-republique-a-sa-candidature-de-baiser-empoisonne_AD-202611140260.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T13:26:55Z",
+      "title": "Teddy Riner est arrivé au salon du Made in France à Paris. Le candidat à la présidentielle affirme qu'il n'est pas \"piloté par l'Élysée\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-est-arrive-au-salon-du-made-in-france-a-paris-le-candidat-a-la-presidentielle-affirme-qu-il-n-est-pas-pilote-par-l-elysee_VN-202611140255.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Pas l’envoyé du président », Teddy Riner qualifie les félicitations de Macron de « baiser empoisonné »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-pas-macroniste-teddy-riner-qualifie-les-felicitations-de-macron-de-baiser-empoisonne-14-11-2026-4JTRF2NSLBEGBOVQHGWXG53ETY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
