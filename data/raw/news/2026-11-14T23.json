@@ -1,0 +1,116 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-14T23:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T22:33:32Z",
+      "title": "Selon le sondage Elabe pour La Tribune dimanche et BFMTV sur la présidentielle, 55% des interrogés sont certains de leur choix, 45% peuvent changer d'avis",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-selon-le-sondage-elabe-pour-la-tribune-dimanche-et-bfmtv-sur-la-presidentielle-55-des-interroges-sont-certains-de-leur-choix-45-peuvent-changer-d-avis_VN-202611140417.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T22:32:22Z",
+      "title": "Candidature de Teddy Riner: \"On a l'impression qu'il est quand même là téléguidé par une partie du système\", observe Danielle Simonnet, députée L'Après",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-teddy-riner-on-a-l-impression-qu-il-est-quand-meme-la-teleguide-par-une-partie-du-systeme-observe-danielle-simonnet-deputee-l-apres_VN-202611140416.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T22:21:57Z",
+      "title": "Candidature de Teddy Riner: \"Gouverner, ça ne s'improvise pas\", déclare Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-teddy-riner-gouverner-ca-ne-s-improvise-pas-declare-jordan-bardella-president-du-rn_VN-202611140413.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
