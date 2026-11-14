@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-14T08:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-14T07:30:00Z",
+      "title": "« La gloire ne fait pas l’élection » : Coluche, Bigard, Hulot… Avant Teddy Riner, le difficile passage de la célébrité à la course à l’Élysée",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/la-gloire-ne-fait-pas-l-election-coluche-bigard-hulot-avant-teddy-riner-le-difficile-passage-de-la-celebrite-a-la-course-a-l-elysee-20261114"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T07:40:37Z",
+      "title": "Présidentielle: l'ex-ministre François Braun se met en retrait de la campagne de Teddy Riner \"en attendant que les choses se précisent\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-l-ex-ministre-francois-braun-se-met-en-retrait-de-la-campagne-de-teddy-riner-en-attendant-que-les-choses-se-precisent_AN-202611140143.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« J’en pense pas grand-chose », réagit Victor Wembanyama après la candidature de Teddy Riner à la présidentielle",
+      "url": "https://www.leparisien.fr/sports/basket/jen-pense-pas-grand-chose-reagit-victor-wembanyama-apres-la-candidature-de-teddy-riner-a-la-presidentielle-14-11-2026-RQZXMAAR6VETJMKBLZDYG3LJ2U.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
