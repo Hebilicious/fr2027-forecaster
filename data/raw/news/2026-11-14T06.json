@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-14T06:18:08Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-14T05:18:17Z",
+      "title": "Présidentielle 2027 : entre attraction et grande méfiance, les relations tortueuses entre Raphaël Glucksmann et les macronistes",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/14/presidentielle-2027-entre-attraction-et-grande-mefiance-les-relations-tortueuses-entre-raphael-glucksmann-et-les-macronistes_6809719_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-14T06:13:09Z",
+      "title": "\"Ils nous mettent dans le pressoir à pommes\" : combien de temps Edouard Philippe va-t-il pouvoir résister à l'appel de la primaire dans le bloc central ?",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/ils-nous-mettent-dans-le-pressoir-a-pommes-combien-de-temps-edouard-philippe-va-t-il-pouvoir-resister-a-l-appel-de-la-primaire-dans-le-bloc-central_8279444.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : donné en tête à gauche et à plus de 20 % au premier tour, Jean-Luc Mélenchon est-il encore « sous-estimé » dans les sondages ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-donne-en-tete-a-gauche-et-a-plus-de-20-au-premier-tour-jean-luc-melenchon-est-il-encore-sous-estime-dans-les-sondages-14-11-2026-WPWG53BAPJH7XOI5CKDXVC4QYQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
