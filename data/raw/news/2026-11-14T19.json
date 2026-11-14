@@ -1,0 +1,154 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-14T19:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "zemmour"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-14T18:16:35Z",
+      "title": "Présidentielle 2027 : Gérard Larcher invite les candidats de la droite et du centre à une réunion pour arrêter une « méthode de départage »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/14/presidentielle-2027-gerard-larcher-invite-les-candidats-de-la-droite-et-du-centre-a-une-reunion-pour-arreter-une-methode-de-departage_6810460_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-14T19:11:26Z",
+      "title": "«Je suis un pur produit français» : le candidat Teddy Riner s’offre un premier bain de foule au salon du Made in France à Paris",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/je-suis-un-pur-produit-francais-le-candidat-teddy-riner-s-offre-un-premier-bain-de-foule-au-salon-du-made-in-france-a-paris-20261114"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-14T19:05:27Z",
+      "title": "Présidentielle : au salon du Made in France, Teddy Riner coupe le cordon avec Macron, mais ne donne toujours pas de programme",
+      "url": "https://www.liberation.fr/politique/presidentielle-au-salon-du-made-in-france-teddy-riner-coupe-le-cordon-avec-macron-mais-ne-donne-toujours-pas-de-programme-20261114_CJ3ZTFA4P5A35EHP75BUXHTZXU/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T19:10:08Z",
+      "title": "Présidentielle 2027: dans un sondage Elabe / BFMTV / La Tribune Dimanche, Teddy Riner est crédité de 4,5% des intentions de vote",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-dans-un-sondage-elabe-bfmtv-la-tribune-dimanche-teddy-riner-est-credite-de-4-5-des-intentions-de-vote_VN-202611140344.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T19:00:00Z",
+      "title": "SONDAGE BFMTV. Présidentielle 2027: Édouard Philippe, Christine Lagarde, David Lisnard... Qui serait le meilleur candidat selon les électeurs de la droite et du centre?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/sondage-bfmtv-presidentielle-2027-edouard-philippe-christine-lagarde-david-lisnard-qui-serait-le-meilleur-candidat-selon-les-electeurs-de-la-droite-et-du-centre_AN-202611140332.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T19:00:00Z",
+      "title": "SONDAGE BFMTV. Présidentielle 2027: Jean-Luc Mélenchon continue sa progression, Teddy Riner devant Gabriel Attal dans l'un des scénarios testés",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/sondage-bfmtv-presidentielle-2027-jean-luc-melenchon-continue-sa-progression-teddy-riner-devant-gabriel-attal-dans-l-un-des-scenarios-testes_AN-202611140315.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Il apprend », le candidat Teddy Riner se dévoile petit à petit au salon du Made in France",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-il-apprend-le-candidat-teddy-riner-se-devoile-petit-a-petit-au-salon-du-made-in-france-14-11-2026-KAONAMPV35AT7PSTPKOBJUV6EI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
