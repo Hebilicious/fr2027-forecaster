@@ -1,0 +1,130 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-14T12:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T12:00:40Z",
+      "title": "Présidentielle: Raphaël Glucksmann considère que le \"ni droite ni gauche\" de Teddy Riner \"a donné une politique fondée sur l'injustice\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-raphael-glucksmann-considere-le-ni-droite-ni-gauche-de-teddy-riner-comme-une-politique-fondee-sur-l-injustice_AD-202611140234.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T11:26:23Z",
+      "title": "Primaire de la droite et du centre: \"C'est une chamaillerie de perdants\", affirme Sylvain Berrios, député \"Horizons\" du Val-de-Marne et soutien d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-de-la-droite-et-du-centre-c-est-une-chamaillerie-de-perdants-affirme-sylvain-berrios-depute-horizons-du-val-de-marne-et-soutien-d-edouard-philippe_VN-202611140226.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-14T11:24:26Z",
+      "title": "Présidentielle: \"On a l'obligation de réussir et d'avoir cette primaire\", affirme Jean-Charles Orsucci, porte-parole de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-on-a-l-obligation-de-reussir-et-d-avoir-cette-primaire-affirme-jean-charles-orsucci-porte-parole-de-gabriel-attal_VN-202611140225.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-14T11:43:08Z",
+      "title": "Présidentielle 2027 : Nicolas Sarkozy ne veut pas interdire LFI, à rebours de Bruno Retailleau",
+      "url": "https://www.20minutes.fr/politique/4262846-20261114-presidentielle-2027-nicolas-sarkozy-veut-interdire-lfi-rebours-bruno-retailleau"
+    }
+  ],
+  "schema_version": "1.0"
+}
