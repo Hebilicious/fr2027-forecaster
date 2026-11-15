@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-15T19:08:57Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-15T18:20:00Z",
+      "title": "Guillaume Tabard : « Les sondages ? On ne “s’en fout” plus tout à fait »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-les-sondages-on-ne-s-en-fout-plus-tout-a-fait-20261115"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-15T19:02:15Z",
+      "title": "Présidentielle : \"Toutes celles et ceux qui veulent nous abattre soutiennent Marine Le Pen\", dénonce Marine Tondelier en évoquant les appuis de Donald Trump et Elon Musk à la candidate RN",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/le-grand-enjeu/presidentielle-toutes-celles-et-ceux-qui-veulent-nous-abattre-soutiennent-marine-le-pen-denonce-marine-tondelier-en-evoquant-les-appuis-de-donald-trump-et-elon-musk-a-la-candidate-rn_8283797.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Pour les Français juifs, Mélenchon vu comme le premier responsable politique de la montée de l’antisémitisme",
+      "url": "https://www.leparisien.fr/societe/religions/pour-les-francais-juifs-melenchon-vu-comme-le-premier-responsable-politique-de-la-montee-de-lantisemitisme-15-11-2026-TGYAJPVXFBF3RABTIRQKCGFNMU.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il n’a pas d’expérience » : Lilian Thuram surpris par la candidature de Teddy Riner à l’élection présidentielle",
+      "url": "https://www.leparisien.fr/sports/il-na-pas-dexperience-lilian-thuram-surpris-par-la-candidature-de-teddy-riner-a-lelection-presidentielle-15-11-2026-4NO5VP6HCRH4DJTHPJR2FI62ZY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
