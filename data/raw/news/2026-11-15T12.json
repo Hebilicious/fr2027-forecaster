@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-15T12:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-15T12:06:42Z",
+      "title": "Financement de l’Ukraine face à la Russie : Macron passe à l’offensive contre Le Pen",
+      "url": "https://www.liberation.fr/politique/elections/financement-de-lukraine-face-a-la-russie-macron-passe-a-loffensive-contre-le-pen-20261115_4IJNNIIM6RHYZF6KPF3LVARDQE/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T12:05:38Z",
+      "title": "Candidature de Teddy Riner : \"Ça conforte l'idée que nos compatriotes aujourd'hui n'ont plus une confiance naturelle dans la classe politique\", déclare l'avocat Thibault de Montbrial",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-teddy-riner-ca-conforte-l-idee-que-nos-compatriotes-aujourd-hui-n-ont-plus-une-confiance-naturelle-dans-la-classe-politique-declare-l-avocat-thibault-de-montbrial_VN-202611150228.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T12:01:38Z",
+      "title": "Violence en marge des manifestations : Thibault de Montbrial, avocat, dénonce \"l'ambiguïté\" et le \"double discours\" de Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-violence-en-marge-des-manifestations-thibault-de-montbrial-avocat-denonce-l-ambiguite-et-le-double-discours-de-jean-luc-melenchon_VN-202611150223.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T11:55:29Z",
+      "title": "Présidentielle: “Si le bloc central ne voit pas la différence entre les deux, ce sera l’heure de vérité”, estime Sandrine Rousseau, députée Les Écologistes, sur l’hypothèse d’un second tour entre Jean-Luc Mélenchon et Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-si-le-bloc-central-ne-voit-pas-la-difference-entre-les-deux-ce-sera-l-heure-de-verite-estime-sandrine-rousseau-deputee-les-ecologistes-sur-l-hypothese-d-un-second-tour-entre-jean-luc-melenchon-et-marine-le-pen_VN-202611150217.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T11:50:48Z",
+      "title": "\"Une candidature dangereuse si elle se maintient\": Sandrine Rousseau, députée Les Écologistes de Paris, affirme qu'elle ne donnera pas son parrainage à Marine Tondelier, candidate Les Écologistes",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-une-candidature-dangereuse-si-elle-se-maintient-sandrine-rousseau-deputee-les-ecologistes-de-paris-affirme-qu-elle-ne-donnera-pas-son-parrainage-a-marine-tondelier-candidate-les-ecologistes_VN-202611150216.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T11:48:06Z",
+      "title": "Présidentielle : \"J'appelle mon parti a rejoindre la dynamique de Jean-Luc Mélenchon\", déclare Sandrine Rousseau, députée Les Écologistes de Paris",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-j-appelle-mon-parti-a-rejoindre-la-dynamique-de-jean-luc-melenchon-declare-sandrine-rousseau-deputee-les-ecologistes-de-paris_VN-202611150215.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
