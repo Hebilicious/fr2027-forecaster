@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-15T15:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-15T14:54:14Z",
+      "title": "Le programme de Mélenchon : un toboggan vers une France appauvrie, par Alexandra Roulet",
+      "url": "https://www.liberation.fr/idees-et-debats/opinions/le-programme-de-melenchon-un-toboggan-vers-une-france-appauvrie-par-alexandra-roulet-20261115_6UCVHCU5WZCDTACBLP6DQG7R2U/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Si c’est pour reparler d’une primaire, je ne vois pas l’intérêt » : Édouard Philippe répond à la main tendue de Gérard Larcher",
+      "url": "https://www.leparisien.fr/elections/presidentielle/si-cest-pour-reparler-dune-primaire-je-ne-vois-pas-linteret-edouard-philippe-repond-a-la-main-tendue-de-gerard-larcher-15-11-2026-QJM7DPPZKFDK5AAVOTLGTBJ4RE.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-15T14:21:22Z",
+      "title": "Présidentielle 2027 : « Il n'a pas d'expérience… » Les doutes de Lilian Thuram sur la candidature de son « ami » Riner",
+      "url": "https://www.20minutes.fr/politique/4262951-20261115-presidentielle-2027-surpris-doutes-lilian-thuram-candidature-ami-riner"
+    }
+  ],
+  "schema_version": "1.0"
+}
