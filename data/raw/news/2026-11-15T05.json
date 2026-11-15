@@ -1,0 +1,108 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-15T05:18:08Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-15T04:30:14Z",
+      "title": "Présidentielle 2027 : Edouard Philippe tente de déployer son contre-agenda face aux vents contraires",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/15/presidentielle-2027-edouard-philippe-tente-de-deployer-son-contre-agenda-face-aux-vents-contraires_6810973_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon",
+        "retailleau",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T05:15:21Z",
+      "title": "SONDAGE BFMTV. Présidentielle: avec 4,5% des intentions de vote, Teddy Riner donné devant Gabriel Attal et Bruno Retailleau dans l'un des scénarios testés",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-sondage-bfmtv-presidentielle-avec-4-5-des-intentions-de-vote-teddy-riner-donne-devant-gabriel-attal-et-bruno-retailleau-dans-l-un-des-scenarios-testes_VN-202611150072.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
