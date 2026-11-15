@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-15T18:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-15T17:20:00Z",
+      "title": "Présidentielle : « Juppé 2016 », la hantise derrière le refus d’Édouard Philippe de participer à la primaire ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-juppe-2016-la-hantise-derriere-le-refus-d-edouard-philippe-de-participer-a-la-primaire-20261115"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-15T17:58:18Z",
+      "title": "Edouard Philippe veut bâtir quatre millions de logements en dix ans",
+      "url": "https://www.liberation.fr/politique/elections/edouard-philippe-veut-batir-quatre-millions-de-logements-en-dix-ans-20261115_TJLSGMJ45VDJZJ5ZGOYMWCTI3E/"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-15T18:08:54Z",
+      "title": "Présidentielle 2027 : Edouard Philippe veut bâtir quatre millions de logements supplémentaires en 10 ans",
+      "url": "https://www.franceinfo.fr/politique/edouard-philippe/presidentielle-2027-edouard-philippe-veut-batir-quatre-millions-de-logements-supplementaires-en-10-ans_8283821.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T18:04:26Z",
+      "title": "Logement, 35 heures, allocations familiales... Édouard Philippe distille de nouvelles propositions de son programme présidentiel",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/logement-35-heures-allocations-familiales-edouard-philippe-distille-de-nouvelles-propositions-de-son-programme-presidentiel_AD-202611150344.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
