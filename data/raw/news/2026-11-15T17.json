@@ -1,0 +1,117 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-15T17:18:06Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T16:30:15Z",
+      "title": "Jean-Luc Mélenchon, candidat LFI à la présidentielle: au second tour, \"on va renverser la table\", déclare Éric Coquerel, député LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-candidat-lfi-a-la-presidentielle-au-second-tour-on-va-renverser-la-table-declare-eric-coquerel-depute-lfi_VN-202611150316.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T16:28:13Z",
+      "title": "Parrainages de Jean-Luc Mélenchon pour la présidentielle: \"Ça reste une tâche difficile mais ça avance\", déclare Éric Coquerel, député LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-parrainages-de-jean-luc-melenchon-pour-la-presidentielle-ca-reste-une-tache-difficile-mais-ca-avance-declare-eric-coquerel-depute-lfi_VN-202611150315.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Édouard Philippe : « Le temps de travail doit pouvoir être négocié dans l’entreprise »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/edouard-philippe-le-temps-de-travail-doit-pouvoir-etre-negocie-dans-lentreprise-15-11-2026-XBXJXNDKPZALPBOLULDIV7W5JE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
