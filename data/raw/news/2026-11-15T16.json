@@ -1,0 +1,135 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-15T16:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-15T16:00:04Z",
+      "title": "Présidentielle 2027 : Edouard Philippe accepte l’invitation de Gérard Larcher à une discussion des candidats de la droite et du centre, mais refuse toujours une primaire",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/15/presidentielle-2027-edouard-philippe-accepte-l-invitation-de-gerard-larcher-a-une-discussion-des-candidats-de-la-droite-et-du-centre-mais-refuse-toujours-une-primaire_6811029_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T16:03:57Z",
+      "title": "Colère lycéenne et étudiante: \"Il y a beaucoup de communication mais concrètement il n’y a rien à la hauteur des revendications\", dénonce Éric Coquerel, député LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-colere-lyceenne-et-etudiante-il-y-a-beaucoup-de-communication-mais-concretement-il-n-y-a-rien-a-la-hauteur-des-revendications-denonce-eric-coquerel-depute-lfi_VN-202611150304.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T15:58:59Z",
+      "title": "Colère sociale: \"Le mouvement est invisibilisé sur le terrain\" par le gouvernement, raconte Éric Coquerel, député LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-colere-sociale-le-mouvement-est-invisibilise-sur-le-terrain-par-le-gouvernement-raconte-eric-coquerel-depute-lfi_VN-202611150298.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T15:46:47Z",
+      "title": "Après la proposition de Gérard Larcher, Édouard Philippe réaffirme son opposition à une primaire mais accepte une \"discussion\" sur un rassemblement de la droite et du centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/apres-la-proposition-de-gerard-larcher-edouard-philippe-reaffirme-son-opposition-a-une-primaire-mais-accepte-une-discussion-sur-un-rassemblement-de-la-droite-et-du-centre_AN-202611150297.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-15T15:34:13Z",
+      "title": "Présidentielle 2027 : « Cette primaire, je n’y participerai pas. Point. »… Edouard Philippe balaye (encore) cette idée",
+      "url": "https://www.20minutes.fr/politique/4262961-20261115-presidentielle-2027-primaire-participerai-point-edouard-philippe-balaye-encore-idee"
+    }
+  ],
+  "schema_version": "1.0"
+}
