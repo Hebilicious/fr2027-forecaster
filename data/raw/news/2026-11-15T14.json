@@ -1,0 +1,126 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-15T14:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-15T13:22:32Z",
+      "title": "Guerre en Ukraine : Emmanuel Macron s’en prend « à ceux qui veulent rationner les moyens » de Kiev ; Marine Le Pen le renvoie à « sa propre turpitude »",
+      "url": "https://www.lemonde.fr/international/article/2026/11/15/guerre-en-ukraine-emmanuel-macron-s-en-prend-a-ceux-qui-veulent-rationner-les-moyens-de-kiev-marine-le-pen-le-renvoie-a-sa-propre-turpitude_6811019_3210.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "melenchon",
+        "philippe",
+        "riner"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-15T13:37:23Z",
+      "title": "Débat, primaire, irruption de Teddy Riner et David Lisnard… La campagne en défense d’Édouard Philippe",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/debat-primaire-irruption-de-teddy-riner-et-david-lisnard-la-campagne-en-defense-d-edouard-philippe-20261115"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T14:04:33Z",
+      "title": "Aide à l'Ukraine : \"Si Marine Le Pen décide de tout couper à l’Ukraine, elle nous isolera en Europe\", estime l'entourage d'Emmanuel Macron, alors que le chef de l'État est en déplacement au Cambodge",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-aide-a-l-ukraine-si-marine-le-pen-decide-de-tout-couper-a-l-ukraine-elle-nous-isolera-en-europe-estime-l-entourage-d-emmanuel-macron-alors-que-le-chef-de-l-etat-est-en-deplacement-au-cambodge_VN-202611150274.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-15T13:28:03Z",
+      "title": "Présidentielle: Sandrine Rousseau appelle les Écologistes “à rejoindre la dynamique de Jean-Luc Mélenchon” et Marine Tondelier à se retirer",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-sandrine-rousseau-appelle-les-ecologistes-a-rejoindre-la-dynamique-de-jean-luc-melenchon-et-marine-tondelier-a-se-retirer_AV-202611150255.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
