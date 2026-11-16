@@ -1,0 +1,196 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T20:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "le_pen",
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-16T20:07:03Z",
+      "title": "«Il n’y a personne qui veut parler de la distribution ?» : retrouvez les moments forts du débat présidentiel",
+      "url": "https://www.liberation.fr/politique/il-ny-a-personne-qui-veut-parler-de-la-distribution-retrouvez-les-moments-forts-du-debat-presidentielle-20261116_MZBZMVHPSVBL3DQHSSB3IWPCUE/"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T20:06:12Z",
+      "title": "Vers une primaire à droite? Nicolas Dupont-Aignan affirme être \"en rupture\" avec les candidats de droite",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-vers-une-primaire-a-droite-nicolas-dupont-aignan-affirme-etre-en-rupture-avec-les-candidats-de-droite_VN-202611160874.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:59:44Z",
+      "title": "\"Il n'y a aucun avantage\": Nicolas Dupont-Aignan, candidat à l'élection présidentielle, explique pourquoi il veut sortir de l'Union européenne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-n-y-a-aucun-avantage-nicolas-dupont-aignan-candidat-a-l-election-presidentielle-explique-pourquoi-il-veut-sortir-de-l-union-europeenne_VN-202611160872.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:57:44Z",
+      "title": "Nicolas Dupont-Aignan souhaite stopper \"immédiatement\" les aides à l'Ukraine",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nicolas-dupont-aignan-souhaite-stopper-immediatement-les-aides-a-l-ukraine_VN-202611160871.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:44:55Z",
+      "title": "Nicolas Dupont-Aignan, candidat à l'élection présidentielle, souhaite \"offir un choix aux Français\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nicolas-dupont-aignan-candidat-a-l-election-presidentielle-souhaite-offir-un-choix-aux-francais_VN-202611160856.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "riner",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:44:14Z",
+      "title": "Teddy Riner, Jean-Luc Mélenchon, violence lycéenne: l'interview de Fabien Roussel (PCF)",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-jean-luc-melenchon-violence-lyceenne-l-interview-de-fabien-roussel-pcf_VN-202611160868.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "riner",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:33:53Z",
+      "title": "Teddy Riner devant Fabien Roussel selon un sondage Elabe: \"Je vais me mettre au judo\", ironise le candidat PCF à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-devant-fabien-roussel-selon-un-sondage-elabe-je-vais-me-mettre-au-judo-ironise-le-candidat-pcf-a-l-election-presidentielle_VN-202611160848.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:28:22Z",
+      "title": "Présidentielle: Fabien Roussel, candidat PCF à l'élection présidentielle \"ne croit pas\" en la candidature de Jean-Luc Mélenchon ni en celle de Raphaël Gluksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-fabien-roussel-candidat-pcf-a-l-election-presidentielle-ne-croit-pas-en-la-candidature-de-jean-luc-melenchon-ni-en-celle-de-raphael-gluksmann_VN-202611160844.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:23:08Z",
+      "title": "\"Au revoir\": Fabien Roussel, candidat PCF à l'élection présidentielle, réagit au tweet d'Emmanuel Macron sur les 10 ans de sa candidature",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-au-revoir-fabien-roussel-candidat-pcf-a-l-election-presidentielle-reagit-au-tweet-d-emmanuel-macron-sur-les-10-ans-de-sa-candidature_VN-202611160838.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:18:29Z",
+      "title": "Fabien Roussel, candidat PCF à l'élection présidentielle: \"L'État a reculé\" sous Emmanuel Macron",
+      "url": "https://www.bfmtv.com/politique/video-fabien-roussel-candidat-pcf-a-l-election-presidentielle-l-etat-a-recule-sous-emmanuel-macron_VN-202611160832.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "DIRECT. Débat présidentielle 2027 : pour améliorer le pouvoir d’achat, Jean-Luc Mélenchon veut « bloquer les prix » et les loyers",
+      "url": "https://www.leparisien.fr/politique/direct-debat-presidentielle-2027-marine-le-pen-jean-luc-melenchon-raphael-glucksmann-bruno-retailleau-et-gabriel-attal-reunis-pour-un-echange-organise-par-les-restos-du-coeur-16-11-2026-EUUENYIU7BAZPGAWVJBW4JYGT4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
