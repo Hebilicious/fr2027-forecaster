@@ -1,0 +1,128 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T23:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "le_pen",
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-16T22:21:54Z",
+      "title": "Débat de la présidentielle 2027 : revivez le débat entre Marine Le Pen, Raphaël Glucksmann, Jean-Luc Mélenchon, Gabriel Attal et Bruno Retailleau",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/live/2026/11/16/en-direct-debat-de-la-presidentielle-2027-les-cinq-candidats-s-affrontent-sur-les-retraites-marine-le-pen-cible-la-ligue-des-droits-de-l-homme-un-ramassis-de-gauchistes_6811633_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T22:39:31Z",
+      "title": "Présidentielle 2027: Marine Le Pen défend une \"prime d'activité étudiante\" et le permis gratuit pour les jeunes",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-marine-le-pen-defend-une-prime-d-activite-etudiante-et-le-permis-gratuit-pour-les-jeunes_AD-202611160977.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T22:36:42Z",
+      "title": "\"Emmanuel Macron a perdu le fil de ce qu'il voulait faire au cours des dix années de pouvoir\", observe Maël de Calan, porte-parole d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/video-emmanuel-macron-a-perdu-le-fil-de-ce-qu-il-voulait-faire-au-cours-des-dix-annees-de-pouvoir-observe-mael-de-calan-porte-parole-d-edouard-philippe_VN-202611160976.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ne tombez pas dans cette facilité, vous êtes trop intelligent pour ça… » : Le Pen et Mélenchon donnent corps à leur duel",
+      "url": "https://www.leparisien.fr/politique/ne-tombez-pas-dans-cette-facilite-vous-etes-trop-intelligent-pour-ca-le-pen-et-melenchon-donnent-corps-a-leur-duel-16-11-2026-N3N5OOCD25HTPBWFZAY4Y7AJB4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
