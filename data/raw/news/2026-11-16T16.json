@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T16:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Marine Le Pen confirme à l’Ukraine que la France ne pourra « plus l’aider financièrement » si elle est élue",
+      "url": "https://www.leparisien.fr/elections/presidentielle/marine-le-pen-confirme-a-lukraine-que-la-france-ne-pourra-plus-laider-financierement-si-elle-est-elue-16-11-2026-PTKRHUEWB5F6PKMKNPYXAKAYVM.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle : « J’ai commis une erreur », Marine Le Pen affirme avoir changé d’avis sur la double nationalité et le mariage pour tous",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-jai-commis-une-erreur-marine-le-pen-affirme-avoir-change-davis-sur-la-double-nationalite-et-le-mariage-pour-tous-16-11-2026-25MCL4NXEJFIFCDT7MGMT6M5NM.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-16T15:45:27Z",
+      "title": "Aide à l’Ukraine : que proposent les candidats à la présidentielle ?",
+      "url": "https://www.publicsenat.fr/actualites/international/aide-a-lukraine-que-proposent-les-candidats-a-la-presidentielle"
+    }
+  ],
+  "schema_version": "1.0"
+}
