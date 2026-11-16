@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T21:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-16T21:09:09Z",
+      "title": "Marine Le Pen réitère auprès de l'ambassadeur ukrainien que la France ne pourrait \"plus aider financièrement\" Kiev si elle est élue",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/marine-le-pen-reitere-aupres-de-l-ambassadeur-ukrainien-que-la-france-ne-pourrait-plus-aider-financierement-kiev-si-elle-est-elue_8285462.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T20:38:14Z",
+      "title": "Emmanuel Macron \"aura fait tellement de mal à la France\", estime Nicolas Dupont-Aignan, candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-emmanuel-macron-aura-fait-tellement-de-mal-a-la-france-estime-nicolas-dupont-aignan-candidat-a-l-election-presidentielle_VN-202611160901.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T20:28:47Z",
+      "title": "\"Au revoir\": Fabien Roussel, candidat PCF à la présidentielle, réagit au tweet d'Emmanuel Macron sur les 10 ans de sa candidature",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-au-revoir-fabien-roussel-candidat-pcf-a-la-presidentielle-reagit-au-tweet-d-emmanuel-macron-sur-les-10-ans-de-sa-candidature_VN-202611160890.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T20:19:33Z",
+      "title": "Guerre en Ukraine, Europe: l'interview de Nicolas Dupont-Aignan, candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-guerre-en-ukraine-europe-l-interview-de-nicolas-dupont-aignan-candidat-a-la-presidentielle_VN-202611160896.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
