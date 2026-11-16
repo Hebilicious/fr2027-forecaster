@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.france24.com/fr/france/rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;france24&#46;com&#47;fr&#47;france&#47;rss\" on this server.<P>\nReference&#32;&#35;18&#46;562c3e17&#46;1794842319&#46;491dae79\n<P>https&#58;&#47;&#47;errors",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-11-16T15:18:34Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-16T14:20:46Z",
+      "title": "APPEL A TEMOIGNAGES. Présidentielle 2027 : posez vos questions à Gabriel Attal, invité de \"L'Heure de vérité\"",
+      "url": "https://www.franceinfo.fr/politique/gabriel-attal/appel-a-temoignages-presidentielle-2027-posez-vos-questions-a-gabriel-attal-invite-de-l-heure-de-verite_8284901.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-16T14:15:13Z",
+      "title": "« Notre Barack Obama », une « déception »… La candidature de Teddy Riner divise les Antilles",
+      "url": "https://www.20minutes.fr/politique/4262848-20261116-barack-obama-deception-candidature-teddy-riner-divise-antilles"
+    }
+  ],
+  "schema_version": "1.0"
+}
