@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T14:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-16T14:06:31Z",
+      "title": "Riner s’inspirera-t-il de Gargantua, d’Obélix ou d’Hercule ? par Luc Le Vaillant",
+      "url": "https://www.liberation.fr/idees-et-debats/opinions/riner-sinspirera-t-il-de-gargantua-dobelix-ou-dhercule-par-luc-le-vaillant-20261116_BDLX62EGD5GIHFZGMEGVVEB7R4/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T13:17:31Z",
+      "title": "Aides à l'Ukraine: pourquoi Marine Le Pen rencontre-t-elle l'ambassadeur de Kiev en France?",
+      "url": "https://www.bfmtv.com/politique/video-aides-a-l-ukraine-pourquoi-marine-le-pen-rencontre-t-elle-l-ambassadeur-de-kiev-en-france_VN-202611160521.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : plus de mille élus locaux appellent à une primaire pour éviter Le Pen-Mélenchon au second tour",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-plus-de-mille-elus-locaux-appellent-a-une-primaire-pour-eviter-le-pen-melenchon-au-second-tour-16-11-2026-OS7IHFCABRHRXFUEAPXGPCC4JI.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-16T13:33:09Z",
+      "title": "Présidentielle 2027 : la primaire de droite refusée par Édouard Philippe",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261116-pr%C3%A9sidentielle-2027-la-primaire-de-droite-refus%C3%A9e-par-%C3%A9douard-philippe"
+    }
+  ],
+  "schema_version": "1.0"
+}
