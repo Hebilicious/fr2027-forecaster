@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T17:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T16:57:42Z",
+      "title": "Primaire de la droite et du centre: Gérard Larcher, président du Sénat, appelle les candidats à se réunir pour déterminer une méthode de départage",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-de-la-droite-et-du-centre-gerard-larcher-president-du-senat-appelle-les-candidats-a-se-reunir-pour-determiner-une-methode-de-departage_VN-202611160690.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-16T16:22:50Z",
+      "title": "Présidentielle 2027 : Marine Tondelier demande à Sandrine Rousseau de lui « lâcher la grappe »",
+      "url": "https://www.20minutes.fr/politique/4263367-20261116-presidentielle-2027-marine-tondelier-demande-sandrine-rousseau-lacher-grappe"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-16T16:32:54Z",
+      "title": "Sondages : Marine Le Pen doit-elle s’inquiéter d’un regain de la « diabolisation » du RN ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondages-marine-le-pen-doit-elle-sinquieter-dun-regain-de-la-diabolisation-du-rn"
+    }
+  ],
+  "schema_version": "1.0"
+}
