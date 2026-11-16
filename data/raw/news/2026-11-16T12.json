@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T12:18:30Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-16T11:26:17Z",
+      "title": "La poutre travaille chez les écolos, plus que jamais tiraillés entre Tondelier, Glucksmann et Mélenchon",
+      "url": "https://www.liberation.fr/politique/la-poutre-travaille-chez-les-ecolos-plus-que-jamais-tirailles-entre-tondelier-glucksmann-et-melenchon-20261116_KEJNZSAESJF6FB72XHX66RPY6E/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T11:23:06Z",
+      "title": "MIDI ÉCO - Projet du RN pour les retraites: vers un durcissement du décompte des trimestres?",
+      "url": "https://www.bfmtv.com/politique/video-midi-eco-projet-du-rn-pour-les-retraites-vers-un-durcissement-du-decompte-des-trimestres_VN-202611160459.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « qu’on me lâche la grappe », la réponse de Marine Tondelier à Sandrine Rousseau qui l’appelle à se retirer",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-quon-me-lache-la-grappe-la-reponse-de-marine-tondelier-a-sandrine-rousseau-qui-lappelle-a-se-retirer-16-11-2026-PXQN3XUYMRFMRPOWTQ3GQAALHM.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
