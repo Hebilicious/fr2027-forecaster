@@ -1,0 +1,150 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T10:18:08Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-16T09:47:52Z",
+      "title": "« Pour éviter un second tour Mélenchon-Le Pen, une primaire ouverte s’impose » : l’appel de 1000 élus locaux",
+      "url": "https://www.lefigaro.fr/vox/politique/pour-eviter-un-second-tour-melenchon-le-pen-une-primaire-ouverte-s-impose-l-appel-de-1000-elus-locaux-20261116"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-16T09:30:00Z",
+      "title": "Arrêts maladie auto-déclarés : la France pourrait-elle vraiment s’inspirer de ses voisins européens, comme l’affirme LFI ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/arrets-maladie-auto-declares-la-france-pourrait-elle-vraiment-s-inspirer-de-ses-voisins-europeens-comme-l-affirme-lfi-20261116"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "le_pen",
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-16T10:02:00Z",
+      "title": "Présidentielle 2027 : cinq candidats vont débattre sur le pouvoir d’achat et la précarité ce lundi soir",
+      "url": "https://www.liberation.fr/politique/presidentielle-2027-cinq-candidats-vont-debattre-sur-le-pouvoir-dachat-et-la-precarite-ce-lundi-soir-20261116_7QJ44LZUYZBGJCXXO2BCATX3O4/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T09:50:39Z",
+      "title": "Marine Le Pen va rencontrer l'ambassadeur d'Ukraine en France ce lundi",
+      "url": "https://www.bfmtv.com/politique/video-marine-le-pen-va-rencontrer-l-ambassadeur-d-ukraine-en-france-ce-lundi_VN-202611160392.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "lisnard",
+        "philippe",
+        "retailleau",
+        "riner"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-16T07:21:01Z",
+      "title": "Bonjour chez vous ! — Gérard Larcher va-t-il départager les candidats du « bloc central » ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/gerard-larcher-va-t-il-departager-les-candidats-du-bloc-central-e0"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-16T07:21:00Z",
+      "title": "Bonjour chez vous ! — Jean Louis Bourlanges : « L’obsession de Poutine, c’est la reconstitution de l’URSS »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/jean-louis-bourlanges-lobsession-de-poutine-cest-la-reconstitution-de-lurss-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
