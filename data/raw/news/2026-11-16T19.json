@@ -1,0 +1,135 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-16T19:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-16T18:25:55Z",
+      "title": "Présidentielle 2027 : le duel Tondelier-Rousseau plonge les Verts dans une guerre ouverte",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-le-duel-tondelier-rousseau-plonge-les-verts-dans-une-guerre-ouverte-20261116"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:15:16Z",
+      "title": "Colère lycéenne: Fabien Roussel, candidat PCF à l'élection présidentielle, pointe \"une répression qui a été dure\"",
+      "url": "https://www.bfmtv.com/politique/video-colere-lyceenne-fabien-roussel-candidat-pcf-a-l-election-presidentielle-pointe-une-repression-qui-a-ete-dure_VN-202611160828.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-16T19:00:27Z",
+      "title": "Tirs de mortiers d'artifice dans un lycée: \"C'est inadmissible\", assure Fabien Roussel, candidat PCF à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-tirs-de-mortiers-d-artifice-dans-un-lycee-c-est-inadmissible-assure-fabien-roussel-candidat-pcf-a-l-election-presidentielle_VN-202611160815.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Nous sommes en total décalage » : les troupes d’Édouard Philippe gagnées par le doute",
+      "url": "https://www.leparisien.fr/elections/presidentielle/nous-sommes-en-total-decalage-les-troupes-dedouard-philippe-gagnees-par-le-doute-16-11-2026-ZCIFTMXHDJBOTMOHDPKGDJFWXE.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon",
+        "retailleau"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-16T17:57:20Z",
+      "title": "La primaire de la droite, \"un aveu d’échec\" pour Gabriel Attal et Bruno Retailleau",
+      "url": "https://www.france24.com/fr/france/20261116-france-presidentielle-2027-primaire-de-la-droite-un-aveu-dechec-pour-gabriel-attal-et-bruno-retailleau"
+    }
+  ],
+  "schema_version": "1.0"
+}
