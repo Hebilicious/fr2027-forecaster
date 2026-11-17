@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T13:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-17T13:03:56Z",
+      "title": "Age de départ, part de capitalisation, possible référendum… Que propose le Rassemblement national pour réformer les retraites ?",
+      "url": "https://www.franceinfo.fr/economie/retraite/reforme-des-retraites/age-de-depart-part-de-capitalisation-referendum-que-propose-le-rassemblement-national-pour-reformer-les-retraites_8286419.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : suppression de Parcoursup et du contrôle continu, épreuves en mai… Les mesures de Marine Le Pen pour le bac",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-suppression-de-parcoursup-et-du-controle-continu-epreuves-en-mai-les-mesures-de-marine-le-pen-pour-le-bac-17-11-2026-UMWVXCASUFH4HCHKYQTHEG6SHQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T12:36:32Z",
+      "title": "Présidentielle 2027 : 62 ans, capitalisation… On vous résume la réforme des retraites de Marine Le Pen",
+      "url": "https://www.20minutes.fr/societe/reforme_des_retraites/4263555-20261117-presidentielle-2027-62-ans-capitalisation-resume-reforme-retraites-marine-pen"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T12:32:38Z",
+      "title": "Présidentielle 2027 : La fortune des plus riches a-t-elle doublé en dix ans, comme le dit Raphaël Glucksmann ?",
+      "url": "https://www.20minutes.fr/politique/4263529-20261117-presidentielle-2027-fortune-plus-riches-double-dix-ans-comme-dit-raphael-glucksmann"
+    }
+  ],
+  "schema_version": "1.0"
+}
