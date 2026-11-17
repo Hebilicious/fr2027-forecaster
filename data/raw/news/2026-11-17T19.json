@@ -1,0 +1,177 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T19:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-17T18:54:17Z",
+      "title": "Présidentielle 2027 : les camps Attal, Retailleau et Lisnard actent leurs premières convergences en l’absence d’Édouard Philippe",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-les-camps-attal-retailleau-et-lisnard-actent-leurs-premieres-convergences-en-l-absence-d-edouard-philippe-20261117"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-17T18:52:45Z",
+      "title": "L’éditorial de Gaëtan de Capèle : «Le “en même temps” du RN sur les retraites»",
+      "url": "https://www.lefigaro.fr/vox/economie/l-editorial-de-gaetan-de-capele-le-en-meme-temps-du-rn-sur-les-retraites-20261117"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-17T18:55:40Z",
+      "title": "Réforme des retraites de Marine Le Pen : un départ à 62 ans en trompe-l’œil",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/reforme-des-retraites-de-marine-le-pen-un-depart-a-62-ans-en-trompe-l-oeil-20261117"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-17T18:25:46Z",
+      "title": "Refus d'\"alliance avec les extrêmes\", participation à deux euros... les premières modalités de la primaire de la droite et du centre dévoilées",
+      "url": "https://www.franceinfo.fr/elections/refus-d-alliance-avec-les-extremes-participation-a-deux-euros-les-premieres-modalites-de-la-primaire-de-la-droite-et-du-centre-devoilees_8286980.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "bardella",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T19:14:16Z",
+      "title": "Primaire de la droite et du centre: \"Ces accords de boutique sont très loin de la rupture attendue par les Français\", selon Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/video-primaire-de-la-droite-et-du-centre-ces-accords-de-boutique-sont-tres-loin-de-la-rupture-attendue-par-les-francais-selon-jordan-bardella_VN-202611170879.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T19:03:08Z",
+      "title": "Michel Barnier, ancien Premier ministre, évoque \"un accord pour une primaire fin janvier\", entre Gabriel Attal, Bruno Retailleau et David Lisnard",
+      "url": "https://www.bfmtv.com/politique/video-michel-barnier-ancien-premier-ministre-evoque-un-accord-pour-une-primaire-fin-janvier-entre-gabriel-attal-bruno-retailleau-et-david-lisnard_VN-202611170872.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T19:01:58Z",
+      "title": "\"Il faut un seul candidat\": Michel Barnier affirme sur BFMTV que les représentants de Gabriel Attal, Bruno Retailleau et David Lisnard se sont \"mis d'accord\" pour organiser une primaire \"fin janvier\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/il-faut-un-seul-candidat-michel-barnier-affirme-sur-bfmtv-que-les-representants-de-gabriel-attal-bruno-retailleau-et-david-lisnard-se-sont-mis-d-accord-pour-organiser-une-primaire-fin-janvier_AN-202611170870.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T18:31:50Z",
+      "title": "L'Unicef France annonce suspendre \"la mission d'ambassadeur\" de Teddy Riner en raison de sa candidature à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/l-unicef-france-annonce-suspendre-la-mission-d-ambassadeur-de-teddy-riner-en-raison-de-sa-candidature-a-la-presidentielle_AD-202611170849.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "L’élection de l’Association des maires de France, premier défi sur la route de David Lisnard en vue de la présidentielle",
+      "url": "https://www.leparisien.fr/politique/lelection-de-lassociation-des-maires-de-france-premier-defi-sur-la-route-de-david-lisnard-en-vue-de-la-presidentielle-17-11-2026-K5KJAOQ4SJHWVCDWQF7LPU34NY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
