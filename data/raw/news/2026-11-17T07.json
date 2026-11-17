@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T07:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-17T06:25:13Z",
+      "title": "Sur le financement des associations, un front républicain bienvenu contre Marine Le Pen",
+      "url": "https://www.liberation.fr/politique/sur-le-financement-des-associations-un-front-republicain-bienvenu-contre-marine-le-pen-20261117_BYBIUKIKSRDW5I3MVV5PFGTPSY/"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T07:06:11Z",
+      "title": "Présidentielle 2027 : Dominique de Villepin va-t-il se déclarer vendredi ?",
+      "url": "https://www.20minutes.fr/politique/4263442-20261117-presidentielle-2027-dominique-villepin-va-declarer-vendredi"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T05:15:53Z",
+      "title": "EN DIRECT Présidentielle 2027 : Le Pen et Mélenchon s’écharpent sur la hausse du smic…",
+      "url": "https://www.20minutes.fr/politique/4263434-20261117-direct-presidentielle-2027-pen-melenchon-echarpent-hausse-smic"
+    }
+  ],
+  "schema_version": "1.0"
+}
