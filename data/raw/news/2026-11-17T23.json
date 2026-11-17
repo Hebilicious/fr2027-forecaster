@@ -1,0 +1,116 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T23:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lagarde"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : 22 % des Français « souhaitent » la candidature de Christine Lagarde",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-22-des-francais-souhaitent-la-candidature-de-christine-lagarde-13-11-2026-DY2SYV6YERDVVAQ4NEZLHN2MNY.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-17T23:04:52Z",
+      "title": "Une primaire de la droite et du centre prend forme avec les équipes d'Attal, Retailleau et Lisnard",
+      "url": "https://www.france24.com/fr/france/20261117-equipes-attal-retailleau-lisnard-avancent-sur-une-primaire-droite-centre-sans-edouard-philippe-presidentielle-2027-election-candidats-lr-nouvelle-energie-renaissance"
+    },
+    {
+      "candidate_ids": [
+        "lagarde"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-17T17:31:40Z",
+      "title": "Comment une fausse citation de Christine Lagarde a été amplifiée par un réseau de désinformation srilankais",
+      "url": "https://www.france24.com/fr/france/20261117-comment-fausse-citation-christine-lagarde-amplifi%C3%A9e-par-r%C3%A9seau-d%C3%A9sinformation-sri-lanka"
+    }
+  ],
+  "schema_version": "1.0"
+}
