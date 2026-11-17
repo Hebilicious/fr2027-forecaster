@@ -1,0 +1,280 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T11:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-17T10:49:28Z",
+      "title": "Retraites : Marine Le Pen veut faire reculer l’âge de départ à 62 ans",
+      "url": "https://www.liberation.fr/politique/elections/marine-le-pen-presente-son-projet-de-reforme-des-retraites-20261117_4PGOZBOHAJGRTN5SP3MQA6OCYE/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-17T10:28:32Z",
+      "title": "Le vernis de Le Pen explose grâce au «ramassis de gauchistes» de la Ligue des droits de l’homme",
+      "url": "https://www.liberation.fr/politique/le-vernis-de-le-pen-explose-grace-au-ramassis-de-gauchistes-de-la-ligue-des-droits-de-lhomme-20261117_U2YRTEGMBZHAPIMIB2FXK3OPOQ/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-17T10:23:56Z",
+      "title": "Jean-Luc Mélenchon, candidat LFI à la présidentielle, va dîner avec des grands patrons français dont Bernard Arnault et Patrick Pouyanné",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/jean-luc-melenchon-candidat-a-la-presidentielle-va-diner-avec-des-grands-patrons-francais-dont-bernard-arnault-et-patrick-pouyanne_8286248.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T11:10:10Z",
+      "title": "Le RN souhaite \"diviser par deux\" le déficit du système des retraites d'ici 2032",
+      "url": "https://www.bfmtv.com/politique/video-le-rn-souhaite-diviser-par-deux-le-deficit-du-systeme-des-retraites-d-ici-2032_VN-202611170490.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T11:08:32Z",
+      "title": "Retraites: \"Notre réforme se déploiera de manière progressive pour être pleinement opérationnelle en 2032\", indique Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/video-retraites-notre-reforme-se-deploiera-de-maniere-progressive-pour-etre-pleinement-operationnelle-en-2032-indique-jordan-bardella_VN-202611170488.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T11:07:33Z",
+      "title": "Réforme des retraites: le RN propose de \"transformer certaines cotisations patronales déjà payées\" pour financer son \"pilier de capitalisation\"",
+      "url": "https://www.bfmtv.com/politique/video-reforme-des-retraites-le-rn-propose-de-transformer-certaines-cotisations-patronales-deja-payees-pour-financer-son-pilier-de-capitalisation_VN-202611170489.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T11:00:52Z",
+      "title": "Réforme des retraites du RN: \"Celui qui a acquis tous ses droits et décide de continuer à travailler (...) sera exempté de cotisations retraite et chômage\", annonce Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/video-reforme-des-retraites-du-rn-celui-qui-a-acquis-tous-ses-droits-et-decide-de-continuer-a-travailler-sera-exempte-de-cotisations-retraite-et-chomage-annonce-jordan-bardella_VN-202611170482.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:59:17Z",
+      "title": "Retraites: validation des trimestres, droits acquis au chômage, nombre de trimestres cotisés...les mesures du RN pour \"rapprocher la durée effective de cotisation de la cible de 42 ans\"",
+      "url": "https://www.bfmtv.com/politique/video-retraites-validation-des-trimestres-droits-acquis-au-chomage-nombre-de-trimestres-cotises-les-mesures-du-rn-pour-rapprocher-la-duree-effective-de-cotisation-de-la-cible-de-42-ans_VN-202611170478.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:56:41Z",
+      "title": "Retraites: la réforme du RN intégrera \"l'âge d'entrée sur le marché du travail\" comme nouveau \"paramètre de calcul\", annonce Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/video-retraites-la-reforme-du-rn-integrera-l-age-d-entree-sur-le-marche-du-travail-comme-nouveau-parametre-de-calcul-annonce-jordan-bardella_VN-202611170477.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:54:55Z",
+      "title": "Retraites: \"Sous mon premier quinquennat, des centaines de milliers de travailleurs partiront plus tôt\", assure Marine Le Pen, candidate RN à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-retraites-sous-mon-premier-quinquennat-des-centaines-de-milliers-de-travailleurs-partiront-plus-tot-assure-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202611170474.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:54:09Z",
+      "title": "Retraites: le \"pilier de capitalisation\" souhaité par le RN permettra de constituer un fonds de \"quasi 900 milliards d'euros en une génération\", selon Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/video-retraites-le-pilier-de-capitalisation-souhaite-par-le-rn-permettra-de-constituer-un-fonds-de-quasi-900-milliards-d-euros-en-une-generation-selon-marine-le-pen_VN-202611170472.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:35:44Z",
+      "title": "Marine Le Pen (RN): \"L'abolition de la réforme Borne permettra de déployer la réforme que j'ai rappelée au Medef: soit un âge de départ de 60 à 62 ans, avec 40 à 42 ans de cotisation selon la date du premier emploi réel\"",
+      "url": "https://www.bfmtv.com/politique/video-marine-le-pen-rn-l-abolition-de-la-reforme-borne-permettra-de-deployer-la-reforme-que-j-ai-rappelee-au-medef-soit-un-age-de-depart-de-60-a-62-ans-avec-40-a-42-ans-de-cotisation-selon-la-date-du-premier-emploi-reel_VN-202611170463.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:27:58Z",
+      "title": "Marine Le Pen, candidate RN à l’élection présidentielle: \"Nous allons proposer de compléter le système des retraites par répartition par un pilier de capitalisation\"",
+      "url": "https://www.bfmtv.com/politique/video-marine-le-pen-candidate-rn-a-l-election-presidentielle-nous-allons-proposer-de-completer-le-systeme-des-retraites-par-repartition-par-un-pilier-de-capitalisation_VN-202611170459.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:23:16Z",
+      "title": "Marine Le Pen donne \"l'assurance\" aux Français \"qui s'inquiètent d'avoir une retraite dans les 10 à 20 ans à venir\" qu'ils \"bénéficieront de notre système\"",
+      "url": "https://www.bfmtv.com/politique/video-marine-le-pen-donne-l-assurance-aux-francais-qui-s-inquietent-d-avoir-une-retraite-dans-les-10-a-20-ans-a-venir-qu-ils-beneficieront-de-notre-systeme_VN-202611170456.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:20:32Z",
+      "title": "\"Je suis attachée à l'esprit de notre système de retraite actuel\", déclare Marine Le Pen, candidate RN à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-je-suis-attachee-a-l-esprit-de-notre-systeme-de-retraite-actuel-declare-marine-le-pen-candidate-rn-a-l-election-presidentielle_VN-202611170452.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T10:18:06Z",
+      "title": "Marine Le Pen, candidate RN à l'élection présidentielle: \"Notre réforme des retraites est pleinement financée\"",
+      "url": "https://www.bfmtv.com/politique/video-marine-le-pen-candidate-rn-a-l-election-presidentielle-notre-reforme-des-retraites-est-pleinement-financee_VN-202611170450.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Si on gagne l’élection présidentielle, ils vont devoir faire avec nous » : Jean-Luc Mélenchon va dîner avec des grands patrons ce mardi",
+      "url": "https://www.leparisien.fr/elections/presidentielle/si-on-gagne-lelection-presidentielle-ils-vont-devoir-faire-avec-nous-jean-luc-melenchon-va-diner-avec-des-grands-patrons-ce-mardi-17-11-2026-VWU5WXTOBFEKXFBASVNK7FUNKE.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T11:11:35Z",
+      "title": "Présidentielle 2027 : Une maman solo sur trois est pauvre, comme l’affirme Mélenchon ?",
+      "url": "https://www.20minutes.fr/politique/4263505-20261117-presidentielle-2027-maman-solo-trois-pauvre-comme-affirme-melenchon"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T10:47:36Z",
+      "title": "Pour l’ex-dircab de Nicolas Sarkozy, le premier déplacement de Teddy Riner « avait un côté un peu Tintin au Congo »",
+      "url": "https://www.20minutes.fr/politique/4263495-20261117-ex-dircab-nicolas-sarkozy-premier-deplacement-teddy-riner-cote-peu-tintin-congo"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-16T07:21:01Z",
+      "title": "Bonjour chez vous ! — Teddy Riner va-t-il renverser la campagne ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/teddy-riner-va-t-il-renverser-la-campagne-e0"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-16T07:21:01Z",
+      "title": "Bonjour chez vous ! — Pierre Moscovici : « Nous ne sommes pas dans la situation de la Grèce, mais… »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/pierre-moscovici-nous-ne-sommes-pas-dans-la-situation-de-la-grece-mais-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
