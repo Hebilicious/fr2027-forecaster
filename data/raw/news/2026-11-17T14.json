@@ -1,0 +1,140 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.france24.com/fr/france/rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;france24&#46;com&#47;fr&#47;france&#47;rss\" on this server.<P>\nReference&#32;&#35;18&#46;d34ddb17&#46;1794925111&#46;3e45c065\n<P>https&#58;&#47;&#47;errors",
+      "id": "france24-france",
+      "items": 0,
+      "status": "error"
+    }
+  ],
+  "fetched_at": "2026-11-17T14:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-17T13:44:39Z",
+      "title": "«Comment a-t-il pu en arriver là ?» : Jean-Luc Mélenchon dit sa «peine» après la chanson de Pierre Perret «Les antisémites»",
+      "url": "https://www.liberation.fr/politique/comment-a-t-il-pu-en-arriver-la-jean-luc-melenchon-dit-sa-peine-apres-la-chanson-de-pierre-perret-les-antisemites-20261117_P3VFYCGR25FKPCJW3MEPA2HLOI/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T13:46:17Z",
+      "title": "Grève du 17 novembre: Jean-Luc Mélenchon dénonce un \"divorce\" entre les gens et le gouvernement",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-greve-du-17-novembre-jean-luc-melenchon-denonce-un-divorce-entre-les-gens-et-le-gouvernement_VN-202611170612.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T13:36:31Z",
+      "title": "Le gouvernement ne sait \"pas où il va\", estime Jean-Luc Mélenchon, candidat de La France insoumise à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-le-gouvernement-ne-sait-pas-ou-il-va-estime-jean-luc-melenchon-candidat-de-la-france-insoumise-a-la-presidentielle_VN-202611170599.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T13:27:47Z",
+      "title": "Dîner avec Patrick Pouyanné et Bernard Arnault: \"Ils m'ont invité, alors j'y vais\", déclare Jean-Luc Mélenchon, candidat LFI à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-diner-avec-patrick-pouyanne-et-bernard-arnault-ils-m-ont-invite-alors-j-y-vais-declare-jean-luc-melenchon-candidat-lfi-a-la-presidentielle_VN-202611170590.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T13:22:58Z",
+      "title": "Grève du 17 novembre: \"Le divorce est de plus en plus grand entre la parole officielle et les gens\", estime Jean-Luc Mélenchon, candidat LFI à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-greve-du-17-novembre-le-divorce-est-de-plus-en-plus-grand-entre-la-parole-officielle-et-les-gens-estime-jean-luc-melenchon-candidat-lfi-a-la-presidentielle_VN-202611170583.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T13:31:20Z",
+      "title": "« Le meilleur orateur que j’aie vu »… Michel Drucker impressionné par Jean-Luc Mélenchon dans « Vivement dimanche »",
+      "url": "https://www.20minutes.fr/arts-stars/television/4263527-20261117-meilleur-orateur-vu-michel-drucker-impressionne-jean-luc-melenchon-vivement-dimanche"
+    }
+  ],
+  "schema_version": "1.0"
+}
