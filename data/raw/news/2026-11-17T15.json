@@ -1,0 +1,106 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T15:18:32Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-17T14:35:59Z",
+      "title": "Présidentielle 2027 : Marine Le Pen se convertit à la capitalisation pour crédibiliser le projet retraites du RN",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/presidentielle-2027-marine-le-pen-se-convertit-a-la-capitalisation-pour-credibiliser-le-projet-retraites-du-rn-20261117"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "roussel"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Fabien Roussel se positionne à gauche « entre Jean-Luc Mélenchon et Raphaël Glucksmann »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-fabien-roussel-se-positionne-a-gauche-entre-jean-luc-melenchon-et-raphael-glucksmann-17-11-2026-OQCDIPDT7ZETXDOHDVUWT2E7QA.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
