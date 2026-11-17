@@ -1,0 +1,116 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T21:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-17T20:48:50Z",
+      "title": "Comment Marine Le Pen veut-elle financer son plan pour les retraites ?",
+      "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/comment-marine-le-pen-veut-elle-financer-son-plan-pour-les-retraites_8287178.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T20:16:17Z",
+      "title": "Dîner avec les grands patrons: Jean-Luc Mélenchon ne dîne finalement pas chez Drouant, comme c'était le cas précédemment pour Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-diner-avec-les-grands-patrons-jean-luc-melenchon-ne-dine-finalement-pas-chez-drouant-comme-c-etait-le-cas-precedemment-pour-marine-le-pen_VN-202611170924.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T21:03:34Z",
+      "title": "Présidentielle 2027 : Darmanin affirme que Mélenchon gagnera l’élection face à Le Pen",
+      "url": "https://www.20minutes.fr/politique/4263688-20261117-presidentielle-2027-darmanin-affirme-melenchon-gagnera-election-face-pen"
+    }
+  ],
+  "schema_version": "1.0"
+}
