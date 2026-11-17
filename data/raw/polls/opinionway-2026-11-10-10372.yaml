@@ -1,0 +1,75 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-11-10-10372
+firm: opinionway
+sponsor: Les Echos / Radio Classique
+field_start: "2026-11-09"
+field_end: "2026-11-10"
+published_at: "2026-11-12"
+sample_size: 1017
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10372-pres-presitrack-opinionway-13-novembre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10372-pres-presitrack-opinionway-13-novembre.pdf
+index_url: null
+retrieved_at: "2026-11-17T20:39:00Z"
+entry: primary
+notes: >-
+  Wave 4 of PrésiTrack, entered from Commission notice 10372. 982 registered
+  voters drawn from a sample of 1,017, online (CAWI), 9–10 November; the published
+  column is weighted on socio-demographics, 2022 presidential and 2024 legislative
+  first-round vote among voters certain to vote (9–10 out of 10, 728 respondents). No
+  runoff voting intentions are published. First published by Les Echos on 12
+  November 2026.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-17T20:31Z
+  skill_version: polls-2
+scenarios:
+- label: Glucksmann+Attal+Philippe+Lisnard
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 1
+    attal: 4
+    dupont_aignan: 1
+    glucksmann: 11
+    le_pen: 34
+    lisnard: 10
+    melenchon: 17
+    philippe: 11
+    retailleau: 4
+    roussel: 1
+    tondelier: 3
+    zemmour: 3
+- label: Glucksmann+Attal+Lisnard
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 1
+    attal: 10
+    dupont_aignan: 1
+    glucksmann: 13
+    le_pen: 34
+    lisnard: 12
+    melenchon: 16
+    retailleau: 6
+    roussel: 1
+    tondelier: 3
+    zemmour: 3
+- label: Glucksmann+Philippe+Lisnard
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 1
+    dupont_aignan: 2
+    glucksmann: 12
+    le_pen: 34
+    lisnard: 11
+    melenchon: 16
+    philippe: 12
+    retailleau: 4
+    roussel: 2
+    tondelier: 3
+    zemmour: 3

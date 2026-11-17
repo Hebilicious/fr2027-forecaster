@@ -2,6 +2,19 @@
 
 Dated entries for every assumption, parameter change, source added or dropped, and the reason. Newest first within a day.
 
+## 2026-11-17
+
+### Field: 2026-11-11-lagarde-tested (via Grok Bot field_change `2026-11-11-lagarde-tested`)
+
+Cluster17 tested Christine Lagarde in two first-round scenarios of its voting-intention poll for Politico, conducted on 9–10 November and published on 11 November 2026. She has not declared; in September 2026 she told La Croix that a presidential run would not be a good idea.
+
+Christine Lagarde is added as a possible centre candidate in her own slot after Cluster17 tested her in two of the four first-round scenarios of its 9–10 November 2026 voting-intention poll for Politico, published on 11 November (event 2026-11-11-cluster17-tested-lagarde). She has not declared a candidacy. On 30 September 2026 franceinfo (with AFP) reported her interview in La Croix, in which she said a run 'would not be a good idea at all' and that it was 'not the same job'. New slot lagarde at p 0.05: residual probability only, given the September dismissal and the absence of a declaration.
+
+- `config/candidates.yaml`: new candidate `lagarde` (Christine Lagarde, centre, possible) in slot `lagarde` at p 0.05; `as_of` 2026-11-17.
+- Sources: [SONDAGE EXCLUSIF 2027. Christine Lagarde “bien accueillie” par les électeurs du centre](https://www.politico.eu/article/sondage-exclusif-2027-christine-lagarde-bien-accueillie-par-les-electeurs-du-centre/), ["Ça ne serait pas du tout une bonne idée" : Christine Lagarde écarte l'hypothèse d'une candidature à l'élection présidentielle](https://www.franceinfo.fr/elections/presidentielle/ca-ne-serait-pas-du-tout-une-bonne-idee-christine-lagarde-ecarte-l-hypothese-d-une-candidature-a-l-election-presidentielle_8216920.html).
+- Events: `2026-11-11-cluster17-tested-lagarde`.
+- Sent by Grok Bot fr2027 (checks-1, run `checks-2026-11-17T21:33Z`); checked and applied by the Live workflow.
+
 ## 2026-11-09
 
 ### Field: 2026-11-09-riner-declares (via Grok Bot field_change `2026-11-09-riner-declares`)
