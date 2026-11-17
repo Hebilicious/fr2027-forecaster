@@ -1,0 +1,159 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T12:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-17T11:32:16Z",
+      "title": "Présidentielle 2027 : Marine Le Pen présente sa réforme des retraites, un système basé sur la progressivité et une part de capitalisation",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/17/presidentielle-2027-marine-le-pen-presente-sa-reforme-des-retraites-et-promet-que-des-centaines-de-milliers-de-travailleurs-partiront-plus-tot-qu-avec-la-reforme-borne_6812963_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-17T12:11:37Z",
+      "title": "Départ de 60 à 62 ans, capitalisation, âge du «premier emploi stable»… Ce qu’il faut retenir du projet de Marine Le Pen pour les retraites",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/depart-de-60-a-62-ans-capitalisation-age-du-premier-emploi-stable-ce-qu-il-faut-retenir-du-projet-de-marine-le-pen-pour-les-retraites-20261117"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-17T11:19:04Z",
+      "title": "«La bataille de France» ou l’étrange référence du camp Glucksmann",
+      "url": "https://www.liberation.fr/politique/la-bataille-de-france-ou-letrange-reference-du-camp-glucksmann-20261117_T6O5OLXAFVEYBLM3WZUPH7PNZ4/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T11:49:19Z",
+      "title": "\"Cela me fait de la peine\": Jean-Luc Mélenchon réagit à la chanson \"Les antisémites\" de Pierre Perret visant LFI",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/cela-me-fait-de-la-peine-jean-luc-melenchon-reagit-a-la-chanson-les-antisemites-de-pierre-perret-visant-lfi_AD-202611170514.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T11:47:35Z",
+      "title": "Premiers déplacements, programme à construire… Désormais candidat, Teddy Riner à l’épreuve de la campagne présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/premiers-deplacements-programme-a-construire-desormais-candidat-teddy-riner-a-l-epreuve-de-la-campagne-presidentielle_AN-202611170513.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T11:30:01Z",
+      "title": "Le Rassemblement national présente sa réforme des retraites en cas d'accession à l'Élysée",
+      "url": "https://www.bfmtv.com/politique/video-le-rassemblement-national-presente-sa-reforme-des-retraites-en-cas-d-accession-a-l-elysee_VN-202611170517.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-17T11:26:31Z",
+      "title": "Réforme des retraites du RN: Marine Le Pen n'exclut pas un référendum en cas d'absence de majorité à l'Assemblée nationale",
+      "url": "https://www.bfmtv.com/politique/video-reforme-des-retraites-du-rn-marine-le-pen-n-exclut-pas-un-referendum-en-cas-d-absence-de-majorite-a-l-assemblee-nationale_VN-202611170498.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T11:22:34Z",
+      "title": "Présidentielle 2027 : Après Marine Le Pen, un dîner avec Mélenchon… C’est quoi le club très huppé « Entreprise & Cité »",
+      "url": "https://www.20minutes.fr/politique/4263502-20261117-presidentielle-2027-apres-marine-pen-diner-melenchon-quoi-club-tres-huppe-entreprise-cite"
+    }
+  ],
+  "schema_version": "1.0"
+}
