@@ -1,0 +1,149 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-17T18:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-17T17:30:00Z",
+      "title": "Guillaume Tabard : «Marine Le Pen sous le totem des 62 ans, un tournant bienvenu»",
+      "url": "https://www.lefigaro.fr/politique/guillaume-tabard-marine-le-pen-sous-le-totem-des-62-ans-un-tournant-bienvenu-20261117"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-17T18:02:35Z",
+      "title": "« C’est celui qui en a le plus envie » : la campagne sans candidature de François Hollande",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/c-est-celui-qui-en-a-le-plus-envie-la-campagne-sans-candidature-de-francois-hollande-20261117"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-17T17:29:24Z",
+      "title": "Le RN présente enfin sa réforme des retraites : un projet tout en «tours de passe-passe»",
+      "url": "https://www.liberation.fr/politique/elections/le-rn-presente-enfin-sa-reforme-des-retraites-un-projet-tout-en-tours-de-passe-passe-20261117_MA72YG6BJBHVBI3DQSQZFEHSFE/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-17T17:27:20Z",
+      "title": "Candidat à la présidentielle, Teddy Riner ne peut plus être ambassadeur de l’Unicef",
+      "url": "https://www.liberation.fr/politique/elections/candidat-a-la-presidentielle-teddy-riner-ne-peut-plus-etre-ambassadeur-de-lunicef-20261117_6J72XBXQ55C4HPCXN4P7Q4RK3Q/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : l’Unicef France suspend la mission d’ambassadeur du candidat Teddy Riner",
+      "url": "https://www.leparisien.fr/politique/presidentielle-2027-lunicef-france-suspend-la-mission-dambassadeur-du-candidat-teddy-riner-17-11-2026-53VZ2P7NO5FSPJQK2BHBLZ5ADM.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T17:56:26Z",
+      "title": "Présidentielle 2027 : L’Unicef suspend la mission d’ambassadeur de Teddy Riner",
+      "url": "https://www.20minutes.fr/politique/4263666-20261117-presidentielle-2027-unicef-suspend-mission-ambassadeur-teddy-riner"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-17T16:57:49Z",
+      "title": "« Les antisémites » : Jean-Luc Mélenchon dit sa « peine » après la publication de la chanson de Pierre Perret",
+      "url": "https://www.20minutes.fr/arts-stars/culture/musique/4263638-20261117-antisemites-jean-luc-melenchon-dit-peine-apres-publication-chanson-pierre-perret"
+    }
+  ],
+  "schema_version": "1.0"
+}
