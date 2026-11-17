@@ -1,0 +1,27 @@
+{
+  "detected_at": "2026-11-17T01:18:20Z",
+  "flags": [
+    {
+      "candidate_id": "attal",
+      "date": "2026-11-17",
+      "detail": "support 0.01 [0.00, 0.04] in the drop to 2026-11-11T00:00:00Z → 0.08 [0.05, 0.12] in the drop to 2026-11-17T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.0651
+    },
+    {
+      "candidate_id": "polony",
+      "date": "2026-11-17",
+      "detail": "support 0.10 [0.06, 0.17] in the drop to 2026-11-11T00:00:00Z → 0.44 [0.30, 0.60] in the drop to 2026-11-17T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.3444
+    },
+    {
+      "candidate_id": "riner",
+      "date": "2026-11-17",
+      "detail": "support 0.23 [0.17, 0.29] in the drop to 2026-11-11T00:00:00Z → 0.12 [0.08, 0.17] in the drop to 2026-11-17T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.1087
+    }
+  ],
+  "schema_version": "1.0"
+}
