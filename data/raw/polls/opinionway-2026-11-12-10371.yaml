@@ -1,0 +1,81 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-11-12-10371
+firm: opinionway
+sponsor: CNews
+field_start: "2026-11-10"
+field_end: "2026-11-12"
+published_at: "2026-11-12"
+sample_size: 1001
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10371-pres-iv-opinionway-cnews-12-novembre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10371-pres-iv-opinionway-cnews-12-novembre.pdf
+index_url: null
+retrieved_at: "2026-11-17T20:39:00Z"
+entry: primary
+notes: >-
+  Entered from Commission notice 10371. 964 registered voters drawn from a sample
+  of 1,001, online (CAWI), 10–12 November; the published column is weighted on
+  socio-demographics, 2022 presidential and 2024 legislative first-round vote among
+  voters certain to vote (9–10 out of 10, 660 respondents). Bouamrane '<1%' in the
+  with-Riner scenario is entered as 0.5. First published by CNews on 12 November 2026.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-17T20:31Z
+  skill_version: polls-2
+scenarios:
+- label: Avec Teddy Riner
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 1
+    attal: 3
+    bouamrane: 0.5
+    dupont_aignan: 2
+    glucksmann: 10
+    le_pen: 31
+    lisnard: 9
+    melenchon: 16
+    philippe: 12
+    retailleau: 4
+    riner: 4
+    roussel: 2
+    tondelier: 3
+    zemmour: 3
+- label: Sans Teddy Riner
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 1
+    attal: 4
+    bouamrane: 1
+    dupont_aignan: 2
+    glucksmann: 11
+    le_pen: 32
+    lisnard: 10
+    melenchon: 16
+    philippe: 12
+    retailleau: 5
+    roussel: 1
+    tondelier: 3
+    zemmour: 2
+- label: Édouard Philippe v Marine Le Pen
+  round: 2
+  scenario_id: H1
+  shares:
+    le_pen: 56
+    philippe: 44
+- label: Jean-Luc Mélenchon v Marine Le Pen
+  round: 2
+  scenario_id: H2
+  shares:
+    le_pen: 68
+    melenchon: 32
+- label: Raphaël Glucksmann v Marine Le Pen
+  round: 2
+  scenario_id: H3
+  shares:
+    glucksmann: 42
+    le_pen: 58
