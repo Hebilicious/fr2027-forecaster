@@ -1,0 +1,153 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T14:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-18T13:56:32Z",
+      "title": "Présidentielle 2027 : Dominique de Villepin, les coulisses d’une entrée en campagne imminente",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-dominique-de-villepin-les-coulisses-d-une-entree-en-campagne-imminente-20261118"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T13:59:13Z",
+      "title": "Présidentielle : Jean-Luc Mélenchon, \"rouleau compresseur\" ? \"On/Off\", épisode 9",
+      "url": "https://www.franceinfo.fr/politique/presidentielle-jean-luc-melenchon-rouleau-compresseur-on-off-episode-9_8287910.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T13:43:48Z",
+      "title": "Marine Le Pen dénonce à nouveau ce qu'elle voit comme des \"dérives financières et éthiques des associations politisées\"",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/marine-le-pen-denonce-a-nouveau-ce-qu-elle-juge-comme-des-derives-financieres-et-ethiques-des-associations-politisees_8288303.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T13:33:04Z",
+      "title": "\"Réformes radicales\" évoquées par Édouard Philippe: \"Il faut rompre avec cette dérive des dépenses publiques\", affirme Jérémie Patrier-Leitus, porte-parole du candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-reformes-radicales-evoquees-par-edouard-philippe-il-faut-rompre-avec-cette-derive-des-depenses-publiques-affirme-jeremie-patrier-leitus-porte-parole-du-candidat-a-la-presidentielle_VN-202611180619.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Qualifiée de « ramassis de gauchistes » par Marine Le Pen, la Ligue des droits de l’Homme contre-attaque",
+      "url": "https://www.leparisien.fr/elections/presidentielle/qualifiee-de-ramassis-de-gauchistes-par-marine-le-pen-la-ligue-des-droits-de-lhomme-contre-attaque-18-11-2026-JXATYHHXDBEHRNRJXRKXYZLAUA.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-18T13:44:34Z",
+      "title": "Présidentielle 2027 : Édouard Philippe dévoile un programme « radical » pour relancer sa campagne",
+      "url": "https://www.20minutes.fr/politique/4263848-20261118-presidentielle-2027-edouard-philippe-devoile-programme-radical-relancer-campagne"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-18T13:56:19Z",
+      "title": "Pour se relancer, Édouard Philippe promet de \"rétablir l'ordre\" dans \"nos comptes\" et \"nos rues\"",
+      "url": "https://www.france24.com/fr/france/20261118-france-presidentielle-2027-pour-relancer-campagne-edouard-philippe-promet-retablir-ordre-comptes-rues"
+    }
+  ],
+  "schema_version": "1.0"
+}
