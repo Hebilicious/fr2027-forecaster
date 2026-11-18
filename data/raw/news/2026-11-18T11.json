@@ -1,0 +1,250 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 18,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T11:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-18T11:07:07Z",
+      "title": "Dîner de Jean-Luc Mélenchon avec les grands patrons : Sonia Mabrouk ironise sur la base d’une fausse information et agace LFI",
+      "url": "https://www.liberation.fr/politique/diner-de-jean-luc-melenchon-avec-les-grands-patrons-sonia-mabrouk-ironise-sur-la-base-dune-fausse-information-et-agace-lfi-20261118_R5MJ5SMWZZGOBMKENC6MLDV6FE/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-18T11:01:41Z",
+      "title": "Primaire à droite : Lisnard sème la zizanie dans le bel accord vendu par Retailleau et Attal",
+      "url": "https://www.liberation.fr/politique/primaire-a-droite-lisnard-seme-la-zizanie-dans-le-bel-accord-vendu-par-retailleau-et-attal-20261118_EN2GQOPZMZEAJJLIHQ3DQ6TVZ4/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-18T10:27:37Z",
+      "title": "Présidentielle : Darmanin prédit la victoire de Mélenchon en cas de second tour face à Le Pen",
+      "url": "https://www.liberation.fr/politique/presidentielle-darmanin-predit-la-victoire-de-melenchon-en-cas-de-second-tour-face-a-le-pen-20261118_IJQIHTAPPBHZFFWQDCAXM5CV4I/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T11:06:11Z",
+      "title": "Édouard Philippe, candidat Horizons à l’élection présidentielle, dénonce “l’espèce de fascination malsaine de Monsieur Mélenchon et de Madame Le Pen pour Monsieur Poutine”",
+      "url": "https://www.bfmtv.com/politique/horizons/video-edouard-philippe-candidat-horizons-a-l-election-presidentielle-denonce-l-espece-de-fascination-malsaine-de-monsieur-melenchon-et-de-madame-le-pen-pour-monsieur-poutine_VN-202611180531.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T11:02:57Z",
+      "title": "“Nous devons assumer une politique favorable aux entreprises et aux entrepreneurs”, argumente Édouard Philippe, candidat Horizons à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/horizons/video-nous-devons-assumer-une-politique-favorable-aux-entreprises-et-aux-entrepreneurs-argumente-edouard-philippe-candidat-horizons-a-l-election-presidentielle_VN-202611180529.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T11:00:49Z",
+      "title": "Selon Édouard Philippe, candidat Horizons à l’élection présidentielle, “l’école doit être et redevenir le coeur de notre intégration républicaine”",
+      "url": "https://www.bfmtv.com/politique/horizons/video-selon-edouard-philippe-candidat-horizons-a-l-election-presidentielle-l-ecole-doit-etre-et-redevenir-le-coeur-de-notre-integration-republicaine_VN-202611180525.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T10:58:48Z",
+      "title": "Guerre en Ukraine: Édouard Philippe dénonce la \"fascination malsaine\" de Jean-Luc Mélenchon et Marine Le Pen pour Vladimir Poutine",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/guerre-en-ukraine-edouard-philippe-denonce-la-fascination-malsaine-de-jean-luc-melenchon-et-marine-le-pen-pour-vladimir-poutine_AD-202611180518.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T10:56:20Z",
+      "title": "Édouard Philippe, candidat Horizons à l’élection présidentielle, souhaite “remettre de l’ordre dans nos rues et à nos frontières”",
+      "url": "https://www.bfmtv.com/politique/horizons/video-edouard-philippe-candidat-horizons-a-l-election-presidentielle-souhaite-remettre-de-l-ordre-dans-nos-rues-et-a-nos-frontieres_VN-202611180517.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T10:55:33Z",
+      "title": "Présidentielle 2027: un nouveau sondage confirme l'ancrage de Jean-Luc Mélenchon face à Marine Le Pen, David Lisnard en dynamique",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-un-nouveau-sondage-confirme-l-ancrage-de-jean-luc-melenchon-face-a-marine-le-pen-david-lisnard-en-dynamique_AV-202611180516.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T10:47:14Z",
+      "title": "Budget: “Si nous ne prenons pas en 2027 les mesures nécessaires pour rétablir l’ordre dans nos comptes, nous allons vivre je le crains une catastrophe”, estime Édouard Philippe, candidat Horizons à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/horizons/video-budget-si-nous-ne-prenons-pas-en-2027-les-mesures-necessaires-pour-retablir-l-ordre-dans-nos-comptes-nous-allons-vivre-je-le-crains-une-catastrophe-estime-edouard-philippe-candidat-horizons-a-l-election-presidentielle_VN-202611180512.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T10:41:18Z",
+      "title": "Présidentielle 2027: Édouard Philippe plaide pour une \"rupture avec ce qui a été fait ces dernières années\" et appelle à \"oser des réformes radicales\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-edouard-philippe-plaide-pour-une-rupture-avec-ce-qui-a-ete-fait-ces-dernieres-annees-et-appelle-a-oser-des-reformes-radicales_AD-202611180504.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T10:37:22Z",
+      "title": "“Nous devons refonder notre justice qui est devenue le maillon faible de notre État”, explique Édouard Philippe, candidat Horizons à l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/horizons/video-nous-devons-refonder-notre-justice-qui-est-devenue-le-maillon-faible-de-notre-etat-explique-edouard-philippe-candidat-horizons-a-l-election-presidentielle_VN-202611180502.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T10:25:50Z",
+      "title": "Édouard Philippe, candidat Horizons à l’élection présidentielle, souhaite “la réforme des retraites la plus ambitieuse du 21e siècle” et \"revenir sur les 35h\"",
+      "url": "https://www.bfmtv.com/politique/horizons/video-edouard-philippe-candidat-horizons-a-l-election-presidentielle-souhaite-la-reforme-des-retraites-la-plus-ambitieuse-du-21e-siecle-et-revenir-sur-les-35h_VN-202611180489.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T10:24:02Z",
+      "title": "Édouard Philippe, candidat Horizons à l’élection présidentielle, explique vouloir “oser des réformes radicales en rupture avec ce qui a été fait ces dernières années”",
+      "url": "https://www.bfmtv.com/politique/horizons/video-edouard-philippe-candidat-horizons-a-l-election-presidentielle-explique-vouloir-oser-des-reformes-radicales-en-rupture-avec-ce-qui-a-ete-fait-ces-dernieres-annees_VN-202611180488.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : une participante au dîner de Jean-Luc Mélenchon avec des patrons du CAC 40 évoque « une ambiance de dialogue »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-une-participante-au-diner-de-jean-luc-melenchon-avec-des-patrons-du-cac-40-evoque-une-ambiance-de-dialogue-18-11-2026-2CWGSXVZFNALNNVQS26PU25E7U.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Insupportable » : Maria Carolina de Bourbon des Deux-Siciles, en couple avec Jordan Bardella, réagit à l’affaire Anne-Cécile Mailfert",
+      "url": "https://www.leparisien.fr/politique/insupportable-maria-carolina-de-bourbon-des-deux-siciles-en-couple-avec-jordan-bardella-reagit-a-laffaire-anne-cecile-mailfert-18-11-2026-4DI2M2DFP5AOLHYNYRJ5RKIQBI.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« On doit lui donner sa chance » : lancé dans la course aux parrainages, Teddy Riner se rendra au congrès des maires",
+      "url": "https://www.leparisien.fr/elections/presidentielle/on-doit-lui-donner-sa-chance-lance-dans-la-course-aux-parrainages-teddy-riner-se-rendra-au-congres-des-maires-18-11-2026-5KOM42SORFCI5LJWAVC6XFI2WE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
