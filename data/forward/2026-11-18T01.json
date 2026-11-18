@@ -1,0 +1,27 @@
+{
+  "detected_at": "2026-11-18T01:18:22Z",
+  "flags": [
+    {
+      "candidate_id": "asselineau",
+      "date": "2026-11-18",
+      "detail": "support 0.71 [0.64, 0.77] in the drop to 2026-11-17T00:00:00Z → 0.52 [0.45, 0.60] in the drop to 2026-11-18T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.1869
+    },
+    {
+      "candidate_id": "bardella",
+      "date": "2026-11-18",
+      "detail": "support 0.16 [0.11, 0.21] in the drop to 2026-11-17T00:00:00Z → 0.32 [0.26, 0.39] in the drop to 2026-11-18T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.1658
+    },
+    {
+      "candidate_id": "philippe",
+      "date": "2026-11-18",
+      "detail": "support 0.10 [0.07, 0.16] in the drop to 2026-11-17T00:00:00Z → 0.02 [0.01, 0.06] in the drop to 2026-11-18T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.0837
+    }
+  ],
+  "schema_version": "1.0"
+}
