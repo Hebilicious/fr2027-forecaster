@@ -1,0 +1,146 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T23:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-18T22:19:42Z",
+      "title": "Présidentielle 2027 : Marine Tondelier se dit «prête» à travailler à une «coalition autour de la candidature» de Jean-Luc Mélenchon",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-marine-tondelier-se-dit-prete-a-travailler-a-une-coalition-autour-de-la-candidature-de-jean-luc-melenchon-20261118"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T22:34:29Z",
+      "title": "Journal de campagne : la bataille de l'Élysée",
+      "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/journal-de-campagne-la-bataille-de-l-elysee_8289041.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T22:12:58Z",
+      "title": "\"Je veux qu'on alerte sur les 10 ans d'inaction climatique des deux quinquennats Macron\", lance Marine Tondelier, candidate Les Écologistes à l'élection présidentielle",
+      "url": "https://www.franceinfo.fr/elections/je-veux-qu-on-alerte-sur-les-10-ans-d-inaction-climatique-des-deux-quinquennats-macron-lance-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_8289020.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T21:30:14Z",
+      "title": "\"C'est une bonne nouvelle qui renforce la possibilité d'une victoire populaire\", réagit Manuel Bompard après la main tendue de Marine Tondelier à La France insoumise",
+      "url": "https://www.franceinfo.fr/elections/c-est-une-bonne-nouvelle-qui-renforce-la-possibilite-d-une-victoire-populaire-reagit-manuel-bompard-apres-la-main-tendue-de-marine-tondelier-a-la-france-insoumise_8288990.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "guedj"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T22:22:56Z",
+      "title": "Maintien de l'ordre: \"La police et la justice sont deux services publics en crise aujourd'hui\", souligne Jérôme Guedj, député \"Parti Socialiste\" de l'Essonne et porte-parole de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-maintien-de-l-ordre-la-police-et-la-justice-sont-deux-services-publics-en-crise-aujourd-hui-souligne-jerome-guedj-depute-parti-socialiste-de-l-essonne-et-porte-parole-de-raphael-glucksmann_VN-202611181027.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-18T22:39:24Z",
+      "title": "Présidentielle : Marine Tondelier \"prête à travailler à une coalition\" autour de Jean-Luc Mélenchon",
+      "url": "https://www.france24.com/fr/france/20261118-presidentielle-2027-election-marine-tondelier-ecologistes-prete-travailler-coalition-autour-jean-luc-melenchon-la-france-insoumise-soutien"
+    }
+  ],
+  "schema_version": "1.0"
+}
