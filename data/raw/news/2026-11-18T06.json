@@ -1,0 +1,157 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T06:18:08Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-18T05:12:00Z",
+      "title": "Réforme des retraites du RN : le trio Retailleau-Philippe-Attal tente la parade contre Le Pen",
+      "url": "https://www.liberation.fr/politique/reforme-des-retraites-du-rn-le-trio-retailleau-philippe-attal-tente-la-parade-contre-le-pen-20261118_MBVYLMPZB5EFPLH6PEC36KCHWE/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T05:39:25Z",
+      "title": "A suivre Alban Mikoczy : dîner Mélenchon/patrons, la soupe à la grimace ?",
+      "url": "https://www.franceinfo.fr/politique/melenchon/a-suivre-alban-mikoczy-diner-melenchon-patrons-la-soupe-a-la-grimace_8287691.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T06:07:06Z",
+      "title": "DIRECT. Présidentielle 2027: Michel Barnier annonce un \"accord\" pour une primaire de la droite et du centre \"fin janvier\", David Lisnard réfute",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/direct-presidentielle-2027-michel-barnier-annonce-un-accord-pour-une-primaire-de-la-droite-et-du-centre-fin-janvier-le-maire-de-cannes-refute_LN-202611180177.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T05:23:07Z",
+      "title": "Vers une primaire à droite en janvier: les infos de BFMTV",
+      "url": "https://www.bfmtv.com/politique/video-vers-une-primaire-a-droite-en-janvier-les-infos-de-bfmtv_VN-202611180143.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Le préfet se croit au Second Empire » : Mélenchon vole au secours d’une élue LFI après une polémique sur son écharpe de conseillère régionale",
+      "url": "https://www.leparisien.fr/oise-60/le-prefet-se-croit-au-second-empire-melenchon-vole-au-secours-dune-elue-lfi-apres-une-polemique-sur-son-echarpe-de-conseillere-regionale-18-11-2026-YQ5K5CLBWNDNLPYSN5Z4XVXW3A.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-18T04:52:34Z",
+      "title": "EN DIRECT Présidentielle 2027 : Darmanin appelle Retailleau et Attal à se désister pour Philippe…",
+      "url": "https://www.20minutes.fr/politique/4263714-20261118-direct-presidentielle-2027-darmanin-appelle-retailleau-attal-desister-philippe"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-18T05:32:37Z",
+      "title": "Présidentielle 2027 : Le smic français « plus élevé que celui de nos voisins », comme l’affirme Gabriel Attal ?",
+      "url": "https://www.20minutes.fr/politique/4263541-20261118-presidentielle-2027-smic-francais-plus-eleve-celui-voisins-comme-affirme-gabriel-attal"
+    }
+  ],
+  "schema_version": "1.0"
+}
