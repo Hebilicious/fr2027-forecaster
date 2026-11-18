@@ -1,0 +1,138 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 18,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T10:18:31Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-18T10:12:37Z",
+      "title": "De LFI à LR en passant par le Medef, le projet de réforme des retraites de Marine Le Pen critiqué de tous bords",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/18/de-lfi-a-lr-en-passant-par-le-medef-le-projet-de-reforme-des-retraites-de-marine-le-pen-critique-de-tous-bords_6813010_823449.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-18T10:11:26Z",
+      "title": "Après un début de campagne brouillon, le camp Glucksmann veut se mettre au propre",
+      "url": "https://www.liberation.fr/politique/apres-un-debut-de-campagne-brouillon-le-camp-glucksmann-veut-se-mettre-au-propre-20261118_RRBWQLM23NBIHMYM7MFM2TP5GE/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T09:31:08Z",
+      "title": "Jérémie Patrier-Leitus (Horizons): \"Jamais Édouard Philippe ne participera à une primaire. Encore moins à une primaire avec Éric Zemmour\"",
+      "url": "https://www.bfmtv.com/politique/horizons/video-jeremie-patrier-leitus-horizons-jamais-edouard-philippe-ne-participera-a-une-primaire-encore-moins-a-une-primaire-avec-eric-zemmour_VN-202611180455.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "DIRECT. Présidentielle 2027 : le candidat Horizons Édouard Philippe tient une conférence de presse pour présenter son projet «à date»",
+      "url": "https://www.leparisien.fr/elections/presidentielle/direct-presidentielle-2027-le-candidat-horizons-edouard-philippe-tient-une-conference-de-presse-pour-presenter-son-projet-a-date-18-11-2026-ZHSMYT5MJJDWVJL73O4TGJAIJY.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Lisnard menace Philippe, le duel Le Pen-Mélenchon se précise selon un nouveau sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-lisnard-menace-philippe-le-duel-le-pen-melenchon-se-precise-selon-un-nouveau-sondage-18-11-2026-MWGZ7HRDYRGHXJ67BKI2L3QKCU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
