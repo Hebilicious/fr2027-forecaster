@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T16:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "zemmour"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-18T15:35:05Z",
+      "title": "GTA VI : Bardella, Ciotti, Zemmour… Entre attente et détournement, les politiques aussi guettent la sortie du jeu vidéo",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/gta-vi-bardella-ciotti-zemmour-entre-attente-et-detournement-les-politiques-aussi-guettent-la-sortie-du-jeu-video-20261118"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T15:50:00Z",
+      "title": "SONDAGE BFMTV. Présidentielle: le pouvoir d’achat, priorité d’action n°1 adressée au prochain président de la République, pour près de 6 Français sur 10",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/sondage-bfmtv-presidentielle-le-pouvoir-d-achat-priorite-d-action-n-1-adressee-au-prochain-president-de-la-republique-pour-pres-de-6-francais-sur-10_AN-202611180720.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : pour réduire la dette, le candidat David Lisnard vise « 400 000 fonctionnaires en moins »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-pour-reduire-la-dette-le-candidat-david-lisnard-vise-400-000-fonctionnaires-en-moins-18-11-2026-N46FW57A7NBHVGKQSEDFQLGNZM.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-18T15:22:46Z",
+      "title": "Guerre en Ukraine : « Incarnation vivante de l’esprit de défaite », « porte-parole du Kremlin »… la lourde charge de Jean-Noël Barrot contre Marine Le Pen et Jean-Luc Mélenchon",
+      "url": "https://www.publicsenat.fr/actualites/politique/guerre-en-ukraine-incarnation-vivante-de-lesprit-de-defaite-porte-parole-du-kremlin-la-lourde-charge-de-jean-noel-barrot-contr"
+    }
+  ],
+  "schema_version": "1.0"
+}
