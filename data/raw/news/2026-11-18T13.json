@@ -1,0 +1,139 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T13:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-18T12:51:53Z",
+      "title": "Présidentielle 2027 : Edouard Philippe estime que la droite et le centre n’ont « aucune chance » de gagner l’élection s’ils ne sont pas rassemblés",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/18/presidentielle-2027-edouard-philippe-estime-que-la-droite-et-le-centre-n-ont-aucune-chance-de-gagner-l-election-s-ils-ne-sont-pas-rassembles_6813130_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T12:20:36Z",
+      "title": "Édouard Philippe dénonce la \"fascination malsaine\" de Jean-Luc Mélenchon et Marine Le Pen pour Vladimir Poutine",
+      "url": "https://www.bfmtv.com/politique/horizons/video-edouard-philippe-denonce-la-fascination-malsaine-de-jean-luc-melenchon-et-marine-le-pen-pour-vladimir-poutine_VN-202611180586.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Fin des 35 heures, hausse du salaire des profs, service national obligatoire… Ce qu’il faut retenir des annonces du programme d’Édouard Philippe",
+      "url": "https://www.leparisien.fr/politique/fin-des-35-heures-hausse-du-salaire-des-profs-service-national-obligatoire-ce-quil-faut-retenir-des-annonces-du-programme-dedouard-philippe-18-11-2026-7AKLRD5N65HETL5FMPXVZ274UI.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "melenchon",
+        "philippe",
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-18T12:34:45Z",
+      "title": "Présidentielle 2027 : Mélenchon creuse l’écart avec Philippe et Riner à 4 % dans un nouveau sondage",
+      "url": "https://www.20minutes.fr/politique/4263839-20261118-presidentielle-2027-melenchon-creuse-ecart-philippe-riner-4-nouveau-sondage"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-18T13:16:42Z",
+      "title": "Édouard Philippe \"financé par McKinsey\" ? Un média sénégalais reprend une intox russe",
+      "url": "https://www.france24.com/fr/france/20261118-%C3%A9douard-philippe-financ%C3%A9-mckinsey-m%C3%A9dia-s%C3%A9n%C3%A9galais-reprend-intox-russe"
+    }
+  ],
+  "schema_version": "1.0"
+}
