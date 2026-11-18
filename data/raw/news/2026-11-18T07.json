@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T07:18:29Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-18T06:51:22Z",
+      "title": "Présidentielle 2027 : sans attendre Edouard Philippe, ses adversaires posent la première pierre d’une primaire de la droite et du centre incertaine",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/18/presidentielle-2027-sans-attendre-edouard-philippe-ses-adversaires-posent-la-premiere-pierre-d-une-primaire-de-la-droite-et-du-centre-incertaine_6813083_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-18T06:43:07Z",
+      "title": "Présidentielle : Attal, Lisnard et Retailleau esquissent les règles d’une possible primaire en janvier",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-attal-lisnard-et-retailleau-esquissent-les-regles-dune-possible-primaire-en-janvier-20261118_7BYZCXNAMFBNJHEDWPAA6RBIOU/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T07:01:23Z",
+      "title": "EDITO. La primaire Koh-Lanta à droite et au centre : David Lisnard, Gabriel Attal et Bruno Retailleau face à l'épreuve des poteaux",
+      "url": "https://www.franceinfo.fr/replay-radio/l-edito-politique/edito-la-primaire-koh-lanta-a-droite-et-au-centre-les-candidats-face-a-l-epreuve-des-poteaux_8266721.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T06:18:17Z",
+      "title": "L'ÉDITO POLITIQUE DE GUILLAUME DARET - Réforme des retraites: Marine Le Pen joue sa crédibilité",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-edito-politique-de-guillaume-daret-reforme-des-retraites-marine-le-pen-joue-sa-credibilite_VN-202611180204.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« On doit lui mettre la pression » : David Lisnard juge « indispensable » la participation d’Édouard Philippe à une primaire de la droite pour 2027",
+      "url": "https://www.leparisien.fr/elections/presidentielle/on-doit-lui-mettre-la-pression-david-lisnard-juge-indispensable-la-participation-dedouard-philippe-a-une-primaire-de-la-droite-18-11-2026-UEGDIS2XCBDJHIMCWHUJW5GASQ.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-18T07:12:17Z",
+      "title": "Présidentielle 2027 : Fin janvier, 2 euros… Un accord de principe sans Philippe pour la primaire du bloc central",
+      "url": "https://www.20minutes.fr/politique/4263719-20261118-presidentielle-2027-fin-janvier-2-euros-accord-principe-philippe-primaire-bloc-central"
+    }
+  ],
+  "schema_version": "1.0"
+}
