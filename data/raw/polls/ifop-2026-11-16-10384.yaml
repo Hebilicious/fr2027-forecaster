@@ -1,0 +1,121 @@
+schema_version: "1.0"
+poll_id: ifop-2026-11-16-10384
+firm: ifop
+sponsor: TF1-LCI / Le Figaro / Sud Radio / Fiducial
+field_start: "2026-11-13"
+field_end: "2026-11-16"
+published_at: "2026-11-18"
+sample_size: 1823
+method: online
+population: registered
+source_url: >-
+  https://www.ifopgroup.com/wp-content/uploads/2026/11/122919-petit-dejeuner-electoral-intentions-de-vote-et-determinants-du-vote.pdf
+notice_url: null
+index_url: null
+retrieved_at: "2026-11-18T20:41:05Z"
+entry: primary
+notes: >-
+  Ifop Petit dejeuner electoral for TF1-LCI, Le Figaro, Sud Radio and Fiducial;
+  1,690 registered voters drawn from 1,823 adults, online 13-16 November; shares of
+  expressed votes as published. Arthaud is printed as '-' in S1 and S3 and entered
+  as 0. Entered from Ifop's own results report (Commission notice 10384 is listed
+  18 November; the notice PDF was not retrieved).
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-18T20:33Z
+  skill_version: polls-2
+scenarios:
+- label: Extended field with Riner, Villepin and Polony
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0
+    attal: 4.5
+    dupont_aignan: 1.5
+    glucksmann: 8
+    le_pen: 32
+    lisnard: 8
+    melenchon: 17
+    philippe: 10
+    polony: 1
+    retailleau: 4
+    riner: 4
+    roussel: 1.5
+    ruffin: 2
+    tondelier: 2
+    villepin: 1.5
+    zemmour: 3
+- label: Attal+Philippe+Retailleau+Lisnard
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 0.5
+    attal: 4
+    dupont_aignan: 1.5
+    glucksmann: 10
+    le_pen: 34
+    lisnard: 9
+    melenchon: 19
+    philippe: 11
+    retailleau: 4
+    roussel: 1.5
+    tondelier: 2.5
+    zemmour: 3
+- label: Philippe, Retailleau+Lisnard
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 0
+    dupont_aignan: 1.5
+    glucksmann: 10
+    le_pen: 35
+    lisnard: 10
+    melenchon: 19.5
+    philippe: 12
+    retailleau: 4
+    roussel: 2.5
+    tondelier: 2.5
+    zemmour: 3
+- label: Attal, Retailleau+Lisnard
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 0.5
+    attal: 9
+    dupont_aignan: 2
+    glucksmann: 11
+    le_pen: 35
+    lisnard: 11
+    melenchon: 19
+    retailleau: 5
+    roussel: 2
+    tondelier: 2.5
+    zemmour: 3
+- label: Philippe and Lisnard
+  round: 1
+  scenario_id: S5
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 1.5
+    glucksmann: 11
+    le_pen: 34
+    lisnard: 12
+    melenchon: 19.5
+    philippe: 14
+    roussel: 2
+    tondelier: 2.5
+    zemmour: 3
+- label: Philippe and Retailleau
+  round: 1
+  scenario_id: S6
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 2
+    glucksmann: 11.5
+    le_pen: 36
+    melenchon: 19
+    philippe: 15
+    retailleau: 7
+    roussel: 2.5
+    tondelier: 3
+    zemmour: 3.5
