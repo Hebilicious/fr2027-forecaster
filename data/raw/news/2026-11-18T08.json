@@ -1,0 +1,150 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T08:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-18T08:12:24Z",
+      "title": "Présidentielle 2027 : à Villeurbanne, Raphaël Glucksmann ancre sa campagne à gauche face à l’extrême droite",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/18/presidentielle-2027-a-villeurbanne-raphael-glucksmann-ancre-sa-campagne-a-gauche-face-a-l-extreme-droite_6813091_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T08:05:17Z",
+      "title": "\"L'heure de vérité\". Avec Gabriel Attal",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/l-heure-de-verite/l-heure-de-verite-avec-gabriel-attal_8284823.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T07:22:06Z",
+      "title": "VRAI OU FAUX. Est-il possible d'arrêter de subventionner des associations parce qu'elles sont \"politisées\", comme le souhaite Marine Le Pen ?",
+      "url": "https://www.franceinfo.fr/replay-radio/le-vrai-du-faux/vrai-ou-faux-est-il-possible-d-arreter-de-subventionner-des-associations-parce-qu-elles-sont-politisees-comme-le-souhaite-marine-le-pen_8266754.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T08:02:51Z",
+      "title": "\"Marine Le Pen ne va pas abandonner l'Ukraine\", estime Jean-Philippe Tanguy (RN)",
+      "url": "https://www.bfmtv.com/politique/video-marine-le-pen-ne-va-pas-abandonner-l-ukraine-estime-jean-philippe-tanguy-rn_VN-202611180378.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T07:55:20Z",
+      "title": "Gérald Darmanin estime que Jean-Luc Mélenchon “gagnera” face à Marine Le Pen en cas de duel au second tour de l’élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/gerald-darmanin-estime-que-jean-luc-melenchon-gagnera-face-a-marine-le-pen-en-cas-de-duel-au-second-tour-de-l-election-presidentielle_AD-202611180359.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T07:43:49Z",
+      "title": "Présidentielle 2027: David Lisnard \"incapable\" de dire si la primaire de la droite et du centre \"aura lieu ou pas\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-david-lisnard-incapable-de-dire-si-la-primaire-de-la-droite-et-du-centre-aura-lieu-ou-pas_AP-202611180339.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T07:25:08Z",
+      "title": "Ce que Jean-Luc Mélenchon et les grands patrons se sont dit",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-ce-que-jean-luc-melenchon-et-les-grands-patrons-se-sont-dit_VN-202611180298.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
