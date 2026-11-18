@@ -1,0 +1,145 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T09:18:29Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-18T08:45:01Z",
+      "title": "Jean-Luc Mélenchon et l’Ukraine : ce que disent les votes de LFI au Parlement européen",
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/11/18/jean-luc-melenchon-et-l-ukraine-ce-que-disent-les-votes-de-la-france-insoumise-au-parlement-europeen_6813096_4355770.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-18T08:51:18Z",
+      "title": "Présidentielle 2027 : face à Marine Le Pen, Jean-Luc Mélenchon gagnera l’élection, assure Darmanin",
+      "url": "https://www.lefigaro.fr/politique/presidentielle-2027-face-a-marine-le-pen-jean-luc-melenchon-gagnera-l-election-assure-darmanin-20261118"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T08:34:00Z",
+      "title": "La réforme des retraites de Marine Le Pen décryptée : un départ à 60 ans mais à quelles conditions et à quel prix ?",
+      "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/la-reforme-des-retraites-de-marine-le-pen-decryptee-un-depart-a-60-ans-mais-a-quelles-conditions-et-a-quel-prix_8266760.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T08:36:13Z",
+      "title": "Présidentielle 2027: Jean-Philippe Tanguy \"propose\" un débat à David Lisnard notamment sur les retraites",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-jean-philippe-tanguy-propose-un-debat-a-david-lisnard-notamment-sur-les-retraites_AV-202611180405.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T08:29:11Z",
+      "title": "\"La plupart partiront entre 60 et 62 ans\": Jean-Philippe Tanguy sur la réforme des retraites du RN",
+      "url": "https://www.bfmtv.com/politique/video-la-plupart-partiront-entre-60-et-62-ans-jean-philippe-tanguy-sur-la-reforme-des-retraites-du-rn_VN-202611180408.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-18T09:10:41Z",
+      "title": "Présidentielle 2027 : « Patriotisme », « fous »… Ce qui filtre du dîner de Mélenchon avec les grands patrons",
+      "url": "https://www.20minutes.fr/politique/4263742-20261118-presidentielle-2027-patriotisme-fous-filtre-diner-melenchon-grands-patrons"
+    }
+  ],
+  "schema_version": "1.0"
+}
