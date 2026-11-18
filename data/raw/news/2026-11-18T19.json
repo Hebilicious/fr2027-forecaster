@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T19:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-18T18:30:00Z",
+      "title": "Présidentielle 2027 : le processus d’une primaire s’enclenche dans la cacophonie en maintenant la pression sur Édouard Philippe",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-le-processus-d-une-primaire-s-enclenche-dans-la-cacophonie-en-maintenant-la-pression-sur-edouard-philippe-20261118"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T19:06:33Z",
+      "title": "Réforme des retraites du RN : \"On ferait payer plus les plus vulnérables\", estime la députée EPR Violette Spillebout",
+      "url": "https://www.franceinfo.fr/politique/reforme-des-retraites-du-rn-on-ferait-payer-plus-les-plus-vulnerables-estime-la-deputee-epr-violette-spillebout_8288867.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T18:45:37Z",
+      "title": "Présidentielle: Prisca Thevenot veut faire en sorte qu'un second tour Marine Le Pen/Jean-Luc Mélenchon \"n'arrive pas\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-prisca-thevenot-veut-faire-en-sorte-qu-un-second-tour-marine-le-pen-jean-luc-melenchon-n-arrive-pas_VN-202611180889.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
