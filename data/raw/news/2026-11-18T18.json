@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T18:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-18T17:47:39Z",
+      "title": "«Ni sexisme, ni politique, ni impérialisme, simple application de la loi» : passe d’armes entre LFI et la préfecture de l’Oise autour d’une écharpe tricolore",
+      "url": "https://www.lefigaro.fr/politique/passe-d-armes-entre-lfi-et-la-prefecture-de-l-oise-autour-du-port-d-une-echarpe-tricolore-20261118"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-18T17:47:43Z",
+      "title": "Présidentielle 2027 : Lisnard et Attal se démarquent dans une hypothétique primaire… Découvrez le sondage du Figaro",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/sondages/presidentielle-2027-lisnard-et-attal-se-demarquent-dans-une-hypothetique-primaire-decouvrez-le-sondage-du-figaro-20261118"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-18T17:51:48Z",
+      "title": "«C’était courtois, ils se sont bien marrés et c’était intéressant» : récit du dîner entre Jean-Luc Mélenchon et les grands patrons",
+      "url": "https://www.liberation.fr/politique/cetait-courtois-ils-se-sont-bien-marres-et-cetait-interessant-recit-du-diner-entre-jean-luc-melenchon-et-les-grands-patrons-20261118_DV4MCKQXPFB3ZLNZGPC4MJ3QUU/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T17:32:57Z",
+      "title": "Présidentielle: Béatrice Bellay, députée PS, explique pourquoi elle ne parrainera finalement pas Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-beatrice-bellay-deputee-ps-explique-pourquoi-elle-ne-parrainera-finalement-pas-teddy-riner_VN-202611180822.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Lisnard et Retailleau appellent Philippe à rejoindre la primaire… mais se divisent sur la participation de Zemmour",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-lisnard-et-retailleau-appellent-philippe-a-rejoindre-la-primaire-mais-se-divisent-sur-la-participation-de-zemmour-18-11-2026-NO2GIAO6JRHOTI6EPADRIFVSWQ.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : la championne olympique de boxe Estelle Mossely intègre l’équipe de campagne d’Édouard Philippe",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-la-championne-olympique-de-boxe-estelle-mossely-integre-lequipe-de-campagne-dedouard-philippe-18-11-2026-WHMORPOP2JHKVOYCSQPGBN242I.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-18T17:16:56Z",
+      "title": "Capitalisation, suppression de 250.000 postes de fonctionnaires, autonomie des écoles, fin des 35 heures, aides pour les familles : Edouard Philippe présente son projet « massif et sérieux »",
+      "url": "https://www.publicsenat.fr/actualites/politique/capitalisation-suppression-de-250-000-postes-de-fonctionnaires-autonomie-des-ecoles-fin-des-35-heures-aides-pour-les-familles-edouard-philippe-presente-son-projet-massif-et"
+    }
+  ],
+  "schema_version": "1.0"
+}
