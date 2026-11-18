@@ -1,0 +1,175 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-18T12:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-18T11:46:08Z",
+      "title": "Présidentielle 2027 : Edouard Philippe présente une partie de son programme pour « rétablir l’ordre et remettre la France sur le chemin du progrès »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/18/presidentielle-2027-edouard-philippe-presente-une-partie-de-son-programme-pour-retablir-l-ordre-et-remettre-la-france-sur-le-chemin-du-progres_6813122_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-18T11:13:24Z",
+      "title": "Le Medef pas convaincu par le projet de réforme des retraites de Marine Le Pen",
+      "url": "https://www.liberation.fr/economie/social/le-medef-pas-convaincu-par-le-projet-de-reforme-des-retraites-de-marine-le-pen-20261118_ZSMW73X5SZGKLMNVR7ZTZBTJBA/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T11:48:45Z",
+      "title": "ÉDITO. Présidentielle 2027 : Gabriel Attal, Bruno Retailleau et David Lisnard se préparent à l'épreuve des poteaux",
+      "url": "https://www.franceinfo.fr/elections/edito-presidentielle-2027-gabriel-attal-bruno-retailleau-et-david-lisnard-se-preparent-a-l-epreuve-des-poteaux_8288219.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T11:44:49Z",
+      "title": "\"Vous allez voir qu'il est de gauche !\" : un mois après la primaire, Raphaël Glucksmann veut donner des gages à son camp",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/vous-allez-voir-qu-il-est-de-gauche-un-mois-apres-la-primaire-raphael-glucksmann-veut-donner-des-gages-a-son-camp_8288081.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-18T11:51:52Z",
+      "title": "Priorité donnée à l'école, rétablissement des comptes publics… Edouard Philippe développe plusieurs mesures de son programme présidentiel",
+      "url": "https://www.franceinfo.fr/politique/edouard-philippe/priorite-donnee-a-l-ecole-retablissement-des-comptes-publics-edouard-philippe-met-en-lumiere-plusieurs-mesures-de-son-programme-presidentiel_8287970.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T12:04:34Z",
+      "title": "Deux euros, des dates en janvier, une charte des valeurs.... Ce qui est envisagé pour la primaire de la droite et du bloc central",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/deux-euros-des-dates-en-janvier-une-charte-des-valeurs-ce-qui-est-envisage-pour-la-primaire-de-la-droite-et-du-bloc-central_AN-202611180580.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T11:22:23Z",
+      "title": "\"Rompre avec 50 années de laxisme budgétaire\": Édouard Philippe présente son programme",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-rompre-avec-50-annees-de-laxisme-budgetaire-edouard-philippe-presente-son-programme_VN-202611180545.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-18T11:20:33Z",
+      "title": "Primaire de la droite et du centre: \"Un exercice qui conduirait nécessairement à diviser et à insister sur les différences\", estime Édouard Philippe, candidat Horizons à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-de-la-droite-et-du-centre-un-exercice-qui-conduirait-necessairement-a-diviser-et-a-insister-sur-les-differences-estime-edouard-philippe-candidat-horizons-a-l-election-presidentielle_VN-202611180542.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "retailleau",
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Teddy Riner au coude-à-coude avec Gabriel Attal et Bruno Retailleau, selon un sondage",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-teddy-riner-au-coude-a-coude-avec-gabriel-attal-et-bruno-retailleau-selon-un-sondage-18-11-2026-33AYY5RFYJD25DBAPXKUJU3JCY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
