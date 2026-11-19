@@ -1,0 +1,216 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T22:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-19T20:58:23Z",
+      "title": "Présidentielle 2027 : l’alliance avec Marine Tondelier «devrait pouvoir se faire», estime Mélenchon",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-lalliance-avec-marine-tondelier-devrait-pouvoir-se-faire-estime-melenchon-20261119_ER7TVKBPSZAYRLDDPPJDN2O52U/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T21:13:32Z",
+      "title": "Marine Tondelier divise la gauche après sa déclaration sur Jean-Luc Mélenchon : l'Insoumis peut-il modifier son programme pour une alliance avec les Écologistes ?",
+      "url": "https://www.franceinfo.fr/politique/marine-tondelier/marine-tondelier-divise-la-gauche-apres-sa-declaration-sur-jean-luc-melenchon-l-insoumis-peut-il-modifier-son-programme-pour-une-alliance-avec-les-ecologistes_8290712.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T22:07:55Z",
+      "title": "Sur BFMTV, Yannick Jadot annonce \"quitter le mouvement\" des Écologistes",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-sur-bfmtv-yannick-jadot-annonce-quitter-le-mouvement-des-ecologistes_VN-202611191067.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T22:06:28Z",
+      "title": "Sur BFMTV, Yannick Jadot annonce \"quitter le mouvement\" des Écologistes",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-sur-bfmtv-yannick-jadot-annonce-quitter-le-mouvement-des-ecologistes_VN-202611191072.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T21:49:55Z",
+      "title": "\"Je quitte le mouvement\" des Écologistes, annonce sur BFMTV Yannick Jadot, sénateur écologiste de Paris et soutien de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/video-je-quitte-le-mouvement-des-ecologistes-annonce-sur-bfmtv-yannick-jadot-senateur-ecologiste-de-paris-et-soutien-de-raphael-glucksmann_VN-202611191058.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T21:39:18Z",
+      "title": "Marine Tondelier prête à une \"coalition\" autour de Jean-Luc Mélenchon: \"C'est une trahison\", estime Yannick Jadot, sénateur écologiste de Paris et soutien de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/video-marine-tondelier-prete-a-une-coalition-autour-de-jean-luc-melenchon-c-est-une-trahison-estime-yannick-jadot-senateur-ecologiste-de-paris-et-soutien-de-raphael-glucksmann_VN-202611191054.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T21:37:50Z",
+      "title": "\"Teddy Riner est un esprit libre, il n'appartiendra jamais à personne\", souligne Julie Cazaban, conseillère de Teddy Riner, adjointe à la mairie d'Asnière-sur-Seine",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-est-un-esprit-libre-il-n-appartiendra-jamais-a-personne-souligne-julie-cazaban-conseillere-de-teddy-riner-adjointe-a-la-mairie-d-asniere-sur-seine_VN-202611191053.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T21:31:55Z",
+      "title": "\"Ça devrait pouvoir se faire\": Jean-Luc Mélenchon répond favorablement à la proposition de coalition de Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/ca-devrait-pouvoir-se-faire-jean-luc-melenchon-repond-favorablement-a-la-proposition-de-coalition-de-marine-tondelier_AD-202611191048.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T21:23:54Z",
+      "title": "Les dessous du premier déplacement de campagne de Teddy Riner dans un hôpital",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-dessous-du-premier-deplacement-de-campagne-de-teddy-riner-dans-un-hopital_VN-202611191044.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T21:04:58Z",
+      "title": "Présidentielle: le président du Sénat Gérard Larcher demande à modifier les dates du scrutin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-le-president-du-senat-gerard-larcher-demande-a-changer-la-date_AV-202611191025.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T20:58:32Z",
+      "title": "LIGNE ROUGE - Teddy Riner: les secrets d'une candidature surprise",
+      "url": "https://www.bfmtv.com/politique/video-ligne-rouge-teddy-riner-les-secrets-d-une-candidature-surprise_VN-202611191033.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Gabriel Attal admet qu’il n’a « pas convaincu » à « ce stade » de la campagne",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-gabriel-attal-admet-quil-na-pas-convaincu-a-ce-stade-de-la-campagne-19-11-2026-2HQ26H4WVVCBBD5FALSQKBRBYU.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-19T21:51:26Z",
+      "title": "Présidentielle 2027 : Mélenchon ne pense pas que les grands patrons soient passés « du côté du RN »",
+      "url": "https://www.20minutes.fr/politique/4264290-20261119-presidentielle-2027-melenchon-pense-grands-patrons-passes-cote-rn"
+    }
+  ],
+  "schema_version": "1.0"
+}

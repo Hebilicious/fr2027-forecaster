@@ -1,0 +1,94 @@
+schema_version: "1.0"
+poll_id: cluster17-2026-11-10-10368
+firm: cluster17
+sponsor: Politico
+field_start: "2026-11-09"
+field_end: "2026-11-10"
+published_at: "2026-11-11"
+sample_size: 1242
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10368-pres-iv-cluster17-politico-11-novembre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10368-pres-iv-cluster17-politico-11-novembre.pdf
+index_url: null
+retrieved_at: "2026-11-18T20:41:05Z"
+entry: primary
+notes: >-
+  Entered from Commission notice 10368 (published figures). Sample of 1,242
+  adults including 1,164 registered voters; shares are of expressed votes, weighted by
+  declared likelihood of voting, with blank votes and abstention excluded. Four
+  round-1 hypotheses, no round 2.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-18T20:33Z
+  skill_version: polls-2
+scenarios:
+- label: Philippe as the centre candidate
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 3
+    glucksmann: 11
+    le_pen: 30.5
+    lisnard: 10
+    melenchon: 20
+    philippe: 13.5
+    retailleau: 5
+    roussel: 2
+    tondelier: 1.5
+    zemmour: 3
+- label: Attal as the centre candidate
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 0.5
+    attal: 11
+    dupont_aignan: 3
+    glucksmann: 11.5
+    le_pen: 31
+    lisnard: 10
+    melenchon: 20.5
+    retailleau: 6
+    roussel: 2
+    tondelier: 1.5
+    zemmour: 3
+- label: Lagarde as the centre candidate
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 2
+    glucksmann: 10
+    lagarde: 14
+    le_pen: 30.5
+    lisnard: 10
+    melenchon: 20.5
+    retailleau: 5.5
+    roussel: 2.5
+    tondelier: 1.5
+    zemmour: 3
+- label: Eighteen-candidate field
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 0.5
+    asselineau: 1
+    attal: 2
+    dupont_aignan: 2
+    glucksmann: 8
+    lagarde: 8
+    le_pen: 27
+    lisnard: 8
+    melenchon: 19
+    philippe: 8
+    polony: 2.5
+    retailleau: 5
+    riner: 2
+    roussel: 1.5
+    ruffin: 1.5
+    tondelier: 1
+    villepin: 1
+    zemmour: 2
