@@ -1,0 +1,228 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T16:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-19T15:46:18Z",
+      "title": "Jean-Luc Mélenchon rattrapé par ses positions ambiguës sur l’Ukraine",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/jean-luc-melenchon-rattrape-par-ses-positions-ambigues-sur-l-ukraine-20261119"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "roussel",
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T16:04:57Z",
+      "title": "Mèmes, montages vidéo et propositions électorales… Quand les politiques s'emparent de la sortie de \"GTA VI\"",
+      "url": "https://www.franceinfo.fr/culture/jeux-video/gta-vi/mmes-montages-video-et-propositions-electorales-quand-les-politiques-s-emparent-de-la-sortie-de-gta-vi_8289689.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:59:14Z",
+      "title": "\"Un appel d'air\": Bruno Retailleau s'oppose à la régularisation de travailleurs sans-papiers dans le secteur du bâtiment",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-un-appel-d-air-bruno-retailleau-s-oppose-a-la-regularisation-de-travailleurs-sans-papiers-dans-le-secteur-du-batiment_VN-202611190728.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:54:50Z",
+      "title": "Bruno Retailleau dénonce \"les délires écolos bobos et macronistes\" qui \"ont cassé le bâtimen\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-retailleau-denonce-les-delires-ecolos-bobos-et-macronistes-qui-ont-casse-le-batimen_VN-202611190725.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:44:44Z",
+      "title": "\"Je ne me désisterai pas mais je suis prête à une coalition\": Marine Tondelier réaffirme sa candidature à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-je-ne-me-desisterai-pas-mais-je-suis-prete-a-une-coalition-marine-tondelier-reaffirme-sa-candidature-a-la-presidentielle_VN-202611190715.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:41:43Z",
+      "title": "Marine Tondelier revient sur sa main tendue à Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-tondelier-revient-sur-sa-main-tendue-a-jean-luc-melenchon_VN-202611190713.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:41:07Z",
+      "title": "Logement: le grand oral de Fabien Roussel",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-le-grand-oral-de-fabien-roussel_VN-202611190716.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:39:44Z",
+      "title": "Possible coalition Tondelier-Mélenchon: \"Je ne tombe jamais de ma chaise\", réagit Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-possible-coalition-tondelier-melenchon-je-ne-tombe-jamais-de-ma-chaise-reagit-raphael-glucksmann_VN-202611190710.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:35:57Z",
+      "title": "Fabien Roussel souhaite\" un plan de rénovation des logements qui permette de sortir les maisons du fioul et du gaz\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-fabien-roussel-souhaite-un-plan-de-renovation-des-logements-qui-permette-de-sortir-les-maisons-du-fioul-et-du-gaz_VN-202611190706.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:35:55Z",
+      "title": "Logement: le grand oral de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-le-grand-oral-de-gabriel-attal_VN-202611190711.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T15:34:00Z",
+      "title": "Bâtiment: Fabien Roussel \"préfère\" réserver les aides publiques aux \"TPE PME qui créent des emplois en France\" et non aux grands groupes",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-batiment-fabien-roussel-prefere-reserver-les-aides-publiques-aux-tpe-pme-qui-creent-des-emplois-en-france-et-non-aux-grands-groupes_VN-202611190705.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-19T16:11:21Z",
+      "title": "Logement: le grand oral de Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-le-grand-oral-de-bruno-retailleau_VN-202611190742.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : elle avait quitté LFI en 2024, la députée Clémentine Autain appelle à soutenir Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-elle-avait-quitte-lfi-en-2024-la-deputee-clementine-autain-appelle-a-soutenir-jean-luc-melenchon-19-11-2026-XC32SNUVG5BT5OONYDXGPZSVO4.php"
+    },
+    {
+      "candidate_ids": [
+        "batho",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Un acte d’abandon » : Delphine Batho appelle les militants écologistes à la rejoindre après la main tendue de Marine Tondelier aux Insoumis",
+      "url": "https://www.leparisien.fr/elections/presidentielle/un-acte-dabandon-delphine-batho-appelle-les-militants-ecologistes-a-la-rejoindre-apres-la-main-tendue-de-marine-tondelier-aux-insoumis-19-11-2026-WF7SMKB2WBDWDPK3OJMDO23XXQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-19T16:09:19Z",
+      "title": "Présidentielle 2027 : Des maires de gauche prêts à entrer « en résistance » si Marine Le Pen devait être élue",
+      "url": "https://www.20minutes.fr/politique/4264199-20261119-presidentielle-2027-maires-gauche-prets-entrer-resistance-si-marine-pen-devait-etre-elue"
+    }
+  ],
+  "schema_version": "1.0"
+}
