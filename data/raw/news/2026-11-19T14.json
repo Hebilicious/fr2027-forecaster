@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T14:18:28Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-19T13:59:48Z",
+      "title": "David Lisnard doit dès aujourd’hui quitter la présidence de l’Association des maires de France",
+      "url": "https://www.liberation.fr/idees-et-debats/tribunes/david-lisnard-doit-des-aujourdhui-quitter-la-presidence-de-lassociation-des-maires-de-france-20261119_BHNDCMVXS5HNFHACPJ27RNGEPU/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe",
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T13:38:29Z",
+      "title": "\"Ce n'est pas mon camp politique\": Édouard Philippe réagit à la proposition de primaire de la droite qui pourrait inclure Éric Zemmour",
+      "url": "https://www.bfmtv.com/politique/video-ce-n-est-pas-mon-camp-politique-edouard-philippe-reagit-a-la-proposition-de-primaire-de-la-droite-qui-pourrait-inclure-eric-zemmour_VN-202611190604.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Jean-Louis Borloo salue la candidature de son « ami » Teddy Riner",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-jean-louis-borloo-salue-la-candidature-de-son-ami-teddy-riner-19-11-2026-DKKJPW7HFRBVBB4DVGATEEMYEE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
