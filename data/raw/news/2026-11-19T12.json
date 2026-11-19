@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T12:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : Jean-Luc Mélenchon grappille du terrain face à Marine Le Pen au second tour",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-jean-luc-melenchon-grappille-du-terrain-face-a-marine-le-pen-au-second-tour-19-11-2026-NQ6FK4C74BA5VNNN2X2Z5IWKH4.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Des policiers manifestent près de l’Élysée : Mélenchon appelle à « sévèrement » les « punir », Faure juge qu’Alliance « doit être rappelé à l’ordre »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/des-policiers-manifestent-pres-de-lelysee-melenchon-appelle-a-severement-les-punir-faure-juge-qualliance-doit-etre-rappele-a-lordre-19-11-2026-B4M6GEVVR5HEJMCG3KIKQ3FRQI.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
