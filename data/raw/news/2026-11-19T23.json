@@ -1,0 +1,165 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T23:18:26Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-19T22:55:25Z",
+      "title": "Yannick Jadot et Jérémie Iordanoff quittent les Ecologistes après l’approche de Marine Tondelier vers Jean-Luc Mélenchon pour la présidentielle",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/19/yannick-jadot-et-jeremie-iordanoff-quittent-les-ecologistes-apres-l-approche-de-marine-tondelier-vers-jean-luc-melenchon-pour-la-presidentielle_6813385_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T22:46:00Z",
+      "title": "Primaire, racisme, référendums, IA… Ce qu'il faut retenir de l'interview de Gabriel Attal dans l'émission \"L'Heure de vérité\" sur France 2",
+      "url": "https://www.franceinfo.fr/politique/gabriel-attal/primaire-racisme-referendums-ia-ce-qu-il-faut-retenir-de-l-interview-de-gabriel-attal-dans-l-emission-l-heure-de-verite-sur-france-2_8290544.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T22:43:11Z",
+      "title": "Présidentielle 2027 : Gabriel Attal admet qu'il n'a \"pas convaincu\" les Français à \"ce stade\" de la campagne",
+      "url": "https://www.franceinfo.fr/politique/gabriel-attal/presidentielle-2027-gabriel-attal-admet-qu-il-n-a-pas-convaincu-les-francais-a-ce-stade-de-la-campagne_8290766.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T22:16:18Z",
+      "title": "Yannick Jadot quitte Les Ecologistes après la main tendue de Marine Tondelier à Jean-Luc Mélenchon",
+      "url": "https://www.franceinfo.fr/politique/yannick-jadot/yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-marine-tondelier-a-jean-luc-melenchon_8290748.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T22:39:11Z",
+      "title": "Présidentielle: Kadir Mebarek, porte-parole d'Édouard Philippe, évoque \"une dynamique uniquement politicienne\" autour de Jean-Luc Mélenchon (LFI)",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-kadir-mebarek-porte-parole-d-edouard-philippe-evoque-une-dynamique-uniquement-politicienne-autour-de-jean-luc-melenchon-lfi_VN-202611191079.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T22:37:33Z",
+      "title": "\"Coalition autour de Jean-Luc Mélenchon\" formulée par Marine Tondelier: \"Pourquoi ne serait-on pas ensemble?\", questionne Aurélien Taché, député \"La France insoumise\" du Val-d'Oise",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-coalition-autour-de-jean-luc-melenchon-formulee-par-marine-tondelier-pourquoi-ne-serait-on-pas-ensemble-questionne-aurelien-tache-depute-la-france-insoumise-du-val-d-oise_VN-202611191077.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T22:34:38Z",
+      "title": "\"Je quitte ce mouvement politique\": Yannick Jadot claque la porte des Écologistes après la proposition de coalition de Marine Tondelier à Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/europe-ecologie-les-verts/je-quitte-ce-mouvement-politique-yannick-jadot-claque-la-porte-des-ecologistes-apres-la-proposition-de-coalition-de-marine-tondelier-a-jean-luc-melenchon_AV-202611191075.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-19T23:04:16Z",
+      "title": "Yannick Jadot quitte les Écologistes après la main tendue de Marine Tondelier à Jean-Luc Mélenchon",
+      "url": "https://www.france24.com/fr/france/20261119-france-presidentielle-yannick-jadot-quitte-les-ecologistes-marine-tondelier-jean-luc-melenchon-glucksmann"
+    }
+  ],
+  "schema_version": "1.0"
+}
