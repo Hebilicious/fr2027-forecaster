@@ -1,0 +1,157 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T19:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-19T19:00:00Z",
+      "title": "Guillaume Tabard : « Marine Tondelier prête à rejoindre Jean-Luc Mélenchon, de la symphonie pastorale à la symphonie pathétique »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-marine-tondelier-prete-a-rejoindre-jean-luc-melenchon-de-la-symphonie-pastorale-a-la-symphonie-pathetique-20261119"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-19T18:57:44Z",
+      "title": "Présidentielle 2027 : pourquoi Marine Le Pen assume de couper le robinet de l’aide à l’Ukraine",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-pourquoi-marine-le-pen-assume-de-couper-le-robinet-de-l-aide-a-l-ukraine-20261119"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T18:52:14Z",
+      "title": "Primaire de la droite et du centre: Éric Zemmour \"ne fait pas partie de ceux que je souhaite convier à débattre\", affirme Gérard Larcher, président LR du Sénat",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-de-la-droite-et-du-centre-eric-zemmour-ne-fait-pas-partie-de-ceux-que-je-souhaite-convier-a-debattre-affirme-gerard-larcher-president-lr-du-senat_VN-202611190931.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : l’alliance avec Marine Tondelier « devrait pouvoir se faire », estime Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-lalliance-avec-marine-tondelier-devrait-pouvoir-se-faire-estime-jean-luc-melenchon-19-11-2026-3SCUV6SJ75FSFDBLZ3DUITUHMQ.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : Gabriel Attal en tête d’une primaire du centre et de la droite sans Édouard Philippe",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-gabriel-attal-en-tete-dune-primaire-du-centre-et-de-la-droite-sans-edouard-philippe-20-11-2026-P7AZ6FIYMRAIFJLSYHX35DTS2A.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-19T04:42:33Z",
+      "title": "EN DIRECT Présidentielle 2027 : L'alliance avec Marine Tondelier « devrait pouvoir se faire », estime Jean-Luc Mélenchon...",
+      "url": "https://www.20minutes.fr/politique/4264007-20261119-direct-presidentielle-2027-alliance-marine-tondelier-devrait-pouvoir-faire-estime-jean-luc-melenchon"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-19T18:23:52Z",
+      "title": "Primaire : en incluant Eric Zemmour, David Lisnard cherche-t-il à « planter le processus » ou à en faire un « pré-premier tour » de la présidentielle ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/primaire-en-incluant-eric-zemmour-david-lisnard-cherche-t-il-a-planter-le-processus-ou-a-en-faire-un-pre-premier-tour-de-la-presidentielle"
+    }
+  ],
+  "schema_version": "1.0"
+}
