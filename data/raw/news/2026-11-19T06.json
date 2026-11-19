@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T06:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T05:38:34Z",
+      "title": "A suivre Alban Mikoczy : Édouard Philippe, à droite toute ?",
+      "url": "https://www.franceinfo.fr/politique/a-suivre-alban-mikoczy-edouard-philippe-a-droite-toute_8289428.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T06:12:53Z",
+      "title": "L'ÉDITO POLITIQUE - Dominique de Villepin: l'Élysée ou l'illusion?",
+      "url": "https://www.bfmtv.com/politique/video-l-edito-politique-dominique-de-villepin-l-elysee-ou-l-illusion_VN-202611190199.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T05:54:00Z",
+      "title": "\"Il fait les choses à son rythme\": en position délicate, pressé de participer à une primaire, Édouard Philippe veut toujours croire en son destin présidentiel",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/il-fait-les-choses-a-son-rythme-en-position-delicate-presse-de-participer-a-une-primaire-edouard-philippe-veut-toujours-croire-en-son-destin-presidentiel_AN-202611190083.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T05:37:19Z",
+      "title": "Accusée d'avoir cautionné des écrits antisémites, Laure Lavalette invoque des faits vieux de \"30 ans\" et accuse \"l'extrême gauche\"",
+      "url": "https://www.bfmtv.com/politique/front-national/accusee-d-avoir-cautionne-des-ecrits-antisemites-laure-lavalette-invoque-des-faits-vieux-de-30-ans-et-accuse-l-extreme-gauche_AD-202611190154.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T05:15:00Z",
+      "title": "DIRECT. Présidentielle 2027: Marine Tondelier \"prête\" à une coalition autour de Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/direct-presidentielle-2027-marine-tondelier-prete-a-une-coalition-autour-de-jean-luc-melenchon_LN-202611190168.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-19T06:02:39Z",
+      "title": "Présidentielle 2027 : Marine Le Pen imagine déjà son « premier quinquennat »… Est-elle trop confiante ?",
+      "url": "https://www.20minutes.fr/politique/4263857-20261119-presidentielle-2027-marine-pen-imagine-deja-premier-quinquennat-trop-confiante"
+    }
+  ],
+  "schema_version": "1.0"
+}

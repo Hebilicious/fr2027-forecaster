@@ -1,0 +1,20 @@
+{
+  "detected_at": "2026-11-19T06:18:41Z",
+  "flags": [
+    {
+      "candidate_id": "philippe",
+      "date": "2026-11-18",
+      "detail": "page views 2.1× their baseline, articles 4.5× their baseline",
+      "kind": "spike",
+      "score": 1.1176
+    },
+    {
+      "candidate_id": "retailleau",
+      "date": "2026-11-18",
+      "detail": "page views 2.9× their baseline, articles 3.5× their baseline",
+      "kind": "spike",
+      "score": 1.1573
+    }
+  ],
+  "schema_version": "1.0"
+}
