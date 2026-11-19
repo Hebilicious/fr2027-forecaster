@@ -1,0 +1,128 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T18:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-19T17:32:41Z",
+      "title": "Présidentielle 2027 : Tondelier penche vers Mélenchon, mais pour quelle union ?",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-tondelier-penche-vers-melenchon-mais-pour-quelle-union-20261119_XUODGNQFVZHENBNUDVGXNICMIM/"
+    },
+    {
+      "candidate_ids": [
+        "batho",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T17:52:19Z",
+      "title": "\"C'est un abandon de l'écologie\": Delphine Batho s'oppose à une possible coalition des Écologistes avec Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/video-c-est-un-abandon-de-l-ecologie-delphine-batho-s-oppose-a-une-possible-coalition-des-ecologistes-avec-jean-luc-melenchon_VN-202611190868.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« La cellule a été lancée » : comment Marine Le Pen prépare (déjà) son entre-deux-tours de la présidentielle",
+      "url": "https://www.leparisien.fr/elections/presidentielle/la-cellule-a-ete-lancee-comment-marine-le-pen-prepare-deja-son-entre-deux-tours-de-la-presidentielle-19-11-2026-CJFFMX7SEBDAHN3E3OIRTTVJDA.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-19T17:00:33Z",
+      "title": "La main tendue de Marine Tondelier à Jean-Luc Mélenchon peut-elle faire imploser les Écologistes ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/la-main-tendue-de-marine-tondelier-a-melenchon-peut-elle-faire-imploser-les-ecologistes"
+    }
+  ],
+  "schema_version": "1.0"
+}
