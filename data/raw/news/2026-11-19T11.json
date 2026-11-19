@@ -1,0 +1,163 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T11:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-19T10:40:20Z",
+      "title": "La députée RN Laure Lavalette accusée d’avoir cautionné des écrits antisémites, l’élue invoque des faits vieux de « trente ans »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/19/la-deputee-rn-laure-lavalette-accusee-d-avoir-cautionne-des-ecrits-antisemites-l-elue-invoque-des-faits-vieux-de-trente-ans_6813278_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T10:39:46Z",
+      "title": "Trente ans après sa suppression, le service national redevient un enjeu politique pour la présidentielle",
+      "url": "https://www.franceinfo.fr/replay-radio/le-tour-de-la-question/trente-ans-apres-sa-suppression-le-service-national-redevient-un-enjeu-politique-pour-la-presidentielle_8289488.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T10:33:07Z",
+      "title": "\"Un reniement existentiel\" : les écologistes divisés, les socialistes navrés après la main tendue de Marine Tondelier à LFI pour la présidentielle 2027",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/un-reniement-existentiel-les-ecologistes-divises-les-socialistes-navres-apres-la-main-tendue-de-marine-tondelier-a-lfi-pour-la-presidentielle-2027_8289569.html"
+    },
+    {
+      "candidate_ids": [
+        "faure"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T11:14:38Z",
+      "title": "\"Il vaut mieux être policier qu'enseignant si vous voulez être entendu\": Olivier Faure fustige la manifestation illégale de policiers, ensuite reçus à Beauvau",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/il-vaut-mieux-etre-policier-qu-enseignant-si-vous-voulez-etre-entendu-olivier-faure-fustige-la-manifestation-illegale-de-policiers-ensuite-recus-a-beauvau_AN-202611190501.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T10:52:20Z",
+      "title": "\"Les jeunes sont en quête d'engagement\": Nathalie Loiseau, porte-parole d'Édouard Philippe, sur le service national obligatoire que souhaite réintroduire le candidat Horizons",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-jeunes-sont-en-quete-d-engagement-nathalie-loiseau-porte-parole-d-edouard-philippe-sur-le-service-national-obligatoire-que-souhaite-reintroduire-le-candidat-horizons_VN-202611190483.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« On est tombé de notre chaise » : dans une impasse, Marine Tondelier tend la main à Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/on-est-tombe-de-notre-chaise-dans-une-impasse-marine-tondelier-tend-la-main-a-jean-luc-melenchon-19-11-2026-DS4GENAKZRG6FGHSIQTU36J6QE.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-16T07:21:05Z",
+      "title": "Bonjour chez vous ! — Pourquoi Edouard Philippe déteste la primaire ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/pourquoi-edouard-philippe-deteste-la-primaire-e0"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-16T07:21:03Z",
+      "title": "Bonjour chez vous ! — Maurice Gourdault-Montagne : « Nous avons fait une erreur en pensant que Poutine était marginalisé »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/maurice-gourdault-montagne-nous-avons-fait-une-erreur-en-pensant-que-poutine-etait-marginalise-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
