@@ -1,0 +1,146 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T09:18:29Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-19T09:14:32Z",
+      "title": "David Lisnard suspecté de vouloir «saboter la primaire de l’intérieur»",
+      "url": "https://www.liberation.fr/politique/david-lisnard-suspecte-de-vouloir-saboter-la-primaire-de-linterieur-20261119_5OPW4O5JTJCGLFJF55IPMRZWOM/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T08:40:59Z",
+      "title": "À six mois de l'élection présidentielle, Marine Tondelier fait un pas vers Jean-Luc Mélenchon et se dit \"prête\" à travailler avec lui",
+      "url": "https://www.franceinfo.fr/elections/a-six-mois-de-l-election-presidentielle-marine-tondelier-fait-un-pas-vers-jean-luc-melenchon-et-se-dit-prete-a-travailler-avec-lui_8289617.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T09:08:09Z",
+      "title": "Présidentielle: Raphaël Glucksmann accuse Marine Tondelier de \"tourner le dos\" à la \"tradition pro-européenne\" des écologistes avec sa main tendue à Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-raphael-glucksmann-accuse-marine-tondelier-de-tourner-le-dos-a-la-tradition-pro-europeenne-des-ecologistes-avec-sa-main-tendue-a-jean-luc-melenchon_AN-202611190403.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T08:57:30Z",
+      "title": "Teddy Riner candidat: \"C'est un ami (...) il est très original, très construit\", affirme Jean-Louis Borloo, président fondateur de l'UDI, ancien ministre",
+      "url": "https://www.bfmtv.com/politique/video-teddy-riner-candidat-c-est-un-ami-il-est-tres-original-tres-construit-affirme-jean-louis-borloo-president-fondateur-de-l-udi-ancien-ministre_VN-202611190396.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "La proposition du PS et de Glucksmann sur la régularisation de travailleurs sans-papiers présentée à l’Assemblée",
+      "url": "https://www.leparisien.fr/politique/la-proposition-du-ps-et-de-glucksmann-sur-la-regularisation-de-travailleurs-sans-papiers-presentee-a-lassemblee-19-11-2026-UJWA332LP5DNHPZ453H3H3TEKA.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-19T08:52:02Z",
+      "title": "Présidentielle 2027 : Glucksmann reproche à Tondelier de « tourner le dos à la tradition pro-européenne des écologistes »",
+      "url": "https://www.20minutes.fr/politique/4264043-20261119-presidentielle-2027-glucksmann-reproche-tondelier-tourner-dos-tradition-pro-europeenne-ecologistes"
+    }
+  ],
+  "schema_version": "1.0"
+}
