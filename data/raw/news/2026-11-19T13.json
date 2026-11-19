@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T13:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-19T13:00:08Z",
+      "title": "Présidentielle 2027 : une campagne « course à l’échalote » pour tenter de répondre aux colères françaises",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/19/presidentielle-2027-une-campagne-course-a-l-echalote-pour-tenter-de-repondre-aux-coleres-francaises_6813302_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T12:32:35Z",
+      "title": "Présidentielle : Le ralliement de Marine Tondelier à Jean-Luc Mélenchon est une trahison estime Raphaël Glucksmann.",
+      "url": "https://www.franceinfo.fr/elections/presidentielle-le-ralliement-de-marine-tondelier-a-jean-luc-melenchon-est-une-trahison-estime-raphael-glucksmann_8290025.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T12:14:25Z",
+      "title": "ÉDITO. Édouard Philippe est-il trop sérieux pour gagner la présidentielle ?",
+      "url": "https://www.franceinfo.fr/elections/edito-edouard-philippe-est-il-trop-serieux-pour-gagner-la-presidentielle_8289995.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T13:01:20Z",
+      "title": "Sur les différences programmatiques au sujet de l'Ukraine entre Marine Tondelier et Jean-Luc Mélenchon: \"la question, c'est quelles propositions on portera ensemble\", déclare la candidate écologiste à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-sur-les-differences-programmatiques-au-sujet-de-l-ukraine-entre-marine-tondelier-et-jean-luc-melenchon-la-question-c-est-quelles-propositions-on-portera-ensemble-declare-la-candidate-ecologiste-a-la-presidentielle_VN-202611190581.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
