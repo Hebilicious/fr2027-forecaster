@@ -1,0 +1,243 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T17:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-19T16:43:16Z",
+      "title": "Présidentielle 2027 : Edouard Philippe propose un « moratoire » de cinq ans sur l’interdiction de location des passoires thermiques",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/19/presidentielle-2027-edouard-philippe-propose-un-moratoire-de-cinq-ans-sur-l-interdiction-de-location-des-passoires-thermiques_6813346_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-19T16:57:01Z",
+      "title": "« C’est la fin des Écologistes » : la drôle de main tendue de Marine Tondelier à Jean-Luc Mélenchon",
+      "url": "https://www.lefigaro.fr/politique/c-est-la-fin-des-ecologistes-marine-tondelier-tend-la-main-a-jean-luc-melenchon-20261119"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-19T16:45:44Z",
+      "title": "Perquisitions au RN et à l’Intérieur : la piste de documents sensibles retrouvés chez un proche de Marine Le Pen",
+      "url": "https://www.liberation.fr/societe/police-justice/des-perquisitions-au-siege-du-rn-et-au-ministere-de-linterieur-pour-des-soupcons-de-violation-du-secret-de-linstruction-20261119_6GA46AAFMNBSTNRTK2JUTI7BKQ/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-19T16:35:12Z",
+      "title": "Programme LFI pour la présidentielle : «Nous proposons un nouveau congé d’accueil obligatoire de l’enfant de vingt semaines par parent après l’accouchement»",
+      "url": "https://www.liberation.fr/politique/elections/programme-lfi-pour-la-presidentielle-nous-proposons-un-nouveau-conge-daccueil-de-lenfant-de-vingt-semaines-par-parent-apres-laccouchement-20261119_RP5VUJVV35AG7M3YG3QRPCMBIY/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-19T16:20:36Z",
+      "title": "Présidentielle : Clémentine Autain appelle à soutenir Mélenchon",
+      "url": "https://www.liberation.fr/politique/presidentielle-clementine-autain-appelle-a-soutenir-melenchon-20261119_RPSPMDZECVFA7G6WT74QD6AOHE/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-19T16:18:51Z",
+      "title": "Présidentielle 2027 : la centrifugeuse est en marche",
+      "url": "https://www.liberation.fr/politique/presidentielle-2027-la-centrifugeuse-est-en-marche-20261119_XNI2TB7S7ZFWXD6QXA6MZR2ESA/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T17:12:35Z",
+      "title": "DIRECT. Suivez l'interview de Gabriel Attal dans \"L'Heure de vérité\" sur France 2 à partir de 20h40",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/l-heure-de-verite/direct-presidentielle-2027-gabriel-attal-est-l-invite-de-l-heure-de-verite-a-partir-de-20h40_8288690.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:51:13Z",
+      "title": "Logement: \"Nous souhaitons mettre à disposition du foncier, dans le cadre d'un accord\", annonce Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-nous-souhaitons-mettre-a-disposition-du-foncier-dans-le-cadre-d-un-accord-annonce-marine-le-pen_VN-202611190780.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:48:45Z",
+      "title": "Logement: \"Nous allons faire des ordonnances massives de simplification de l'économie\", annonce Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-nous-allons-faire-des-ordonnances-massives-de-simplification-de-l-economie-annonce-marine-le-pen_VN-202611190776.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:31:47Z",
+      "title": "Logement: le grand oral de Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-le-grand-oral-de-marine-le-pen_VN-202611190769.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:27:59Z",
+      "title": "Coalition autour de la candidature de Jean-Luc Mélenchon: \"Marine Tondelier a fait un choix, au mépris de la tradition de sa famille politique\", note Lamia El Aaraje, première adjointe PS au maire de Paris",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-coalition-autour-de-la-candidature-de-jean-luc-melenchon-marine-tondelier-a-fait-un-choix-au-mepris-de-la-tradition-de-sa-famille-politique-note-lamia-el-aaraje-premiere-adjointe-ps-au-maire-de-paris_VN-202611190759.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:26:39Z",
+      "title": "Logement: le grand oral de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-le-grand-oral-de-raphael-glucksmann_VN-202611190767.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:26:27Z",
+      "title": "Entreprise et pacte Dutreil: Raphaël Glucksmann propose \"que l'abattement devienne dégressif au-dessus de 50 millions d'euros\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-entreprise-et-pacte-dutreil-raphael-glucksmann-propose-que-l-abattement-devienne-degressif-au-dessus-de-50-millions-d-euros_VN-202611190756.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:25:34Z",
+      "title": "Coalition autour de la candidature de Jean-Luc Mélenchon: \"Nous sommes favorables à la proposition de Marine Tondelier\", assure Hendrik Davi, député \"Écologiste et Social\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-coalition-autour-de-la-candidature-de-jean-luc-melenchon-nous-sommes-favorables-a-la-proposition-de-marine-tondelier-assure-hendrik-davi-depute-ecologiste-et-social_VN-202611190755.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:24:48Z",
+      "title": "L'ex-insoumise Clémentine Autain appelle à soutenir Jean-Luc Mélenchon pour la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/l-ex-insoumise-clementine-autain-appelle-a-soutenir-jean-luc-melenchon-pour-la-presidentielle_AD-202611190749.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-19T16:18:50Z",
+      "title": "Logement: Raphaël Glucksmann veut lancer \"un grand plan de bâtisseur d'écoles\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-raphael-glucksmann-veut-lancer-un-grand-plan-de-batisseur-d-ecoles_VN-202611190743.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Édouard Philippe propose un moratoire de cinq ans sur l’interdiction de location des passoires thermiques",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-edouard-philippe-propose-un-moratoire-de-cinq-ans-sur-linterdiction-de-location-des-passoires-thermiques-19-11-2026-PO5ENIG4FJDDRA2WG4F5N4V7TA.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
