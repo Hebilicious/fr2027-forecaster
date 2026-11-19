@@ -1,0 +1,148 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-19T08:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T08:10:01Z",
+      "title": "Sommet international, présidentielle, pouvoir d'achat... Le 8h30 franceinfo de Raphaël Glucksmann",
+      "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/sommet-international-presidentielle-pouvoir-d-achat-le-8h30-franceinfo-de-raphael-glucksmann_8268626.html"
+    },
+    {
+      "candidate_ids": [
+        "faure",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T08:08:33Z",
+      "title": "Présidentielle 2027 : \"Je considère que la place des Écologistes est à nos côtés\", affirme Olivier Faure, premier secrétaire du Parti socialiste",
+      "url": "https://www.franceinfo.fr/politique/presidentielle-2027-je-considere-que-la-place-des-ecologistes-est-a-nos-cotes-affirme-olivier-faure-premier-secretaire-du-parti-socialiste_8289572.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T08:01:48Z",
+      "title": "\"Elle a choisi de tourner le dos à la tradition écologiste\", regrette Raphaël Glucksmann après le rapprochement de Marine Tondelier à la candidature de Jean-Luc Mélenchon",
+      "url": "https://www.franceinfo.fr/elections/elle-a-choisi-de-tourner-le-dos-a-la-tradition-ecologiste-regrette-raphael-glucksmann-apres-le-rapprochement-de-marine-tondelier-a-la-candidature-de-jean-luc-melenchon_8289584.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-19T07:15:07Z",
+      "title": "Accusée d'avoir cautionné des écrits antisémites, la députée RN Laure Lavalette invoque des faits vieux de \"30 ans, dans un climat tout à fait différent\"",
+      "url": "https://www.franceinfo.fr/elections/accusee-d-avoir-cautionne-des-ecrits-antisemites-la-deputee-rn-laure-lavalette-invoque-des-faits-vieux-de-30-ans_8289503.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-19T08:18:31Z",
+      "title": "DIRECT. Présidentielle : \"Elle a choisi de tourner le dos à la tradition écologiste\", réagit Raphaël Glucksmann après le rapprochement initié par Marine Tondelier avec LFI",
+      "url": "https://www.franceinfo.fr/elections/direct-presidentielle-je-le-regrette-reagit-le-socialiste-olivier-faure-au-rapprochement-initie-par-l-ecologiste-marine-tondelier-vers-jean-luc-melenchon_8289440.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Marine Tondelier « tourne le dos à la tradition écologiste » si elle soutient Jean-Luc Mélenchon, déclare Raphaël Glucksmann",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-marine-tondelier-tourne-le-dos-a-la-tradition-ecologiste-si-elle-soutient-jean-luc-melenchon-declare-raphael-glucksmann-19-11-2026-DOTKP3BGZNDFBFXDULFURXJBUQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
