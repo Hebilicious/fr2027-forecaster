@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T13:18:35Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-20T12:35:07Z",
+      "title": "Exclue de LFI en 2024, Clémentine Autain appelle à son tour à se rallier à la candidature de Jean-Luc Mélenchon",
+      "url": "https://www.franceinfo.fr/elections/exclue-de-lfi-en-2024-clementine-autain-appelle-a-son-tour-a-se-rallier-a-la-candidature-de-jean-luc-melenchon_8292170.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-20T13:18:28Z",
+      "title": "Présidentielle 2027: un sondage donne Édouard Philippe au second tour, devant Jean-Luc Mélenchon, s'il devient candidat unique du centre et de la droite",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-un-sondage-donne-edouard-philippe-au-second-tour-devant-jean-luc-melenchon-s-il-devient-candidat-unique-du-centre-et-de-la-droite_AD-202611200583.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Retraites à 62 ans : Jean-Pierre Farandou dénonce le projet « en trompe-l’œil » de Marine Le Pen",
+      "url": "https://www.leparisien.fr/elections/presidentielle/retraites-a-62-ans-jean-pierre-farandou-denonce-le-projet-en-trompe-loeil-de-marine-le-pen-20-11-2026-EJIDPYP6BFCETKR2OYT5STRF2E.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-20T13:05:52Z",
+      "title": "Présidentielle 2027 : Dans ces deux scénarios, Jean-Luc Mélenchon passerait troisième, selon un sondage",
+      "url": "https://www.20minutes.fr/politique/4264418-20261120-presidentielle-2027-deux-scenarios-jean-luc-melenchon-passerait-troisieme-selon-sondage"
+    }
+  ],
+  "schema_version": "1.0"
+}
