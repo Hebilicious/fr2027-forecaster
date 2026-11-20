@@ -1,0 +1,135 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T14:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-20T13:51:08Z",
+      "title": "Présidentielle 2027 : Marine Tondelier estime que la balle est dans le camp de Jean-Luc Mélenchon",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/20/presidentielle-2027-marine-tondelier-estime-que-la-balle-est-dans-le-camp-de-jean-luc-melenchon_6813644_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-20T13:56:00Z",
+      "title": "Présidentielle : depuis Lyon, Marine Tondelier attend «les pas» de Jean-Luc Mélenchon en direction des écologistes",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-depuis-lyon-marine-tondelier-attend-les-pas-de-jean-luc-melenchon-en-direction-des-ecologistes-20261120_RWMA5LDG25HUJCM5Q4RBDIC2S4/"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-20T14:09:21Z",
+      "title": "\"Je suis candidat\" : Dominique de Villepin se lance dans la course de l'élection présidentielle",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/je-suis-candidat-dominique-de-villepin-se-lance-dans-la-course-de-l-election-presidentielle_8292371.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-20T13:44:44Z",
+      "title": "Présidentielle 2027 : Dominique de Villepin entre à son tour en campagne malgré des sondages peu optimistes",
+      "url": "https://www.20minutes.fr/politique/4264442-20261120-presidentielle-2027-dominique-villepin-entre-campagne-3-sondages"
+    },
+    {
+      "candidate_ids": [
+        "riner",
+        "villepin"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-20T13:48:54Z",
+      "title": "Présidentielle 2027 : Villepin candidat après Riner… La popularité peut-elle se transformer en bulletin de vote ?",
+      "url": "https://www.20minutes.fr/politique/4264419-20261120-presidentielle-2027-villepin-candidat-apres-riner-popularite-peut-transformer-bulletin-vote"
+    }
+  ],
+  "schema_version": "1.0"
+}
