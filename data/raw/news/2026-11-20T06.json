@@ -1,0 +1,172 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T06:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-20T06:00:00Z",
+      "title": "Comment David Lisnard, le patron des maires de France, mène une double campagne, présidentielle et pour l’AMF",
+      "url": "https://www.liberation.fr/politique/comment-david-lisnard-le-patron-des-maires-de-france-mene-une-double-campagne-presidentielle-et-pour-lamf-20261120_2ZVVCQSKEFGJZKOEMDV6QIQSCE/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-20T05:35:20Z",
+      "title": "A suivre Alban Mikoczy : Mélenchon, les coulisses de son dîner avec des patrons",
+      "url": "https://www.franceinfo.fr/politique/a-suivre-alban-mikoczy-melenchon-les-coulisses-de-son-diner-avec-des-patrons_8291672.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-20T06:14:07Z",
+      "title": "DIRECT. Présidentielle : Dominique de Villepin en route vers une candidature à l'Elysée, suivez la prise de parole de l'ancien Premier ministre",
+      "url": "https://www.franceinfo.fr/elections/direct-presidentielle-dominique-de-villepin-en-route-vers-une-candidature-a-la-presidentielle-suivez-la-prise-de-parole-de-l-ancien-premier-ministre_8291558.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T05:45:26Z",
+      "title": "Présidentielle 2027: Gabriel Attal admet qu'il n'a \"pas convaincu\" à \"ce stade\" de la campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-gabriel-attal-admet-qu-il-n-a-pas-convaincu-a-ce-stade-de-la-campagne_AD-202611200186.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T05:36:38Z",
+      "title": "Yannick Jadot a annoncé “quitter le mouvement” des Écologistes après la proposition de coalition de Marine Tondelier à Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-yannick-jadot-a-annonce-quitter-le-mouvement-des-ecologistes-apres-la-proposition-de-coalition-de-marine-tondelier-a-jean-luc-melenchon_VN-202611200177.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T05:30:00Z",
+      "title": "Dominique de Villepin: l’Elysée ou l’illusion? L’édito politique de Guillaume Daret",
+      "url": "https://www.bfmtv.com/politique/dominique-de-villepin-l-elysee-ou-l-illusion-l-edito-politique-de-guillaume-daret_AN-202611200110.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T05:10:00Z",
+      "title": "DIRECT. Présidentielle: vives tensions chez les Écologistes après la main tendue de Marine Tondelier à LFI",
+      "url": "https://www.bfmtv.com/politique/direct-presidentielle-2027-vives-tensions-chez-les-ecologistes-apres-la-main-tendue-de-marine-tondelier-a-lfi-dominique-de-villepin-en-route-vers-une-candidature_LN-202611200201.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "DIRECT. Présidentielle 2027 : vers une candidature de Dominique de Villepin ? Suivez l’actualité politique du jour",
+      "url": "https://www.leparisien.fr/elections/presidentielle/direct-presidentielle-2027-vers-une-candidature-de-dominique-de-villepin-suivez-lactualite-politique-du-jour-20-11-2026-PCZIC5XTXFBZJIAKDIKADQLMCA.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-20T05:17:36Z",
+      "title": "Présidentielle 2027 : « « Le programme LFI ne bougera pas… » Tondelier peut-elle arracher des concessions à Mélenchon ?",
+      "url": "https://www.20minutes.fr/politique/4264152-20261120-presidentielle-2027-programme-lfi-bougera-tondelier-peut-arracher-concessions-melenchon"
+    }
+  ],
+  "schema_version": "1.0"
+}
