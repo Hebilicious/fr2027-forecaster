@@ -4,7 +4,7 @@
 # Each candidate belongs to exactly one slot. A slot draws at most one option, and an option lists
 # the candidates who run together; 1 - sum(p) is the chance nobody from the slot runs.
 schema_version: "1.0"
-as_of: 2026-11-17
+as_of: 2026-11-20
 blocs: [far_left, left, centre, right, far_right, other]
 candidates:
   - id: arthaud
@@ -262,14 +262,17 @@ candidates:
     name: "Dominique de Villepin"
     party: "La France humaniste (LFH)"
     bloc: right
-    status: likely
-    notes: "Not formally declared as of the sources found: FR Wikipedia lists him as 'pressenti' (ref 2026-08-17: 'En septembre, tout sera pret'); a web search summary of late-Aug coverage said he would confirm 'when the campaign has started' and rejects any primary. Tested at 2-4% in several polls."
+    status: declared
+    declared_on: 2026-11-20
+    notes: 'Formally declared on 20 November 2026 in Paris (franceinfo with AFP), saying: "Je suis candidat à l''élection présidentielle de 2027." Leads La France humaniste; first presidential run (did not reach the 2012 ballot).'
     sources:
       - url: "https://fr.wikipedia.org/wiki/Candidatures_%C3%A0_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027"
         date: 2026-10-09
       - url: "https://www.huffingtonpost.fr/politique/article/pourquoi-villepin-ne-croit-pas-que-sa-candidature-a-la-presidentielle-2027-se-heurtera-au-meme-mur-qu-en-2012_262038.html"
         date: 2026-03-29
         note: "Not fetched; cited by another source."
+      - url: "https://www.franceinfo.fr/elections/dominique-de-villepin-annonce-sa-candidature-a-l-election-presidentielle-evoquant-une-decision-lourde-difficile_8292431.html"
+        date: 2026-11-20
   - id: le_pen
     name: "Marine Le Pen"
     party: "Rassemblement national (RN)"
@@ -420,9 +423,9 @@ slots:
     options:
       - { run: [bertrand], p: 0.35 }
   - id: villepin
-    rationale: "Not formally declared; described as preparing a run and rejecting any primary."
+    rationale: "Formally declared 20 November 2026 in Paris. Residual probability reflects the 500 sponsorships: he did not reach the 2012 presidential ballot."
     options:
-      - { run: [villepin], p: 0.45 }
+      - { run: [villepin], p: 0.55 }
   - id: centre
     label: "Centre: Philippe and Attal"
     rationale: "Both declared, no agreed tie-break; Philippe leads Attal in every poll that tests both. Probabilities follow the thin Polymarket 'Attal vs Philippe' market on 2026-10-09 (Philippe only 0.795, Attal only 0.1355, both 0.07, neither 0.028)."

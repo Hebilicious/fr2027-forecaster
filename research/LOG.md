@@ -2,6 +2,19 @@
 
 Dated entries for every assumption, parameter change, source added or dropped, and the reason. Newest first within a day.
 
+## 2026-11-20
+
+### Field: 2026-11-20-villepin-declares (via Grok Bot field_change `2026-11-20-villepin-declares`)
+
+Dominique de Villepin formally declared his candidacy for the 2027 presidential election in Paris on 20 November, saying: "I am a candidate in the 2027 presidential election." Status set to declared; slot probability raised from 0.45 to 0.55.
+
+Dominique de Villepin formally declared on 20 November 2026 in Paris (franceinfo with AFP, TF1info, RFI), saying: "Je suis candidat à l'élection présidentielle de 2027." Status changes from likely to declared (declared_on 2026-11-20). Slot villepin probability raised from 0.45 to 0.55: the declaration is confirmed; the residual is mainly the 500 sponsorships (he did not reach the 2012 presidential ballot). Event 2026-11-20-villepin-declares.
+
+- `config/candidates.yaml`: `villepin` status likely → declared; slot `villepin` villepin 0.45 → villepin 0.55; `as_of` 2026-11-20.
+- Sources: [Dominique de Villepin annonce sa candidature à l'élection présidentielle, évoquant une « décision lourde, difficile »](https://www.franceinfo.fr/elections/dominique-de-villepin-annonce-sa-candidature-a-l-election-presidentielle-evoquant-une-decision-lourde-difficile_8292431.html), [« Je suis candidat à l'élection présidentielle de 2027 » : Dominique de Villepin se lance officiellement dans la course à l'Élysée](https://www.tf1info.fr/politique/elections/presidentielle/je-suis-candidat-a-l-election-presidentielle-de-2027-dominique-de-villepin-se-lance-officiellement-dans-la-course-a-l-elysee-2477099.html), [Présidentielle 2027 en France: Dominique de Villepin annonce officiellement sa candidature](https://www.rfi.fr/fr/france/20261120-pr%C3%A9sidentielle-2027-en-france-dominique-de-villepin-annonce-officiellement-sa-candidature).
+- Events: `2026-11-20-villepin-declares`.
+- Sent by Grok Bot fr2027 (checks-1, run `checks-2026-11-20T21:30Z`); checked and applied by the Live workflow.
+
 ## 2026-11-17
 
 ### Field: 2026-11-11-lagarde-tested (via Grok Bot field_change `2026-11-11-lagarde-tested`)

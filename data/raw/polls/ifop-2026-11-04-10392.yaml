@@ -1,0 +1,79 @@
+schema_version: "1.0"
+poll_id: ifop-2026-11-04-10392
+firm: ifop
+sponsor: Sud Radio
+field_start: "2026-11-02"
+field_end: "2026-11-04"
+published_at: "2026-11-20"
+sample_size: 1978
+method: online
+population: registered
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10392-pres-iv-ifop-sud-radio-20-novembre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10392-pres-iv-ifop-sud-radio-20-novembre.pdf
+index_url: null
+retrieved_at: "2026-11-20T20:33:05Z"
+entry: primary
+notes: >-
+  Ifop-Fiducial for Sud Radio; 1,834 registered voters drawn from 1,978 adults,
+  online 2-4 November. Shares of expressed votes among registered voters as
+  published. Four first-round scenarios, each with a single centre-right candidate
+  (Philippe, Retailleau, Lisnard, Attal); no runoffs in the notice.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-20T20:27Z
+  skill_version: polls-2
+scenarios:
+- label: Philippe unique centre-right candidate
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 1.5
+    glucksmann: 13
+    le_pen: 37
+    melenchon: 18
+    philippe: 19
+    roussel: 3
+    tondelier: 3
+    zemmour: 5
+- label: Retailleau unique centre-right candidate
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 0.5
+    dupont_aignan: 2
+    glucksmann: 17
+    le_pen: 38
+    melenchon: 18
+    retailleau: 14
+    roussel: 3
+    tondelier: 3.5
+    zemmour: 4
+- label: Lisnard unique centre-right candidate
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 1
+    dupont_aignan: 2
+    glucksmann: 18
+    le_pen: 37
+    lisnard: 14
+    melenchon: 17
+    roussel: 3.5
+    tondelier: 3.5
+    zemmour: 4
+- label: Attal unique centre-right candidate
+  round: 1
+  scenario_id: S4
+  shares:
+    arthaud: 1
+    attal: 13
+    dupont_aignan: 3
+    glucksmann: 16
+    le_pen: 38
+    melenchon: 18
+    roussel: 3
+    tondelier: 3
+    zemmour: 5
