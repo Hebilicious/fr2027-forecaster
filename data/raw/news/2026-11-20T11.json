@@ -1,0 +1,257 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T11:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-20T10:37:29Z",
+      "title": "Dominique de Villepin annonce sa candidature à l’élection présidentielle de 2027",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/20/dominique-de-villepin-annonce-sa-candidature-a-l-election-presidentielle-de-2027_6813622_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-20T10:42:31Z",
+      "title": "Affaire des fuites d’infos du ministère de l’Intérieur vers le RN : tout comprendre à cette enquête à tiroirs",
+      "url": "https://www.liberation.fr/societe/police-justice/affaire-des-fuites-dinfos-du-ministere-de-linterieur-vers-le-rn-tout-comprendre-a-cette-enquete-a-tiroirs-20261120_XRT3JQFE2BDDDOKY6IAISBFNYU/"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-20T10:41:14Z",
+      "title": "«Je suis candidat à l’élection présidentielle de 2027», annonce Dominique de Villepin",
+      "url": "https://www.liberation.fr/politique/elections/je-suis-candidat-a-lelection-presidentielle-de-2027-annonce-dominique-de-villepin-20261120_SF2ZFQEWNJEXNAR3E2QCZPRSFI/"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:58:38Z",
+      "title": "Primaire de la droite et du centre: Dominique de Villepin ne voit \"aucun sens\" à sa participation",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-de-la-droite-et-du-centre-dominique-de-villepin-ne-voit-aucun-sens-a-sa-participation_VN-202611200504.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:55:23Z",
+      "title": "Dominique de Villepin annonce \"être candidat\" à l'élection présidentielle de 2027",
+      "url": "https://www.bfmtv.com/politique/video-dominique-de-villepin-annonce-etre-candidat-a-l-election-presidentielle-de-2027_VN-202611200502.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:41:15Z",
+      "title": "Présidentielle 2027: \"Je suis candidat\", annonce Dominique de Villepin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-je-suis-candidat-annonce-dominique-de-villepin_VN-202611200495.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:40:53Z",
+      "title": "\"Je suis candidat\": Dominique de Villepin annonce sa candidature à l'élection présidentielle 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/je-suis-candidat-dominique-de-villepin-annonce-sa-candidature-a-l-election-presidentielle-2027_AV-202611200493.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:38:59Z",
+      "title": "\"Je propose un conseil de sécurité avec les cinq plus grands pays européens capables de conclure ensemble un pacte de souveraineté\", déclare Dominique de Villepin",
+      "url": "https://www.bfmtv.com/politique/video-je-propose-un-conseil-de-securite-avec-les-cinq-plus-grands-pays-europeens-capables-de-conclure-ensemble-un-pacte-de-souverainete-declare-dominique-de-villepin_VN-202611200494.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:37:27Z",
+      "title": "Dette publique: Dominique de Villepin, ancien Premier ministre, appelle à une \"abolition des privilèges\" pour \"ouvrir les boîtes noires des niches fiscales et sociales\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dette-publique-dominique-de-villepin-ancien-premier-ministre-appelle-a-une-abolition-des-privileges-pour-ouvrir-les-boites-noires-des-niches-fiscales-et-sociales_VN-202611200491.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:32:11Z",
+      "title": "Dominique de Villepin, ancien Premier ministre, veut \"restaurer le référendum\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dominique-de-villepin-ancien-premier-ministre-veut-restaurer-le-referendum_VN-202611200489.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:29:12Z",
+      "title": "Dominique de Villepin, ancien Premier ministre, affirme que \"derrière\" LFI et le RN, \"il y a une triste et dangereuse mécanique de la guerre civile\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dominique-de-villepin-ancien-premier-ministre-affirme-que-derriere-lfi-et-le-rn-il-y-a-une-triste-et-dangereuse-mecanique-de-la-guerre-civile_VN-202611200485.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:27:26Z",
+      "title": "\"Je ne mets pas le RN et LFI sur le même plan\", assure Dominique de Villepin déclarant que le RN \"porte un héritage de xénophobie, de racisme et d'antisémitisme\"",
+      "url": "https://www.bfmtv.com/politique/front-national/video-je-ne-mets-pas-le-rn-et-lfi-sur-le-meme-plan-assure-dominique-de-villepin-declarant-que-le-rn-porte-un-heritage-de-xenophobie-de-racisme-et-d-antisemitisme_VN-202611200484.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:25:34Z",
+      "title": "Dominique de Villepin, ancien Premier ministre, à propos de LFI et du RN: \"La vie politique est de plus en plus confisquée par les deux grandes forces de la radicalité, en pleine complicité avec le macronisme\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dominique-de-villepin-ancien-premier-ministre-a-propos-de-lfi-et-du-rn-la-vie-politique-est-de-plus-en-plus-confisquee-par-les-deux-grandes-forces-de-la-radicalite-en-pleine-complicite-avec-le-macronisme_VN-202611200481.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:21:27Z",
+      "title": "\"La régression écologique l'emporte, le sentiment que l'on ne peut pas faire vivre ensemble l'économie et l'écologie\", alerte Dominique de Villepin, fondateur de La France Humaniste et ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/video-la-regression-ecologique-l-emporte-le-sentiment-que-l-on-ne-peut-pas-faire-vivre-ensemble-l-economie-et-l-ecologie-alerte-dominique-de-villepin-fondateur-de-la-france-humaniste-et-ancien-premier-ministre_VN-202611200476.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:19:08Z",
+      "title": "Dominique de Villepin, ancien Premier ministre: \"Nous sommes assaillis par les dangers du monde qui se multiplient et se rapprochent\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dominique-de-villepin-ancien-premier-ministre-nous-sommes-assaillis-par-les-dangers-du-monde-qui-se-multiplient-et-se-rapprochent_VN-202611200474.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T10:16:23Z",
+      "title": "Il y a \"un pourrissement de nos finances publiques\", estime Dominique de Villepin, fondateur de La France Humaniste et ancien Premier ministre",
+      "url": "https://www.bfmtv.com/politique/video-il-y-a-un-pourrissement-de-nos-finances-publiques-estime-dominique-de-villepin-fondateur-de-la-france-humaniste-et-ancien-premier-ministre_VN-202611200473.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je suis candidat » : Dominique de Villepin officialise sa course à la présidentielle de 2027",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-dominique-de-villepin-annonce-officiellement-sa-candidature-a-lelection-20-11-2026-VXX4JKEYUJCJJBGEHVGO2KG5IY.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-20T11:11:41Z",
+      "title": "Présidentielle 2027 : Pourtant « purgée » de LFI, Clémentine Autain appelle aussi à voter Mélenchon",
+      "url": "https://www.20minutes.fr/politique/4264394-20261120-presidentielle-2027-pourtant-purgee-lfi-clementine-autain-appelle-aussi-voter-melenchon"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-20T10:55:59Z",
+      "title": "Dominique de Villepin annonce sa candidature à l’élection présidentielle : « Une décision lourde et difficile », déclare-t-il",
+      "url": "https://www.publicsenat.fr/actualites/politique/dominique-de-villepin-annonce-sa-candidature-a-lelection-presidentielle-une-decision-lourde-et-difficile-declare-t-il"
+    }
+  ],
+  "schema_version": "1.0"
+}
