@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T19:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-20T18:30:00Z",
+      "title": "Présidentielle 2027 : meetings, déplacements… Le plan de Raphaël Glucksmann pour tenter de se relancer",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-meetings-deplacements-le-plan-de-raphael-glucksmann-pour-tenter-de-se-relancer-20261120"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-20T19:00:02Z",
+      "title": "Dominique de Villepin : des coups par sa droite",
+      "url": "https://www.franceinfo.fr/elections/dominique-de-villepin-des-coups-par-sa-droite_8292857.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T19:02:30Z",
+      "title": "Philippe Rio, maire PCF de Grigny: \"Nous devrons créer la baston juridique\" en cas de victoire du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-philippe-rio-maire-pcf-de-grigny-nous-devrons-creer-la-baston-juridique-en-cas-de-victoire-du-rn_VN-202611200875.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T18:56:59Z",
+      "title": "Raquel Garrido réagit au ralliement de membres du mouvement \"L’Après\" à la candidature de Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-raquel-garrido-reagit-au-ralliement-de-membres-du-mouvement-l-apres-a-la-candidature-de-jean-luc-melenchon_VN-202611200868.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
