@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T12:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-20T11:59:25Z",
+      "title": "ÉDITO. Les Écologistes sont-ils solubles dans l'élection présidentielle ?",
+      "url": "https://www.franceinfo.fr/politique/marine-tondelier/edito-les-ecologistes-sont-ils-solubles-dans-l-election-presidentielle_8292236.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T12:07:05Z",
+      "title": "Présidentielle: pour Dominique de Villepin, le \"hollandisme a fermé les yeux sur la question sociale\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-pour-dominique-de-villepin-le-hollandisme-a-ferme-les-yeux-sur-la-question-sociale_VN-202611200548.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T11:52:12Z",
+      "title": "Présidentielle: Dominique de Villepin souhaite \"avancer\" dans un \"esprit du rassemblement\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-dominique-de-villepin-souhaite-avancer-dans-un-esprit-du-rassemblement_VN-202611200537.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T11:22:57Z",
+      "title": "Dominique de Villepin propose la création d’“un conseil des territoires\" qui permettrait de faire remonter\" les revendications\" des maires",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dominique-de-villepin-propose-la-creation-d-un-conseil-des-territoires-qui-permettrait-de-faire-remonter-les-revendications-des-maires_VN-202611200521.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : dettes, place de la jeunesse, « guerre civile »… Ce qu’il faut retenir de l’annonce de la candidature de Dominique de Villepin",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-dettes-place-de-la-jeunesse-guerre-civile-ce-quil-faut-retenir-de-lannonce-de-la-candidature-de-dominique-de-villepin-20-11-2026-VXL7D3ZQB5GJPJG4E73ZBNXXCA.php"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-20T11:42:32Z",
+      "title": "Présidentielle 2027 : l'ancien Premier ministre, Dominique de Villepin annonce sa candidature",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261120-pr%C3%A9sidentielle-2027-l-ancien-premier-ministre-dominique-de-villepin-annonce-sa-candidature"
+    }
+  ],
+  "schema_version": "1.0"
+}
