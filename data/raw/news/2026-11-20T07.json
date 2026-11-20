@@ -1,0 +1,136 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T07:18:06Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-20T06:37:22Z",
+      "title": "Main tendue de Tondelier à Mélenchon : Jadot annonce son départ des Ecologistes",
+      "url": "https://www.liberation.fr/politique/elections/main-tendue-de-tondelier-a-melenchon-jadot-annonce-son-depart-des-ecologistes-20261120_UZTRMFUYAZHGZCDOXMPPCZW75M/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-20T07:10:02Z",
+      "title": "Édito. Présidentielle 2027, l’éternel rendez-vous manqué des écologistes avec l’Élysée",
+      "url": "https://www.franceinfo.fr/replay-radio/l-edito-politique/edito-presidentielle-2027-l-eternel-rendez-vous-manque-des-ecologistes-avec-l-elysee_8270120.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T07:01:07Z",
+      "title": "L'ÉDITO POLITIQUE - Présidentielle: Marine Le Pen prépare déjà l'entre-deux-tours",
+      "url": "https://www.bfmtv.com/politique/video-l-edito-politique-presidentielle-marine-le-pen-prepare-deja-l-entre-deux-tours_VN-202611200272.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan",
+        "lisnard",
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-20T06:51:00Z",
+      "title": "\"On y va pour gagner\": dopé par des sondages en hausse, David Lisnard tente d'imposer sa marque pour l'organisation d'une primaire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/on-y-va-pour-gagner-dope-par-des-sondages-en-hausse-david-lisnard-tente-d-imposer-sa-marque-pour-l-organisation-d-une-primaire_AN-202611200109.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-20T06:43:38Z",
+      "title": "Dominique de Villepin, un homme de droite populaire à gauche mais en quête d'électeurs",
+      "url": "https://www.france24.com/fr/france/20261120-france-presidentielle-2027-dominique-de-villepin-homme-droite-populaire-gauche-sans-electeurs"
+    }
+  ],
+  "schema_version": "1.0"
+}
