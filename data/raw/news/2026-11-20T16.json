@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T16:18:29Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "villepin"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-20T15:11:05Z",
+      "title": "Présidentielle 2027 : le candidat Dominique de Villepin se rêve en « guide pour le pays »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-le-candidat-dominique-de-villepin-se-reve-en-guide-pour-le-pays-20261120"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-20T15:41:49Z",
+      "title": "Dominique De Villepin, le pari de l'Elysée : \"On/Off\" épisode 10",
+      "url": "https://www.franceinfo.fr/politique/dominique-de-villepin-le-pari-de-l-elysee-on-off-episode-10_8292278.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-20T15:08:17Z",
+      "title": "Dominique de Villepin annonce sa candidature à l'élection présidentielle, évoquant une \"décision lourde, difficile\"",
+      "url": "https://www.franceinfo.fr/elections/dominique-de-villepin-annonce-sa-candidature-a-l-election-presidentielle-evoquant-une-decision-lourde-difficile_8292431.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Tiakola, Médine, Theodora... le monde du rap multiplie les appels à voter pour Jean-Luc Mélenchon et LFI",
+      "url": "https://www.leparisien.fr/politique/presidentielle-2027-tiakola-medine-theodora-le-monde-du-rap-multiplie-les-appels-a-voter-pour-jean-luc-melenchon-et-lfi-20-11-2026-4QTQ2MSXLRDVRFLSU6B7CVVU2A.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
