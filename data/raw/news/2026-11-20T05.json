@@ -1,0 +1,110 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-20T05:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-20T04:30:03Z",
+      "title": "Jean-Luc Moudenc, maire de Toulouse : « Gabriel Attal, David Lisnard, Edouard Philippe et Bruno Retailleau, de vous quatre, il n’en faudra qu’un. Comment faire ? »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/20/jean-luc-moudenc-maire-de-toulouse-gabriel-attal-david-lisnard-edouard-philippe-et-bruno-retailleau-de-vous-quatre-il-n-en-faudra-qu-un-comment-faire_6813555_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-20T04:31:00Z",
+      "title": "Tondelier se tourne vers Mélenchon : l’occasion pour Raphaël Glucksmann de réunir les «écolos-réalos»",
+      "url": "https://www.liberation.fr/politique/tondelier-se-tourne-vers-melenchon-loccasion-pour-raphael-glucksmann-de-reunir-les-ecolos-realos-20261120_SZ3FRFXXDBFCBEHORYMBLQ3HSE/"
+    }
+  ],
+  "schema_version": "1.0"
+}
