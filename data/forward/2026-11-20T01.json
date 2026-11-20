@@ -1,0 +1,34 @@
+{
+  "detected_at": "2026-11-20T01:18:28Z",
+  "flags": [
+    {
+      "candidate_id": "bardella",
+      "date": "2026-11-20",
+      "detail": "support 0.32 [0.26, 0.39] in the drop to 2026-11-18T00:00:00Z → 0.17 [0.12, 0.23] in the drop to 2026-11-20T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.1505
+    },
+    {
+      "candidate_id": "glucksmann",
+      "date": "2026-11-20",
+      "detail": "support 0.17 [0.13, 0.23] in the drop to 2026-11-18T00:00:00Z → 0.08 [0.05, 0.12] in the drop to 2026-11-20T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.0958
+    },
+    {
+      "candidate_id": "hollande",
+      "date": "2026-11-20",
+      "detail": "support 0.03 [0.02, 0.07] in the drop to 2026-11-18T00:00:00Z → 0.15 [0.11, 0.21] in the drop to 2026-11-20T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.1148
+    },
+    {
+      "candidate_id": "villepin",
+      "date": "2026-11-20",
+      "detail": "support 0.40 [0.31, 0.49] in the drop to 2026-11-18T00:00:00Z → 0.22 [0.16, 0.30] in the drop to 2026-11-20T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.1724
+    }
+  ],
+  "schema_version": "1.0"
+}
