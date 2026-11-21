@@ -1,0 +1,151 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-21T19:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-21T19:04:57Z",
+      "title": "Dans le Var, Eric Zemmour en campagne pour une « primaire de la droite »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/21/dans-le-var-eric-zemmour-en-campagne-pour-une-primaire-de-la-droite_6814062_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-21T18:59:46Z",
+      "title": "\"Je serai le candidat de la liberté de pensée, de parler, de dire ce que vous voyez\", clame Eric Zemmour lors de son premier meeting de campagne présidentielle",
+      "url": "https://www.franceinfo.fr/elections/je-serai-le-candidat-de-la-liberte-de-pensee-de-parler-de-dire-ce-que-vous-voyez-clame-eric-zemmour-lors-de-son-premier-meeting-de-campagne-presidentielle_8294024.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-21T19:13:05Z",
+      "title": "Primaire de la droite et du centre: une nouvelle réunion est prévue entre les équipes de Bruno Retailleau, Gabriel Attal et David Lisnard jeudi",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-de-la-droite-et-du-centre-une-nouvelle-reunion-est-prevue-entre-les-equipes-de-bruno-retailleau-gabriel-attal-et-david-lisnard-jeudi_VN-202611210415.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-21T19:10:36Z",
+      "title": "François Ruffin retire sa candidature pour l'élection présidentielle: \"Je trouve ça dommage\", déclare Sarah Saldmann, juriste et essayiste",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-francois-ruffin-retire-sa-candidature-pour-l-election-presidentielle-je-trouve-ca-dommage-declare-sarah-saldmann-juriste-et-essayiste_VN-202611210413.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-21T18:56:36Z",
+      "title": "Présidentielle 2027: Éric Zemmour s'érige en \"candidat de la liberté de parler\" pour son premier meeting de campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-eric-zemmour-s-erige-en-candidat-de-la-liberte-de-parler-pour-son-premier-meeting-de-campagne_AD-202611210407.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-21T18:42:58Z",
+      "title": "\"J'ai été convié à cette primaire\": si une primaire de la droite et du centre se déroule, Éric Zemmour, candidat \"Reconquête\" à la présidentielle, souhaite y participer",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-ai-ete-convie-a-cette-primaire-si-une-primaire-de-la-droite-et-du-centre-se-deroule-eric-zemmour-candidat-reconquete-a-la-presidentielle-souhaite-y-participer_VN-202611210405.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-21T18:25:45Z",
+      "title": "Présidentielle 2027: François Ruffin annonce retirer sa candidature",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-francois-ruffin-annonce-retirer-sa-candidature_VN-202611210397.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
