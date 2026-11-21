@@ -1,0 +1,106 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-21T15:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-21T15:13:55Z",
+      "title": "Présidentielle 2027 : Sandrine Rousseau regrette le «truc anti-Mélenchon primaire» de Yannick Jadot",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-sandrine-rousseau-regrette-le-truc-anti-melenchon-primaire-de-yannick-jadot-20261121_6PWK7EZ7OFFSFAR52LSPOJJBAM/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Lisnard, c’est Pac-Man, il a mangé Retailleau » : Philippe et Attal bousculés par le phénomène Lisnard",
+      "url": "https://www.leparisien.fr/elections/presidentielle/lisnard-cest-pac-man-il-a-mange-retailleau-philippe-et-attal-bouscules-par-le-phenomene-lisnard-21-11-2026-D237CPRATVHDLDKUFBRMSE2PQU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
