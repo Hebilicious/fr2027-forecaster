@@ -1,0 +1,106 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-21T23:18:26Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe",
+        "zemmour"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-21T22:46:30Z",
+      "title": "Présidentielle 2027 : David Lisnard voit dans une primaire de la droite et du centre « un moyen d’exclure les macronistes »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/21/presidentielle-2027-david-lisnard-voit-dans-une-primaire-de-la-droite-et-du-centre-un-moyen-d-exclure-les-macronistes_6814071_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-21T22:35:55Z",
+      "title": "Primaire de la droite et du centre: \"Le RN redoute que cette primaire ait lieu\", déclare David Lisnard, candidat à l'élection présidentielle, dans le JDD",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-de-la-droite-et-du-centre-le-rn-redoute-que-cette-primaire-ait-lieu-declare-david-lisnard-candidat-a-l-election-presidentielle-dans-le-jdd_VN-202611210475.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
