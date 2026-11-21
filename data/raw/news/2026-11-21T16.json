@@ -1,0 +1,114 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-21T16:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-21T16:00:12Z",
+      "title": "« Entre la France d’un passé idéalisé et la “nouvelle France”, nous avons besoin d’un autre récit national, sans enfermer personne dans ses origines »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/21/entre-la-france-d-un-passe-idealise-et-la-nouvelle-france-nous-avons-besoin-d-un-autre-recit-national-sans-enfermer-personne-dans-ses-origines_6814042_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-21T16:09:06Z",
+      "title": "\"La gouvernance française est foireuse\": dans les coulisses du pouvoir avec Bruno Le Maire",
+      "url": "https://www.bfmtv.com/politique/la-republique-en-marche/la-gouvernance-francaise-est-foireuse-dans-les-coulisses-du-pouvoir-avec-bruno-le-maire_AV-202611210370.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-21T15:28:39Z",
+      "title": "Bruno Le Maire, ancien ministre, raconte la journée type d'un ministre de l'Économie",
+      "url": "https://www.bfmtv.com/politique/gouvernement/video-bruno-le-maire-ancien-ministre-raconte-la-journee-type-d-un-ministre-de-l-economie_VN-202611210359.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
