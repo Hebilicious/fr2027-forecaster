@@ -2,6 +2,19 @@
 
 Dated entries for every assumption, parameter change, source added or dropped, and the reason. Newest first within a day.
 
+## 2026-11-21
+
+### Field: 2026-11-21-ruffin-withdraws (via Grok Bot field_change `2026-11-21-ruffin-withdraws`)
+
+François Ruffin announced on 21 November 2026 that he was withdrawing from the 2027 presidential election, taking "note of the impasse" of his campaign after failing to secure a broad primary of the whole left. He endorsed no candidate.
+
+François Ruffin formally withdrew on 21 November 2026 (Le Parisien; franceinfo with AFP; BFMTV with AFP), taking "note of the impasse" of his campaign after failing to impose a "broad primary" of the whole left. In his statement he endorsed no candidate and wished the remaining left-wing candidates "good luck and a good campaign". Status changes from declared to withdrawn. Slot ruffin probability set from 0.5 to 0: a withdrawn candidate stays in the slot at p 0.
+
+- `config/candidates.yaml`: `ruffin` status declared → withdrawn; slot `ruffin` ruffin 0.5 → ruffin 0; `as_of` 2026-11-21.
+- Sources: [Présidentielle 2027 : François Ruffin retire sa candidature prenant « acte de l’impasse » de sa campagne](https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-francois-ruffin-retire-sa-candidature-prenant-acte-de-limpasse-de-sa-campagne-21-11-2026-U32SHNW4YVHQNKT3Z6GQX5AEVM.php), [François Ruffin retire sa candidature à l'élection présidentielle et souhaite « bonne campagne » aux « candidats de gauche encore en lice »](https://www.franceinfo.fr/elections/francois-ruffin-retire-sa-candidature-a-l-election-presidentielle-et-souhaite-bonne-campagne-aux-candidats-de-gauche-encore-en-lice_8294003.html), [Présidentielle 2027: François Ruffin prend « acte de l'impasse » de sa campagne et annonce retirer sa candidature](https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-francois-ruffin-prend-acte-de-l-impasse-de-sa-campagne-et-annonce-retirer-sa-candidature_AD-202611210380.html).
+- Events: `2026-11-21-ruffin-withdraws`.
+- Sent by Grok Bot fr2027 (checks-1, run `checks-2026-11-21T21:33Z`); checked and applied by the Live workflow.
+
 ## 2026-11-20
 
 ### Field: 2026-11-20-villepin-declares (via Grok Bot field_change `2026-11-20-villepin-declares`)

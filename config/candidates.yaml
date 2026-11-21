@@ -4,7 +4,7 @@
 # Each candidate belongs to exactly one slot. A slot draws at most one option, and an option lists
 # the candidates who run together; 1 - sum(p) is the chance nobody from the slot runs.
 schema_version: "1.0"
-as_of: 2026-11-20
+as_of: 2026-11-21
 blocs: [far_left, left, centre, right, far_right, other]
 candidates:
   - id: arthaud
@@ -139,14 +139,16 @@ candidates:
     name: "François Ruffin"
     party: "Debout !"
     bloc: left
-    status: declared
+    status: withdrawn
     declared_on: 2025-04-01
-    notes: "Declared for a single left candidacy (Montreuil meeting, 1 Apr 2025 per FR Wikipedia). Was refused entry to the PS-PP-GRS primary; La Gazette France (16 Sep 2026) calls him a declared candidate continuing alone."
+    notes: "Declared for a single left candidacy (Montreuil meeting, 1 Apr 2025). Refused entry to the PS-PP-GRS primary and continued alone. Withdrew on 21 November 2026, taking note of the impasse of his campaign after failing to secure a broad left primary; endorsed no candidate (Le Parisien, franceinfo/AFP, BFMTV/AFP)."
     sources:
       - url: "https://www.lagazettefrance.fr/article/presidentielle-francois-ruffin-l-ex-insoumis-qui-a-du-mal-a-socialiser"
         date: 2026-09-16
       - url: "https://fr.wikipedia.org/wiki/Primaire_de_la_gauche_unitaire_de_2026"
         date: 2026-10-09
+      - url: "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-francois-ruffin-retire-sa-candidature-prenant-acte-de-limpasse-de-sa-campagne-21-11-2026-U32SHNW4YVHQNKT3Z6GQX5AEVM.php"
+        date: 2026-11-21
   - id: bouamrane
     name: "Karim Bouamrane"
     party: "Parti socialiste (PS)"
@@ -467,9 +469,9 @@ slots:
     options:
       - { run: [tondelier], p: 0.55 }
   - id: ruffin
-    rationale: "Refused entry to the PS-led primary; continuing alone."
+    rationale: "Withdrew on 21 November 2026, taking note of the impasse of his campaign after failing to secure a broad left primary; remains in the slot at p 0."
     options:
-      - { run: [ruffin], p: 0.5 }
+      - { run: [ruffin], p: 0 }
   - id: bouamrane
     rationale: "Declared 9 June 2026 outside the primary."
     options:
