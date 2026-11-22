@@ -1,0 +1,143 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T21:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T20:52:17Z",
+      "title": "Retrait de sa candidature à l'élection présidentielle: l'interview en intégralité de François Ruffin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retrait-de-sa-candidature-a-l-election-presidentielle-l-interview-en-integralite-de-francois-ruffin_VN-202611220430.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T20:36:23Z",
+      "title": "Sur Raphaël Glucksmann, \"il y a encore des progrès à faire\", déclare François Ruffin, ancien candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-sur-raphael-glucksmann-il-y-a-encore-des-progres-a-faire-declare-francois-ruffin-ancien-candidat-a-l-election-presidentielle_VN-202611220420.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T20:34:27Z",
+      "title": "\"Je ne souhaite qu'une chose, que Jean-Luc Mélenchon me donne tort\", assure François Ruffin, ancien candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-ne-souhaite-qu-une-chose-que-jean-luc-melenchon-me-donne-tort-assure-francois-ruffin-ancien-candidat-a-l-election-presidentielle_VN-202611220419.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T20:34:08Z",
+      "title": "\"Je n'ai pas d'adversaires à gauche, j'ai un adversaire, c'est Marine Le Pen\", affirme François Ruffin, ancien candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-n-ai-pas-d-adversaires-a-gauche-j-ai-un-adversaire-c-est-marine-le-pen-affirme-francois-ruffin-ancien-candidat-a-l-election-presidentielle_VN-202611220418.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T20:29:05Z",
+      "title": "Retrait de sa candidature à l'élection présidentielle: \"Je dis aux autres faites mieux\", lance François Ruffin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retrait-de-sa-candidature-a-l-election-presidentielle-je-dis-aux-autres-faites-mieux-lance-francois-ruffin_VN-202611220417.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T20:28:35Z",
+      "title": "Retrait de sa candidature à l'élection présidentielle: \"C'est de l'ordre de l'évidence\", affirme François Ruffin",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retrait-de-sa-candidature-a-l-election-presidentielle-c-est-de-l-ordre-de-l-evidence-affirme-francois-ruffin_VN-202611220416.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
