@@ -1,0 +1,106 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T08:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "zemmour"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-22T07:33:12Z",
+      "title": "Primaire de la droite et du centre : les limites fixées par Larcher et la ligne soutenue par Lisnard aiguisent les craintes d’une impasse",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/primaire-de-la-droite-et-du-centre-les-limites-fixees-par-larcher-et-la-ligne-soutenue-par-lisnard-aiguisent-les-craintes-d-une-impasse-20261122"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-22T07:29:05Z",
+      "title": "Pour David Lisnard, la primaire de la droite et du centre est un «moyen d’éliminer les macronistes»",
+      "url": "https://www.liberation.fr/politique/pour-david-lisnard-la-primaire-de-la-droite-et-du-centre-est-un-moyen-deliminer-les-macronistes-20261122_WJGV3ANEVZECXAV225UMW4JK4Q/"
+    }
+  ],
+  "schema_version": "1.0"
+}
