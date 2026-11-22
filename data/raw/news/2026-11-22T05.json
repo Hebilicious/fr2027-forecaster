@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T05:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-22T05:14:00Z",
+      "title": "Pour Jean-Luc Mélenchon, les limites du modèle brésilien Lula",
+      "url": "https://www.liberation.fr/idees-et-debats/tribunes/pour-jean-luc-melenchon-les-limites-du-modele-bresilien-lula-20261122_OW7T3RMFRJBCFBXKDFS5VMLKXY/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Lisnard, l’invité surprise",
+      "url": "https://www.leparisien.fr/elections/presidentielle/lisnard-linvite-surprise-22-11-2026-HMAHKC2SUBHZZJJY7BUMMA3MG4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
