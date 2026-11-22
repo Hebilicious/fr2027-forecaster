@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T17:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-22T17:09:00Z",
+      "title": "Raquel Garrido : «Notre sujet, c’est comment élargir et je ne suis pas certaine que Jean-Luc Mélenchon soit une solution gagnante»",
+      "url": "https://www.liberation.fr/politique/elections/raquel-garrido-notre-sujet-cest-comment-elargir-et-je-ne-suis-pas-certaine-que-jean-luc-melenchon-soit-une-solution-gagnante-20261123_5H4XIPXKZNHYZDL7CV2NPPZMCI/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-22T16:48:00Z",
+      "title": "«Règle d’or» budgétaire : Emmanuel Macron réfléchit à s’en emparer, la droite et l’extrême droite s’en réjouissent",
+      "url": "https://www.liberation.fr/economie/regle-dor-budgetaire-emmanuel-macron-reflechit-a-sen-emparer-la-droite-et-lextreme-droite-sen-rejouissent-20261122_BPFY5UQC7VGJNMGJO35GLLOZJQ/"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T16:31:50Z",
+      "title": "Interrogé sur François Hollande et son éventuelle candidature à la présidentielle, Henri Guaino, ancien conseiller spécial de Nicolas Sarkozy à l’Elysée, estime que \"le pays est sorti divisé\" de son quinquennat",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-interroge-sur-francois-hollande-et-son-eventuelle-candidature-a-la-presidentielle-henri-guaino-ancien-conseiller-special-de-nicolas-sarkozy-a-l-elysee-estime-que-le-pays-est-sorti-divise-de-son-quinquennat_VN-202611220339.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Elle est capable de faire l’inverse de ce qu’elle dit » : Marine Le Pen censurera-t-elle Sébastien Lecornu ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/elle-est-capable-de-faire-linverse-de-ce-quelle-dit-marine-le-pen-censurera-t-elle-sebastien-lecornu-22-11-2026-E5DBD6BAKJCZRPS73HVWTHIPN4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
