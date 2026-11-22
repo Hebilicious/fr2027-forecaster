@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T20:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-22T19:18:33Z",
+      "title": "« Tout le monde chez nous n’est pas de gauche » : quand le vote RN progresse chez les personnes LGBT",
+      "url": "https://www.lefigaro.fr/actualite-france/tout-le-monde-chez-nous-n-est-pas-de-gauche-quand-le-vote-rn-progresse-chez-les-personnes-lgbt-20261122"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-22T19:19:45Z",
+      "title": "Présidentielle 2027 : \"Je ne me résoudrai jamais à ce que Marine Le Pen entre à l'Élysée\", lâche Raphaël Glucksman, candidat PS et Place publique",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/le-grand-enjeu/presidentielle-2027-je-ne-me-resoudrai-jamais-a-ce-que-marine-le-pen-entre-a-l-elysee-lache-raphael-glucksman-candidat-ps-et-place-publique_8295134.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
