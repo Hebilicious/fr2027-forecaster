@@ -1,0 +1,117 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T22:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T21:50:52Z",
+      "title": "\"Son combat est le mien\": Raphaël Glucksmann rend hommage à François Ruffin après son retrait de la course à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/son-combat-est-le-mien-raphael-glucksmann-rend-hommage-a-francois-ruffin-apres-son-retrait-de-la-course-a-la-presidentielle_AD-202611220446.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T21:39:45Z",
+      "title": "\"C'est de l'ordre de l'évidence\": après son retrait de la course à l'Élysée, François Ruffin souhaite \"bon courage\" aux candidats de gauche",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/c-est-de-l-ordre-de-l-evidence-apres-son-retrait-de-la-course-a-l-elysee-francois-ruffin-souhaite-bon-courage-aux-candidats-de-gauche_AN-202611220444.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe",
+        "ruffin"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-22T22:14:36Z",
+      "title": "Primaire de la droite et du centre: sans Édouard Philippe, \"ça n'aurait pas de sens\", estime Hervé Morin, président de la région Normandie",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-primaire-de-la-droite-et-du-centre-sans-edouard-philippe-ca-n-aurait-pas-de-sens-estime-herve-morin-president-de-la-region-normandie_VN-202611220454.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
