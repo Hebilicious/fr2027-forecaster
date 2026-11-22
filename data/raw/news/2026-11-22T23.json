@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T23:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T22:41:42Z",
+      "title": "Retrait de la candidature de François Ruffin à l'élection présidentielle: \"Il a été extrêmement responsable\", déclare Léa Balage El Mariky, députée Les Écologistes",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retrait-de-la-candidature-de-francois-ruffin-a-l-election-presidentielle-il-a-ete-extremement-responsable-declare-lea-balage-el-mariky-deputee-les-ecologistes_VN-202611220460.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T22:40:26Z",
+      "title": "\"Les réseaux sociaux et on le voit dans cette présidentielle, pourront impacter jusqu'à trois, quatre,cinq points\", analyse Richard Ramos, député Modem",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-reseaux-sociaux-et-on-le-voit-dans-cette-presidentielle-pourront-impacter-jusqu-a-trois-quatre-cinq-points-analyse-richard-ramos-depute-modem_VN-202611220459.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : CBS, Financial Times, télé égyptienne… Marine Le Pen en campagne dans les médias internationaux, sans jamais quitter la France",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-cbs-financial-times-tele-egyptienne-marine-le-pen-en-campagne-dans-les-medias-internationaux-sans-jamais-quitter-la-france-22-11-2026-IV37MRJVO5BSDOLN4RI4J26GUM.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
