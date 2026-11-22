@@ -1,0 +1,125 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T06:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T06:09:25Z",
+      "title": "DIRECT. Présidentielle: David Lisnard voit une primaire de la droite et du centre comme un \"moyen d'exclure les macronistes\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/direct-presidentielle-david-lisnard-voit-une-primaire-de-la-droite-et-du-centre-comme-un-moyen-d-exclure-les-macronistes_LN-202611220111.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T06:01:05Z",
+      "title": "Présidentielle: Gabriel Attal va modifier son \"pacte pour la jeunesse\" pour mieux refléter les préoccupations de 150 jeunes",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-gabriel-attal-va-modifier-son-pacte-pour-la-jeunesse-pour-mieux-refleter-les-preoccupations-de-150-jeunes_AN-202611220129.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-22T05:55:46Z",
+      "title": "L'ÉDITO POLITIQUE - Présidentielle: invité surprise de la campagne, jusqu'où ira David Lisnard?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-edito-politique-presidentielle-invite-surprise-de-la-campagne-jusqu-ou-ira-david-lisnard_VN-202611220128.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "roussel",
+        "ruffin"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-22T06:00:01Z",
+      "title": "Présidentielle 2027 : Après son retrait, Ruffin courtisé par Roussel et Glucksmann vers l’Élysée",
+      "url": "https://www.20minutes.fr/politique/4264738-20261122-presidentielle-2027-apres-retrait-ruffin-courtise-roussel-glucksmann-vers-elysee"
+    }
+  ],
+  "schema_version": "1.0"
+}
