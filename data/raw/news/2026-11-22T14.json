@@ -1,0 +1,122 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T14:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-22T14:01:15Z",
+      "title": "Fuites vers le RN : Marine Le Pen dit n’avoir « jamais reçu d’informations confidentielles » du préfet Hugues Moutouh",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/22/fuites-vers-le-rn-marine-le-pen-dit-n-avoir-jamais-recu-d-informations-confidentielles-du-prefet-hugues-moutouh_6814216_3224.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-22T13:35:31Z",
+      "title": "\"Je n'ai jamais reçu d'informations confidentielles\", affirme Marine Le Pen, au sujet du préfet Hugues Moutouh, soupçonné d'avoir renseigné le RN",
+      "url": "https://www.franceinfo.fr/politique/front-national/je-n-ai-jamais-recu-d-informations-confidentielles-affirme-marine-le-pen-au-sujet-du-prefet-hugues-moutouh-soupconne-d-avoir-renseigne-le-rn_8294876.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-22T13:23:36Z",
+      "title": "\"Franc-Jeu\". Avec Marine Le Pen",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/franc-jeu/franc-jeu-avec-marine-le-pen_8292911.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-22T13:16:58Z",
+      "title": "C’est quoi la règle de Chatham House ?",
+      "url": "https://www.20minutes.fr/societe/4264760-20261122-quoi-regle-chatham-house"
+    }
+  ],
+  "schema_version": "1.0"
+}
