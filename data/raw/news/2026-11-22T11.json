@@ -1,0 +1,133 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-22T11:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-22T10:17:46Z",
+      "title": "Guerre en Ukraine, crise sociale, sortie de l'UE... Le 8h30 franceinfo de Nicolas Dupont-Aignan",
+      "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/guerre-en-ukraine-crise-sociale-sortie-de-l-ue-le-8h30-franceinfo-de-nicolas-dupont-aignan_8250490.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-22T10:47:48Z",
+      "title": "Campagne présidentielle : David Lisnard voit une primaire comme \"un moyen d'exclure les macronistes\"",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/campagne-presidentielle-david-lisnard-voit-une-primaire-comme-un-moyen-d-exclure-les-macronistes_8294525.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : contrôle continu, horaires… Gabriel Attal veut modifier son « pacte jeunesse » pour mieux refléter les préoccupations",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-controle-continu-horaires-gabriel-attal-veut-modifier-son-pacte-jeunesse-pour-mieux-refleter-les-preoccupations-22-11-2026-37NQJ22MMRGXVHJSVNHGV4T2SY.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Soupçons de fuite vers le RN : un mail du service du préfet Moutouh découvert lors d’une perquisition chez un proche de Marine Le Pen",
+      "url": "https://www.leparisien.fr/faits-divers/soupcons-de-fuite-vers-le-rn-un-mail-du-service-du-prefet-moutouh-decouvert-lors-dune-perquisition-chez-un-proche-de-marine-le-pen-22-11-2026-ANPUOSCN4BAQTJFJNLQCS4YDHU.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-22T07:10:24Z",
+      "title": "Présidentielle 2027 : Nouvelle réunion jeudi entre Retailleau, Lisnard et Attal...",
+      "url": "https://www.20minutes.fr/politique/4264740-20261122-presidentielle-2027-marylise-leon-veut-eviter-second-tour-lendemain-1er-mai"
+    }
+  ],
+  "schema_version": "1.0"
+}
