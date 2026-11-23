@@ -1,0 +1,126 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T09:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T09:01:19Z",
+      "title": "\"Il faut beaucoup de courage aujourd'hui à gauche pour dire 'Jean-Luc Mélenchon n'est pas la gauche que je veux'\", assure Laurence Rossignol, porte-parole de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-il-faut-beaucoup-de-courage-aujourd-hui-a-gauche-pour-dire-jean-luc-melenchon-n-est-pas-la-gauche-que-je-veux-assure-laurence-rossignol-porte-parole-de-raphael-glucksmann_VN-202611230365.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T08:53:23Z",
+      "title": "La double campagne de David Lisnard, à la présidentielle et à sa réélection à la tête de l'Association des Maires de France, contestée par son adversaire Philippe Laurent, maire UDI de Sceaux",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-double-campagne-de-david-lisnard-a-la-presidentielle-et-a-sa-reelection-a-la-tete-de-l-association-des-maires-de-france-contestee-par-son-adversaire-philippe-laurent-maire-udi-de-sceaux_VN-202611230358.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T08:42:29Z",
+      "title": "“C’est totalement non”: Valérie Pécresse refuse une primaire de la droite et du centre avec Éric Zemmour",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-c-est-totalement-non-valerie-pecresse-refuse-une-primaire-de-la-droite-et-du-centre-avec-eric-zemmour_VN-202611230348.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T08:25:20Z",
+      "title": "Présidentielle 2027: Valérie Pécresse estime que la primaire de la droite et du centre est \"morte-née\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-valerie-pecresse-estime-que-la-primaire-de-la-droite-et-du-centre-est-morte-nee_AN-202611230330.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
