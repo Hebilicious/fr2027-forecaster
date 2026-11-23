@@ -1,0 +1,144 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T17:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-23T16:12:58Z",
+      "title": "Après son départ des Verts, Jadot fait scission et fonde son propre parti «Écologistes et démocrates»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/apres-son-depart-des-verts-jadot-fait-scission-et-fonde-son-propre-parti-ecologistes-et-democrates-20261123"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-23T17:12:43Z",
+      "title": "Le préfet Moutouh et le RN : cinq questions pour tout comprendre à l’affaire",
+      "url": "https://www.liberation.fr/societe/police-justice/le-prefet-moutouh-et-le-rn-cinq-questions-pour-tout-comprendre-a-laffaire-20261123_R4AATCCKQBC7DA4C2V32F2C3NI/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-23T17:06:25Z",
+      "title": "Marine Tondelier a mené les Écologistes dans une «impasse» : après leur rupture, Yannick Jadot et Jérémie Iordanoff annoncent la création d’un nouveau parti",
+      "url": "https://www.liberation.fr/politique/marine-tondelier-a-mene-les-ecologistes-dans-une-impasse-apres-leur-rupture-yannick-jadot-et-jeremie-iordanoff-annoncent-la-creation-dun-nouveau-parti-20261123_WAYO5QZHJ5DZJOGEXCTCM266LY/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T17:03:13Z",
+      "title": "\"Nous voulons sortir des ambiguïtés et de la confusion\": Yannick Jadot lance son nouveau parti Écologistes et démocrates",
+      "url": "https://www.bfmtv.com/politique/europe-ecologie-les-verts/nous-voulons-sortir-des-ambiguites-et-de-la-confusion-yannick-jadot-lance-son-nouveau-parti-ecologistes-et-democrates_AN-202611230686.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-23T16:55:59Z",
+      "title": "Présidentielle 2027 : Le parti Génération. s (créé par Benoît Hamon) rallie la candidature de Mélenchon",
+      "url": "https://www.20minutes.fr/politique/4265178-20261123-presidentielle-2027-parti-generation-cree-benoit-hamon-rallie-candidature-melenchon"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-23T08:00:11Z",
+      "title": "Sens Public — Extrême droite : Le Pen, Meloni, Weidel peuvent-elles s’allier en Europe ?",
+      "url": "https://www.publicsenat.fr/emission/sens-public/extreme-droite-le-pen-meloni-weidel-peuvent-elles-sallier-en-europe-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
