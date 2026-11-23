@@ -1,0 +1,199 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T20:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-23T19:50:50Z",
+      "title": "David Lisnard fait-il des \"appels du pied\" à l'extrême droite comme l'affirme Jean-François Copé ?",
+      "url": "https://www.franceinfo.fr/vrai-ou-fake/david-lisnard-fait-il-des-appels-du-pied-a-l-extreme-droite-comme-l-affirme-jean-francois-cope_8296674.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T20:02:22Z",
+      "title": "\"Sortir des ambiguïtés et de la confusion\": Yannick Jadot lance son nouveau parti Écologistes et démocrates",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-sortir-des-ambiguites-et-de-la-confusion-yannick-jadot-lance-son-nouveau-parti-ecologistes-et-democrates_VN-202611230857.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:54:12Z",
+      "title": "Pour Jordan Bardella (RN), David Lisnard est le \"contrebandier du macronisme\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-jordan-bardella-rn-david-lisnard-est-le-contrebandier-du-macronisme_VN-202611230854.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:48:15Z",
+      "title": "Attaques contre Brigitte Macron: \"On peut combattre le président de la République sans s'attaquer à sa famille ou à son épouse\", affirme Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-attaques-contre-brigitte-macron-on-peut-combattre-le-president-de-la-republique-sans-s-attaquer-a-sa-famille-ou-a-son-epouse-affirme-jordan-bardella-president-du-rassemblement-national_VN-202611230852.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:46:47Z",
+      "title": "Suspicions de fuites pour le RN: \"Je n'ai reçu aucune information de la part du préfet Moutouh\", assure Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/video-suspicions-de-fuites-pour-le-rn-je-n-ai-recu-aucune-information-de-la-part-du-prefet-moutouh-assure-jordan-bardella_VN-202611230851.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:35:24Z",
+      "title": "Thierry Lhermitte \"angoissé d'avoir à choisir entre la peste et le choléra\" pour la présidentielle: \"Pourquoi insulter des millions de gens en les comparant à la pire maladie?\", réagit Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-thierry-lhermitte-angoisse-d-avoir-a-choisir-entre-la-peste-et-le-cholera-pour-la-presidentielle-pourquoi-insulter-des-millions-de-gens-en-les-comparant-a-la-pire-maladie-reagit-jordan-bardella_VN-202611230846.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:29:34Z",
+      "title": "Laure Lavalette accusée d'avoir cautionné des écrits antisémites: \"Effectivement c'était une erreur\", reconnaît Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-laure-lavalette-accusee-d-avoir-cautionne-des-ecrits-antisemites-effectivement-c-etait-une-erreur-reconnait-jordan-bardella_VN-202611230844.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:24:35Z",
+      "title": "Retraites: Jordan Bardella, président du Rassemblement national, souhaite \"une réforme ambitieuse, pour la France du travail\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retraites-jordan-bardella-president-du-rassemblement-national-souhaite-une-reforme-ambitieuse-pour-la-france-du-travail_VN-202611230837.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:22:34Z",
+      "title": "\"Le problème de l'économie française c'est que les jeunes rentrent trop tard sur le marché du travail\", note Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-probleme-de-l-economie-francaise-c-est-que-les-jeunes-rentrent-trop-tard-sur-le-marche-du-travail-note-jordan-bardella_VN-202611230836.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:17:26Z",
+      "title": "Règle d'or budgétaire envisagée par Emmanuel Macron: \"Nous soutenons sur le prinicipe\", explique Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-regle-d-or-budgetaire-envisagee-par-emmanuel-macron-nous-soutenons-sur-le-prinicipe-explique-jordan-bardella_VN-202611230831.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-23T20:11:16Z",
+      "title": "Fuites présumées au profit du RN : Jordan Bardella trouve le « timing » de la perquisition « étrange »",
+      "url": "https://www.20minutes.fr/politique/4265225-20261123-fuites-presumees-profit-rn-jordan-bardella-trouve-timing-perquisition-etrange"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "villepin"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-23T19:58:31Z",
+      "title": "Présidentielle : qui pourra rassembler ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/le-d%C3%A9bat/20261123-pr%C3%A9sidentielle-qui-pourra-rassembler"
+    }
+  ],
+  "schema_version": "1.0"
+}
