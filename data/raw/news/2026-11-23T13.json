@@ -1,0 +1,170 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T13:18:36Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-23T12:40:04Z",
+      "title": "Présidentielle 2027 : le mouvement Génération.s s’engage dans la campagne de Jean-Luc Mélenchon",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/23/presidentielle-2027-le-mouvement-generation-s-s-engage-dans-la-campagne-de-jean-luc-melenchon_6814385_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-23T12:54:53Z",
+      "title": "«Je ne suis pas autorisé à faire campagne, autrement je peux vous dire que j’irais» : les confidences d’Emmanuel Macron à des grands patrons européens",
+      "url": "https://www.lefigaro.fr/politique/je-ne-suis-pas-autorise-a-faire-campagne-autrement-je-peux-vous-dire-que-j-irais-les-confidences-d-emmanuel-macron-a-des-grands-patrons-europeens-20261123"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-23T12:34:51Z",
+      "title": "Présidentielle 2027 : la deuxième réunion en vue d’une primaire entre David Lisnard, Bruno Retailleau et Gabriel Attal reportée",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-la-deuxieme-reunion-en-vue-d-une-primaire-entre-david-lisnard-bruno-retailleau-et-gabriel-attal-reportee-20261123"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T12:35:51Z",
+      "title": "Anne Hidalgo",
+      "url": "https://www.bfmtv.com/politique/anne-hidalgo_DN-201304200048.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T12:18:36Z",
+      "title": "\"J'espère le faire en tant que président des maires\": David Lisnard assure qu'il sera \"candidat à l'élection présidentielle\" même s'il n'est pas réélu à l'AMF",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-espere-le-faire-en-tant-que-president-des-maires-david-lisnard-assure-qu-il-sera-candidat-a-l-election-presidentielle-meme-s-il-n-est-pas-reelu-a-l-amf_VN-202611230516.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T12:16:20Z",
+      "title": "\"Il n'y a pas d'autres modes de départage\" que la primaire, affirme David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-n-y-a-pas-d-autres-modes-de-departage-que-la-primaire-affirme-david-lisnard_VN-202611230515.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Glucksmann, Pécresse, Payan… Les appels à changer la date du second tour prévu le dimanche 2 mai se multiplient",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-glucksmann-pecresse-payan-les-appels-a-changer-la-date-du-second-tour-prevu-le-dimanche-2-mai-se-multiplient-23-11-2026-ZHQJA75RX5HERDUEWLQ6T24VUE.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Génération.s, le parti fondé par Benoît Hamon, annonce soutenir la candidature de Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-generations-le-parti-fonde-par-benoit-hamon-annonce-soutenir-la-candidature-de-jean-luc-melenchon-23-11-2026-CNYDQ4MWUJERDEQY5ZX33N3ZWQ.php"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Mon souvenir de cette polémique ? Surjouée » : Marine Tondelier revient sur le « tollé » né de sa réponse sur Pompidou",
+      "url": "https://www.leparisien.fr/elections/presidentielle/mon-souvenir-de-cette-polemique-surjouee-marine-tondelier-revient-sur-le-tolle-ne-de-sa-reponse-sur-pompidou-23-11-2026-ZPHMO24JX5E6FGIOE4O44JDISM.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
