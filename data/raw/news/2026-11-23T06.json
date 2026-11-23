@@ -1,0 +1,153 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T06:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T06:16:21Z",
+      "title": "DIRECT. Présidentielle 2027: un nouveau sondage donne Marine Le Pen en baisse, David Lisnard dépasse Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/direct-presidentielle-2027-un-nouveau-sondage-donne-marine-le-pen-en-baisse-david-lisnard-depasse-edouard-philippe_LN-202611230170.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T05:50:22Z",
+      "title": "L'ÉDITO POLITIQUE - Présidentielle: jusqu'où peut aller David Lisnard?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-edito-politique-presidentielle-jusqu-ou-peut-aller-david-lisnard_VN-202611230141.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T05:33:39Z",
+      "title": "Présidentielle 2027: David Lisnard poursuit son ascension et double Édouard Philippe dans un sondage, Marine Le Pen en baisse",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-david-lisnard-poursuit-son-ascension-et-double-edouard-philippe-dans-un-sondage-marine-le-pen-en-baisse_AD-202611230122.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "riner",
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Le Pen, Mélenchon, de Villepin, Riner : avant le Congrès des maires, où en sont les candidats avec leurs parrainages ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/le-pen-melenchon-de-villepin-riner-avant-le-congres-des-maires-ou-en-sont-les-candidats-avec-leurs-parrainages-23-11-2026-YLTG42LDXRHTBBTL3AQSKKOPVQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : David Lisnard double Édouard Philippe, Marine Le Pen perd jusqu’à 5 points",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-david-lisnard-double-edouard-philippe-dans-un-sondage-marine-le-pen-perd-jusqua-5-points-23-11-2026-5V3LE43RFBC2LD3CQKCM3TPKGI.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-23T05:26:10Z",
+      "title": "Présidentielle : Le Pen recule et Lisnard accélère dans un nouveau sondage",
+      "url": "https://www.20minutes.fr/politique/4264988-20261123-presidentielle-pen-recule-lisnard-accelere-nouveau-sondage"
+    }
+  ],
+  "schema_version": "1.0"
+}
