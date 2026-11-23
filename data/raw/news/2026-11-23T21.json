@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T21:18:33Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-23T21:09:41Z",
+      "title": "Les écolos pro-Glucksmann fondent «Ecologistes et démocrates», un nouveau parti",
+      "url": "https://www.liberation.fr/politique/elections/les-ecolos-pro-glucksmann-fondent-ecologistes-et-democrates-un-nouveau-parti-20261123_MLJLZCW7TFETBE4P665OQHQB5Y/"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-23T20:51:01Z",
+      "title": "VIDEO. S'il est élu, Dominique de Villepin prévoit d'organiser \"un rassemblement\" et convoquera le Congrès au lendemain de l'élection présidentielle",
+      "url": "https://www.franceinfo.fr/elections/video-s-il-est-elu-dominique-de-villepin-prevoit-d-organiser-un-rassemblement-et-convoquera-le-congres-au-lendemain-de-l-election-presidentielle_8296740.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T20:39:41Z",
+      "title": "Primaire: en septembre, Édouard Philippe \"a proposé aux candidats de la droite et du centre de se rencontrer et de discuter\", assure Jérémie Patrier-Leitus, député \"Horizons\"",
+      "url": "https://www.bfmtv.com/politique/elections/video-primaire-en-septembre-edouard-philippe-a-propose-aux-candidats-de-la-droite-et-du-centre-de-se-rencontrer-et-de-discuter-assure-jeremie-patrier-leitus-depute-horizons_VN-202611230883.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:55:14Z",
+      "title": "Suspicions de fuites pour le RN: \"Je n'ai reçu aucune information de la part du préfet Moutouh\", assure Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-suspicions-de-fuites-pour-le-rn-je-n-ai-recu-aucune-information-de-la-part-du-prefet-moutouh-assure-jordan-bardella_VN-202611230881.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Une faute » mais un « total soutien » : Jordan Bardella défend Laure Lavalette, accusée d’avoir cautionné des écrits antisémites",
+      "url": "https://www.leparisien.fr/politique/une-faute-mais-un-total-soutien-jordan-bardella-defend-laure-lavalette-accusee-davoir-cautionne-des-ecrits-antisemites-23-11-2026-PV5Z6D66TBCHZEPP5GLKOVVN5E.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
