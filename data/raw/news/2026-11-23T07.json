@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T07:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T06:44:00Z",
+      "title": "Candidat à l’Élysée et à sa réélection à l’AMF: la \"double casquette\" de David Lisnard contestée par certains maires",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/candidat-a-l-elysee-et-a-sa-reelection-a-l-amf-la-double-casquette-de-david-lisnard-contestee-par-certains-maires_AV-202611230073.html"
+    },
+    {
+      "candidate_ids": [
+        "ruffin"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-23T07:00:13Z",
+      "title": "Toute l’info en 2 minutes : Fiasco de la COP31, Ruffin courtisé et le RN dément avoir été aidé par le préfet",
+      "url": "https://www.20minutes.fr/societe/4264992-20261123-toute-info-2-minutes-echec-cop31-ruffin-courtise-prefet-soupconne-aider-rn"
+    }
+  ],
+  "schema_version": "1.0"
+}
