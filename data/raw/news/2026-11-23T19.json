@@ -1,0 +1,229 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T19:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-23T18:24:11Z",
+      "title": "Lutter contre «l’oligarchie» : la gauche a raison de s’emparer du sujet",
+      "url": "https://www.liberation.fr/politique/lutter-contre-loligarchie-la-gauche-a-raison-de-semparer-du-sujet-20261123_26V2TEGOIJGPVIPRVK6NRBUX64/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:13:03Z",
+      "title": "Jordan Bardella, président du Rassemblement national, affirme que Marine Le Pen a un peu plus de \"400 parrainages\" pour la présidentielle de 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-president-du-rassemblement-national-affirme-que-marine-le-pen-a-un-peu-plus-de-400-parrainages-pour-la-presidentielle-de-2027_VN-202611230827.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:11:48Z",
+      "title": "Parrainages: \"Les maires sont un peu plus réticents à accorder leur signature\", reconnaît Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-parrainages-les-maires-sont-un-peu-plus-reticents-a-accorder-leur-signature-reconnait-jordan-bardella-president-du-rassemblement-national_VN-202611230823.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:09:18Z",
+      "title": "\"On ne se met pas dans cette hypothèse\": Jordan Bardella assure ne pas chercher à obtenir de parrainages pour l'élection présidentielle en cas d'inégibilité de Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-on-ne-se-met-pas-dans-cette-hypothese-jordan-bardella-assure-ne-pas-chercher-a-obtenir-de-parrainages-pour-l-election-presidentielle-en-cas-d-inegibilite-de-marine-le-pen_VN-202611230820.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:06:18Z",
+      "title": "David Lisnard est \"un macroniste démasqué\", estime Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-david-lisnard-est-un-macroniste-demasque-estime-jordan-bardella-president-du-rassemblement-national_VN-202611230815.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:03:51Z",
+      "title": "\"Nous allons remettre de l'ordre dans les comptes de l'État, parce que l'État français n'est pas un guichet social\", déclare Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-allons-remettre-de-l-ordre-dans-les-comptes-de-l-etat-parce-que-l-etat-francais-n-est-pas-un-guichet-social-declare-jordan-bardella-president-du-rassemblement-national_VN-202611230812.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T19:00:56Z",
+      "title": "Jordan Bardella qualifie David Lisnard de \"contrebandier du macronisme\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-qualifie-david-lisnard-de-contrebandier-du-macronisme_VN-202611230806.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T18:59:33Z",
+      "title": "Subventions versées aux associations: \"Les gens ne supportent plus qu'avec leur argent, on fasse campagne contre eux\", estime Jordan Bardella, président du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-subventions-versees-aux-associations-les-gens-ne-supportent-plus-qu-avec-leur-argent-on-fasse-campagne-contre-eux-estime-jordan-bardella-president-du-rassemblement-national_VN-202611230803.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T18:56:24Z",
+      "title": "Présidentielle 2027: \"La première mesure que nous prendrons sera la dissolution de tous les groupuscules d'ultragauche et d'ultradroite qui prônent la violence contre la démocratie et les institutions\", assure Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-la-premiere-mesure-que-nous-prendrons-sera-la-dissolution-de-tous-les-groupuscules-d-ultragauche-et-d-ultradroite-qui-pronent-la-violence-contre-la-democratie-et-les-institutions-assure-jordan-bardella_VN-202611230799.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T18:55:02Z",
+      "title": "Jordan Bardella assure n'avoir reçu \"aucune information\" de la part du préfet Hugues Moutouh, visé par des soupçons de fuites du ministère de l'Intérieur vers le RN",
+      "url": "https://www.bfmtv.com/politique/front-national/jordan-bardella-assure-n-avoir-recu-aucune-information-de-la-part-du-prefet-hugues-moutouh-vise-par-des-soupcons-de-fuites-du-ministere-de-l-interieur-vers-le-rn_AV-202611230795.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T18:54:30Z",
+      "title": "Jordan Bardella, président du Rassemblement national, veut \"réduire le poids de l'administration\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-president-du-rassemblement-national-veut-reduire-le-poids-de-l-administration_VN-202611230796.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T18:52:23Z",
+      "title": "Jordan Bardella: \"Je note qu'il y a chez beaucoup de gens à gauche et à l'extrême gauche la volonté de changer de régime\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jordan-bardella-je-note-qu-il-y-a-chez-beaucoup-de-gens-a-gauche-et-a-l-extreme-gauche-la-volonte-de-changer-de-regime_VN-202611230793.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T18:44:50Z",
+      "title": "Suspicions de fuites pour le RN: Jordan Bardella évoque un \"timing étrange\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-suspicions-de-fuites-pour-le-rn-jordan-bardella-evoque-un-timing-etrange_VN-202611230789.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T18:32:34Z",
+      "title": "Suspicions de fuites pour le RN: \"Je n'ai reçu aucune information de la part du préfet Moutouh\", assure Jordan Bardella",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-suspicions-de-fuites-pour-le-rn-je-n-ai-recu-aucune-information-de-la-part-du-prefet-moutouh-assure-jordan-bardella_VN-202611230781.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-23T17:55:55Z",
+      "title": "« Il se fout de la gueule du monde » : la règle d’or budgétaire évoquée par Emmanuel Macron laisse dubitatif",
+      "url": "https://www.publicsenat.fr/actualites/politique/il-se-fout-de-la-gueule-du-monde-la-regle-dor-budgetaire-evoquee-par-emmanuel-macron-laisse-dubitatif"
+    }
+  ],
+  "schema_version": "1.0"
+}
