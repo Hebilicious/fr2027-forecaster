@@ -1,0 +1,184 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T22:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-23T21:51:35Z",
+      "title": "Jordan Bardella déplore la « faute » de la députée RN Laure Lavalette, accusée d’avoir cautionné des écrits antisémites dans les années 1990",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/23/jordan-bardella-deplore-la-faute-de-la-deputee-rn-laure-lavalette-accusee-d-avoir-cautionne-des-ecrits-antisemites-dans-les-annees-1990_6814453_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-23T21:33:59Z",
+      "title": "Ecrits antisémites : Jordan Bardella reconnaît «une faute» de Laure Lavalette mais lui garde son «total soutien»",
+      "url": "https://www.liberation.fr/politique/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-lui-garde-son-total-soutien-20261123_2UTAIIKFYNH4XM2N42RBJZFOJM/"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-23T22:06:54Z",
+      "title": "\"Je ne veux pas rentrer dans une case\", affirme Dominique de Villepin, candidat à l'élection présidentielle",
+      "url": "https://www.franceinfo.fr/politique/je-ne-veux-pas-rentrer-dans-une-case-affirme-dominique-de-villepin-candidat-a-l-election-presidentielle_8296812.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-23T21:41:27Z",
+      "title": "Retraites, droits de succession, niches fiscales... Dominique de Villepin présente les premières mesures de son programme pour la présidentielle",
+      "url": "https://www.franceinfo.fr/elections/retraites-droits-de-succession-niches-fiscales-dominique-de-villepin-presente-les-premieres-mesures-de-son-programme-pour-la-presidentielle_8296785.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T22:09:13Z",
+      "title": "Écrits antisémites: Jordan Bardella reconnait \"une faute\" de Laure Lavalette mais invoque \"une inattention\"",
+      "url": "https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T22:02:21Z",
+      "title": "Gabriel Attal, Édouard Philippe, Bruno Retailleau, David Lisnard: \"J'ai la conviction profonde qu'ils se regrouperont\", lance Jean-François Copé, maire LR de Meaux",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-gabriel-attal-edouard-philippe-bruno-retailleau-david-lisnard-j-ai-la-conviction-profonde-qu-ils-se-regrouperont-lance-jean-francois-cope-maire-lr-de-meaux_VN-202611230925.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T21:58:22Z",
+      "title": "\"Il faut décortiquer le chiffrage du programme économique de David Lisnard pour comprendre que ce n'est pas crédible\", analyse Jean-François Copé, maire LR de Meaux",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-faut-decortiquer-le-chiffrage-du-programme-economique-de-david-lisnard-pour-comprendre-que-ce-n-est-pas-credible-analyse-jean-francois-cope-maire-lr-de-meaux_VN-202611230921.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T21:56:16Z",
+      "title": "Présidentielle 2027: \"La grande arme de David Lisnard c'est que les Français ne le connaissent pas\", lance Jean-François Copé, maire LR de Meaux",
+      "url": "https://www.bfmtv.com/politique/video-presidentielle-2027-la-grande-arme-de-david-lisnard-c-est-que-les-francais-ne-le-connaissent-pas-lance-jean-francois-cope-maire-lr-de-meaux_VN-202611230918.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T21:29:56Z",
+      "title": "Présidentielle 2027: \"quand on est antifasciste, on vote Raphaël Glucksmann\", lance Boris Vallaud, député PS",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-quand-on-est-antifasciste-on-vote-raphael-glucksmann-lance-boris-vallaud-depute-ps_VN-202611230907.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T21:28:18Z",
+      "title": "Présidentielle 2027: \"Le ralliement de Marine Tondelier [à Jean-Luc Mélenchon], il y a une sorte de fatalisme\", analyse Boris Vallaud, député PS",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-le-ralliement-de-marine-tondelier-a-jean-luc-melenchon-il-y-a-une-sorte-de-fatalisme-analyse-boris-vallaud-depute-ps_VN-202611230906.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
