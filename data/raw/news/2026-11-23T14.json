@@ -1,0 +1,147 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T14:18:31Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-23T13:36:08Z",
+      "title": "Présidentielle 2027 : à Tarascon, le maire RN veut faire de la ville « une vitrine » pour Marine Le Pen",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/23/presidentielle-2027-a-tarascon-le-maire-rn-veut-faire-de-la-ville-une-vitrine-pour-marine-le-pen_6814388_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-23T13:53:56Z",
+      "title": "La dynamique David Lisnard, ou l’autre nom du « nœud démocratique » entre les Français et le RN",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/la-dynamique-david-lisnard-ou-l-autre-nom-du-noeud-democratique-entre-les-francais-et-le-rn-20261123"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T13:52:59Z",
+      "title": "Présidentielle: David Lisnard poursuit son ascension et double Édouard Philippe dans un sondage, Marine Le Pen en baisse",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-david-lisnard-poursuit-son-ascension-et-double-edouard-philippe-dans-un-sondage-marine-le-pen-en-baisse_VN-202611230553.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T13:42:02Z",
+      "title": "Présidentielle: le coordinateur de Génération.s, Benjamin Lucas-Lundy, explique pourquoi le mouvement soutiendra la candidature de Jean-Luc Mélenchon",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-le-coordinateur-de-generation-s-benjamin-lucas-lundy-explique-pourquoi-le-mouvement-soutiendra-la-candidature-de-jean-luc-melenchon_VN-202611230549.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : David Lisnard refuse de dire pour qui il votera en cas de duel entre Édouard Philippe et Marine Le Pen au second tour",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-david-lisnard-refuse-de-dire-pour-qui-il-votera-en-cas-de-duel-entre-edouard-philippe-et-marine-le-pen-au-second-tour-23-11-2026-WXPECVKV3VBNFJX5XNZEBYVLT4.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen",
+        "lisnard",
+        "riner"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-23T13:47:56Z",
+      "title": "Cap sur l'Élysée — Cap sur l’Elysée – A qui profite la colère ?",
+      "url": "https://www.publicsenat.fr/emission/cap-sur-lelysee/cap-sur-lelysee-a-qui-profite-la-colere-e2"
+    }
+  ],
+  "schema_version": "1.0"
+}
