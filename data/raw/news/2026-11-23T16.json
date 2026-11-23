@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T16:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-23T16:00:31Z",
+      "title": "A Saint-Fons, Hadi Mebarki met en œuvre le « communalisme » de LFI",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/23/a-saint-fons-hadi-mebarki-met-en-uvre-le-communalisme-de-lfi_6814413_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-23T16:03:08Z",
+      "title": "Main tendue de Tondelier à Mélenchon : survivre pour vivre, une passion écologiste",
+      "url": "https://www.liberation.fr/idees-et-debats/tribunes/main-tendue-de-tondelier-a-melenchon-survivre-pour-vivre-une-passion-ecologiste-20261123_LZWF3PPKDBBO3OG7FALPD5IFSE/"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T16:14:38Z",
+      "title": "Podcast avec Najat Vallaud-Belkacem: \"On ne cherche pas à se convaincre, on cherche à éclairer l'actualité\", explique Nathalie Kosciusko-Morizet",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-podcast-avec-najat-vallaud-belkacem-on-ne-cherche-pas-a-se-convaincre-on-cherche-a-eclairer-l-actualite-explique-nathalie-kosciusko-morizet_VN-202611230654.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T16:12:20Z",
+      "title": "Podcast avec Nathalie Kosciusko-Morizet: \"On veut montrer qu'on peut être en désaccord sans se détester\", affirme Najat Vallaud-Belkacem",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-podcast-avec-nathalie-kosciusko-morizet-on-veut-montrer-qu-on-peut-etre-en-desaccord-sans-se-detester-affirme-najat-vallaud-belkacem_VN-202611230653.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Clémentine Autain, François Ruffin… Les ex-insoumis se convertissent à la poussée Mélenchon",
+      "url": "https://www.leparisien.fr/politique/clementine-autain-francois-ruffin-les-ex-insoumis-se-convertissent-a-la-poussee-melenchon-23-11-2026-GLLWJP5BSZF25PYQW4OO4QPGTE.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "ruffin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Raphaël Glucksmann salue le « combat » de François Ruffin et « espère rassembler au maximum »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-raphael-glucksmann-salue-le-combat-de-francois-ruffin-et-espere-rassembler-au-maximum-23-11-2026-2IRJJXVKPNCQ5MHSNXPSBKVMWU.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-23T04:59:07Z",
+      "title": "EN DIRECT Présidentielle 2027 : Le parti Génération.s rallie à son tour la candidature de Mélenchon et conclut un accord législatif avec LFI…",
+      "url": "https://www.20minutes.fr/politique/4264973-20261123-direct-presidentielle-2027-nunez-ferme-contre-antisemitisme-bataille-electorale"
+    }
+  ],
+  "schema_version": "1.0"
+}
