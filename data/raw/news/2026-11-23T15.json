@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T15:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-23T14:32:37Z",
+      "title": "«Tintin au Congo» : Teddy Riner porte plainte contre Emmanuelle Mignon",
+      "url": "https://www.liberation.fr/politique/elections/tintin-au-congo-teddy-riner-porte-plainte-contre-emmanuelle-mignon-20261123_VVC77KHMFJBHPHXYX3GTIT44XA/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-23T15:13:38Z",
+      "title": "DIRECT. Présidentielle 2027 : le parti Génération.s soutient officiellement la candidature de Jean-Luc Mélenchon, un accord conclu avec LFI",
+      "url": "https://www.franceinfo.fr/elections/direct-presidentielle-2027-son-combat-est-le-mien-assure-raphael-glucksmann-sur-francois-ruffin-qui-s-est-retire-de-la-course-a-l-elysee_8295479.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T14:45:48Z",
+      "title": "David Lisnard restera candidat à la présidentielle même s'il n'est pas réélu président de l'AMF",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/david-lisnard-restera-candidat-a-la-presidentielle-meme-s-il-n-est-pas-reelu-president-de-l-amf_AP-202611230593.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T14:41:05Z",
+      "title": "Le jour où Bruno Le Maire a tout fait pour appeler Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-jour-ou-bruno-le-maire-a-tout-fait-pour-appeler-bruno-retailleau_VN-202611230591.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T14:22:19Z",
+      "title": "Présidentielle: \"Je ne suis pas autorisé à faire campagne, autrement je peux vous dire que j’irais\", a affirmé Emmanuel Macron",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-je-ne-suis-pas-autorise-a-faire-campagne-autrement-je-peux-vous-dire-que-j-irais-a-affirme-emmanuel-macron_VN-202611230579.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T14:20:00Z",
+      "title": "Présidentielle 2027: le parti Génération.s s'engage dans la campagne de La France insoumise",
+      "url": "https://www.bfmtv.com/politique/presidentielle-2027-le-parti-generation-s-s-engage-dans-la-campagne-de-la-france-insoumise_AV-202611230576.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
