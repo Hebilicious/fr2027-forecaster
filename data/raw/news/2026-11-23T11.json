@@ -1,0 +1,133 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T11:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-23T10:59:09Z",
+      "title": "Génération·s signe un accord avec LFI pour la présidentielle et les législatives : «C’était la seule option possible face à l’extrême droite»",
+      "url": "https://www.liberation.fr/politique/elections/generations-signe-un-accord-avec-lfi-pour-la-presidentielle-et-les-legislatives-cetait-la-seule-option-possible-face-a-lextreme-droite-20261123_OA62OUMQBJAL3JNDSDNTTIQ3KQ/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T10:39:44Z",
+      "title": "\"David Lisnard est incapable aujourd'hui de choisir entre la droite et l'extrême droite\", affirme Jérémie Patrier-Leitus, député Horizons et porte-parole d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-david-lisnard-est-incapable-aujourd-hui-de-choisir-entre-la-droite-et-l-extreme-droite-affirme-jeremie-patrier-leitus-depute-horizons-et-porte-parole-d-edouard-philippe_VN-202611230438.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« La jeunesse a une appétence pour la radicalité » : Marine Le Pen défend sa députée accusée d’antisémitisme",
+      "url": "https://www.leparisien.fr/elections/presidentielle/la-jeunesse-a-une-appetence-pour-la-radicalite-marine-le-pen-defend-sa-deputee-accusee-dantisemitisme-23-11-2026-ZFMJTZE4A5AJJLKHIYJFIHDGII.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : sans le soutenir directement, François Ruffin « souhaite » la victoire de Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-sans-le-soutenir-directement-francois-ruffin-souhaite-la-victoire-de-jean-luc-melenchon-23-11-2026-UDFPY5M5EBG3DP2MZLRSXD447E.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-23T10:21:06Z",
+      "title": "« Ça me fait doucement sourire » : David Lisnard balaye les critiques sur sa candidature à la présidence de l’AMF et à la présidentielle",
+      "url": "https://www.publicsenat.fr/actualites/politique/ca-me-fait-doucement-sourire-david-lisnard-balaye-les-critiques-sur-sa-candidature-a-la-presidence-de-lamf-et-a-la-presidentielle"
+    }
+  ],
+  "schema_version": "1.0"
+}
