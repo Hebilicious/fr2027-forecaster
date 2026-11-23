@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-23T23:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-23T22:56:02Z",
+      "title": "Jordan Bardella affirme qu'\"à sa connaissance\" personne au RN n'a bénéficié de fuites et juge \"étrange\" le \"timing\" de la perquisition du siège de son parti",
+      "url": "https://www.franceinfo.fr/politique/front-national/jordan-bardella-affirme-qu-a-sa-connaissance-personne-au-rn-n-a-beneficie-de-fuites-et-juge-etrange-le-timing-de-la-perquisition-du-siege-de-son-parti_8296713.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T23:00:18Z",
+      "title": "Migrants expulsés au Rwanda: \"Humainement, ça questionne\", selon Prisca Thevenot, députée \"Renaissance\" des Hauts-de-Seine, soutien de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/video-migrants-expulses-au-rwanda-humainement-ca-questionne-selon-prisca-thevenot-deputee-renaissance-des-hauts-de-seine-soutien-de-gabriel-attal_VN-202611230956.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T22:32:58Z",
+      "title": "Présidentielle: le projet de David Lisnard pour 2027",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-le-projet-de-david-lisnard-pour-2027_VN-202611230939.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T22:32:34Z",
+      "title": "\"Il y a un commencement de chute de Marine Le Pen dans les sondages\", observe François Piquemal, député LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-y-a-un-commencement-de-chute-de-marine-le-pen-dans-les-sondages-observe-francois-piquemal-depute-lfi_VN-202611230938.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-23T22:23:39Z",
+      "title": "Présidentielle: \"Le bloc central est en train de mourir\", analyse Alexandre Ouizille, sénateur PS de l'Oise et directeur de campagne de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-le-bloc-central-est-en-train-de-mourir-analyse-alexandre-ouizille-senateur-ps-de-l-oise-et-directeur-de-campagne-de-raphael-glucksmann_VN-202611230933.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
