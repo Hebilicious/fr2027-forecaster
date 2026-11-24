@@ -1,0 +1,147 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T23:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T23:00:27Z",
+      "title": "Présidentielle: Édouard Philippe se dit ouvert à un débat avec David Lisnard, mais s'oppose toujours à une primaire de la droite et du centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-edouard-philippe-se-dit-ouvert-a-un-debat-avec-david-lisnard-mais-s-oppose-toujours-a-une-primaire-de-la-droite-et-du-centre_AD-202611241034.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T22:59:31Z",
+      "title": "Refus de François Bayrou de choisir en cas de duel LFI/RN au second tour de la présidentielle: \"En 2024 on était tous d'accord pour faire barrage et le front républicain contre l'extrême droite\", rappelle Dieynaba Diop, députée PS des Yvelines",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-refus-de-francois-bayrou-de-choisir-en-cas-de-duel-lfi-rn-au-second-tour-de-la-presidentielle-en-2024-on-etait-tous-d-accord-pour-faire-barrage-et-le-front-republicain-contre-l-extreme-droite-rappelle-dieynaba-diop-deputee-ps-des-yvelines_VN-202611241036.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T22:54:57Z",
+      "title": "\"J'ai été déçu et choqué d'entendre François Bayrou dire ça\", réagit Aurélien taché après le refus de l'ancien Premier ministre de choisir en cas de second tour entre LFI et le RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-ai-ete-decu-et-choque-d-entendre-francois-bayrou-dire-ca-reagit-aurelien-tache-apres-le-refus-de-l-ancien-premier-ministre-de-choisir-en-cas-de-second-tour-entre-lfi-et-le-rn_VN-202611241032.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T22:46:43Z",
+      "title": "Max Brisson, sénateur LR des Pyrénées-Atlantique, fera \"tout pour empêcher\" un duel LFI/RN au second tour",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-max-brisson-senateur-lr-des-pyrenees-atlantique-fera-tout-pour-empecher-un-duel-lfi-rn-au-second-tour_VN-202611241028.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T22:44:13Z",
+      "title": "Un duel LFI/RN au second tour? \"C'est un piège mortifaire\", déclare Arnaud Péricard, porte-parole d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-un-duel-lfi-rn-au-second-tour-c-est-un-piege-mortifaire-declare-arnaud-pericard-porte-parole-d-edouard-philippe_VN-202611241027.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T22:22:08Z",
+      "title": "Ralliement de Marine Tondelier à la candidature de Jean-Luc Mélenchon: \"Il faut une cohésion\", explique Manuel Bompard, coordinateur de La France insoumise",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ralliement-de-marine-tondelier-a-la-candidature-de-jean-luc-melenchon-il-faut-une-cohesion-explique-manuel-bompard-coordinateur-de-la-france-insoumise_VN-202611241019.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
