@@ -1,0 +1,167 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T10:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-24T09:33:20Z",
+      "title": "Métropole du Havre : une enquête préliminaire ouverte par le parquet après un signalement pour « détournement de fonds publics »",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/24/metropole-du-havre-une-enquete-preliminaire-ouverte-par-le-parquet-apres-un-signalement-pour-detournement-de-fonds-publics_6814732_3224.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-24T09:54:59Z",
+      "title": "Attal, Retailleau et Lisnard annulent leur deuxième réunion sur la primaire en attendant la rencontre autour de Larcher",
+      "url": "https://www.liberation.fr/politique/attal-retailleau-et-lisnard-annulent-leur-deuxieme-reunion-sur-la-primaire-en-attendant-la-rencontre-autour-de-larcher-20261124_A65DDJYCZFFQNN75YDHKX5CZ2M/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-24T09:50:19Z",
+      "title": "Le libéralisme hémiplégique de David Lisnard",
+      "url": "https://www.liberation.fr/idees-et-debats/tribunes/le-liberalisme-hemiplegique-de-david-lisnard-20261124_26ZVAVEKXFGD5DUFUM3A7IHXQM/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-24T09:59:49Z",
+      "title": "On vous résume la polémique autour de la députée RN Laure Lavalette, accusée d'avoir cautionné des écrits antisémites",
+      "url": "https://www.franceinfo.fr/societe/antisemitisme/on-vous-resume-la-polemique-autour-de-la-deputee-rn-laure-lavalette-accusee-d-avoir-cautionne-des-ecrits-antisemites_8297214.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "ruffin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T09:31:45Z",
+      "title": "LFI \"fait le tri dans ses partenaires\" Sophie Taillé-Polian, exclue de l'accord pour les législatives entre Génération.s et LFI, s'exprime sur BFMTV",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-lfi-fait-le-tri-dans-ses-partenaires-sophie-taille-polian-exclue-de-l-accord-pour-les-legislatives-entre-generation-s-et-lfi-s-exprime-sur-bfmtv_VN-202611240441.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-24T09:59:31Z",
+      "title": "Présidentielle 2027 : « On va faire un grand parti… » Jadot et Iordanoff lancent un nouveau mouvement écologiste",
+      "url": "https://www.20minutes.fr/politique/4265280-20261124-presidentielle-2027-va-faire-grand-parti-jadot-iordanoff-lancent-nouveau-mouvement-ecologiste"
+    },
+    {
+      "candidate_ids": [
+        "lagarde",
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-23T07:55:47Z",
+      "title": "Bonjour chez vous ! — Le bloc central trouvera-t-il son champion ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/le-bloc-central-trouvera-t-il-son-champion-e0"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-23T07:55:46Z",
+      "title": "Bonjour chez vous ! — Mathieu Lefèvre : « Une France sans budget, c’est une France affaiblie »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/mathieu-lefevre-une-france-sans-budget-cest-une-france-affaiblie-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
