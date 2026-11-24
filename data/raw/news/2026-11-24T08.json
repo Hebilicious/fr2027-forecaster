@@ -1,0 +1,168 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T08:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-24T07:47:39Z",
+      "title": "La double candidature de David Lisnard, pour la tête de l'Association des maires de France et la présidentielle, fait grincer des dents",
+      "url": "https://www.franceinfo.fr/politique/david-lisnard/la-double-candidature-de-david-lisnard-pour-la-tete-de-l-association-des-maires-de-france-et-la-presidentielle-fait-grincer-des-dents_8297235.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T08:01:59Z",
+      "title": "Présidentielle 2027: \"J'ai déjà récolté la moitié des parrainages nécessaires\", affirme Natacha Polony, candidate “Nous sommes la France”",
+      "url": "https://www.bfmtv.com/politique/elections/video-presidentielle-2027-j-ai-deja-recolte-la-moitie-des-parrainages-necessaires-affirme-natacha-polony-candidate-nous-sommes-la-france_VN-202611240325.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T07:59:48Z",
+      "title": "Colère lycéenne: \"Nous avons aujourd'hui des mouvements politiques qui manipulent des lycéens qui, eux, expriment une véritable inquiétude légitime\", estime Natacha Polony, candidate à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/video-colere-lyceenne-nous-avons-aujourd-hui-des-mouvements-politiques-qui-manipulent-des-lyceens-qui-eux-expriment-une-veritable-inquietude-legitime-estime-natacha-polony-candidate-a-la-presidentielle_VN-202611240323.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T07:59:20Z",
+      "title": "Présidentielle 2027: Natacha Polony affirme avoir récolté \"la moitié des parrainages nécessaires\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-natacha-polony-affirme-avoir-recolte-la-moitie-des-parrainages-necessaires_AN-202611240318.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T07:57:01Z",
+      "title": "Immigration: il faut \"conditionner la délivrance de visas à certains pays en fonction de leur acceptation de laisser-passer consulaires\", estime Natacha Polony, candidate à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-immigration-il-faut-conditionner-la-delivrance-de-visas-a-certains-pays-en-fonction-de-leur-acceptation-de-laisser-passer-consulaires-estime-natacha-polony-candidate-a-la-presidentielle_VN-202611240317.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T07:45:38Z",
+      "title": "\"Ce que je veux, c'est le retour de la France en Europe\", déclare Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-ce-que-je-veux-c-est-le-retour-de-la-france-en-europe-declare-natacha-polony-candidate-a-l-election-presidentielle_VN-202611240294.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T07:43:34Z",
+      "title": "\"Commenter le désastre depuis le pont supérieur du Titanic, ce n'était pas mon truc\", lance Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/video-commenter-le-desastre-depuis-le-pont-superieur-du-titanic-ce-n-etait-pas-mon-truc-lance-natacha-polony-candidate-a-l-election-presidentielle_VN-202611240285.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T07:41:18Z",
+      "title": "\"Ça fait 30 ans que les dirigeants s'asseyent sur la démocratie\", déclare Natacha Polony, candidate à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/video-ca-fait-30-ans-que-les-dirigeants-s-asseyent-sur-la-democratie-declare-natacha-polony-candidate-a-l-election-presidentielle_VN-202611240280.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "DIRECT. Présidentielle 2027 : au Congrès des maires, le candidat David Lisnard vise un nouveau mandat, Édouard Philippe attendu sur place",
+      "url": "https://www.leparisien.fr/elections/presidentielle/direct-presidentielle-2027-au-congres-des-maires-le-candidat-david-lisnard-vise-un-nouveau-mandat-edouard-philippe-attendu-sur-place-24-11-2026-3DBXJVVZXNFVJPOS7CZG6RJ37E.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
