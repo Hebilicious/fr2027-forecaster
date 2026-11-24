@@ -1,0 +1,144 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T09:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-24T08:53:47Z",
+      "title": "François Bayrou opte pour le \"ni ni\" en cas de second tour Le Pen-Mélenchon \"qui serait mortel pour notre pays\"",
+      "url": "https://www.franceinfo.fr/elections/francois-bayrou-opte-pour-le-ni-ni-en-cas-de-second-tour-le-pen-melenchon-qui-serait-mortel-pour-notre-pays_8297313.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T09:13:53Z",
+      "title": "INFO BFMTV. Salon des maires, Béziers, Guadeloupe...Les déplacements prévus par Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-info-bfmtv-salon-des-maires-beziers-guadeloupe-les-deplacements-prevus-par-teddy-riner_VN-202611240432.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T09:05:54Z",
+      "title": "Maël de Calan, porte-parole d'Édouard Philippe: \"Les primaires sont une machine à diviser extraordinaire dont tout le monde sort perdant\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-mael-de-calan-porte-parole-d-edouard-philippe-les-primaires-sont-une-machine-a-diviser-extraordinaire-dont-tout-le-monde-sort-perdant_VN-202611240425.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T09:04:34Z",
+      "title": "\"J'ai décidé d'agir\": Natacha Polony évoque sa candidature à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-ai-decide-d-agir-natacha-polony-evoque-sa-candidature-a-l-election-presidentielle_VN-202611240430.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-24T08:38:22Z",
+      "title": "Bardella reconnaît « une faute » de Lavalette, accusée d’avoir cautionné des propos antisémites",
+      "url": "https://www.20minutes.fr/politique/4265276-20261124-bardella-reconnait-faute-lavalette-accusee-avoir-cautionne-propos-antisemites"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-24T00:06:27Z",
+      "title": "Ouverture du Congrès des maires sur fond de bataille pour l'Élysée",
+      "url": "https://www.france24.com/fr/france/20261124-ouverture-du-congr%C3%A8s-des-maires-sur-fond-de-bataille-pour-l-%C3%A9lys%C3%A9e"
+    }
+  ],
+  "schema_version": "1.0"
+}
