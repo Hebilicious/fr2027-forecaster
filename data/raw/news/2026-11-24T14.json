@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T14:18:26Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-24T13:48:05Z",
+      "title": "La maire de Fontenay-aux-Roses souhaite la \"mise en retrait\" de David Lisnard de la présidence de l'Association des maires de France",
+      "url": "https://www.franceinfo.fr/politique/la-maire-de-fontenay-aux-roses-souhaite-la-mise-en-retrait-de-david-lisnard-de-la-presidence-de-l-association-des-maires-de-france_8297787.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T14:00:19Z",
+      "title": "Présidentielle 2027: en baisse dans les sondages, Édouard Philippe en visite au Congrès des maires de France",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-en-baisse-dans-les-sondages-edouard-philippe-en-visite-au-congres-des-maires-de-france_VN-202611240645.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Bruno Retailleau promet aux maires de « libérer la France communale de la bureaucratie »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-bruno-retailleau-promet-aux-maires-de-liberer-la-france-communale-de-la-bureaucratie-24-11-2026-BVRX6ZJRXVA37O23PUTGI4C2IE.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Éric Ciotti note « des points de convergences » avec David Lisnard et regrette son refus d’une alliance avec le RN",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-eric-ciotti-note-des-points-de-convergences-avec-david-lisnard-et-regrette-son-refus-dune-alliance-avec-le-rn-24-11-2026-CJMYVBZYZBERNF7JS27SHIJKLY.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
