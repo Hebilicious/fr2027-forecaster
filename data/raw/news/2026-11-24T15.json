@@ -1,0 +1,170 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T15:18:58Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-24T15:11:21Z",
+      "title": "Eric Zemmour définitivement condamné pour avoir affirmé que le maréchal Pétain « avait sauvé les juifs français »",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/24/eric-zemmour-definitivement-condamne-pour-avoir-affirme-que-le-marechal-petain-avait-sauve-les-juifs-francais_6814807_3224.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-24T14:30:32Z",
+      "title": "\"Il n'y aura plus d'étrangers\" chante une exposante devant E. Zemmour",
+      "url": "https://www.franceinfo.fr/elections/il-n-y-aura-plus-d-etrangers-chante-une-exposante-devant-e-zemmour_8297877.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T14:38:29Z",
+      "title": "Édouard Philippe: une enquête ouverte pour détournement de fonds publics à l'agglomération du Havre",
+      "url": "https://www.bfmtv.com/politique/video-edouard-philippe-une-enquete-ouverte-pour-detournement-de-fonds-publics-a-l-agglomeration-du-havre_VN-202611240665.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Natacha Polony assure avoir la moitié des parrainages requis",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-natacha-polony-assure-avoir-la-moitie-des-parrainages-requis-24-11-2026-6267XF4HSJD3NIAALKATMPUTZY.php"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan",
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Contraire aux principes » : François Bayrou fustige la proposition d’inclure Éric Zemmour et Nicolas Dupont-Aignan dans la primaire",
+      "url": "https://www.leparisien.fr/elections/presidentielle/contraire-aux-principes-francois-bayrou-fustige-la-proposition-dinclure-eric-zemmour-et-nicolas-dupont-aignan-dans-la-primaire-24-11-2026-U5DYDDXUNRAHPCW2LQPP7KB7NQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : seuls David Lisnard et Édouard Philippe préférés à Marine Le Pen au second tour",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-seuls-david-lisnard-et-edouard-philippe-preferes-a-marine-le-pen-au-second-tour-24-11-2026-3A5ULXBSGJEKNPTY4HTKIBTU3I.php"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Pétain a « sauvé les juifs français » : Zemmour définitivement condamné pour « contestation de l’existence de crime contre l’humanité »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-eric-zemmour-definitivement-condamne-pour-contestation-de-lexistence-de-crime-contre-lhumanite-24-11-2026-GATCYMK26BBJ7I732YJRWDN4UQ.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T14:29:43Z",
+      "title": "« Edouard Philippe n’est pas Emmanuel Macron », défend Christophe Béchu",
+      "url": "https://www.publicsenat.fr/actualites/politique/edouard-philippe-nest-pas-emmanuel-macron-defend-christophe-bechu"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T14:17:46Z",
+      "title": "« Nous les aurons à date » : Bally Bagayoko (LFI) se montre confiant sur les 500 parrainages pour la présidentielle",
+      "url": "https://www.publicsenat.fr/actualites/politique/nous-les-aurons-a-date-bally-bagayoko-lfi-se-montre-confiant-sur-les-500-parrainages-pour-la-presidentielle"
+    }
+  ],
+  "schema_version": "1.0"
+}
