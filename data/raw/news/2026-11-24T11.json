@@ -1,0 +1,115 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T11:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "dupont_aignan",
+        "lisnard",
+        "zemmour"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-24T11:11:36Z",
+      "title": "François Bayrou fustige la posture de David Lisnard, qui souhaite une primaire de la droite et du centre",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/24/presidentielle-2027-francois-bayrou-fustige-la-posture-de-david-lisnard-qui-souhaite-une-primaire-de-la-droite-et-du-centre_6814751_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T10:52:09Z",
+      "title": "\"C'est la première fois que je vote Jean-Luc Mélenchon\": le député Benjamin Lucas-Lundy défend \"un accord de coalition\" entre le parti Gérénation.s et LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-c-est-la-premiere-fois-que-je-vote-jean-luc-melenchon-le-depute-benjamin-lucas-lundy-defend-un-accord-de-coalition-entre-le-parti-gerenation-s-et-lfi_VN-202611240504.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : retraites, impôts, Ukraine… Dominique de Villepin dévoile les premières mesures de son programme",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-retraites-impots-ukraine-dominique-de-villepin-devoile-les-premieres-mesures-de-son-programme-24-11-2026-ZXD7QSOHAJHBHIQ6KOLADVAISU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
