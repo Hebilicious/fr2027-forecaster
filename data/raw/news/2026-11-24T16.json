@@ -1,0 +1,201 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T16:18:30Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-24T15:50:16Z",
+      "title": "Eric Zemmour définitivement condamné pour \"contestation de l’existence de crime contre l’humanité\" après avoir affirmé que le maréchal Pétain \"avait sauvé les juifs français\"",
+      "url": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-definitivement-condamne-pour-contestation-de-l-existence-de-crime-contre-l-humanite-apres-avoir-affirme-que-le-marechal-petain-avait-sauve-les-juifs-francais_8297988.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T16:11:34Z",
+      "title": "Au Congrès des maires, Marine Tondelier présente ses propositions \"Pour un État-providence climatique\"",
+      "url": "https://www.bfmtv.com/politique/elections/video-au-congres-des-maires-marine-tondelier-presente-ses-propositions-pour-un-etat-providence-climatique_VN-202611240736.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T16:09:15Z",
+      "title": "\"On peut aimer les tronçonneuses, mais pas savoir trancher\": le tacle d'Édouard Philippe à David Lisnard sur son silence autour d'un second tour avec Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/on-peut-aimer-les-tronconneuses-mais-pas-savoir-trancher-le-tacle-d-edouard-philippe-a-david-lisnard-sur-son-silence-autour-d-un-second-tour-avec-marine-le-pen_AV-202611240730.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T15:29:01Z",
+      "title": "Présidentielle 2027: \"on peut aimer les tronçonneuses, mais pas savoir trancher”, le tacle d'Édouard Philippe à David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-on-peut-aimer-les-tronconneuses-mais-pas-savoir-trancher-le-tacle-d-edouard-philippe-a-david-lisnard_VN-202611240701.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T15:26:19Z",
+      "title": "\"Il ne faut jamais travailler avec la droite extrême\", déclare Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-ne-faut-jamais-travailler-avec-la-droite-extreme-declare-edouard-philippe_VN-202611240699.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T15:20:46Z",
+      "title": "Enquête ouverte pour détournement de fonds publics à l'agglomération du Havre: Édouard Philippe dénonce \"une vendetta judiciaire\" qu'il prend \"avec sérénité et philosophie\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-enquete-ouverte-pour-detournement-de-fonds-publics-a-l-agglomeration-du-havre-edouard-philippe-denonce-une-vendetta-judiciaire-qu-il-prend-avec-serenite-et-philosophie_VN-202611240692.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-24T15:55:20Z",
+      "title": "Présidentielle 2027 : Un « esprit de défaite typiquement vichyste », lance Mélenchon à propos de Bayrou",
+      "url": "https://www.20minutes.fr/politique/4265445-20261124-presidentielle-2027-esprit-defaite-typiquement-vichyste-lance-melenchon-propos-bayrou"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T16:06:24Z",
+      "title": "« Il aurait fallu qu’il fasse la part des choses » : les maires, premiers juges du cumul de candidatures de David Lisnard",
+      "url": "https://www.publicsenat.fr/actualites/politique/il-aurait-fallu-quil-fasse-la-part-des-choses-les-maires-premiers-juges-du-cumul-de-candidatures-de-david-lisnard"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T15:56:06Z",
+      "title": "Rivalité Lisnard – Retailleau : « La présidentielle est une course de fond », tempère Mathieu Darnaud (LR)",
+      "url": "https://www.publicsenat.fr/actualites/politique/rivalite-lisnard-retailleau-la-presidentielle-est-une-course-de-fond-tempere-mathieu-darnaud-lr"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T15:26:55Z",
+      "title": "Fustigeant « l’Etat profond » et la « bureaucratie », Bruno Retailleau veut « remettre la mairie au milieu du village »",
+      "url": "https://www.publicsenat.fr/actualites/politique/fustigeant-letat-profond-et-la-bureaucratie-bruno-retailleau-veut-remettre-la-mairie-au-milieu-du-village"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T15:24:35Z",
+      "title": "Main tendue des écologistes à Mélenchon : « Je suis candidate aujourd’hui, je serai candidate demain jusqu’à ce qu’on en décide autrement au sein du mouvement », déclare Marine Tondelier",
+      "url": "https://www.publicsenat.fr/actualites/politique/main-tendue-des-ecologistes-a-melenchon-je-suis-candidate-aujourdhui-je-serai-candidate-demain-jusqua-ce-quon-en-decide-autrement-au-sein-du-mouvement"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-24T14:47:28Z",
+      "title": "Détournement de fonds de publics : une enquête vise l'agglomération du Havre d'Édouard Philippe",
+      "url": "https://www.france24.com/fr/france/20261124-edouard-philippe-vis%C3%A9-par-une-enqu%C3%AAte-pour-d%C3%A9tournement-de-fonds-publics-au-havre"
+    }
+  ],
+  "schema_version": "1.0"
+}
