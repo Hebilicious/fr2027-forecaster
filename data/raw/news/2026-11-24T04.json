@@ -1,0 +1,127 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T04:18:16Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il y aura une grande clarification » : à l’Assemblée nationale, le groupe sans queue ni tête de Gabriel Attal",
+      "url": "https://www.leparisien.fr/politique/il-y-aura-une-grande-clarification-a-lassemblee-nationale-le-groupe-sans-queue-ni-tete-de-gabriel-attal-24-11-2026-M45E6DYDDFHP5PI3TOGJ47KF6E.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T04:00:00Z",
+      "title": "Sondage : au deuxième tour, seuls David Lisnard et Edouard Philippe seraient préférés à Marine Le Pen",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-au-deuxieme-tour-seuls-david-lisnard-et-edouard-philippe-seraient-preferes-a-marine-le-pen"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T04:00:00Z",
+      "title": "Sondage : le vainqueur de l’élection présidentielle de 2027 devrait susciter plus de rejet que d’adhésion",
+      "url": "https://www.publicsenat.fr/actualites/politique/sondage-le-vainqueur-de-lelection-presidentielle-de-2027-devrait-susciter-plus-de-rejet-que-dadhesion"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-24T04:00:00Z",
+      "title": "Election présidentielle 2027 : David Lisnard confirme sa dynamique et devance Edouard Philippe",
+      "url": "https://www.publicsenat.fr/actualites/politique/election-presidentielle-2027-david-lisnard-confirme-sa-dynamique-et-devance-edouard-philippe"
+    }
+  ],
+  "schema_version": "1.0"
+}
