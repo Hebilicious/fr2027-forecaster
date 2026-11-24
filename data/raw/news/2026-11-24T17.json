@@ -1,0 +1,185 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T17:18:30Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-24T16:21:16Z",
+      "title": "« Pour l’instant, on ne bouge pas » : Bruno Retailleau et David Lisnard, rivaux d’un jour, alliés demain ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/pour-l-instant-on-ne-bouge-pas-bruno-retailleau-et-david-lisnard-rivaux-d-un-jour-allies-demain-20261124"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T17:09:28Z",
+      "title": "\"Le pire de l'esprit de défaite typiquement vichiste\": Jean-Luc Mélenchon répond à François Bayrou sur son refus de choisir en cas de second tour entre LFI et le RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/le-pire-de-l-esprit-de-defaite-typiquement-vichiste-jean-luc-melenchon-repond-a-francois-bayrou-sur-son-refus-de-choisir-en-cas-de-second-tour-entre-lfi-et-le-rn_AN-202611240784.html"
+    },
+    {
+      "candidate_ids": [
+        "polony"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T16:54:35Z",
+      "title": "VRAI/FAUX. Présidentielle: les dates de l’élection de 2022 ont-elles été \"avancées\" par Emmanuel Macron pour avoir une campagne \"courte\", comme l’affirme Natacha Polony?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/vrai-faux-presidentielle-les-dates-de-l-election-de-2022-ont-elles-ete-avancees-par-emmanuel-macron-pour-avoir-une-campagne-courte-comme-l-affirme-natacha-polony_AV-202611240768.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T16:49:27Z",
+      "title": "86% des Français de confession juive estiment que Jean-Luc Mélenchon contribue à la montée de l'antisémitisme, 36% pour Marine Le Pen, selon une enquête de l'Ifop",
+      "url": "https://www.bfmtv.com/politique/video-86-des-francais-de-confession-juive-estiment-que-jean-luc-melenchon-contribue-a-la-montee-de-l-antisemitisme-36-pour-marine-le-pen-selon-une-enquete-de-l-ifop_VN-202611240766.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T16:43:58Z",
+      "title": "Jean-Marie Le Pen \"a tenu des propos qui sont antisémites et qui ne sont pas ceux que Marine Le Pen et Jordan Bardella partagent\", assure Matthieu Valet, eurodéputé RN",
+      "url": "https://www.bfmtv.com/politique/front-national/video-jean-marie-le-pen-a-tenu-des-propos-qui-sont-antisemites-et-qui-ne-sont-pas-ceux-que-marine-le-pen-et-jordan-bardella-partagent-assure-matthieu-valet-eurodepute-rn_VN-202611240759.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T16:42:53Z",
+      "title": "L'EFFET GRABLY - Ces fois où le RN et des cadres du parti ont été accusés d'antisémitisme",
+      "url": "https://www.bfmtv.com/politique/front-national/video-l-effet-grably-ces-fois-ou-le-rn-et-des-cadres-du-parti-ont-ete-accuses-d-antisemitisme_VN-202611240760.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T16:34:15Z",
+      "title": "Laure Lavalette accusée d'avoir cautionné des écrits antisémites: \"Si elle avait écrit des propos de cette nature, elle ne serait pas dans notre parti et ne serait pas porte-parole de Marine Le Pen\", assure Matthieu Valet, député RN",
+      "url": "https://www.bfmtv.com/politique/front-national/video-laure-lavalette-accusee-d-avoir-cautionne-des-ecrits-antisemites-si-elle-avait-ecrit-des-propos-de-cette-nature-elle-ne-serait-pas-dans-notre-parti-et-ne-serait-pas-porte-parole-de-marine-le-pen-assure-matthieu-valet-depute-rn_VN-202611240756.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T16:31:17Z",
+      "title": "Bruno Le Maire revient sur son livre contenant un passage érotique",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-le-maire-revient-sur-son-livre-contenant-un-passage-erotique_VN-202611240752.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Bayrou refuse de choisir entre Mélenchon et Le Pen, l’Insoumis dénonce « le pire de l’esprit de défaite typiquement vichyste »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-bayrou-refuse-de-choisir-entre-melenchon-et-le-pen-linsoumis-denonce-le-pire-de-lesprit-de-defaite-typiquement-vichyste-24-11-2026-JUX7W5ZDQ5E5LK3MCUFOBJGWSE.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-24T16:43:24Z",
+      "title": "David Lisnard, le candidat ultralibéral qui chamboule la campagne à droite",
+      "url": "https://www.france24.com/fr/france/20261124-france-presidentielle-2027-david-lisnard-candidat-ultraliberal-chamboule-campagne-droite"
+    }
+  ],
+  "schema_version": "1.0"
+}
