@@ -1,0 +1,144 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T20:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-24T19:56:50Z",
+      "title": "Présidentielle 2027 : Gabriel Attal presse Edouard Philippe de « proposer une autre modalité de départage », face à son refus de la primaire",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/24/presidentielle-2027-gabriel-attal-presse-edouard-philippe-de-proposer-une-autre-modalite-de-departage-face-a-son-refus-de-la-primaire_6814848_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-24T19:30:00Z",
+      "title": "Présidentielle 2027 : le camp d’Édouard Philippe pointe le « flou » de David Lisnard face à « l’extrême droite »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-le-camp-d-edouard-philippe-pointe-le-flou-de-david-lisnard-face-a-l-extreme-droite-20261124"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T20:15:18Z",
+      "title": "DIRECT. Présidentielle: Manuel Bompard appelle François Bayrou à se \"ressaisir\" après son refus de choisir en cas de second tour LFI-RN",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/direct-presidentielle-jean-luc-melenchon-ukraine-budget-manuel-bompard-est-l-invite-de-face-a-bfm_LN-202611240918.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T19:58:56Z",
+      "title": "\"Je voterai pour Marine Le Pen parce que je voterai contre la France Insoumise\", en cas de duel Marine Le Pen/Jean-Luc Mélenchon au second tour de l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-voterai-pour-marine-le-pen-parce-que-je-voterai-contre-la-france-insoumise-en-cas-de-duel-marine-le-pen-jean-luc-melenchon-au-second-tour-de-l-election-presidentielle_VN-202611240933.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Son objectif, ce n’est pas de rassembler la droite » : Philippe propose un débat à Lisnard",
+      "url": "https://www.leparisien.fr/elections/presidentielle/son-objectif-ce-nest-pas-de-rassembler-la-droite-philippe-propose-un-debat-a-lisnard-24-11-2026-BK5ODLZ7UBDPVCVVLGJFLJRW5U.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-24T20:04:57Z",
+      "title": "Présidentielle 2027 : Robert Ménard attend Teddy Riner à Béziers vendredi",
+      "url": "https://www.20minutes.fr/politique/4265511-20261124-presidentielle-2027-robert-menard-attend-teddy-riner-beziers-vendredi"
+    }
+  ],
+  "schema_version": "1.0"
+}
