@@ -1,0 +1,153 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-24T06:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-24T05:59:15Z",
+      "title": "À suivre Loïc de la Mornais : Dominique de Villepin entend \"lutter contre la société d'héritiers\"",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/a-suivre-avec-loic-de-la-mornais/a-suivre-loic-de-la-mornais-dominique-de-villepin-entend-lutter-contre-la-societe-d-heritiers_8297127.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-24T05:46:52Z",
+      "title": "À suivre Loïc de la Mornais : Dominique de Villepin invité exceptionnel de franceinfo",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/a-suivre-avec-loic-de-la-mornais/a-suivre-loic-de-la-mornais-dominique-de-villepin-invite-exceptionnel-de-franceinfo_8297115.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T06:02:30Z",
+      "title": "Nicolas Dupont Aignan",
+      "url": "https://www.bfmtv.com/politique/nicolas-dupont-aignan_DN-201701010043.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T06:02:05Z",
+      "title": "L'ÉDITO POLITIQUE - Second tour Jean-Luc Mélenchon - Marine Le Pen: le péril de l'abstention",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-l-edito-politique-second-tour-jean-luc-melenchon-marine-le-pen-le-peril-de-l-abstention_VN-202611240164.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-24T05:51:46Z",
+      "title": "DIRECT. Présidentielle 2027: Marine Le Pen, Gabriel Attal, Edouard Philippe... De nombreux candidats à la rencontre des maires à l'occasion du congrès de l'AMF",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/direct-presidentielle-2027-marine-le-pen-gabriel-attal-edouard-philippe-de-nombreux-candidats-a-la-rencontre-des-maires-a-l-occasion-du-congres-de-l-amf_LN-202611240163.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Cela relève des variations saisonnières d’une année électorale » : Marine Le Pen, un automne en pente douce dans les sondages",
+      "url": "https://www.leparisien.fr/elections/presidentielle/cela-releve-des-variations-saisonnieres-dune-annee-electorale-marine-le-pen-un-automne-en-pente-douce-dans-les-sondages-24-11-2026-GKSOW6DRMBEIFEJ2ZCZYSH2SSE.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-24T05:02:47Z",
+      "title": "EN DIRECT Présidentielle 2027 : La candidature de David Lisnard va agiter le congrès des maires de France…",
+      "url": "https://www.20minutes.fr/politique/4265257-20261124-direct-presidentielle-2027-candidature-david-lisnard-va-agiter-congres-maires-france"
+    }
+  ],
+  "schema_version": "1.0"
+}
