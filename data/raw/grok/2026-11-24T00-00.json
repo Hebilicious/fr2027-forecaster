@@ -1,0 +1,884 @@
+{
+  "agent": {
+    "name": "Grok Bot fr2027",
+    "run_id": "x-activity-2026-11-24T00:27Z",
+    "skill_version": "x-activity-3"
+  },
+  "candidates": [
+    {
+      "bot_share_estimate": 0.1562,
+      "candidate_id": "arthaud",
+      "engagement": null,
+      "mentions": 54,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nathalie Arthaud\" OR \"Arthaud\") lang:fr",
+      "sample_size": 27,
+      "sentiment": null,
+      "stance": {
+        "neutral": 17,
+        "off_topic": 1,
+        "oppose": 5,
+        "posts_drawn": 27,
+        "read_all": true,
+        "support": 4
+      },
+      "top_topics": [
+        "Low poll scores around 1%",
+        "Revolutionary and anti-capitalist candidacy",
+        "Calls to rally behind Mélenchon",
+        "Support for Palestinians",
+        "Presence in debates and forecasts"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0769,
+      "candidate_id": "kazib",
+      "engagement": null,
+      "mentions": 70,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Anasse Kazib\" OR \"Kazib\") lang:fr",
+      "sample_size": 12,
+      "sentiment": null,
+      "stance": {
+        "neutral": 4,
+        "off_topic": 0,
+        "oppose": 8,
+        "posts_drawn": 12,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "Campaign launch meeting",
+        "Revolutionary programme and anti-police positions",
+        "Placement on the far left",
+        "Personal insults and shame among communists"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "labib",
+      "engagement": null,
+      "mentions": 2,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Selma Labib\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.113,
+      "candidate_id": "melenchon",
+      "engagement": null,
+      "mentions": 36831,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jean-Luc Mélenchon\" OR \"Mélenchon\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 76,
+        "off_topic": 6,
+        "oppose": 79,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 39
+      },
+      "top_topics": [
+        "left rallies to the 2027 campaign",
+        "polls and a Le Pen runoff",
+        "Royal's possible endorsement",
+        "antisemitism and foreign-policy attacks",
+        "rivals campaigning to block him"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0824,
+      "candidate_id": "glucksmann",
+      "engagement": null,
+      "mentions": 3015,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Raphaël Glucksmann\" OR \"Glucksmann\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 77,
+        "off_topic": 3,
+        "oppose": 103,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 17
+      },
+      "top_topics": [
+        "polls and first-round scores",
+        "left unity vs isolation after rallies to Mélenchon",
+        "Ruffin withdrawal and primary aftermath",
+        "Green split and Destin Commun study",
+        "Fourest controversy and suburb outreach"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0323,
+      "candidate_id": "faure",
+      "engagement": null,
+      "mentions": 51,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Olivier Faure\") lang:fr",
+      "sample_size": 30,
+      "sentiment": null,
+      "stance": {
+        "neutral": 8,
+        "off_topic": 0,
+        "oppose": 20,
+        "posts_drawn": 30,
+        "read_all": true,
+        "support": 2
+      },
+      "top_topics": [
+        "Defence of Cédric Herrou",
+        "Relations with LFI and Mélenchon",
+        "Aftermath of the PS primary loss",
+        "Gaza comments",
+        "Standing as PS first secretary"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0936,
+      "candidate_id": "royal",
+      "engagement": null,
+      "mentions": 9840,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Ségolène Royal\") lang:fr",
+      "sample_size": 196,
+      "sentiment": null,
+      "stance": {
+        "neutral": 46,
+        "off_topic": 1,
+        "oppose": 136,
+        "posts_drawn": 196,
+        "read_all": false,
+        "support": 13
+      },
+      "top_topics": [
+        "LCI comments on RN and racial violence",
+        "possible support for Mélenchon",
+        "careerism and seeking office",
+        "CNews, Trappes, and media",
+        "calls for lawsuits and Arcom sanctions"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0357,
+      "candidate_id": "guedj",
+      "engagement": null,
+      "mentions": 30,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jérôme Guedj\" OR \"Guedj\") lang:fr",
+      "sample_size": 26,
+      "sentiment": null,
+      "stance": {
+        "neutral": 7,
+        "off_topic": 10,
+        "oppose": 8,
+        "posts_drawn": 26,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "Comments on Palestine",
+        "Attacks on Mélenchon and LFI",
+        "Break with the NFP in 2024",
+        "Standing inside the PS"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "maurel",
+      "engagement": null,
+      "mentions": 1,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Emmanuel Maurel\") lang:fr",
+      "sample_size": 1,
+      "sentiment": null,
+      "stance": {
+        "neutral": 1,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 1,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "Maurel cited among left-wing figures in the PS"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0674,
+      "candidate_id": "hollande",
+      "engagement": null,
+      "mentions": 2075,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Hollande\" OR \"Hollande\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 92,
+        "off_topic": 6,
+        "oppose": 99,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 3
+      },
+      "top_topics": [
+        "possible 2027 candidacy and comeback",
+        "Ségolène Royal's LCI remarks and their relationship",
+        "mayors' nomination signatures (parrainages) transparency",
+        "record in office (debt, security, nuclear, immigration)",
+        "National Financial Prosecutor's Office (PNF) and Hidalgo cases"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0971,
+      "candidate_id": "roussel",
+      "engagement": null,
+      "mentions": 177,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Fabien Roussel\" OR \"Roussel\") lang:fr",
+      "sample_size": 90,
+      "sentiment": null,
+      "stance": {
+        "neutral": 37,
+        "off_topic": 7,
+        "oppose": 38,
+        "posts_drawn": 90,
+        "read_all": false,
+        "support": 8
+      },
+      "top_topics": [
+        "Staying in the race versus rallying to Mélenchon",
+        "2022 vote-splitting and 'useful vote' debates",
+        "Low poll scores around 1–3%",
+        "PCF leadership and communist credentials",
+        "Comments on the Trappes attack"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0747,
+      "candidate_id": "tondelier",
+      "engagement": null,
+      "mentions": 856,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Tondelier\" OR \"Tondelier\") lang:fr",
+      "sample_size": 161,
+      "sentiment": null,
+      "stance": {
+        "neutral": 83,
+        "off_topic": 0,
+        "oppose": 73,
+        "posts_drawn": 161,
+        "read_all": false,
+        "support": 5
+      },
+      "top_topics": [
+        "Tondelier opening to a Mélenchon coalition",
+        "Jadot split and new Ecologists and Democrats party",
+        "Greens' rupture over an LFI alliance",
+        "Pompidou LCI gaffe and media mockery",
+        "Low poll scores around 1-3 percent"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1111,
+      "candidate_id": "bouamrane",
+      "engagement": null,
+      "mentions": 154,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Karim Bouamrane\" OR \"Bouamrane\") lang:fr",
+      "sample_size": 8,
+      "sentiment": null,
+      "stance": {
+        "neutral": 3,
+        "off_topic": 1,
+        "oppose": 4,
+        "posts_drawn": 8,
+        "read_all": false,
+        "support": 0
+      },
+      "top_topics": [
+        "Attacks on Mélenchon and LFI",
+        "Poll standing versus Riner",
+        "500-endorsement threshold",
+        "Mockery as controlled or unserious opposition"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "cazeneuve",
+      "engagement": null,
+      "mentions": 10,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bernard Cazeneuve\" OR \"Cazeneuve\") lang:fr",
+      "sample_size": 5,
+      "sentiment": null,
+      "stance": {
+        "neutral": 1,
+        "off_topic": 0,
+        "oppose": 3,
+        "posts_drawn": 5,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "Place in a left rassemblement",
+        "Cazeneuve as an alternative to the extremes",
+        "PS-era security appointments",
+        "Criticism as 'fake left'"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "batho",
+      "engagement": null,
+      "mentions": 5,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Delphine Batho\") lang:fr",
+      "sample_size": 2,
+      "sentiment": null,
+      "stance": {
+        "neutral": 1,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 2,
+        "read_all": true,
+        "support": 1
+      },
+      "top_topics": [
+        "Batho's stance on an EELV-Mélenchon coalition",
+        "Praise of Batho versus Tondelier and EELV apparatus"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0491,
+      "candidate_id": "philippe",
+      "engagement": null,
+      "mentions": 3630,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Édouard Philippe\") lang:fr",
+      "sample_size": 146,
+      "sentiment": null,
+      "stance": {
+        "neutral": 54,
+        "off_topic": 1,
+        "oppose": 78,
+        "posts_drawn": 146,
+        "read_all": false,
+        "support": 13
+      },
+      "top_topics": [
+        "Lisnard overtaking Philippe in Toluna Harris poll",
+        "Philippe refusing a right and centre primary",
+        "Philippe attacking Attal as Macron continuity",
+        "Lisnard refusing a Philippe-Le Pen runoff choice",
+        "Philippe as Macron continuity"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.14,
+      "candidate_id": "attal",
+      "engagement": null,
+      "mentions": 3982,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Gabriel Attal\" OR \"Attal\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 81,
+        "off_topic": 6,
+        "oppose": 102,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 11
+      },
+      "top_topics": [
+        "Right and center primary with Lisnard and Retailleau",
+        "Attal as a Macronist and Philippe's twin-brother attack",
+        "2027 polls and withdrawal speculation",
+        "Government record, debt and public spending",
+        "Youth pact and campaign tour"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1875,
+      "candidate_id": "le_maire",
+      "engagement": null,
+      "mentions": 343,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Le Maire\") lang:fr",
+      "sample_size": 13,
+      "sentiment": null,
+      "stance": {
+        "neutral": 8,
+        "off_topic": 1,
+        "oppose": 4,
+        "posts_drawn": 13,
+        "read_all": false,
+        "support": 0
+      },
+      "top_topics": [
+        "Economic and debt record",
+        "RSA and unemployment-insurance proposals",
+        "Golden budget rule",
+        "Possible candidacy and political future"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "becht",
+      "engagement": null,
+      "mentions": 1,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Olivier Becht\") lang:fr",
+      "sample_size": 1,
+      "sentiment": null,
+      "stance": {
+        "neutral": 1,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 1,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "Proposal for a federal French republic"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0647,
+      "candidate_id": "retailleau",
+      "engagement": null,
+      "mentions": 1777,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Bruno Retailleau\" OR \"Retailleau\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 107,
+        "off_topic": 0,
+        "oppose": 76,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 17
+      },
+      "top_topics": [
+        "right-wing primary and 2027 candidacy",
+        "poll standing versus Lisnard, Philippe and Attal",
+        "record as Interior Minister and immigration",
+        "AI and budget golden-rule proposals",
+        "relations with Macron, LR and Zemmour"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1,
+      "candidate_id": "lisnard",
+      "engagement": null,
+      "mentions": 23059,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"David Lisnard\" OR \"Lisnard\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 44,
+        "off_topic": 1,
+        "oppose": 107,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 48
+      },
+      "top_topics": [
+        "polls overtaking Philippe",
+        "Macron-bis and system-candidate debate",
+        "pensions, spending and bureaucracy programme",
+        "Sarah Knafo and right-wing alliances",
+        "media buzz and RN attacks"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0769,
+      "candidate_id": "bertrand",
+      "engagement": null,
+      "mentions": 14,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Xavier Bertrand\") lang:fr",
+      "sample_size": 12,
+      "sentiment": null,
+      "stance": {
+        "neutral": 4,
+        "off_topic": 0,
+        "oppose": 8,
+        "posts_drawn": 12,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": [
+        "Electoral potential and rejection scores",
+        "Possible role in a Lisnard government",
+        "Rejection by the radical right",
+        "Record as a Sarkozy-era minister"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0627,
+      "candidate_id": "villepin",
+      "engagement": null,
+      "mentions": 1816,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Dominique de Villepin\" OR \"Villepin\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 76,
+        "off_topic": 4,
+        "oppose": 72,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 48
+      },
+      "top_topics": [
+        "France 2 20h interview after declaring",
+        "Campaign video Et si on s'aimait encore",
+        "Highway privatization and renationalization",
+        "Qatar ties accusations",
+        "Inheritance tax and wealth"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0862,
+      "candidate_id": "le_pen",
+      "engagement": null,
+      "mentions": 16531,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Marine Le Pen\" OR \"Le Pen\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 78,
+        "off_topic": 11,
+        "oppose": 91,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 20
+      },
+      "top_topics": [
+        "polls, runoffs and the Mélenchon duel",
+        "ineligibility trial and electronic bracelet",
+        "pensions and economic programme",
+        "Ukraine, Russia and foreign policy",
+        "RN-Lisnard clash"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0897,
+      "candidate_id": "bardella",
+      "engagement": null,
+      "mentions": 5515,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Jordan Bardella\" OR \"Bardella\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 44,
+        "off_topic": 3,
+        "oppose": 116,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 37
+      },
+      "top_topics": [
+        "Lavalette antisemitic writings and Bardella's support",
+        "BFMTV interview with Sonia Mabrouk",
+        "Attacks on Lisnard as a Macronist",
+        "Youth employment and Bardella's work record",
+        "Alleged antisemitic writings and far-right ties"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1237,
+      "candidate_id": "zemmour",
+      "engagement": null,
+      "mentions": 8144,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Éric Zemmour\" OR \"Zemmour\") lang:fr",
+      "sample_size": 200,
+      "sentiment": null,
+      "stance": {
+        "neutral": 87,
+        "off_topic": 5,
+        "oppose": 49,
+        "posts_drawn": 200,
+        "read_all": false,
+        "support": 59
+      },
+      "top_topics": [
+        "right-wing primary",
+        "Sarah Knafo and Reconquête campaign",
+        "Toulon meeting and polls",
+        "media coverage and omissions",
+        "racism convictions and free speech"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1639,
+      "candidate_id": "dupont_aignan",
+      "engagement": null,
+      "mentions": 135,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Nicolas Dupont-Aignan\" OR \"Dupont-Aignan\") lang:fr",
+      "sample_size": 51,
+      "sentiment": null,
+      "stance": {
+        "neutral": 32,
+        "off_topic": 0,
+        "oppose": 13,
+        "posts_drawn": 51,
+        "read_all": false,
+        "support": 6
+      },
+      "top_topics": [
+        "Low poll scores around 1%",
+        "Inclusion in a broad right-wing primary",
+        "Frexit and a possible sovereignist alliance",
+        "Whether he is far-right or 'social right'",
+        "Interviews on Ukraine and Europe"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.1867,
+      "candidate_id": "philippot",
+      "engagement": null,
+      "mentions": 310,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Florian Philippot\" OR \"Philippot\") lang:fr",
+      "sample_size": 57,
+      "sentiment": null,
+      "stance": {
+        "neutral": 22,
+        "off_topic": 1,
+        "oppose": 18,
+        "posts_drawn": 57,
+        "read_all": false,
+        "support": 16
+      },
+      "top_topics": [
+        "Frexit and a possible sovereignist alliance",
+        "Opposition to the EU golden budget rule",
+        "Campaign videos, petitions and meetings",
+        "Mayor endorsements and poll invisibility",
+        "Attacks over antivax and foreign-influence claims"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.2113,
+      "candidate_id": "asselineau",
+      "engagement": null,
+      "mentions": 1018,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"François Asselineau\" OR \"Asselineau\") lang:fr",
+      "sample_size": 148,
+      "sentiment": null,
+      "stance": {
+        "neutral": 38,
+        "off_topic": 0,
+        "oppose": 11,
+        "posts_drawn": 148,
+        "read_all": false,
+        "support": 99
+      },
+      "top_topics": [
+        "Frexit and leaving the EU, euro and NATO",
+        "Media blackout and absence from polls",
+        "Mayors' sponsorships and parrainages",
+        "Asselineau as the sole serious Frexit candidate",
+        "UPR meetings and programme"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": null,
+      "candidate_id": "bonnal",
+      "engagement": null,
+      "mentions": 0,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Sébastien Bonnal\") lang:fr",
+      "sample_size": 0,
+      "sentiment": null,
+      "stance": {
+        "neutral": 0,
+        "off_topic": 0,
+        "oppose": 0,
+        "posts_drawn": 0,
+        "read_all": true,
+        "support": 0
+      },
+      "top_topics": null,
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0,
+      "candidate_id": "polony",
+      "engagement": null,
+      "mentions": 62,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Natacha Polony\" OR \"Polony\") lang:fr",
+      "sample_size": 35,
+      "sentiment": null,
+      "stance": {
+        "neutral": 11,
+        "off_topic": 0,
+        "oppose": 12,
+        "posts_drawn": 35,
+        "read_all": true,
+        "support": 12
+      },
+      "top_topics": [
+        "Campaign visibility and media interviews",
+        "Local production and food sovereignty",
+        "Possible Ruffin rally",
+        "Accusations of pro-Russian positions",
+        "Place on the left–right spectrum"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0506,
+      "candidate_id": "riner",
+      "engagement": null,
+      "mentions": 932,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Teddy Riner\" OR \"Riner\") lang:fr",
+      "sample_size": 173,
+      "sentiment": null,
+      "stance": {
+        "neutral": 81,
+        "off_topic": 6,
+        "oppose": 72,
+        "posts_drawn": 173,
+        "read_all": false,
+        "support": 14
+      },
+      "top_topics": [
+        "Complaint over Tintin au Congo remark",
+        "First 2027 poll appearances",
+        "Fading media bubble",
+        "Macron proxy and vote-splitter claims",
+        "Campaign visits and sponsorships"
+      ],
+      "unique_authors": null
+    },
+    {
+      "bot_share_estimate": 0.0978,
+      "candidate_id": "lagarde",
+      "engagement": null,
+      "mentions": 296,
+      "mentions_method": "x_counts_endpoint",
+      "query": "(\"Christine Lagarde\" OR \"Lagarde\") lang:fr",
+      "sample_size": 80,
+      "sentiment": null,
+      "stance": {
+        "neutral": 31,
+        "off_topic": 2,
+        "oppose": 38,
+        "posts_drawn": 80,
+        "read_all": false,
+        "support": 9
+      },
+      "top_topics": [
+        "Possible 2027 run after leaving the ECB",
+        "Portrayed as a system or 'joker' candidate",
+        "Digital euro and EU economic policy",
+        "Twitter follower surge and bot accusations",
+        "Economic competence and debt"
+      ],
+      "unique_authors": null
+    }
+  ],
+  "collected_at": "2026-11-24T01:13:16Z",
+  "double_labels": {
+    "counts": {
+      "neutral": {
+        "neutral": 255,
+        "off_topic": 5,
+        "oppose": 13,
+        "support": 4
+      },
+      "off_topic": {
+        "neutral": 1,
+        "off_topic": 13,
+        "oppose": 0,
+        "support": 0
+      },
+      "oppose": {
+        "neutral": 16,
+        "off_topic": 0,
+        "oppose": 275,
+        "support": 0
+      },
+      "support": {
+        "neutral": 14,
+        "off_topic": 0,
+        "oppose": 0,
+        "support": 69
+      }
+    },
+    "posts": 665
+  },
+  "query_method": "Grok Bot native X search, one query per candidate, lang:fr, routine v3",
+  "rubric_version": "stance-1",
+  "sampling": {
+    "automated_excluded": true,
+    "max_posts_per_author": 2,
+    "method": "random_spread",
+    "posts_per_candidate": 200,
+    "read_all_below": 100,
+    "relabel_share": 0.2,
+    "reposts_excluded": true
+  },
+  "schema_version": "1.0",
+  "window": {
+    "end": "2026-11-24T00:00:00Z",
+    "start": "2026-11-23T12:00:00Z"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "detected_at": "2026-11-24T01:18:22Z",
+  "flags": [
+    {
+      "candidate_id": "bardella",
+      "date": "2026-11-24",
+      "detail": "support 0.09 [0.05, 0.14] in the drop to 2026-11-21T00:00:00Z → 0.19 [0.14, 0.25] in the drop to 2026-11-24T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.1016
+    },
+    {
+      "candidate_id": "hollande",
+      "date": "2026-11-24",
+      "detail": "support 0.10 [0.06, 0.15] in the drop to 2026-11-21T00:00:00Z → 0.02 [0.01, 0.04] in the drop to 2026-11-24T00:00:00Z",
+      "kind": "x_shift",
+      "score": -0.0821
+    }
+  ],
+  "schema_version": "1.0"
+}
