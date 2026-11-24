@@ -1,0 +1,87 @@
+schema_version: "1.0"
+poll_id: toluna-harris-2026-11-19-10393
+firm: toluna-harris
+sponsor: M6 / RTL / L'Express
+field_start: "2026-11-18"
+field_end: "2026-11-19"
+published_at: "2026-11-23"
+sample_size: 2378
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10393-pres-iv-vague-10-toluna-harris-interactive-23-novembre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10393-pres-iv-vague-10-toluna-harris-interactive-23-novembre.pdf
+index_url: >-
+  https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027
+retrieved_at: "2026-11-24T20:39:49Z"
+entry: primary
+notes: >-
+  Wave 10, entered from Commission notice 10393. Sample of 2,378 adults including
+  2,088 registered voters; voting intentions among registered voters certain to
+  vote who named a candidate (1,460 in the Attal+Philippe scenario, 1,451 when
+  Philippe runs alone, 1,453 when Attal runs alone; 1,208 in the runoff). Shares as
+  published, of expressed votes. First published 23 November.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-24T20:33Z
+  skill_version: polls-2
+scenarios:
+- label: Attal+Philippe+Villepin+Lisnard+Riner
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 1
+    attal: 4
+    dupont_aignan: 1
+    glucksmann: 11
+    le_pen: 31
+    lisnard: 11
+    melenchon: 18
+    philippe: 9
+    retailleau: 4
+    riner: 4
+    roussel: 1
+    tondelier: 1
+    villepin: 1
+    zemmour: 3
+- label: Philippe+Villepin+Lisnard+Riner
+  round: 1
+  scenario_id: S2
+  shares:
+    arthaud: 1
+    dupont_aignan: 1
+    glucksmann: 11
+    le_pen: 31
+    lisnard: 11
+    melenchon: 19
+    philippe: 10
+    retailleau: 4
+    riner: 4
+    roussel: 1
+    tondelier: 1
+    villepin: 2
+    zemmour: 4
+- label: Attal+Villepin+Lisnard+Riner
+  round: 1
+  scenario_id: S3
+  shares:
+    arthaud: 1
+    attal: 7
+    dupont_aignan: 1
+    glucksmann: 11
+    le_pen: 30
+    lisnard: 12
+    melenchon: 19
+    retailleau: 5
+    riner: 5
+    roussel: 1
+    tondelier: 2
+    villepin: 2
+    zemmour: 4
+- label: Jean-Luc Mélenchon v Marine Le Pen
+  round: 2
+  scenario_id: H1
+  shares:
+    le_pen: 65
+    melenchon: 35
