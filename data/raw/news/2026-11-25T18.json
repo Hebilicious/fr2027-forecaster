@@ -1,0 +1,132 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T18:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-25T15:53:02Z",
+      "title": "EN DIRECT, congrès des maires 2026 : Gabriel Attal espère que la réunion des candidats de la droite et du centre autour de Gérard Larcher permettra « d’avancer » vers une méthode de départage",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/25/en-direct-congres-des-maires-2026-au-quotidien-on-constate-de-plus-en-plus-une-solitude-des-communes_6815062_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-25T17:22:06Z",
+      "title": "Présidentielle 2027 : réélu sans appel à la tête des maires de France, David Lisnard poursuit sa campagne",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-reelu-sans-appel-a-la-tete-des-maires-de-france-david-lisnard-poursuit-sa-campagne-20261125"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T17:38:46Z",
+      "title": "SIGNÉ CONSIGNY - Propos de Teddy Riner sur l'Ukraine: \"C'est évidemment notre guerre puisque si l'Ukraine tombe c'est l'Europe qui devra se défendre à son tour\", souligne l'avocat et essayiste",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-signe-consigny-propos-de-teddy-riner-sur-l-ukraine-c-est-evidemment-notre-guerre-puisque-si-l-ukraine-tombe-c-est-l-europe-qui-devra-se-defendre-a-son-tour-souligne-l-avocat-et-essayiste_VN-202611250833.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T17:37:21Z",
+      "title": "\"LE 20.27\" - Le Congrès des maires de France, une rampe de lancement pour les candidats?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-20-27-le-congres-des-maires-de-france-une-rampe-de-lancement-pour-les-candidats_VN-202611250830.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T17:23:06Z",
+      "title": "Propos de Teddy Riner sur l'Ukraine: \"C'est une évidence limpide\", affirme Olivier Serva, député LIOT de Guadeloupe et soutien du judoka",
+      "url": "https://www.bfmtv.com/politique/video-propos-de-teddy-riner-sur-l-ukraine-c-est-une-evidence-limpide-affirme-olivier-serva-depute-liot-de-guadeloupe-et-soutien-du-judoka_VN-202611250818.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
