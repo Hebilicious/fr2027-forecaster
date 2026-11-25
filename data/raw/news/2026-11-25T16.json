@@ -1,0 +1,208 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T16:18:30Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-25T16:10:39Z",
+      "title": "Teddy Riner critique le déploiement de soldats français en Ukraine pour des missions non-combattantes : « Ce n’est pas notre guerre »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/25/teddy-riner-critique-le-deploiement-de-soldats-francais-en-ukraine-pour-des-missions-non-combattantes-ce-n-est-pas-notre-guerre_6815137_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-25T15:53:10Z",
+      "title": "Le «ni Mélenchon, ni Le Pen», un naufrage moral à responsabilités multiples",
+      "url": "https://www.liberation.fr/politique/le-ni-melenchon-ni-le-pen-un-naufrage-moral-a-responsabilites-multiples-20261125_6YU345BZNRGL3CYMT4XLN3I5S4/"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T16:00:59Z",
+      "title": "Hypothèse d'un second tour RN/LFI à la présidentielle: Gabriel Attal déplore \"un duel qui est en réalité un duo\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-hypothese-d-un-second-tour-rn-lfi-a-la-presidentielle-gabriel-attal-deplore-un-duel-qui-est-en-realite-un-duo_VN-202611250747.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T15:59:03Z",
+      "title": "Présidentielle 2027: Gabriel Attal estime que la question du logement est \"clé pour les jeunes\" et veut en faciliter l’accès",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-gabriel-attal-estime-que-la-question-du-logement-est-cle-pour-les-jeunes-et-veut-en-faciliter-l-acces_VN-202611250743.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T15:55:11Z",
+      "title": "SONDAGE BFMTV. Présidentielle 2027: 77% des sympathisants de la droite et du centre veulent qu’Édouard Philippe participe à la primaire, si celle-ci a lieu",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/sondage-bfmtv-presidentielle-2027-77-des-sympathisants-de-droite-et-du-centre-veulent-qu-edouard-philippe-participe-a-la-primaire-si-celle-ci-a-lieu_AV-202611250736.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T15:50:50Z",
+      "title": "Présidentielle 2027: Gabriel Attal \"appelle au rassemblement des démocrates pour épargner à la France un second tour entre les extrêmes\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-gabriel-attal-appelle-au-rassemblement-des-democrates-pour-epargner-a-la-france-un-second-tour-entre-les-extremes_VN-202611250734.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T15:49:52Z",
+      "title": "Présidentielle 2027: \"Il faut plus partager le pouvoir en France\", estime Gabriel Attal, candidat à l'élection",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-il-faut-plus-partager-le-pouvoir-en-france-estime-gabriel-attal-candidat-a-l-election_VN-202611250732.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T15:46:16Z",
+      "title": "\"Le soutien à l'Ukraine n'est pas humanitaire, c'est la défense de nos intérêts en France et en Europe\", rappelle Grabiel Attal, candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-soutien-a-l-ukraine-n-est-pas-humanitaire-c-est-la-defense-de-nos-interets-en-france-et-en-europe-rappelle-grabiel-attal-candidat-a-la-presidentielle_VN-202611250726.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T15:33:56Z",
+      "title": "Guerre en Ukraine: Teddy Riner veut être \"acteur de la paix\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-guerre-en-ukraine-pour-teddy-riner-veut-etre-acteur-de-la-paix_VN-202611250720.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : en cas de duel opposant Marine Le Pen à Jean-Luc Mélenchon, qui voterait quoi ?",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-en-cas-de-duel-opposant-marine-le-pen-a-jean-luc-melenchon-qui-voterait-quoi-25-11-2026-J6MR2JWXF5GOBITIZAVYVU6KW4.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ce n’est pas notre guerre » : Teddy Riner s’empêtre sur le conflit en Ukraine avant de se rétracter",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ce-nest-pas-notre-guerre-teddy-riner-bouscule-par-les-journalistes-sur-le-conflit-en-ukraine-25-11-2026-67V5SOZHOJC53OFIAG7XQWCOWA.php"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-25T15:56:17Z",
+      "title": "« Une règle d’or ? Emmanuel Macron a transformé l’or en plomb ! » : Patrick Kanner et Sébastien Lecornu s’écharpent sur leurs bilans respectifs",
+      "url": "https://www.publicsenat.fr/actualites/politique/une-regle-dor-emmanuel-macron-a-transforme-lor-en-plomb-patrick-kanner-et-sebastien-lecornu-secharpent-sur-leurs-bilans-respecti"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-25T16:14:41Z",
+      "title": "Élection présidentielle : Philippe propose un débat à Lisnard et tente de se relancer",
+      "url": "https://www.france24.com/fr/%C3%A9missions/face-%C3%A0-face/20261125-%C3%A9lection-pr%C3%A9sidentielle-2027-philippe-propose-un-d%C3%A9bat-%C3%A0-lisnard-et-tente-de-se-relancer"
+    }
+  ],
+  "schema_version": "1.0"
+}
