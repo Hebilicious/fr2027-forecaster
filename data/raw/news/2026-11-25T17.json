@@ -1,0 +1,162 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T17:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-25T17:07:37Z",
+      "title": "«L’Ukraine n’est pas notre guerre» : Teddy Riner se prend les pieds dans le tatami avant de rétropédaler",
+      "url": "https://www.liberation.fr/sports/lukraine-nest-pas-notre-guerre-teddy-riner-se-prend-les-pieds-dans-le-tatami-avant-de-retropedaler-20261125_7JEBWXSMBRH3VHKPFGQKYILKCM/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T16:59:18Z",
+      "title": "\"Il n'y aura qu'un seul candidat de la droite et du centre au premier tour\", assure Maël de Calan, porte-parole d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/video-il-n-y-aura-qu-un-seul-candidat-de-la-droite-et-du-centre-au-premier-tour-assure-mael-de-calan-porte-parole-d-edouard-philippe_VN-202611250790.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T16:58:41Z",
+      "title": "\"Laure Lavalette n'a rien d'antisémite\", soutient Julien Argenton, maire de La Valette-du-Var et suppléant de la porte-parole de la campagne présidentielle de Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/front-national/video-laure-lavalette-n-a-rien-d-antisemite-soutient-julien-argenton-maire-de-la-valette-du-var-et-suppleant-de-la-porte-parole-de-la-campagne-presidentielle-de-marine-le-pen_VN-202611250789.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T16:56:25Z",
+      "title": "Présidentielle: \"Il faut une primaire\", souligne Frédéric Masquelier, maire de Saint-Raphaël et soutien de David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-il-faut-une-primaire-souligne-frederic-masquelier-maire-de-saint-raphael-et-soutien-de-david-lisnard_VN-202611250784.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T16:33:24Z",
+      "title": "L'EFFET GRABLY - Présidentielle 2027: David Lisnard poursuit son ascension",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-effet-grably-presidentielle-2027-david-lisnard-poursuit-son-ascension_VN-202611250768.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T16:29:53Z",
+      "title": "\"Ce n’est pas notre guerre\": Teddy Riner \"ne comprend pas qu’on envoie des troupes en Ukraine\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/ce-n-est-pas-notre-guerre-teddy-riner-ne-comprend-pas-qu-on-envoie-des-troupes-en-ukraine_AV-202611250763.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : yachts, éolien, navires-usines… comment Jean-Luc Mélenchon veut en finir avec « le saccage de la mer »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-yachts-eolien-navires-usines-comment-jean-luc-melenchon-veut-en-finir-avec-le-saccage-de-la-mer-25-11-2026-2TBIQT7ZDRBILJTBAJCQCDJEVY.php"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-25T17:10:46Z",
+      "title": "Présidentielle 2027 : « L’Ukraine, ce n’est pas notre guerre », glisse Teddy Riner entre deux micros",
+      "url": "https://www.20minutes.fr/politique/4265766-20261125-presidentielle-2027-ukraine-guerre-glisse-teddy-riner-entre-deux-micros"
+    }
+  ],
+  "schema_version": "1.0"
+}
