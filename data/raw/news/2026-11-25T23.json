@@ -1,0 +1,163 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T23:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T22:53:33Z",
+      "title": "Présidentielle 2027 : \"Il faut une compétition, il faut une sélection\", défend le candidat David Lisnard, partisan d'une primaire",
+      "url": "https://www.franceinfo.fr/elections/presidentielle-2027-il-faut-une-competition-il-faut-une-selection-defend-le-candidat-david-lisnard-partisan-d-une-primaire_8300388.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T23:01:36Z",
+      "title": "\"La démocratie, c’est du vote\": David Lisnard rejette la proposition d'un débat avec Édouard Philippe à la place de la primaire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/la-democratie-c-est-du-vote-david-lisnard-rejette-la-proposition-d-un-debat-avec-edouard-philippe-a-la-place-de-la-primaire_AN-202611251031.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T22:50:10Z",
+      "title": "\"Marine Le Pen, elle représente le nouveau en-même-tempisme\", estime Alexandra Martin, secrétaire générale de Nouvelle Énergie",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-le-pen-elle-represente-le-nouveau-en-meme-tempisme-estime-alexandra-martin-secretaire-generale-de-nouvelle-energie_VN-202611251026.html"
+    },
+    {
+      "candidate_ids": [
+        "bertrand"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T22:33:22Z",
+      "title": "Absences au conseil régional des Hauts-de-France: \"Xavier Bertrand, par pur cynisme, fait les réunions le jour où on siège\" à l'Assemblée nationale, assure Jean-Philippe Tanguy, député RN de la Somme",
+      "url": "https://www.bfmtv.com/politique/video-absences-au-conseil-regional-des-hauts-de-france-xavier-bertrand-par-pur-cynisme-fait-les-reunions-le-jour-ou-on-siege-a-l-assemblee-nationale-assure-jean-philippe-tanguy-depute-rn-de-la-somme_VN-202611251017.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T22:27:42Z",
+      "title": "David Lisnard, l'outsider qui bouscule la campagne présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-david-lisnard-l-outsider-qui-bouscule-la-campagne-presidentielle_VN-202611251013.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T22:12:30Z",
+      "title": "Un second tour Le Pen-Mélenchon serait \"une guerre civile\" pour Gérald Darmanin: \"Banaliser quelque chose d'aussi épouvantable est extrêmement grave\", assure Jean-Philippe Tanguy, député RN",
+      "url": "https://www.bfmtv.com/politique/elections/video-un-second-tour-le-pen-melenchon-serait-une-guerre-civile-pour-gerald-darmanin-banaliser-quelque-chose-d-aussi-epouvantable-est-extremement-grave-assure-jean-philippe-tanguy-depute-rn_VN-202611251000.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T22:08:42Z",
+      "title": "\"Quand je vois ses propositions qui viennent à 99% du programme de Marine Le Pen, je ne comprends pas pourquoi il ne nous aide pas\", assure Jean-Philippe Tanguy (RN) à propos de David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-quand-je-vois-ses-propositions-qui-viennent-a-99-du-programme-de-marine-le-pen-je-ne-comprends-pas-pourquoi-il-ne-nous-aide-pas-assure-jean-philippe-tanguy-rn-a-propos-de-david-lisnard_VN-202611250998.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-25T22:06:30Z",
+      "title": "Présidentielle 2027 : « La démocratie, c’est le vote »… Lisnard refuse le débat proposé par Philippe",
+      "url": "https://www.20minutes.fr/politique/4265806-20261125-presidentielle-2027-democratie-vote-lisnard-refuse-debat-propose-philippe"
+    }
+  ],
+  "schema_version": "1.0"
+}
