@@ -1,0 +1,280 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T21:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-25T20:15:00Z",
+      "title": "« L’État doit reprendre sa place » : Hanane Mansouri, l’émissaire de Marine Le Pen dans les banlieues à l’épreuve des cités grenobloises",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/l-etat-doit-reprendre-sa-place-hanane-mansouri-l-emissaire-de-marine-le-pen-dans-les-banlieues-a-l-epreuve-des-cites-grenobloises-20261125"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T20:49:37Z",
+      "title": "La France insoumise refuse la proposition de rencontre des anciens Insoumis de l'Après",
+      "url": "https://www.franceinfo.fr/politique/la-france-insoumise/la-france-insoumise-refuse-la-proposition-de-rencontre-des-anciens-insoumis-de-l-apres_8300331.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T20:24:57Z",
+      "title": "VIDEO. \"La démocratie, c’est du vote\", déclare David Lisnard, qui refuse la proposition d’Edouard Philippe de débattre à la place d'une primaire",
+      "url": "https://www.franceinfo.fr/elections/video-la-democratie-c-est-du-vote-declare-david-lisnard-qui-refuse-la-proposition-d-edouard-philippe-de-debattre-a-la-place-d-une-primaire_8300295.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T21:12:33Z",
+      "title": "Dissolution de l'Assemblée nationale en 2024: \"Emmanuel Macron n'a pas fait les choses dans l'ordre\", regrette Dominique de Villepin, candidat La France Humaniste à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-dissolution-de-l-assemblee-nationale-en-2024-emmanuel-macron-n-a-pas-fait-les-choses-dans-l-ordre-regrette-dominique-de-villepin-candidat-la-france-humaniste-a-l-election-presidentielle_VN-202611250976.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T21:08:02Z",
+      "title": "Pour Dominique de Villepin, candidat La France Humaniste à la présidentielle, un référendum est \"une respiration utile\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-dominique-de-villepin-candidat-la-france-humaniste-a-la-presidentielle-un-referendum-est-une-respiration-utile_VN-202611250973.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T21:04:47Z",
+      "title": "David Lisnard \"prépare l'union des droites\" selon Dominique de Villepin, candidat La France Humaniste à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-david-lisnard-prepare-l-union-des-droites-selon-dominique-de-villepin-candidat-la-france-humaniste-a-la-presidentielle_VN-202611250972.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T21:02:16Z",
+      "title": "Présidentielle: Dominique de Villepin assure avoir \"un peu plus de 80.000 adhérents\" à son mouvement, La France Humaniste",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-dominique-de-villepin-assure-avoir-un-peu-plus-de-80-000-adherents-a-son-mouvement-la-france-humaniste_VN-202611250971.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:58:45Z",
+      "title": "David Lisnard, président de l'association des maires de France et candidat à la présidentielle: \"C'est un des symptômes de la confusion qui règne dans la vie politique\"; estime Dominique de Villepin, candidat La France Humaniste à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-david-lisnard-president-de-l-association-des-maires-de-france-et-candidat-a-la-presidentielle-c-est-un-des-symptomes-de-la-confusion-qui-regne-dans-la-vie-politique-estime-dominique-de-villepin-candidat-la-france-humaniste-a-la-presidentielle_VN-202611250970.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:56:19Z",
+      "title": "Présidentielle: \"Ne votez pas par colère, ne votez pas parce que vous en avez ras-le-bol\", demande Dominique de Villepin, candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-ne-votez-pas-par-colere-ne-votez-pas-parce-que-vous-en-avez-ras-le-bol-demande-dominique-de-villepin-candidat-a-l-election-presidentielle_VN-202611250969.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:55:38Z",
+      "title": "Présidentielle 2027: Gabriel Attal \"espère\" que la réunion autour de Gérard Larcher permettra aux candidats de la droite et du centre d'\"avancer\" vers un départage",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-gabriel-attal-espere-que-la-reunion-autour-de-gerard-larcher-permettra-aux-candidats-de-la-droite-et-du-centre-d-avancer-vers-un-departage_AD-202611250967.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:54:52Z",
+      "title": "Menaces russes sur l'Europe: Dominique de Villepin, candidat La France Humaniste à la présidentielle, propose la création \"d'une réserve citoyenne\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-menaces-russes-sur-l-europe-dominique-de-villepin-candidat-la-france-humaniste-a-la-presidentielle-propose-la-creation-d-une-reserve-citoyenne_VN-202611250968.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:42:05Z",
+      "title": "Pour Dominique de Villepin, candidat La France Humaniste à la présidentielle, \"notre sécurité est engagée dans ce qu'il se passe en Ukraine\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-dominique-de-villepin-candidat-la-france-humaniste-a-la-presidentielle-notre-securite-est-engagee-dans-ce-qu-il-se-passe-en-ukraine_VN-202611250958.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:39:56Z",
+      "title": "Présidentielle: Dominique de Villepin veut \"reconnaître le vote blanc\" et \"abaisser l'âge du vote à 16 ans\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-dominique-de-villepin-veut-reconnaitre-le-vote-blanc-et-abaisser-l-age-du-vote-a-16-ans_VN-202611250957.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:37:13Z",
+      "title": "Retraites: \"Le débat sur l'âge légal est une farce\", estime Dominique de Villepin, candidat La France Humaniste, qui propose un \"système à points\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-retraites-le-debat-sur-l-age-legal-est-une-farce-estime-dominique-de-villepin-candidat-la-france-humaniste-qui-propose-un-systeme-a-points_VN-202611250956.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:32:46Z",
+      "title": "Prix de l'énergie: Dominique de Villepin, candidat La France Humaniste à la présidentielle, souhaite \"raccorder notre facture d'électricité au nucléaire\" pour en baisser le coût",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-prix-de-l-energie-dominique-de-villepin-candidat-la-france-humaniste-a-la-presidentielle-souhaite-raccorder-notre-facture-d-electricite-au-nucleaire-pour-en-baisser-le-cout_VN-202611250953.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:28:12Z",
+      "title": "Salariés licenciés à cause de l'intelligence artificielle: Dominique de Villepin, candidat La France Humaniste, propose \"un contrat de transition professionnelle sur deux ans\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-salaries-licencies-a-cause-de-l-intelligence-artificielle-dominique-de-villepin-candidat-la-france-humaniste-propose-un-contrat-de-transition-professionnelle-sur-deux-ans_VN-202611250951.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:26:44Z",
+      "title": "Proposition d'augmenter de 200 euros net les salaires: \"Il s'agit de rapprocher le brut du net\", explique Dominique de Villepin, candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-proposition-d-augmenter-de-200-euros-net-les-salaires-il-s-agit-de-rapprocher-le-brut-du-net-explique-dominique-de-villepin-candidat-a-l-election-presidentielle_VN-202611250948.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:23:50Z",
+      "title": "\"Soyons attentifs à ce que notre pays ne soit pas la cible d'un attentat terroriste\", alerte Dominique de Villepin, candidat La France Humaniste à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-soyons-attentifs-a-ce-que-notre-pays-ne-soit-pas-la-cible-d-un-attentat-terroriste-alerte-dominique-de-villepin-candidat-la-france-humaniste-a-la-presidentielle_VN-202611250947.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:21:40Z",
+      "title": "Duel Mélenchon/Le Pen: \"Nous sommes devant une farce politique\", juge Dominique de Villepin, candidat La France Humaniste à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-duel-melenchon-le-pen-nous-sommes-devant-une-farce-politique-juge-dominique-de-villepin-candidat-la-france-humaniste-a-l-election-presidentielle_VN-202611250944.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:18:30Z",
+      "title": "\"Nous rentrons dans un schéma de démocratie illibérale\", prévient Dominique de Villepin, candidat La France Humaniste, à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-nous-rentrons-dans-un-schema-de-democratie-illiberale-previent-dominique-de-villepin-candidat-la-france-humaniste-a-l-election-presidentielle_VN-202611250942.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : les sympathisants de droite et du centre largement favorables à une participation d’Édouard Philippe à la primaire, selon un sondage",
+      "url": "https://www.leparisien.fr/politique/presidentielle-2027-les-sympathisants-de-droite-et-du-centre-largement-favorables-a-une-participation-dedouard-philippe-a-la-primaire-selon-un-sondage-25-11-2026-5BKJGTAECFG6TK4LEBXDD53RJ4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
