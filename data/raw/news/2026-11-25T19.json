@@ -1,0 +1,155 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T19:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-25T18:57:23Z",
+      "title": "Teddy Riner affirme, à propos de la guerre en Ukraine, que la France doit « arrêter de donner de l’argent » qu’elle n’a pas",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/25/teddy-riner-affirme-a-propos-de-la-guerre-en-ukraine-que-la-france-doit-arreter-de-donner-de-l-argent-que-nous-n-avons-pas_6815137_823449.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-25T19:00:00Z",
+      "title": "Présidentielle 2027 : un débat plutôt qu’une primaire, la nouvelle piste à droite et au centre",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-un-debat-plutot-qu-une-primaire-la-nouvelle-piste-a-droite-et-au-centre-20261125"
+    },
+    {
+      "candidate_ids": [
+        "riner",
+        "villepin"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-25T18:30:00Z",
+      "title": "« On est là pour planter des graines » : au Salon des maires, la méticuleuse quête des parrainages de Teddy Riner et de Dominique de Villepin",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/on-est-la-pour-planter-des-graines-au-salon-des-maires-la-meticuleuse-quete-des-parrainages-de-teddy-riner-et-de-dominique-de-villepin-20261125"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-25T18:41:37Z",
+      "title": "Lisnard réélu à l’AMF, nouvelle plainte contre Bruel, le 7 Octobre en question en Israël… L’actu de ce mercredi 25 novembre",
+      "url": "https://www.liberation.fr/international/lisnard-reelu-a-lamf-nouvelle-plainte-contre-bruel-le-7-octobre-en-question-en-israel-lactu-de-ce-mercredi-25-novembre-20261125_M2ZU2JA4YBHVLLQ24VS76TUFDE/"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T18:38:03Z",
+      "title": "\"Il n'y aura qu'un seul candidat de la droite et du centre sur la ligne de départ\", promet Maël de Calan, le porte-parole d’Édouard Philippe",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/avant-le-20h/il-n-y-aura-qu-un-seul-candidat-de-la-droite-et-du-centre-sur-la-ligne-de-depart-promet-mael-de-calan-le-porte-parole-d-edouard-philippe_8300205.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T18:34:26Z",
+      "title": "Propos de Teddy Riner sur l'Ukraine: \"Il a commis une faute politique\", estime Jérémie Patrier-Leitus, député Horizons et porte-parole d’Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-propos-de-teddy-riner-sur-l-ukraine-il-a-commis-une-faute-politique-estime-jeremie-patrier-leitus-depute-horizons-et-porte-parole-d-edouard-philippe_VN-202611250881.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T18:24:49Z",
+      "title": "\"Le bloc central est en train de mourir\", remarque Alexandre Ouizille, directeur de campagne de Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-bloc-central-est-en-train-de-mourir-remarque-alexandre-ouizille-directeur-de-campagne-de-raphael-glucksmann_VN-202611250874.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
