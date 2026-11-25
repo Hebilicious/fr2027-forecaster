@@ -1,0 +1,237 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T15:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-presidentielle",
+      "published_at": "2026-11-25T14:54:22Z",
+      "title": "\"Je ne comprends pas qu'on envoie des troupes en Ukraine, alors que ce n'est pas notre guerre\", déclare Teddy Riner",
+      "url": "https://www.franceinfo.fr/elections/je-ne-comprends-pas-qu-on-envoie-des-troupes-en-ukraine-alors-que-ce-n-est-pas-notre-guerre-declare-teddy-riner_8299806.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T15:16:04Z",
+      "title": "\"On a déjà dépassé la centaine\": Teddy Riner assure que ses parrainages pour la présidentielle \"avancent bien\" mais reconnaît \"un petit stress\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/on-a-deja-depasse-la-centaine-teddy-riner-assure-que-ses-parrainages-pour-la-presidentielle-avancent-bien-mais-reconnait-un-petit-stress_AV-202611250706.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T15:13:25Z",
+      "title": "Présidentielle 2027: \"C'est un bon début de campagne\", assure Teddy Riner, candidat à l'élection",
+      "url": "https://www.bfmtv.com/politique/elections/video-presidentielle-2027-c-est-un-bon-debut-de-campagne-assure-teddy-riner-candidat-a-l-election_VN-202611250704.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T14:59:52Z",
+      "title": "Après la réélection de David Lisnard à la tête de l'AMF, Jean-Luc Mélenchon appelle à sa mise en retrait",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-apres-la-reelection-de-david-lisnard-a-la-tete-de-l-amf-jean-luc-melenchon-appelle-a-sa-mise-en-retrait_VN-202611250695.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T14:44:09Z",
+      "title": "Présidentielle 2027: \"La discussion a lieu\" entre Jean-Luc Mélenchon et Marine Tondelier",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-la-discussion-a-lieu-entre-jean-luc-melenchon-et-marine-tondelier_VN-202611250688.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T14:40:32Z",
+      "title": "Présidentielle 2027: \"Il y a suffisamment de candidats\", juge François Hollande",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-il-y-a-suffisamment-de-candidats-juge-francois-hollande_VN-202611250685.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T14:37:33Z",
+      "title": "\"Ça fait des semaines que la question des lycéens aurait dû être reglée\", estime François Hollande",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ca-fait-des-semaines-que-la-question-des-lyceens-aurait-du-etre-reglee-estime-francois-hollande_VN-202611250684.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T14:26:56Z",
+      "title": "François Hollande pense que Jean-Luc Mélenchon \"ne veut pas gagner\" l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-francois-hollande-pense-que-jean-luc-melenchon-ne-veut-pas-gagner-l-election-presidentielle_VN-202611250675.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T14:25:17Z",
+      "title": "Présidentielle 2027: \"On ne gagne pas une élection sur la peur\", rappelle François Hollande",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-on-ne-gagne-pas-une-election-sur-la-peur-rappelle-francois-hollande_VN-202611250673.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T14:23:46Z",
+      "title": "\"Les maires demandent de retrouver confiance\", estime François Hollande lors du congrès des Maires de France",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-maires-demandent-de-retrouver-confiance-estime-francois-hollande-lors-du-congres-des-maires-de-france_VN-202611250671.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T14:21:11Z",
+      "title": "Présidentielle 2027: \"Ce sont les dernières semaines qui comptent, ça va s'éclaircir de plus en plus\", lance François Hollande",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-ce-sont-les-dernieres-semaines-qui-comptent-ca-va-s-eclaircir-de-plus-en-plus-lance-francois-hollande_VN-202611250670.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-25T14:34:21Z",
+      "title": "Présidentielle 2027 : David Lisnard réélu à la tête de l’association des maires avec 72 % des voix",
+      "url": "https://www.20minutes.fr/politique/4265683-20261125-presidentielle-2027-david-lisnard-reelu-tete-association-maires-72-voix"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-25T14:45:50Z",
+      "title": "David Lisnard réélu à la tête de l’AMF : « Ça ne peut pas nuire à sa démarche pour la présidentielle », reconnaît Hervé Marseille",
+      "url": "https://www.publicsenat.fr/actualites/politique/david-lisnard-reelu-a-la-tete-de-lamf-ca-ne-peut-pas-nuire-a-sa-demarche-pour-la-presidentielle-reconnait-herve-marseille"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-25T14:39:07Z",
+      "title": "« Nous éviterons le duel Rassemblement national/ La France insoumise » au second tour, déclare Raphaël Glucksmann",
+      "url": "https://www.publicsenat.fr/actualites/politique/nous-eviterons-le-duel-rassemblement-national-la-france-insoumise-au-second-tour-declare-raphael-glucksmann"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-25T15:15:51Z",
+      "title": "David Lisnard à la tête des Maires de France : \"un record de participation depuis 1989\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261125-david-lisnard-%C3%A0-la-t%C3%AAte-des-maires-de-france-un-record-de-participation-depuis-1989"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-25T15:08:36Z",
+      "title": "France : David Lisnard réelu à la présidence de l'Association de Maire de France",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261125-france-david-lisnard-r%C3%A9elu-%C3%A0-la-pr%C3%A9sidence-de-l-association-de-maire-de-france"
+    }
+  ],
+  "schema_version": "1.0"
+}
