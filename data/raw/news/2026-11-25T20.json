@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T20:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-25T19:25:00Z",
+      "title": "Comment le candidat David Lisnard séduit les déçus d’une partie de la droite : « Avec Retailleau et Philippe, on continue sans rien changer »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/25/comment-le-candidat-david-lisnard-seduit-les-decus-d-une-partie-de-la-droite-avec-retailleau-et-philippe-on-continue-sans-rien-changer_6815170_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T20:08:17Z",
+      "title": "\"Aujourd'hui il y a une crainte des deux extrêmes\" pour les Français de confession juive note Frank Tapiro, soutien de David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-aujourd-hui-il-y-a-une-crainte-des-deux-extremes-pour-les-francais-de-confession-juive-note-frank-tapiro-soutien-de-david-lisnard_VN-202611250939.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "hollande"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Chacun son rythme » : chez les maires, un salon, deux ambiances pour Raphaël Glucksmann et François Hollande",
+      "url": "https://www.leparisien.fr/elections/presidentielle/chacun-son-rythme-chez-les-maires-un-salon-deux-ambiances-pour-raphael-glucksmann-et-francois-hollande-25-11-2026-G2W3A4D4CRDVPB2F3DCHGD2CZQ.php"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Ça va nous occuper la semaine » : au Salon des maires, Teddy Riner crispe sur la guerre en Ukraine",
+      "url": "https://www.leparisien.fr/elections/presidentielle/ca-va-nous-occuper-la-semaine-au-salon-des-maires-teddy-riner-crispe-sur-la-guerre-en-ukraine-25-11-2026-DBGVVE7J7JCENI5TBJPKF5NENA.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
