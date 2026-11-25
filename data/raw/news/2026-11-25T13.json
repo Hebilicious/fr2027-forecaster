@@ -1,0 +1,271 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T13:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-25T12:43:58Z",
+      "title": "David Lisnard, candidat à l’élection présidentielle, réélu à la tête de l’Association des maires de France",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/25/david-lisnard-candidat-a-l-election-presidentielle-reelu-a-la-tete-de-l-association-des-maires-de-france_6815094_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-25T13:00:17Z",
+      "title": "Nathalie Janson, économiste : « Le plan de réforme des retraites du RN s’arrête au milieu du gué »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/25/nathalie-janson-economiste-le-plan-de-reforme-des-retraites-du-rn-s-arrete-au-milieu-du-gue_6815097_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-25T12:37:49Z",
+      "title": "En campagne pour l’Elysée, David Lisnard réélu à la tête des maires de France",
+      "url": "https://www.liberation.fr/politique/elections/en-campagne-pour-lelysee-david-lisnard-reelu-a-la-tete-des-maires-de-france-20261125_SGKQEG6H3FHHPMAGJUG2OU2I2Q/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T13:04:30Z",
+      "title": "Urbanisation sans contrôle, mouillage des yachts, pêche intensive… LFI présente son plan pour en finir avec le \"saccage de la mer\"",
+      "url": "https://www.franceinfo.fr/elections/urbanisation-sans-controle-mouillage-des-yachts-peche-intensive-lfi-presente-son-plan-pour-en-finir-avec-le-saccage-de-la-mer_8299692.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T13:11:09Z",
+      "title": "\"Une responsabilité supplémentaire\": David Lisnard est réélu à la tête de l'association des maires de France avec 72% des voix",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-une-responsabilite-supplementaire-david-lisnard-est-reelu-a-la-tete-de-l-association-des-maires-de-france-avec-72-des-voix_VN-202611250602.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T13:05:24Z",
+      "title": "\"Je veux être une alternative à d’autres changements proposés auxquels je ne crois pas et que je veux combattre ardemment, l’extrême gauche et le RN\", explique David Lisnard, réélu à la tête de l'AMF",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-veux-etre-une-alternative-a-d-autres-changements-proposes-auxquels-je-ne-crois-pas-et-que-je-veux-combattre-ardemment-l-extreme-gauche-et-le-rn-explique-david-lisnard-reelu-a-la-tete-de-l-amf_VN-202611250599.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T12:56:49Z",
+      "title": "Réélection à la tête de l'AMF: \"Pas un tremplin\" pour la présidentielle mais \"ça me renforce dans mes convictions\", estime David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-reelection-a-la-tete-de-l-amf-pas-un-tremplin-pour-la-presidentielle-mais-ca-me-renforce-dans-mes-convictions-estime-david-lisnard_VN-202611250593.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T12:53:46Z",
+      "title": "David Lisnard réélu à la tête de l'AMF: \"C'est le fruit de la mobilisation d’une France du terrain\", assure-t-il",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-david-lisnard-reelu-a-la-tete-de-l-amf-c-est-le-fruit-de-la-mobilisation-d-une-france-du-terrain-assure-t-il_VN-202611250590.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T12:42:24Z",
+      "title": "David Lisnard est réélu à la tête de l'Association des maires de France avec 72% des voix",
+      "url": "https://www.bfmtv.com/politique/video-david-lisnard-est-reelu-a-la-tete-de-l-association-des-maires-de-france-avec-72-des-voix_VN-202611250585.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T12:37:39Z",
+      "title": "Julie Boillot, porte-parole d'Édouard Philippe: \"Nous avons le sentiment que la ligne de droite et du centre n'est pas la même pour tout le monde\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-julie-boillot-porte-parole-d-edouard-philippe-nous-avons-le-sentiment-que-la-ligne-de-droite-et-du-centre-n-est-pas-la-meme-pour-tout-le-monde_VN-202611250582.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T12:31:24Z",
+      "title": "Possible candidature de François Hollande: \"Chacun son rythme, nous on est en campagne\", déclare Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-possible-candidature-de-francois-hollande-chacun-son-rythme-nous-on-est-en-campagne-declare-raphael-glucksmann_VN-202611250581.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T12:30:58Z",
+      "title": "Candidat à la présidentielle, David Lisnard réélu à la tête de l'Association des maires de France avec 72% des voix",
+      "url": "https://www.bfmtv.com/politique/le-maire-de-cannes-david-lisnard-reelu-president-de-l-association-des-maires-de-france_AN-202611250579.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T12:22:14Z",
+      "title": "Présidentielle: Raphaël Glucksmann estime que \"nous éviterons le duel\" RN-LFI au second tour",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-raphael-glucksmann-estime-que-nous-eviterons-le-duel-rn-lfi-au-second-tour_VN-202611250577.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Je les dérange et je ne compte pas arrêter » : pour David Lisnard, réélu à la tête de l’AMF, le plus dur commence",
+      "url": "https://www.leparisien.fr/politique/je-les-derange-et-je-ne-compte-pas-arreter-pour-david-lisnard-reelu-a-la-tete-de-lamf-le-plus-dur-commence-25-11-2026-IS5UQZ5SLFEKNFBHP5E4NDY7E4.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "David Lisnard largement réélu à la tête de l’Association des maires de France",
+      "url": "https://www.leparisien.fr/politique/david-lisnard-largement-reelu-a-la-tete-de-lassociation-des-maires-de-france-25-11-2026-JQULQXXRRBHNTFXAFV27RBEWZY.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-25T12:38:52Z",
+      "title": "Présidentielle 2027 : Le bloc central prône déjà le « ni-ni » en cas de duel Mélenchon-Le Pen au second tour",
+      "url": "https://www.20minutes.fr/politique/4265638-20261125-presidentielle-2027-bloc-central-prone-deja-ni-ni-cas-duel-melenchon-pen-second-tour"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-25T12:24:44Z",
+      "title": "Présidentielle : Mais pourquoi David Lisnard a parrainé Jean-Luc Mélenchon en 2022 ?",
+      "url": "https://www.20minutes.fr/politique/4265622-20261125-presidentielle-pourquoi-david-lisnard-parraine-jean-luc-melenchon-2022"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-25T12:34:58Z",
+      "title": "David Lisnard largement réélu à la tête de l’Association des maires de France",
+      "url": "https://www.publicsenat.fr/actualites/politique/david-lisnard-largement-reelu-a-la-tete-de-lassociation-des-maires-de-france"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-25T12:20:53Z",
+      "title": "Congrès des maires : « J’appelle à un choc d’investissement et de soutien auprès des communes », déclare Fabien Roussel",
+      "url": "https://www.publicsenat.fr/actualites/politique/congres-des-maires-jappelle-a-un-choc-dinvestissement-et-de-soutien-aupres-des-communes-declare-fabien-roussel"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-25T12:42:22Z",
+      "title": "David Lisnard annonce sa réélection à la tête de l'Association des maires de France",
+      "url": "https://www.france24.com/fr/france/20261125-france-david-lisnard-annonce-sa-reelection-a-la-tete-de-l-association-des-maires-de-france"
+    }
+  ],
+  "schema_version": "1.0"
+}
