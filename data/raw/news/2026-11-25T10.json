@@ -1,0 +1,124 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T10:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T09:12:34Z",
+      "title": "Laure Lavalette accusée d'antisémitisme : \"Une erreur de jeunesse\", estime Jean-Philippe Tanguy",
+      "url": "https://www.franceinfo.fr/politique/front-national/laure-lavalette-accusee-d-antisemitisme-une-erreur-de-jeunesse-estime-jean-philippe-tanguy_8298996.html"
+    },
+    {
+      "candidate_ids": [
+        "bouamrane",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T09:37:12Z",
+      "title": "Présidentielle 2027 : \"Je ne comprends pas du tout les ralliements à Jean-Luc Mélenchon, il y a un côté maso\", estime Karim Bouamrane",
+      "url": "https://www.franceinfo.fr/replay-jt/franceinfo/6h30-9h30/7-heures/la-matinale-info-du-mercredi-25-novembre-2026_8291456.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T09:47:43Z",
+      "title": "LES ÉCLAIREURS - Édouard Philippe - David Lisnard: quelles différences dans leurs projets?",
+      "url": "https://www.bfmtv.com/politique/video-les-eclaireurs-edouard-philippe-david-lisnard-quelles-differences-dans-leurs-projets_VN-202611250463.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-25T09:15:37Z",
+      "title": "« David Lisnard, c’est massacre à la tronçonneuse dans les services publics », tacle Michaël Delafosse (PS)",
+      "url": "https://www.publicsenat.fr/actualites/politique/david-lisnard-cest-massacre-a-la-tronconneuse-dans-les-services-publics-tacle-michael-delafosse-ps"
+    }
+  ],
+  "schema_version": "1.0"
+}
