@@ -1,0 +1,137 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T11:18:20Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-25T11:17:24Z",
+      "title": "EN DIRECT, congrès des maires 2026 : David Lisnard va-t-il être réélu à la tête des maires de France ? Suivez la journée et posez-nous vos questions",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/25/en-direct-congres-des-maires-2026-david-lisnard-va-t-il-etre-reelu-a-la-tete-des-maires-de-france-suivez-la-journee-et-posez-nous-vos-questions_6815062_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau",
+        "zemmour"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-25T11:00:00Z",
+      "title": "Alexandre Devecchio : « La droite éparpillée façon puzzle »",
+      "url": "https://www.lefigaro.fr/vox/politique/alexandre-devecchio-la-droite-eparpillee-facon-puzzle-20261125"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T10:42:21Z",
+      "title": "\"C'est peut-être problématique d'avoir le président d'une association de tous les maires de France qui est candidat très marqué dans une présidentielle\", pointe le politologue Olivier Rouquan à propos de David Lisnard",
+      "url": "https://www.franceinfo.fr/elections/c-est-peut-etre-problematique-d-avoir-le-president-d-une-association-de-tous-les-maires-de-france-qui-est-candidat-tres-marque-dans-une-presidentielle-pointe-le-politologue-olivier-rouquan-a-propos-de-david-lisnard_8299074.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : un duel Mélenchon-Le Pen « mènerait notre pays au bord de la guerre civile », juge Darmanin",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-un-duel-melenchon-le-pen-menerait-notre-pays-au-bord-de-la-guerre-civile-juge-darmanin-25-11-2026-OR3WJXPKINEUDGEDS2CKLOK4ZA.php"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-23T07:55:47Z",
+      "title": "Bonjour chez vous ! — Michaël Delafosse : « Le programme de David Lisnard est un massacre à la tronçonneuse »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/michael-delafosse-le-programme-de-david-lisnard-est-un-massacre-a-la-tronconneuse-e0"
+    }
+  ],
+  "schema_version": "1.0"
+}
