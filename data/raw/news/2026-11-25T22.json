@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T22:00:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-25T21:45:11Z",
+      "title": "Présidentielle 2027 : l'ascension de David Lisnard, réélu président de l'Association des maires de France",
+      "url": "https://www.franceinfo.fr/elections/presidentielle-2027-l-ascension-de-david-lisnard-reelu-president-de-l-association-des-maires-de-france_8300370.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T21:34:07Z",
+      "title": "\"Ne votez pas par colère\", demande Dominique de Villepin, candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ne-votez-pas-par-colere-demande-dominique-de-villepin-candidat-a-la-presidentielle_VN-202611250986.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T21:29:43Z",
+      "title": "Guerre à Gaza: Dominique de Villepin, candidat La France Humaniste à la présidentielle, \"assume\" de parler de \"génocide\"",
+      "url": "https://www.bfmtv.com/politique/video-guerre-a-gaza-dominique-de-villepin-candidat-la-france-humaniste-a-la-presidentielle-assume-de-parler-de-genocide_VN-202611250983.html"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T21:25:48Z",
+      "title": "\"La dérision, ça m'atteint, ça me désole\", reconnaît Dominique de Villepin, candidat à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-derision-ca-m-atteint-ca-me-desole-reconnait-dominique-de-villepin-candidat-a-l-election-presidentielle_VN-202611250980.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-25T21:26:17Z",
+      "title": "\"Ce n'est pas notre guerre\" : Teddy Riner exhorte à arrêter de donner de l'argent à l'Ukraine",
+      "url": "https://www.france24.com/fr/france/20261125-notre-guerre-teddy-riner-exhorte-arr%C3%AAter-donner-argent-ukraine-%C3%A9lection-fran%C3%A7aise-pr%C3%A9sidentielle"
+    }
+  ],
+  "schema_version": "1.0"
+}
