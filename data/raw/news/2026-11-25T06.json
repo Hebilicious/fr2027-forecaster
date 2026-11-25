@@ -1,0 +1,142 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-25T06:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-25T05:05:00Z",
+      "title": "« On a beaucoup échangé » : Macron-Lisnard, les coulisses d’un rendez-vous manqué qui a viré à la guerre froide",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/on-a-beaucoup-echange-macron-lisnard-les-coulisses-d-un-rendez-vous-manque-qui-a-vire-a-la-guerre-froide-20261125"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-25T05:45:00Z",
+      "title": "Percée dans le Nord-Est, chute en région parisienne : comment le lepénisme s’est transformé de 1988 à 2022",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/percee-dans-le-nord-est-chute-en-region-parisienne-comment-le-lepenisme-s-est-transforme-de-1988-a-2022-20261125"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T06:06:37Z",
+      "title": "Eric Zemmour définitivement condamné pour avoir affirmé que le maréchal Pétain \"avait sauvé les juifs français\"",
+      "url": "https://www.bfmtv.com/politique/video-eric-zemmour-definitivement-condamne-pour-avoir-affirme-que-le-marechal-petain-avait-sauve-les-juifs-francais_VN-202611250203.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-25T06:03:35Z",
+      "title": "L'ÉDITO POLITIQUE DE GUILLAUME DARET - Édouard Philippe lance son offensive contre David Lisnard",
+      "url": "https://www.bfmtv.com/politique/video-l-edito-politique-edouard-philippe-lance-son-offensive-contre-david-lisnard_VN-202611250202.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-25T04:53:33Z",
+      "title": "EN DIRECT Présidentielle 2027 : Édouard Philippe propose à David Lisnard un débat télévisé…",
+      "url": "https://www.20minutes.fr/politique/4265545-20261125-direct-presidentielle-2027-edouard-philippe-propose-david-lisnard-debat-televise"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-25T05:32:36Z",
+      "title": "Six milliards d’euros d’aide versés chaque année à l’Ukraine, selon Marine Le Pen ? Une affirmation trompeuse",
+      "url": "https://www.20minutes.fr/monde/ukraine/4265337-20261125-six-milliards-euros-aide-verses-chaque-annee-ukraine-selon-marine-pen-affirmation-trompeuse"
+    }
+  ],
+  "schema_version": "1.0"
+}
