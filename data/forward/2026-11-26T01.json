@@ -1,0 +1,13 @@
+{
+  "detected_at": "2026-11-26T01:18:21Z",
+  "flags": [
+    {
+      "candidate_id": "hollande",
+      "date": "2026-11-26",
+      "detail": "support 0.02 [0.01, 0.04] in the drop to 2026-11-24T00:00:00Z → 0.10 [0.06, 0.15] in the drop to 2026-11-26T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.0834
+    }
+  ],
+  "schema_version": "1.0"
+}
