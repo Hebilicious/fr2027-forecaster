@@ -1,0 +1,187 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T18:18:07Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-26T17:59:03Z",
+      "title": "Jordan Bardella fragilisé par de nouvelles révélations",
+      "url": "https://www.lefigaro.fr/politique/jordan-bardella-fragilise-par-de-nouvelles-revelations-20261126"
+    },
+    {
+      "candidate_ids": [
+        "villepin"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T17:33:04Z",
+      "title": "Dominique de Villepin, l’apôtre de l’amour, par Julie Neveux",
+      "url": "https://www.liberation.fr/idees-et-debats/opinions/dominique-de-villepin-lapotre-de-lamour-par-julie-neveux-20261126_W7SRJD6MRZFZFJFKXK7IDQ552A/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T17:28:15Z",
+      "title": "\"Les associations devraient se taire ?\" : Emmaüs défend le droit à prendre position dans le débat public",
+      "url": "https://www.franceinfo.fr/replay-radio/la-question-des-informes/les-associations-devraient-se-taire-emmaus-defend-le-droit-a-prendre-position-dans-le-debat-public_8278520.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T18:10:50Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"Moi ce que je vous demande, c'est de ne pas minimiser ni nier les faits\", réclame Prisca Thevenot, députée Ensemble pour la République, soutien de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-moi-ce-que-je-vous-demande-c-est-de-ne-pas-minimiser-ni-nier-les-faits-reclame-prisca-thevenot-deputee-ensemble-pour-la-republique-soutien-de-gabriel-attal_VN-202611260891.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T18:04:38Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"Jordan Bardella le dit, il n'a jamais écrit les propos qu'on lui prête\", soutient Laurent Jacobelli, député de Moselle et porte-parole du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/video-ecrits-antisemites-attribues-a-jordan-bardella-jordan-bardella-le-dit-il-n-a-jamais-ecrit-les-propos-qu-on-lui-prete-soutient-laurent-jacobelli-depute-de-moselle-et-porte-parole-du-rassemblement-national_VN-202611260882.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T17:54:08Z",
+      "title": "Jordan Bardella (RN) conteste une nouvelle fois les écrits antisémites qui lui sont attribués",
+      "url": "https://www.bfmtv.com/politique/video-jordan-bardella-rn-conteste-une-nouvelle-fois-les-ecrits-antisemites-qui-lui-sont-attribues_VN-202611260874.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T17:48:33Z",
+      "title": "SIGNÉ CONSIGNY - 2027 : Nouvelles révélations sur les écrits antisémites attribués à Jordan Bardella: \"Moi à sa place, je n'aurais pas choisi cette défense là\", déclare Charles Consigny, avocat et essayiste",
+      "url": "https://www.bfmtv.com/politique/front-national/video-nouvelles-revelations-sur-les-ecrits-antisemites-attribues-a-jordan-bardella-moi-a-sa-place-je-n-aurais-pas-choisi-cette-defense-la-si-j-avais-ete-son-conseil-declare-charles-consigny-avocat-et-essayiste_VN-202611260864.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T17:46:17Z",
+      "title": "Nouvelles révélations sur les écrits antisémites attribués à Jordan Bardella: \"Ça fait deux mois que tout ça ressemble à une cabale médiatique\", conteste Charles Alloncle, porte-parole de Marine le Pen",
+      "url": "https://www.bfmtv.com/politique/front-national/video-nouvelles-revelations-sur-les-ecrits-antisemites-attribues-a-jordan-bardella-ca-fait-deux-mois-que-tout-ca-ressemble-a-une-cabale-mediatique-conteste-charles-alloncle-porte-parole-de-marine-le-pen_VN-202611260862.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-26T17:40:11Z",
+      "title": "Présidentielle 2027 : Huit députés Les Républicains lâchent Bruno Retailleau pour David Lisnard",
+      "url": "https://www.20minutes.fr/politique/4266095-20261126-presidentielle-2027-huit-deputes-republicains-lachent-bruno-retailleau-david-lisnard"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-26T17:21:01Z",
+      "title": "« Ah ! Dans les niches fiscales, il y a des chiens dangereux ! » : Quand Sébastien Lecornu imite Jacques Chirac à propos de la simplification des normes",
+      "url": "https://www.publicsenat.fr/actualites/politique/ah-dans-les-niches-fiscales-il-y-a-des-chiens-dangereux-quand-sebastien-lecornu-imite-jacques-chirac-a-propos-de-la-simplification-des-normes"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-26T17:09:24Z",
+      "title": "Présidentielle : « J’ai mon plan qui est prévu depuis le départ, de façon minutieuse », défend David Lisnard",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-jai-mon-plan-qui-est-prevu-depuis-le-depart-de-facon-minutieuse-defend-david-lisnard"
+    }
+  ],
+  "schema_version": "1.0"
+}
