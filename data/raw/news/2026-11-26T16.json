@@ -1,0 +1,232 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T16:18:26Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "riner"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-26T16:10:33Z",
+      "title": "«Fermer le robinet», référendum, avoirs russes… Ce que proposent les candidats à la présidentielle sur la guerre en Ukraine",
+      "url": "https://www.lefigaro.fr/politique/fermer-le-robinet-referendum-avoirs-russes-ce-que-proposent-les-candidats-a-la-presidentielle-sur-la-guerre-en-ukraine-20261126"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T15:38:34Z",
+      "title": "Huit députés des Républicains annoncent leur soutien à David Lisnard plutôt que Bruno Retailleau pour la présidentielle 2027",
+      "url": "https://www.franceinfo.fr/elections/huit-deputes-des-republicains-annoncent-leur-soutien-a-david-lisnard-plutot-que-bruno-retailleau-pour-la-presidentielle-2027_8301579.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T16:14:51Z",
+      "title": "Règle d'or, budget, parrainages... Ce qu'il faut retenir du débat entre Sébastien Lecornu, Gérard Larcher et David Lisnard au congrès des maires",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/regle-d-or-budget-parrainages-ce-qu-il-faut-retenir-du-debat-entre-sebastien-lecornu-gerard-larcher-et-david-lisnard-au-congres-des-maires_AV-202611260765.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T16:08:30Z",
+      "title": "Au congrès des maires, Sébastien Lecornu imite Jacques Chirac",
+      "url": "https://www.bfmtv.com/politique/video-au-congres-des-maires-sebastien-lecornu-imite-jacques-chirac_VN-202611260764.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T16:03:09Z",
+      "title": "\"Simplifier, c'est compliqué\": Sébastien Lecornu dénonce le fait qu'\"il y a toujours une bonne raison pour ne pas le faire\"",
+      "url": "https://www.bfmtv.com/politique/video-simplifier-c-est-complique-sebastien-lecornu-denonce-le-fait-qu-il-y-a-toujours-une-bonne-raison-pour-ne-pas-le-faire_VN-202611260760.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:57:05Z",
+      "title": "Présidentielle 2027: \"Il y a un niveau de violence dans le pays qui va être un enjeu de la sécurisation de l'élection, peu importent les dates\", constate Sébastien Lecornu",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-il-y-a-un-niveau-de-violence-dans-le-pays-qui-va-etre-un-enjeu-de-la-securisation-de-l-election-peu-importent-les-dates-constate-sebastien-lecornu_VN-202611260753.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:54:24Z",
+      "title": "Parrainages des candidats à la présidentielle: \"le système des parrainages, aujourd'hui, il fait reposer une pression excessive sur les maires\", assure David Lisnard, président de l’AMF et candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-parrainages-des-candidats-a-la-presidentielle-le-systeme-des-parrainages-aujourd-hui-il-fait-reposer-une-pression-excessive-sur-les-maires-assure-david-lisnard-president-de-l-amf-et-candidat-a-la-presidentielle_VN-202611260751.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:49:04Z",
+      "title": "Débat au Congrès des maires: pour Gérard Larcher, président du Sénat, le logement est “un sujet majeur”, avec “des injonctions contradictoires”",
+      "url": "https://www.bfmtv.com/politique/video-debat-au-congres-des-maires-pour-gerard-larcher-president-du-senat-le-logement-est-un-sujet-majeur-avec-des-injonctions-contradictoires_VN-202611260745.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:47:53Z",
+      "title": "\"Il ne faut pas raconter d'histoire, très vite on est rattrapé par le réel\": le Premier ministre, Sébastien Lecornu, prévient les différents candidats à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-il-ne-faut-pas-raconter-d-histoire-tres-vite-on-est-rattrape-par-le-reel-le-premier-ministre-sebastien-lecornu-previent-les-differents-candidats-a-la-presidentielle_VN-202611260744.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:38:35Z",
+      "title": "\"Il faut un grand mouvement de liberté locale\", affirme David Lisnard, président de l’AMF et candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-il-faut-un-grand-mouvement-de-liberte-locale-affirme-david-lisnard-president-de-l-amf-et-candidat-a-la-presidentielle_VN-202611260740.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:35:51Z",
+      "title": "\"Nous ne pourrons simplifier que par la loi\": Gérard Larcher, président du Sénat, estime que les lois d'exceptions devraient être la norme pour simplifier le droit français",
+      "url": "https://www.bfmtv.com/politique/video-nous-ne-pourrons-simplifier-que-par-la-loi-gerard-larcher-president-du-senat-estime-que-les-lois-d-exceptions-devraient-etre-la-norme-pour-simplifier-le-droit-francais_VN-202611260736.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:28:25Z",
+      "title": "Débat au Congrès des maires: Sébastien Lecornu imite le président Jacques Chirac sur les niches fiscales",
+      "url": "https://www.bfmtv.com/politique/video-debat-au-congres-des-maires-sebastien-lecornu-imite-le-president-jacques-chirac-sur-les-niches-fiscales_VN-202611260732.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:22:55Z",
+      "title": "Écrits antisémites: Jordan Bardella \"conteste\" à nouveau en être l’auteur",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-jordan-bardella-conteste-a-nouveau-en-etre-l-auteur_VN-202611260728.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T15:19:35Z",
+      "title": "\"J'ai besoin de personnes qui viennent discuter avec le gouvernement\": Sébastien Lecornu tend la main aux communes pour amender le budget",
+      "url": "https://www.bfmtv.com/politique/video-j-ai-besoin-de-personnes-qui-viennent-discuter-avec-le-gouvernement-sebastien-lecornu-tend-la-main-aux-communes-pour-amender-le-budget_VN-202611260726.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-26T15:25:11Z",
+      "title": "Propos antisémites : Bardella tente se dit victime de \"persécution\" par \"certains médias\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261126-propos-antis%C3%A9mites-bardella-tente-se-dit-victime-de-pers%C3%A9cution-par-certains-m%C3%A9dias"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-26T15:22:20Z",
+      "title": "Propos antisémites : Jordan Bardella persiste à nier les accusations malgré les preuves",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261126-propos-antis%C3%A9mites-jordan-bardella-persiste-%C3%A0-nier-les-accusations-malgr%C3%A9-les-preuves"
+    }
+  ],
+  "schema_version": "1.0"
+}
