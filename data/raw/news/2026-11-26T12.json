@@ -1,0 +1,173 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T12:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T12:01:40Z",
+      "title": "EN DIRECT, congrès des maires de France : David Lisnard est accusé de « compromission » avec l’extrême droite par Gérald Darmanin",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/26/en-direct-congres-des-maires-de-france-david-lisnard-est-accuse-de-compromission-avec-l-extreme-droite-par-gerald-darmanin_6815062_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T12:00:11Z",
+      "title": "Présidentielle 2027 : Edouard Philippe passe à l’offensive face à David Lisnard",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/26/presidentielle-2027-edouard-philippe-passe-a-l-offensive-face-a-david-lisnard_6815527_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T11:23:09Z",
+      "title": "Présidentielle 2027 : Jean-Luc Mélenchon, en visite vendredi à Berlin, inquiète l’Allemagne avec sa rhétorique anti-allemande",
+      "url": "https://www.lemonde.fr/international/article/2026/11/26/l-allemagne-s-inquiete-de-la-rhetorique-anti-allemande-de-jean-luc-melenchon_6815524_3210.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T11:55:10Z",
+      "title": "Jean-Luc Mélenchon en Allemagne : pour Die Linke, l’allié français qu’on préfère cacher",
+      "url": "https://www.liberation.fr/politique/elections/jean-luc-melenchon-en-allemagne-pour-die-linke-lallie-francais-quon-prefere-cacher-20261126_UDVDINBZPRCRDIN5S6WUHQGERQ/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T11:51:45Z",
+      "title": "L'avocat de Jordan Bardella envisage de déposer un complément de plainte pour \"faux et usage de faux\" après de nouvelles révélations sur des propos antisémites",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/l-avocat-de-jordan-bardella-envisage-de-deposer-un-complement-de-plainte-pour-faux-et-usage-de-faux-apres-de-nouvelles-revelations-sur-des-propos-antisemites_8301303.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T11:15:58Z",
+      "title": "Après ses propos hostiles à l'Allemagne et ses projets de renforcement de son armée, Jean-Luc Mélenchon est à Berlin pour présenter son livre",
+      "url": "https://www.franceinfo.fr/politique/melenchon/les-relations-compliquees-de-jean-luc-melenchon-avec-l-allemagne_8301105.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T11:58:40Z",
+      "title": "\"David Lisnard combat le RN\", affirme Romain Marsily, directeur général de Nouvelle Énergie",
+      "url": "https://www.bfmtv.com/politique/video-david-lisnard-combat-le-rn-affirme-romain-marsily-directeur-general-de-nouvelle-energie_VN-202611260576.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T11:21:26Z",
+      "title": "Le Monde et Mediapart publient de nouveaux éléments sur les écrits antisémites attribués à Jordan Bardella, le président du RN \"conteste formellement\"",
+      "url": "https://www.bfmtv.com/politique/video-le-monde-et-mediapart-publient-de-nouveaux-elements-sur-les-ecrits-antisemites-attribues-a-jordan-bardella-le-president-du-rn-conteste-formellement_VN-202611260550.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-26T11:35:15Z",
+      "title": "« Ce n’est pas notre guerre »… Quels étaient les liens entre Riner l’athlète et la Russie de Poutine, fan de judo ?",
+      "url": "https://www.20minutes.fr/politique/4265901-20261126-guerre-liens-entre-riner-athlete-russie-poutine-fan-judo"
+    }
+  ],
+  "schema_version": "1.0"
+}
