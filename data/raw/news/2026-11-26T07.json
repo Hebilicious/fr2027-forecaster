@@ -1,0 +1,169 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T07:18:07Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T07:01:11Z",
+      "title": "Ecrits antisémites : Jordan Bardella visé par de nouvelles révélations du «Monde» et de «Mediapart»",
+      "url": "https://www.liberation.fr/politique/ecrits-antisemites-le-monde-et-mediapart-revelent-de-nouveaux-elements-attribuant-les-propos-a-jordan-bardella-20261126_BNWRSU22LNFUFJT2CZYNGRILZI/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T07:03:36Z",
+      "title": "EDITO. À droite, le duel Lisnard-Philippe pour la présidentielle s'intensifie",
+      "url": "https://www.franceinfo.fr/replay-radio/l-edito-politique/edito-a-droite-le-duel-lisnard-philippe-pour-la-presidentielle-s-intensifie_8278496.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T06:48:42Z",
+      "title": "À suivre Loïc de la Mornais : la guerre des droites est-elle déclarée entre Édouard Philippe et David Lisnard ?",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/a-suivre-avec-loic-de-la-mornais/a-suivre-loic-de-la-mornais-la-guerre-des-droites-est-elle-declaree-entre-edouard-philippe-et-david-lisnard_8300895.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T06:50:48Z",
+      "title": "\"Le Monde\" et Mediapart publient de nouveaux éléments de preuve sur les écrits antisémites attribués à Jordan Bardella",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/le-monde-et-mediapart-publient-de-nouveaux-elements-de-preuve-sur-les-ecrits-antisemites-attribues-a-jordan-bardella_8300856.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T06:20:20Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: Le Monde et Mediapart révèlent de nouveaux éléments mettant en cause le président du RN, qui réfute \"catégoriquement\" en être l'auteur",
+      "url": "https://www.bfmtv.com/politique/front-national/ecrits-antisemites-attribues-a-jordan-bardella-le-monde-et-mediapart-revelent-de-nouveaux-elements-mettant-en-cause-le-president-du-rn_AD-202611260232.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "DIRECT. Présidentielle 2027 : Bruno Retailleau qualifie les étudiants qui bloquent La Sorbonne de «petits commissaires de l’extrême gauche»",
+      "url": "https://www.leparisien.fr/elections/presidentielle/direct-presidentielle-2027-dernier-jour-du-congres-des-maires-premier-deplacement-en-region-de-teddy-riner-26-11-2026-IYAKVLLACJF2XKI27PCGJEG74U.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Accusations antisémites : Le Monde et Mediapart révèlent de nouveaux éléments attribuant les propos à Jordan Bardella",
+      "url": "https://www.leparisien.fr/politique/accusations-antisemites-le-monde-et-mediapart-revelent-de-nouveaux-elements-attribuant-les-propos-a-jordan-bardella-26-11-2026-LABOFMDN3BDAXKH2KTDDDXHGY4.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-26T06:25:11Z",
+      "title": "Ecrits antisémites : « Les sionistes sont à la tête des banques… » Jordan Bardella visé par de nouvelles accusations",
+      "url": "https://www.20minutes.fr/politique/4265848-20261126-ecrits-antisemites-sionistes-tete-banques-jordan-bardella-vise-nouvelles-accusations"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-26T06:58:38Z",
+      "title": "Écrits antisémites : de nouveaux éléments accablent Jordan Bardella",
+      "url": "https://www.france24.com/fr/france/20261126-%C3%A9crits-antis%C3%A9mites-de-nouveaux-%C3%A9l%C3%A9ments-accablent-jordan-bardella"
+    }
+  ],
+  "schema_version": "1.0"
+}
