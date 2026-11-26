@@ -1,0 +1,172 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T14:18:11Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T14:00:00Z",
+      "title": "Sécurité, immigration… David Lisnard révèle son programme présidentiel au Figaro Magazine",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/securite-immigration-david-lisnard-revele-son-programme-presidentiel-au-figaro-magazine-20261126"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T14:03:35Z",
+      "title": "Présidentielle 2027 : David Lisnard réclame \"l'anonymat des parrainages\" pour \"enlever la pression sur les maires\"",
+      "url": "https://www.franceinfo.fr/elections/presidentielle-2027-david-lisnard-reclame-l-anonymat-des-parrainages-pour-enlever-la-pression-sur-les-maires_8301468.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T13:52:04Z",
+      "title": "De nouvelles preuves des messages antisémites attribués à Jordan Bardella dévoilées par Le Monde et Mediapart",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/de-nouvelles-preuves-des-messages-antisemites-attribues-a-jordan-bardella-devoilees-par-le-monde-et-mediapart_8301447.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T14:05:13Z",
+      "title": "Présidentielle: \"Si l'association des maires de France, elle n'a jamais été un organe partisan\", prévient Emmanuel Grégoire après la réélection de David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-si-l-association-des-maires-de-france-elle-n-a-jamais-ete-un-organe-partisan-previent-emmanuel-gregoire-apres-la-reelection-de-david-lisnard_VN-202611260675.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T13:53:48Z",
+      "title": "Teddy Riner, candidat à la présidentielle, revient sur ses propos sur l'aide française à l'Ukraine: \"À un moment il faut se poser la question: oui la France aide, mais au détriment de quoi?\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-candidat-a-la-presidentielle-revient-sur-ses-propos-sur-l-aide-francaise-a-l-ukraine-a-un-moment-il-faut-se-poser-la-question-oui-la-france-aide-mais-au-detriment-de-quoi_VN-202611260650.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T13:31:46Z",
+      "title": "\"Nous sommes les cibles de Vladimir Poutine\": Raphaël Glucksmann affirme en réponse à Teddy Riner que \"la guerre en Ukraine est notre guerre\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/nous-sommes-les-cibles-de-vladimir-poutine-raphael-glucksmann-affirme-en-reponse-a-teddy-riner-que-la-guerre-en-ukraine-est-notre-guerre_AD-202611260629.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : vaccination obligatoire pour les soignants, solidarité, écrans… Les mesures d’Édouard Philippe pour la santé",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-vaccination-obligatoire-pour-les-soignants-solidarite-ecrans-les-mesures-dedouard-philippe-pour-la-sante-26-11-2026-6RGWN43CKNG65BJIBBWWC4BLNQ.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-26T14:01:56Z",
+      "title": "Suppression de la loi SRU dans le programme de David Lisnard ? : « Une loi démagogique », selon Sébastien Leroy, maire Nouvelle Énergie",
+      "url": "https://www.publicsenat.fr/actualites/politique/suppression-de-la-loi-sru-dans-le-programme-de-david-lisnard-une-loi-demagogique-selon-sebastien-leroy-maire-nouvelle-energie"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-26T13:56:20Z",
+      "title": "DIRECT : suivez le débat entre David Lisnard, Gérard Larcher et Sébastien Lecornu au congrès des maires de France",
+      "url": "https://www.publicsenat.fr/actualites/politique/direct-suivez-le-debat-entre-david-lisnard-gerard-larcher-et-sebastien-lecornu-au-congres-des-maires-de-france"
+    }
+  ],
+  "schema_version": "1.0"
+}
