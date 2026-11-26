@@ -1,0 +1,208 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T20:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T20:08:26Z",
+      "title": "EN DIRECT, présidentielle 2027 | Emmanuel Macron à propos de Marine Le Pen : « C’est une drôle d’arrogance de penser qu’elle serait déjà en charge du destin de la France »",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/26/en-direct-presidentielle-2027-emmanuel-macron-a-propos-de-marine-le-pen-c-est-une-drole-d-arrogance-de-penser-qu-elle-serait-deja-en-charge-du-destin-de-la-france_6815062_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T20:00:00Z",
+      "title": "Fabien Roussel au Figaro : « À la maison, c’était une famille de militants : on pliait des tracts »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/fabien-roussel-au-figaro-a-la-maison-c-etait-une-famille-de-militants-on-pliait-des-tracts-20261126"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "hollande"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T19:29:20Z",
+      "title": "Présidentielle 2027 : François Hollande met la campagne de Raphaël Glucksmann sous pression",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-francois-hollande-met-la-campagne-de-raphael-glucksmann-sous-pression-20261126"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T19:49:04Z",
+      "title": "Ecrits antisémites de Bardella : le RN coincé entre dénégation du passé et dédiabolisation",
+      "url": "https://www.liberation.fr/politique/elections/ecrits-antisemites-de-bardella-le-rn-coince-entre-denegation-du-passe-et-dediabolisation-20261126_CEQ53D6KRVDD7OOTTKN5CXNBKY/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T19:22:25Z",
+      "title": "Nouvelles révélations sur Jordan Bardella : la fable de la banalisation du RN",
+      "url": "https://www.liberation.fr/idees-et-debats/editorial/nouvelles-revelations-sur-jordan-bardella-la-fable-de-la-banalisation-du-rn-20261126_45TJ4RARDRG3PO5HUPRRWB5SZA/"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T19:21:03Z",
+      "title": "Europe, Ukraine… Les questions internationales qui pourraient empêcher le ralliement des Ecologistes à Mélenchon",
+      "url": "https://www.liberation.fr/politique/europe-ukraine-les-questions-internationales-qui-pourraient-empecher-le-ralliement-des-ecologistes-a-melenchon-20261126_OAHVPOB3YNHHBIGD6TZH7QK5CI/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T19:52:09Z",
+      "title": "Violences du 17 octobre à Marseille, présidentielle: l'interview en intégralité de Benoît Payan",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-violences-du-17-octobre-a-marseille-presidentielle-l-interview-en-integralite-de-benoit-payan_VN-202611260962.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T19:39:52Z",
+      "title": "\"À plusieurs reprises, des mots, chez des responsables de La France insoumise, chez Jean-Luc Mélenchon, m'avaient profondément choqué [...] Bien sûr, certains faits peuvent être qualifiés d'antisémitisme\", assure Benoît Payan, maire DVG de Marseille",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-a-plusieurs-reprises-des-mots-chez-des-responsables-de-la-france-insoumise-chez-jean-luc-melenchon-m-avaient-profondement-choque-bien-sur-certains-faits-peuvent-etre-qualifies-d-antisemitisme-assure-benoit-payan-maire-dvg-de-marseille_VN-202611260957.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T19:27:18Z",
+      "title": "Hypothèse d'un duel LFI/RN au second tour de la présidentielle: \"Face à Marine Le Pen, je voterai pour n'importe quel candidat\", assume Benoît Payan, maire de Marseille",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-hypothese-d-un-duel-lfi-rn-au-second-tour-de-la-presidentielle-face-a-marine-le-pen-je-voterai-pour-n-importe-quel-candidat-assume-benoit-payan-maire-de-marseille_VN-202611260953.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T19:20:04Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"Il faut être capable de reconnaître\" ses erreurs, souligne Benoît Payan, maire de Marseille",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-il-faut-etre-capable-de-reconnaitre-ses-erreurs-souligne-benoit-payan-maire-de-marseille_VN-202611260948.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T19:04:57Z",
+      "title": "Guerre en Ukraine: \"Je ne veux pas que l'Otan avance en Ukraine, je ne veux pas que l'Ukraine rentre dans l'Union Européenne\", déclare Nicolas Dupont-Aignan, candidat \"Debout la France\" à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/video-guerre-en-ukraine-je-ne-veux-pas-que-l-otan-avance-en-ukraine-je-ne-veux-pas-que-l-ukraine-rentre-dans-l-union-europeenne-declare-nicolas-dupont-aignan-candidat-debout-la-france-a-l-election-presidentielle_VN-202611260935.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T18:31:14Z",
+      "title": "Candidature de David Lisnard à la présidentielle: \"Il y a une force qui est immense, qui a surgi\", estime Thomas Elexhauser, porte-parole de Nouvelle Énergie et maire de Beuzeville",
+      "url": "https://www.bfmtv.com/politique/video-candidature-de-david-lisnard-a-la-presidentielle-il-y-a-une-force-qui-est-immense-qui-a-surgi-estime-thomas-elexhauser-porte-parole-de-nouvelle-energie-et-maire-de-beuzeville_VN-202611260904.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Emmanuel Macron tacle la « drôle d’arrogance » de Marine Le Pen",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-emmanuel-macron-tacle-la-drole-darrogance-de-marine-le-pen-26-11-2026-TUL24VDTWZF6XP7FMOENF4JKMQ.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
