@@ -1,0 +1,263 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T11:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T11:00:04Z",
+      "title": "Présidentielle 2027 : Les Ecologistes confrontés au risque de leur disparition",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/26/presidentielle-2027-les-ecologistes-confrontes-au-risque-de-leur-disparition_6815522_3232.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-26T10:25:08Z",
+      "title": "Propos antisémites de Jordan Bardella : le président du RN réitère sa « contestation formelle » après des révélations du « Monde » et de « Mediapart »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/26/propos-antisemites-de-jordan-bardella-le-president-du-rn-reitere-sa-contestation-formelle-apres-des-revelations-du-monde-et-de-mediapart_6815516_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T10:50:30Z",
+      "title": "Les tractations avec LFI retardent la démocratie interne chez les écolos",
+      "url": "https://www.liberation.fr/politique/les-tractations-avec-lfi-retardent-la-democratie-interne-chez-les-ecolos-20261126_QDUSMKEYT5GJ7EZOSLKGY4IKIE/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T10:34:36Z",
+      "title": "Le baiser de la mort de Jean-Philippe Tanguy à David Lisnard",
+      "url": "https://www.liberation.fr/politique/le-baiser-de-la-mort-de-jean-philippe-tanguy-a-david-lisnard-20261126_P7H33BM7AFDERHQLOKX6DZR76A/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T10:31:39Z",
+      "title": "Une tribune pro-Lisnard en préparation du côté du groupe LR de l’Assemblée",
+      "url": "https://www.liberation.fr/politique/une-tribune-pro-lisnard-en-preparation-du-cote-du-groupe-lr-de-lassemblee-20261126_KXFXZMWLNFD5BD5UEVPYPS44WE/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T10:24:14Z",
+      "title": "Appel au retrait de la vie politique ou soutien renouvelé… Les réactions politiques aux nouveaux éléments sur les écrits antisémites prêtés à Jordan Bardella",
+      "url": "https://www.liberation.fr/politique/appel-au-retrait-de-la-vie-politique-ou-soutien-renouvele-les-reactions-politiques-aux-nouveaux-elements-sur-les-ecrits-antisemites-pretes-a-jordan-bardella-20261126_GNINQDYAFJBNBOQHAEG2EYGPXE/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T10:50:45Z",
+      "title": "\"La pensée anti-juifs obsédait Jordan Bardella\" : ce qu'il faut retenir des nouvelles révélations sur des écrits antisémites attribués au patron du Rassemblement national",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/la-pensee-anti-juifs-obsedait-jordan-bardella-ce-qu-il-faut-retenir-des-nouvelles-revelations-sur-des-ecrits-antisemites-attribues-au-patron-du-rassemblement-national_8300919.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T10:44:13Z",
+      "title": "Propos antisémites attribués à Jordan Bardella : il \"ne peut pas plaider l'erreur de jeunesse\", martèle le co-auteur de l’enquête de Mediapart",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella-il-ne-peut-pas-plaider-l-erreur-de-jeunesse-martele-le-co-auteur-de-l-enquete-de-mediapart_8301168.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T10:29:54Z",
+      "title": "Nouveaux éléments de preuves sur les écrits antisémites attribués à Jordan Bardella",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/nouveaux-elements-de-preuves-sur-les-ecrits-antisemites-attribues-a-jordan-bardella_8301165.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T11:05:31Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"Monsieur Bardella conteste avec force avoir tenu les propos qu'on lui incrimine\", indique l'avocat du président du RN",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-monsieur-bardella-conteste-avec-force-avoir-tenu-les-propos-qu-on-lui-incrimine-indique-l-avocat-du-president-du-rn_VN-202611260542.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T11:04:20Z",
+      "title": "\"Une sorte de cabale qui est menée contre mon client\": l'avocat de Jordan Bardella réagit aux nouveaux éléments du Monde et de Mediapart sur les écrits antisémites attribués au président du RN",
+      "url": "https://www.bfmtv.com/politique/video-une-sorte-de-cabale-qui-est-menee-contre-mon-client-l-avocat-de-jordan-bardella-reagit-aux-nouveaux-elements-du-monde-et-de-mediapart-sur-les-ecrits-antisemites-attribues-au-president-du-rn_VN-202611260539.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "glucksmann"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T10:38:18Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"Il est clair que Jordan Bardella a menti\", déclare Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ecrits-antisemites-attribues-a-jordan-bardella-il-est-clair-que-jordan-bardella-a-menti-declare-raphael-glucksmann_VN-202611260524.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T10:31:06Z",
+      "title": "Présidentielle 2027: Marine Le Pen fustige de \"basses manœuvres\" pour conclure un accord sur le budget de l'UE avant son éventuelle arrivée à l'Élysée",
+      "url": "https://www.bfmtv.com/politique/front-national/presidentielle-2027-marine-le-pen-fustige-de-basses-manoeuvres-pour-conclure-un-accord-sur-le-budget-de-l-ue-avant-son-eventuelle-arrivee-a-l-elysee_AD-202611260513.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T10:29:36Z",
+      "title": "Propos de Teddy Riner sur l'Ukraine: c'est \"notre guerre parce que nous sommes les cibles de Vladimir Poutine\", juge Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/video-propos-de-teddy-riner-sur-l-ukraine-c-est-notre-guerre-parce-que-nous-sommes-les-cibles-de-vladimir-poutine-juge-raphael-glucksmann_VN-202611260512.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T10:22:50Z",
+      "title": "Édouard Philippe en visite à l'Institut Curie où il va dévoiler des propositions de mesures sur le thème de la santé",
+      "url": "https://www.bfmtv.com/politique/horizons/video-edouard-philippe-en-visite-a-l-institut-curie-ou-il-va-devoiler-des-propositions-de-mesures-sur-le-theme-de-la-sante_VN-202611260504.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « C’est dégueulasse de dire ça », le tacle de Robert Ménard à Teddy Riner pour qui l’Ukraine n’est « pas notre guerre »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-cest-degueulasse-de-dire-ca-le-tacle-de-robert-menard-a-teddy-riner-pour-qui-lukraine-nest-pas-notre-guerre-26-11-2026-CCFSYMBODNBZTD3B7L5OGMFHMI.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-20T17:31:26Z",
+      "title": "Bonjour chez vous ! — Les maires vont-ils propulser Lisnard à l’Elysée ?",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/les-maires-vont-ils-propulser-lisnard-a-lelysee-e0"
+    },
+    {
+      "candidate_ids": [
+        "le_maire",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-20T17:31:25Z",
+      "title": "Bonjour chez vous ! — Bruno Le Maire : « Je suis consterné par ces débats budgétaires »",
+      "url": "https://www.publicsenat.fr/emission/bonjour-chez-vous/bruno-le-maire-je-suis-consterne-par-ces-debats-budgetaires-e0"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-26T11:14:20Z",
+      "title": "Propos antisémites de Jordan Bardella : Le Monde et Médiapart révèlent de nouveaux éléments",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261126-propos-antis%C3%A9mites-de-jordan-bardella-le-monde-et-m%C3%A9diapart-r%C3%A9v%C3%A8lent-de-nouveaux-%C3%A9l%C3%A9ments"
+    }
+  ],
+  "schema_version": "1.0"
+}
