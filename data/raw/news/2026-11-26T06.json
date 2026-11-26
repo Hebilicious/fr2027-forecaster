@@ -1,0 +1,169 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T06:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-26T05:55:12Z",
+      "title": "« Les sionistes sont à la tête des banques, tout est lié » : nouvelles révélations sur les propos antisémites de Jordan Bardella",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/26/les-sionistes-sont-a-la-tete-des-banques-tout-est-lie-nouvelles-revelations-sur-les-propos-antisemites-de-jordan-bardella_6815484_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-26T05:55:08Z",
+      "title": "Derrière les messages antisémites de Jordan Bardella, une archive certifiée, une adresse e-mail et un profil Facebook dormant",
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/11/26/derriere-les-messages-antisemites-de-jordan-bardella-une-archive-certifiee-une-adresse-e-mail-et-un-profil-facebook-dormant_6815483_4355770.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-26T05:55:05Z",
+      "title": "Messages antisémites de Jordan Bardella : les 19 preuves que le président du RN est bien l’auteur des propos incriminés sur Messenger",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/26/messages-antisemites-de-jordan-bardella-les-19-preuves-que-le-president-du-rn-est-bien-l-auteur-des-propos-incrimines-sur-messenger_6815482_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T05:15:00Z",
+      "title": "Guillaume Tabard : « Pour Édouard Philippe, faire apparaître deux droites “irréconciliables” »",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-pour-edouard-philippe-faire-apparaitre-deux-droites-irreconciliables-20261126"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T05:54:35Z",
+      "title": "À suivre Loïc de la Mornais : la droite tient-elle son candidat après le sacre de David Lisnard ?",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/a-suivre-avec-loic-de-la-mornais/a-suivre-loic-de-la-mornais-la-droite-tient-elle-son-candidat-apres-le-sacre-de-david-lisnard_8300811.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T06:05:04Z",
+      "title": "Présidentielle 2027: l'idée d'une primaire à droite divise les électeurs",
+      "url": "https://www.bfmtv.com/politique/elections/video-presidentielle-2027-l-idee-d-une-primaire-a-droite-divise-les-electeurs_VN-202611260225.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T05:56:58Z",
+      "title": "L'ÉDITO POLITIQUE DE GUILLAUME DARET - \"Ce n'est pas notre guerre\": les propos de Teddy Riner sur le soutien à l'Ukraine font polémique",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-edito-politique-de-guillaume-daret-ce-n-est-pas-notre-guerre-les-propos-de-teddy-riner-sur-le-soutien-a-l-ukraine-font-polemique_VN-202611260217.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T05:36:35Z",
+      "title": "Jean-Luc Mélenchon ironise face aux propos de Gérald Darmanin, selon qui un second tour RN-LFI mènerait la France \"au bord de la guerre civile\"",
+      "url": "https://www.bfmtv.com/politique/elections/video-jean-luc-melenchon-ironise-face-aux-propos-de-gerald-darmanin-selon-qui-un-second-tour-rn-lfi-menerait-la-france-au-bord-de-la-guerre-civile_VN-202611260194.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-26T05:00:03Z",
+      "title": "EN DIRECT Présidentielle 2027 : Lisnard veut convaincre des électeurs de « tous horizons y compris le RN »…",
+      "url": "https://www.20minutes.fr/politique/4265846-20261126-direct-presidentielle-2027-lisnard-veut-convaincre-electeurs-tous-horizons-compris-rn"
+    }
+  ],
+  "schema_version": "1.0"
+}
