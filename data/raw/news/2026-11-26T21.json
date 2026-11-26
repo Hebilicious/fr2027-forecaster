@@ -1,0 +1,171 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T21:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T20:42:09Z",
+      "title": "Le défilé des candidats au Salon des maires, rendez-vous incontournable de la campagne présidentielle",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/26/le-defile-des-candidats-au-salon-des-maires-rendez-vous-incontournable-de-la-campagne-presidentielle_6815600_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-26T20:15:00Z",
+      "title": "Présidentielle 2027 : Édouard Philippe veut « dépenser mieux » pour la santé, une « fierté française »",
+      "url": "https://www.lefigaro.fr/politique/presidentielle-2027-edouard-philippe-veut-depenser-mieux-pour-la-sante-une-fierte-francaise-20261126"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T20:47:39Z",
+      "title": "«Il faut plus d’humilité quand on fait campagne, même si on s’y voit déjà» : le coup de griffe d’Emmanuel Macron à Marine Le Pen",
+      "url": "https://www.liberation.fr/politique/il-faut-plus-dhumilite-quand-on-fait-campagne-meme-si-on-sy-voit-deja-le-coup-de-griffe-demmanuel-macron-a-marine-le-pen-20261126_TU3AVQHAZVBLNF5V6HXRAGMRNM/"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T20:36:36Z",
+      "title": "\"Si on abandonnait l'Ukraine, on mettrait en péril notre sécurité à court ou moyen terme\", affirme Emmanuel Macron",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/si-on-abandonnait-l-ukraine-on-mettrait-en-peril-notre-securite-a-court-ou-moyen-terme-affirme-emmanuel-macron_8302044.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T20:31:22Z",
+      "title": "Jordan Bardella accusé de nouveaux écrits antisémites : comment réagissent les électeurs du RN ?",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/jordan-bardella-accuse-de-nouveaux-ecrits-antisemites-comment-reagissent-les-electeurs-du-rn_8302038.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T21:03:34Z",
+      "title": "\"Il ne faut pas créer de doute et de trouble\": Emmanuel Macron réagit aux propos de Teddy Riner sur l'aide à l'Ukraine",
+      "url": "https://www.bfmtv.com/politique/elysee/il-ne-faut-pas-creer-de-doute-et-de-trouble-emmanuel-macron-reagit-aux-propos-de-teddy-riner-sur-l-aide-a-l-ukraine_AD-202611260997.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T20:59:08Z",
+      "title": "\"Madame Le Pen elle fait campagne, et c'est une drôle d'arrogance de penser qu'elle serait déjà en charge du destin de la France\" déclare Emmanuel Macron, président de la République",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-madame-le-pen-elle-fait-campagne-et-c-est-une-drole-d-arrogance-de-penser-qu-elle-serait-deja-en-charge-du-destin-de-la-france-declare-emmanuel-macron-president-de-la-republique_VN-202611260994.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T20:53:01Z",
+      "title": "\"Je ne fais pas campagne et je ne la commente pas\", assure Emmanuel Macron",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-ne-fais-pas-campagne-et-je-ne-la-commente-pas-assure-emmanuel-macron_VN-202611260990.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T20:42:13Z",
+      "title": "\"David Lisnard ne sera jamais ministre de Marine Le Pen\", affirme Thomas Elexhauser, porte-parole de Nouvelle Énergie, face au porte-parole du RN Laurent Jacobelli",
+      "url": "https://www.bfmtv.com/politique/video-david-lisnard-ne-sera-jamais-ministre-de-marine-le-pen-affirme-thomas-elexhauser-porte-parole-de-nouvelle-energie-face-au-porte-parole-du-rn-laurent-jacobelli_VN-202611260980.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
