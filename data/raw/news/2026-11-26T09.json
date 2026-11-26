@@ -1,0 +1,206 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T09:18:25Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T08:23:31Z",
+      "title": "EN DIRECT, propos antisémites de Jordan Bardella : posez vos questions à notre journaliste spécialiste de l’extrême droite Clément Guillou",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/26/en-direct-david-lisnard-assure-garder-la-tete-froide-apres-sa-reelection-a-l-amf-retour-sur-les-propos-antisemites-de-jordan-bardella_6815062_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-26T08:56:50Z",
+      "title": "Propos antisémites de Jordan Bardella : « Le Monde » apporte de nouvelles preuves que le responsable du RN est bien l’auteur des messages",
+      "url": "https://www.lemonde.fr/videos/video/2026/11/26/propos-antisemites-de-jordan-bardella-le-monde-apporte-de-nouvelles-preuves-que-le-responsable-du-rn-est-bien-l-auteur-des-messages_6815502_1669088.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T08:59:18Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella : \"On a l'impression que tout coule sur le RN\", regrette le maire de Marseille",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/ecrits-antisemites-attribues-a-jordan-bardella-on-a-l-impression-que-tout-coule-sur-le-rn-regrette-le-maire-de-marseille_8301003.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T08:31:17Z",
+      "title": "Présidentielle 2027 : depuis la Mayenne, Raphaël Glucksmann dévoile son projet de \"Conseil des territoires\" pour donner plus de pouvoir aux élus locaux",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-depuis-la-mayenne-raphael-glucksmann-devoile-son-projet-de-conseil-des-territoires-pour-donner-plus-de-pouvoir-aux-elus-locaux_8300955.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T08:18:05Z",
+      "title": "David Lisnard réélu à la tête de l'AMF : \"Il faut le féliciter de manière républicaine, mais ce n'est pas la campagne présidentielle et encore moins le bloc central\", réagit Clément Beaune",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/l-invite-politique/le-7-40-franceinfo-du-jeudi-26-novembre-2026_8291411.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T08:44:50Z",
+      "title": "Jean-Luc Mélenchon à Berlin: quelle image ont les Allemands du candidat insoumis à la présidentielle?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-a-berlin-quelle-image-ont-les-allemands-du-candidat-insoumis-a-la-presidentielle_VN-202611260422.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T08:40:57Z",
+      "title": "\"Ce n'est pas ça la droite\": Gérald Darmanin accuse David Lisnard de \"compromission\" après son refus de choisir entre Édouard Philippe et Marine Le Pen au second tour de la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/ce-n-est-pas-ca-la-droite-gerald-darmanin-accuse-david-lisnard-de-compromission-apres-son-refus-de-choisir-entre-edouard-philippe-et-marine-le-pen-au-second-tour-de-la-presidentielle_AV-202611260414.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T08:32:48Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"L'interlocuteur est quelqu'un qui (le) connaît physiquement\", affirme Antton Rouget, auteur de l'enquête de Mediapart",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-l-interlocuteur-est-quelqu-un-qui-le-connait-physiquement-affirme-antton-rouget-auteur-de-l-enquete-de-mediapart_VN-202611260409.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T08:30:35Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"Ce qu'on révèle ce matin, c'est des dizaines de nouveaux messages\", décrit l'auteur de l'enquête de Mediapart",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-ce-qu-on-revele-ce-matin-c-est-des-dizaines-de-nouveaux-messages-decrit-l-auteur-de-l-enquete-de-mediapart_VN-202611260407.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T08:25:17Z",
+      "title": "\"Comment tu peux dire ça?\": Robert Ménard, \"choqué\" par les propos de Teddy Riner sur la guerre en Ukraine, l'invite à aller \"sur la ligne de front\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/comment-tu-peux-dire-ca-robert-menard-choque-par-les-propos-de-teddy-riner-sur-la-guerre-en-ukraine-l-invite-a-aller-sur-la-ligne-de-front_AV-202611260398.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T08:18:18Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: Le Monde et Mediapart révèlent de nouveaux éléments, le président du RN réfute \"catégoriquement\" en être l'auteur",
+      "url": "https://www.bfmtv.com/politique/front-national/video-ecrits-antisemites-attribues-a-jordan-bardella-le-monde-et-mediapart-revelent-de-nouveaux-elements-le-president-du-rn-refute-categoriquement-en-etre-l-auteur_VN-202611260390.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-26T09:04:22Z",
+      "title": "Budget : « J’ai fait mon job pour faire baisser la dette », estime Bruno Le Maire",
+      "url": "https://www.publicsenat.fr/actualites/politique/budget-jai-fait-mon-job-pour-faire-baisser-la-dette-estime-bruno-le-maire"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-26T08:17:13Z",
+      "title": "Ecrits antisémites : Jordan Bardella mis en cause par de nouvelles preuves révélées par Le Monde et Mediapart",
+      "url": "https://www.publicsenat.fr/actualites/politique/ecrits-antisemites-jordan-bardella-mis-en-cause-par-de-nouvelles-preuves-revelees-par-le-monde-et-mediapart"
+    }
+  ],
+  "schema_version": "1.0"
+}
