@@ -1,0 +1,73 @@
+schema_version: "1.0"
+poll_id: opinionway-2026-11-26-10400
+firm: opinionway
+sponsor: CNews
+field_start: "2026-11-25"
+field_end: "2026-11-26"
+published_at: "2026-11-26"
+sample_size: 1020
+method: online
+population: likely
+source_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10400-pres-iv-vague-5-opinionway-26-novembre.pdf
+notice_url: >-
+  https://www.commission-des-sondages.fr/notices/files/notices/2026/novembre/10400-pres-iv-vague-5-opinionway-26-novembre.pdf
+index_url: >-
+  https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027
+retrieved_at: "2026-11-26T20:30:42Z"
+entry: primary
+notes: >-
+  Entered from Commission notice 10400 (Vague 5). 912 registered voters drawn
+  from a sample of 1,020, online (CAWI), 25–26 November; the published column is
+  weighted on socio-demographics, 2022 presidential and 2024 legislative first-round
+  vote among voters certain to vote (9–10 out of 10, 632 respondents; 596 expressed a
+  first-round vote). Bouamrane '<1%' is entered as 0.5. First published by CNews on
+  26 November 2026.
+agent:
+  name: Grok Bot fr2027
+  run_id: polls-2026-11-26T20:25Z
+  skill_version: polls-2
+scenarios:
+- label: Attal+Philippe+Villepin+Lisnard+Riner
+  round: 1
+  scenario_id: S1
+  shares:
+    arthaud: 1
+    attal: 4
+    bouamrane: 0.5
+    dupont_aignan: 2
+    glucksmann: 10
+    le_pen: 33
+    lisnard: 12
+    melenchon: 16
+    philippe: 8
+    retailleau: 4
+    riner: 2
+    roussel: 2
+    tondelier: 1
+    villepin: 2
+    zemmour: 3
+- label: Édouard Philippe v Marine Le Pen
+  round: 2
+  scenario_id: H1
+  shares:
+    le_pen: 59
+    philippe: 41
+- label: Jean-Luc Mélenchon v Marine Le Pen
+  round: 2
+  scenario_id: H2
+  shares:
+    le_pen: 69
+    melenchon: 31
+- label: Raphaël Glucksmann v Marine Le Pen
+  round: 2
+  scenario_id: H3
+  shares:
+    glucksmann: 42
+    le_pen: 58
+- label: David Lisnard v Marine Le Pen
+  round: 2
+  scenario_id: H4
+  shares:
+    le_pen: 55
+    lisnard: 45
