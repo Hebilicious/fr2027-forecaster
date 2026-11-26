@@ -1,0 +1,222 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T17:18:24Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T17:15:19Z",
+      "title": "Présidentielle 2027 : Edouard Philippe présente ses propositions en matière de santé, entre nouveaux vaccins obligatoires et « obligation de solidarité » pour les médecins",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/26/presidentielle-2027-edouard-philippe-presente-ses-propositions-en-matiere-de-sante-entre-nouveaux-vaccins-obligatoires-et-obligation-de-solidarite-pour-les-medecins_6815577_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T17:00:17Z",
+      "title": "Présidentielle 2027 : Marine Le Pen courtise les PME avec un nouveau projet de réforme fiscale",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/26/presidentielle-2027-marine-le-pen-courtise-les-pme-avec-un-nouveau-projet-de-reforme-fiscale_6815572_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T16:55:33Z",
+      "title": "EN DIRECT, congrès des maires de France : « Je ne veux pas que le gouvernement se mêle de la campagne présidentielle », affirme Sébastien Lecornu",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/26/en-direct-congres-des-maires-de-france-je-ne-veux-pas-que-le-gouvernement-se-mele-de-la-campagne-presidentielle-affirme-sebastien-lecornu_6815062_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T16:40:55Z",
+      "title": "Affaire Bardella : le RN et l’antisémitisme, un éternel recommencement",
+      "url": "https://www.liberation.fr/politique/affaire-bardella-le-rn-et-lantisemitisme-un-eternel-recommencement-20261126_JJWTY75G2JC4HEXASIOQMIC2HM/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T16:25:32Z",
+      "title": "Congrès des maires de France : Sébastien Lecornu imite Jacques Chirac à la perfection",
+      "url": "https://www.franceinfo.fr/politique/congres-des-maires-de-france-sebastien-lecornu-imite-jacques-chirac-a-la-perfection_8301723.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T17:16:14Z",
+      "title": "Des élus LR appellent à soutenir David Lisnard: \"C'est important que les députés s'engagent maintenant dans la campagne présidentielle\", explique Alexandra Martin, députée Nouvelle Énergie",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-des-elus-lr-appellent-a-soutenir-david-lisnard-c-est-important-que-les-deputes-s-engagent-maintenant-dans-la-campagne-presidentielle-explique-alexandra-martin-deputee-nouvelle-energie_VN-202611260831.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T17:02:11Z",
+      "title": "Nouvelles révélations sur les propos antisémites attribués à Jordan Bardella: \"C'est une chasse à l'homme\", martèle Julien Odoul, député Rassemblement national de l'Yonne",
+      "url": "https://www.bfmtv.com/politique/front-national/video-nouvelles-revelations-sur-les-propos-antisemites-attribues-a-jordan-bardella-c-est-une-chasse-a-l-homme-martele-julien-odoul-depute-rassemblement-national-de-l-yonne_VN-202611260812.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T16:53:44Z",
+      "title": "L'EFFET GRABLY - Écrits antisémites attribués à Jordan Bardella: ce que valent les preuves",
+      "url": "https://www.bfmtv.com/politique/front-national/video-l-effet-grably-ecrits-antisemites-attribues-a-jordan-bardella-ce-que-valent-les-preuves_VN-202611260802.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T16:47:47Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: \"Contrairement à ce qu'il dit, il n'avait pas 16-17 ans, il avait plutôt 17-18 ans\", affirme Clément Guillou, journaliste au Monde et auteur de l'enquête qui révèle ces nouveaux propos",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-contrairement-a-ce-qu-il-dit-il-n-avait-pas-16-17-ans-il-avait-plutot-17-18-ans-affirme-clement-guillou-journaliste-au-monde-et-auteur-de-l-enquete-qui-revele-ces-nouveaux-propos_VN-202611260792.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T16:36:19Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: le président du Rassemblement national nie avoir tenu ces propos",
+      "url": "https://www.bfmtv.com/politique/front-national/video-ecrits-antisemites-attribues-a-jordan-bardella-le-president-du-rassemblement-national-nie-avoir-tenu-ces-propos_VN-202611260784.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T16:23:36Z",
+      "title": "Présidentielle 2027: Teddy Riner assume ses propos sur l’aide à l’Ukraine",
+      "url": "https://www.bfmtv.com/politique/video-presidentielle-2027-teddy-riner-assume-ses-propos-sur-l-aide-a-l-ukraine_VN-202611260776.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T16:17:28Z",
+      "title": "Débat au Congrès des maires: \"L'ensemble des élus partage le fait que c'est bien plus compliqué d'être maire aujourd'hui d'une commune rurale\", assure Jean-Jacques Pierret, maire DVD de Montigny-sur-Chiers, en Meurthe-et-Moselle",
+      "url": "https://www.bfmtv.com/politique/video-debat-au-congres-des-maires-l-ensemble-des-elus-partage-le-fait-que-c-est-bien-plus-complique-d-etre-maire-aujourd-hui-d-une-commune-rurale-assure-jean-jacques-pierret-maire-dvd-de-montigny-sur-chiers-en-meurthe-et-moselle_VN-202611260772.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Édouard Philippe : la campagne bousculée d’un candidat mal en point",
+      "url": "https://www.leparisien.fr/podcasts/code-source/edouard-philippe-la-campagne-bousculee-dun-candidat-mal-en-point-26-11-2026-C2QE7FXWWZF2FKWPFQQGHXDRD4.php"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Vaccins obligatoires, « loi Évin » des écrans… Édouard Philippe veut incarner « le camp de la science »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/vaccins-obligatoires-loi-evin-des-ecrans-edouard-philippe-veut-incarner-le-camp-de-la-science-26-11-2026-UWPIBOOXKJFOFJSXT5OQAGZGZY.php"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-26T16:37:54Z",
+      "title": "Propos antisémites de Bardella : la candidat qualifie l'enquête de \"chasse à l'homme\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261126-propos-antis%C3%A9mites-de-bardella-la-candidat-qualifie-l-enqu%C3%AAte-de-chasse-%C3%A0-l-homme"
+    }
+  ],
+  "schema_version": "1.0"
+}
