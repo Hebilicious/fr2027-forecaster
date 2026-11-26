@@ -1,0 +1,188 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T10:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "philippe"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-26T09:30:05Z",
+      "title": "Présidentielle 2027 : le désarroi des partis pro-Ukraine et pro-Europe alors que ces sujets ne mobilisent pas les électeurs",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/26/presidentielle-2027-le-desarroi-des-partis-pro-ukraine-et-pro-europe-alors-que-ces-sujets-ne-mobilisent-pas-les-electeurs_6815508_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T10:00:00Z",
+      "title": "« Pour les Français, François Hollande est de gauche ! » : les indiscrétions du Figaro Magazine",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/pour-les-francais-francois-hollande-est-de-gauche-les-indiscretions-du-figaro-magazine-20261126"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-26T09:35:22Z",
+      "title": "David Lisnard : sa candidature va-t-elle faire pschitt ? Nos journalistes répondent dans «Chez Pol, l’émission»",
+      "url": "https://www.liberation.fr/politique/elections/david-lisnard-sa-candidature-va-t-elle-faire-pschitt-nos-journalistes-repondent-dans-chez-pol-lemission-20261126_J7SZR5TAZNG43BSZ3BXQ5MGEEE/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T09:38:40Z",
+      "title": "Benoît Payan appelle Raphaël Glucksmann \"à se dépasser\" et \"à rassembler le plus largement possible\"",
+      "url": "https://www.franceinfo.fr/elections/benoit-payan-appelle-raphael-glucksmann-a-se-depasser-et-a-rassembler-le-plus-largement-possible_8301006.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T09:50:01Z",
+      "title": "Teddy Riner attendu à Coutances (Manche) pour un déplacement sur une exploitation agricole et un centre de formation professionnelle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-attendu-a-coutances-manche-pour-un-deplacement-sur-une-exploitation-agricole-et-un-centre-de-formation-professionnelle_VN-202611260482.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T09:48:39Z",
+      "title": "Sébastien Lecornu, David Lisnard et Gérard Larcher réunis pour un débat à l’occasion de la clôture du Congrès des maires et des présidents d’intercommunalité de France",
+      "url": "https://www.bfmtv.com/politique/video-sebastien-lecornu-david-lisnard-et-gerard-larcher-reunis-pour-un-debat-a-l-occasion-de-la-cloture-du-congres-des-maires-et-des-presidents-d-intercommunalite-de-france_VN-202611260477.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T09:34:32Z",
+      "title": "\"Une entreprise de persécution\": Jordan Bardella conteste à nouveau les écrits antisémites qui lui sont attribués et dénonce de \"véritables chasses à l'homme\"",
+      "url": "https://www.bfmtv.com/politique/front-national/une-entreprise-de-persecution-jordan-bardella-conteste-a-nouveau-les-ecrits-antisemites-qui-lui-sont-attribues-et-denonce-de-veritables-chasses-a-l-homme_AN-202611260453.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T09:20:29Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: ce que révèle l'article du Monde",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-ce-que-revele-l-article-du-monde_VN-202611260458.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T09:18:33Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: le président du RN réitère sa \"contestation formelle\" des éléments publiés par Mediapart et Le Monde et dénonce une \"chasse à l'homme\"",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-le-president-du-rn-reitere-sa-contestation-formelle-des-elements-publies-par-mediapart-et-le-monde-et-denonce-une-chasse-a-l-homme_VN-202611260455.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Écrits antisémites : Jordan Bardella réitère sa « contestation formelle » après de nouvelles révélations",
+      "url": "https://www.leparisien.fr/politique/propos-antisemites-jordan-bardella-reitere-sa-contestation-formelle-apres-de-nouvelles-revelations-26-11-2026-CNNLKUAGSJDGRGHZTSC5ES2LKY.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : David Lisnard refuse de choisir entre Édouard Phillippe et Marine Le Pen, Gérald Darmanin tacle une « compromission »",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-david-lisnard-refuse-de-choisir-entre-edouard-phillippe-et-marine-le-pen-gerald-darmanin-tacle-une-compromission-26-11-2026-5KIK5P45SVH5ZF5BJLUEJAONCA.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
