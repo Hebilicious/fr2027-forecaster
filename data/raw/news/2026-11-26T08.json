@@ -1,0 +1,190 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T08:18:23Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T07:51:49Z",
+      "title": "Présidentielle 2027 : \"Je compte continuer à déranger ce petit théâtre\", déclare David Lisnard",
+      "url": "https://www.franceinfo.fr/politique/david-lisnard/presidentielle-2027-je-compte-continuer-a-deranger-ce-petit-theatre-declare-david-lisnard_8300889.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T07:52:14Z",
+      "title": "Nouvelles révélations sur des écrits antisémites attribués à Jordan Bardella : \"Une polémique parmi mille autres\", réagit Charles Alloncle, porte-parole UDR de Marine Le Pen",
+      "url": "https://www.franceinfo.fr/politique/nouvelles-revelations-sur-des-ecrits-antisemites-attribues-a-jordan-bardella-une-polemique-parmi-mille-autres-reagit-charles-alloncle-porte-parole-udr-de-marine-le-pen_8300934.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "glucksmann",
+        "hollande",
+        "lisnard",
+        "riner"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T07:47:34Z",
+      "title": "David Lisnard, Gabriel Attal, Raphaël Glucksmann... Journée de campagne au Salon des maires",
+      "url": "https://www.franceinfo.fr/elections/david-lisnard-gabriel-attal-raphael-glucksmann-journee-de-campagne-au-salon-des-maires_8300931.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T08:12:51Z",
+      "title": "Propos de Teddy Riner sur l'Ukraine: \"Comment tu peux dire ça?\", questionne Robert Ménard, maire DVD de Béziers",
+      "url": "https://www.bfmtv.com/politique/video-propos-de-teddy-riner-sur-l-ukraine-comment-tu-peux-dire-ca-questionne-robert-menard-maire-dvd-de-beziers_VN-202611260385.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T08:07:37Z",
+      "title": "DIRECT. Présidentielle 2027: \"comment tu peux dire ça?\" Robert Ménard fustige les propos de Teddy Riner sur la guerre en Ukraine",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/direct-emmanuel-macron-en-route-pour-bruxelle-pour-negocier-avec-les-dirigeants-de-l-ue-sur-le-budget-europeen_LN-202611260221.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T07:59:19Z",
+      "title": "\"Si je suis venu ce matin ici, c'est pour dire: ça suffit\": Bruno Retailleau devant le campus Nation de la Sorbonne Nouvelle bloqué par des étudiants",
+      "url": "https://www.bfmtv.com/politique/video-si-je-suis-venu-ce-matin-ici-c-est-pour-dire-ca-suffit-bruno-retailleau-devant-le-campus-nation-de-la-sorbonne-nouvelle-bloque-par-des-etudiants_VN-202611260375.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T07:52:27Z",
+      "title": "Candidature de David Lisnard: \"Je l'ai sous-estimé\", explique Robert Ménard, maire de Béziers",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-candidature-de-david-lisnard-je-l-ai-sous-estime-explique-robert-menard-maire-de-beziers_VN-202611260364.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T07:41:18Z",
+      "title": "Nouvelles révélations sur les propos antisémites attribués à Jordan Bardella: \"Il y a beaucoup de choses qui s'accumulent', déclare Robert Ménard, maire de Béziers",
+      "url": "https://www.bfmtv.com/politique/video-nouvelles-revelations-sur-les-propos-antisemites-attribues-a-jordan-bardella-il-y-a-beaucoup-de-choses-qui-s-accumulent-declare-robert-menard-maire-de-beziers_VN-202611260349.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-26T07:32:34Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella: de nouveaux éléments dévoilés par Le Monde et Mediapart, le président du RN réfute \"catégoriquement\"",
+      "url": "https://www.bfmtv.com/politique/video-ecrits-antisemites-attribues-a-jordan-bardella-de-nouveaux-elements-devoiles-par-le-monde-et-mediapart-le-president-du-rn-refute-categoriquement_VN-202611260333.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Il a des relations complexes avec l’Allemagne » : à Berlin, Jean-Luc Mélenchon veut faire entendre ses différences",
+      "url": "https://www.leparisien.fr/elections/presidentielle/il-a-des-relations-complexes-avec-lallemagne-a-berlin-jean-luc-melenchon-veut-faire-entendre-ses-differences-26-11-2026-LGH2STX47NBWXIVD6FKMCU36DQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Marine Le Pen propose un barème progressif à cinq tranches pour l’impôt sur les sociétés",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-marine-le-pen-propose-un-bareme-progressif-a-cinq-tranches-pour-limpot-sur-les-societes-26-11-2026-6Y7VWED4SZB6PFPUCM37VYVOPA.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
