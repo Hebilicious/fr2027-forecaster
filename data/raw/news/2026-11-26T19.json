@@ -1,0 +1,234 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-26T19:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T18:46:46Z",
+      "title": "« Opération conviction » : à Reims, Marine Le Pen propose de baisser l’impôt sur les sociétés pour les petites entreprises",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/operation-conviction-a-reims-marine-le-pen-propose-de-baisser-l-impot-sur-les-societes-pour-les-petites-entreprises-20261126"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T18:40:04Z",
+      "title": "Présidentielle 2027 : largement battu par Marine Le Pen dans les sondages de second tour, Jean-Luc Mélenchon a-t-il vraiment perdu d’avance ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-largement-battu-par-marine-le-pen-dans-les-sondages-de-second-tour-jean-luc-melenchon-a-t-il-vraiment-perdu-d-avance-20261126"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T18:30:00Z",
+      "title": "Présidentielle 2027 : pourquoi les candidats parlent si peu de santé, pourtant une des priorités des Français ?",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-pourquoi-les-candidats-parlent-si-peu-de-sante-pourtant-une-des-priorites-des-francais-20261126"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-26T18:26:31Z",
+      "title": "Éric Pauget, député LR : «Nous voulons montrer que des politiques nationaux soutiennent David Lisnard»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/eric-pauget-depute-lr-nous-voulons-montrer-que-des-politiques-nationaux-soutiennent-david-lisnard-20261126"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T19:10:44Z",
+      "title": "Présidentielle 2027 : l'expérience de David Lisnard dans le privé est-elle une réussite",
+      "url": "https://www.franceinfo.fr/elections/presidentielle-2027-l-experience-de-david-lisnard-dans-le-prive-est-elle-une-reussite_8301930.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-26T18:49:55Z",
+      "title": "Propos antisémites attribués à Jordan Bardella : \"M. Bardella devrait aujourd'hui non seulement assumer, mais s'expliquer\", déclare Sylvain Berrios, député Horizons du Val-de-Marne et porte-parole d'Édouard Philippe.",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/avant-le-20h/propos-antisemites-attribues-a-jordan-bardella-m-bardella-devrait-aujourd-hui-non-seulement-assumer-mais-s-expliquer-declare-sylvain-berrios-depute-horizons-du-val-de-marne-et-porte-parole-d-edouard-philippe_8301936.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-26T19:08:34Z",
+      "title": "\"Un choix mûri que nous assumons\": huit députés LR lâchent Bruno Retailleau et appellent à soutenir David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/un-choix-muri-que-nous-assumons-huit-deputes-lr-lachent-bruno-retailleau-et-appellent-a-soutenir-david-lisnard_AN-202611260936.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "lisnard"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-26T18:33:28Z",
+      "title": "Présidentielle 2027: \"Il y a un effet Lisnard qui est indéniable\", reconnaît Prisca Thevenot, députée \"Ensemble pour la République\" et soutien de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-il-y-a-un-effet-lisnard-qui-est-indeniable-reconnait-prisca-thevenot-deputee-ensemble-pour-la-republique-et-soutien-de-gabriel-attal_VN-202611260907.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-26T18:20:52Z",
+      "title": "\"LE 20.27\" - Les candidats à la présidentielle en campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-20-27-les-candidats-a-la-presidentielle-en-campagne_VN-202611260900.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-presidentielle",
+      "published_at": "2026-11-26T18:14:59Z",
+      "title": "\"Les Français sont tout sauf dupes\": Laurent Jacobelli estime que les écrits antisémites attribués à Jordan Bardella n'impacteront pas la campagne présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-francais-sont-tout-sauf-dupes-laurent-jacobelli-estime-que-les-ecrits-antisemites-attribues-a-jordan-bardella-n-impacteront-pas-la-campagne-presidentielle_VN-202611260896.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Messages antisémites : en 2013, Jordan Bardella aurait reproché à Jean-Luc Mélenchon de soutenir Israël",
+      "url": "https://www.leparisien.fr/politique/messages-antisemites-en-2013-jordan-bardella-aurait-reproche-a-jean-luc-melenchon-de-soutenir-israel-26-11-2026-K2HVVRR3VBCY7BUUZWE43RBLFU.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "melenchon",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : Édouard Philippe poursuit sa chute selon un nouveau sondage, David Lisnard talonne Jean-Luc Mélenchon",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-edouard-philippe-poursuit-sa-chute-selon-un-nouveau-sondage-david-lisnard-talonne-jean-luc-melenchon-26-11-2026-GJHPPDGT7NCLDNKQU55DJW4I4Q.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-26T19:08:54Z",
+      "title": "Présidentielle 2027 : Édouard Philippe dévisse dans un nouveau sondage et se fait passer par David Lisnard",
+      "url": "https://www.20minutes.fr/politique/4266128-20261126-presidentielle-2027-edouard-philippe-devisse-nouveau-sondage-fait-passer-david-lisnard"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-26T18:41:41Z",
+      "title": "Accusations d’antisémitisme : Bardella « envisage un complément de plainte » contre « Le Monde » et Mediapart",
+      "url": "https://www.20minutes.fr/politique/4266106-20261126-accusations-antisemitisme-bardella-envisage-complement-plainte-contre-monde-mediapart"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-26T18:29:20Z",
+      "title": "Bardella, Lavalette… la dédiabolisation du RN à l’épreuve des affaires d’antisémitisme",
+      "url": "https://www.france24.com/fr/france/20261126-france-jordan-bardella-laure-lavalette-dediabolisation-rassemblement-national-epreuve-affaires-antisemitisme"
+    }
+  ],
+  "schema_version": "1.0"
+}
