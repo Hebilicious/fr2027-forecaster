@@ -1,0 +1,236 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T18:18:18Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "dupont_aignan",
+        "le_pen",
+        "riner"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-27T17:32:41Z",
+      "title": "Présidentielle 2027 : le début de campagne de Teddy Riner déjà marqué par les polémiques",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-le-debut-de-campagne-de-teddy-riner-deja-marque-par-les-polemiques-20261127"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T18:00:37Z",
+      "title": "«Une nouvelle tentative d’intimidation des journalistes et de leurs sources» : Marine Le Pen attaque la presse et suscite un tollé",
+      "url": "https://www.liberation.fr/politique/elections/une-nouvelle-tentative-dintimidation-des-journalistes-et-de-leurs-sources-marine-le-pen-attaque-la-presse-et-suscite-un-tolle-20261127_UORSBR67GFCKFHVJSUH4O2XH6Q/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T17:49:35Z",
+      "title": "Marine Le Pen promet une \"grande loi-programme\" pour l'outre-mer",
+      "url": "https://www.franceinfo.fr/france/outremer/marine-le-pen-promet-une-grande-loi-programme-pour-l-outre-mer_8303604.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T17:30:02Z",
+      "title": "DIRECT. \"David Lisnard, les secrets d'une percée éclair\" : regardez le documentaire de franceinfo consacré aux coulisses de l'entrée en campagne présidentielle du maire de Cannes",
+      "url": "https://www.franceinfo.fr/politique/david-lisnard/direct-david-lisnard-les-secrets-d-une-percee-eclair-regardez-le-documentaire-de-franceinfo-consacre-aux-coulisses-de-l-entree-en-campagne-presidentielle-du-maire-de-cannes_8301420.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T18:12:46Z",
+      "title": "Programme de David Lisnard sur la politique pénale: \"Nous promettons la création de 30.000 places de prison et 5.000 postes de greffiers et juges\", détaille Thomas Elexhauser, son porte-parole",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-david-lisnard-sur-la-politique-penale-nous-promettons-la-creation-de-30-000-places-de-prison-et-5-000-postes-de-greffiers-et-juges-detaille-thomas-elexhauser-son-porte-parole_VN-202611270827.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon",
+        "philippe",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T18:08:35Z",
+      "title": "\"Quand il s'agit de l'Ukraine, il parle comme Jean-Luc Mélenchon et Marine Le Pen\", pointe Jérémie Patrier-Leitus, porte-parole d’Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-quand-il-s-agit-de-l-ukraine-il-parle-comme-jean-luc-melenchon-et-marine-le-pen-pointe-jeremie-patrier-leitus-porte-parole-d-edouard-philippe_VN-202611270825.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T18:07:03Z",
+      "title": "L'EFFET GRABLY - Ségolène Royal entretient le flou sur le candidat qu'elle soutiendra à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-l-effet-grably-segolene-royal-entretient-le-flou-sur-le-candidat-qu-elle-soutiendra-a-l-election-presidentielle_VN-202611270824.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T17:55:31Z",
+      "title": "Ségolène Royal n'exclut pas de soutenir Jean-Luc Mélenchon à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-segolene-royal-n-exclut-pas-de-soutenir-jean-luc-melenchon-a-l-election-presidentielle_VN-202611270819.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T17:36:45Z",
+      "title": "Présidentielle 2027: \"Je pense que Raphaël Glucksmann va aller jusqu'au bout\", estime Ségolène Royal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-je-pense-que-raphael-glucksmann-va-aller-jusqu-au-bout-estime-segolene-royal_VN-202611270786.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T17:35:00Z",
+      "title": "\"Quand vous critiquez davantage LFI que le bilan d'Emmanuel Macron qui est catastrophique, ça pose un problème\": Ségolène Royal charge Raphaël Glucksmann",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-quand-vous-critiquez-davantage-lfi-que-le-bilan-d-emmanuel-macron-qui-est-catastrophique-ca-pose-un-probleme-segolene-royal-charge-raphael-glucksmann_VN-202611270784.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T17:27:05Z",
+      "title": "\"La porte n'est pas fermée\": Ségolène Royal n'exclut pas de soutenir Jean-Luc Mélenchon à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-porte-n-est-pas-fermee-segolene-royal-n-exclut-pas-de-soutenir-jean-luc-melenchon-a-l-election-presidentielle_VN-202611270779.html"
+    },
+    {
+      "candidate_ids": [
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T17:20:06Z",
+      "title": "\"Je crois que c'est la vérité\": Ségolène Royal réitère ses propos sur sa crainte de \"crimes racistes\" en cas de victoire de l'extrême droite à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-crois-que-c-est-la-verite-segolene-royal-reitere-ses-propos-sur-sa-crainte-de-crimes-racistes-en-cas-de-victoire-de-l-extreme-droite-a-la-presidentielle_VN-202611270773.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : meeting, tracts par millions, porte-à-porte géant… Fabien Roussel à la relance",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-meeting-tracts-par-millions-porte-a-porte-geant-fabien-roussel-a-la-relance-27-11-2026-5Z75OVDU5RDC3IPDU26DBRE4ZA.php"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-27T17:20:01Z",
+      "title": "Présidentielle 2027 : A Berlin, Mélenchon loue Marx ou Beethoven et se défend de toute germanophobie",
+      "url": "https://www.20minutes.fr/politique/4266400-20261127-presidentielle-2027-berlin-melenchon-loue-marx-beethoven-defend-toute-germanophobie"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-27T18:13:08Z",
+      "title": "De 15 à 20 sénateurs derrière David Lisnard : qui sont les soutiens du candidat Nouvelle Energie au Sénat ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/de-15-a-20-senateurs-derriere-david-lisnard-qui-sont-les-soutiens-du-candidat-nouvelle-energie-au-senat"
+    }
+  ],
+  "schema_version": "1.0"
+}
