@@ -1,0 +1,161 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T10:18:17Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "dupont_aignan"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-27T10:00:33Z",
+      "title": "Présidentielle 2027 : Nicolas Dupont-Aignan veut arrêter l’aide française à l’Ukraine, accusée d’« alimenter le conflit »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/27/presidentielle-2027-nicolas-dupont-aignan-veut-arreter-l-aide-francaise-a-l-ukraine-accusee-d-alimenter-le-conflit_6815835_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-27T09:07:12Z",
+      "title": "L’enquête du « Monde » en vidéo sur les propos antisémites de Jordan Bardella",
+      "url": "https://www.lemonde.fr/videos/video/2026/11/27/l-enquete-du-monde-en-video-sur-les-propos-antisemites-de-jordan-bardella_6815823_1669088.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T10:12:00Z",
+      "title": "Gérald Darmanin transforme la campagne d’Edouard Philippe en «boucherie»",
+      "url": "https://www.liberation.fr/politique/gerald-darmanin-transforme-la-campagne-dedouard-philippe-en-boucherie-20261127_ZO7PYJANCBHIRB55SON6JJFDZQ/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T09:36:46Z",
+      "title": "Écrits antisémites attribués à Jordan Bardella : \"On voit ici le vrai visage du Rassemblement national\", selon l'eurodéputée LFI Manon Aubry",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/ecrits-antisemites-attribues-a-jordan-bardella-on-voit-ici-le-vrai-visage-du-rassemblement-national-selon-l-eurodeputee-lfi-manon-aubry_8302719.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T07:42:12Z",
+      "title": "\"David Lisnard pourrait embarquer avec nous, s'il veut se débarrasser du macronisme\", estime Sébastien Chenu, le vice-président RN de l'Assemblée",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/l-invite-politique/le-7-40-franceinfo-du-vendredi-27-novembre-2026_8291366.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:14:53Z",
+      "title": "Outre-mer: Marine Le Pen fustige “10 années d’incohérence, d’échec et de mépris dont les seules victimes sont les Français d’outre-mer\".",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-outre-mer-marine-le-pen-fustige-10-annees-d-incoherence-d-echec-et-de-mepris-dont-les-seules-victimes-sont-les-francais-d-outre-mer_VN-202611270463.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : testé pour la première fois au second tour, David Lisnard s’incline face à Marine Le Pen",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-teste-pour-la-premiere-fois-au-second-tour-david-lisnard-sincline-face-a-marine-le-pen-27-11-2026-VC56EONW65DBPLFCVPNVQXR6TQ.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : en cas de second tour entre Mélenchon et Le Pen, Benoît Payan annonce qu’il votera « sans problème » pour l’Insoumis",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-en-cas-de-second-tour-entre-melenchon-et-le-pen-benoit-payan-annonce-quil-votera-sans-probleme-pour-linsoumis-27-11-2026-XUMI2DOVNVBGNEIQENV3IVV6P4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
