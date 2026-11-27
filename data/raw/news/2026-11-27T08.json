@@ -1,0 +1,153 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T08:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-27T07:43:17Z",
+      "title": "Présidentielle 2027 : Raphaël Glucksmann cherche à tisser un réseau d’élus locaux",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/27/presidentielle-2027-raphael-glucksmann-cherche-a-tisser-un-reseau-d-elus-locaux_6815814_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T08:01:56Z",
+      "title": "\"Je ne mettrai jamais un bulletin pour un parti extrême\", déclare Bruno Le Maire, en cas de duel Le Pen/Mélenchon au second tour",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-ne-mettrai-jamais-un-bulletin-pour-un-parti-extreme-declare-bruno-le-maire-en-cas-de-duel-le-pen-melenchon-au-second-tour_VN-202611270362.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T07:58:12Z",
+      "title": "Pour Bruno Le Maire, une victoire du RN ou de LFI à l'élection présidentielle mènerait à \"la fin de l'Union européenne\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-pour-bruno-le-maire-une-victoire-du-rn-ou-de-lfi-a-l-election-presidentielle-menerait-a-la-fin-de-l-union-europeenne_VN-202611270354.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T07:53:10Z",
+      "title": "Présidentielle: Bruno Le Maire souhaite une méthode de \"rupture\" centrée sur le \"projet\" pour désigner un candidat pour la droite et le centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-bruno-le-maire-souhaite-une-methode-de-rupture-centree-sur-le-projet-pour-designer-un-candidat-pour-la-droite-et-le-centre_VN-202611270347.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T07:47:49Z",
+      "title": "Bruno Le Maire juge que Teddy Riner \"a tort\" sur l'aide à l'Ukraine",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-bruno-le-maire-juge-que-teddy-riner-a-tort-sur-l-aide-a-l-ukraine_VN-202611270341.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T07:46:12Z",
+      "title": "\"Le RN est la pire arnaque de la vie politique française depuis 30 à 40 ans\", assure Bruno Le Maire",
+      "url": "https://www.bfmtv.com/politique/extreme-droite/video-le-rn-est-la-pire-arnaque-de-la-vie-politique-francaise-depuis-30-a-40-ans-assure-bruno-le-maire_VN-202611270340.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire",
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T07:42:31Z",
+      "title": "\"Je ne suis pas surpris parce qu'il porte un projet de rupture\", constate Bruno Le Maire à propos de la percée de David Lisnard dans les sondages",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-ne-suis-pas-surpris-parce-qu-il-porte-un-projet-de-rupture-constate-bruno-le-maire-a-propos-de-la-percee-de-david-lisnard-dans-les-sondages_VN-202611270337.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
