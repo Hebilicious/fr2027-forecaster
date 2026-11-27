@@ -1,0 +1,171 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T13:19:31Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-27T13:13:19Z",
+      "title": "Présidentielle 2027 : Marine Le Pen veut contraindre les journalistes à respecter le secret de l’instruction",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/27/presidentielle-2027-marine-le-pen-veut-contraindre-les-journalistes-a-respecter-le-secret-de-l-instruction_6815863_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-27T12:25:05Z",
+      "title": "Ecrits antisémites de Jordan Bardella : Marine Le Pen renouvelle sa confiance au président du Rassemblement national",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/27/ecrits-antisemites-de-jordan-bardella-marine-le-pen-renouvelle-sa-confiance-au-president-du-rassemblement-national_6815858_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T12:36:28Z",
+      "title": "«Vous vous prenez pour Jean Moulin, mais vous êtes proches de Staline» : Bardella et Le Pen s’enfoncent dans le déni et menacent le secret des sources",
+      "url": "https://www.liberation.fr/politique/elections/vous-vous-prenez-pour-jean-moulin-mais-vous-etes-proches-de-staline-bardella-et-le-pen-senfoncent-dans-le-deni-et-menacent-le-secret-des-sources-20261127_D7OWV2BIMVDHDCKI5S275G2JIM/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T13:08:04Z",
+      "title": "INFO BFMTV. Présidentielle: LR ne sanctionnera pas les huit députés signataires d'une tribune en soutien à David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/info-bfmtv-presidentielle-lr-ne-sanctionnera-pas-les-huit-deputes-signataires-d-une-tribune-en-soutien-a-david-lisnard_AN-202611270580.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T12:56:02Z",
+      "title": "Présidentielle 2027: \"Si la primaire n'a pas lieu, Bruno Retailleau portera sa candidature au premier tour\", assure Laurence Garnier, sénatrice LR et porte-parole du candidat LR à l'élection",
+      "url": "https://www.bfmtv.com/politique/sondages/video-presidentielle-2027-si-la-primaire-n-a-pas-lieu-bruno-retailleau-portera-sa-candidature-au-premier-tour-assure-laurence-garnier-senatrice-lr-et-porte-parole-du-candidat-lr-a-l-election_VN-202611270577.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T12:41:34Z",
+      "title": "Pour Hervé Morin, président du parti Les Centristes de la région Normandie et soutien de David Lisnard, \"il faut qu'on soit tous rassemblés\" derrière un unique candidat de la droite et du centre",
+      "url": "https://www.bfmtv.com/politique/sondages/video-pour-herve-morin-president-du-parti-les-centristes-de-la-region-normandie-et-soutien-de-david-lisnard-il-faut-qu-on-soit-tous-rassembles-derriere-un-unique-candidat-de-la-droite-et-du-centre_VN-202611270572.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T12:36:55Z",
+      "title": "Présidentielle 2027: \"On est heureux du chemin parcouru\", se réjouit Hervé Morin, président du parti Les Centristes de la région Normandie et soutien de David Lisnard",
+      "url": "https://www.bfmtv.com/politique/sondages/video-presidentielle-2027-on-est-heureux-du-chemin-parcouru-se-rejouit-herve-morin-president-du-parti-les-centristes-de-la-region-normandie-et-soutien-de-david-lisnard_VN-202611270570.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-27T12:36:03Z",
+      "title": "Présidentielle : « Oui… » Le Pen redit sa confiance à Bardella malgré de nouvelles révélations sur des écrits antisémites",
+      "url": "https://www.20minutes.fr/politique/4266283-20261127-presidentielle-oui-pen-redit-confiance-bardella-malgre-nouvelles-revelations-ecrits-antisemites"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-27T11:53:26Z",
+      "title": "Marine Le Pen soutient Bardella et veut obliger les journalistes à respecter le secret des enquêtes",
+      "url": "https://www.france24.com/fr/france/20261127-marine-le-pen-soutient-bardella-et-veut-obliger-les-journalistes-%C3%A0-respecter-le-secret-des-enqu%C3%AAtes"
+    }
+  ],
+  "schema_version": "1.0"
+}
