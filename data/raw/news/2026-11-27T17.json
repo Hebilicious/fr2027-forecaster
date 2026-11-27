@@ -1,0 +1,143 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T17:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T17:12:15Z",
+      "title": "«L’Ukraine, c’est pas notre guerre» : Teddy Riner et les faux-monnayeurs, par Daniel Schneidermann",
+      "url": "https://www.liberation.fr/idees-et-debats/opinions/lukraine-cest-pas-notre-guerre-teddy-riner-et-les-faux-monnayeurs-par-daniel-schneidermann-20261127_JVFRUTAQUVGUTMGYJLSM3MKE64/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T17:12:37Z",
+      "title": "\"Une surenchère et une course vers l'extrême droite\": Ségolène Royal charge David Lisnard et ses propositions sur l'immigration",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-une-surenchere-et-une-course-vers-l-extreme-droite-segolene-royal-charge-david-lisnard-et-ses-propositions-sur-l-immigration_VN-202611270762.html"
+    },
+    {
+      "candidate_ids": [
+        "riner",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T17:03:50Z",
+      "title": "Présidentielle: Ségolène Royal juge qu'il y a \"un certain mépris\" à l'encontre de Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-segolene-royal-juge-qu-il-y-a-un-certain-mepris-a-l-encontre-de-teddy-riner_VN-202611270751.html"
+    },
+    {
+      "candidate_ids": [
+        "riner",
+        "royal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T17:00:12Z",
+      "title": "Position de Teddy Riner sur l'Ukraine: \"Sur des sujets complexes, il faut accepter la diversité des points de vue\", estime Ségolène Royal, ancienne ministre socialiste",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-position-de-teddy-riner-sur-l-ukraine-sur-des-sujets-complexes-il-faut-accepter-la-diversite-des-points-de-vue-estime-segolene-royal-ancienne-ministre-socialiste_VN-202611270744.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T16:57:55Z",
+      "title": "Présidentielle 2027: \"On est sur un candidat neuf\", explique Christophe Naegelen, président du groupe LIOT à l’Assemblée, soutien de David Lisnard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-on-est-sur-un-candidat-neuf-explique-christophe-naegelen-president-du-groupe-liot-a-l-assemblee-soutien-de-david-lisnard_VN-202611270742.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-27T16:48:40Z",
+      "title": "\"Disciple de Marx\" et \"amateur\" de Beethoven : à Berlin, Mélenchon se défend d'être germanophobe",
+      "url": "https://www.france24.com/fr/france/20261127-allemagne-disciple-marx-amateur-beethoven-visite-berlin-m%C3%A9lenchon-livre-se-d%C3%A9fend-germanophobe"
+    }
+  ],
+  "schema_version": "1.0"
+}
