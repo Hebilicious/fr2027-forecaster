@@ -1,0 +1,227 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": "https://www.franceinfo.fr/politique.rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;franceinfo&#46;fr&#47;politique&#46;rss\" on this server.<P>\nReference&#32;&#35;18&#46;cb5ec817&#46;1795778293&#46;375c6ef4\n<P>https&#58;&#47;&#47;errors&#4",
+      "id": "franceinfo-politique",
+      "items": 0,
+      "status": "error"
+    },
+    {
+      "error": "https://www.franceinfo.fr/elections/presidentielle.rss: HTTP 403: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;franceinfo&#46;fr&#47;elections&#47;presidentielle&#46;rss\" on this server.<P>\nReference&#32;&#35;18&#46;cb5ec817&#46;1795778293&#46;375c6f2d\n<P>https&#58;",
+      "id": "franceinfo-presidentielle",
+      "items": 0,
+      "status": "error"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T11:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-27T10:30:12Z",
+      "title": "Les subtiles oscillations de David Lisnard, du vote Macron à la main tendue au RN",
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/11/27/les-subtiles-oscillations-de-david-lisnard-du-vote-macron-a-la-main-tendue-au-rn_6815839_4355770.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T10:54:40Z",
+      "title": "Quand les journalistes montrent l’antisémitisme de Bardella, le RN regarde le doigt",
+      "url": "https://www.liberation.fr/politique/quand-les-journalistes-montrent-lantisemitisme-de-bardella-le-rn-regarde-le-doigt-20261127_EOUTLOMC6BAHNCKPANCZAL5QBU/"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "melenchon",
+        "tondelier"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T10:37:20Z",
+      "title": "Comment l’équipe Glucksmann s’est retrouvée dans un traquenard chez les écolos",
+      "url": "https://www.liberation.fr/politique/comment-lequipe-glucksmann-sest-retrouvee-dans-un-traquenard-chez-les-ecolos-20261127_4K22M4RV3VAGLE7QCH7RAF3PIA/"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T10:23:44Z",
+      "title": "Le camp Retailleau flingue les élus LR «fragiles» qui le quittent pour soutenir Lisnard",
+      "url": "https://www.liberation.fr/politique/le-camp-retailleau-flingue-les-elus-lr-fragiles-qui-le-quittent-pour-soutenir-lisnard-20261127_EDGL5XESDBCFFLG2ID4AWMNZZ4/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T11:06:53Z",
+      "title": "Marine Le Pen réitère sa confiance à Jordan Bardella, après de nouveaux éléments sur des écrits antisémites attribués au président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-marine-le-pen-reitere-sa-confiance-a-jordan-bardella-apres-de-nouveaux-elements-sur-des-ecrits-antisemites-attribues-au-president-du-rn_VN-202611270503.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:55:13Z",
+      "title": "Enquêtes visant le RN: Marine Le Pen affirme qu'elle est \"cernée par rien du tout\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-enquetes-visant-le-rn-marine-le-pen-affirme-qu-elle-est-cernee-par-rien-du-tout_VN-202611270489.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:54:01Z",
+      "title": "Propos de Teddy Riner sur l'Ukraine: \"Je pense que c'est une position raisonnable\", répond Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-propos-de-teddy-riner-sur-l-ukraine-nous-n-avons-plus-les-moyens-de-nous-engager-financierement-au-dela-des-engagements-deja-a-l-uvre-explique-marine-le-pen_VN-202611270488.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:51:51Z",
+      "title": "\"Scandaleux et antidémocratique\": Marine Le Pen répond à Emmanuel Macron sur la signature du budget européen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-scandaleux-et-antidemocratique-marine-le-pen-repond-a-emmanuel-macron-sur-la-signature-du-budget-europeen_VN-202611270486.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:43:20Z",
+      "title": "Élargissement de l’autonomie des territoires d’outre-mer :”Ces questions ont été instrumentalisées par l’extrême gauche (...) l’urgence c’est de rendre une vie abordable à l’ensemble de nos compatriotes d’outre-mer”, estime Marine Le Pen #BFM2",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-elargissement-de-l-autonomie-des-territoires-d-outre-mer-ces-questions-ont-ete-instrumentalisees-par-l-extreme-gauche-l-urgence-c-est-de-rendre-une-vie-abordable-a-l-ensemble-de-nos-compatriotes-d-outre-mer-estime-marine-le-pen-bfm2_VN-202611270482.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:36:13Z",
+      "title": "Teddy Riner accueilli à Béziers par le maire Robert Ménard",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-accueilli-a-beziers-par-le-maire-robert-menard_VN-202611270476.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:35:32Z",
+      "title": "\"On ne gagne pas en faisant des tableaux Excel\": Gérald Darmanin estime qu'il faut mettre \"plus d'émotion et d'instinct\" dans la campagne d'Édouard Philippe",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/on-ne-gagne-pas-en-faisant-des-tableaux-excel-gerald-darmanin-estime-qu-il-faut-mettre-plus-d-emotion-et-d-instinct-dans-la-campagne-d-edouard-philippe_AV-202611270475.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:26:48Z",
+      "title": "Programme du RN pour les Outre-mer: “Nous tenons la question ultramarine en très haute considération dans le cadre du redressement du pays”, explique Jordan Bardella, président du RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-du-rn-pour-les-outre-mer-nous-tenons-la-question-ultramarine-en-tres-haute-consideration-dans-le-cadre-du-redressement-du-pays-explique-jordan-bardella-president-du-rn_VN-202611270472.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:25:27Z",
+      "title": "Outre-Mer: si elle est élue, Marine Le Pen \"fera voter\" une \"grande loi programme\" sur 12 ans",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-outre-mer-si-elle-est-elue-marine-le-pen-fera-voter-une-grande-loi-programme-sur-12-ans_VN-202611270470.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T10:24:19Z",
+      "title": "LES ÉCLAIREURS - Le programme de David Lisnard sur l'immigration et la sécurité",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-les-eclaireurs-le-programme-de-david-lisnard-sur-l-immigration-et-la-securite_VN-202611270471.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-26T13:07:26Z",
+      "title": "Malgré sa méfiance envers l'Allemagne, Mélenchon se rend à Berlin pour présenter son livre",
+      "url": "https://www.france24.com/fr/france/20261126-malgr%C3%A9-sa-m%C3%A9fiance-envers-l-allemagne-m%C3%A9lenchon-se-rend-%C3%A0-berlin-pour-pr%C3%A9senter-son-livre"
+    }
+  ],
+  "schema_version": "1.0"
+}
