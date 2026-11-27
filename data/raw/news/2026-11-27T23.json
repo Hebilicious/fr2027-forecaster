@@ -1,0 +1,140 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T23:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T22:57:14Z",
+      "title": "\"La pauvreté du choix politique à droite fait que David Lisnard occupe l'espace\", analyse Carlos Martens Bilongo, député LFI",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-la-pauvrete-du-choix-politique-a-droite-fait-que-david-lisnard-occupe-l-espace-analyse-carlos-martens-bilongo-depute-lfi_VN-202611270951.html"
+    },
+    {
+      "candidate_ids": [
+        "attal"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T22:56:55Z",
+      "title": "Présidentielle: \"Les Français veulent qu'on s'occupe d'eux et qu'on arrête la tambouille\", affirme Patrick Vignal, conseiller politique de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-les-francais-veulent-qu-on-s-occupe-d-eux-et-qu-on-arrete-la-tambouille-affirme-patrick-vignal-conseiller-politique-de-gabriel-attal_VN-202611270950.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T22:56:38Z",
+      "title": "Soupçons de fuite vers le RN: le bureau et le domicile de l'ex-directeur de Marine Le Pen ont été perquisitionnés",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-soupcons-de-fuite-vers-le-rn-le-bureau-et-le-domicile-de-l-ex-directeur-de-marine-le-pen-ont-ete-perquisitionnes_VN-202611270949.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T22:28:11Z",
+      "title": "En déplacement en Allemagne, Jean-Luc Mélenchon affirme vouloir refuser \"d'aider les Américains à faire la guerre aux Chinois\"",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/en-deplacement-en-allemagne-jean-luc-melenchon-affirme-vouloir-refuser-d-aider-les-americains-a-faire-la-guerre-aux-chinois_AD-202611270940.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T22:25:08Z",
+      "title": "\"Un projet exigeant, solide et ambitieux\": l'analyse du programme de Bruno Retailleau par François-Xavier Bellamy, vice-président des Républicains",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-un-projet-exigeant-solide-et-ambitieux-l-analyse-du-programme-de-bruno-retailleau-par-francois-xavier-bellamy-vice-president-des-republicains_VN-202611270939.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Fuites » au profit du RN : le bureau et le domicile de l’ex-directeur de cabinet de Marine Le Pen perquisitionnés",
+      "url": "https://www.leparisien.fr/politique/fuites-au-profit-du-rn-le-bureau-et-le-domicile-de-lex-directeur-de-cabinet-de-marine-le-pen-perquisitionnes-28-11-2026-TJX3LT64LZHTPBNXXWK3MM6M5M.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
