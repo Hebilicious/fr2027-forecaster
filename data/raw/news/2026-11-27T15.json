@@ -1,0 +1,183 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T15:18:14Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-27T15:04:58Z",
+      "title": "Présidentielle 2027 : Marine Le Pen prône une « autonomie économique » pour les territoires d’outre-mer et insiste sur leur importance stratégique",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/27/presidentielle-2027-marine-le-pen-prone-une-autonomie-economique-pour-les-territoires-d-outre-mer-et-insiste-sur-leur-importance-strategique_6815880_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-27T14:45:50Z",
+      "title": "Jordan Bardella et Marine Le Pen réagissent aux nouvelles révélations dans l’affaire des écrits antisémites",
+      "url": "https://www.lemonde.fr/politique/video/2026/11/27/ecrits-antisemites-jordan-bardella-et-marine-le-pen-reagissent-en-images-aux-nouvelles-revelations_6815877_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-27T14:26:21Z",
+      "title": "Présidentielle 2027 : après l’élan local, David Lisnard fait une percée chez les parlementaires et engrange les ralliements",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-apres-l-elan-local-david-lisnard-fait-une-percee-chez-les-parlementaires-et-engrange-les-ralliements-20261127"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T14:34:48Z",
+      "title": "Prêts consentis au parti Reconquête : Eric Zemmour placé sous le statut de témoin assisté",
+      "url": "https://www.liberation.fr/politique/prets-consentis-au-parti-reconquete-eric-zemmour-place-sous-le-statut-de-temoin-assiste-20261127_QLJIEHRDZFEU3CPDABPUOLK25Y/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-27T14:29:22Z",
+      "title": "L’antisémitisme de Jordan Bardella n’est pas antinomique avec son soutien à Israël",
+      "url": "https://www.liberation.fr/politique/lantisemitisme-de-jordan-bardella-nest-pas-antinomique-avec-son-soutien-a-israel-20261127_BJVGP7BXDNCZDL6IZKXXIMM2AA/"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T15:00:02Z",
+      "title": "\"L’étau se resserre pour Jordan Bardella\", estime Stéphane Zumsteeg",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/l-etau-se-resserre-pour-jordan-bardella-estime-stephane-zumsteeg_8302980.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T14:27:08Z",
+      "title": "Eric Zemmour placé sous le statut de témoin assisté dans l'affaire des prêts accordés au parti Reconquête",
+      "url": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-place-sous-le-statut-de-temoin-assiste-dans-l-affaire-des-prets-accordes-au-parti-reconquete_8303232.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "le_pen",
+        "lisnard",
+        "melenchon",
+        "philippe",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T14:42:04Z",
+      "title": "Ian Boucard, député Droite Républicaine, appelle à \"un candidat unique de la droite et du centre\" pour \"éviter un second tour mortifère entre Marine Le Pen et Jean-Luc Mélenchon\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-ian-boucard-depute-droite-republicaine-appelle-a-un-candidat-unique-de-la-droite-et-du-centre-pour-eviter-un-second-tour-mortifere-entre-marine-le-pen-et-jean-luc-melenchon_VN-202611270647.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Reconquête le président du parti Éric Zemmour placé sous le statut de témoin assisté pour des prêts consentis",
+      "url": "https://www.leparisien.fr/politique/reconquete-le-president-du-parti-eric-zemmour-place-sous-le-statut-de-temoin-assiste-pour-des-prets-consentis-27-11-2026-PFT2R3RAMNF7BKF2PMEYFBWNPQ.php"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-27T14:36:46Z",
+      "title": "Présidentielle 2027 : Éric Zemmour placé sous le statut de témoin assisté dans une affaire de prêts à Reconquête",
+      "url": "https://www.20minutes.fr/politique/4266329-20261127-presidentielle-2027-eric-zemmour-place-sous-statut-temoin-assiste-affaire-prets-reconquete"
+    }
+  ],
+  "schema_version": "1.0"
+}
