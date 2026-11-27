@@ -1,0 +1,133 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T06:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-27T05:24:50Z",
+      "title": "Ecrits antisémites : Jordan Bardella s’enferre dans le déni et les mensonges",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/27/ecrits-antisemites-jordan-bardella-s-enferre-dans-le-deni-et-les-mensonges_6815806_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-27T05:30:00Z",
+      "title": "L’obsession antiallemande de Jean-Luc Mélenchon, en visite ce vendredi à Berlin",
+      "url": "https://www.lefigaro.fr/politique/l-obsession-antiallemande-de-jean-luc-melenchon-en-visite-ce-vendredi-a-berlin-20261127"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T05:58:28Z",
+      "title": "DIRECT. Présidentielle 2027: à Bruxelles, Emmanuel Macron tacle la \"drôle d'arrogance\" de Marine Le Pen et réagit aux propos de Teddy Riner",
+      "url": "https://www.bfmtv.com/politique/direct-presidentielle-2027-a-bruxelles-emmanuel-macron-tacle-la-drole-d-arrogance-de-marine-le-pen-et-reagit-aux-propos-de-teddy-riner_LN-202611270192.html"
+    },
+    {
+      "candidate_ids": [
+        "zemmour"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-27T04:45:00Z",
+      "title": "EN DIRECT Présidentielle 2027 : Zemmour fait savoir que c’est sa « dernière campagne »…",
+      "url": "https://www.20minutes.fr/politique/4266172-20261127-direct-presidentielle-2027-zemmour-fait-savoir-derniere-campagne"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-27T05:32:36Z",
+      "title": "Présidentielle 2027 : David Lisnard accusé d’utiliser des bots sur les réseaux sociaux pour ne pas être associé à Le Pen",
+      "url": "https://www.20minutes.fr/politique/4265767-20261127-presidentielle-2027-david-lisnard-accuse-utiliser-bots-reseaux-sociaux-etre-associe-pen"
+    }
+  ],
+  "schema_version": "1.0"
+}
