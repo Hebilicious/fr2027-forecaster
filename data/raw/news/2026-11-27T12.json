@@ -1,0 +1,183 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T12:18:12Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard",
+        "zemmour"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T11:43:49Z",
+      "title": "Présidentielle : David Lisnard, c'est Zemmour 2022 ou Macron 2017 ? \"On/Off\", épisode 11",
+      "url": "https://www.franceinfo.fr/elections/presidentielle-david-lisnard-c-est-zemmour-2022-ou-macron-2017-on-off-episode-11_8301783.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T11:50:47Z",
+      "title": "Marine Le Pen réitère sa confiance à Jordan Bardella, après de nouveaux éléments sur des écrits antisémites attribués au patron du RN",
+      "url": "https://www.franceinfo.fr/elections/marine-le-pen-reitere-sa-confiance-a-jordan-bardella-apres-de-nouveaux-elements-sur-des-ecrits-antisemites-attribues-au-patron-du-rn_8303001.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T12:13:51Z",
+      "title": "Soutien de députés LR à David Lisnard: \"Mon ralliement n'est pas contre Bruno Retailleau\", assure Justine Gruet, députée du Jura et vice-présidente du groupe Droite républicaine à l'Assemblée",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-soutien-de-deputes-lr-a-david-lisnard-mon-ralliement-n-est-pas-contre-bruno-retailleau-assure-justine-gruet-deputee-du-jura-et-vice-presidente-du-groupe-droite-republicaine-a-l-assemblee_VN-202611270563.html"
+    },
+    {
+      "candidate_ids": [
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T11:53:32Z",
+      "title": "MIDI ÉCO - Fiscalité, allocation, logement, emploi, garde...les propositions d'Édouard Philippe pour la natalité",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-midi-eco-fiscalite-allocation-logement-emploi-garde-les-propositions-d-edouard-philippe-pour-la-natalite_VN-202611270539.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T11:38:17Z",
+      "title": "Le Rassemblement national dévoile son programme pour les Outre-mer",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-le-rassemblement-national-devoile-son-programme-pour-les-outre-mer_VN-202611270532.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T11:36:07Z",
+      "title": "Affaires autour du RN: \"Je ne suis cernée par rien du tout\", assure Marine Le Pen",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-affaires-autour-du-rn-je-ne-suis-cernee-par-rien-du-tout-assure-marine-le-pen_VN-202611270526.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T11:20:47Z",
+      "title": "Marine Le Pen réitère sa confiance à Jordan Bardella après de nouveaux éléments sur des écrits antisémites attribués au président du RN",
+      "url": "https://www.bfmtv.com/politique/front-national/marine-le-pen-reitere-sa-confiance-a-jordan-bardella-apres-de-nouveaux-elements-sur-des-ecrits-antisemites_AV-202611270511.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Écrits antisémites : Marine Le Pen soutient Jordan Bardella et souhaite obliger les journalistes à respecter le secret de l’instruction",
+      "url": "https://www.leparisien.fr/politique/ecrits-antisemites-marine-le-pen-soutient-jordan-bardella-et-souhaite-obliger-journalistes-a-respecter-le-secret-de-linstruction-27-11-2026-HL3ATZNNGRGEPL3OR5WZODSTAE.php"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "philippe"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-27T11:17:38Z",
+      "title": "« Réconcilier des normes budgétaires et des aspirations populaires » : Ouverture d’une convention citoyenne sur les finances publiques",
+      "url": "https://www.publicsenat.fr/actualites/politique/reconcilier-des-normes-budgetaires-et-des-aspirations-populaires-ouverture-dune-convention-citoyenne-sur-les-finances-publiques"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-27T11:26:17Z",
+      "title": "France : Emmanuel Macron critique la “drôle d’arrogance” de Marine Le Pen",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261127-france-emmanuel-macron-critique-la-dr%C3%B4le-d-arrogance-de-marine-le-pen"
+    }
+  ],
+  "schema_version": "1.0"
+}
