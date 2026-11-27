@@ -1,0 +1,152 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T16:18:13Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-27T15:39:14Z",
+      "title": "Présidentielle 2027 : Bruno Retailleau dévoile son programme pour l’enseignement supérieur, en souhaitant la suppression de Parcoursup",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/27/presidentielle-2027-bruno-retailleau-devoile-son-programme-pour-l-enseignement-superieur-en-souhaitant-la-suppression-de-parcoursup_6815889_6205049.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T16:13:16Z",
+      "title": "Présidentielle 2027: \"Sur le terrain, on me parle de David Lisnard chaque jour, sa dynamique est très forte\", admet Corentin Le Fur, député LR et soutien de Bruno Retailleau",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-sur-le-terrain-on-me-parle-de-david-lisnard-chaque-jour-sa-dynamique-est-tres-forte-admet-corentin-le-fur-depute-lr-et-soutien-de-bruno-retailleau_VN-202611270712.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T16:04:51Z",
+      "title": "Campagne de Teddy Riner: \"C'est un exercice qu'il ne maîtrise pas, il apprend les codes\", pointe Céline Géraud, porte-parole de campagne de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-campagne-de-teddy-riner-c-est-un-exercice-qu-il-ne-maitrise-pas-il-apprend-les-codes-pointe-celine-geraud-porte-parole-de-campagne-de-gabriel-attal_VN-202611270708.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T15:44:28Z",
+      "title": "\"Si vous attendez de moi que je sache tout, ça n'arrivera jamais\": Teddy Riner, candidat à l'élection présidentielle, veut rassembler \"une équipe de France pour remettre le bateau à flot\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-si-vous-attendez-de-moi-que-je-sache-tout-ca-n-arrivera-jamais-teddy-riner-candidat-a-l-election-presidentielle-veut-rassembler-une-equipe-de-france-pour-remettre-le-bateau-a-flot_VN-202611270699.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : « Il pourrait même embarquer avec nous », Sébastien Chenu tend la main à David Lisnard",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-il-pourrait-meme-embarquer-avec-nous-sebastien-chenu-tend-la-main-a-david-lisnard-27-11-2026-TNIIP3FCBZEUTNMRSLG7T4PRDI.php"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-27T15:44:50Z",
+      "title": "Présidentielle 2027 : Capitalisation obligatoire, moins de normes… On vous résume le programme de David Lisnard",
+      "url": "https://www.20minutes.fr/politique/4266335-20261127-presidentielle-2027-capitalisation-obligatoire-moins-normes-resume-programme-david-lisnard"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "philippe"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-27T16:15:25Z",
+      "title": "Présidentielle française : cinq ans après, la guerre en Ukraine ne fait pas recette dans la campagne",
+      "url": "https://www.france24.com/fr/france/20261127-presidentielle-fran%C3%A7aise-cinq-ans-apr%C3%A8s-la-guerre-en-ukraine-ne-fait-pas-recette-dans-la-campagne"
+    }
+  ],
+  "schema_version": "1.0"
+}
