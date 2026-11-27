@@ -1,0 +1,161 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-27T14:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T14:09:09Z",
+      "title": "ÉDITO. Marine Le Pen peut-elle finir par lâcher Jordan Bardella ?",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/edito-marine-le-pen-peut-elle-finir-par-lacher-jordan-bardella_8303214.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-27T13:39:02Z",
+      "title": "“Ce n’est pas Jean Moulin que vous êtes, c’est plutôt des méthodes proches de Staline”",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/ce-n-est-pas-jean-moulin-que-vous-etes-c-est-plutot-des-methodes-proches-de-staline_8303157.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T13:47:32Z",
+      "title": "Programme de David Lisnard sur l'immigration: des propositions \"très dures\", juge Marie-Christine Dalloz, députée LR",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-david-lisnard-sur-l-immigration-des-propositions-tres-dures-juge-marie-christine-dalloz-deputee-lr_VN-202611270604.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T13:41:26Z",
+      "title": "David Lisnard: comment le président réélu de l'AMF poursuit son ascension dans la course à la présidentielle?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-david-lisnard-comment-le-president-reelu-de-l-amf-poursuit-son-ascension-dans-la-course-a-la-presidentielle_VN-202611270600.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T13:37:59Z",
+      "title": "\"Je ne crois pas qu'il soit un homme politique\": Robert Ménard estime que Teddy Riner, candidat à la présidentielle, \"veut se mettre au service de ce pays\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-je-ne-crois-pas-qu-il-soit-un-homme-politique-robert-menard-estime-que-teddy-riner-candidat-a-la-presidentielle-veut-se-mettre-au-service-de-ce-pays_VN-202611270599.html"
+    },
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-27T13:36:04Z",
+      "title": "Prisons: \"Il faut que les peines soient faites, on a un devoir de sécuriser la population qui vit à l'extérieur\", déclare Teddy Riner, candidat à la présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-prisons-il-faut-que-les-peines-soient-faites-on-a-un-devoir-de-securiser-la-population-qui-vit-a-l-exterieur-declare-teddy-riner-candidat-a-la-presidentielle_VN-202611270597.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "riner"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-27T13:42:47Z",
+      "title": "Guerre en Ukraine : La France est très loin d’être le pays le plus dépensier pour venir en aide Kiev",
+      "url": "https://www.20minutes.fr/monde/ukraine/4266301-20261127-guerre-ukraine-france-tres-loin-etre-pays-plus-depensier-venir-aide-kiev"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-27T13:41:51Z",
+      "title": "Présidentielle 2027 : « Grogneur », l’ours mal léché des réseaux sociaux qui roule pour David Lisnard",
+      "url": "https://www.20minutes.fr/high-tech/by-the-web/4265913-20261127-presidentielle-2027-grogneur-ours-mal-leche-reseaux-sociaux-roule-david-lisnard"
+    }
+  ],
+  "schema_version": "1.0"
+}
