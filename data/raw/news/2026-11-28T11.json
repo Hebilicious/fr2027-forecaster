@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T11:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T10:59:01Z",
+      "title": "À Berlin, Jean-Luc Mélenchon défend sa vision de la relation franco-allemande et répond aux accusations de germanophobie",
+      "url": "https://www.franceinfo.fr/politique/melenchon/a-berlin-jean-luc-melenchon-defend-sa-vision-de-la-relation-franco-allemande-et-repond-aux-accusations-de-germanophobie_8304450.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T10:49:34Z",
+      "title": "Proposition de cession du Donbass: \"On ne peut pas demander à un pays de renoncer à une partie de son territoire\", estime François Hollande, ancien président de la République",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-proposition-de-cession-du-donbass-on-ne-peut-pas-demander-a-un-pays-de-renoncer-a-une-partie-de-son-territoire-estime-francois-hollande-ancien-president-de-la-republique_VN-202611280251.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T10:45:04Z",
+      "title": "Présidentielle 2027: \"Qu'est-ce que vous pensez que je fais?\", François Hollande assume de mettre \"les deux pieds\" dans la campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-qu-est-ce-que-vous-pensez-que-je-fais-francois-hollande-assume-de-mettre-les-deux-pieds-dans-la-campagne_VN-202611280249.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T10:42:34Z",
+      "title": "Présidentielle 2027: \"Au mois de janvier ou février, il y aura une prise de décision\", déclare François Hollande sur sa potentielle candidature",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-au-mois-de-janvier-il-y-aura-une-prise-de-decision-declare-francois-hollande-sur-sa-potentielle-candidature_VN-202611280247.html"
+    },
+    {
+      "candidate_ids": [
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T10:40:39Z",
+      "title": "Défense européenne: \"Pas besoin d'un traité pour mettre en commun notre industrie\", estime François Hollande",
+      "url": "https://www.bfmtv.com/politique/video-defense-europeenne-pas-besoin-d-un-traite-pour-mettre-en-commun-notre-industrie-estime-francois-hollande_VN-202611280248.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "philippe"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T10:23:32Z",
+      "title": "Présidentielle 2027: \"Ceux qui refusent la primaire aujourd’hui sont irresponsables\", dénonce Jad Zahab, porte-parole de la campagne de Gabriel Attal",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-ceux-qui-refusent-la-primaire-aujourd-hui-sont-irresponsables-denonce-jad-zahab-porte-parole-de-la-campagne-de-gabriel-attal_VN-202611280244.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
