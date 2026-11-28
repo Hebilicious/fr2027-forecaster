@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T05:18:19Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-28T04:30:11Z",
+      "title": "A Berlin, Jean-Luc Mélenchon se défend de germanophobie : « Souvent nous sommes jaloux, mais nous ne le disons pas »",
+      "url": "https://www.lemonde.fr/international/article/2026/11/28/a-berlin-jean-luc-melenchon-se-defend-de-germanophobie-souvent-nous-sommes-jaloux-mais-nous-ne-le-disons-pas_6816060_3210.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard",
+        "philippe"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Sondage présidentielle 2027 : pour les sympathisants de la droite et du centre, David Lisnard est un meilleur candidat qu’Édouard Philippe",
+      "url": "https://www.leparisien.fr/elections/presidentielle/sondage-presidentielle-2027-pour-les-sympathisants-de-la-droite-et-du-centre-david-lisnard-est-un-meilleur-candidat-quedouard-philippe-28-11-2026-2HBMBRYMWRGAJNXRETOS2K5ZSE.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
