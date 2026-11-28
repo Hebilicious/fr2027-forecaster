@@ -1,0 +1,118 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T10:18:10Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "hollande"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T10:12:41Z",
+      "title": "Présidentielle 2027: Romain Eskenazi (PS) affirme que Raphaël Glucksmann \"soutiendra\" François Hollande en cas de candidature à l'élection présidentielle",
+      "url": "https://www.bfmtv.com/politique/elections/video-presidentielle-2027-romain-eskenazi-ps-affirme-que-raphael-glucksmann-soutiendra-francois-hollande-en-cas-de-candidature-a-l-election-presidentielle_VN-202611280241.html"
+    },
+    {
+      "candidate_ids": [
+        "dupont_aignan",
+        "lisnard",
+        "philippe",
+        "zemmour"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T09:31:43Z",
+      "title": "Présidentielle 2027: \"Cette primaire est morte-née\", réagit Julie Boillot, porte-parole d'Édouard Philippe, à la proposition d'élargir la primaire de la droite à Éric Zemmour",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-cette-primaire-est-morte-nee-reagit-julie-boillot-porte-parole-d-edouard-philippe-a-la-proposition-d-elargir-la-primaire-de-la-droite-a-eric-zemmour_VN-202611280230.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-28T09:35:10Z",
+      "title": "Pianiste, ex-partisan de Mélenchon… Qui est Ambroise de Rancourt, cadre du RN qui a été perquisitionné ?",
+      "url": "https://www.20minutes.fr/politique/4266458-20261128-pianiste-ex-partisan-melenchon-ambroise-rancourt-cadre-rn-perquisitionne"
+    }
+  ],
+  "schema_version": "1.0"
+}
