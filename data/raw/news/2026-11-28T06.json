@@ -1,0 +1,123 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T06:18:15Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "lefigaro-elections",
+      "published_at": "2026-11-28T06:00:00Z",
+      "title": "« Le deuxième parti de France, derrière le RN » : dans les coulisses du QG de campagne de David Lisnard",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/le-deuxieme-parti-de-france-derriere-le-rn-dans-les-coulisses-du-qg-de-campagne-de-david-lisnard-20261128"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-28T06:08:00Z",
+      "title": "Ecrits antisémites : est-il vrai que Jordan Bardella a choisi «la procédure la plus lente» pour attaquer «Mediapart» ?",
+      "url": "https://www.liberation.fr/checknews/ecrits-antisemites-est-il-vrai-que-jordan-bardella-a-choisi-la-procedure-la-plus-lente-pour-attaquer-mediapart-20261128_ZMXB2IPCX5CDHDLQ2UQERF2H2E/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T05:58:24Z",
+      "title": "\"Ça fait pschitt !\" : pourquoi les accusations d'antisémitisme visant Jordan Bardella n'entament pas (encore) la popularité du RN",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/ca-fait-pschitt-pourquoi-les-accusations-d-antisemitisme-visant-jordan-bardella-n-entament-pas-encore-la-popularite-du-rn_8303220.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T06:03:00Z",
+      "title": "\"On ne peut pas toujours avoir le vent dans le dos\": pris entre les accusations d’antisémitisme et l’affaire Moutouh, la mauvaise passe du Rassemblement national",
+      "url": "https://www.bfmtv.com/politique/front-national/on-ne-peut-pas-toujours-avoir-le-vent-dans-le-dos-pris-entre-les-accusations-d-antisemitisme-et-l-affaire-moutouh-la-mauvaise-passe-du-rassemblement-national_AN-202611280089.html"
+    }
+  ],
+  "schema_version": "1.0"
+}

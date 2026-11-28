@@ -1,0 +1,1055 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "arthaud",
+      "days": [
+        {
+          "articles": 1,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -2.3641,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 1,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": 2.4793,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nathalie Arthaud | Arthaud",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "asselineau",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Asselineau | Asselineau",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "attal",
+      "days": [
+        {
+          "articles": 7,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -0.8746,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 3,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": 0.4689,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 5,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -1.4484,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Gabriel Attal | Attal",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "bardella",
+      "days": [
+        {
+          "articles": 3,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -2.4714,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 95,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -2.3038,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 53,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -1.9279,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jordan Bardella | Bardella",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "batho",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Delphine Batho",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "becht",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 2,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": 0.9532,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Becht",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "bertrand",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Xavier Bertrand",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "bonnal",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Sébastien Bonnal",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "bouamrane",
+      "days": [
+        {
+          "articles": 1,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -0.3008,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Karim Bouamrane | Bouamrane",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "cazeneuve",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bernard Cazeneuve | Cazeneuve",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "dupont_aignan",
+      "days": [
+        {
+          "articles": 1,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -1.5267,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 2,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -1.7354,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Nicolas Dupont-Aignan | Dupont-Aignan",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "faure",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Olivier Faure",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "glucksmann",
+      "days": [
+        {
+          "articles": 7,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -1.0444,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 25,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -3.1638,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 3,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -0.6533,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Raphaël Glucksmann | Glucksmann",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "guedj",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jérôme Guedj | Guedj",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "hollande",
+      "days": [
+        {
+          "articles": 6,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -0.611,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 7,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": 0.1202,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 1,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": 5.1546,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Hollande | Hollande",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "kazib",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Anasse Kazib | Kazib",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "labib",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Selma Labib",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "lagarde",
+      "days": [
+        {
+          "articles": 2,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": 3.0958,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 44,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": 1.0675,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 5,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -0.6923,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Christine Lagarde | Lagarde",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "le_maire",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 2,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": 1.6379,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 6,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -2.4776,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Le Maire",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "le_pen",
+      "days": [
+        {
+          "articles": 40,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -2.0039,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 46,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -1.9726,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 97,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -2.1282,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Le Pen | Le Pen",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "lisnard",
+      "days": [
+        {
+          "articles": 117,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -1.1327,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 76,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -1.0957,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 57,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -0.9233,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: David Lisnard | Lisnard",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "maurel",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Emmanuel Maurel",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "melenchon",
+      "days": [
+        {
+          "articles": 38,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -1.4829,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 26,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -1.1229,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 33,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -2.0175,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Jean-Luc Mélenchon | Mélenchon",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "philippe",
+      "days": [
+        {
+          "articles": 19,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -1.4334,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 28,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -1.0387,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 16,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -1.0874,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Édouard Philippe",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "philippot",
+      "days": [
+        {
+          "articles": 0,
+          "date": "2026-11-25",
+          "files": 96,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-27",
+          "files": 96,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Florian Philippot | Philippot",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "polony",
+      "days": [
+        {
+          "articles": 1,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": 1.5254,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 1,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": 1.4493,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 1,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": 3.2836,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Natacha Polony | Polony",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "retailleau",
+      "days": [
+        {
+          "articles": 3,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -5.0837,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 6,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -0.5923,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 8,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -0.596,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Bruno Retailleau | Retailleau",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "riner",
+      "days": [
+        {
+          "articles": 51,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -0.874,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 60,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -2.4284,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 17,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -1.7457,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Teddy Riner | Riner",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "roussel",
+      "days": [
+        {
+          "articles": 3,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": 0.1967,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 0,
+          "date": "2026-11-26",
+          "files": 96,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 2,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -2.8902,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Fabien Roussel | Roussel",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "royal",
+      "days": [
+        {
+          "articles": 1,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -5.5804,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 1,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -1.0448,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 2,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -1.8565,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Ségolène Royal",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "ruffin",
+      "days": [
+        {
+          "articles": 1,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -0.3003,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 1,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": 0.8316,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 2,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -2.8265,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: François Ruffin | Ruffin",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "tondelier",
+      "days": [
+        {
+          "articles": 1,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -2.1583,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 2,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": -1.1413,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 4,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -1.1812,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Marine Tondelier | Tondelier",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "villepin",
+      "days": [
+        {
+          "articles": 5,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -0.8697,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 2,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": 0.2336,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 3,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -0.9163,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Dominique de Villepin | Villepin",
+      "status": "ok"
+    },
+    {
+      "candidate_id": "zemmour",
+      "days": [
+        {
+          "articles": 4,
+          "date": "2026-11-25",
+          "files": 96,
+          "tone": -3.5435,
+          "total_articles": 11117,
+          "total_tone": -0.7743
+        },
+        {
+          "articles": 7,
+          "date": "2026-11-26",
+          "files": 96,
+          "tone": 0.4701,
+          "total_articles": 11150,
+          "total_tone": -0.7056
+        },
+        {
+          "articles": 30,
+          "date": "2026-11-27",
+          "files": 96,
+          "tone": -0.1446,
+          "total_articles": 10517,
+          "total_tone": -0.6105
+        }
+      ],
+      "error": null,
+      "query": "GDELT GKG translation stream, srclc:fra, every file; title or URL slug: Éric Zemmour | Zemmour",
+      "status": "ok"
+    }
+  ],
+  "end": "2026-11-27",
+  "fetched_at": "2026-11-28T06:18:31Z",
+  "schema_version": "1.0",
+  "start": "2026-11-25"
+}
