@@ -1,0 +1,104 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T15:18:06Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-28T14:52:22Z",
+      "title": "Fuites de Beauvau vers le RN : Ambroise de Rancourt, le missi dominici de Marine Le Pen auprès des grands patrons et de la haute fonction publique",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/28/fuites-de-beauvau-vers-le-rn-ambroise-de-rancourt-le-missi-dominici-de-marine-le-pen-aupres-des-grands-patrons-et-de-la-haute-fonction-publique_6816116_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T14:34:56Z",
+      "title": "Enarque, pianiste, stratège... Qui est Ambroise de Rancourt, soupçonné d’être le principal destinataire des fuites au profit du Rassemblement national ?",
+      "url": "https://www.franceinfo.fr/politique/front-national/enarque-pianiste-stratege-qui-est-ambroise-de-rancourt-soupconne-d-etre-le-principal-destinataire-des-fuites-au-profit-du-rassemblement-national_8304378.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
