@@ -1,0 +1,131 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T07:18:09Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "lefigaro-politique",
+      "published_at": "2026-11-28T06:30:00Z",
+      "title": "«La haute fonction publique est totalement résignée» : comment l’appareil d’État anticipe une élection de Marine Le Pen en 2027",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/la-haute-fonction-publique-est-totalement-resignee-comment-l-appareil-d-etat-anticipe-une-election-de-marine-le-pen-en-2027-20261128"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-28T06:44:00Z",
+      "title": "Retraite par capitalisation : derrière les promesses présidentielles, des rendements pas garantis et un problème de financement",
+      "url": "https://www.liberation.fr/economie/social/retraite-par-capitalisation-derriere-les-promesses-presidentielles-des-rendements-pas-garantis-et-un-probleme-de-financement-20261128_SUG54RR4VRCZFPITIPR7HD3THU/"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T06:38:37Z",
+      "title": "Est-il possible d'obliger les journalistes à \"respecter le secret de l'instruction\", comme le souhaite Marine Le Pen ?",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/est-il-possible-d-obliger-les-journalistes-a-respecter-le-secret-de-l-instruction-comme-le-souhaite-marine-le-pen_8303805.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T06:29:53Z",
+      "title": "Dans l'affaire des fuites au profit du RN, le bureau et le domicile d'Ambroise de Rancourt, coordinateur du programme présidentiel du parti, ont été perquisitionnés",
+      "url": "https://www.franceinfo.fr/politique/front-national/dans-l-affaire-des-fuites-au-profit-du-rn-le-bureau-et-le-domicile-d-ambroise-de-rancourt-coordinateur-du-programme-presidentiel-du-parti-ont-ete-perquisitionnes_8304285.html"
+    },
+    {
+      "candidate_ids": [
+        "lisnard"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T06:18:51Z",
+      "title": "Présidentielle 2027: David Lisnard toujours aussi populaire à Cannes, malgré les critiques de son opposition sur un bilan jugé contrasté",
+      "url": "https://www.bfmtv.com/politique/elections/video-presidentielle-2027-david-lisnard-toujours-aussi-populaire-a-cannes-malgre-les-critiques-de-son-opposition-sur-un-bilan-juge-contraste_VN-202611280162.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
