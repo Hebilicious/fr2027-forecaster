@@ -1,0 +1,27 @@
+{
+  "detected_at": "2026-11-28T01:18:38Z",
+  "flags": [
+    {
+      "candidate_id": "bardella",
+      "date": "2026-11-28",
+      "detail": "support 0.14 [0.10, 0.19] in the drop to 2026-11-26T00:00:00Z → 0.25 [0.20, 0.31] in the drop to 2026-11-28T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.1136
+    },
+    {
+      "candidate_id": "melenchon",
+      "date": "2026-11-28",
+      "detail": "support 0.13 [0.09, 0.18] in the drop to 2026-11-26T00:00:00Z → 0.28 [0.22, 0.35] in the drop to 2026-11-28T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.15
+    },
+    {
+      "candidate_id": "polony",
+      "date": "2026-11-28",
+      "detail": "support 0.18 [0.11, 0.28] in the drop to 2026-11-26T00:00:00Z → 0.45 [0.29, 0.62] in the drop to 2026-11-28T00:00:00Z",
+      "kind": "x_shift",
+      "score": 0.271
+    }
+  ],
+  "schema_version": "1.0"
+}
