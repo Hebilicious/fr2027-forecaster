@@ -1,0 +1,113 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T14:18:27Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T13:46:35Z",
+      "title": "\"Ces choses sont fragiles\" : le Planning familial célèbre ses 70 ans sur fond de menaces du Rassemblement national",
+      "url": "https://www.franceinfo.fr/societe/droits-des-femmes/ces-choses-sont-fragiles-le-planning-familial-celebre-ses-70-ans-sur-fond-de-menaces-du-rassemblement-national_8304648.html"
+    },
+    {
+      "candidate_ids": [
+        "roussel"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T13:31:16Z",
+      "title": "\"Je vais voter Fabien Roussel\": Renaud apporte son soutien au candidat PCF à l'élection présidentielle pour ses valeurs \"d’empathie et de solidarité envers les plus faibles\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/je-vais-voter-fabien-roussel-renaud-apporte-son-soutien-au-candidat-pcf-a-l-election-presidentielle-pour-ses-valeurs-d-empathie-et-de-solidarite-envers-les-plus-faibles_AN-202611280295.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "« Savoir s’ils allaient lui rentrer dedans » : dans le secret des conversations entre Jean-Luc Mélenchon et les grands patrons",
+      "url": "https://www.leparisien.fr/elections/presidentielle/savoir-sils-allaient-lui-rentrer-dedans-dans-le-secret-des-conversations-entre-jean-luc-melenchon-et-les-grands-patrons-28-11-2026-HUIOKUKXVZDCRGC5VCKJTNPWWU.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
