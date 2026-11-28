@@ -1,0 +1,105 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T13:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "riner"
+      ],
+      "feed": "lemonde-presidentielle",
+      "published_at": "2026-11-28T12:30:16Z",
+      "title": "Présidentielle 2027 : Teddy Riner, un candidat hors système en quête de crédibilité",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/28/presidentielle-2027-teddy-riner-un-candidat-hors-systeme-en-quete-de-credibilite_6816104_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "hollande"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T13:13:26Z",
+      "title": "DIRECT. Présidentielle 2027 : Raphaël Glucksmann \"soutiendra\" François Hollande s'il se \"présente en recours\", assure le porte-parole des députés socialistes",
+      "url": "https://www.franceinfo.fr/elections/direct-election-presidentielle-raphael-glucksmann-soutiendra-francois-hollande-s-il-se-presente-en-recours_8304636.html"
+    }
+  ],
+  "schema_version": "1.0"
+}
