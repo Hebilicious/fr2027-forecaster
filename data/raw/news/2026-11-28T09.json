@@ -1,0 +1,154 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T09:18:22Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "lemonde-politique",
+      "published_at": "2026-11-28T09:00:02Z",
+      "title": "Les militants des quartiers populaires veulent compter dans le jeu politique face à LFI et préparer « l’après-Mélenchon »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/28/les-militants-des-quartiers-populaires-veulent-compter-dans-le-jeu-politique-face-a-lfi-et-preparer-l-apres-melenchon_6816089_823448.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T09:11:46Z",
+      "title": "Soupçons de fuites au profit du RN, respect du secret de l'instruction, propos antisémites attribués à Jordan Bardella... Le \"8h30 franceinfo\" d'Aleksandar Nikolic",
+      "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/soupcons-de-fuites-au-profit-du-rn-respect-du-secret-de-l-instruction-propos-antisemites-attribues-a-jordan-bardella-le-8h30-franceinfo-d-aleksandar-nikolic_8281907.html"
+    },
+    {
+      "candidate_ids": [
+        "attal",
+        "hollande",
+        "le_pen",
+        "melenchon",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T09:15:15Z",
+      "title": "DIRECT. Présidentielle: Marine Le Pen lance le mouvement des jeunes de sa campagne, Gabriel Attal à Verdun, Jean-Luc Mélenchon poursuit son déplacement en Allemagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/direct-presidentielle-marine-le-pen-lance-le-mouvement-des-jeunes-de-sa-campagne-gabriel-attal-a-verdun-jean-luc-melenchon-poursuit-son-deplacement-en-allemagne_LN-202611280216.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T08:53:51Z",
+      "title": "L'ÉDITO POLITIQUE - Jean-Luc Mélenchon: l'international, son talon d’Achille?",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/video-l-edito-politique-jean-luc-melenchon-l-international-son-talon-d-achille_VN-202611280221.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T08:32:19Z",
+      "title": "Soupçons de fuite vers le RN: le bureau et le domicile de l'ex-directeur de cabinet de Marine Le Pen perquisitionnés",
+      "url": "https://www.bfmtv.com/politique/front-national/video-soupcons-de-fuite-vers-le-rn-le-bureau-et-le-domicile-de-l-ex-directeur-de-cabinet-de-marine-le-pen-perquisitionnes_VN-202611280213.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T08:26:20Z",
+      "title": "Soupçons de fuite vers le RN: le bureau et le domicile de l'ex-directeur de cabinet de Marine Le Pen perquisitionnés",
+      "url": "https://www.bfmtv.com/politique/front-national/video-soupcons-de-fuite-vers-le-rn-le-bureau-et-le-domicile-de-l-ex-directeur-de-cabinet-de-marine-le-pen-perquisitionnes_VN-202611280211.html"
+    },
+    {
+      "candidate_ids": [
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "20minutes-politique",
+      "published_at": "2026-11-28T07:17:05Z",
+      "title": "EN DIRECT Présidentielle 2027 : Le plan de Le Pen pour l’outre-mer, Mélenchon veut une nouvelle relation franco-allemande…",
+      "url": "https://www.20minutes.fr/politique/4266444-20261128-direct-presidentielle-2027-plan-pen-outre-mer-melenchon-veut-nouvelle-relation-franco-allemande"
+    }
+  ],
+  "schema_version": "1.0"
+}
