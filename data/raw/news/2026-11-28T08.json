@@ -1,0 +1,146 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T08:18:21Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "liberation-politique",
+      "published_at": "2026-11-28T08:02:19Z",
+      "title": "A Berlin, Jean-Luc Mélenchon défend «une grande remise à plat de la relation franco-allemande»",
+      "url": "https://www.liberation.fr/politique/a-berlin-jean-luc-melenchon-defend-une-grande-remise-a-plat-de-la-relation-franco-allemande-20261128_RX3GFUQHEFHEJD5G6QP5VTXKIE/"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "le_pen"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T08:09:22Z",
+      "title": "Ecrits antisémites : Jordan Bardella maintient sa défense",
+      "url": "https://www.franceinfo.fr/replay-jt/franceinfo/21h-minuit/23-heures/ecrits-antisemites-jordan-bardella-maintient-sa-defense_8304354.html"
+    },
+    {
+      "candidate_ids": [
+        "bardella",
+        "glucksmann",
+        "le_pen",
+        "melenchon"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T08:08:07Z",
+      "title": "Les outre-mer, passage obligé à quelques mois du premier tour de la présidentielle",
+      "url": "https://www.franceinfo.fr/replay-radio/le-brief-politique/les-outre-mer-passage-oblige-a-quelques-mois-du-premier-tour-de-la-presidentielle_8281889.html"
+    },
+    {
+      "candidate_ids": [
+        "le_maire"
+      ],
+      "feed": "franceinfo-politique",
+      "published_at": "2026-11-28T07:30:57Z",
+      "title": "Bruno Le Maire : \"On aurait dû accélérer, on a fait machine arrière\"",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/l-invite-politique/bruno-le-maire-on-aurait-du-accelerer-on-a-fait-machine-arriere_8304327.html"
+    },
+    {
+      "candidate_ids": [
+        "glucksmann",
+        "lisnard",
+        "retailleau"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T07:41:00Z",
+      "title": "Les Français appelés à voter le 18 avril et le 2 mai 2027: les dates de l'élection présidentielle peuvent-elles encore être changées?",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/les-francais-appeles-a-voter-le-18-avril-et-le-2-mai-2027-les-dates-de-l-election-presidentielle-peuvent-elles-encore-etre-changees_AV-202611280080.html"
+    },
+    {
+      "candidate_ids": [
+        "melenchon"
+      ],
+      "feed": "leparisien-politique",
+      "published_at": null,
+      "title": "Présidentielle 2027 : depuis Berlin, Jean-Luc Mélenchon promet de « ne pas aider les Américains à faire la guerre aux Chinois » s’il est élu",
+      "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-depuis-berlin-jean-luc-melenchon-promet-de-ne-pas-aider-les-americains-a-faire-la-guerre-aux-chinois-sil-est-elu-28-11-2026-JVPGRR354ZATZGCLZN2D4457F4.php"
+    }
+  ],
+  "schema_version": "1.0"
+}
