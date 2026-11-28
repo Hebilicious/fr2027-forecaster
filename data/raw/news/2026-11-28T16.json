@@ -1,0 +1,117 @@
+{
+  "feeds": [
+    {
+      "error": null,
+      "id": "lemonde-presidentielle",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lemonde-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "lefigaro-elections",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "liberation-politique",
+      "items": 50,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-politique",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "franceinfo-presidentielle",
+      "items": 19,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-politique",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "bfmtv-presidentielle",
+      "items": 30,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "leparisien-politique",
+      "items": 100,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "20minutes-politique",
+      "items": 20,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "publicsenat",
+      "items": 60,
+      "status": "ok"
+    },
+    {
+      "error": null,
+      "id": "france24-france",
+      "items": 30,
+      "status": "ok"
+    }
+  ],
+  "fetched_at": "2026-11-28T16:18:07Z",
+  "items": [
+    {
+      "candidate_ids": [
+        "attal",
+        "hollande",
+        "le_pen",
+        "melenchon",
+        "villepin"
+      ],
+      "feed": "bfmtv-politique",
+      "published_at": "2026-11-28T15:44:19Z",
+      "title": "Présidentielle: Marine Le Pen lance le mouvement des jeunes de sa campagne ce samedi 28 novembre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-marine-le-pen-lance-le-mouvement-des-jeunes-de-sa-campagne-ce-samedi-28-novembre_VN-202611280334.html"
+    },
+    {
+      "candidate_ids": [
+        "retailleau"
+      ],
+      "feed": "publicsenat",
+      "published_at": "2026-11-28T14:56:31Z",
+      "title": "Budget : un amendement de Bruno Retailleau double le prix des demandes de titres de séjour et de naturalisation",
+      "url": "https://www.publicsenat.fr/actualites/politique/budget-un-amendement-de-bruno-retailleau-double-le-prix-des-demandes-de-titres-de-sejour-et-de-naturalisation"
+    },
+    {
+      "candidate_ids": [
+        "le_pen"
+      ],
+      "feed": "france24-france",
+      "published_at": "2026-11-28T15:21:54Z",
+      "title": "Fuites au ministère de l'Intérieur : l'ancien chef de cabinet de Marine Le Pen perquisitionné",
+      "url": "https://www.france24.com/fr/france/20261128-rassemblement-national-fuites-minist%C3%A8re-int%C3%A9rieur-ancien-chef-cabinet-marine-le-pen-perquisition-rancourt-moutouh"
+    }
+  ],
+  "schema_version": "1.0"
+}
